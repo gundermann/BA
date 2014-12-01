@@ -1,0 +1,2075 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+        <title>Mission: Impossible–Purely Declarative User Interface Modeling</title>
+
+        
+        <meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="cache-control" content="no-cache">
+<meta http-equiv="expires" content="0">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta name="copyright" content="© 2006 C4Media">
+
+<meta name="google-site-verification" content="0qInQx_1WYOeIIbxnh7DnXlw1XOxNgAYakO2k4GhNnY">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/styles/i/logo.jpg">
+<meta property="wb:webmaster" content="3eac1729a8bbe046">
+
+
+        
+		
+		
+			<link href="Mission%20%20Impossible%E2%80%93Purely%20Declarative%20User%20Interface%20Modeling-Dateien/css.css" rel="stylesheet" type="text/css">
+		
+        <link rel="stylesheet" type="text/css" media="screen" href="Mission%20%20Impossible%E2%80%93Purely%20Declarative%20User%20Interface%20Modeling-Dateien/site.css">
+        <link rel="stylesheet" type="text/css" media="screen" href="Mission%20%20Impossible%E2%80%93Purely%20Declarative%20User%20Interface%20Modeling-Dateien/site_en.css">
+        <link rel="shortcut icon" href="http://cdn.infoq.com/statics_20141125-0117/favicon.ico?20141125-0117" type="image/x-icon">
+        <link rel="apple-touch-icon" href="http://cdn.infoq.com/statics_20141125-0117/apple-touch-icon.png?20141125-0117">
+
+        <link rel="stylesheet" href="Mission%20%20Impossible%E2%80%93Purely%20Declarative%20User%20Interface%20Modeling-Dateien/jquery.css" type="text/css">
+
+        <script type="text/javascript" async="" src="Mission%20%20Impossible%E2%80%93Purely%20Declarative%20User%20Interface%20Modeling-Dateien/4285.js"></script><script src="Mission%20%20Impossible%E2%80%93Purely%20Declarative%20User%20Interface%20Modeling-Dateien/ga.js" async="" type="text/javascript"></script><script src="Mission%20%20Impossible%E2%80%93Purely%20Declarative%20User%20Interface%20Modeling-Dateien/gpt.js" type="text/javascript" async=""></script><script type="text/javascript">
+            var InfoQConstants = {};
+            InfoQConstants.language = 'en';
+            InfoQConstants.countryCode = '';
+        </script>
+        <script type="text/javascript" src="Mission%20%20Impossible%E2%80%93Purely%20Declarative%20User%20Interface%20Modeling-Dateien/combinedJs.js"></script>
+        <script type="text/javascript">
+            
+                var JSi18n = JSi18n || {}; // define only if not already defined
+                JSi18n.error='Error';
+                JSi18n.login_unverifiedAccount='Unverified account';
+                JSi18n.contentSummary_showPresentations_1='';
+                JSi18n.contentSummary_showPresentations_2='';
+                JSi18n.contentSummary_showPresentations_3='';
+                JSi18n.contentSummary_showInterviews_1='';
+                JSi18n.contentSummary_showInterviews_2='';
+                JSi18n.contentSummary_showInterviews_3='';
+                JSi18n.contentSummary_showMinibooks_1='';
+                JSi18n.contentSummary_showMinibooks_2='';
+                JSi18n.login_sendingRequest='Sending request ...';
+                JSi18n.bookmark_saved='<q>&nbsp;&nbsp;&nbsp;Saved&nbsp;&nbsp;&nbsp;&nbsp;</q>';
+                JSi18n.bookmark_error='<q style=color:black;>&nbsp;&nbsp;&nbsp;Error&nbsp;&nbsp;&nbsp;&nbsp;</q>';
+                JSi18n.categoryManagement_showpopup_viewAllLink_viewAllPrefix='View All';
+                JSi18n.categoryManagement_showpopup_viewAllLink_viewAllSuffix='';
+                JSi18n.categoryManagement_showpopup_includeExcludeLink_Exclude='Exclude';
+                JSi18n.categoryManagement_showpopup_includeExcludeLink_Include='Include';
+                JSi18n.login_invalid_email='Please specify a valid email';
+                JSi18n.login_email_not_found = 'No user found with that email';
+            
+
+            var loggedIn=true;
+        </script>
+        
+        	<script type="text/javascript">
+        		// set this if logged in if not this will be set when login (see loginAction.jsp)
+        		InfoQConstants.isUserBlocked=false;
+        		InfoQConstants.isUserOutdated=false;
+        		InfoQConstants.loggedUserEmail='gundermann.niels.ng@googlemail.com';
+        	</script>
+        
+       
+        <script type="text/javascript">
+            function createOverFunction(i) {
+                var pixels = i * 129;
+                return function() {
+                    $('#personas_' + i).addClass('selected');
+                    $('ul.menu > li .top_submenu.c' + i).css('left','-' + pixels + 'px');
+                }
+            };
+            function createOutFunction(i) {
+                return function() {
+                    $('ul.menu > li .top_submenu.c' + i).css('left','-999em');
+                    $('#personas_' + i).removeClass('selected');
+                }
+            }
+            $(function() {
+                for (var i = 0; i < 5; i++) {
+                    $('ul.menu > li').has('.top_submenu.c' + i).hoverIntent({
+                        sensitivity: 15,
+                        interval: 150,
+                        timeout:200,
+                        over: createOverFunction(i),
+                        out: createOutFunction(i)
+                    });
+                }
+            });
+        </script>
+        
+
+
+
+
+
+
+
+<script type="text/javascript">
+var googletag = googletag || {};
+googletag.cmd = googletag.cmd || [];
+(function() {
+	var gads = document.createElement('script');
+	gads.async = true;
+	gads.type = 'text/javascript';
+	var useSSL = 'https:' == document.location.protocol;
+	gads.src = (useSSL ? 'https:' : 'http:') + '//www.googletagservices.com/tag/js/gpt.js';
+	var node = document.getElementsByTagName('script')[0];
+	node.parentNode.insertBefore(gads, node);
+})();
+
+
+googletag.cmd.push(function() {
+	googletag.defineSlot('/5286733/en_geo_banner_bottom', [728, 90], 'id_geo_banner_ad').addService(googletag.pubads());
+	googletag.defineSlot('/5286733/en_300x250_banner_top', [300, 250], 'id_300x250_banner_top').addService(googletag.pubads());
+	googletag.defineSlot('/5286733/en_300x250_banner_bottom', [300, 250], 'id_300x250_banner_bottom').addService(googletag.pubads());
+	googletag.defineSlot('/5286733/en_textlink1', [250, 60], 'id_ad_textlink1').addService(googletag.pubads());
+	googletag.defineSlot('/5286733/en_textlink2', [250, 60], 'id_ad_textlink2').addService(googletag.pubads());
+	googletag.defineSlot('/5286733/en_textlink3', [250, 60], 'id_ad_textlink3').addService(googletag.pubads());
+/*	googletag.defineSlot('/5286733/en_textlink4', [120, 100], 'id_ad_textlink4').addService(googletag.pubads());
+	googletag.defineSlot('/5286733/en_textlink5', [120, 100], 'id_ad_textlink5').addService(googletag.pubads());*/
+	googletag.defineSlot('/5286733/en_300x250_category', [300, 250], 'id_300x250_category').addService(googletag.pubads());
+	googletag.defineSlot('/5286733/en_300x250_banner_searchResults', [300, 250], 'id_300x250_banner_searchResults').addService(googletag.pubads());
+	googletag.pubads().enableSingleRequest();
+	googletag.pubads().collapseEmptyDivs();
+	googletag.enableServices();
+});
+</script>
+
+
+
+        
+        
+            
+            
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o?o:e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({QJf3ax:[function(t,e){function n(t){function e(e,n,a){t&&t(e,n,a),a||(a={});for(var c=u(e),f=c.length,s=i(a,o,r),p=0;f>p;p++)c[p].apply(s,n);return s}function a(t,e){f[t]=u(t).concat(e)}function u(t){return f[t]||[]}function c(){return n(e)}var f={};return{on:a,emit:e,create:c,listeners:u,_events:f}}function r(){return{}}var o="nr@context",i=t("gos");e.exports=n()},{gos:"7eSDFh"}],ee:[function(t,e){e.exports=t("QJf3ax")},{}],gos:[function(t,e){e.exports=t("7eSDFh")},{}],"7eSDFh":[function(t,e){function n(t,e,n){if(r.call(t,e))return t[e];var o=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:o,writable:!0,enumerable:!1}),o}catch(i){}return t[e]=o,o}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],D5DuLP:[function(t,e){function n(t,e,n){return r.listeners(t).length?r.emit(t,e,n):(o[t]||(o[t]=[]),void o[t].push(e))}var r=t("ee").create(),o={};e.exports=n,n.ee=r,r.q=o},{ee:"QJf3ax"}],handle:[function(t,e){e.exports=t("D5DuLP")},{}],XL7HBI:[function(t,e){function n(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:i(t,o,function(){return r++})}var r=1,o="nr@id",i=t("gos");e.exports=n},{gos:"7eSDFh"}],id:[function(t,e){e.exports=t("XL7HBI")},{}],loader:[function(t,e){e.exports=t("G9z0Bl")},{}],G9z0Bl:[function(t,e){function n(){var t=l.info=NREUM.info;if(t&&t.agent&&t.licenseKey&&t.applicationID&&c&&c.body){l.proto="https"===p.split(":")[0]||t.sslForHttp?"https://":"http://",a("mark",["onload",i()]);var e=c.createElement("script");e.src=l.proto+t.agent,c.body.appendChild(e)}}function r(){"complete"===c.readyState&&o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=t("handle"),u=window,c=u.document,f="addEventListener",s="attachEvent",p=(""+location).split("?")[0],l=e.exports={offset:i(),origin:p,features:{}};c[f]?(c[f]("DOMContentLoaded",o,!1),u[f]("load",n,!1)):(c[s]("onreadystatechange",r),u[s]("onload",n)),a("mark",["firstbyte",i()])},{handle:"D5DuLP"}]},{},["G9z0Bl"]);</script><script type="text/javascript" src="Mission%20%20Impossible%E2%80%93Purely%20Declarative%20User%20Interface%20Modeling-Dateien/forum.js"></script>
+            <meta property="og:image" content="">
+            <link rel="image_src" href="">
+            <meta name="keywords" content="S4 Declarative DSL UI,Architecture &amp; Design,Development,DSLs,Code Generation Cambridge UK 2012,Domain Specific Languages,Code Generation Cambridge UK,Declarative Programming,User Interface,">
+            <meta name="description" content="Achim Demelt discusses creating a UI using a completely declarative DSL called S4 without flow control, events or data binding.">
+            <meta name="tprox" content="1347067800000">
+            
+            
+
+
+
+
+
+
+
+
+<meta property="og:type" content="website">
+
+
+    <meta property="og:image" content="https://www.infoq.com/resource/presentations/S4-Declarative-DSL-UI/en/smallimage/Achim.JPG">
+
+<meta property="og:title" content="Mission: Impossible–Purely Declarative User Interface Modeling ">
+<meta property="og:description" content="Achim Demelt discusses creating a UI using a completely declarative DSL called S4 without flow control, events or data binding.">
+<meta property="og:site_name" content="InfoQ">
+        
+        <script type="text/javascript" src="Mission%20%20Impossible%E2%80%93Purely%20Declarative%20User%20Interface%20Modeling-Dateien/swfobject.js"></script>
+        <script type="text/javascript">
+            var slides = new Array('/resource/presentations/S4-Declarative-DSL-UI/en/slides/1.swf','/resource/presentations/S4-Declarative-DSL-UI/en/slides/2.swf','/resource/presentations/S4-Declarative-DSL-UI/en/slides/3.swf','/resource/presentations/S4-Declarative-DSL-UI/en/slides/4.swf','/resource/presentations/S4-Declarative-DSL-UI/en/slides/5.swf','/resource/presentations/S4-Declarative-DSL-UI/en/slides/6.swf','/resource/presentations/S4-Declarative-DSL-UI/en/slides/7.swf','/resource/presentations/S4-Declarative-DSL-UI/en/slides/8.swf','/resource/presentations/S4-Declarative-DSL-UI/en/slides/9.swf','/resource/presentations/S4-Declarative-DSL-UI/en/slides/10.swf','/resource/presentations/S4-Declarative-DSL-UI/en/slides/11.swf','/resource/presentations/S4-Declarative-DSL-UI/en/slides/12.swf','/resource/presentations/S4-Declarative-DSL-UI/en/slides/13.swf','/resource/presentations/S4-Declarative-DSL-UI/en/slides/14.swf','/resource/presentations/S4-Declarative-DSL-UI/en/slides/15.swf','/resource/presentations/S4-Declarative-DSL-UI/en/slides/16.swf','/resource/presentations/S4-Declarative-DSL-UI/en/slides/17.swf','/resource/presentations/S4-Declarative-DSL-UI/en/slides/18.swf','/resource/presentations/S4-Declarative-DSL-UI/en/slides/19.swf','/resource/presentations/S4-Declarative-DSL-UI/en/slides/20.swf','/resource/presentations/S4-Declarative-DSL-UI/en/slides/21.swf','/resource/presentations/S4-Declarative-DSL-UI/en/slides/22.swf','/resource/presentations/S4-Declarative-DSL-UI/en/slides/23.swf','/resource/presentations/S4-Declarative-DSL-UI/en/slides/24.swf','/resource/presentations/S4-Declarative-DSL-UI/en/slides/25.swf','/resource/presentations/S4-Declarative-DSL-UI/en/slides/26.swf','/resource/presentations/S4-Declarative-DSL-UI/en/slides/27.swf','/resource/presentations/S4-Declarative-DSL-UI/en/slides/28.swf'),
+                TIMES = new Array(0,10,26,68,208,286,372,545,551,587,624,640,646,667,673,693,722,878,958,1130,1198,1261,1349,1433,2009,2039,2069,2291,2552),
+                EXPRESSINSTALL_SWF = "http://d1snlc0orfrhj.cloudfront.net/static/flash/expressinstall.swf",
+                isWideScreen = false,
+                // i18n text for the to full view/minimize button
+                i18nFullScreen = 'Full',
+                i18nMinimize = 'Minimize',
+                demoTimings = '';
+            
+                var jsclassref = 'cHJlc2VudGF0aW9ucy8xMi1tYXItbWlzc2lvbmltcG9zc2libGUubXA0';
+            
+        </script>
+        
+        
+                    
+            <script type="text/javascript" src="Mission%20%20Impossible%E2%80%93Purely%20Declarative%20User%20Interface%20Modeling-Dateien/flashPlayercombinedJsPresentation.js"></script>
+        
+        <script type="text/javascript" src="Mission%20%20Impossible%E2%80%93Purely%20Declarative%20User%20Interface%20Modeling-Dateien/PresentationUI.js"></script>
+        <script type="text/javascript" src="Mission%20%20Impossible%E2%80%93Purely%20Declarative%20User%20Interface%20Modeling-Dateien/jquery.js"></script>
+        <link rel="stylesheet" href="Mission%20%20Impossible%E2%80%93Purely%20Declarative%20User%20Interface%20Modeling-Dateien/tipsy.css" type="text/css">
+    	<script src="Mission%20%20Impossible%E2%80%93Purely%20Declarative%20User%20Interface%20Modeling-Dateien/jquery_003.js" type="text/javascript"></script>
+        <!-- i18n -->
+        
+    
+        
+        
+    <script src="Mission%20%20Impossible%E2%80%93Purely%20Declarative%20User%20Interface%20Modeling-Dateien/pubads_impl_54.js" type="text/javascript" async=""></script><style media="screen" type="text/css">#player {visibility:hidden}</style><style media="screen" type="text/css">#slide {visibility:hidden}</style><link media="all" href="Mission%20%20Impossible%E2%80%93Purely%20Declarative%20User%20Interface%20Modeling-Dateien/widget007.css" type="text/css" rel="stylesheet"></head>
+
+    <body>
+
+        
+            <div class="intbt">
+                <a href="http://www.infoq.com/int/bt" title="bt">BT</a>
+            </div>
+        
+
+        
+            
+                
+            
+        
+
+        <div id="wrapper" style="background-color:#fff">
+            <!--	#######		SITE START	#########	 -->
+            <div id="site">
+                
+
+
+
+
+
+
+
+
+
+
+<div id="topInfo">
+    <ul class="list1">
+        <li><a href="http://www.infoq.com/contribute" title="Contribute" style="color:#286BB3;font-weight:bold">
+                Contribute
+            </a>
+        </li>
+        <li><a href="http://www.infoq.com/aboutus" title="About Us">
+                About Us
+            </a>
+        </li>
+        
+        	<li><a href="http://www.infoq.com/aboutyou" title="About You"> 
+                        About You
+                    </a>
+                </li>
+        
+        
+        	<li><a href="http://www.infoq.com/purpose" title="Purpose Index"> 
+                        Purpose Index
+                    </a>
+                </li>
+        
+        
+    </ul>
+    <ul class="list2">
+        <li>Exclusive updates on:</li>
+        
+	        <li><a href="http://twitter.com/infoq" target="_blank"><img src="Mission%20%20Impossible%E2%80%93Purely%20Declarative%20User%20Interface%20Modeling-Dateien/twitter.jpg" alt="" border="0"></a></li>
+	        <li><a href="http://www.facebook.com/InfoQ" target="_blank"><img src="Mission%20%20Impossible%E2%80%93Purely%20Declarative%20User%20Interface%20Modeling-Dateien/facebook.jpg" alt="" border="0"></a></li>
+	        <li><a href="http://www.linkedin.com/company/infoq" target="_blank"><img src="Mission%20%20Impossible%E2%80%93Purely%20Declarative%20User%20Interface%20Modeling-Dateien/linkedin.gif" alt="" border="0"></a></li>
+	        
+	        
+	        	<li><a href="https://plus.google.com/104892343728609932454" target="_blank" rel="publisher"><img src="Mission%20%20Impossible%E2%80%93Purely%20Declarative%20User%20Interface%20Modeling-Dateien/gplus-16.png" alt="" border="0"></a></li>
+       		
+       		
+        
+        
+        <li><a id="headerRssLink" href="http://www.infoq.com/feed?token=YOVcHXl63lPEQ28rJ5KbmVVboEaR6CSk" title="" target="_blank"><img src="Mission%20%20Impossible%E2%80%93Purely%20Declarative%20User%20Interface%20Modeling-Dateien/rss.jpg" alt="" border="0"></a></li>
+    </ul>
+	<div class="clear"></div>
+</div>
+
+	
+<!--	#######		HEADER START	#########	 -->
+<div id="header">
+    <div class="top_explain">Facilitating the spread of knowledge and innovation in professional software development</div>
+	<!--	#######		search	#########	 -->
+	<div class="search_cls">
+	
+		<form name="search" id="search" action="/search.action" method="get" enctype="multipart/form-data">
+			<fieldset>
+				<input id="keyword" name="queryString" class="searchInput" value="Search" onfocus="if(this.value=='Search'){ this.value = ''; }" onblur="if(this.value==''){ this.value = 'Search'; }" type="text">
+				<input id="page" name="page" value="1" type="hidden">
+                <input id="searchOrder" size="15" name="searchOrder" type="hidden">
+				<input id="sst" name="sst" value="dH787L9fkG1LVlH2" type="hidden">
+				<input value="" id="search" class="submitCls" type="submit">
+			</fieldset>
+		</form>
+		
+	    
+
+
+
+
+
+
+
+
+
+
+	<div id="login">
+		<a class="logged_in" href="javascript:;" title="Login"><span>Niels</span></a>
+		<div class="login_overlay">
+			<!--	html for login box	-->
+			<div id="popupLogin">
+				<div class="welcome_title">
+					Welcome, 
+					Niels
+					!
+				</div>
+				<ul class="logged_submenu">
+					<li><a href="http://www.infoq.com/showbookmarks.action" title="My Bookmarks">My Reading List</a></li>
+					<li><a href="http://www.infoq.com/edituser.action" title="Preferences">Preferences</a></li>
+				</ul>
+				<div class="login-type-in">
+					Personalize Your Main Interests
+				</div>
+				
+											
+				
+
+
+
+
+
+
+<form>
+<fieldset>
+	<ul class="logged_submenu">
+		
+			<li>
+				<input name="development" value="true" checked="checked" id="hpersona6815" onclick="includeExcludeCommunity(this, true);" type="checkbox">
+
+				<label class="label_logged_in" for="development">
+					Development
+				</label>
+			</li>
+		
+			<li>
+				<input name="architecture-design" value="true" checked="checked" id="hpersona6816" onclick="includeExcludeCommunity(this, true);" type="checkbox">
+
+				<label class="label_logged_in" for="architecture-design">
+					Architecture &amp; Design
+				</label>
+			</li>
+		
+			<li>
+				<input name="process-practices" value="true" checked="checked" id="hpersona6817" onclick="includeExcludeCommunity(this, true);" type="checkbox">
+
+				<label class="label_logged_in" for="process-practices">
+					Process &amp; Practices
+				</label>
+			</li>
+		
+			<li>
+				<input name="operations-infrastructure" value="true" checked="checked" id="hpersona6818" onclick="includeExcludeCommunity(this, true);" type="checkbox">
+
+				<label class="label_logged_in" for="operations-infrastructure">
+					Operations &amp; Infrastructure
+				</label>
+			</li>
+		
+			<li>
+				<input name="enterprise-architect" value="true" checked="checked" id="hpersona6819" onclick="includeExcludeCommunity(this, true);" type="checkbox">
+
+				<label class="label_logged_in" for="enterprise-architect">
+					Enterprise Architecture
+				</label>
+			</li>
+		
+	</ul>
+</fieldset>
+</form>
+				<p class="notes">This affects what content you see on the homepage 
+&amp; your RSS feed. Click preferences to access more fine-grained 
+personalization.</p>
+				<a id="logout" class="logout" href="http://www.infoq.com/logout.action">
+					Sign out
+				</a>
+			</div>
+			
+		</div>	
+	</div>
+
+
+
+		
+	</div>
+	
+	<div class="clear"></div>
+	
+	<!--	#######		logo	#########	 -->
+	<div class="logo">
+		<a class="image" href="http://www.infoq.com/" title="">
+            <img src="Mission%20%20Impossible%E2%80%93Purely%20Declarative%20User%20Interface%20Modeling-Dateien/logo_bigger.jpg" alt="" border="0">
+        </a>
+		<div class="clear"></div>
+	    
+
+
+
+
+
+
+
+
+<ul class="langs">
+	<li><a class="active" href="#" onclick="return false;" title="InfoQ English">En</a> |</li>
+	<li><a href="http://www.infoq.com/cn/">中文</a> |</li>
+	<li><a href="http://www.infoq.com/jp/">日本</a> |</li>
+    <li><a href="http://www.infoq.com/fr/">Fr</a> |</li>
+	<li><a href="http://www.infoq.com/br/">Br</a></li>
+</ul>
+<div class="clear"></div>
+<p>
+    
+	
+	    
+	    
+	1,025,637 Oct unique visitors
+</p>
+
+		<div class="clear"></div>
+	</div>
+	
+    	
+
+
+
+
+
+
+
+
+		<!--	#######		menu	#########	 -->
+		<ul class="menu" id="mainmenu">
+			<li id="personas_0">
+				<a class="main" href="http://www.infoq.com/development/" title="Development"><span>Development</span></a>
+				<div class="top_submenu c0">
+					<div style="overflow: hidden; padding: 0px; width: 225px;" class="scroll-pane">
+						
+					<div style="width: 225px; height: 325px;" class="jspContainer"><div style="padding: 0px; top: 0px; width: 225px;" class="jspPane"><ul class="top_submenu_links">
+				              <li><a class="featured" href="http://www.infoq.com/java/?utm_source=infoq&amp;utm_medium=header_graybar&amp;utm_campaign=topic_clk" title="Java">Java</a></li>
+				              <li><a class="featured" href="http://www.infoq.com/dotnet/?utm_source=infoq&amp;utm_medium=header_graybar&amp;utm_campaign=topic_clk" title=".Net">.Net</a></li>
+				              <li><a href="http://www.infoq.com/cloud-computing/?utm_source=infoq&amp;utm_medium=header_graybar&amp;utm_campaign=topic_clk" title="Cloud">Cloud</a></li>
+				              <li><a class="featured" href="http://www.infoq.com/mobile/?utm_source=infoq&amp;utm_medium=header_graybar&amp;utm_campaign=topic_clk" title="Mobile">Mobile</a></li>
+				              <li><a href="http://www.infoq.com/HTML5Topic/?utm_source=infoq&amp;utm_medium=header_graybar&amp;utm_campaign=topic_clk" title="HTML5">HTML5</a></li>
+				              <li><a href="http://www.infoq.com/javascript/?utm_source=infoq&amp;utm_medium=header_graybar&amp;utm_campaign=topic_clk" title="JavaScript">JavaScript</a></li>
+				              <li><a href="http://www.infoq.com/ruby/?utm_source=infoq&amp;utm_medium=header_graybar&amp;utm_campaign=topic_clk" title="Ruby">Ruby</a></li>
+				              <li><a href="http://www.infoq.com/dsl/?utm_source=infoq&amp;utm_medium=header_graybar&amp;utm_campaign=topic_clk" title="DSLs">DSLs</a></li>
+				              <li><a href="http://www.infoq.com/python/?utm_source=infoq&amp;utm_medium=header_graybar&amp;utm_campaign=topic_clk" title="Python">Python</a></li>
+				              <li><a class="featured" href="http://www.infoq.com/Topic_PHP/?utm_source=infoq&amp;utm_medium=header_graybar&amp;utm_campaign=topic_clk" title="PHP">PHP</a></li>
+				              <li><a class="featured" href="http://www.infoq.com/api/?utm_source=infoq&amp;utm_medium=header_graybar&amp;utm_campaign=topic_clk" title="API">API</a></li>
+							  <!-- <li><a class="more" href="#" title="">+ More topics</a></li> -->
+						</ul></div></div></div>
+					
+					<div class="menu_article">
+						<h2>Featured in <span id="developmentHDLabel">Development</span></h2>
+						<h3 id="developmentHDTitle"><a href="http://www.infoq.com/articles/personae-non-gratae">How Well Do You Know Your Personae Non Gratae?</a></h3>
+						<div class="clear"></div>
+						<p>
+							<img id="developmentHDImg" src="Mission%20%20Impossible%E2%80%93Purely%20Declarative%20User%20Interface%20Modeling-Dateien/logo.png" alt="" border="0">
+							<span id="developmentHDSummary">In this article, author discusses
+ three techniques to defend against malicious users in software systems.
+ These techniques includes creating personas to think strategically 
+about the mischief a malicious user might attempt, misuse cases used to 
+determine how the software should respond to unintended use, and 
+activity diagrams annotated with security concerns.
+</span>
+						</p>
+						<div class="clear"></div>	
+						<div class="alignCenter">
+							<a class="view_all_categ" href="http://www.infoq.com/development/">
+								<span>All in <b id="developmentHDLabel2">Development</b></span>
+							</a>
+						</div>
+						<div class="clear"></div>	
+					</div>
+					
+					<div class="clear"></div>
+				</div>
+			</li>
+			
+			<li id="personas_1">
+				<a class="main" href="http://www.infoq.com/architecture-design/" title="Architecture &amp; Design"><span>Architecture<br>&amp; Design</span></a>
+				<div class="top_submenu c1">
+					<div style="overflow: hidden; padding: 0px; width: 225px;" class="scroll-pane">
+						
+					<div style="width: 225px; height: 325px;" class="jspContainer"><div style="padding: 0px; top: 0px; width: 225px;" class="jspPane"><ul class="top_submenu_links">
+							  <li><a class="featured" href="http://www.infoq.com/architecture/?utm_source=infoq&amp;utm_medium=header_graybar&amp;utm_campaign=topic_clk" title="Architecture">Architecture</a></li>
+				              <li><a href="http://www.infoq.com/Modeling/?utm_source=infoq&amp;utm_medium=header_graybar&amp;utm_campaign=topic_clk" title="Modeling">Modeling</a></li>
+				              <li><a href="http://www.infoq.com/performance-scalability/?utm_source=infoq&amp;utm_medium=header_graybar&amp;utm_campaign=topic_clk" title="Scalability/Performance">Scalability/Performance</a></li>
+				              <li><a href="http://www.infoq.com/domain-driven-design/?utm_source=infoq&amp;utm_medium=header_graybar&amp;utm_campaign=topic_clk" title="DDD">DDD</a></li>
+				              <li><a href="http://www.infoq.com/Behavior-Driven-Development/?utm_source=infoq&amp;utm_medium=header_graybar&amp;utm_campaign=topic_clk" title="BDD">BDD</a></li>
+				              <li><a href="http://www.infoq.com/AOP/?utm_source=infoq&amp;utm_medium=header_graybar&amp;utm_campaign=topic_clk" title="AOP">AOP</a></li>
+				              <li><a href="http://www.infoq.com/DesignPattern/?utm_source=infoq&amp;utm_medium=header_graybar&amp;utm_campaign=topic_clk" title="Patterns">Patterns</a></li>
+				              <li><a href="http://www.infoq.com/Security/?utm_source=infoq&amp;utm_medium=header_graybar&amp;utm_campaign=topic_clk" title="Security">Security</a></li>
+				              <li><a href="http://www.infoq.com/cloud-computing/?utm_source=infoq&amp;utm_medium=header_graybar&amp;utm_campaign=topic_clk" title="Cloud">Cloud</a></li>
+				              <li><a href="http://www.infoq.com/soa/?utm_source=infoq&amp;utm_medium=header_graybar&amp;utm_campaign=topic_clk" title="SOA">SOA</a></li>
+							  <!-- <li><a class="more" href="#" title="">+ More topics</a></li> -->
+						</ul></div></div></div>
+					
+					<div class="menu_article">
+						<h2>Featured in <span id="architecture-designHDLabel">Architecture &amp; Design</span></h2>
+						<h3 id="architecture-designHDTitle"><a href="http://www.infoq.com/articles/personae-non-gratae">How Well Do You Know Your Personae Non Gratae?</a></h3>
+						<div class="clear"></div>
+						<p>
+							<img id="architecture-designHDImg" src="Mission%20%20Impossible%E2%80%93Purely%20Declarative%20User%20Interface%20Modeling-Dateien/logo.png" alt="" border="0">
+							<span id="architecture-designHDSummary">In this article, author 
+discusses three techniques to defend against malicious users in software
+ systems. These techniques includes creating personas to think 
+strategically about the mischief a malicious user might attempt, misuse 
+cases used to determine how the software should respond to unintended 
+use, and activity diagrams annotated with security concerns.
+</span>
+						</p>
+						<div class="clear"></div>	
+						<div class="alignCenter">
+							<a class="view_all_categ" href="http://www.infoq.com/architecture-design/">
+								<span>All in <b id="architecture-designHDLabel2">Architecture &amp; Design</b></span>
+							</a>
+						</div>
+						<div class="clear"></div>	
+					</div>
+					
+					<div class="clear"></div>
+				</div>
+			</li>
+			<li id="personas_2">
+				<a class="main" href="http://www.infoq.com/process-practices/" title="Process &amp; Practices"><span>Process &amp; Practices</span></a>
+				<div class="top_submenu c2">
+					<div style="overflow: hidden; padding: 0px; width: 225px;" class="scroll-pane">
+						
+					<div style="width: 225px; height: 325px;" class="jspContainer"><div style="padding: 0px; top: 0px; width: 225px;" class="jspPane"><ul class="top_submenu_links">
+				              <li><a class="featured" href="http://www.infoq.com/agile/?utm_source=infoq&amp;utm_medium=header_graybar&amp;utm_campaign=topic_clk" title="Agile">Agile</a></li>
+				              <li><a href="http://www.infoq.com/Leadership/?utm_source=infoq&amp;utm_medium=header_graybar&amp;utm_campaign=topic_clk" title="Leadership">Leadership</a></li>
+				              <li><a href="http://www.infoq.com/team-collaboration/?utm_source=infoq&amp;utm_medium=header_graybar&amp;utm_campaign=topic_clk" title="Collaboration">Collaboration</a></li>
+				              <li><a href="http://www.infoq.com/agile_techniques/?utm_source=infoq&amp;utm_medium=header_graybar&amp;utm_campaign=topic_clk" title="Agile Techniques">Agile Techniques</a></li>
+				              <li><a href="http://www.infoq.com/methodologies/?utm_source=infoq&amp;utm_medium=header_graybar&amp;utm_campaign=topic_clk" title="Methodologies">Methodologies</a></li>
+				              <li><a href="http://www.infoq.com/continuous_integration/?utm_source=infoq&amp;utm_medium=header_graybar&amp;utm_campaign=topic_clk" title="Continuous Integration">Continuous Integration</a></li>
+				              <li><a href="http://www.infoq.com/lean/?utm_source=infoq&amp;utm_medium=header_graybar&amp;utm_campaign=topic_clk" title="Lean/Kanban">Lean/Kanban</a></li>
+							  <!-- <li><a class="more" href="#" title="">+ More topics</a></li> -->
+						</ul></div></div></div>
+					
+					<div class="menu_article">
+						<h2>Featured in <span id="process-practicesHDLabel">Process &amp; Practices</span></h2>
+						<h3 id="process-practicesHDTitle"><a href="http://www.infoq.com/interviews/agile2014-adkins-spayd">Lisa Adkins and Michael Spayd on the state of Agile, Enterprise Adoption and Intergal Agile </a></h3>
+						<div class="clear"></div>
+						<p>
+							<img id="process-practicesHDImg" src="Mission%20%20Impossible%E2%80%93Purely%20Declarative%20User%20Interface%20Modeling-Dateien/Lisa-Michael-small.png" alt="" border="0">
+							<span id="process-practicesHDSummary">Lyssa and Michael discuss 
+the state of agile adoption in enterprises, what it really means to 
+coach an agile enterprise and facilitating intense conversations.  They 
+introduce the Integral Agile model for organisational transformation and
+ talk about Michael's upcoming book Coaching the Agile Enterprise.
+</span>
+						</p>
+						<div class="clear"></div>	
+						<div class="alignCenter">
+							<a class="view_all_categ" href="http://www.infoq.com/process-practices/">
+								<span>All in <b id="process-practicesHDLabel2">Process &amp; Practices</b></span>
+							</a>
+						</div>
+						<div class="clear"></div>	
+					</div>
+					
+					<div class="clear"></div>
+				</div>
+			</li>
+			<li id="personas_3">
+				<a class="main" href="http://www.infoq.com/operations-infrastructure/" title="Operations &amp; Infrastructure"><span>Operations &amp; Infrastructure</span></a>
+				<div class="top_submenu c3">
+					<div style="overflow: hidden; padding: 0px; width: 225px;" class="scroll-pane">
+						
+					<div style="width: 225px; height: 325px;" class="jspContainer"><div style="padding: 0px; top: 0px; width: 225px;" class="jspPane"><ul class="top_submenu_links">
+				              <li><a class="featured" href="http://www.infoq.com/hadoop/?utm_source=infoq&amp;utm_medium=header_graybar&amp;utm_campaign=topic_clk" title="Hadoop">Hadoop</a></li>
+				              <li><a class="featured" href="http://www.infoq.com/performance/?utm_source=infoq&amp;utm_medium=header_graybar&amp;utm_campaign=topic_clk" title="Scalability/Performance">Performance</a></li>
+				              <li><a href="http://www.infoq.com/bigdata/?utm_source=infoq&amp;utm_medium=header_graybar&amp;utm_campaign=topic_clk" title="Big Data">Big Data</a></li>
+				              <li><a href="http://www.infoq.com/devops/?utm_source=infoq&amp;utm_medium=header_graybar&amp;utm_campaign=topic_clk" title="DevOps">DevOps</a></li>
+				              <li><a href="http://www.infoq.com/cloud-computing/?utm_source=infoq&amp;utm_medium=header_graybar&amp;utm_campaign=topic_clk" title="Cloud">Cloud</a></li>
+				              <li><a class="featured" href="http://www.infoq.com/apm/?utm_source=infoq&amp;utm_medium=header_graybar&amp;utm_campaign=topic_clk" title="Cloud">APM</a></li>
+				              <li><a href="http://www.infoq.com/virtualization/?utm_source=infoq&amp;utm_medium=header_graybar&amp;utm_campaign=topic_clk" title="Virtualization">Virtualization</a></li>
+				              <li><a class="featured" href="http://www.infoq.com/NoSQL/?utm_source=infoq&amp;utm_medium=header_graybar&amp;utm_campaign=topic_clk" title="NoSQL">NoSQL</a></li>
+							  <!-- <li><a class="more" href="#" title="">+ More topics</a></li> -->
+						</ul></div></div></div>
+					
+					<div class="menu_article">
+						<h2>Featured in <span id="operations-infrastructureHDLabel">Operations &amp; Infrastructure</span></h2>
+						<h3 id="operations-infrastructureHDTitle"><a href="http://www.infoq.com/articles/Tuning-Java-Servers">Tuning Java Servers</a></h3>
+						<div class="clear"></div>
+						<p>
+							<img id="operations-infrastructureHDImg" src="Mission%20%20Impossible%E2%80%93Purely%20Declarative%20User%20Interface%20Modeling-Dateien/logo-3.jpg" alt="" border="0">
+							<span id="operations-infrastructureHDSummary">With tens of 
+thousands of Java servers running in production in the enterprise, many 
+engineers still lack the skills to keep their Java servers greased. In 
+this article InfoQ takes a look at basic techniques for tuning Java 
+servers.</span>
+						</p>
+						<div class="clear"></div>	
+						<div class="alignCenter">
+							<a class="view_all_categ" href="http://www.infoq.com/operations-infrastructure/">
+								<span>All in <b id="operations-infrastructureHDLabel2">Operations &amp; Infrastructure</b></span>
+							</a>
+						</div>
+						<div class="clear"></div>	
+					</div>
+					
+					<div class="clear"></div>
+				</div>
+			</li>
+			<li id="personas_4" class="last">
+				<a class="main" href="http://www.infoq.com/enterprise-architect/" title="Enterprise Architecture"><span>Enterprise Architecture</span></a>
+				<div class="top_submenu c4">
+					<div style="overflow: hidden; padding: 0px; width: 225px;" class="scroll-pane">
+						
+					<div style="width: 225px; height: 325px;" class="jspContainer"><div style="padding: 0px; top: 0px; width: 225px;" class="jspPane"><ul class="top_submenu_links">
+				              <li><a href="http://www.infoq.com/enterprise-architecture/?utm_source=infoq&amp;utm_medium=header_graybar&amp;utm_campaign=topic_clk" title="Enterprise Architecture">Enterprise Architecture</a></li>
+				              <li><a href="http://www.infoq.com/bpm/?utm_source=infoq&amp;utm_medium=header_graybar&amp;utm_campaign=topic_clk" title="BPM">BPM</a></li>
+				              <li><a href="http://www.infoq.com/business_it_alignment/?utm_source=infoq&amp;utm_medium=header_graybar&amp;utm_campaign=topic_clk" title="Business/IT Alignment">Business/IT Alignment</a></li>
+				              <li><a href="http://www.infoq.com/Architecture-Documentation/?utm_source=infoq&amp;utm_medium=header_graybar&amp;utm_campaign=topic_clk" title="Architecture Documentation">Architecture Documentation</a></li>
+				              <li><a href="http://www.infoq.com/Governance/?utm_source=infoq&amp;utm_medium=header_graybar&amp;utm_campaign=topic_clk" title="IT Governance">IT Governance</a></li>
+				              <li><a href="http://www.infoq.com/soa/?utm_source=infoq&amp;utm_medium=header_graybar&amp;utm_campaign=topic_clk" title="SOA">SOA</a></li>
+							  <!-- <li><a class="more" href="#" title="">+ More topics</a></li> -->
+						</ul></div></div></div>
+					
+					<div class="menu_article">
+						<h2>Featured in <span id="enterprise-architectHDLabel">Enterprise Architecture</span></h2>
+						<h3 id="enterprise-architectHDTitle"><a href="http://www.infoq.com/articles/personae-non-gratae">How Well Do You Know Your Personae Non Gratae?</a></h3>
+						<div class="clear"></div>
+						<p>
+							<img id="enterprise-architectHDImg" src="Mission%20%20Impossible%E2%80%93Purely%20Declarative%20User%20Interface%20Modeling-Dateien/logo.png" alt="" border="0">
+							<span id="enterprise-architectHDSummary">In this article, author 
+discusses three techniques to defend against malicious users in software
+ systems. These techniques includes creating personas to think 
+strategically about the mischief a malicious user might attempt, misuse 
+cases used to determine how the software should respond to unintended 
+use, and activity diagrams annotated with security concerns.
+</span>
+						</p>
+						<div class="clear"></div>	
+						<div class="alignCenter">
+							<a class="view_all_categ" href="http://www.infoq.com/enterprise-architect/">
+								<span>All in <b id="enterprise-architectHDLabel2">Enterprise Architecture</b></span>
+							</a>
+						</div>
+						<div class="clear"></div>	
+					</div>
+					
+					<div class="clear"></div>
+				</div>
+			</li>
+		</ul>
+
+		
+     	
+
+
+
+
+
+
+
+<!--	#######		qcon	#########	 -->
+
+
+<div class="qcon dual">
+	<p>
+		<a href="http://qconlondon.com/?utm_source=infoq&amp;utm_medium=header&amp;utm_campaign=infoqheader" target="_blank" title="London 2015"><strong>London 2015</strong><br>Mar 2 - Mar 6</a>
+ 	</p>
+    <p>
+        <a href="http://qconnewyork.com/?utm_source=infoq&amp;utm_medium=header&amp;utm_campaign=infoqheader" target="_blank" title="New York 2015"><strong>New York 2015</strong><br>Jun 08 - Jun 12</a>
+    </p>
+</div>
+
+		
+		<div class="clear"></div>
+		
+    	
+
+
+
+
+
+
+
+
+<!--	#######		submenu	#########	 -->
+<ul class="submenu">
+    <li><a href="http://www.infoq.com/mobile/?utm_source=infoq&amp;utm_medium=header_graybar&amp;utm_campaign=topic_clk" title="Mobile">Mobile</a></li>
+    <li><a href="http://www.infoq.com/HTML5Topic/?utm_source=infoq&amp;utm_medium=header_graybar&amp;utm_campaign=topic_clk" title="HTML5">HTML5</a></li>
+    <li><a href="http://www.infoq.com/javascript/?utm_source=infoq&amp;utm_medium=header_graybar&amp;utm_campaign=topic_clk" title="JavaScript">JavaScript</a></li>
+	<li><a href="http://www.infoq.com/apm/?utm_source=infoq&amp;utm_medium=header_graybar&amp;utm_campaign=topic_clk" title="APM">APM</a></li>
+
+    <li><a href="http://www.infoq.com/cloud-computing/?utm_source=infoq&amp;utm_medium=header_graybar&amp;utm_campaign=topic_clk" title="Cloud">Cloud</a></li><li><a href="http://www.infoq.com/rest/?utm_source=infoq&amp;utm_medium=header_graybar&amp;utm_campaign=topic_clk" title="REST">REST</a></li><li><a href="http://www.infoq.com/agile/?utm_source=infoq&amp;utm_medium=header_graybar&amp;utm_campaign=topic_clk" title="Agile">Agile</a></li><li><a class="last" href="http://www.infoq.com/api/?utm_source=infoq&amp;utm_medium=header_graybar&amp;utm_campaign=topic_clk" title="API Design">API Design</a></li>
+</ul>
+	
+    <div class="all_topics"><a href="http://www.infoq.com/topics">All topics</a></div>
+    
+    <div class="all_topics" style="float: right;"><a style="color:#106CB6; text-shadow:1px 1px 1px #A7A7A7; margin-right:20px; font-size:14px;" href="http://www.infoq.com/coderally/?utm_source=infoq&amp;utm_medium=header_graybar&amp;utm_campaign=CodeRally_clk" target="_blank">Play Code Rally</a></div>
+
+	
+		
+		
+	<div class="clear"></div>
+
+	
+
+
+
+
+
+
+
+
+
+<div class="breadcrumbs">
+	<span class="first">You are here:</span>
+	<a class="normal" href="http://www.infoq.com/?utm_source=infoq&amp;utm_medium=breadcrumbs_feature&amp;utm_campaign=breadcrumbs" title="InfoQ Homepage">InfoQ Homepage</a>
+	
+		
+            
+            
+                <a class="normal" href="http://www.infoq.com/presentations?utm_source=infoq&amp;utm_medium=breadcrumbs_feature&amp;utm_campaign=breadcrumbs" title="Presentations">Presentations</a>
+                
+		
+		<span class="last">Mission: Impossible–Purely Declarative User Interface Modeling</span>
+	
+	
+    
+</div>
+
+	
+	<div class="clear"></div>
+</div>		
+<!--	#######		HEADER END	#########	 -->
+	
+
+                <!--	#######		CONTENT START	#########	 -->
+                <div id="content">
+                    
+        
+        
+            
+        
+        <a id="exitFullScreenMode" class="fullscreenIdentifier" href="javascript:;" title="">
+            <span>You are now in <strong>FULL VIEW</strong></span>
+            <div><strong>CLOSE FULL VIEW</strong></div>
+        </a>
+		<!--	#######		left side START	#########	 -->
+
+		<div class="article_page_left presentation_full">
+			<h1 class="general">
+				<div>Mission: Impossible–Purely Declarative User Interface Modeling</div> 
+                <span class="recorded">Recorded at:<br>
+                    <a title="" href="http://www.codegeneration.net/cg2012/index.php">
+                        <img id="promoImage" alt="" src="Mission%20%20Impossible%E2%80%93Purely%20Declarative%20User%20Interface%20Modeling-Dateien/Code%2520Generation%25202012.JPG" border="0">
+                    </a>
+                </span>
+            </h1>
+            <span class="author_general">
+                by 
+                <a href="http://www.infoq.com/author/Achim-Demelt" class="editorlink f_taxonomyEditor">
+
+                    Achim Demelt
+                </a>
+
+                on
+                Sep 07, 2012
+                <em>|</em>
+                
+            <a id="noOfComments" title="" href="#theCommentsSection" class="comments_like">
+		
+	        <span class="comments_counts">
+	        	<span class="nr">
+	        		2
+	        	</span>
+	        </span>
+			Discuss
+	    
+	    
+	</a></span>
+
+            
+
+
+
+
+
+
+
+<ul class="share_this">
+    <li class="space">Share</li>
+    <li>
+        <a href="http://www.addthis.com/bookmark.php?v=250&amp;username=infoq" class="standard addthis_button" style="background:none;text-decoration:none;color:#1C497B; padding:0 2px; float:left; font-weight: bold;font-size: 85%;">
+            <img src="Mission%20%20Impossible%E2%80%93Purely%20Declarative%20User%20Interface%20Modeling-Dateien/sm-plus.gif" alt="Share" border="0" height="15" width="16">
+        </a>
+    </li>
+
+    <li>
+        <span class="addthis_separator">|&nbsp;</span>
+    </li>
+
+    <li><a href="#" title="Facebook" class="standard addthis_button_facebook at300b"><span class="at16nc at300bs at15nc at15t_facebook at16t_facebook"><span class="at_a11y">Share on facebook</span></span></a></li>
+    <li><a title="Digg" target="_blank" href="http://www.addthis.com/bookmark.php?v=300&amp;winname=addthis&amp;pub=infoq&amp;source=tbx-300&amp;lng=de&amp;s=digg&amp;url=http%3A%2F%2Fwww.infoq.com%2Fpresentations%2FS4-Declarative-DSL-UI%2F&amp;title=Mission%3A%20Impossible%E2%80%93Purely%20Declarative%20User%20Interface%20Modeling&amp;ate=AT-infoq/-/-/547733b66b16cf45/2&amp;frommenu=1&amp;uid=547733b6a2f2bf07&amp;ct=1&amp;pre=http%3A%2F%2Fwww.infoq.com%2Fpresentations%2FS4-Declarative-DSL-UI%2F&amp;tt=0&amp;captcha_provider=nucaptcha" class="standard addthis_button_digg at300b"><span class="at16nc at300bs at15nc at15t_digg at16t_digg"><span class="at_a11y">Share on digg</span></span></a></li>
+    <li><a title="Dzone" target="_blank" href="http://www.addthis.com/bookmark.php?v=300&amp;winname=addthis&amp;pub=infoq&amp;source=tbx-300&amp;lng=de&amp;s=dzone&amp;url=http%3A%2F%2Fwww.infoq.com%2Fpresentations%2FS4-Declarative-DSL-UI%2F&amp;title=Mission%3A%20Impossible%E2%80%93Purely%20Declarative%20User%20Interface%20Modeling&amp;ate=AT-infoq/-/-/547733b66b16cf45/3&amp;frommenu=1&amp;uid=547733b6739caffa&amp;ct=1&amp;pre=http%3A%2F%2Fwww.infoq.com%2Fpresentations%2FS4-Declarative-DSL-UI%2F&amp;tt=0&amp;captcha_provider=nucaptcha" class="standard addthis_button_dzone at300b"><span class=" at300bs at15nc at15t_dzone"><span class="at_a11y">Share on dzone</span></span></a></li>
+    <li><a href="#" title="Tweet" class="standard addthis_button_twitter at300b"><span class="at16nc at300bs at15nc at15t_twitter at16t_twitter"><span class="at_a11y">Share on twitter</span></span></a></li>
+    <li><a title="Reddit" target="_blank" href="http://www.addthis.com/bookmark.php?v=300&amp;winname=addthis&amp;pub=infoq&amp;source=tbx-300&amp;lng=de&amp;s=reddit&amp;url=http%3A%2F%2Fwww.infoq.com%2Fpresentations%2FS4-Declarative-DSL-UI%2F&amp;title=Mission%3A%20Impossible%E2%80%93Purely%20Declarative%20User%20Interface%20Modeling&amp;ate=AT-infoq/-/-/547733b66b16cf45/4&amp;frommenu=1&amp;uid=547733b643833188&amp;ct=1&amp;pre=http%3A%2F%2Fwww.infoq.com%2Fpresentations%2FS4-Declarative-DSL-UI%2F&amp;tt=0&amp;captcha_provider=nucaptcha" class="standard addthis_button_reddit at300b"><span class="at16nc at300bs at15nc at15t_reddit at16t_reddit"><span class="at_a11y">Share on reddit</span></span></a></li>
+    <li><a title="Delicious" target="_blank" href="http://www.addthis.com/bookmark.php?v=300&amp;winname=addthis&amp;pub=infoq&amp;source=tbx-300&amp;lng=de&amp;s=delicious&amp;url=http%3A%2F%2Fwww.infoq.com%2Fpresentations%2FS4-Declarative-DSL-UI%2F&amp;title=Mission%3A%20Impossible%E2%80%93Purely%20Declarative%20User%20Interface%20Modeling&amp;ate=AT-infoq/-/-/547733b66b16cf45/5&amp;frommenu=1&amp;uid=547733b604d70ff0&amp;ct=1&amp;pre=http%3A%2F%2Fwww.infoq.com%2Fpresentations%2FS4-Declarative-DSL-UI%2F&amp;tt=0&amp;captcha_provider=nucaptcha" class="standard addthis_button_delicious at300b"><span class="at16nc at300bs at15nc at15t_delicious at16t_delicious"><span class="at_a11y">Share on delicious</span></span></a></li>
+    <li><a href="#" title="Email" target="_blank" class="standard addthis_button_email at300b"><span class="at16nc at300bs at15nc at15t_email at16t_email"><span class="at_a11y">Share on email</span></span></a></li>
+
+    
+        
+        
+            <li><a id="bookmarkBtn" href="#" onclick="Bookmarks.bookmarkContent('presentations', 'S4-Declarative-DSL-UI/');return false;" class="read_later" title=""><q>Read later</q></a></li>
+            <li><a class="reading_list" style="margin-right: 100px;" href="http://www.infoq.com/showbookmarks.action"><q>My Reading List</q></a></li>
+        
+    
+</ul>
+
+<script type="text/javascript">
+   var addthis_config = {
+      data_ga_property: 'UA-6608133-2',
+      data_ga_social: true
+   };
+</script><iframe style="visibility: hidden; display: none;" src="Mission%20%20Impossible%E2%80%93Purely%20Declarative%20User%20Interface%20Modeling-Dateien/container.htm"></iframe>
+
+
+<!-- AddThis Button END -->
+
+
+
+			<div class="clear"></div>
+
+			<!-- MENU Prezentation -->
+			<div class="presentation_type">
+				<ul>
+					<li>View Presentation</li>
+					<li><a id="horizontal" class="presentation_links current" rel="tipsy" href="javascript:;" original-title="Horizontal">&nbsp;</a></li>
+					<li><a id="vertical" class="presentation_links" rel="tipsy" href="javascript:;" original-title="Vertical">&nbsp;</a></li>
+					<li><a id="full" class="presentation_links" rel="tipsy" href="javascript:;" original-title="Full">&nbsp;</a></li>
+				</ul>
+				<div class="clear"></div>
+			</div>
+
+			<div class="clear"></div>
+
+			<!-- Prezentation horizontal version start -->
+            <div id="pr_horizontal" class="presentation_v1 horizontal">
+                <div id="top">
+                    <div class="leftSide">
+                        <div style="height: 295px;" class="video" id="playerContainer">
+                            
+                            
+                                <object style="visibility: visible;" id="player" data="Mission%20%20Impossible%E2%80%93Purely%20Declarative%20User%20Interface%20Modeling-Dateien/svmplayer.swf" type="application/x-shockwave-flash" height="100%" width="100%"><param value="always" name="allowscriptaccess"><param value="true" name="allowfullscreen"><param value="opaque" name="wmode"><param value="server=rtmpe://video.infoq.com/cfx/st/&amp;streams=mp4:presentations/12-mar-missionimpossible.mp4,0" name="flashvars"></object>
+                            
+                        </div>
+                            <div class="download_presentation">
+                                
+                                    <ul>
+                                        <li>Download</li>
+                                        
+                                            <li>
+                                                <a id="mp3" title="" href="javascript:;">MP3</a>
+                                                <form method="post" action="/mp3download.action" target="_blank" id="mp3Form">
+                                                    <input name="filename" value="presentations/infoq-12-mar-missionimpossible.mp3" type="hidden">
+                                                </form>
+                                            </li>
+                                        
+                                        
+                                            <li>|</li>
+                                        
+                                        
+                                            <li>
+                                                <a id="slides" title="" href="javascript:;">Slides</a>
+                                                <form method="post" action="/pdfdownload.action" target="_blank" id="pdfForm">
+                                                    <input name="filename" value="presentations/CodeGeneration2012-AchimDemelt-MissionImpossiblePurelydeclarativeUserInterfaceModeling.pdf" type="hidden">
+                                                </form>
+                                            </li>
+                                        
+
+                                    </ul>
+                                
+                                <span class="videolength2">42:32</span>
+                                <div class="clear"></div>
+                            </div>
+						<div class="summary_height_fix_box" id="summary_height_fix_box">
+							<div style="height: 170px;" class="scrollbar disable"><div style="height: 170px;" class="track"><div style="top: 0px; height: 170px;" class="thumb"><div class="end"></div></div></div></div>
+							<div class="viewport">
+								<div style="top: 0px;" class="overview">
+									<p id="summary"> 							
+			                            <strong>Summary</strong><br>
+			                            Achim Demelt discusses creating a UI 
+using a completely declarative DSL called S4 without flow control, 
+events or data binding.
+									</p>
+								</div>
+							</div>
+						</div>
+                        <div id="id_300x250_banner_top">
+                            <script type="text/javascript">
+                                googletag.cmd.push(function() { googletag.display('id_300x250_banner_top'); });
+                            </script>
+                        </div>
+                    </div>
+
+                    <div class="rightSide">
+						<div class="right_text_fix" id="right_text_fix">
+							<div class="scrollbar"><div class="track"><div class="thumb"><div class="end"></div></div></div></div>
+							<div class="viewport">
+								<div class="overview"></div>
+							</div>
+						</div>
+						<div style="height: 446px;" id="slideContainer" class="slides"><object style="visibility: visible;" id="slide" data="Mission%20%20Impossible%E2%80%93Purely%20Declarative%20User%20Interface%20Modeling-Dateien/1.swf" type="application/x-shockwave-flash" height="100%" width="100%"><param value="transparent" name="wmode"></object></div>
+                        <div class="clear"></div>
+
+
+						<div class="text_height_fix_box" id="text_height_fix_box">
+							<div style="height: 300px;" class="scrollbar"><div style="height: 300px;" class="track"><div style="top: 20px; height: 257.143px;" class="thumb"><div class="end"></div></div></div></div>
+							<div class="viewport">
+								<div style="top: -23.3333px;" class="overview">
+			                        <h3 id="biolabel">Bio</h3>
+									<p id="biotext">
+										Achim Demelt has been writing model-driven software and 
+frameworks for 10+ years, based predominantly on the Java/EMF platform 
+and Eclipse’s Xtend/Xpand/Xtext technologies. After many years working 
+on the back-end side of applications, he now leads the UI DSL and 
+framework development at Wilken GmbH, a maker of ERP software in 
+Germany.
+									</p>
+									<p id="conference">
+										<a title="" href="http://www.codegeneration.net/cg2012/index.php">
+					                        <img alt="" src="Mission%20%20Impossible%E2%80%93Purely%20Declarative%20User%20Interface%20Modeling-Dateien/Code%2520Generation%25202012.JPG" border="0">
+					                    </a>			                            
+			                            The Code Generation conference is the 
+leading event on the practical applications of Model-Driven Software 
+Development (MDSD). It offers a high quality learning experience by 
+combining discussions and debates with a diverse range of practical 
+tutorials and workshops. It will also give you the opportunity to share 
+experiences and knowledge with fellow developers.The conference is now 
+in its 6th year and is known for providing a high-value learning 
+experience. This reputation has been built up by attracting 
+industry-recognised experts to share their experiences at the 
+conference.
+									</p>
+								</div>
+							</div>							
+						</div>
+                    </div>
+                </div>
+                <div class="clear"></div>
+                <div id="bottom"></div>
+            </div>
+            <div class="clear"></div>
+            <div class="random_links">
+                <ul>
+                    
+                        
+                        
+                        
+                        
+                    	<li><a><span class="gray_color">Sections</span></a></li>
+				<li><a class="f_taxonomy" href="http://www.infoq.com/architecture-design" name="architecture-design" id="6,816"><b>Architecture &amp; Design</b></a></li>				<li><a class="f_taxonomy" href="http://www.infoq.com/development" name="development" id="6,815"><b>Development</b></a></li>
+	<li><a><span class="gray_color">Topics</span></a></li>
+					<li><a class="f_taxonomy" href="http://www.infoq.com/Declarative_Programming" name="Declarative_Programming" id="7,414">Declarative Programming</a></li>					<li><a class="f_taxonomy" href="http://www.infoq.com/DSLs" name="DSLs" id="4,055">DSLs</a></li>					<li><a class="f_taxonomy" href="http://www.infoq.com/Code_Generation_Cambridge_UK" name="Code_Generation_Cambridge_UK" id="7,348">Code Generation Cambridge UK</a></li>					<li><a class="f_taxonomy" href="http://www.infoq.com/dsl" name="dsl" id="176">Domain Specific Languages</a></li>					<li><a class="f_taxonomy" href="http://www.infoq.com/UI" name="UI" id="4,460">User Interface</a></li>					<li><a class="f_taxonomy" href="http://www.infoq.com/Code_Generation_Cambridge_UK_2012" name="Code_Generation_Cambridge_UK_2012" id="7,349">Code Generation Cambridge UK 2012</a></li>
+                </ul>
+            </div>
+            <div class="vendor_vs_popular">
+                
+                <div class="leftS">
+                	
+                	
+					
+					
+                    
+
+
+
+
+
+
+
+
+<div style="display: block;" class="related_sponsors wholething">
+	<div class="gray_section_related only2 fullWidth">
+	    <div style="display: block;" class="related_editorial recommended only2">
+	        <p class="title">Related Editorial</p>
+	        <div id="editorial_links" class="links">
+	            <div class="clear"></div>
+	        <h3 title="" class="presentations">
+                                    <a title="" href="http://www.infoq.com/presentations/om-clojurescript?utm_source=infoq&amp;utm_medium=related_content_link&amp;utm_campaign=relatedContent_presentations_clk">UI: The Functional Final Frontier</a></h3><h3 title="" class="news">
+                                    <a title="" href="http://www.infoq.com/news/2014/10/facebook-asyncdisplaykit-ios?utm_source=infoq&amp;utm_medium=related_content_link&amp;utm_campaign=relatedContent_presentations_clk">Facebook AsyncDisplayKit Touts Smooth Asynchronous UI for iOS Apps</a></h3><h3 title="" class="news">
+                                    <a title="" href="http://www.infoq.com/news/2014/07/google-liquid-fun11-physics?utm_source=infoq&amp;utm_medium=related_content_link&amp;utm_campaign=relatedContent_presentations_clk">Google Released LiquidFun 1.1, Open-source 2D Physics Engine</a></h3><h3 title="" class="news">
+                                    <a title="" href="http://www.infoq.com/news/2014/06/responsive-website-design?utm_source=infoq&amp;utm_medium=related_content_link&amp;utm_campaign=relatedContent_presentations_clk">Guidelines for Responsive Website Design</a></h3><h3 title="" class="news">
+                                    <a title="" href="http://www.infoq.com/news/2014/05/xamarin-forms?utm_source=infoq&amp;utm_medium=related_content_link&amp;utm_campaign=relatedContent_presentations_clk">Xamarin.Forms Enables Truly Native Cross-platform UIs</a></h3></div>
+	    </div>
+	    
+	        
+	            <div class="related_editorial sponsored only2last">
+	                <p class="title">Related Vendor Content</p>
+	                <div class="links">
+	                    
+	                    
+	                    
+	                    
+	                        
+	                            
+	                        
+	                        <h3 title="" class="entrypdf f_vcrbottom" jsh="{&quot;id&quot;:3027,&quot;title&quot;:&quot;PHP Performance Optimization Checklist: Scaling PHP in the Real World&quot;}">
+	                            <a href="http://www.infoq.com/vendorcontent/show.action?vcr=3027&amp;utm_source=infoq&amp;utm_medium=VCR&amp;utm_campaign=vcr_presentations_click" target="_blank">
+	                                PHP Performance Optimization Checklist: Scaling PHP in the Real World
+	                            </a>
+	                        </h3>
+	                    
+	                        
+	                            
+	                        
+	                        <h3 title="" class="entrypdf f_vcrbottom" jsh="{&quot;id&quot;:3026,&quot;title&quot;:&quot;Gartner Magic Quadrant for Application Performance Monitoring&quot;}">
+	                            <a href="http://www.infoq.com/vendorcontent/show.action?vcr=3026&amp;utm_source=infoq&amp;utm_medium=VCR&amp;utm_campaign=vcr_presentations_click" target="_blank">
+	                                Gartner Magic Quadrant for Application Performance Monitoring
+	                            </a>
+	                        </h3>
+	                    
+	                        
+	                            
+	                        
+	                        <h3 title="" class="entrypdf f_vcrbottom" jsh="{&quot;id&quot;:3040,&quot;title&quot;:&quot;API Management: Delivering Mobile App Security with an Optimal UX&quot;}">
+	                            <a href="http://www.infoq.com/vendorcontent/show.action?vcr=3040&amp;utm_source=infoq&amp;utm_medium=VCR&amp;utm_campaign=vcr_presentations_click">
+	                                API Management: Delivering Mobile App Security with an Optimal UX
+	                            </a>
+	                        </h3>
+	                    
+	                        
+	                            
+	                        
+	                        <h3 title="" class="entrypdf f_vcrbottom" jsh="{&quot;id&quot;:2988,&quot;title&quot;:&quot;5 OAuth Essentials for API Access Control&quot;}">
+	                            <a href="http://www.infoq.com/vendorcontent/show.action?vcr=2988&amp;utm_source=infoq&amp;utm_medium=VCR&amp;utm_campaign=vcr_presentations_click">
+	                                5 OAuth Essentials for API Access Control
+	                            </a>
+	                        </h3>
+	                    
+	                        
+	                            
+	                        
+	                        <h3 title="" class="entrypdf f_vcrbottom" jsh="{&quot;id&quot;:2994,&quot;title&quot;:&quot;5 Pillars of API Management&quot;}">
+	                            <a href="http://www.infoq.com/vendorcontent/show.action?vcr=2994&amp;utm_source=infoq&amp;utm_medium=VCR&amp;utm_campaign=vcr_presentations_click">
+	                                5 Pillars of API Management
+	                            </a>
+	                        </h3>
+	                    
+	                    
+	                    
+	                        
+	                        
+	                    
+	                    <div class="clear"></div>
+	                </div>
+	            </div>
+	        
+        </div>
+        
+    
+    
+    <div class="clear"></div>
+    <div class="related_research"></div>
+</div>
+
+
+<script type="text/javascript">
+    $.ajax({
+        url: "/api/recommendationlinks.action",
+        contentType: "application/x-www-form-urlencoded; charset=utf-8",
+        type: 'POST',
+        data: {"topicIds": "2932,1195,1262,2878,-1000,-1000", "title": "Mission: Impossible–Purely Declarative User Interface Modeling", "contentPath": "/presentations/S4-Declarative-DSL-UI", "language": "en"},
+        success: displayRelatedEditorial,
+        async: false
+    });
+    
+    function displayRelatedEditorial(data) {
+        var trackingCode = "?utm_source=infoq&utm_medium=related_content_link&utm_campaign=relatedContent_presentations_clk";
+        if (data.length > 0) {
+            for (var i = 0; i < data.length; i++) {
+                if (i === 5) {
+                    break;
+                }
+                var link = $('<h3 title="" class="' + data[i].contentType + '">\n\
+                                    <a title="" href="' + data[i].url + trackingCode +
+                        '">' + data[i].title + '</a></h3>');
+                $('#editorial_links').append(link);
+            }
+            $('.gray_section_related > .related_editorial.recommended').css('display', 'block');
+        }
+    }
+</script> 
+
+<script type="text/javascript">
+    $.ajax({
+        type: "POST",
+        url: '/widgets/researchHorizontalWidget.action',
+        contentType: "application/x-www-form-urlencoded; charset=utf-8",
+        data: {
+            "path": 'S4-Declarative-DSL-UI/',
+            "uriMapping": 'presentations'
+        },
+        success: displayRelatedResearch,
+        error: function() {
+            // fail silently
+        },
+        async: false
+    });
+    
+    function displayRelatedResearch(data) {
+        if (InfoQConstants.language != 'en') {
+            return;
+        }
+        if (data.matchedList && data.matchedList.length > 0) {
+            $('.related_research').append('<p class="title">Related Research</p>')
+            for (var i = 0; i < data.matchedList.length; i++) {
+                var link = $('<a class="rel_results" title="" href="' + data.matchedList[i][0] +
+                        '?utm_source=infoqresearch&utm_campaign=rr-content">' +
+                        '<img border="0" alt="" src="' + data.matchedList[i][2] + '">' +
+                        data.matchedList[i][1] +
+                        '</a>');
+                $('.related_research').append(link);
+            }
+            if (data.latestList) {
+                for (var i = 0; i < data.latestList.length; i++) {
+                    var link = $('<a class="rel_results" title="" href="' + data.latestList[i][0] +
+                            '?utm_source=infoqresearch&utm_campaign=rr-content">' +
+                            '<img border="0" alt="" src="' + data.latestList[i][2] + '">' +
+                            data.latestList[i][1] +
+                            '</a>');
+                    $('.related_research').append(link);
+                }
+            }
+            $('.related_research').show();
+        }
+    }
+</script>	
+
+
+<script type="text/javascript">
+    
+        $(function() {
+        	var grayBox = $('.gray_section_related');
+            var recommendedColumn = $('.gray_section_related > .related_editorial.recommended');
+            var recommendedExists = $(recommendedColumn).css('display') === 'block';
+            var vcrColumn = $('.gray_section_related > .related_editorial.sponsored');
+            var vcrExists = $(vcrColumn).length === 1;
+            var sponsorshipColumn = $('.related_sponsors > .paid_section')
+            var sponsorshipExists = $(sponsorshipColumn).length === 1;
+            var researchRow = $('.related_research');
+            var researchExists = $(researchRow).css('display') === 'block';
+
+            if (recommendedExists || vcrExists || sponsorshipExists || researchExists) {
+                $('.related_sponsors.wholething').show(); // show the big related box
+            }
+			
+            if(recommendedExists || vcrExists){
+            	$('.gray_section_related').show(); // show the gray box for vcr and recommendations
+            }
+            
+            // in case all three available, leave now
+            if (recommendedExists && vcrExists && sponsorshipExists) {
+                return;
+            }
+            // in case only two of them available
+            if (recommendedExists && vcrExists && !sponsorshipExists) {
+                $(recommendedColumn).addClass('only2');
+                $(vcrColumn).addClass('only2last');
+                $(grayBox).addClass('only2 fullWidth');                
+            } else if (recommendedExists && sponsorshipExists && !vcrExists) {
+                $(recommendedColumn).addClass('only2');
+                $(sponsorshipColumn).addClass('only2last');
+                $(grayBox).addClass('only1');
+            } else if (vcrExists && sponsorshipExists && !recommendedExists) {
+                $(vcrColumn).addClass('only2');
+                $(sponsorshipColumn).addClass('only2last');
+                $(grayBox).addClass('only1');
+            }
+            // in case only one is available
+            else if (recommendedExists && !vcrExists && !sponsorshipExists) {
+                $(recommendedColumn).addClass('only1');
+                $(grayBox).addClass('only1 fullWidth');
+            } else if (vcrExists && !recommendedExists && !sponsorshipExists) {
+                $(vcrColumn).addClass('only1');
+                $(grayBox).addClass('only1 fullWidth');
+            } else if (sponsorshipExists && !recommendedExists && !vcrExists) {
+                $(sponsorshipColumn).addClass('only1');
+            }
+            // in case none is available, do not display upper border for the research category if any
+            else if (researchExists) {
+                $(researchRow).addClass('only1');
+            }
+        });
+</script>
+<div class="clear"></div>
+                    <div class="article_page_left">
+                        <div class="text_info">
+                            
+                                
+                            
+
+
+
+
+
+
+<script type="text/javascript">
+
+    var JSi18n = JSi18n || {}; // define only if not already defined
+    JSi18n.re='Re:';
+    JSi18n.errorSubject='Please enter a subject.';
+    JSi18n.errorBody='You can not post a blank message. Please type your message and try again.';
+    JSi18n.errorInvalidLinks='The Message body contains invalid links. Please review and try again';
+    JSi18n.stopWatchText='Stop Watching Thread';
+    JSi18n.startWatchText='Watch Thread';
+    JSi18n.timeExpiredMessage='5 minute allowable editing time has elapsed. Sorry for any inconvenience.';
+    JSi18n.repostButtonFormat='Repost ($m left)';
+    JSi18n.timeExpiredButton='Time Expired';
+    JSi18n.sessionExpiredMessage='Your session expired. Please log in and resubmit';
+    JSi18n.editLinkFormat='Edit ($m minutes left)';
+    JSi18n.enter_subject='Please enter a subject';
+    JSi18n.enter_message='Message';
+    JSi18n.content_datetime_format='MMM dd, yyyy';
+
+var forumID=1;
+var threadID=25850;
+var ctxPath= '';
+var postAddress= ctxPath + '/forum/post!post.action?language=' + 'en';
+var repostAddress= ctxPath + '/forum/repost.action?language=' + 'en';
+var postAddWatches= ctxPath + '/forum/watches!add.action';
+var postRemoveWatches= ctxPath + '/forum/watches!remove.action';
+var loggedIn=true;
+var threadWatched=false;
+
+var forumNotificationDefault=false;
+
+
+var commentEditPeriod=5;
+</script>
+
+<script type="text/javascript" src="Mission%20%20Impossible%E2%80%93Purely%20Declarative%20User%20Interface%20Modeling-Dateien/ForumNotifications.js"></script>
+<script type="text/javascript" src="Mission%20%20Impossible%E2%80%93Purely%20Declarative%20User%20Interface%20Modeling-Dateien/jquery_002.js"></script>
+<script type="text/javascript" src="Mission%20%20Impossible%E2%80%93Purely%20Declarative%20User%20Interface%20Modeling-Dateien/date.js"></script>
+
+    <div class="comment_here">
+        <div id="postFormDeck">
+            <div id="deckText">
+                <h2>Hello stranger!</h2>
+                You need to <a href="http://www.infoq.com/reginit.action">Register an InfoQ account</a> or
+                <a class="login" href="javascript:;">Login</a> or login to post comments. But there's so much more behind being registered.<br>
+                <div id="getMost"><h2>Get the most out of the InfoQ experience.</h2></div>
+            </div>
+        </div>
+        <a id="theCommentsSection"></a>
+        <h3>Tell us what you think</h3>
+        <form onsubmit="return false;" target="" enctype="multipart/form-data" method="post" action="" name="">
+            <div class="area" name="comments">
+                <input id="subject" value="Please enter a subject" type="text">
+                <textarea id="body">Message</textarea>
+            </div>
+
+            <div class="clear"></div>
+            <p class="allowed">Allowed html: a,b,br,blockquote,i,li,pre,u,ul,p</p>
+            <input class="checkReply" id="emailMe" name="emailMe" type="checkbox">
+            <span class="tocheck">Email me replies to any of my messages in this thread</span>
+            <div class="clear"></div>
+            <input value="Post Message" class="submit" id="subButton" type="button">
+        </form>
+        <div class="clear"></div>
+    </div>
+    <div class="comments">
+        <div class="comments_title">Community comments 
+                <span id="watch">
+                    <a href="javascript:void(0)" class="watch_thread">Watch Thread</a>
+                </span>
+            </div>
+        <div class="clear"></div>
+        
+            
+
+                <div class="comment_title lvl0" id="com90088">
+
+                    <a href="#anch90088" title="">
+                        <strong>And what does it solve?</strong>
+                        <span>
+                            by
+                            Adam Nemeth
+                            Posted
+                            <span class="treeRelativeTime">Sep 08, 2012 10:00</span>
+                        </span>
+                    </a>
+                </div>
+
+            
+        
+            
+
+                <div class="comment_title lvl0" id="com90251">
+
+                    <a href="#anch90251" title="">
+                        <strong>Nowadays writing the UI in a declarative is not a challenge</strong>
+                        <span>
+                            by
+                            Javier Paniza
+                            Posted
+                            <span class="treeRelativeTime">Sep 13, 2012 06:31</span>
+                        </span>
+                    </a>
+                </div>
+
+            
+        
+    </div>
+
+    <div class="all_comments">
+        
+            
+                <div class="answers" id="ans90088">
+                    <a name="anch90088"></a>
+                    
+                    <p>
+                        <b class="title">And what does it solve?</b>
+                        <span>
+                            <span class="bodyRelativeTime">Sep 08, 2012 10:00</span>
+                            by
+                            <q>Adam Nemeth</q>
+                        </span>
+                    </p>
+                    <div class="flat_comment_body">
+                        If I'd have a boss who poses meaningless technical challenges to me, I'd quit on the spot.<br><br>It's possible to create a declarative UI: just use HTML and CSS3 without JavaScript. CSS3 even does away with the transitions.<br><br>But what on Earth would it solve for the users?<br><br>Computers
+ are interactive. Users command computers to do stuff for them. This is 
+the basis situation. An imperative language expresses these need rather 
+well.<br><br>Sure, you can build a declarative page descriptor, that's 
+even benefical (albeit the above mentioned two languages are well-suited
+ for this task already), but interacions will be verb-based. "If this 
+button is pressed, we expect you, dear computer,to do this".<br><br>Declarative
+ languages are known to hard to work with: while I'm fluent both in XSLT
+ and TypoScript (just two examples), I know that most programmers find 
+them really hard to work with.<br><br>A good engineering product is one 
+that solves needs perfectly for the users. The user of an API is the 
+programmer, and what a programmer creates is used by the end-user. If 
+the programmer has to do dances, or the end-user gets a software with 
+bad ergonomics, you've failed to create a good engineering product. <br><br>The good reaction to such CTO requests is "you're an idiot, you either forget this sh.t right now or I'm outta here."
+                    </div>
+                    <div class="clear"></div>
+                    <ul class="help_links">
+                        
+                        
+                            <li><a class="reply_flat" href="javascript:;" title="">Reply</a></li>
+                        
+                        <li><a class="backtop" href="#" title="">Back to top</a></li>
+                    </ul>
+                    <div class="clear"></div>
+                    <input name="tmstmp" value="1347134409797" type="hidden">
+                    <input name="createdOn" value="Sep 08, 2012" type="hidden">
+                    <input name="isNotificationOn" value="true" type="hidden">
+                </div>
+            
+        
+            
+                <div class="answers" id="ans90251">
+                    <a name="anch90251"></a>
+                    
+                    <p>
+                        <b class="title">Nowadays writing the UI in a declarative is not a challenge</b>
+                        <span>
+                            <span class="bodyRelativeTime">Sep 13, 2012 06:31</span>
+                            by
+                            <q>Javier Paniza</q>
+                        </span>
+                    </p>
+                    <div class="flat_comment_body">
+                        <blockquote>The Challenge: "We want to write the
+ complete UI of our next generation ERP System in a declarative way. Not
+ a single imperative statement."</blockquote><br>Today, any Java 
+developer can write a business application with automatic UI generation 
+using open source domain-driven frameworks, such as OpenXava. In fact, 
+there is already a complete ERP without a line of User Interface code 
+written with OpenXava.
+                    </div>
+                    <div class="clear"></div>
+                    <ul class="help_links">
+                        
+                        
+                            <li><a class="reply_flat" href="javascript:;" title="">Reply</a></li>
+                        
+                        <li><a class="backtop" href="#" title="">Back to top</a></li>
+                    </ul>
+                    <div class="clear"></div>
+                    <input name="tmstmp" value="1347553909965" type="hidden">
+                    <input name="createdOn" value="Sep 13, 2012" type="hidden">
+                    <input name="isNotificationOn" value="true" type="hidden">
+                </div>
+            
+        
+    </div>
+
+    <!-- overlay -->
+    <div id="overlay_comments">
+        <a href="javascript:;" class="close_comment" title="">Close</a>
+        <h4><strong></strong> by <span id="author"></span> <span id="timepast"></span></h4>
+        <p id="body">
+        </p><div class="alt">
+            <span>on <span id="timestamp"></span></span>
+        </div>
+
+        <div class="clear"></div>
+        <ul class="help_links">
+            <li><a title="" class="view">View</a></li>
+            <li><a title="" href="javascript:;" class="reply">Reply</a></li>
+            <li><a title="" href="#" class="backtop">Back to top</a></li>
+        </ul>
+
+        <div class="clear"></div>
+
+    </div>
+    <!-- reply box -->
+    <div id="replyPopup" class="popupLoginComments">
+        <a title="" class="close_login_popup" href="javascript:;">Close</a>
+
+        <form onsubmit="return false;" target="" action="" name="tpopup-reply" method="post">
+            <label class="label_login">Subject</label>
+            <input class="login_text subject" name="subject" type="text">
+            <label class="label_login">
+            	Your Reply
+            	<a style="float: right; text-decoration: underline; font-weight: normal; color: grey;" href="#" onclick="CommentsHandler.quoteOriginalMessage();return false;">
+            		Quote original message
+            	</a>
+            </label>
+            <textarea class="commentsReply" name="commentsReply"></textarea>
+            <div class="clear"></div>
+            <p class="error allowed"></p>
+            <div class="clear"></div>
+            <p class="allowed">Allowed html: a,b,br,blockquote,i,li,pre,u,ul,p</p>
+            <input class="checkReply emailMe" name="emailMe" type="checkbox">
+            <span class="tocheck">Email me replies to any of my messages in this thread</span>
+            <div class="clear"></div>
+            <input id="submit-reply" name="submit-reply" value="Post Message" type="button">
+            <input class="reset-reply" name="reset-reply" value="Cancel" type="reset">
+        </form>
+    </div>
+    <!-- edit comment box -->
+    <div id="editCommentPopup" class="popupLoginComments">
+        <a title="" class="close_login_popup" href="javascript:;">Close</a>
+
+        <form onsubmit="return false;" target="" action="" name="tpopup-reply" method="post">
+            <label class="label_login">Subject</label>
+            <input class="login_text subject" name="subject" type="text">
+            <label class="label_login">Your Reply</label>
+            <textarea class="commentsReply" name="commentsReply"></textarea>
+            <div class="clear"></div>
+            <p class="error allowed"></p>
+            <div class="clear"></div>
+            <p class="allowed">Allowed html: a,b,br,blockquote,i,li,pre,u,ul,p</p>
+            <input class="checkReply emailMe" name="emailMe" type="checkbox">
+            <span class="tocheck">Email me replies to any of my messages in this thread</span>
+            <div class="clear"></div>
+            <p class="time_expired allowed"></p>
+            <input id="resubmit-reply" name="submit-reply" value="" type="button">
+            <input class="reset-reply" name="reset-reply" value="Cancel" type="reset">
+        </form>
+    </div>
+    <!-- notification popup -->
+    <div id="messagePopup" class="popupLoginComments">
+        <a title="" class="close_login_popup" href="javascript:;">Close</a>
+        <div class="clear"></div>
+        <p class="allowed"></p>
+        <div class="clear"></div>
+        <input class="reset-reply" name="reset-reply" value="OK" type="reset">
+    </div>
+    <div id="responseContent"></div>
+	
+
+                        </div>
+
+                        <div class="clear"></div>
+                    </div>
+                </div>
+                
+                
+                <div class="rightS">
+                    <div class="article_page_right">
+                        
+
+
+
+
+
+
+
+<div style="display: block;" id="mostPopularSection" class="news_in_tabs">
+	<!-- the tabs -->
+	<ul class="tabs">
+		
+			<li><div class="tab_title">Popular</div></li>
+			<li><a href="javascript:;" class="current">10 days</a></li>
+			<li><a href="javascript:;">40 days</a></li>
+			<li><a href="javascript:;">6 months</a></li>
+				
+	</ul>
+	<!-- tab "panes" -->
+	<div class="panes">
+	<div style="display: block;"><h3 class="h3news" <!--pageviews:10466="" publication="" date:="" 2014-11-20--="">
+                        <a href="http://www.infoq.com/news/2014/11/becoming-software-craftsmen?utm_source=infoq&amp;utm_medium=popular_links_homepage">Becoming Software Craftsmen</a><a href="http://www.infoq.com/news/2014/11/becoming-software-craftsmen?utm_source=infoq&amp;utm_medium=popular_links_homepage#theCommentsSection">                            <span class="comments_counts"><span class="nr">8</span></span>                        </a></h3><h3 class="h3news" <!--pageviews:7293="" publication="" date:="" 2014-11-19--="">
+                        <a href="http://www.infoq.com/news/2014/11/MoreJava9Features?utm_source=infoq&amp;utm_medium=popular_links_homepage">More Java 9 Features Announced</a><a href="http://www.infoq.com/news/2014/11/MoreJava9Features?utm_source=infoq&amp;utm_medium=popular_links_homepage#theCommentsSection">                            <span class="comments_counts"><span class="nr">13</span></span>                        </a></h3><h3 class="h3news" <!--pageviews:4433="" publication="" date:="" 2014-11-19--="">
+                        <a href="http://www.infoq.com/news/2014/11/csharp6-preview?utm_source=infoq&amp;utm_medium=popular_links_homepage">A Preview of C# 6</a></h3><h3 class="h3news" <!--pageviews:4010="" publication="" date:="" 2014-11-20--="">
+                        <a href="http://www.infoq.com/news/2014/11/cqrs-thinking?utm_source=infoq&amp;utm_medium=popular_links_homepage">CQRS as a Style of Thinking</a><a href="http://www.infoq.com/news/2014/11/cqrs-thinking?utm_source=infoq&amp;utm_medium=popular_links_homepage#theCommentsSection">                            <span class="comments_counts"><span class="nr">3</span></span>                        </a></h3><h3 class="h3news" <!--pageviews:3610="" publication="" date:="" 2014-11-17--="">
+                        <a href="http://www.infoq.com/news/2014/11/AndroidiOSHTML5?utm_source=infoq&amp;utm_medium=popular_links_homepage">Android and iOS Go HTML5 Friendly With Their Latest Releases</a></h3><h3 class="h3articles" <!--pageviews:3353="" publication="" date:="" 2014-11-18--="">
+                        <a href="http://www.infoq.com/articles/Web-APIs-From-Start-to-Finish?utm_source=infoq&amp;utm_medium=popular_links_homepage">Article Series: Web APIs: From Start to Finish</a></h3><h3 class="h3articles" <!--pageviews:3079="" publication="" date:="" 2014-11-21--="">
+                        <a href="http://www.infoq.com/articles/Java-Application-Hostile-to-JIT-Compilation?utm_source=infoq&amp;utm_medium=popular_links_homepage">Is Your Java Application Hostile to JIT Compilation?</a></h3></div><div style="display: none;"><h3 class="h3news" <!--pageviews:31904="" publication="" date:="" 2014-10-27--="">
+                        <a href="http://www.infoq.com/news/2014/10/angular-2-atscript?utm_source=infoq&amp;utm_medium=popular_links_homepage">AngularJS 2.0 Details Emerge</a><a href="http://www.infoq.com/news/2014/10/angular-2-atscript?utm_source=infoq&amp;utm_medium=popular_links_homepage#theCommentsSection">                            <span class="comments_counts"><span class="nr">3</span></span>                        </a></h3><h3 class="h3news" <!--pageviews:11015="" publication="" date:="" 2014-11-02--="">
+                        <a href="http://www.infoq.com/news/2014/11/sacrificial-architecture?utm_source=infoq&amp;utm_medium=popular_links_homepage">Martin Fowler Describes "Sacrificial Architecture"</a><a href="http://www.infoq.com/news/2014/11/sacrificial-architecture?utm_source=infoq&amp;utm_medium=popular_links_homepage#theCommentsSection">                            <span class="comments_counts"><span class="nr">4</span></span>                        </a></h3><h3 class="h3news" <!--pageviews:10466="" publication="" date:="" 2014-11-20--="">
+                        <a href="http://www.infoq.com/news/2014/11/becoming-software-craftsmen?utm_source=infoq&amp;utm_medium=popular_links_homepage">Becoming Software Craftsmen</a><a href="http://www.infoq.com/news/2014/11/becoming-software-craftsmen?utm_source=infoq&amp;utm_medium=popular_links_homepage#theCommentsSection">                            <span class="comments_counts"><span class="nr">8</span></span>                        </a></h3><h3 class="h3articles" <!--pageviews:9891="" publication="" date:="" 2014-11-06--="">
+                        <a href="http://www.infoq.com/articles/Java-8-for-Financial-Services?utm_source=infoq&amp;utm_medium=popular_links_homepage">Java 8 for Financial Services</a><a href="http://www.infoq.com/articles/Java-8-for-Financial-Services?utm_source=infoq&amp;utm_medium=popular_links_homepage#theCommentsSection">                            <span class="comments_counts"><span class="nr">2</span></span>                        </a></h3><h3 class="h3articles" <!--pageviews:9538="" publication="" date:="" 2014-11-02--="">
+                        <a href="http://www.infoq.com/articles/introducing-pair-programming?utm_source=infoq&amp;utm_medium=popular_links_homepage">Introducing Pair Programming </a><a href="http://www.infoq.com/articles/introducing-pair-programming?utm_source=infoq&amp;utm_medium=popular_links_homepage#theCommentsSection">                            <span class="comments_counts"><span class="nr">4</span></span>                        </a></h3><h3 class="h3news" <!--pageviews:8110="" publication="" date:="" 2014-10-20--="">
+                        <a href="http://www.infoq.com/news/2014/10/FDD?utm_source=infoq&amp;utm_medium=popular_links_homepage">Fear Driven Development on the Rise</a><a href="http://www.infoq.com/news/2014/10/FDD?utm_source=infoq&amp;utm_medium=popular_links_homepage#theCommentsSection">                            <span class="comments_counts"><span class="nr">3</span></span>                        </a></h3><h3 class="h3articles" <!--pageviews:8073="" publication="" date:="" 2014-10-21--="">
+                        <a href="http://www.infoq.com/articles/Java-Sleight-of-Hand?utm_source=infoq&amp;utm_medium=popular_links_homepage">Java Sleight of Hand</a><a href="http://www.infoq.com/articles/Java-Sleight-of-Hand?utm_source=infoq&amp;utm_medium=popular_links_homepage#theCommentsSection">                            <span class="comments_counts"><span class="nr">8</span></span>                        </a></h3></div><div style="display: none;"><h3 class="h3articles" <!--pageviews:79639="" publication="" date:="" 2014-05-30--="">
+                        <a href="http://www.infoq.com/articles/Java-8-Quiet-Features?utm_source=infoq&amp;utm_medium=popular_links_homepage">8 Great Java 8 Features No One's Talking about</a><a href="http://www.infoq.com/articles/Java-8-Quiet-Features?utm_source=infoq&amp;utm_medium=popular_links_homepage#theCommentsSection">                            <span class="comments_counts"><span class="nr">6</span></span>                        </a></h3><h3 class="h3news" <!--pageviews:40249="" publication="" date:="" 2014-06-13--="">
+                        <a href="http://www.infoq.com/news/2014/06/facebook-apollo?utm_source=infoq&amp;utm_medium=popular_links_homepage">Facebook Announces Apollo, a New NoSQL Database for On-line Low Latency Storage</a></h3><h3 class="h3articles" <!--pageviews:40188="" publication="" date:="" 2014-08-29--="">
+                        <a href="http://www.infoq.com/articles/software-development-effort-estimation?utm_source=infoq&amp;utm_medium=popular_links_homepage">What We Do and Don't Know about Software Development Effort Estimation</a></h3><h3 class="h3articles" <!--pageviews:35959="" publication="" date:="" 2014-05-25--="">
+                        <a href="http://www.infoq.com/articles/microservices-intro?utm_source=infoq&amp;utm_medium=popular_links_homepage">Microservices: Decomposing Applications for Deployability and Scalability</a><a href="http://www.infoq.com/articles/microservices-intro?utm_source=infoq&amp;utm_medium=popular_links_homepage#theCommentsSection">                            <span class="comments_counts"><span class="nr">8</span></span>                        </a></h3><h3 class="h3news" <!--pageviews:31904="" publication="" date:="" 2014-10-27--="">
+                        <a href="http://www.infoq.com/news/2014/10/angular-2-atscript?utm_source=infoq&amp;utm_medium=popular_links_homepage">AngularJS 2.0 Details Emerge</a><a href="http://www.infoq.com/news/2014/10/angular-2-atscript?utm_source=infoq&amp;utm_medium=popular_links_homepage#theCommentsSection">                            <span class="comments_counts"><span class="nr">3</span></span>                        </a></h3><h3 class="h3articles" <!--pageviews:24034="" publication="" date:="" 2014-06-04--="">
+                        <a href="http://www.infoq.com/articles/apache-kafka?utm_source=infoq&amp;utm_medium=popular_links_homepage">Apache Kafka: Next Generation Distributed Messaging System</a><a href="http://www.infoq.com/articles/apache-kafka?utm_source=infoq&amp;utm_medium=popular_links_homepage#theCommentsSection">                            <span class="comments_counts"><span class="nr">11</span></span>                        </a></h3><h3 class="h3news" <!--pageviews:23623="" publication="" date:="" 2014-08-14--="">
+                        <a href="http://www.infoq.com/news/2014/08/Pattern-Matching?utm_source=infoq&amp;utm_medium=popular_links_homepage">Pattern Matching in C# and VB</a><a href="http://www.infoq.com/news/2014/08/Pattern-Matching?utm_source=infoq&amp;utm_medium=popular_links_homepage#theCommentsSection">                            <span class="comments_counts"><span class="nr">11</span></span>                        </a></h3></div></div>
+	<div class="clear"></div>
+</div>
+                        <div class="clear"></div>
+                        
+
+
+
+
+
+
+
+
+ 	
+ 		<div class="sponsored_links_section">
+ 	
+ 	
+		 	<div class="sp_title">Sponsored Links</div>
+		 	<div id="id_ad_textlink1">
+		 		<script type="text/javascript">
+		 			googletag.cmd.push(function() { googletag.display('id_ad_textlink1'); });
+		 		</script>
+		 	</div>
+		 	<div id="id_ad_textlink2">
+		 		<script type="text/javascript">
+		 			googletag.cmd.push(function() { googletag.display('id_ad_textlink2'); });
+		 		</script>
+		 	</div>
+		 	<div id="id_ad_textlink3">
+		 		<script type="text/javascript">
+		 			googletag.cmd.push(function() { googletag.display('id_ad_textlink3'); });
+		 		</script>
+		 	</div>
+ 		</div>
+
+                        <div class="commercials">
+                            <div class="banner_type1 margintop" id="id_300x250_banner_bottom">
+                                <script type="text/javascript">
+                                    googletag.cmd.push(function() { googletag.display('id_300x250_banner_bottom'); });
+                                </script>
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="clear"></div>
+        </div>
+        
+
+
+
+
+
+
+
+
+
+
+
+	<script type="text/javascript" src="Mission%20%20Impossible%E2%80%93Purely%20Declarative%20User%20Interface%20Modeling-Dateien/addthis_widget.js"></script>
+
+        <div id="imgPreload"><img style="display:none;" src="Mission%20%20Impossible%E2%80%93Purely%20Declarative%20User%20Interface%20Modeling-Dateien/1.swf"><img style="display:none;" src="Mission%20%20Impossible%E2%80%93Purely%20Declarative%20User%20Interface%20Modeling-Dateien/2.swf"><img style="display:none;" src="Mission%20%20Impossible%E2%80%93Purely%20Declarative%20User%20Interface%20Modeling-Dateien/3.swf"><img style="display:none;" src="Mission%20%20Impossible%E2%80%93Purely%20Declarative%20User%20Interface%20Modeling-Dateien/4.swf"><img style="display:none;" src="Mission%20%20Impossible%E2%80%93Purely%20Declarative%20User%20Interface%20Modeling-Dateien/5.swf"><img style="display:none;" src="Mission%20%20Impossible%E2%80%93Purely%20Declarative%20User%20Interface%20Modeling-Dateien/6.swf"><img style="display:none;" src="Mission%20%20Impossible%E2%80%93Purely%20Declarative%20User%20Interface%20Modeling-Dateien/7.swf"><img style="display:none;" src="Mission%20%20Impossible%E2%80%93Purely%20Declarative%20User%20Interface%20Modeling-Dateien/8.swf"><img style="display:none;" src="Mission%20%20Impossible%E2%80%93Purely%20Declarative%20User%20Interface%20Modeling-Dateien/9.swf"><img style="display:none;" src="Mission%20%20Impossible%E2%80%93Purely%20Declarative%20User%20Interface%20Modeling-Dateien/10.swf"><img style="display:none;" src="Mission%20%20Impossible%E2%80%93Purely%20Declarative%20User%20Interface%20Modeling-Dateien/11.swf"><img style="display:none;" src="Mission%20%20Impossible%E2%80%93Purely%20Declarative%20User%20Interface%20Modeling-Dateien/12.swf"><img style="display:none;" src="Mission%20%20Impossible%E2%80%93Purely%20Declarative%20User%20Interface%20Modeling-Dateien/13.swf"><img style="display:none;" src="Mission%20%20Impossible%E2%80%93Purely%20Declarative%20User%20Interface%20Modeling-Dateien/14.swf"><img style="display:none;" src="Mission%20%20Impossible%E2%80%93Purely%20Declarative%20User%20Interface%20Modeling-Dateien/15.swf"><img style="display:none;" src="Mission%20%20Impossible%E2%80%93Purely%20Declarative%20User%20Interface%20Modeling-Dateien/16.swf"><img style="display:none;" src="Mission%20%20Impossible%E2%80%93Purely%20Declarative%20User%20Interface%20Modeling-Dateien/17.swf"><img style="display:none;" src="Mission%20%20Impossible%E2%80%93Purely%20Declarative%20User%20Interface%20Modeling-Dateien/18.swf"><img style="display:none;" src="Mission%20%20Impossible%E2%80%93Purely%20Declarative%20User%20Interface%20Modeling-Dateien/19.swf"><img style="display:none;" src="Mission%20%20Impossible%E2%80%93Purely%20Declarative%20User%20Interface%20Modeling-Dateien/20.swf"><img style="display:none;" src="Mission%20%20Impossible%E2%80%93Purely%20Declarative%20User%20Interface%20Modeling-Dateien/21.swf"><img style="display:none;" src="Mission%20%20Impossible%E2%80%93Purely%20Declarative%20User%20Interface%20Modeling-Dateien/22.swf"><img style="display:none;" src="Mission%20%20Impossible%E2%80%93Purely%20Declarative%20User%20Interface%20Modeling-Dateien/23.swf"><img style="display:none;" src="Mission%20%20Impossible%E2%80%93Purely%20Declarative%20User%20Interface%20Modeling-Dateien/24.swf"><img style="display:none;" src="Mission%20%20Impossible%E2%80%93Purely%20Declarative%20User%20Interface%20Modeling-Dateien/25.swf"><img style="display:none;" src="Mission%20%20Impossible%E2%80%93Purely%20Declarative%20User%20Interface%20Modeling-Dateien/26.swf"><img style="display:none;" src="Mission%20%20Impossible%E2%80%93Purely%20Declarative%20User%20Interface%20Modeling-Dateien/27.swf"><img style="display:none;" src="Mission%20%20Impossible%E2%80%93Purely%20Declarative%20User%20Interface%20Modeling-Dateien/28.swf"></div>
+        <script type="text/javascript">
+            window.onload = function(){
+                if(loggedIn && loggedIn == true){
+                    var href = window.location.href;
+                    if(href.indexOf("#downloadPdf") != -1){
+                        window.location.href = href.substring(0, href.indexOf('#'));
+                        $('#slides').click();
+                    } else if(href.indexOf("#downloadPresentationMp3") != -1){
+                        window.location.href = href.substring(0, href.indexOf('#'));
+                        $('#mp3').click();
+                    }
+                }
+            }
+        </script>
+    
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"applicationID":"5528250","applicationTime":78,"beacon":"beacon-1.newrelic.com","queueTime":0,"licenseKey":"bfafe6a5f6","transactionName":"YAFWMEEAW0RUVk1cCllLfjdjTkVFUEZcWxFWEF0LXRIaRF1aThsPRBQ=","agent":"js-agent.newrelic.com\/nr-476.min.js","errorBeacon":"bam.nr-data.net"}</script>
+                </div>
+                <!--	#######		CONTENT END	#########	 -->
+
+                <div class="clear"></div>
+            </div>
+            <!--	#######		SITE END	#########	 -->
+
+            
+
+
+
+
+
+
+
+
+
+
+<!--	#######		FOOTER START	#########	 -->
+<div id="footer">
+	<div class="footer_bg">
+		<div id="latestContent" class="footer_class"><div class="fcls"><div class="title">Development</div><p><a href="http://www.infoq.com/articles/personae-non-gratae" title="How Well Do You Know Your Personae Non Gratae?">How Well Do You Know Your Personae Non Gratae?</a></p><p><a href="http://www.infoq.com/news/2014/11/apple-releases-watch-sdk" title="Apple Releases SDK for Apple Watch">Apple Releases SDK for Apple Watch</a></p><p><a href="http://www.infoq.com/presentations/spring-security-oauth2" title="Security for Microservices with Spring and OAuth2">Security for Microservices with Spring and OAuth2</a></p></div><div class="fcls"><div class="title">Architecture &amp; Design</div><p><a href="http://www.infoq.com/articles/personae-non-gratae" title="How Well Do You Know Your Personae Non Gratae?">How Well Do You Know Your Personae Non Gratae?</a></p><p><a href="http://www.infoq.com/news/2014/11/apple-releases-watch-sdk" title="Apple Releases SDK for Apple Watch">Apple Releases SDK for Apple Watch</a></p><p><a href="http://www.infoq.com/presentations/spring-boot-netflix" title="Spring Boot and Netflix OSS">Spring Boot and Netflix OSS</a></p></div><div class="fcls"><div class="title">Process &amp; Practices</div><p><a href="http://www.infoq.com/interviews/agile2014-adkins-spayd" title="Lisa Adkins and Michael Spayd on the state of Agile, Enterprise Adoption and Intergal Agile ">Lisa Adkins and Michael Spayd on the state of Agile, Enterprise Adoption and Intergal Agile </a></p><p><a href="http://www.infoq.com/articles/relationships-teams-stakeholders" title="Building Relationships Between Agile Teams and Stakeholders">Building Relationships Between Agile Teams and Stakeholders</a></p><p><a href="http://www.infoq.com/news/2014/11/transparency-self-regulating" title="Deploying Transparency and Self Regulating Management to Get Actions Done">Deploying Transparency and Self Regulating Management to Get Actions Done</a></p></div><div class="fcls"><div class="title">Operations &amp; Infrastructure</div><p><a href="http://www.infoq.com/news/2014/11/ibm-bluemix-dedicated" title="IBM Announced Bare Metal PaaS and Private API Catalog">IBM Announced Bare Metal PaaS and Private API Catalog</a></p><p><a href="http://www.infoq.com/news/2014/11/Gosling-and-Souza-Join-Jelastic" title="James Gosling and Bruno Souza Join Jelastic as Advisers">James Gosling and Bruno Souza Join Jelastic as Advisers</a></p><p><a href="http://www.infoq.com/articles/Tuning-Java-Servers" title="Tuning Java Servers">Tuning Java Servers</a></p></div><div class="fcls"><div class="title">Enterprise Architecture</div><p><a href="http://www.infoq.com/articles/personae-non-gratae" title="How Well Do You Know Your Personae Non Gratae?">How Well Do You Know Your Personae Non Gratae?</a></p><p><a href="http://www.infoq.com/news/2014/11/api-spark-launch" title="Restlet Launches APISpark, PaaS for Web APIs">Restlet Launches APISpark, PaaS for Web APIs</a></p><p><a href="http://www.infoq.com/articles/api-roadmap" title="Making the Case for an API Roadmap">Making the Case for an API Roadmap</a></p></div></div>
+		<div class="clear"></div>
+	</div>
+			
+	<div class="footer">
+		<ul class="footerMenu">
+		  	<li class="l1"><a class="active" href="http://www.infoq.com/" title="Home">Home</a></li>
+		  	<li class="l2"><a class="active" href="http://www.infoq.com/topics" title="All topics">All topics</a></li>
+			<li class="l3"><a href="http://www.qconferences.com/" target="_blank" title="QCon Conferences">QCon Conferences</a></li>
+	        
+				<li class="l7"><a href="http://www.infoq.com/aboutus" title="About us">About us</a></li>
+		    	<li class="l7"><a href="http://www.infoq.com/aboutyou" title="About You">About You</a></li>		    	
+		    	<li class="l7"><a href="http://www.infoq.com/contribute" title="Contribute">Contribute</a></li>		    	
+		    	<li class="l7"><a href="http://www.infoq.com/purpose" title="Purpose Index">Purpose Index</a></li>
+                
+			
+			
+		  	
+				<li class="l5"><a href="http://www.infoq.com/logout.action" title="Sign out">Sign out</a></li>
+			
+			
+		</ul>
+			
+      	
+
+
+
+
+
+
+
+<ul class="footerTxt1">
+	<li><strong>QCons Worldwide</strong></li>	
+	<li><img class="qconflag uk"><a href="http://www.qconlondon.com/?utm_source=infoq&amp;utm_medium=listing&amp;utm_campaign=footer" target="_blank" title="London 2015, March 2-6, 2015">London<br>Mar 2-6, 2015</a></li>
+    <li><img class="qconflag br"><a href="http://www.qconsp.com/?utm_source=infoq&amp;utm_medium=listing&amp;utm_campaign=footer" target="_blank" title="São Paulo 2015, Mar 23-27, 2015">São Paulo<br>Mar 23-27, 2015</a></li>
+    <li><img class="qconflag cn"><a href="http://qconbeijing.com/?utm_source=infoq&amp;utm_medium=listing&amp;utm_campaign=footer" target="_blank" title="Beijing 2015, Apr 23-25, 2015">Beijing<br>Apr 23-25, 2015</a></li>
+    <li><img class="qconflag jp"><a href="http://qcontokyo.com/" target="_blank" title="Tokyo 2015, Apr 2015">Tokyo, <br>Apr 2015</a></li>
+    <li><img class="qconflag us"><a href="http://qconnewyork.com/?utm_source=infoq&amp;utm_medium=listing&amp;utm_campaign=footer" target="_blank" title="New York 2015, June 08 - 12, 2015">New York<br>Jun 8-12, 2015</a></li>
+    <li><img class="qconflag br"><a href="http://qconrio.com/?utm_source=infoq&amp;utm_medium=listing&amp;utm_campaign=footer" target="_blank" title="Rio de Janeiro, Sep 21-25, 2015">Rio de Janeiro<br>Sep 21-25, 2015</a></li>
+    <li><img class="qconflag cn"><a href="http://qconshanghai.com/?utm_source=infoq&amp;utm_medium=listing&amp;utm_campaign=footer" target="_blank" title="">Shanghai, <br>Oct 15-17, 2015</a></li>
+    <li><img class="qconflag us"><a href="http://qconsf.com/?utm_source=infoq&amp;utm_medium=listing&amp;utm_campaign=footer" target="_blank" title="Nov 16-20, 2015">San Francisco<br>Nov 16-20, 2015</a></li>
+</ul>
+
+
+      	
+		
+
+
+
+
+
+
+
+
+<div class="ftxt3">
+	<div class="newsletter">
+		<div class="txtNews">
+			<h3>InfoQ Weekly Newsletter</h3>
+			<p>Subscribe to our Weekly email newsletter to follow all new content on InfoQ</p>
+			<span id="footerNewsletterEmailSuccess" style="color:green;"></span>
+			<span id="footerNewsletterEmailError" style="color:red;"></span>
+		</div>
+		<div class="click2view">
+			<a target="_blank" href="http://www.infoq.com/newsletter_sample.html">
+                <img src="Mission%20%20Impossible%E2%80%93Purely%20Declarative%20User%20Interface%20Modeling-Dateien/click2view2_en.jpg" alt="" border="0">
+			</a>
+		</div>
+		<div class="clear"></div>
+		<form name="footerNewsletterForm" id="footerNewsletteForm" action="#" onsubmit="footerNewsletter.saveSubscription(); return false;">
+			<fieldset>
+				<input class="input_text" id="footerNewsletterEmail" name="footerNewsletterEmail" value="Your email here" onclick="footerNewsletter.clearEmailText();" onblur="footerNewsletter.resetEmailText();" type="text">
+                <input value="Subscribe" id="sbs" name="sbs" class="input_submit" onclick="return footerNewsletter.validateEmail('Invalid email address');" type="submit">
+			</fieldset>
+		</form>
+		<div class="clear"></div>
+	</div>
+	<ul class="footerTxt3">
+		<li><a class="rss" id="footerNewsletterRssLink" href="http://www.infoq.com/feed?token=YOVcHXl63lPEQ28rJ5KbmVVboEaR6CSk">Your personalized RSS</a></li>
+	    
+	    
+			<li><a class="twitter" href="http://twitter.com/infoq" target="_blank">For daily content and announcements</a></li>
+	    
+		<li><a class="fb" href="http://www.facebook.com/InfoQ" target="_blank">For major community updates</a></li>
+		
+	        <li><a class="googleplus" href="https://plus.google.com/104892343728609932454" target="_blank" rel="publisher">For weekly community updates</a></li>
+       	
+	</ul>
+</div>
+<script type="text/javascript">
+	var footerNewsletter = new Newsletter('Your email here', 'footerNewsletterEmail', 'footerNewsletterForm', 'footerNewsletterEmailError', 'footerNewsletterEmailSuccess');
+</script>
+			
+			
+		<div class="our_events">
+	      	
+
+
+
+
+
+
+
+
+
+			
+			<div id="footerPref" class="communities">
+				<p>Personalize Your Main Interests</p>
+				<br><br><br>
+				<fieldset>
+					<ul>
+			        	
+
+
+
+
+
+
+
+<fieldset>
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+		
+			<tbody><tr>
+				<td valign="middle">
+					<input name="development" value="true" checked="checked" id="persona6815" class="chb" onclick="includeExcludeCommunity(this, false);" type="checkbox">
+
+					<span>Development</span>
+				</td>
+			</tr>
+		
+			<tr>
+				<td valign="middle">
+					<input name="architecture-design" value="true" checked="checked" id="persona6816" class="chb" onclick="includeExcludeCommunity(this, false);" type="checkbox">
+
+					<span>Architecture &amp; Design</span>
+				</td>
+			</tr>
+		
+			<tr>
+				<td valign="middle">
+					<input name="process-practices" value="true" checked="checked" id="persona6817" class="chb" onclick="includeExcludeCommunity(this, false);" type="checkbox">
+
+					<span>Process &amp; Practices</span>
+				</td>
+			</tr>
+		
+			<tr>
+				<td valign="middle">
+					<input name="operations-infrastructure" value="true" checked="checked" id="persona6818" class="chb" onclick="includeExcludeCommunity(this, false);" type="checkbox">
+
+					<span>Operations &amp; Infrastructure</span>
+				</td>
+			</tr>
+		
+			<tr>
+				<td valign="middle">
+					<input name="enterprise-architect" value="true" checked="checked" id="persona6819" class="chb" onclick="includeExcludeCommunity(this, false);" type="checkbox">
+
+					<span>Enterprise Architecture</span>
+				</td>
+			</tr>
+		
+	</tbody></table>
+</fieldset>
+
+					</ul>						
+				</fieldset>
+				<p class="notes">This affects what content you see on the homepage 
+&amp; your RSS feed. Click preferences to access more fine-grained 
+personalization.</p>
+			</div>
+		</div>
+			
+		<div class="clear"></div>
+			
+	</div>
+	
+	<div class="clear"></div>
+</div>
+<!--	#######		FOOTER END	#########	 -->
+
+<div class="bottomContent">
+	<table class="last_content" border="0" cellpadding="0" cellspacing="0" width="100%">
+		<tbody><tr>
+			<td>
+				<div>General Feedback</div> 
+				<div><a href="mailto:feedback@infoq.com">feedback@infoq.com</a></div>
+			</td>
+			<td>
+				<div>Bugs</div> 
+				<div><a href="mailto:bugs@infoq.com">bugs@infoq.com</a></div>
+			</td>
+			<td>
+				<div>Advertising</div> 
+				<div><a href="mailto:sales@infoq.com">sales@infoq.com</a></div>
+			</td>
+			<td>
+				<div>Editorial</div> 
+				<div><a href="mailto:editors@infoq.com">editors@infoq.com</a></div>
+			</td>
+			<td class="text">
+				<span>InfoQ.com and all content copyright © 2006-2014 C4Media Inc. InfoQ.com hosted at <a href="http://www.contegix.com/">Contegix</a>, the best ISP we've ever worked with.<br>
+                                    
+                                    <a href="http://www.infoq.com/privacypolicy" target="_blank">Privacy policy</a></span>
+			</td>
+		</tr>
+	</tbody></table>
+</div>
+
+
+            
+                <div class="intbt">
+                    <a href="http://www.infoq.com/int/bt" title="bt">BT</a>
+                </div>
+            
+
+            
+
+
+
+
+
+
+
+
+<div id="id_geo_banner" style="display:none;position:fixed;bottom:0;left:0;width:100%;z-index:100000;">
+	<div id="id_geo_banner_ad" style="display:none;">
+		<script type="text/javascript">
+		if(CookieManager.readCookie("igabgt") == null) {
+			// use the jquery.watch method to see when GAM changes the display css attribute of id_geo_banner_ad
+			// whenever an ad is placed there GAM will chnage the display which is init as none. This is the safest way to determine when an ad is fetched by GAM!
+			$("#id_geo_banner_ad").watch('display',showAd,1000);		
+			googletag.cmd.push(function() { googletag.display('id_geo_banner_ad');});
+		}
+		function showAd() {
+			try {
+				$('#id_geo_banner iframe:first').attr('width', '100%');
+				$('#id_geo_banner iframe:first').attr('height', '100%');
+				$('#id_geo_banner iframe:first').css('min-width', '1024px');
+			}catch(err){}
+			$('#id_geo_banner').show('slow');
+			setTimeout("$('#id_geo_banner').hide('slow');", 30000);
+		}
+		</script>
+	</div>
+</div>
+
+            <script src="Mission%20%20Impossible%E2%80%93Purely%20Declarative%20User%20Interface%20Modeling-Dateien/engine.js" type="text/javascript"></script>
+            <script src="Mission%20%20Impossible%E2%80%93Purely%20Declarative%20User%20Interface%20Modeling-Dateien/UserCategoryUtil.js" type="text/javascript"></script>
+            <script src="Mission%20%20Impossible%E2%80%93Purely%20Declarative%20User%20Interface%20Modeling-Dateien/DWRRewriteAction.js" type="text/javascript"></script>
+            
+            
+
+
+
+
+
+
+
+<iframe name="loginFrame" id="loginFrame" style="width:0;height:0;border:0;"></iframe>
+<div class="login_overlay" id="loginWidget" style="display:none;">
+	<!--	html for login box	-->
+	<input id="loginWidgetOrigin" type="hidden">
+	<div id="popupLogin">
+		<a title="" class="close_login_flat" href="#" onclick="UserActions_Login.hideLoginWidget();return false;">Close</a>
+		<form method="post" id="login_formLogin" action="https://www.infoq.com/login.action" target="loginFrame" onsubmit="UserActions_Login.showMessage(JSi18n.login_sendingRequest);">
+			<label class="label_login">Email</label>
+			<input name="username" id="login_username" class="login_text" type="text">
+			<label class="label_login">Password</label>
+			<input name="password" id="login_password" class="login_text" type="password">
+			<input value="" name="submit-login" class="submit-login" type="submit">
+			
+			<div id="socialLogin">
+	            	        	
+	        		<a class="social-idp google" onclick="return addLoginInfo(this);" href="http://www.infoq.com/social/googleLogin.action?fl=login" title="Login with Google">Login with Google</a>
+	        		<div class="clearer" style="height: 0px;"></div>
+	        	
+	        		
+	        			<a class="social-idp twitter" onclick="return addLoginInfo(this);" href="http://www.infoq.com/social/twitterLogin.action?fl=login" title="Login with Twitter">Login with Twitter</a>
+	        			<div class="clearer" style="height: 0px;"></div>
+	        	
+	        			<a class="social-idp facebook" onclick="return addLoginInfo(this);" href="http://www.infoq.com/social/facebookLogin.action?fl=login" title="Login with Facebook">Login with Facebook</a>
+	        			<div class="clearer" style="height: 0px;"></div>
+	        		
+	        	
+	           		<a class="social-idp microsoft" onclick="return addLoginInfo(this);" href="http://www.infoq.com/social/liveLogin.action?fl=login" title="Login with Microsoft">Login with Microsoft</a>
+	        		<div class="clearer" style="height: 0px;"></div>
+	            
+	        </div>
+			<div class="more_links">
+				<p>
+					<a style="text-decoration:none;" href="#" onclick="UserActions_Login.showForgotPasswordForm();return false;">
+						Forgot password ?
+					</a>
+					<br><br>
+				</p>
+			</div>
+		</form>
+		
+		<form method="post" id="login_formPasswordReset" action="/resetpasswordinit.action" target="loginFrame" style="display:none;" onsubmit="UserActions_Login.showMessage(JSi18n.login_sendingRequest);">
+			<label class="label_login">InfoQ Account Email</label>
+			<input name="email" id="login_email" class="login_text" type="text">
+			<button type="submit" name="submit-login" style="border: 1px solid #CCCCCC; width: 100%; padding: 8px 5px;" on="">Send Email</button>
+			<div class="more_links">
+				<p>
+					<a style="text-decoration:none;" href="#" onclick="UserActions_Login.showLoginForm();return false;">
+						Back to login
+					</a>
+					<br><br>
+				</p>
+			</div>
+		</form>
+		<form method="post" id="login_formEmailVerification" action="/reactivate.action" target="loginFrame" style="display:none;" onsubmit="UserActions_Login.showMessage(JSi18n.login_sendingRequest);">
+			<label class="label_login">Resend Activation</label>
+			<input name="email" id="login_emailVerification" class="login_text" type="text">
+			<button type="submit" name="submit-login" style="border: 1px solid #CCCCCC; width: 100%; padding: 8px 5px;" on="">Resend</button>
+			<div class="more_links">
+				<p>
+					<a style="text-decoration:none;" href="#" onclick="UserActions_Login.showLoginForm();return false;">
+						Back to login
+					</a>
+					<br><br>
+				</p>
+			</div>
+		</form>
+		<div class="more_links">
+			<p><a onclick="return addLoginInfo(this);" href="http://www.infoq.com/reginit.action?" title="">Don't have a username ?</a></p>
+			<p><a onclick="return addLoginInfo(this);" href="http://www.infoq.com/reginit.action?" title="">REGISTER HERE</a></p>
+			<div style="padding:5px;background:#EBF0F3;margin-top:45px;display:none;" id="loginPopupMessage"></div>
+		</div>
+	</div>
+	<!--	html for login box 	-->
+    <script type="text/javascript">
+        function addLoginInfo(link){
+            var v = $('#loginWidgetOrigin').val();
+            if(v !== undefined && v != ''){
+                addOrigin(link);
+                link.href += '%23' + v;
+                return true;
+            } else {
+                return addOrigin(link);
+            }
+        }
+    </script>
+</div>
+
+            
+
+
+
+
+
+
+<script type="text/javascript">
+	var includeName = 'content.inline_personalization.include.label';
+	var excludeName = 'content.inline_personalization.exclude.label';
+	var includeHint = 'content.inline_personalization.include.hint';
+	var excludeHint = 'content.inline_personalization.exclude.hint';
+	var excludeCategoryMessage = 'content.inline_personalization.exclude.message';
+	var viewallCategoryMessage = 'content.inline_personalization.view_all.hint';
+	var busyMessage = 'content.inline_personalization.busy.message';
+	var contextPath = '' + '/';
+	var viewallCategoryPath= '';
+	var includeExcludeLink= true;
+</script>
+
+            
+
+
+
+
+
+
+<script type="text/javascript">
+  var gaProfile="UA-6608133-2";
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', gaProfile]);
+  _gaq.push(['_trackPageview']);
+  var view = CookieManager.readCookie('homepage_list');
+  _gaq.push(['_setCustomVar', 2, 'Grid vs list view', ((typeof view !== 'undefined' && view)) ? 'List' : 'Grid', 3]);
+  
+  _gaq.push(['_setCustomVar', 1, 'Welcome kit experiment', 'Group A', 1]);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+  $( this ).one( "mousemove", function() {
+	$.getScript("/scripts/__hd.ifq?hdt=dH787L9fkG1LVlH2");
+  });	
+</script>
+
+    <script src="Mission%20%20Impossible%E2%80%93Purely%20Declarative%20User%20Interface%20Modeling-Dateien/tracker.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+Tracker.safeExec(Tracker.doTrackVcrImpressions);
+</script>
+
+
+
+            
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+	var newsletterSubscriptionURL ='/newsletter/subscribe.action';
+	DynamicLinks.updateRssLinks('YOVcHXl63lPEQ28rJ5KbmVVboEaR6CSk');
+	ContentTools.updateLatestContentSection();
+	ContentTools.updatePersonaDropdowns();
+	
+	// only get the most popular links if they are used in the current page
+	//(so far they are used on homepage, inteview and presentation pages)
+	if($('#mostPopularSection').length){
+		ContentTools.updateMostPopular();
+	}
+
+	ContentSummary.setSelectedTab('en');
+	//when user enters the main content area show default topics in the topics bar
+	$("#content-wrapper").mouseenter(function() {	
+	        showDefaultTopics();
+	});
+	
+	
+	Bookmarks.contentTitle = "Mission: Impossible–Purely Declarative User Interface Modeling";
+	Bookmarks.apiUrl = '/widgets/bookmark.action';
+</script>
+<script type="text/javascript"> 
+var $buoop = {vs:{i:6,f:1,o:10.1,s:1}} 
+$buoop.ol = window.onload; 
+$(document).ready(function() {
+	 try {if ($buoop.ol) $buoop.ol();}catch (e) {} 
+	 var e = document.createElement("script"); 
+	 e.setAttribute("type", "text/javascript"); 
+	 e.setAttribute("src", "http://cdn.infoq.com/statics_20141125-0117/scripts/lib/browser-update-org/update.js?20141125-0117");
+	 document.body.appendChild(e); 
+});
+</script>
+            
+                <script type="text/javascript">
+                    setTimeout(function(){var a=document.createElement("script");
+                        var b=document.getElementsByTagName("script")[0];
+                        a.src=document.location.protocol+"//dnn506yrbagrg.cloudfront.net/pages/scripts/0022/4285.js?"+Math.floor(new Date().getTime()/3600000);
+                        a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
+                </script>
+            
+        </div><div id="_atssh" style="visibility: hidden; height: 1px; width: 1px; position: absolute; z-index: 100000;"><iframe src="Mission%20%20Impossible%E2%80%93Purely%20Declarative%20User%20Interface%20Modeling-Dateien/sh180.htm" style="height: 1px; width: 1px; position: absolute; z-index: 100000; border: 0px none; left: 0px; top: 0px;" title="AddThis utility frame" id="_atssh320"></iframe></div><script src="Mission%20%20Impossible%E2%80%93Purely%20Declarative%20User%20Interface%20Modeling-Dateien/core164.js" type="text/javascript"></script>
+    
+
+
+<script src="Mission%20%20Impossible%E2%80%93Purely%20Declarative%20User%20Interface%20Modeling-Dateien/update.js" type="text/javascript"></script><script src="Mission%20%20Impossible%E2%80%93Purely%20Declarative%20User%20Interface%20Modeling-Dateien/nr-476.js"></script><script src="Mission%20%20Impossible%E2%80%93Purely%20Declarative%20User%20Interface%20Modeling-Dateien/bfafe6a5f6" type="text/javascript"></script></body><a style="opacity: 1 ! important; left: 1366px ! important; top: 395.6px ! important;" class="hoihibmwyyubbjxwrpde" href="http://www.infoq.com/resource/presentations/S4-Declarative-DSL-UI/en/slides/1.swf" title="Klicken Sie hier, um dieses Objekt mit Adblock Edge zu blockieren">Blockieren…</a></html>
+<!-- S2 -->

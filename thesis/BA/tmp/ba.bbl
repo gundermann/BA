@@ -1,0 +1,10 @@
+\newcommand{\etalchar}[1]{$^{#1}$}
+\begin{thebibliography}{MSL{\etalchar{+}}13}
+
+\bibitem[MSL{\etalchar{+}}13]{voelter}
+{\sc {Markus Voelter}}, {\sc {Sebastian Benz}}, {\sc {Lennart Kats}}, {\sc
+  {Mats Helander}}, {\sc {Eelco Visser}} \btxandlong{}\ {\sc {Guido
+  Wachsmuth}}: {\em DSL Engineering}.
+\newblock CreateSpace Independent Publishing Platform, 2013.
+
+\end{thebibliography}

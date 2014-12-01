@@ -1,0 +1,41 @@
+Glossar/Abkürzungsverzeichnis
+
+Einleitung
+	Motivation
+	Vorgehen
+	
+Analyse des Ist-Zustands
+	Allgemeine Anforderungen an Benutzeroberflächen von profil c/s
+	Umsetzung der Benutzerschnittstellen auf mehreren Plattformen in der deg
+	
+	
+Domänenspezifische Sprachen
+	Bedeutung
+	Abgrenzung zu GPL
+	Vor und Nachteile von DSL
+
+Notwendigkeit einer neuen DSL
+	Beschreibung der Anforderung an die GUI
+	Kurzanalyse von Defiziten ausgwählter Sprachen zur Beschreibung von Benutzerschnittstellen
+	
+Grobkonzept der Sprache und eines Generators	
+	Notwendige Features der neuen DSL
+	Notwendige allgemeine Features eines Generators 
+	
+Entwerfen einer DSL zur Beschreibung der GUI in profil c/s
+	Vorstellung elementarer Beispiele von GUIs aus profil c/s
+	Analyse der Metadaten der GUI
+	Entwicklung der DSL mit Xtext
+
+Entwicklung des Generators für das Generieren von Klassen für das Multichannel-Framework
+	Vorstellung der Architektur für die Beschreibung der Benutzerschnittstelle  
+	Umsetzung der notwenigen allgemeinen Features
+	Umsetzung der Frameworkspezifischen Generation
+	
+	
+Vergleich zwischen der Arbeitsprozesse in der deg bei der Entwiklung von Benutzeroberflächen
+	Beschreibung des aktuellen Arbeitsprozesses 
+	Beschreibung des künftigen Arbeitsprozesses
+	Gegenüberstellung
+	
+Fazit

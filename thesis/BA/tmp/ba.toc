@@ -1,0 +1,32 @@
+\select@language {german}
+\select@language {german}
+\contentsline {chapter}{Abbildungsverzeichnis}{iv}{chapter*.1}
+\contentsline {chapter}{Tabellenverzeichnis}{v}{chapter*.2}
+\contentsline {chapter}{Listings}{ix}{chapter*.4}
+\contentsline {chapter}{\numberline {1}Einleitung}{1}{chapter.1}
+\contentsline {section}{\numberline {1.1}Motivation}{1}{section.1.1}
+\contentsline {section}{\numberline {1.2}Vorgehen}{1}{section.1.2}
+\contentsline {chapter}{\numberline {2}Analyse des Ist-Zustands}{3}{chapter.2}
+\contentsline {section}{\numberline {2.1}Allgemeine Anforderungen an Benutzeroberfl\"achen von profil c/s}{3}{section.2.1}
+\contentsline {section}{\numberline {2.2}Umsetzung der Benutzerschnittstellen f\"ur mehreren Plattformen in der deg}{3}{section.2.2}
+\contentsline {chapter}{\numberline {3}Dom\"anenspezifische Sprachen}{5}{chapter.3}
+\contentsline {section}{\numberline {3.1}Bedeutung}{5}{section.3.1}
+\contentsline {section}{\numberline {3.2}Abgrenzung zu GPL}{5}{section.3.2}
+\contentsline {section}{\numberline {3.3}Vor- und Nachteile von DSL}{5}{section.3.3}
+\contentsline {chapter}{\numberline {4}Notwendigkeit einer neuen DSL}{7}{chapter.4}
+\contentsline {section}{\numberline {4.1}Beschreibung der Anforderung an die GUI}{7}{section.4.1}
+\contentsline {section}{\numberline {4.2}Kurzanalyse von Defiziten ausgw\"ahlter Sprachen zur Beschreibung von Benutzerschnittstellen}{7}{section.4.2}
+\contentsline {chapter}{\numberline {5} Grobkonzept der Sprache und eines Generators}{9}{chapter.5}
+\contentsline {section}{\numberline {5.1}Notwendige Features der neuen DSL}{9}{section.5.1}
+\contentsline {section}{\numberline {5.2}Notwendige Features eines Generators}{9}{section.5.2}
+\contentsline {chapter}{\numberline {6}Entwerfen einer DSL zur Beschreibung der GUI in profil c/s}{11}{chapter.6}
+\contentsline {section}{\numberline {6.1}Vorstellung elementarer Beispiele von GUIs aus profil c/s}{11}{section.6.1}
+\contentsline {section}{\numberline {6.2}Analyse der Metadaten der GUI}{11}{section.6.2}
+\contentsline {section}{\numberline {6.3}Entwicklung der DSL mit Xtext}{11}{section.6.3}
+\contentsline {chapter}{\numberline {7}Entwicklung des Generators f\"ur das Generieren von Klassen f\"ur das Multichannel-Framework}{13}{chapter.7}
+\contentsline {section}{\numberline {7.1}Vorstellung der Architektur f\"ur die Beschreibung der Benutzerschnittstelle}{13}{section.7.1}
+\contentsline {section}{\numberline {7.2}Umsetzung des frameworkspezifischen Generators}{13}{section.7.2}
+\contentsline {chapter}{\numberline {8}Zusammenfassung und Ausblick}{15}{chapter.8}
+\contentsline {chapter}{Titel anhang a}{V}{appendix*.5}
+\contentsline {chapter}{Glossar}{VI}{appendix*.5}
+\contentsline {chapter}{Literaturverzeichnis}{VII}{appendix*.7}

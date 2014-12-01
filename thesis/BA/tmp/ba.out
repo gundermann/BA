@@ -1,0 +1,30 @@
+\BOOKMARK [0][-]{chapter*.1}{Abbildungsverzeichnis}{}% 1
+\BOOKMARK [0][-]{chapter*.2}{Tabellenverzeichnis}{}% 2
+\BOOKMARK [0][-]{chapter*.4}{Listings}{}% 3
+\BOOKMARK [0][-]{chapter.1}{Einleitung}{}% 4
+\BOOKMARK [1][-]{section.1.1}{Motivation}{chapter.1}% 5
+\BOOKMARK [1][-]{section.1.2}{Vorgehen}{chapter.1}% 6
+\BOOKMARK [0][-]{chapter.2}{Analyse des Ist-Zustands}{}% 7
+\BOOKMARK [1][-]{section.2.1}{Allgemeine Anforderungen an Benutzeroberfl\344chen von profil c/s}{chapter.2}% 8
+\BOOKMARK [1][-]{section.2.2}{Umsetzung der Benutzerschnittstellen f\374r mehreren Plattformen in der deg}{chapter.2}% 9
+\BOOKMARK [0][-]{chapter.3}{Dom\344nenspezifische Sprachen}{}% 10
+\BOOKMARK [1][-]{section.3.1}{Bedeutung}{chapter.3}% 11
+\BOOKMARK [1][-]{section.3.2}{Abgrenzung zu GPL}{chapter.3}% 12
+\BOOKMARK [1][-]{section.3.3}{Vor- und Nachteile von DSL}{chapter.3}% 13
+\BOOKMARK [0][-]{chapter.4}{Notwendigkeit einer neuen DSL}{}% 14
+\BOOKMARK [1][-]{section.4.1}{Beschreibung der Anforderung an die GUI}{chapter.4}% 15
+\BOOKMARK [1][-]{section.4.2}{Kurzanalyse von Defiziten ausgw\344hlter Sprachen zur Beschreibung von Benutzerschnittstellen}{chapter.4}% 16
+\BOOKMARK [0][-]{chapter.5}{ Grobkonzept der Sprache und eines Generators}{}% 17
+\BOOKMARK [1][-]{section.5.1}{Notwendige Features der neuen DSL}{chapter.5}% 18
+\BOOKMARK [1][-]{section.5.2}{Notwendige Features eines Generators}{chapter.5}% 19
+\BOOKMARK [0][-]{chapter.6}{Entwerfen einer DSL zur Beschreibung der GUI in profil c/s}{}% 20
+\BOOKMARK [1][-]{section.6.1}{Vorstellung elementarer Beispiele von GUIs aus profil c/s}{chapter.6}% 21
+\BOOKMARK [1][-]{section.6.2}{Analyse der Metadaten der GUI}{chapter.6}% 22
+\BOOKMARK [1][-]{section.6.3}{Entwicklung der DSL mit Xtext}{chapter.6}% 23
+\BOOKMARK [0][-]{chapter.7}{Entwicklung des Generators f\374r das Generieren von Klassen f\374r das Multichannel-Framework}{}% 24
+\BOOKMARK [1][-]{section.7.1}{Vorstellung der Architektur f\374r die Beschreibung der Benutzerschnittstelle}{chapter.7}% 25
+\BOOKMARK [1][-]{section.7.2}{Umsetzung des frameworkspezifischen Generators}{chapter.7}% 26
+\BOOKMARK [0][-]{chapter.8}{Zusammenfassung und Ausblick}{}% 27
+\BOOKMARK [0][-]{appendix*.5}{Titel anhang a}{}% 28
+\BOOKMARK [0][-]{appendix*.5}{Glossar}{}% 29
+\BOOKMARK [0][-]{appendix*.7}{Literaturverzeichnis}{}% 30
