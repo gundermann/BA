@@ -1,4 +1,36 @@
-\chapter{Analyse des Ist-Zustands}
+\chapter{Analyse des Ist-Zustands}\label{Analyse}
+Da die deg bereits eine Lösung entwickelt hat, mit der es möglich ist, ein
+einmal entwickeltes GUI auf mehreren Plattformen darzustellen, muss voerst
+analysiert werden, warum diese Lösung nicht mehr zukunftstauglich ist.\\
+Bei sämtlichen GUIs wird sich auf GUIs des Programms \emph{profil c/s} bezogen.
+Profil c/s ist \gls{INVEKOS}-Programm welches von der deg als
+Client-Server-Anwendung entwickelt wird.
+
 \section{Allgemeine Anforderungen an Benutzeroberflächen von profil c/s}
-\section{Umsetzung der Benutzerschnittstellen für mehreren Plattformen in der
-	deg}
+Die Anforderung, welche zu der Entwicklung der eingangs kurz erwähnten Lösung
+geführt hat, ist dass der Client von profil c/s sowohl in
+Web-Browsern (Web-Client) als auch standalone auf einem
+PC (Standalone-Client) ausgeführt werden soll. Eine weitere
+Anforderung ist es, dass beide Clients (Web-Client und
+Standalone-Client) eine ähnlichen Aufbau haben.\\
+In Abbildung \ref{Abb_Web-Client} und Abbildung
+\ref{Abb_Standalone-Client} ist das GUI eines \gls{Zuwendungsblatt}es eines
+\gls{Förderantrag}s zu sehen.
+\myHugeFigure{web.jpg}{Web-Client: Zuewndungsblatt}{Web-Client}
+\myBigFigure{standalone.jpg}{Standalone-Client: Zuewndungsblatt}{Standalone-Client}
+Für den Aufbau sind nur die Tabelle und die darunter stehenden Buttons, sowies
+das Bemerkungsfeld (im Web-Client auf der rechten Seite und im
+Standalone-Client in der Mitte) von Bedeutung.
+Insofern wurde die Anforderung bzgl.
+des gleichen Aufbaus umgesetzt, auch wenn es beim Vergleich der beiden GUIs im
+ersten Moment nicht so aussieht.
+
+\newpage
+Im folgenden Kapitel wird erklärt, wie die
+deg diese Anforderungen umgesetzt hat.
+\section{Umsetzung der
+Benutzerschnittstellen für mehreren Plattformen in der deg}
+Für die Umsetzung dieser Anforderungen wäre es möglich gewesen für den
+Web-Client und dem Standalone-Client separate GUIs zu entwickeln. 
+
+\section{Probleme des Multichannel-Frameworks}

@@ -65,3 +65,69 @@
 \linespread{1.5}
 
 \bibliographystyle{geralpha}
+
+\renewcommand{\floatpagefraction}{0.85}
+
+\usepackage[figuresright]{rotating}
+\usepackage{geometry}
+\geometry{a4paper,left=40mm,right=30mm} 
+
+\newlength{\fullwidth} % Width of text plus margin notes
+\setlength{\fullwidth}{\textwidth}
+
+
+%----------------------------------------------------------------------------------
+% \myBigFigure	[ LABEL_PREFIX (optional) ]
+%				{ FILENAME (without extension) }
+%				{ CAPTION TEXT }
+%				{ SHORT VERSION OF CAPTION TEXT }
+%
+%Bild wird in kompletter Breite gesetzt
+%picture using full width of the page
+\newcommand{\myBigFigure}[4][Abb]
+{
+\begin{figure}[t!bp]
+	\checkoddpage
+	\ifcpoddpage
+		%nothing
+	\else
+		\hspace{-\marginparsep}\hspace{-\marginparwidth}
+	\fi
+	%use minipage to center the label beneath the figure
+	\center{
+	\begin{minipage}{\fullwidth}
+		\includegraphics[width= \fullwidth]{#2}
+		\caption[#4]{#3}
+		\label{#1_#4}
+	\end{minipage}
+	}
+\end{figure}
+}
+
+\newcommand{\myFigure}[1]{
+\begin{figure}
+  \includegraphics[width=\fullwidth]{#1}
+\end{figure}}
+
+
+
+
+
+%----------------------------------------------------------------------------------
+% \myHUGEFigure	[ LABEL_PREFIX (optional) ]
+%				{ FILENAME (without extension) }
+%				{ CAPTION TEXT }
+%				{ SHORT VERSION OF CAPTION TEXT }
+%
+%Bild wird rotiert und quer in kompletter Breite gesetzt
+%landscape picture using the full width of the rotated page
+\newcommand{\myHugeFigure}[4][Abb]
+{
+\begin{sidewaysfigure}[t!bp]
+	
+		\includegraphics[width= \textheight]{#2}
+		\caption[#4]{#3}
+		\label{#1_#4}
+	
+\end{sidewaysfigure}
+}
