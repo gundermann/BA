@@ -1,0 +1,686 @@
+@import url( https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,300,400,700,800 );
+@import url( https://fonts.googleapis.com/css?family=Inconsolata );
+@font-face {
+	font-family: Marydale;
+	src: url(/fonts/marydale/marydale-webfont.eot?#iefix) format("embedded-opentype"), url(/fonts/marydale/marydale-webfont.woff) format("woff"), url(/fonts/marydale/marydale-webfont.ttf) format("truetype"), url(/fonts/marydale/marydale-webfont.svg#marydaleregular) format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: FontAwesome;
+	src: url(https://netdna.bootstrapcdn.com/font-awesome/4.0.0/fonts/fontawesome-webfont.eot?#iefix) format("embedded-opentype"), url(https://netdna.bootstrapcdn.com/font-awesome/4.0.0/fonts/fontawesome-webfont.woff) format("woff"), url(https://netdna.bootstrapcdn.com/font-awesome/4.0.0/fonts/fontawesome-webfont.ttf) format("truetype"), url(https://netdna.bootstrapcdn.com/font-awesome/4.0.0/fonts/fontawesome-webfont.svgfontawesomeregular) format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+html {
+	background: none; margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor; border-image: none; font-size: 100%; vertical-align: baseline;
+}
+body {
+	background: none; margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor; border-image: none; font-size: 100%; vertical-align: baseline;
+}
+div {
+	background: none; margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor; border-image: none; font-size: 100%; vertical-align: baseline;
+}
+span {
+	background: none; margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor; border-image: none; font-size: 100%; vertical-align: baseline;
+}
+applet {
+	background: none; margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor; border-image: none; font-size: 100%; vertical-align: baseline;
+}
+object {
+	background: none; margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor; border-image: none; font-size: 100%; vertical-align: baseline;
+}
+iframe {
+	background: none; margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor; border-image: none; font-size: 100%; vertical-align: baseline;
+}
+h1 {
+	background: none; margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor; border-image: none; font-size: 100%; vertical-align: baseline;
+}
+h2 {
+	background: none; margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor; border-image: none; font-size: 100%; vertical-align: baseline;
+}
+h3 {
+	background: none; margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor; border-image: none; font-size: 100%; vertical-align: baseline;
+}
+h4 {
+	background: none; margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor; border-image: none; font-size: 100%; vertical-align: baseline;
+}
+h5 {
+	background: none; margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor; border-image: none; font-size: 100%; vertical-align: baseline;
+}
+h6 {
+	background: none; margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor; border-image: none; font-size: 100%; vertical-align: baseline;
+}
+p {
+	background: none; margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor; border-image: none; font-size: 100%; vertical-align: baseline;
+}
+blockquote {
+	background: none; margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor; border-image: none; font-size: 100%; vertical-align: baseline;
+}
+pre {
+	background: none; margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor; border-image: none; font-size: 100%; vertical-align: baseline;
+}
+a {
+	background: none; margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor; border-image: none; font-size: 100%; vertical-align: baseline;
+}
+abbr {
+	background: none; margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor; border-image: none; font-size: 100%; vertical-align: baseline;
+}
+acronym {
+	background: none; margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor; border-image: none; font-size: 100%; vertical-align: baseline;
+}
+address {
+	background: none; margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor; border-image: none; font-size: 100%; vertical-align: baseline;
+}
+big {
+	background: none; margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor; border-image: none; font-size: 100%; vertical-align: baseline;
+}
+cite {
+	background: none; margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor; border-image: none; font-size: 100%; vertical-align: baseline;
+}
+code {
+	background: none; margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor; border-image: none; font-size: 100%; vertical-align: baseline;
+}
+del {
+	background: none; margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor; border-image: none; font-size: 100%; vertical-align: baseline;
+}
+dfn {
+	background: none; margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor; border-image: none; font-size: 100%; vertical-align: baseline;
+}
+em {
+	background: none; margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor; border-image: none; font-size: 100%; vertical-align: baseline;
+}
+font {
+	background: none; margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor; border-image: none; font-size: 100%; vertical-align: baseline;
+}
+img {
+	background: none; margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor; border-image: none; font-size: 100%; vertical-align: baseline;
+}
+ins {
+	background: none; margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor; border-image: none; font-size: 100%; vertical-align: baseline;
+}
+kbd {
+	background: none; margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor; border-image: none; font-size: 100%; vertical-align: baseline;
+}
+q {
+	background: none; margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor; border-image: none; font-size: 100%; vertical-align: baseline;
+}
+s {
+	background: none; margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor; border-image: none; font-size: 100%; vertical-align: baseline;
+}
+samp {
+	background: none; margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor; border-image: none; font-size: 100%; vertical-align: baseline;
+}
+small {
+	background: none; margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor; border-image: none; font-size: 100%; vertical-align: baseline;
+}
+strike {
+	background: none; margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor; border-image: none; font-size: 100%; vertical-align: baseline;
+}
+strong {
+	background: none; margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor; border-image: none; font-size: 100%; vertical-align: baseline;
+}
+sub {
+	background: none; margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor; border-image: none; font-size: 100%; vertical-align: baseline;
+}
+sup {
+	background: none; margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor; border-image: none; font-size: 100%; vertical-align: baseline;
+}
+tt {
+	background: none; margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor; border-image: none; font-size: 100%; vertical-align: baseline;
+}
+var {
+	background: none; margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor; border-image: none; font-size: 100%; vertical-align: baseline;
+}
+b {
+	background: none; margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor; border-image: none; font-size: 100%; vertical-align: baseline;
+}
+u {
+	background: none; margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor; border-image: none; font-size: 100%; vertical-align: baseline;
+}
+i {
+	background: none; margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor; border-image: none; font-size: 100%; vertical-align: baseline;
+}
+center {
+	background: none; margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor; border-image: none; font-size: 100%; vertical-align: baseline;
+}
+dl {
+	background: none; margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor; border-image: none; font-size: 100%; vertical-align: baseline;
+}
+dt {
+	background: none; margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor; border-image: none; font-size: 100%; vertical-align: baseline;
+}
+dd {
+	background: none; margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor; border-image: none; font-size: 100%; vertical-align: baseline;
+}
+ol {
+	background: none; margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor; border-image: none; font-size: 100%; vertical-align: baseline;
+}
+ul {
+	background: none; margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor; border-image: none; font-size: 100%; vertical-align: baseline;
+}
+li {
+	background: none; margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor; border-image: none; font-size: 100%; vertical-align: baseline;
+}
+fieldset {
+	background: none; margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor; border-image: none; font-size: 100%; vertical-align: baseline;
+}
+form {
+	background: none; margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor; border-image: none; font-size: 100%; vertical-align: baseline;
+}
+label {
+	background: none; margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor; border-image: none; font-size: 100%; vertical-align: baseline;
+}
+legend {
+	background: none; margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor; border-image: none; font-size: 100%; vertical-align: baseline;
+}
+table {
+	background: none; margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor; border-image: none; font-size: 100%; vertical-align: baseline;
+}
+caption {
+	background: none; margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor; border-image: none; font-size: 100%; vertical-align: baseline;
+}
+tbody {
+	background: none; margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor; border-image: none; font-size: 100%; vertical-align: baseline;
+}
+tfoot {
+	background: none; margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor; border-image: none; font-size: 100%; vertical-align: baseline;
+}
+thead {
+	background: none; margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor; border-image: none; font-size: 100%; vertical-align: baseline;
+}
+tr {
+	background: none; margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor; border-image: none; font-size: 100%; vertical-align: baseline;
+}
+th {
+	background: none; margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor; border-image: none; font-size: 100%; vertical-align: baseline;
+}
+td {
+	background: none; margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor; border-image: none; font-size: 100%; vertical-align: baseline;
+}
+body {
+	line-height: 1;
+}
+ol {
+	list-style: none;
+}
+ul {
+	list-style: none;
+}
+blockquote {
+	quotes: none;
+}
+q {
+	quotes: none;
+}
+blockquote::before {
+	content: none;
+}
+blockquote::after {
+	content: none;
+}
+q::before {
+	content: none;
+}
+q::after {
+	content: none;
+}
+:focus {
+	outline: 0px;
+}
+ins {
+	text-decoration: none;
+}
+del {
+	text-decoration: line-through;
+}
+table {
+	border-collapse: collapse; border-spacing: 0;
+}
+div.clear {
+	clear: both;
+}
+div#banner {
+	height: 100px; color: white; font-family: OpenSans, sans-serif; font-size: 14px; position: relative; background-color: black;
+}
+div#banner img.name-logo {
+	left: 10px; top: 0px; position: absolute;
+}
+div#banner img.ie6-name-logo {
+	left: 10px; top: 0px; position: absolute;
+}
+div#banner img.photo {
+	position: absolute;
+}
+div#banner div.main-navigation {
+	left: 10px; bottom: 10px; position: absolute;
+}
+div#banner div.main-navigation p {
+	margin: 0px; padding: 0px;
+}
+div#banner a:link {
+	color: white; text-decoration: none;
+}
+div#banner a:visited {
+	color: white; text-decoration: none;
+}
+div#banner a:hover {
+	color: rgb(188, 133, 204); text-decoration: underline;
+}
+div#banner a.tw:link {
+	color: rgb(213, 225, 77);
+}
+div#banner a.tw:visited {
+	color: rgb(213, 225, 77);
+}
+div#banner ul {
+	list-style: none; margin: 0px; padding: 0px;
+}
+div#banner ul li {
+	padding-right: 10px; font-family: OpenSans, sans-serif; font-size: 14px; float: left;
+}
+div#banner img {
+	border: 0px currentColor; border-image: none;
+}
+div#banner div.search {
+	background-position: 0px 0px; top: 20px; width: 173px; height: 23px; right: 20px; float: left; position: absolute; background-image: url("http://martinfowler.com/search_bg.gif"); background-repeat: no-repeat;
+}
+div#banner div.search input {
+	margin: 0px; padding: 0px; border: 0px currentColor; border-image: none; font-size: 12px;
+}
+div#banner div.search input.field {
+	margin: 3px 3px 3px 4px; width: 142px;
+}
+div#banner div.search input.button {
+	width: 18px; font-size: 99%; background-color: transparent;
+}
+div#footer {
+	color: white; margin-top: 15px; background-color: black;
+}
+div#footer ul {
+	text-align: left; font-family: OpenSans, sans-serif; font-size: 12px;
+}
+div#footer li {
+	text-align: left; font-family: OpenSans, sans-serif; font-size: 12px;
+}
+div#footer h1 {
+	text-align: left; font-family: OpenSans, sans-serif; font-size: 12px;
+}
+div#footer p {
+	text-align: left; font-family: OpenSans, sans-serif; font-size: 12px;
+}
+div#footer a:link {
+	color: white; text-decoration: none;
+}
+div#footer a:visited {
+	color: white; text-decoration: none;
+}
+div#footer a:hover {
+	color: rgb(188, 133, 204); text-decoration: underline;
+}
+div#footer a.tw:link {
+	color: rgb(213, 225, 77);
+}
+div#footer a.tw:visited {
+	color: rgb(213, 225, 77);
+}
+div#footer h1 {
+	padding: 0px 0px 5px; color: rgb(188, 133, 204);
+}
+div#footer div.col1 {
+	margin: 5px 10px; float: left; background-color: transparent;
+}
+div#footer div.col2 {
+	margin: 5px 10px; float: left; background-color: transparent;
+}
+div#footer div.col3 {
+	margin: 5px 10px; float: left; background-color: transparent;
+}
+div#footer div.col4 {
+	margin: 5px 10px; float: left; background-color: transparent;
+}
+div#footer ul {
+	margin: 0px 0px 0px 15px; padding: 0px; list-style-type: square;
+}
+div#footer div.col1 {
+	width: 60px;
+}
+div#footer div.col2 {
+	width: 140px;
+}
+div#footer div.col3 {
+	width: 220px;
+}
+div#footer div.col4 {
+	width: 300px;
+}
+div#footer div.copyright {
+	padding: 5px 10px; clear: both;
+}
+div#footer div.badges {
+	float: right;
+}
+div#footer div.badges img {
+	padding: 0px 1px; width: 14px; height: 14px;
+}
+.icon-twitter::before {
+	font-family: FontAwesome; font-style: normal; font-weight: normal; text-decoration: inherit; content: "?"; -webkit-font-smoothing: antialiased;
+}
+.icon-rss::before {
+	font-family: FontAwesome; font-style: normal; font-weight: normal; text-decoration: inherit; content: "?"; -webkit-font-smoothing: antialiased;
+}
+body {
+	margin: 0px;
+}
+body {
+	color: rgb(48, 54, 51); line-height: 1.2; font-family: OpenSans, sans-serif; font-size: 16px;
+}
+body > div#banner {
+	margin-left: 30px;
+}
+body > div#footer {
+	margin-left: 30px;
+}
+#content {
+	margin: 2em auto 2em 30px; width: 40em; min-height: 500px; background-color: white;
+}
+h1 {
+	color: rgb(91, 40, 88); font-weight: bold;
+}
+h2 {
+	color: rgb(91, 40, 88); font-weight: bold;
+}
+h3 {
+	color: rgb(91, 40, 88); font-weight: bold;
+}
+h4 {
+	color: rgb(91, 40, 88); font-weight: bold;
+}
+h5 {
+	color: rgb(91, 40, 88); font-weight: bold;
+}
+h1 a:link {
+	color: rgb(91, 40, 88);
+}
+h1 a:visited {
+	color: rgb(91, 40, 88);
+}
+h2 a:link {
+	color: rgb(91, 40, 88);
+}
+h2 a:visited {
+	color: rgb(91, 40, 88);
+}
+h3 a:link {
+	color: rgb(91, 40, 88);
+}
+h3 a:visited {
+	color: rgb(91, 40, 88);
+}
+h4 a:link {
+	color: rgb(91, 40, 88);
+}
+h4 a:visited {
+	color: rgb(91, 40, 88);
+}
+h5 a:link {
+	color: rgb(91, 40, 88);
+}
+h5 a:visited {
+	color: rgb(91, 40, 88);
+}
+h1 {
+	font-size: 200%;
+}
+h2 {
+	font-size: 150%;
+}
+p {
+	margin: 1em 0px;
+}
+h1 {
+	margin: 1em 0px;
+}
+h2 {
+	margin: 1em 0px;
+}
+h3 {
+	margin: 1em 0px;
+}
+h4 {
+	margin: 1em 0px;
+}
+h5 ul {
+	margin: 1em 0px;
+}
+dd {
+	margin-left: 2em;
+}
+a:link {
+	color: rgb(148, 56, 142); text-decoration: none;
+}
+a:visited {
+	color: rgb(148, 56, 142); text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+ul {
+	list-style: square; margin-left: 1.5em;
+}
+ol {
+	list-style: decimal; margin-left: 1.5em;
+}
+pre {
+	font-family: Inconsolata, monospace; font-size: 90%;
+}
+code {
+	font-family: Inconsolata, monospace;
+}
+span.credit {
+	color: rgb(128, 128, 128); font-size: 80%;
+}
+hr {
+	border-style: dotted none none; margin: 10px 15px; border-top-width: thin;
+}
+div.draft-notice {
+	margin: 1em 10%; padding: 0.5em; border: thin solid red; border-image: none; text-align: center; font-family: sans-serif;
+}
+div.draft-notice h1 {
+	color: black; font-size: 120%;
+}
+div.draft-notice p {
+	color: red;
+}
+blockquote {
+	color: rgb(91, 40, 88); padding-left: 1em; font-style: italic; border-left-color: grey; border-left-width: 2px; border-left-style: solid;
+}
+.clear {
+	clear: both;
+}
+.clickable {
+	text-decoration: underline; cursor: pointer;
+}
+.shares .label {
+	margin-right: 15px;
+}
+.shares img {
+	height: 16px; margin-right: 10px;
+}
+div {
+	border-width: thin; background-color: transparent;
+}
+div#banner {
+	width: 962px;
+}
+div#footer {
+	width: 962px;
+}
+div#content {
+	width: 960px;
+}
+div#main {
+	padding: 10px; width: 540px; line-height: 1.4; float: left;
+}
+div#main h1 {
+	margin: 0px; padding: 20px 0px 10px; font-size: 150%;
+}
+div#main h1 a:link {
+	color: rgb(91, 40, 88);
+}
+div#main h1 a:visited {
+	color: rgb(91, 40, 88);
+}
+div#main h2 {
+	font-size: 100%;
+}
+div#main hr {
+	border: currentColor; border-image: none;
+}
+div#main img {
+	max-width: 100%;
+}
+div#main pre {
+	font-size: 90%;
+}
+div#main hr.entry-sep {
+	margin: 50px; border: thick solid rgb(91, 40, 88); border-image: none;
+}
+div#main p.tags {
+	display: none;
+}
+div#main p.tagLabel {
+	display: none;
+}
+div#main p.tags {
+	font-size: 80%; font-style: italic; margin-top: 0px;
+}
+div#main p.tagLabel {
+	font-size: 80%; font-style: italic; margin-top: 0px;
+}
+div#main .author-date {
+	font-size: 80%; font-style: italic; margin-top: 0px;
+}
+div#main .soundbite {
+	margin: 1em -15em 1em 2em; padding: 1em; width: 20em; color: rgb(148, 56, 142); font-size: 110%; font-style: italic; float: right; background-color: rgb(236, 238, 237);
+}
+.list#main p.tags {
+	display: block;
+}
+.list#main p.tagLabel {
+	display: block;
+}
+.author-date {
+	width: 200px; margin-right: 30px; float: left;
+}
+.author-date p {
+	margin: 0px;
+}
+p.author-photo {
+	width: 60px; margin-right: 10px; float: left;
+}
+p.tagLabel {
+	width: 40px; float: right;
+}
+p.tags {
+	width: 170px; float: right;
+}
+div.photo {
+	padding: 0px 0px 0px 2em; font-size: 80%; font-style: italic;
+}
+div.quote {
+	font-size: 90%; font-style: italic;
+}
+div.quote p {
+	margin: 0.5em 3em;
+}
+div.quote p.quote-attribution {
+	margin-left: 4em;
+}
+table {
+	border: thin solid grey; border-image: none; font-family: sans-serif; font-size: 80%; border-collapse: collapse;
+}
+table th {
+	padding: 0px 5px; border: thin solid grey; border-image: none;
+}
+table td {
+	padding: 0px 5px; border: thin solid grey; border-image: none;
+}
+table th {
+	color: white; background-color: black;
+}
+table tr:nth-child(2n) td {
+	background-color: rgb(238, 238, 238);
+}
+.sidebar {
+	margin: 7em 2em 0px 0px; padding: 10px 40px 10px 20px; width: 250px; float: right; background-color: rgb(254, 224, 201);
+}
+.sidebar h2 {
+	color: rgb(17, 170, 88); font-style: italic; font-weight: normal;
+}
+.sidebar p.tags {
+	width: auto; line-height: 2.5; float: none;
+}
+.sidebar p.tags a {
+	background: rgb(17, 170, 88); margin: 2px; padding: 5px; border-radius: 5px; color: white; font-family: OpenSans, sans-serif; font-size: 14px; font-style: normal; font-weight: bold; white-space: nowrap;
+}
+.sidebar p.tags a:hover {
+	background: rgb(137, 183, 127);
+}
+div#sidebar {
+	margin: 30px 0px; padding: 10px; width: 220px; color: white; font-size: 85%; float: right; background-color: rgb(85, 85, 85);
+}
+div#sidebar a:link {
+	color: white;
+}
+div#sidebar a:visited {
+	color: white;
+}
+div#sidebar a:hover {
+	color: rgb(254, 200, 250);
+}
+div#sidebar a.tw:link {
+	color: rgb(213, 225, 77);
+}
+div#sidebar a.tw:visited {
+	color: rgb(213, 225, 77);
+}
+div#sidebar h1 {
+	margin: 1em 0px 0.5em; color: white; font-size: 150%;
+}
+div#sidebar p {
+	margin: 0px;
+}
+div#sidebar a.all-entries {
+	color: rgb(213, 225, 77);
+}
+div.entry-list {
+	font-size: 90%; column-count: 2; -moz-column-count: 2; -webkit-column-count: 2;
+}
+div.entry-list p {
+	margin: 0px;
+}
+div.footnote-list {
+	font-size: 80%; margin-top: 3em;
+}
+div.footnote-list span.num {
+	color: rgb(91, 40, 88); font-weight: bold;
+}
+.appendix {
+	font-size: 80%;
+}
+.furtherReading {
+	font-size: 80%;
+}
+div.acknowledgements {
+	font-size: 80%;
+}
+p.repost {
+	font-size: 90%;
+}
+.callout {
+	margin: 1em -5em 1em 5em; padding: 10px; width: 40%; float: right; background-color: rgb(236, 238, 237);
+}
+.shares {
+	padding: 1em; margin-top: 3em; background-color: rgb(254, 224, 201);
+}

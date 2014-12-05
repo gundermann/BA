@@ -1,4 +1,4 @@
-\chapter{Analyse des Ist-Zustands}\label{Analyse}
+\chapter{Hinführung zum Thema}\label{Analyse}
 Da die deg bereits eine Lösung entwickelt hat, mit der es möglich ist, ein
 einmal entwickeltes GUI auf mehreren Plattformen darzustellen, muss voerst
 analysiert werden, warum diese Lösung nicht mehr zukunftstauglich ist.\\
@@ -16,21 +16,76 @@ Standalone-Client) eine ähnlichen Aufbau haben.\\
 In Abbildung \ref{Abb_Web-Client} und Abbildung
 \ref{Abb_Standalone-Client} ist das GUI eines \gls{Zuwendungsblatt}es eines
 \gls{Förderantrag}s zu sehen.
-\myHugeFigure{web.jpg}{Web-Client: Zuewndungsblatt}{Web-Client}
-\myBigFigure{standalone.jpg}{Standalone-Client: Zuewndungsblatt}{Standalone-Client}
-Für den Aufbau sind nur die Tabelle und die darunter stehenden Buttons, sowies
-das Bemerkungsfeld (im Web-Client auf der rechten Seite und im
+\myHugeFigure{web.jpg}{Web-Client: Zuewndungsblatt\cite{DegDKElerIAntragsmappe}}{Web-Client}
+\myBigFigure{standalone.jpg}{Standalone-Client:
+Zuewndungsblatt\cite{DegDKElerIAntragsmappe}}{Standalone-Client} Für den Aufbau sind nur die Tabelle und
+die darunter stehenden Buttons, sowies das Bemerkungsfeld (im Web-Client auf der rechten Seite und im
 Standalone-Client in der Mitte) von Bedeutung.
 Insofern wurde die Anforderung bzgl.
 des gleichen Aufbaus umgesetzt, auch wenn es beim Vergleich der beiden GUIs im
 ersten Moment nicht so aussieht.
-
-\newpage
+\newline
+\newline
 Im folgenden Kapitel wird erklärt, wie die
 deg diese Anforderungen umgesetzt hat.
 \section{Umsetzung der
-Benutzerschnittstellen für mehreren Plattformen in der deg}
+Benutzerschnittstellen für mehreren Plattformen in der deg (Ist-Zustand)}
 Für die Umsetzung dieser Anforderungen wäre es möglich gewesen für den
-Web-Client und dem Standalone-Client separate GUIs zu entwickeln. 
+Web-Client und dem Standalone-Client separate GUIs zu entwickeln. Die deg hat
+jedoch eine Lösung erarbeitet mit der es möglich ist, ein einmal
+beschriebenes GUI auf mehrere Plattformen zu protieren. Das reduziert den
+Aufwand zur Entwicklung neuer GUIs. Die Lösung der deg ist das
+\emph{Multichannel-Framework}.\\
+Innerhalb dieses Frameworks werden die GUIs mittels so genannter
+\emph{Präsentationsformen} beschreiben. Die Architektur des
+Multichannel-Frameworks ist Abbildung \ref{Abb_MC-Framework} zu entnehmen. 
+\myBigFigure{mcgrob.png}{Architektur des
+Multichannel-Frameworks\cite{jwammc}}{MC-Framework}
+Daraus wird deutlich, dass aus Präsentationsformen mithilfe der
+\emph{Component-Factories} GUIs erzeugt werden, die auf unterschiedlichen
+Frameworks basieren\footnote{Hier: Swing, ULC und WingS. Wobei ULC bei der deg
+nicht mehr im Einsatz ist.}. Somit ist die deg in der Lage ihre GUIs für das
+\emph{\gls{Swing}}-Framework und für das \emph{\gls{WingS}}-Framework mit nur
+einer GUI-Beschreibung zu erzeugen.
 
 \section{Probleme des Multichannel-Frameworks}
+Beim Einsatz des Multichannel-Frameworks treten jedoch zwei große Probleme auf.
+Das erste Problem bezieht sich auf die integrierten Framworks (\gls{Swing} und
+\gls{WingS}). Beide Frameworks sind verwaltet und werden nicht mehr gewartet.
+Um auch in der Zukunft den Anforderungen der Kunden nachkommen zu können müssten
+beide Frameworks von der deg weiterentwickelt werden, da diese Aufgabe aus
+unterschiedlichen Gründen von den Entwicklern der Frameworks nicht mehr
+wahrgenommen wird. Eine andere Möglichkeit wäre es, wenn die deg andere und
+modernere Frameworks einsetzt um den nötigen Support der Framework-Entwickler
+nutzen zu können.\\
+Das Multichannel-Framework ist in der Theorie so konzipiert, dass es leicht sein
+sollte neue Frameworks zu integrieren (siehe Abbildung \ref{Abb_MC-Framework}.
+In der Praxis hat sich jedoch gezeigt, dass es nicht so einfach ist. Das
+Problem, welches bei der Integration neuer Frameworks aufkommt, ist, dass sich
+das Multichannel-Framework sehr stark an Swing orientiert und die GUIs vor allem
+vom \gls{GridBagLayout} stark beeinflusst sind. Ein solches Layout steht nicht
+in allen Frameworks zur Verfügung. Da die Beschreibung über ein solches Layout
+statt findet und der Aufbau der GUIs unterschiedlicher Frameworks per
+Anforderung gleich sein soll, ist es die Verfügbarkeit eines
+\gls{GridBagLayout}s somit eine Voraussetzung für die Intergration in das
+Multichannel-Framework.
+
+\section{Kurzvorstellung der Lösung via DSL}
+Aufgrund der nur schwer machbaren Integration neuer Frameworks in das
+bestehende Multichannel-Framework und der Tatsache, dass die derzeit genutzten
+Frameworks (\gls{Swing} und \gls{WingS}) veraltet sind, wird ein neuer Ansatz für die
+Umsetzung von GUIs auf unterschiedlichen Plattformen gesucht.
+\myBigFigure{neuerAnsatz.png}{DSL-Ansatz für gleich GUIs auf
+unterschiedlichen Plattformen}{neuerAnsatz}\\
+Der neue Ansatz basiert auf der folgenden Idee. Die GUIs sollen weiterhin nur
+einmal beschrieben werden sollen. Diese Beschreibung soll über eine DSL
+erfolgen und sich nicht an bestehende Frameworks orientieren. Grund dafür ist,
+dass ansonsten die Gefahr besteht, dass langfristig betrachtet mit diesem Ansatz
+das gleiche Problem auftirtt wie beim Multichannel-Framework. Aus der
+Beschreibung der GUIs wird ein Generator speziellen Quellcode erzeugen, der sich
+auf entsprechenden Plattformen ausführen lässt. Für jedes eingesetzte Framework
+muss somit ein eigener Generator entwickelt werden. Abbildung \ref{Abb_neuerAnsatz}
+bildet die aus dieser Idee resultierende Architektur ab\footnote{Hier: Vaadin als
+Web-Framework, JavaFX als Framework für den Standalone-Client und
+Android als Repräsentant für einen möglichen Mobile-Client}.
+

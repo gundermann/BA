@@ -1,0 +1,70 @@
+@charset "utf-8";
+/* CSS Document */
+#nav, #right-navigation {
+	display: none;
+}
+#header {
+	text-align: center;
+}
+#header .off-screen, #header .reset-list {
+	display: none;
+}
+#path {
+	min-height:30px;
+	height:30px;
+	padding:0;
+}
+
+#path ul {
+	margin: 0 0 0 10px;
+	
+}
+
+#path ul li {
+	background:none;
+	display:list-item;
+	float:left;
+	list-style-type:square;
+	padding: 0 25px 0 5px;
+}
+
+#container {
+	clear: left;
+}
+
+#container #topTools {
+	display : none;
+}
+
+#container .content2level {
+	margin: 50px 0 0;
+}
+
+#container .section-title {
+	display: none;
+}
+
+#container #rightNav {
+	display: none;
+}
+
+.links-ico-langs {
+	display: none;
+}
+
+#contentHP {
+margin:0 20px 10px 20px;
+position:relative;
+top:10px;
+}
+
+#contentHP #warp #inner div#panel_events, #contentHP #warp #inner div#panel_speeches, #contentHP #warp #inner div#panel_published, #contentHP #warp #inner div#ted  {
+	float:none;
+	width:96%;
+	margin:30px 0 0 15px;
+}
+
+#contentHP #warp #inner div.more, #contentHP #warp #inner a.more {
+	display:none;
+	
+}

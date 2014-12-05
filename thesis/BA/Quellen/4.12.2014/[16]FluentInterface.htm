@@ -1,0 +1,285 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<!-- saved from url=(0050)http://martinfowler.com/bliki/FluentInterface.html -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><HTML><HEAD><META 
+content="IE=11.0000" http-equiv="X-UA-Compatible">
+ <TITLE>FluentInterface</TITLE> 
+<META http-equiv="Content-type" content="text/html;charset=UTF-8"> 
+<META name="twitter:card" content="summary"> 
+<META name="twitter:site:id" content="16665197"> 
+<META content="bliki: FluentInterface" property="og:title"> 
+<META content="http://martinfowler.com/bliki/FluentInterface.html" property="og:url"> 
+<META content="A fluent interface is a way of building an API so that its use has the feel of an internal domain-specific language." 
+property="og:description"> 
+<META content="http://martinfowler.com/logo-sq.png" property="og:image"> 
+<META content="martinfowler.com" property="og:site_name"> 
+<META content="article" property="og:type"> 
+<META content="2005-12-20 00:00:00 -0500" property="og:article:modified_time"> 
+<LINK href="[16]FluentInterface-Dateien/bliki-entry.css" rel="stylesheet" type="text/css"> 
+<META name="GENERATOR" content="MSHTML 11.00.9600.17420"></HEAD> 
+<BODY>
+<DIV id="banner"><IMG class="photo" src="[16]FluentInterface-Dateien/ironbridge.jpg"> 
+   <A href="http://martinfowler.com/"><IMG class="name-logo" src="[16]FluentInterface-Dateien/mf-name-white.png"> 
+  <!--[if lte IE 6]>
+  <img class = 'ie6-name-logo' src = '/mf-name-white-solid.png'/>
+  <![endif]--> 
+    </A>     
+<DIV class="search"><!-- SiteSearch Google -->       
+<FORM action="http://www.google.com/search" method="GET"><INPUT name="ie" type="hidden" value="UTF-8"> 
+        <INPUT name="oe" type="hidden" value="UTF-8">         
+<INPUT name="q" class="field" type="text" size="15" maxlength="255">         
+<INPUT name="btnG" title="Search" class="button" type="submit" value=" ">        
+ <INPUT name="domains" type="hidden" value="martinfowler.com">         
+<INPUT name="sitesearch" type="hidden">         <INPUT name="sitesearch" type="hidden" value="martinfowler.com"> 
+      </FORM></DIV>
+<DIV class="main-navigation">
+<UL>
+  <LI><A href="http://martinfowler.com/intro.html">Intro</A></LI>
+  <LI><A href="http://martinfowler.com/design.html">Design</A></LI>
+  <LI><A href="http://martinfowler.com/agile.html">Agile</A></LI>
+  <LI><A href="http://refactoring.com/">Refactoring</A></LI>
+  <LI><A href="http://martinfowler.com/nosql.html">NoSQL</A></LI>
+  <LI><A href="http://martinfowler.com/dsl.html">DSL</A></LI>
+  <LI><A href="http://martinfowler.com/delivery.html">Delivery</A></LI>
+  <LI>
+  <P><A href="http://martinfowler.com/aboutMe.html">About Me</A></P>
+  <LI>
+  <P><A class="tw" href="http://www.thoughtworks.com/">ThoughtWorks</A>     
+  </P></LI>
+  <LI>
+  <P><A title="feed" class="icon-rss" 
+  href="http://martinfowler.com/feed.atom"></A>      </P></LI>
+  <LI>
+  <P><A title="Twitter stream" class="icon-twitter" href="http://www.twitter.com/martinfowler"></A> 
+       </P></LI></UL></DIV></DIV>
+<DIV id="content">
+<DIV id="main">
+<H1><A 
+href="http://martinfowler.com/bliki/FluentInterface.html">FluentInterface</A></H1>
+<DIV class="author-date">
+<P class="author-photo"><A href="http://martinfowler.com/"><IMG title="Photo of Martin Fowler" 
+src="[16]FluentInterface-Dateien/mf.jpg"></A></P>
+<P class="author"><A href="http://martinfowler.com/" rel="author">Martin 
+Fowler</A></P>
+<P class="date">20 December 2005</P></DIV>
+<P class="tags"><A href="http://martinfowler.com/tags/API%20design.html">API 
+design</A>&nbsp;· <A href="http://martinfowler.com/tags/domain%20specific%20language.html">domain 
+specific language</A></P>
+<P class="tagLabel">tags:</P>
+<DIV class="clear"></DIV>
+<P>A few months ago I attended a workshop with <A href="http://domainlanguage.com/about/ericevans.html">Eric 
+Evans</A>, and he	talked about a certain style of interface which we decided to 
+name a	fluent interface. It's not a common style, but one we think should	be 
+better known. Probably the best way to describe it is by example.</P>
+<P>The simplest example is probably from Eric's <A href="http://timeandmoney.sourceforge.net/">timeAndMoney</A>
+	library. To make a time interval in the usual way we might see	something like 
+this:</P>
+<PRE>TimePoint fiveOClock, sixOClock;
+...
+TimeInterval meetingTime = new TimeInterval(fiveOClock, sixOClock);
+</PRE>
+<P>The timeAndMoney library user would do it this way:</P>
+<PRE>   TimeInterval meetingTime = fiveOClock.until(sixOClock);
+</PRE>
+<P>I'll continue with the common example of making out an order for a	customer. 
+The order has line-items, with quantities and products. A	line item can be 
+skippable, meaning I'd prefer to deliver without	this line item rather than 
+delay the whole order. I can give the	whole order a rush status.</P>
+<P>The most common way I see this kind of thing built up is like	this:</P>
+<PRE>    private void makeNormal(Customer customer) {
+        Order o1 = new Order();
+        customer.addOrder(o1);
+        OrderLine line1 = new OrderLine(6, Product.find("TAL"));
+        o1.addLine(line1);
+        OrderLine line2 = new OrderLine(5, Product.find("HPK"));
+        o1.addLine(line2);
+        OrderLine line3 = new OrderLine(3, Product.find("LGV"));
+        o1.addLine(line3);
+        line2.setSkippable(true);
+        o1.setRush(true);
+    }
+</PRE>
+<P>In essence we create the various objects and wire them up	together. If we 
+can't set up everything in the constructor, then we	need to make temporary 
+variables to help us complete the wiring -	this is particularly the case where 
+you're adding items into collections.</P>
+<P>Here's the same assembly done in a fluent style:</P>
+<PRE>   private void makeFluent(Customer customer) {
+        customer.newOrder()
+                .with(6, "TAL")
+                .with(5, "HPK").skippable()
+                .with(3, "LGV")
+                .priorityRush();
+    }
+</PRE>
+<P>Probably the most important thing to notice about this style is that the 
+intent is to do something along the lines of an internal <A href="http://martinfowler.com/bliki/DomainSpecificLanguage.html">DomainSpecificLanguage</A>. 
+Indeed this is why we chose the term 'fluent' to describe it, in many ways the 
+two terms are synonyms. The API is primarily designed to be readable and to 
+flow. The price of this fluency is more effort, both in thinking and in the API
+ construction itself. The simple API of constructor, setter, and addition 
+methods is much easier to write. Coming up with a nice fluent API requires a 
+good bit of thought.</P>
+<P> Indeed one of the problems of this little example is that I just knocked it 
+up in a Calgary coffee shop over breakfast. Good fluent APIs take a while to 
+build. If you want a much more thought out example of a fluent API take a look 
+at <A href="http://www.jmock.org/">JMock</A>. JMock, like any mocking library, 
+needs to create complex specifications of behavior. There have been many mocking 
+libraries built over the last few years, JMock's contains a very nice fluent API 
+which flows very nicely. Here's an example expectation:</P>
+<PRE>mock.expects(once()).method("m").with( or(stringContains("hello"),
+                                          stringContains("howdy")) );
+</PRE>
+<P>I saw <A href="http://stevef.truemesh.com/">Steve Freeman</A> and <A href="http://nat.truemesh.com/">Nat 
+Price</A> give an excellent talk at <A href="http://martinfowler.com/bliki/JAOO2005.html">JAOO2005</A> 
+on the evolution of the JMock API, they since wrote it up in an <A href="http://www.mockobjects.com/files/evolving_an_edsl.ooplsa2006.pdf">OOPSLA 
+paper</A>.</P>
+<P>So far we've mostly seen fluent APIs to create configurations of	objects, 
+often involving value objects. I'm not sure if this is a	defining 
+characteristic, although I suspect there is something about	them appearing in a 
+declarative context. The key test of fluency,	for us, is the Domain Specific 
+Language quality. The more the use of	the API has that language like flow, the 
+more fluent it is.</P>
+<P>Building a fluent API like this leads to some unusual API habits. One of the 
+most obvious ones are setters that return a value. (In the order example 
+<CODE>with</CODE> adds an order line to the order and returns the order.) The 
+common convention in the curly brace world is that modifier methods are void, 
+which I like because it follows the principle of <A href="http://martinfowler.com/bliki/CommandQuerySeparation.html">CommandQuerySeparation</A>. 
+This convention does get in the way of a fluent interface, so I'm inclined to 
+suspend the convention for this case.</P>
+<P>You should choose your return type based on what you need to continue fluent 
+action. JMock makes a big point of moving its types depending on what's likely 
+to be needed next. One of the nice benefits of this style is that method 
+completion (intellisense) helps tell you what to type next - rather like a 
+wizard in the IDE. In general I find dynamic languages work better for DSLs 
+since they tend to have a less cluttered syntax. Using method completion, 
+however, is a plus for static languages.</P>
+<P>One of the problems of methods in a fluent interface is that they	don't make 
+much sense on their own. Looking at a method browser of	method by method 
+documentation doesn't show much sense to	 <CODE>with</CODE>. Indeed sitting 
+there on its own I'd argue that	it's a badly named method that doesn't 
+communicate its intent at all	well. It's only in the context of the fluent 
+action that it shows	its strengths. One way around this may be to use builder 
+objects	that are only used in this context.</P>
+<P>One thing that Eric mentioned was that so far he's used, and seen, fluent 
+interfaces mostly around configurations of value objects. Value objects don't 
+have domain-meaningful identity so you can make them and throw them away easily. 
+So the fluency rides on making new values out of old values. In that sense the 
+order example isn't that typical since it's an entity in the <A href="http://martinfowler.com/bliki/EvansClassification.html">EvansClassification</A>.</P>
+<P>I haven't seen a lot of fluent interfaces out there yet, so I	conclude that 
+we don't know much about their strengths and	weaknesses. So any exhortations to 
+use them can only be preliminary - however I do think they are ripe for more 
+experimentation.</P>
+<P>There's a good follow up to this from <A href="http://www.bofh.org.uk/articles/2005/12/21/fluent-interfaces">Piers 
+Cawley</A>.</P>
+<P><B>Update</B> (23 June 2008). Since I wrote this post this term's been	used 
+rather widely, which gives me a nice feeling of tingly	gratification. I've 
+refined my ideas about fluent interfaces and	internal DSLs in the <A href="http://martinfowler.com/books/dsl.html">book 
+I've been working on</A>. I've also noticed a	common misconception - many people 
+seem to equate fluent interfaces	with Method Chaining. Certainly chaining is a 
+common technique to	use with fluent interfaces, but true fluency is much more 
+than  that. </P>
+<P>The JMock example I show above uses method chaining, but also  nested 
+functions and object scoping</P>
+<P class="shares"><SPAN class="label">Share: </SPAN><A title="Share on Twitter" 
+href="https://twitter.com/intent/tweet?url=http://martinfowler.com/bliki/FluentInterface.html&amp;text=Bliki: FluentInterface"><IMG 
+src="[16]FluentInterface-Dateien/t_mini-a.png"></A><A title="Share on Facebook" 
+href="https://facebook.com/sharer.php?u=http://martinfowler.com/bliki/FluentInterface.html"><IMG 
+src="[16]FluentInterface-Dateien/fb-icon-20.png"></A><A title="Share on Google Plus" 
+href="https://plus.google.com/share?url=http://martinfowler.com/bliki/FluentInterface.html"><IMG 
+src="[16]FluentInterface-Dateien/gplus-16.png"></A></P></DIV>
+<DIV class="sidebar">
+<H2>Find similar articles at these tags</H2>
+<P class="tags"><A href="http://martinfowler.com/tags/API%20design.html">API 
+design</A> <A href="http://martinfowler.com/tags/domain%20specific%20language.html">domain 
+specific language</A></P></DIV>
+<DIV class="clear"></DIV></DIV>
+<DIV id="footer">
+<DIV class="col1">
+<H1>Guides</H1>
+<UL>
+  <LI><A href="http://martinfowler.com/intro.html">Intro</A></LI>
+  <LI><A href="http://martinfowler.com/design.html">Design</A></LI>
+  <LI><A href="http://martinfowler.com/agile.html">Agile</A></LI>
+  <LI><A href="http://martinfowler.com/nosql.html">NoSQL</A></LI>
+  <LI><A href="http://martinfowler.com/dsl.html">DSL</A></LI>
+  <LI><A href="http://martinfowler.com/delivery.html">Delivery</A></LI>
+  <LI><A href="http://martinfowler.com/aboutMe.html">About Me</A></LI></UL></DIV>
+<DIV class="col2">
+<H1>Popular Articles</H1>
+<UL>
+  <LI><A href="http://martinfowler.com/articles/newMethodology.html">New 
+  Methodology</A></LI>
+  <LI><A href="http://martinfowler.com/articles/injection.html">Dependency 
+  Injection</A></LI>
+  <LI><A href="http://martinfowler.com/articles/mocksArentStubs.html">Mocks 
+  aren't Stubs</A></LI>
+  <LI><A href="http://martinfowler.com/articles/designDead.html">Is Design 
+  Dead?</A></LI>
+  <LI><A 
+  href="http://martinfowler.com/articles/continuousIntegration.html">Continuous 
+  Integration</A></LI></UL></DIV>
+<DIV class="col4">
+<H1>Books</H1>
+<UL>
+  <LI><A href="http://martinfowler.com/books/nosql.html">NoSQL 
+Distilled</A></LI>
+  <LI><A href="http://martinfowler.com/books/dsl.html">Domain-Specific 
+  Languages</A></LI>
+  <LI><A 
+  href="http://martinfowler.com/books/refactoring.html">Refactoring</A></LI>
+  <LI><A href="http://martinfowler.com/books/eaa.html">Patterns of Enterprise 
+  Application Architecture</A></LI>
+  <LI><A href="http://martinfowler.com/books/uml.html">UML Distilled</A></LI>
+  <LI><A href="http://martinfowler.com/books/ap.html">Analysis Patterns</A></LI>
+  <LI><A href="http://martinfowler.com/books/pxp.html">Planning Extreme 
+  Programming</A></LI>
+  <LI><A href="http://martinfowler.com/books">Signature Series</A></LI></UL></DIV>
+<DIV class="col2">
+<H1>Site Sections</H1>
+<UL>
+  <LI><A href="http://martinfowler.com/faq.html">FAQ</A></LI>
+  <LI><A href="http://martinfowler.com/tags">Content Index</A></LI>
+  <LI><A href="http://martinfowler.com/bliki">Bliki</A></LI>
+  <LI><A href="http://martinfowler.com/books">Books</A></LI>
+  <LI><A href="http://martinfowler.com/dslCatalog">DSL Catalog</A></LI>
+  <LI><A href="http://martinfowler.com/eaaCatalog">EAA Catalog</A></LI>
+  <LI><A href="http://martinfowler.com/eaaDev">EAA Dev</A></LI>
+  <LI><A href="http://martinfowler.com/photos">Photos</A></LI></UL></DIV>
+<DIV class="col2">
+<H1>ThoughtWorks</H1>
+<UL>
+  <LI><A href="http://thoughtworks.com/blogs">Blogs</A></LI>
+  <LI><A href="http://thoughtworks.com/careers">Careers</A></LI>
+  <LI><A href="http://www.thoughtworks-studios.com/mingle-agile-project-management">Mingle</A></LI>
+  <LI><A 
+  href="http://www.thoughtworks-studios.com/agile-test-automation">Twist</A></LI>
+  <LI><A 
+  href="http://www.thoughtworks-studios.com/go-agile-release-management">Go</A></LI></UL></DIV>
+<DIV class="copyright">
+<DIV class="badges"><A href="http://martinfowler.com/feed.atom"><IMG title="News feed" 
+alt="feed" src="[16]FluentInterface-Dateien/feed-icon-14x14.png">         </A>   
+      <A href="http://www.twitter.com/martinfowler"><IMG title="Twitter stream" 
+alt="Twitter" src="[16]FluentInterface-Dateien/t_mini-a.png">         </A>       
+    <A href="https://www.facebook.com/martinFowlerThoughtWorks"><IMG title="Facebook" 
+alt="Twitter" src="[16]FluentInterface-Dateien/fb-icon-20.png">         </A>     
+            <A style="text-decoration: none;" href="http://plus.google.com/107610341080687821846" 
+rel="publisher"><IMG title="Google+" alt="Google+" src="[16]FluentInterface-Dateien/gplus-16.png"></A> 
+    </DIV>
+<P>© Martin Fowler | <A 
+href="http://www.thoughtworks.com/privacy-policy">Privacy Policy</A> | <A href="http://martinfowler.com/aboutMe.html#disclosures">Disclosures</A></P></DIV>
+<SCRIPT type="text/javascript">
+  
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-17005812-1']);
+    _gaq.push(['_setDomainName', 'martinfowler.com']);
+    _gaq.push(['_setAllowLinker', true]);
+    _gaq.push(['_trackPageview']);
+  
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  
+  </SCRIPT>
+ </DIV></BODY></HTML>

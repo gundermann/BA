@@ -1,11 +1,50 @@
 \newcommand{\etalchar}[1]{$^{#1}$}
 \begin{thebibliography}{MSL{\etalchar{+}}13}
 
+\bibitem[{dat}14]{pcswikifoerd}
+{\sc {data experts GmbH}}: {\em Förderantrag}.
+\newblock Profil Wiki der deg, März 2014.
+\newblock Zuletzt eingesehen am 02.12.2014.
+
+\bibitem[deG07]{DegDKElerIAntragsmappe}
+{\sc GmbH~data~experts}: {\em Detailkonzept ELER/i-Antragsmappe}, Januar 2007.
+\newblock Letzte Änderung am 01.12.2014.
+
+\bibitem[{Gen}14]{europa}
+{\sc {Generaldirektion Landwirtschaft und ländliche Entwicklung}}: {\em Das
+  Integrierte Verwaltungs- und Kontrollsystem (InVeKoS)}.
+\newblock URL:
+  http://ec.europa.eu/agriculture/direct-support/iacs/index\_de.htm, November
+  2014.
+\newblock Zuletzt eingesehen am 02.12.2014.
+
+\bibitem[Maa07]{jwammc}
+{\sc Maaß, Dirk}: {\em JWAMMC - Das Multichannel-Framework der data-experts
+  gmbh}.
+\newblock Vortrag, Dezember 2007.
+
 \bibitem[MSL{\etalchar{+}}13]{voelter}
 {\sc {Markus Voelter}}, {\sc {Sebastian Benz}}, {\sc {Lennart Kats}}, {\sc
   {Mats Helander}}, {\sc {Eelco Visser}} \btxandlong{}\ {\sc {Guido
   Wachsmuth}}: {\em DSL Engineering}.
 \newblock CreateSpace Independent Publishing Platform, 2013.
+
+\bibitem[Oraa]{gridbag}
+{\sc Oracle}: {\em Class GridBagLayout}.
+\newblock URL:
+  https://docs.oracle.com/javase/7/docs/api/java/awt/\\GridBagLayout.html.
+\newblock Zuletzt eingesehen am 02.12.2014.
+
+\bibitem[Orab]{swing}
+{\sc Oracle}: {\em Swing}.
+\newblock URL:
+  https://docs.oracle.com/javase/jp/8/\\technotes/guides/swing/index.html.
+\newblock Zuletzt eingesehen am 02.12.2014.
+
+\bibitem[Sch07]{wings}
+{\sc Schmid, Benjamin}: {\em Get your wingS back!}
+\newblock URL: http://jaxenter.de/artikel/Get-your-wingS-back, Dezember 2007.
+\newblock Zuletzt eingesehen am 02.12.2014.
 
 \bibitem[{Use}12]{usability}
 {\sc {Userlutions GmbH}}: {\em 3 Gründe, warum gute Usability wichtig ist}.
