@@ -1,5 +1,4 @@
-\newcommand{\etalchar}[1]{$^{#1}$}
-\begin{thebibliography}{MSL{\etalchar{+}}13}
+\begin{thebibliography}{{Gen}14}
 
 \bibitem[{dat}14]{pcswikifoerd}
 {\sc {data experts GmbH}}: {\em Förderantrag}.
@@ -18,16 +17,27 @@
   2014.
 \newblock Zuletzt eingesehen am 02.12.2014.
 
+\bibitem[KB11]{10}
+{\sc Krishnaswami, {Neelakantan R.}} \btxandlong{}\ {\sc Nick Benton}: {\em A
+  Semantic Model for Graphical User Interfaces}.
+\newblock Microsoft Research, September 2011.
+\newblock Verfügar unter URL:.
+
+\bibitem[LW]{1}
+{\sc Lu, Xudong} \btxandlong{}\ {\sc Jiancheng Wan}: {\em Model Driven
+  Development of Complex User Interface}.
+\newblock \btxphdthesis{}, Shandong University.
+\newblock Verfügar unter URL:.
+
 \bibitem[Maa07]{jwammc}
 {\sc Maaß, Dirk}: {\em JWAMMC - Das Multichannel-Framework der data-experts
   gmbh}.
 \newblock Vortrag, Dezember 2007.
 
-\bibitem[MSL{\etalchar{+}}13]{voelter}
-{\sc {Markus Voelter}}, {\sc {Sebastian Benz}}, {\sc {Lennart Kats}}, {\sc
-  {Mats Helander}}, {\sc {Eelco Visser}} \btxandlong{}\ {\sc {Guido
-  Wachsmuth}}: {\em DSL Engineering}.
-\newblock CreateSpace Independent Publishing Platform, 2013.
+\bibitem[MHP99]{20}
+{\sc Myers, Brad}, {\sc {Scott E.} Hudson} \btxandlong{}\ {\sc Randy Pausch}:
+  {\em Past, Present and Future of User Interface Software Tools}.
+\newblock \btxphdthesis{}, Carnegie Mellon University, 1999.
 
 \bibitem[Oraa]{gridbag}
 {\sc Oracle}: {\em Class GridBagLayout}.

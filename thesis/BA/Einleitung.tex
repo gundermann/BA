@@ -2,23 +2,36 @@
 \section{Motivation}
 In der heutigen Zeit werden Webseiten und Programme auf vielen unterschiedlichen
 Gräten von unterschiedlichen Nutzern ausgeführt. So gut wie die interne
-Umsetzung einer Anwendung auch sein mag, ist die \gls{Usability} einer Anwendung
-immer ein sehr wichtiger Aspekt. Denn eine \emph{schlechte Useability
-führt zu Verwirrung und Miss- bzw. Unverständis beim Kunden}\cite{usability}.
+Umsetzung einer Anwendung auch sein mag, ist die
+Benutzeroberfläche immer ein wichtiger Faktor, der für den Erfolg
+einer Anwendung eine große Rolle spielt. \cite{1} Damit
+einher geht die \gloss{Usability} einer Anwendung.
+Denn eine \emph{schlechte Useability führt zu Verwirrung und Miss- bzw. Unverständis beim Kunden}\cite{usability}.
 Dadurch geht letztendlich Umsatz verloren.\\
-Bei der Entwicklung von Benutzeroberflächen muss aber wie Eingangs erwähnt
-darauf geachtet werden, dass diese auch auf unterschiedlichen
-Geräten\footnote{Desktop, Smartphone, Tablet}. Das hat für den Entwickler in der
-Regel zur Folge, dass dieser mehrere \gls{Graphical User Interfaces (GUI)}
-bereitstellen muss. Somit werden mehrere GUIs entworfen, die dieselben Aspekte
-abbilden sollen. Von daher stellt sich die Frage, ob es nicht möglich ist, ein
-GUI in einer speziellen Sprache so abstrakt zu beschreiben, dass einmal beschrieben für
-alle unterschiedlichen Geräte exportiert werden kann.\\
-In dieser Arbeit wird versucht diese Idee
-an einem Beispiel umzusetzen. Das vorgesehene Beispiel wird in Kaptiel
-\ref{Analyse} erklärt. Vorerst wird jedoch die Vorgehensweise zur Umsetzung der
-Idee in dieser Arbeit erläutert.
-\cite{voelter}
+Usability hängt sehr stark mit dem Aufbau der Benutzeroberflächen
+zusammen. Bei der
+traditionllen Entwicklung\footnote{Siehe Glossar: \gls{Traditionelle
+UI-Entwicklung}} von Benutzeroberflächen muss aber wie Eingangs erwähnt darauf
+geachtet werden, dass diese auch auf unterschiedlichen Geräten\footnote{Desktop, Smartphone, Tablet}. Das hat für den Entwickler in der
+Regel zur Folge, dass dieser mehrere \gloss{Graphical User Interfaces (GUI)}
+bereitstellen muss. Somit werden mehrere GUIs mit unterschiedlichen
+Toolkits oder Frameworks entworfen. Diese Toolkits haben einen starken 
+imperativen Character, sind schwer zu erweitern und sie verhalten sich
+unterschiedlich abhängig von der speziellen Implementierung.\cite{10}\\
+Ein anderer Ansatz zur Beschreibung von Benutzeroberflächen ist das Model-Driven
+Development. Damit sollen UIs anhand der implementierten Funktionen automatisch erzeugt werden können. Allerdings wird die Darstellung dieser generierten UIs
+von der Darstellung von traditionell implementierter Benutzerschnittstellen
+übertroffen.\cite{20}.\\
+Eine Überlegung, die sich daraus ergibt, ist, ob man diese beiden Ansätze zur
+Implementierung von UIs (traditionell und Model-Driven) verbinden kann. 
+In dieser Arbeit wird versucht diese Idee an einem ausgewählten
+Beispiel umzusetzen. Es geht dabei um die Entwicklung einer neuen Sprache mit
+der ein Entwickler in der Lage ist, die Abstraktion aus dem Model-Driven Ansatz
+neben der statischen Beschreibung aus dem traditionellen Ansatz zu nutzen, um
+das UI allgmein zu beschreiben. Diese Beschreibung soll als Grundlage für
+unterschiedliche UIs, die auf unterschiedlichen Plattformen ausführbar sind,
+dienen.
+
 \section{Vorgehen}
 Die \emph{data experts GmbH (deg)} hat für die Umsetzung von GUIs auf
 unterschiedlichen Plattformen eine Lösung entwickelt. In Kaptiel \ref{Analyse}
