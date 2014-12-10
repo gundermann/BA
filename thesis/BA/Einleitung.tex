@@ -1,63 +1,33 @@
-\chapter{Einleitung}
-\section{Motivation}
-In der heutigen Zeit werden Webseiten und Programme auf vielen unterschiedlichen
-Gräten von unterschiedlichen Nutzern ausgeführt. So gut wie die interne
-Umsetzung einer Anwendung auch sein mag, ist die
-Benutzeroberfläche immer ein wichtiger Faktor, der für den Erfolg
-einer Anwendung eine große Rolle spielt. \cite{1} Damit
+\chapter{Motivation}
+In der heutigen Zeit werden Programme auf vielen unterschiedlichen
+Gräten\footnote{Desktop, Smartphone, Tablet} von ausgeführt. Die
+Benutzeroberfläche neben der internen Umsetzung immer ein wichtiger Faktor, der
+für den Erfolg einer Anwendung eine große Rolle spielt. \cite{1} Damit
 einher geht die \gloss{Usability} einer Anwendung.
-Denn eine \emph{schlechte Useability führt zu Verwirrung und Miss- bzw. Unverständis beim Kunden}\cite{usability}.
+Denn eine \emph{[\ldots] schlechte Useability führt zu Verwirrung und Miss- bzw.
+Unverständis beim Kunden}\cite{usability}.
 Dadurch geht letztendlich Umsatz verloren.\\
-Usability hängt sehr stark mit dem Aufbau der Benutzeroberflächen
-zusammen. Bei der
-traditionllen Entwicklung\footnote{Siehe Glossar: \gls{Traditionelle
-UI-Entwicklung}} von Benutzeroberflächen muss aber wie Eingangs erwähnt darauf
-geachtet werden, dass diese auch auf unterschiedlichen Geräten\footnote{Desktop, Smartphone, Tablet}. Das hat für den Entwickler in der
-Regel zur Folge, dass dieser mehrere \gloss{Graphical User Interfaces (GUI)}
-bereitstellen muss. Somit werden mehrere GUIs mit unterschiedlichen
-Toolkits oder Frameworks entworfen. Diese Toolkits haben einen starken 
+Wenn ein Programm auf unterschiedlichen Gräten ausgeführt wird, muss der
+Entwickler bei der traditionllen Entwicklung\footnote{Siehe Glossar:
+\gls{Traditionelle UI-Entwicklung}} mehrere \gloss{Graphical User Interfaces (GUI)}
+bereitstellen. Folglich werden mehrere GUIs mit unterschiedlichen
+Toolkits oder Frameworks entworfen. Diese Framworks haben einen starken 
 imperativen Character, sind schwer zu erweitern und sie verhalten sich
-unterschiedlich abhängig von der speziellen Implementierung.\cite{10}\\
+unterschiedlich abhängig von der speziellen Implementierung.\cite{10} Der
+Entwickler muss das GUI bei diesem Ansatz für jedes Framework explizit
+beschreiben.\\
 Ein anderer Ansatz zur Beschreibung von Benutzeroberflächen ist das Model-Driven
 Development. Damit sollen UIs anhand der implementierten Funktionen automatisch erzeugt werden können. Allerdings wird die Darstellung dieser generierten UIs
 von der Darstellung von traditionell implementierter Benutzerschnittstellen
 übertroffen.\cite{20}.\\
 Eine Überlegung, die sich daraus ergibt, ist, ob man diese beiden Ansätze zur
-Implementierung von UIs (traditionell und Model-Driven) verbinden kann. 
+Implementierung von UIs (traditionell und Model-Driven) verbinden kann. Somit
+kann die genaue Beschreibung der Darstellung mit einer höheren Abstraktion
+verbunden werden.\\
+In dieser Arbeit wird versucht diese Idee umzusetzen. Bei der Umsetzung wird 
+sich auf die UIs der Anwendung
+\emph{profil c/s}. Profil c/s ist \gloss{INVEKOS}-Programm welches von der deg
+als Client-Server-Anwendung entwickelt wird.
 In dieser Arbeit wird versucht diese Idee an einem ausgewählten
-Beispiel umzusetzen. Es geht dabei um die Entwicklung einer neuen Sprache mit
-der ein Entwickler in der Lage ist, die Abstraktion aus dem Model-Driven Ansatz
-neben der statischen Beschreibung aus dem traditionellen Ansatz zu nutzen, um
-das UI allgmein zu beschreiben. Diese Beschreibung soll als Grundlage für
-unterschiedliche UIs, die auf unterschiedlichen Plattformen ausführbar sind,
-dienen.
+Beispiel umzusetzen.
 
-\section{Vorgehen}
-Die \emph{data experts GmbH (deg)} hat für die Umsetzung von GUIs auf
-unterschiedlichen Plattformen eine Lösung entwickelt. In Kaptiel \ref{Analyse}
-dieser Arbeit wird zunächt dieser Ist-Zustand in der deg analysiert und die
-Probleme aufgezeigt.\\
- Im nachfolgenden Kapitel (\ref{Domänenspezifische
-Sprachen}) wird auf Domänenspezifische Sprachen (\gls{DSL}) eingegangen. Dies
-ist wichtig, da die Umsetzung einer neuen Sprache zur abstrakten Beschreibung
-eines GUI auf dem Konzept der DSLs beruht.\\
- Für die Entwicklung von GUI gibt es
-bereits einige DSLs. Aus diesem Grund wird in Kapitel \ref{Notwendigkeit einer
-neuen DSL} darauf eingegangen, warum die deg nicht mit den bestehenden DSLs zur
-GUI-Beschreibung arbeiten sollte.\\ 
-Die Features, die eine DSL für die Beschreibung von GUIs für die deg
-benötigt, werden im darauf folgenden Kapitel (\ref{Grobkonzept der
-Sprache und eines Generators}) erläutert. Da mit einer DSL alleine
-noch keine Umsetzung eines Programms ermöglicht, werden in diesem Kapitel
-auch die notwenigen Features von Generatoren betrachtet, die zur Generierung
-von Quellcode benötigt werden.\\
-Darauf aufbauend wird zuerst im Kapitel 
-\ref{Entwerfen einer DSL zur Beschreibung der GUI in profil c/s} auf die
-konkrete Umsetzung der DSL eingegangen. Die GUIs der deg sollten damit
-ausreichend beschrieben werden können. Eine Prüfung dessen wird später statt
-finden.\\
-Nachfolgen (Kapitel \ref{Entwicklung des Generators für das Generieren von Klassen für das Multichannel-Framework})
- wird ein Generator für diese DSl entwickelt. Somit kann aus der
- Beschreibung der GUI Quellcode generiert werden, der in der deg eingesetzt
- und getestet werden kann.\\
- Zum Abschluss (Kapitel \ref{Zusammenfassung und Ausblick}) werden die Ergebnisse zusammengafasst und ein Ausblick gegeben.

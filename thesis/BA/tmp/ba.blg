@@ -1,15 +1,5 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: ba.aux
-The style file: geralpha.bst
-A level-1 auxiliary file: titlepage.aux
-A level-1 auxiliary file: Einleitung.aux
-A level-1 auxiliary file: Analyse.aux
-A level-1 auxiliary file: DSL.aux
-A level-1 auxiliary file: Notwendigkeit.aux
-A level-1 auxiliary file: Grobkonzept.aux
-A level-1 auxiliary file: EntwerfenDSL.aux
-A level-1 auxiliary file: EntwicklungGen.aux
-A level-1 auxiliary file: Fazit.aux
-A level-1 auxiliary file: Anhang.aux
-Database file #1: thesis.bib
-Warning--empty year in 1
-(There was 1 warning)
+I found no \citation commands---while reading file ba.aux
+I found no \bibdata command---while reading file ba.aux
+I found no \bibstyle command---while reading file ba.aux
+(There were 3 error messages)

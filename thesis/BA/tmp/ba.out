@@ -1,32 +1,53 @@
 \BOOKMARK [0][-]{chapter*.1}{Abbildungsverzeichnis}{}% 1
 \BOOKMARK [0][-]{chapter*.2}{Tabellenverzeichnis}{}% 2
 \BOOKMARK [0][-]{chapter*.4}{Listings}{}% 3
-\BOOKMARK [0][-]{chapter.1}{Einleitung}{}% 4
-\BOOKMARK [1][-]{section.1.1}{Motivation}{chapter.1}% 5
-\BOOKMARK [1][-]{section.1.2}{Vorgehen}{chapter.1}% 6
-\BOOKMARK [0][-]{chapter.2}{Hinf\374hrung zum Thema}{}% 7
-\BOOKMARK [1][-]{section.2.1}{Allgemeine Anforderungen an Benutzeroberfl\344chen von profil c/s}{chapter.2}% 8
-\BOOKMARK [1][-]{section.2.2}{Umsetzung der Benutzerschnittstellen f\374r mehreren Plattformen in der deg \(Ist-Zustand\)}{chapter.2}% 9
-\BOOKMARK [1][-]{section.2.3}{Probleme des Multichannel-Frameworks}{chapter.2}% 10
-\BOOKMARK [1][-]{section.2.4}{Kurzvorstellung der L\366sung via DSL}{chapter.2}% 11
-\BOOKMARK [0][-]{chapter.3}{Dom\344nenspezifische Sprachen}{}% 12
-\BOOKMARK [1][-]{section.3.1}{Bedeutung}{chapter.3}% 13
-\BOOKMARK [1][-]{section.3.2}{Abgrenzung zu GPL}{chapter.3}% 14
-\BOOKMARK [1][-]{section.3.3}{Vor- und Nachteile von DSL}{chapter.3}% 15
-\BOOKMARK [0][-]{chapter.4}{Notwendigkeit einer neuen DSL}{}% 16
-\BOOKMARK [1][-]{section.4.1}{Beschreibung der Anforderung an die GUI}{chapter.4}% 17
-\BOOKMARK [1][-]{section.4.2}{Kurzanalyse von Defiziten ausgw\344hlter Sprachen zur Beschreibung von Benutzerschnittstellen}{chapter.4}% 18
-\BOOKMARK [0][-]{chapter.5}{Grobkonzept der Sprache und eines Generators}{}% 19
-\BOOKMARK [1][-]{section.5.1}{Notwendige Features der neuen DSL}{chapter.5}% 20
-\BOOKMARK [1][-]{section.5.2}{Notwendige Features eines Generators}{chapter.5}% 21
-\BOOKMARK [0][-]{chapter.6}{Entwerfen einer DSL zur Beschreibung der GUI in profil c/s}{}% 22
-\BOOKMARK [1][-]{section.6.1}{Vorstellung elementarer Beispiele von GUIs aus profil c/s}{chapter.6}% 23
-\BOOKMARK [1][-]{section.6.2}{Analyse der Metadaten der GUI}{chapter.6}% 24
-\BOOKMARK [1][-]{section.6.3}{Entwicklung der DSL mit Xtext}{chapter.6}% 25
-\BOOKMARK [0][-]{chapter.7}{Entwicklung des Generators f\374r das Generieren von Klassen f\374r das Multichannel-Framework}{}% 26
-\BOOKMARK [1][-]{section.7.1}{Vorstellung der Architektur f\374r die Beschreibung der Benutzerschnittstelle}{chapter.7}% 27
-\BOOKMARK [1][-]{section.7.2}{Umsetzung des frameworkspezifischen Generators}{chapter.7}% 28
-\BOOKMARK [0][-]{chapter.8}{Zusammenfassung und Ausblick}{}% 29
-\BOOKMARK [0][-]{appendix*.5}{Titel anhang a}{}% 30
-\BOOKMARK [0][-]{appendix*.5}{Glossar}{}% 31
-\BOOKMARK [0][-]{appendix*.7}{Literaturverzeichnis}{}% 32
+\BOOKMARK [0][-]{chapter.1}{Motivation}{}% 4
+\BOOKMARK [0][-]{chapter.2}{Hinf\374hrung zum Thema}{}% 5
+\BOOKMARK [1][-]{section.2.1}{Allgemeine Anforderungen an Benutzeroberfl\344chen von profil c/s}{chapter.2}% 6
+\BOOKMARK [1][-]{section.2.2}{Umsetzung der Benutzerschnittstellen f\374r mehreren Plattformen in der deg \(Ist-Zustand\)}{chapter.2}% 7
+\BOOKMARK [1][-]{section.2.3}{Probleme des Multichannel-Frameworks}{chapter.2}% 8
+\BOOKMARK [1][-]{section.2.4}{Zielsetzung}{chapter.2}% 9
+\BOOKMARK [0][-]{chapter.3}{Dom\344nenspezifische Sprachen}{}% 10
+\BOOKMARK [1][-]{section.3.1}{Begriffsbestimmungen}{chapter.3}% 11
+\BOOKMARK [1][-]{section.3.2}{Anwendungsbeispiele}{chapter.3}% 12
+\BOOKMARK [1][-]{section.3.3}{Model-Driven Development}{chapter.3}% 13
+\BOOKMARK [1][-]{section.3.4}{Abgrenzung zu GPL}{chapter.3}% 14
+\BOOKMARK [1][-]{section.3.5}{Vor- und Nachteile von DSL gegen\374ber GPL}{chapter.3}% 15
+\BOOKMARK [1][-]{section.3.6}{Interne DSL}{chapter.3}% 16
+\BOOKMARK [2][-]{subsection.3.6.1}{Implementierungstechniken}{section.3.6}% 17
+\BOOKMARK [1][-]{section.3.7}{Externe DSL}{chapter.3}% 18
+\BOOKMARK [2][-]{subsection.3.7.1}{Implementierungstechniken}{section.3.7}% 19
+\BOOKMARK [2][-]{subsection.3.7.2}{Parser}{section.3.7}% 20
+\BOOKMARK [1][-]{section.3.8}{Textuelle vs. Nicht-Textuelle DSL}{chapter.3}% 21
+\BOOKMARK [0][-]{chapter.4}{Entwicklung einer L\366sungsidee}{}% 22
+\BOOKMARK [1][-]{section.4.1}{Allgemeine Beschreibung der L\366sungsidee}{chapter.4}% 23
+\BOOKMARK [1][-]{section.4.2}{Architektur}{chapter.4}% 24
+\BOOKMARK [1][-]{section.4.3}{Vorteile gegen\374ber dem Multichannel-Framework}{chapter.4}% 25
+\BOOKMARK [0][-]{chapter.5}{GUI-DSL}{}% 26
+\BOOKMARK [1][-]{section.5.1}{Beschreibung der Anforderung an die GUI}{chapter.5}% 27
+\BOOKMARK [1][-]{section.5.2}{Vorstellung ausgew\344hlter DSL zur Beschreibung von GUIs}{chapter.5}% 28
+\BOOKMARK [2][-]{subsection.5.2.1}{The Snow}{section.5.2}% 29
+\BOOKMARK [2][-]{subsection.5.2.2}{glc-dsl}{section.5.2}% 30
+\BOOKMARK [2][-]{subsection.5.2.3}{Sculptor}{section.5.2}% 31
+\BOOKMARK [1][-]{section.5.3}{Bewertung}{chapter.5}% 32
+\BOOKMARK [0][-]{chapter.6}{Evaluation des Frameworks zur Entwicklung der DSL}{}% 33
+\BOOKMARK [1][-]{section.6.1}{Vorstellung ausgew\344hlter Frameworks}{chapter.6}% 34
+\BOOKMARK [2][-]{subsection.6.1.1}{PetitParser}{section.6.1}% 35
+\BOOKMARK [2][-]{subsection.6.1.2}{Xtext}{section.6.1}% 36
+\BOOKMARK [2][-]{subsection.6.1.3}{MPS}{section.6.1}% 37
+\BOOKMARK [1][-]{section.6.2}{Vergleich und Bewertung der vorgestellten Frameworks}{chapter.6}% 38
+\BOOKMARK [0][-]{chapter.7}{Aufteilung der Anforderungen auf Sprache und Generator}{}% 39
+\BOOKMARK [1][-]{section.7.1}{Anforderung an die neue DSL}{chapter.7}% 40
+\BOOKMARK [1][-]{section.7.2}{Anforderung an den Generators}{chapter.7}% 41
+\BOOKMARK [0][-]{chapter.8}{Entwicklung einer DSL zur Beschreibung der GUI in profil c/s}{}% 42
+\BOOKMARK [1][-]{section.8.1}{Analyse der Metadaten der GUI}{chapter.8}% 43
+\BOOKMARK [1][-]{section.8.2}{Syntax}{chapter.8}% 44
+\BOOKMARK [1][-]{section.8.3}{Semantik}{chapter.8}% 45
+\BOOKMARK [0][-]{chapter.9}{Entwicklung des Generators f\374r das Generieren von Klassen f\374r das Multichannel-Framework}{}% 46
+\BOOKMARK [1][-]{section.9.1}{WAM-GUI Architektur}{chapter.9}% 47
+\BOOKMARK [1][-]{section.9.2}{Syntax und Semantik f\374r die Beschreibung der GUIs}{chapter.9}% 48
+\BOOKMARK [1][-]{section.9.3}{Umsetzung des frameworkspezifischen Generators}{chapter.9}% 49
+\BOOKMARK [0][-]{chapter.10}{Zusammenfassung und Ausblick}{}% 50
+\BOOKMARK [0][-]{appendix*.5}{Titel anhang a}{}% 51
+\BOOKMARK [0][-]{appendix*.5}{Glossar}{}% 52
+\BOOKMARK [0][-]{appendix*.7}{Literaturverzeichnis}{}% 53

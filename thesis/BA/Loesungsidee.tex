@@ -1,0 +1,21 @@
+\chapter{Entwicklung einer Lösungsidee}\label{Entwicklung einer Lösungsidee}
+\section{Allgemeine Beschreibung der Lösungsidee}
+Aufgrund der nur schwer machbaren Integration neuer Frameworks in das
+bestehende Multichannel-Framework und der Tatsache, dass die derzeit genutzten
+Frameworks (\gls{Swing} und \gls{WingS}) veraltet sind, wird ein neuer Ansatz für die
+Umsetzung von GUIs auf unterschiedlichen Plattformen gesucht.
+\myBigFigure{neuerAnsatz.png}{DSL-Ansatz für gleich GUIs auf
+unterschiedlichen Plattformen}{neuerAnsatz}\\
+Der neue Ansatz basiert auf der folgenden Idee. Die GUIs sollen weiterhin nur
+einmal beschrieben werden sollen. Diese Beschreibung soll über eine DSL
+erfolgen und sich nicht an bestehende Frameworks orientieren. Grund dafür ist,
+dass ansonsten die Gefahr besteht, dass langfristig betrachtet mit diesem Ansatz
+das gleiche Problem auftirtt wie beim Multichannel-Framework. Aus der
+Beschreibung der GUIs wird ein Generator speziellen Quellcode erzeugen, der sich
+auf entsprechenden Plattformen ausführen lässt. Für jedes eingesetzte Framework
+muss somit ein eigener Generator entwickelt werden. Abbildung \ref{Abb_neuerAnsatz}
+bildet die aus dieser Idee resultierende Architektur ab\footnote{Hier: Vaadin als
+Web-Framework, JavaFX als Framework für den Standalone-Client und
+Android als Repräsentant für einen möglichen Mobile-Client}.
+\section{Architektur}
+\section{Vorteile gegenüber dem Multichannel-Framework}
