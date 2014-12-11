@@ -1,0 +1,2 @@
+document.write('<scr'+'ipt src="http://ib.adnxs.com/ttj?id=3356772&size=336x280&promo_sizes=300x250,300x600&promo_alignment=center,center&cb=1&referrer=enzyklo.de" type="text/javascr'+'ipt"></scr'+'ipt>');
+document.write('<img src="http://x.bidswitch.net/sync?ssp=yieldpartners" style="display:none">');

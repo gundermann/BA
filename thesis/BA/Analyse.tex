@@ -2,47 +2,48 @@
 
 
 \section{Allgemeine Anforderungen an Benutzeroberflächen von profil c/s}
-Die wichtigen (primären) Anforderungen für diese Arbeit beziehen sich auf den
+Die wichtigste (primäre) Anforderung für diese Arbeit bezieht sich auf den
 Client von profil c/s. Dieser soll sowohl in Web-Browsern (Web-Client) als auch standalone
-auf einem PC (Standalone-Client) ausgeführt werden können. Weiterhin war es
-für die deg wichtig, dass der Aufbau der UIs im Web- und Standalone-Client
-ähnlich ist.\\
+auf einem PC (Standalone-Client) ausgeführt werden können.\\
+Um eine effiziente Arbeitsweise zu ermöglichen, kamen (sekundäre) Anforderungen
+wie \emph{Erweiterbarkeit der Frameworks}, \emph{Abstraktion} und die
+\emph{\gloss{Ausdruckskraft}} der Sprachkonstrukte, die zur Entwicklung
+verwendet werden.\\
 In Abbildung \ref{Abb_Web-Client} und Abbildung \ref{Abb_Standalone-Client} ist
-das GUI eines \gloss{Zuwendungsblatt}es eines \gloss{Förderantrag}s zu sehen.
+das GUI eines \gloss{Zuwendungsblatt} eines \gloss{Förderantrag} zu sehen.
 \myHugeFigure{web.jpg}{Web-Client: Zuewndungsblatt\cite{DegDKElerIAntragsmappe}}{Web-Client}
 \myBigFigure{standalone.jpg}{Standalone-Client:
 Zuewndungsblatt\cite{DegDKElerIAntragsmappe}}{Standalone-Client} Für den Aufbau sind nur die Tabelle und
 die darunter stehenden Buttons, sowies das Bemerkungsfeld (im Web-Client auf der rechten Seite und im
-Standalone-Client in der Mitte) von Bedeutung.\\
-Um eine effiziente Arbeitsweise zu ermöglichen, kamen (sekundäre) Anforderungen
-wie \emph{Wartbarkeit der Frameworks}, \emph{Abstraktion} und die
-\emph{\gloss{Ausdruckskraft}} der Sprachkonstrukte, die zur Entwicklung
-verwendet werden.
-\newline
-\newline
+Standalone-Client in der Mitte) von Bedeutung. Dass der Aufbau der GUI in beiden
+Clients ähnlich ist, liegt an der Umsetzung der GUI.\\
 \section{Umsetzung der
 Benutzerschnittstellen für mehreren Plattformen in der deg (Ist-Zustand)}
-Für die Umsetzung der primären Anforderungen wäre es möglich gewesen für den
+Für die Umsetzung der primären Anforderung wäre es möglich gewesen für den
 Web-Client und dem Standalone-Client separate GUIs mit unterschiedlichen
 Frameworks zu entwickeln. Die deg hat jedoch eine Lösung erarbeitet mit der es möglich ist, ein einmal
 beschriebenes GUI auf mehrere Plattformen zu protieren. Das reduziert den
-Aufwand zur Entwicklung neuer GUIs, durch eine höhere Abstraktion.
-Die Lösung der deg ist das \emph{Multichannel-Framework} (MCF).\\
-Innerhalb dieses Frameworks werden die GUIs mittels so genannter
-\emph{Präsentationsformen} beschreiben. Durch die Verwendung gleicher
-Bezeichnungen wird die Ausdruckskraft gesteigert. Die Architektur des
+Aufwand zur Entwicklung neuer GUIs, durch eine höhere Abstraktion. Zugleich
+fördert die einmalige Beschreibung auch eine ähnlichen Aufbau der GUI im Web-
+und Standalone-Client. Die Lösung der deg ist das \emph{Multichannel-Framework}
+(MCF).\\
+Die Architektur des
 Multichannel-Frameworks ist Abbildung \ref{Abb_MC-Framework} zu entnehmen.
+Innerhalb dieses Frameworks werden die GUIs mittels so genannter
+\emph{Präsentationsformen} beschreiben. 
 \myBigFigure{mcgrob.png}{Architektur des
 Multichannel-Frameworks\cite{jwammc}}{MC-Framework}
-Daraus wird deutlich, dass aus Präsentationsformen mithilfe der
+Aus Präsentationsformen mithilfe der
 \emph{Component-Factories} GUIs erzeugt werden, die auf unterschiedlichen
 Frameworks basieren\footnote{Hier: Swing, ULC und WingS. Wobei ULC bei der deg
-nicht mehr im Einsatz ist.}. Somit ist die deg in der Lage ihre GUIs für das
-\emph{\gloss{Swing}}-Framework und für das \emph{\gloss{wingS}}-Framework mit
-nur einer GUI-Beschreibung zu erzeugen.
+nicht mehr im Einsatz ist.} und das \emph{Component-Interface} implementieren.
+Das \emph{Component-Interface} wird für die Interaktion mit den
+Komponenten der unterschiedlichen Frameworks benötigt. Mit dem MCF ist die deg
+in der Lage ihre GUIs für das \emph{\gloss{Swing}}-Framework und für das \emph{\gloss{wingS}}-Framework 
+mit nur einer GUI-Beschreibung zu erzeugen.
 
 \section{Probleme des Multichannel-Frameworks}
-Beim Einsatz des MCF treten jedoch einige Probleme auf.
+Beim Einsatz des MCF treten jedoch Probleme auf.
 Das erste Problem bezieht sich auf die integrierten Framworks (Swing und
 wingS). Beide Frameworks sind verwaltet und werden nicht mehr gewartet.
 Um auch in der Zukunft den Anforderungen der Kunden nachkommen zu können müssten
@@ -52,19 +53,16 @@ einsetzt um den nötigen Support der Framework-Entwickler
 nutzen zu können.\\
 Das MCF ist in der Theorie so konzipiert, dass es leicht sein
 sollte neue Frameworks zu integrieren (siehe Abbildung \ref{Abb_MC-Framework}.
-In der Praxis hat sich jedoch das Gegenteil gezeigt. Das
-Problem, welches bei der Integration neuer Frameworks aufkommt, ist, dass sich
-das MCF sehr stark an Swing orientiert und die GUIs vor allem
+In der Praxis wurde die Einfachheit einer solchen Integration jedoch
+widerlegt. Ein Problem, welches bei der Integration neuer Frameworks aufkommt,
+ist, dass sich das MCF sehr stark an Swing orientiert und die GUIs vor allem
 vom \gloss{GridBagLayout} stark beeinflusst sind. Ein solches Layout steht nicht
-in allen Frameworks zur Verfügung. Da die Beschreibung über ein solches Layout
-statt findet und der Aufbau der GUIs unterschiedlicher Frameworks per
-Anforderung gleich sein soll, ist es die Verfügbarkeit eines
-\gls{GridBagLayout}s somit eine Voraussetzung für die Intergration in das
-MCF.
+in allen Frameworks zur Verfügung. Da die Beschreibung der GUI über ein solches
+Layout vollzogen wird, ist es der Umgang mit dem \gloss{GridBagLayout}
+innerhalb des Frameworks eine Voraussetzung für die Intergration in das MCF.
 Zusammenfassen sind folgende Probleme des MCF zu nennen:
 \begin{itemize}
   \item verwendeten Frameworks sind inaktuell
-  \item	Wartbarkeit der Frameworks eingeschränkt
   \item Starke Orientierung an Swing
 \end{itemize}
 
@@ -79,7 +77,7 @@ konzipiert werden, dass sie ausreichend abstrakt, erweiterbar und
 ausdruckstärker ist als das MCF. Die primären Anforderungen dürfen dabei nicht
 außer Acht gelassen werden.\\
 Die genaue Lösungsidee mittels DSL, welche in dieser Arbeit verfolgt wird, ist
-in Kapitel \ref{Lösungsidee} beschrieben.
+in Kapitel \ref{Entwicklung einer Lösungsidee} beschrieben.
 
 
 

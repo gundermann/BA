@@ -1,5 +1,5 @@
 \newcommand{\etalchar}[1]{$^{#1}$}
-\begin{thebibliography}{MSL{\etalchar{+}}13}
+\begin{thebibliography}{VBK{\etalchar{+}}13}
 
 \bibitem[Aho08]{alfred}
 {\sc Aho, Alfred~V}: {\em Compiler: Prinzipien, Techniken und Werkzeuge}.
@@ -13,6 +13,13 @@
 \bibitem[deG07]{DegDKElerIAntragsmappe}
 {\sc GmbH~data~experts}: {\em Detailkonzept ELER/i-Antragsmappe}, Januar 2007.
 \newblock Letzte Änderung am 01.12.2014.
+
+\selectlanguage{\English}
+\bibitem[DM14]{mdsd}
+{\sc Daniel, Florian} \btxandlong{}\ {\sc Maristella Matera}: {\em Model-Driven
+  Software Development}.
+\newblock \Btxinlong{}\ {\em Mashups}, Data-Centric Systems and Applications,
+  \btxpageslong{}\ 71--93. Springer Berlin Heidelberg, 2014.
 
 \bibitem[FP11]{fowler}
 {\sc Fowler, Martin} \btxandlong{}\ {\sc Rebecca Parson}: {\em Domain-Specific
@@ -34,8 +41,8 @@
 \bibitem[Gun14]{gundermann5}
 {\sc Gundermann, Niels}: {\em Entwicklung einer Grammatik für eine DSL mit
   xText am Beispiel einer Sprache zur Definition von Pflichtprüfungen in profil
-  c/s}.
-\newblock \btxphdthesis{}, Nordakademie, 2014.
+  c/s}, 2014.
+\newblock Praxisbericht.
 
 \bibitem[Hed12]{hedtstueck}
 {\sc Hedtstueck, Ulrich}: {\em Einführung in die Theoretische Informatik},
@@ -51,8 +58,8 @@
 \bibitem[LW]{1}
 {\sc Lu, Xudong} \btxandlong{}\ {\sc Jiancheng Wan}: {\em Model Driven
   Development of Complex User Interface}.
-\newblock \btxphdthesis{}, Shandong University.
-\newblock Verfügar unter URL:.
+\newblock \Btxtechreplong{}, Shandong University.
+\newblock Verfügar unter URL: http://ceur-ws.org/Vol-297/paper7.pdf.
 
 \bibitem[Maa07]{jwammc}
 {\sc Maaß, Dirk}: {\em JWAMMC - Das Multichannel-Framework der data-experts
@@ -62,15 +69,9 @@
 \bibitem[MHP99]{20}
 {\sc Myers, Brad}, {\sc {Scott E.} Hudson} \btxandlong{}\ {\sc Randy Pausch}:
   {\em Past, Present and Future of User Interface Software Tools}.
-\newblock \btxphdthesis{}, Carnegie Mellon University, September 1999.
+\newblock \Btxtechreplong{}, Carnegie Mellon University, September 1999.
 \newblock Verfügar unter URL:
   http://www.cs.cmu.edu/~amulet/papers/futureofhci.pdf.
-
-\bibitem[MSL{\etalchar{+}}13]{voelter}
-{\sc {Markus Völter}}, {\sc {Sebastian Benz}}, {\sc {Lennart Kats}}, {\sc {Mats
-  Helander}}, {\sc {Eelco Visser}} \btxandlong{}\ {\sc {Guido Wachsmuth}}: {\em
-  DSL Engineering}.
-\newblock CreateSpace Independent Publishing Platform, 2013.
 
 \bibitem[Oraa]{gridbag}
 {\sc Oracle}: {\em Class GridBagLayout}.
@@ -88,7 +89,7 @@
 {\sc Sukaviriya, Noi}, {\sc Santhosh Kumaran}, {\sc Prabir Nandi}
   \btxandlong{}\ {\sc Terry Heath}: {\em Integrate Model-driven UI with
   Business Transformations: Shifting Focus of Model-driven UI}.
-\newblock \btxphdthesis{}, IBM T.J. Watson Research Center, Oktober 2005.
+\newblock \Btxtechreplong{}, IBM T.J. Watson Research Center, Oktober 2005.
 \newblock Verfügar unter URL:
   http://www.research.ibm.com/people/p/prabir/MDDAUI.pdf.
 
@@ -98,5 +99,11 @@
   http://rapidusertests.com/blog/2012/04/3-gute-grunde-fuer-usability-tests/,
   April 2012.
 \newblock Zuletzt eingesehen am 01.12.2014.
+
+\bibitem[VBK{\etalchar{+}}13]{voelter}
+{\sc Völter, Markus}, {\sc Sebastian Benz}, {\sc Lennart Kats}, {\sc Mats
+  Helander}, {\sc Eelco Visser} \btxandlong{}\ {\sc Guido Wachsmuth}: {\em DSL
+  Engineering}.
+\newblock CreateSpace Independent Publishing Platform, 2013.
 
 \end{thebibliography}

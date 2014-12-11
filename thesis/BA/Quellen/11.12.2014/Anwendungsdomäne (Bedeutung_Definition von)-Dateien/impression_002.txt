@@ -1,0 +1,2 @@
+document.write('<scr'+'ipt type="text/javascr'+'ipt">google_ad_client="ca-pub-8880678474836692";google_ad_slot="7675880914";google_ad_width=728;google_ad_height=90;</scr'+'ipt> <scr'+'ipt type="text/javascr'+'ipt" src="//pagead2.googlesyndication.com/pagead/show_ads.js"></scr'+'ipt>');
+document.write('<img src="http://x.bidswitch.net/sync?ssp=yieldpartners" style="display:none">');
