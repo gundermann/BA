@@ -1,7 +1,148 @@
 \chapter{Domänenspezifische Sprachen}\label{Domänenspezifische Sprachen}
 \section{Begriffsbestimmungen}
+\begin{itemize}
+  \item[] \textbf{Sprache/Programmiersprache}\\
+  Rein formal betrachtet ist eine Sprache ist eine beliebige Teilmenge aller
+  Wörter über einem Alphabet.
+  \emph{Ein Alphabet ist eine endliche, nichtleere Menge von Zeichen (auch
+  Symbole oder Buchstaben genannt)}\cite[S.6]{hedtstueck}. Zur Verdeutlichung
+  der Definition einer Sprache sein $V$ ein Alphabet und $k \in
+  N$   \footnote{N ist die Menge der natürlichen Zahlen
+  einschließig der Null. \cite[S.
+  6]{hedtstueck} }. \emph{Eine endliche Folge ($x_1, \ldots, x_k$) mit $x_i
+  \in V (i = 1, \ldots, k)$ heißt Wort über $V$ der Länge
+  $k$}\cite[S.6]{hedtstueck}.\\
+  Bei Programmiersprachen grenzt die Bestandteile einer Sprache wie folgt ab:
+  \begin{itemize}
+    \item[] \textbf{abstrakte Syntax}\\
+    Die abstrakte Syntax ist eine Datenstruktur, welche die Kerninformationen eines
+	Programms beschreibt.
+	Sie enthält keinerlei Informationen über Details bezüglich der Notation. Zur
+	Darstellungs dieser Datenstruktur werden abstrakte Syntaxbäume
+	genutzt. \cite[S.179]{voelter}.
+	\newpage
+    \item[] \textbf{konkrete Syntax}\\
+   	Die konkrete Syntax beschreibt die Notation der Sprache. Demnach bestimmt
+   	sie, welche Sprachkonstrukte der Nutzer einsetzen kann, um ein Programm in
+    dieser Sprache zu schreiben.
+	Die konkrete Syntax wird in so genannten Parse-Bäumen (konkrete
+	Syntaxbäume) dargestellt.\cite[S.87]{alfred}
+    \item[] \textbf{statische Semantik}\\
+    Die statische Semantik beschreibt die Menge an Regeln bezüglich des Typ-Systems, 
+    die ein Programm befolgen muss. \cite[S.26]{voelter}
+    \item[] \textbf{ausführbare Semantik}\\
+    Die ausführbare Semantik ist abhängig vom Compiler. 
+    Sie beschreibt wie ein Programm zu seiner Ausführung funktioniert.
+    \cite[S.26]{voelter}
+  \end{itemize}
+  Programmiersprachen werden dazu verwendet, um mit einem Computer
+  Instruktionen zukommen zu lassen. \cite[S.27]{fowler}
+  \cite[S.27]{voelter}
+  \item[] \textbf{General Purpose Language (GPL)}\\
+  Bei GPLs handelt es sich um Programmiersprachen, die Turing-vollständig sind.
+  Das bedeutet, dass mit einer GPL alles berechnet werden kann, was auch mit
+  einer \gloss{Turing-Maschine} berechenbar ist. Völter et. Al. behauptet, dass
+  alle GPLs aufgrund dessen untereinander austauschbar. Dennoch 
+  sind Abstufungen bei der Ausführung dieser Programmiersprachen zu machen.
+  Unterschiedliche GPL sind für spezielle Aufgaben optimiert.
+  \cite[S.27f]{voelter}
+  \newpage
+  \item[] \textbf{Domain Specific Language (DSL)}\\
+  Eine DSL ist eine Programmiersprache, welche für eine bestimmte \gloss{Domain}
+  optimiert ist.\cite[S.28]{voelter} Das Entwickeln einer DSL ermöglicht es, die
+  Abstarktion der  Sprache der Domäne anzupassen. \cite[S.10]{ghosh} Das
+  bedeutet, dass Aspekte, welche für die Domäne unwichtig sind, auch von der
+  Sprache außer Acht gelassen werden können (Abstraktion). Die Semantik und
+  Syntax sollten dieser Abstraktionebene angepassen sein. Darüber hinaus sollte ein Programm,
+  welches in einer DSL geschrieben wurde, alle Qualitätsanforderungen erfüllen, die auch bei einer Umsetzung des Programms mit anderen
+  Programmiersprachen realisiert werden. \cite[S.10f]{ghosh} Eine DSL ist
+  demnach in ihren Ausdrucksmöglichkeiten eingeschränkt. Je stärker diese Einschränkung
+  ist, desto besser ist die Unterstützung der Domäne sowie die Ausdruckskraft
+  der DSL. \cite[S.27f]{fowler} In machen Fällen findet eine Unterscheidung
+  zwischen technischen DSLs und fachlichen DSL statt. Markus Völter
+  unterscheidet diese beiden Kategorien im Allgemeinen dahingehend, dass
+  technische DSLs von Programmierern genutzt werden und fachliche DSL von
+  Personen, die keine Programmierer sind (bspw. Kunden bzw. Personen, die sich
+  in der Domäne auskennen). \cite[S.26]{voelter}
+  \item[] \textbf{Grammatik}\\
+  Grammatiken und insbesondere Grammatikregeln können dazu verwendet um
+  Sprachen zu beschreiben und somit auch den Aufbau eines
+  Computerprogramms. \cite[S.23f]{hedtstueck} Für die Definition einer Grammatik
+  verweise ich auf den Praxisbericht \cite[S.5ff]{gundermann5}. Grammatiken
+  können in einer Hierachrie dargestellt werden (\emph{Chomsky-Hierarchie}). \cite[S.32f]{} Bei
+  Programmiersprachen handelt es sich dabei um \emph{kontextfreie Sprachen}, da
+  diese Sprachen entscheidar sind und somit von einem \gloss{Compiler}
+  verarbeitet werden. \cite[S. 16f]{hedtstueck}
+  
+  \newpage
+  \item[] \textbf{Parser}\\
+  Ein Parser ist ein Teil der Infrastruktur der DSL. \cite[S.211]{ghosh} Er ist
+  dafür verantworlich aus dem DSL-Script ein Output zu generieren, mit dem
+  weitere Aktionen durchgeführt werden können.\cite[S.212]{ghosh} Der Output
+  wird in Form eines Syntax-Baums (Parse-Baum) (\gloss{AST}) generiert.
+  \cite[S.47]{fowler} Ein solcher Baum ist laut Martin Fowler eine weitaus nutzbarere Darstellung
+  dessen, was mit dem DSL-Script dargestellt werden soll. 
+  Daraus lässt sich auch das semantische Model generieren. \cite[S.48]{fowler}
+  \item[] \textbf{Semantisches Model}\\
+  Das semantische Model ist eine Repräsentation dessen, was mit der DSL
+  beschrieben wurde. Es wird laut Martin fowler auch als das Framework oder
+  die Bibliothek betrachtet, welche von der DSL nach außen hin sichtbar ist.
+  \cite[S.159]{fowler} In Anlehnung an Ghosh ist das semantische
+  Model mit dem AST gleichzusetzen, der durch eine
+  laxikalische Analyse des DSL-Scripts mithilfe eines Parsers erzeugt wird.
+  Somit wird es als Datenstruktur betrachtet, dessen Struktur von der Syntax der
+  DSl unabhängig ist \cite[S.214]{ghosh}. Das Gleichsetzen des semantischen
+  Models mit dem AST ist laut Martin Folwer in den meisten Fällen nicht
+  effektiv. Grund dafür ist, dass der AST sehr stark an die Syntax der DSL
+  gebunden, wohingegen das semantische Model von der Syntax unabhängig ist.
+  \cite[S.48]{fowler}
+  
+  \newpage
+  \item[] \textbf{Generator}\\
+  In Anlehnung an Martin Fowler ist ein Generator ist ein Teil der einer
+  \gloss{DSL Umgebung}, der für das Erzeugen von Quellcode für die
+  \gloss{Zielumgebung} zuständig ist. \cite[S.121]{fowler} Bei der Generierung
+  von Code wird zwischen zwei Arten unterschieden.
+  \begin{itemize}
+  	\item[] \textbf{Transformer Generation}\\
+  	Bei der Transformer Generation wird das semantische Model als Input
+  	verwendet, woraus Quellcode für die Zielumgebung generiert wird.
+  	\cite[S.533f]{fowler} Eine solte Generation wird oft verwendet, wenn ein
+  	Großteil des Output generiert wird und die Inhalte des semantischen Models
+  	einfach in den Quellcode der Zielumgebung überführt werden
+  	können.\cite[S.535]{fowler}
+  	\item[] \textbf{Templated Generation} \\
+  	Bei der Templated Generation wird eine Vorlage benötigt. In dieser Vorlage
+  	befinden sich Platzhalter, an deren Stelle der Generator speziellen Code
+  	generiert. \cite[S.539f]{fowler} Diese Art der Codegenerierung wird oft
+  	verwendet, wenn sich in der generierte Quellcode für die Zielumgebung viele statische Inhalte befinden
+  	und der dynamisch generierte Anteil sehr einfach gehalten
+  	ist. \cite[S.541]{fowler}
+  \end{itemize}
+\end{itemize}
+
+\newpage
 \section{Anwendungsbeispiele}
-\section{Model-Driven Development}
+Die Anwendungsbereiche für DSLs sind sehr unterschiedlich. Die bekanntesten DSL
+sind Sprachen wie \emph{SQL} (zur Abfrage und Manipulation von Daten in einer
+realtionalen Datenbank), \emph{HTML} (als Markup-Sprache für das Web) oder
+\emph{CSS} (als Layoutbeschreibung). \cite[S.12]{ghosh} Alle Sprachen besitzen
+eine eingeschärkte Ausdrucksmöglichkeiten und sind von der Abstraktion her direkt auf eine Domäne
+(jeweils dahinter in Klammern genannt) zugeschnitten.\cite[S.12f]{ghosh}\\
+Weitere Beispiele für DSL befinden sich im Bereich der
+Sprachen für Parser-Generatoren (\emph{YACC}, \emph{ANTLR}) oder im Bereich der
+Sprachen für das Zusammenbauen von Softwaresystemen (\emph{Ant}, \emph{Make}).
+\cite[S.12]{ghosh}\\
+Für den Bereich der UI-Entwicklung gibt es ebenfalls Anwendungsbeispiele. Diese
+werden in Kapitel \ref{GUI-DSL} genauer beleuchtet.
+
+\section{Model-Driven Software Development}
+In der Einleitung wurde schon der Model-Driven Ansatz in Verbindung mit
+UI-Entwicklung erwähnt. Dieser Ansatz versucht den technischen Lösungen der
+Industrie einen gewissen Grad an Agilität zu verleihen. \cite{3} Das wird
+erreicht indem die Modelle formaler, strenger, vollständiger und konsistenter
+beschrieben werden. \cite[S.31]{voelter}
+
 \section{Abgrenzung zu GPL}
 \section{Vor- und Nachteile von DSL gegenüber GPL}
 \section{Interne DSL}

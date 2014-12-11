@@ -1,55 +1,55 @@
 \select@language {german}
 \select@language {german}
-\contentsline {chapter}{Abbildungsverzeichnis}{v}{chapter*.1}
-\contentsline {chapter}{Tabellenverzeichnis}{vii}{chapter*.2}
-\contentsline {chapter}{Listings}{xi}{chapter*.4}
+\contentsline {chapter}{Abbildungsverzeichnis}{iii}{chapter*.1}
+\contentsline {chapter}{Tabellenverzeichnis}{iv}{chapter*.2}
+\contentsline {chapter}{Listings}{vi}{chapter*.4}
 \contentsline {chapter}{\numberline {1}Motivation}{1}{chapter.1}
-\contentsline {chapter}{\numberline {2}Hinf\"uhrung zum Thema}{3}{chapter.2}
+\contentsline {chapter}{\numberline {2}Problembeschreibung und Zielsetzung}{3}{chapter.2}
 \contentsline {section}{\numberline {2.1}Allgemeine Anforderungen an Benutzeroberfl\"achen von profil c/s}{3}{section.2.1}
 \contentsline {section}{\numberline {2.2}Umsetzung der Benutzerschnittstellen f\"ur mehreren Plattformen in der deg (Ist-Zustand)}{5}{section.2.2}
 \contentsline {section}{\numberline {2.3}Probleme des Multichannel-Frameworks}{6}{section.2.3}
 \contentsline {section}{\numberline {2.4}Zielsetzung}{7}{section.2.4}
-\contentsline {chapter}{\numberline {3}Dom\"anenspezifische Sprachen}{9}{chapter.3}
-\contentsline {section}{\numberline {3.1}Begriffsbestimmungen}{9}{section.3.1}
-\contentsline {section}{\numberline {3.2}Anwendungsbeispiele}{9}{section.3.2}
-\contentsline {section}{\numberline {3.3}Model-Driven Development}{9}{section.3.3}
-\contentsline {section}{\numberline {3.4}Abgrenzung zu GPL}{9}{section.3.4}
-\contentsline {section}{\numberline {3.5}Vor- und Nachteile von DSL gegen\"uber GPL}{9}{section.3.5}
-\contentsline {section}{\numberline {3.6}Interne DSL}{9}{section.3.6}
-\contentsline {subsection}{\numberline {3.6.1}Implementierungstechniken}{9}{subsection.3.6.1}
-\contentsline {section}{\numberline {3.7}Externe DSL}{9}{section.3.7}
-\contentsline {subsection}{\numberline {3.7.1}Implementierungstechniken}{9}{subsection.3.7.1}
-\contentsline {subsection}{\numberline {3.7.2}Parser}{9}{subsection.3.7.2}
-\contentsline {section}{\numberline {3.8}Textuelle vs. Nicht-Textuelle DSL}{9}{section.3.8}
-\contentsline {chapter}{\numberline {4}Entwicklung einer L\"osungsidee}{11}{chapter.4}
-\contentsline {section}{\numberline {4.1}Allgemeine Beschreibung der L\"osungsidee}{11}{section.4.1}
-\contentsline {section}{\numberline {4.2}Architektur}{12}{section.4.2}
-\contentsline {section}{\numberline {4.3}Vorteile gegen\"uber dem Multichannel-Framework}{12}{section.4.3}
-\contentsline {chapter}{\numberline {5}GUI-DSL}{13}{chapter.5}
-\contentsline {section}{\numberline {5.1}Beschreibung der Anforderung an die GUI}{13}{section.5.1}
-\contentsline {section}{\numberline {5.2}Vorstellung ausgew\"ahlter DSL zur Beschreibung von GUIs}{13}{section.5.2}
-\contentsline {subsection}{\numberline {5.2.1}The Snow}{13}{subsection.5.2.1}
-\contentsline {subsection}{\numberline {5.2.2}glc-dsl}{13}{subsection.5.2.2}
-\contentsline {subsection}{\numberline {5.2.3}Sculptor}{13}{subsection.5.2.3}
-\contentsline {section}{\numberline {5.3}Bewertung}{13}{section.5.3}
-\contentsline {chapter}{\numberline {6}Evaluation des Frameworks zur Entwicklung der DSL}{15}{chapter.6}
-\contentsline {section}{\numberline {6.1}Vorstellung ausgew\"ahlter Frameworks}{15}{section.6.1}
-\contentsline {subsection}{\numberline {6.1.1}PetitParser}{15}{subsection.6.1.1}
-\contentsline {subsection}{\numberline {6.1.2}Xtext}{15}{subsection.6.1.2}
-\contentsline {subsection}{\numberline {6.1.3}MPS}{15}{subsection.6.1.3}
-\contentsline {section}{\numberline {6.2}Vergleich und Bewertung der vorgestellten Frameworks}{15}{section.6.2}
-\contentsline {chapter}{\numberline {7}Aufteilung der Anforderungen auf Sprache und Generator}{17}{chapter.7}
-\contentsline {section}{\numberline {7.1}Anforderung an die neue DSL}{17}{section.7.1}
-\contentsline {section}{\numberline {7.2}Anforderung an den Generators}{17}{section.7.2}
-\contentsline {chapter}{\numberline {8}Entwicklung einer DSL zur Beschreibung der GUI in profil c/s}{19}{chapter.8}
-\contentsline {section}{\numberline {8.1}Analyse der Metadaten der GUI}{19}{section.8.1}
-\contentsline {section}{\numberline {8.2}Syntax}{19}{section.8.2}
-\contentsline {section}{\numberline {8.3}Semantik}{19}{section.8.3}
+\contentsline {chapter}{\numberline {3}Dom\"anenspezifische Sprachen}{8}{chapter.3}
+\contentsline {section}{\numberline {3.1}Begriffsbestimmungen}{8}{section.3.1}
+\contentsline {section}{\numberline {3.2}Anwendungsbeispiele}{13}{section.3.2}
+\contentsline {section}{\numberline {3.3}Model-Driven Software Development}{13}{section.3.3}
+\contentsline {section}{\numberline {3.4}Abgrenzung zu GPL}{14}{section.3.4}
+\contentsline {section}{\numberline {3.5}Vor- und Nachteile von DSL gegen\"uber GPL}{14}{section.3.5}
+\contentsline {section}{\numberline {3.6}Interne DSL}{14}{section.3.6}
+\contentsline {subsection}{\numberline {3.6.1}Implementierungstechniken}{14}{subsection.3.6.1}
+\contentsline {section}{\numberline {3.7}Externe DSL}{14}{section.3.7}
+\contentsline {subsection}{\numberline {3.7.1}Implementierungstechniken}{14}{subsection.3.7.1}
+\contentsline {subsection}{\numberline {3.7.2}Parser}{14}{subsection.3.7.2}
+\contentsline {section}{\numberline {3.8}Textuelle vs. Nicht-Textuelle DSL}{14}{section.3.8}
+\contentsline {chapter}{\numberline {4}Entwicklung einer L\"osungsidee}{15}{chapter.4}
+\contentsline {section}{\numberline {4.1}Allgemeine Beschreibung der L\"osungsidee}{15}{section.4.1}
+\contentsline {section}{\numberline {4.2}Architektur}{16}{section.4.2}
+\contentsline {section}{\numberline {4.3}Vorteile gegen\"uber dem Multichannel-Framework}{16}{section.4.3}
+\contentsline {chapter}{\numberline {5}GUI-DSL}{17}{chapter.5}
+\contentsline {section}{\numberline {5.1}Beschreibung der Anforderung an die GUI}{17}{section.5.1}
+\contentsline {section}{\numberline {5.2}Vorstellung ausgew\"ahlter DSL zur Beschreibung von GUIs}{17}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}The Snow}{17}{subsection.5.2.1}
+\contentsline {subsection}{\numberline {5.2.2}glc-dsl}{17}{subsection.5.2.2}
+\contentsline {subsection}{\numberline {5.2.3}Sculptor}{17}{subsection.5.2.3}
+\contentsline {section}{\numberline {5.3}Bewertung}{17}{section.5.3}
+\contentsline {chapter}{\numberline {6}Evaluation des Frameworks zur Entwicklung der DSL}{18}{chapter.6}
+\contentsline {section}{\numberline {6.1}Vorstellung ausgew\"ahlter Frameworks}{18}{section.6.1}
+\contentsline {subsection}{\numberline {6.1.1}PetitParser}{18}{subsection.6.1.1}
+\contentsline {subsection}{\numberline {6.1.2}Xtext}{18}{subsection.6.1.2}
+\contentsline {subsection}{\numberline {6.1.3}MPS}{18}{subsection.6.1.3}
+\contentsline {section}{\numberline {6.2}Vergleich und Bewertung der vorgestellten Frameworks}{18}{section.6.2}
+\contentsline {chapter}{\numberline {7}Aufteilung der Anforderungen auf Sprache und Generator}{19}{chapter.7}
+\contentsline {section}{\numberline {7.1}Anforderung an die neue DSL}{19}{section.7.1}
+\contentsline {section}{\numberline {7.2}Anforderung an den Generators}{19}{section.7.2}
+\contentsline {chapter}{\numberline {8}Entwicklung einer DSL zur Beschreibung der GUI in profil c/s}{20}{chapter.8}
+\contentsline {section}{\numberline {8.1}Analyse der Metadaten der GUI}{20}{section.8.1}
+\contentsline {section}{\numberline {8.2}Syntax}{20}{section.8.2}
+\contentsline {section}{\numberline {8.3}Semantik}{20}{section.8.3}
 \contentsline {chapter}{\numberline {9}Entwicklung des Generators f\"ur das Generieren von Klassen f\"ur das Multichannel-Framework}{21}{chapter.9}
 \contentsline {section}{\numberline {9.1}WAM-GUI Architektur}{21}{section.9.1}
 \contentsline {section}{\numberline {9.2}Syntax und Semantik f\"ur die Beschreibung der GUIs}{21}{section.9.2}
 \contentsline {section}{\numberline {9.3}Umsetzung des frameworkspezifischen Generators}{21}{section.9.3}
-\contentsline {chapter}{\numberline {10}Zusammenfassung und Ausblick}{23}{chapter.10}
+\contentsline {chapter}{\numberline {10}Zusammenfassung und Ausblick}{22}{chapter.10}
 \contentsline {chapter}{Titel anhang a}{xi}{appendix*.5}
 \contentsline {chapter}{Glossar}{xii}{appendix*.5}
-\contentsline {chapter}{Literaturverzeichnis}{xiv}{appendix*.7}
+\contentsline {chapter}{Literaturverzeichnis}{xiii}{appendix*.7}
