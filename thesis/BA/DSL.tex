@@ -41,7 +41,7 @@
   \item[] \textbf{General Purpose Language (GPL)}\\
   Bei GPLs handelt es sich um Programmiersprachen, die Turing-vollständig sind.
   Das bedeutet, dass mit einer GPL alles berechnet werden kann, was auch mit
-  einer \gloss{Turing-Maschine} berechenbar ist. Völter et. Al. behauptet, dass
+  einer \gloss{Turing-Maschine} berechenbar ist. Völter et. Al. behaupten, dass
   alle GPLs aufgrund dessen untereinander austauschbar. Dennoch 
   sind Abstufungen bei der Ausführung dieser Programmiersprachen zu machen.
   Unterschiedliche GPL sind für spezielle Aufgaben optimiert.
@@ -136,10 +136,10 @@ Sprachen für das Zusammenbauen von Softwaresystemen (\emph{Ant}, \emph{Make}).
 Für den Bereich der UI-Entwicklung gibt es ebenfalls Anwendungsbeispiele. Diese
 werden in Kapitel \ref{GUI-DSL} genauer beleuchtet.
 
-\section{Model-Driven Software Development (MDSD)}
+\section{Model-Driven Software Development (MDSD)}\label{mdsd}
 In der Einleitung wurde schon der Model-Driven Ansatz in Verbindung mit
 UI-Entwicklung erwähnt. Dieser Ansatz versucht den technischen Lösungen der
-Industrie einen gewissen Grad an Agilität zu verleihen. \cite{3} Das ist
+IT-Industrie einen gewissen Grad an Agilität zu verleihen. \cite{3} Das ist
 damit verbunden, dass die Produktion von Softwareprodukten schneller und besser
 von statten geht und mit weniger Kosten verbunden ist. \cite[S.71]{mdsd}
 Erreicht wird dies indem die Modelle formaler, strenger, vollständiger und konsistenter beschrieben werden. 
@@ -149,12 +149,130 @@ wiederverwendet werden können. \cite[S.72]{mdsd} Somit wird wiederkehrender
 oder schematischer Quellcode vermieden und es ist möglich diese Modelle auch in
 anderen Anwendungen zu verwenden. \cite[S.71]{mdsd}
 Daraus lassen sich folgende Ziele des MDSD ableiten:
-
+\begin{itemize}
+  \item schnelleres Entwicklen durch Automatisierungen
+  \item bessere Softwarequalität durch automatisierte Transformationen
+  (Generation) und formalen Model-Definitionen
+  \item Verhinderung von Wiederholungen und besseres Management von veränderbare
+  Technologien durch die separierung der Gegenstandsbereiche\ldots\ldots\ldots.
+  \item Bessere Wiederverwendung von Architekturen,
+  Modelierungssprachen\footnote{bspw. eine DSL} und Generatoren/Transformatoren
+  \item Verringerte Komplexität durch höhere Abstraktion
+\end{itemize}
+\cite[S.13f]{mdsdvoelter}
+Die Modelle sind somit nicht länger nur zur Dokumentation geeignet. Sie sind
+Teil der Software. \cite[S.14f]{mdsdvoelter} Die Modelle sind dabei auf ein
+bestimmtes Domänenproblem angepasst. Um diese Modelle zu beschreiben wird eine
+DSL benötigt. \cite[S.15]{mdsdvoelter} In Abbildung \ref{mdsd} ist die Idee des
+MDSD schematisch dargestellt.
+\myBigFigure{mdsd.jpg}{Die grundlegenden Ideen hinter dem MDSD
+\cite[S.15]{mdsdvoelter}}{mdsd}
 \section{Abgrenzung zu GPL}
+Wie zu Beginn dieses Kapitels schon erwähnt sind GPLs. Sprachen mit denen alles
+Berechnet werden kann, was auch mit einer Turing-Maschine berechenbar ist.
+\cite[S.27]{voelter} Folglich kann mit einer GPL jedes berechenbare Problem
+gelöst werden. Eine DSL hat diese Eigenschaft nicht. Da sie auf eine bestimmte
+Domäne zugeschnitten ist, können auch nur Probleme innerhalb dieser Domäne mit
+ihr gelöst werden.\cite[S.28]{voelter} Martin Fowler bezeichnet diese
+Eigenschaft des Domänen Fokus als ein Schlüsselelement der Definition einer DSL.
+\cite[S.27f]{fowler} Allein aus dieser Abgrenzung lassen sich bereits Vor- und
+Nachteile von DSLs oder GPLs ableiten. Diese werden im folgenden Kapitel genauer
+betrachtet.\\
 \section{Vor- und Nachteile von DSL gegenüber GPL}
+Gründe weshalb man eine DSL nutzen sollte, gibt es viele. Allerdings dürfen die
+Herausforderungen, die aufkommen noch bevor man eine DSL einsetzen kann, nicht
+außer Acht lassen. Bei der Erklärung der Vorteile wird davon ausgegangen, dass
+eine DSL zum Einsatz bereit steht. Bei den Nachteilen hingegen wird i.d.R davon
+ausgegangen, dass eine solche DSL erst noch entwickelt werden muss.
+\subsection*{Vorteile}
+\begin{itemize}
+  \item \textbf{Verbesserte Produktivität bei der Entwicklung der
+  Software}\cite{fowler}\cite{voelter}\cite{ghosh}
+  
+  \item \textbf{Bessere Kommunikation mit
+  Domänen-Experten}\cite{fowler}\cite{voelter}\cite{ghosh}
+  
+  \item \textbf{Veränderung des Ausführungskontextes}\cite{fowler}
+  
+  \item \textbf{Alternativ berechenbares Model} \cite{fowler}
+  
+  \item \textbf{Höhere Qualität}\cite{voelter}	
+  
+  \item \textbf{Einfachere Validierung und Verifizierung}\cite{voelter}
+  
+  \item \textbf{Einfache Migration}\cite{voelter}
+  
+  \item \textbf{Plattform unabhängig}\cite{voelter}
+  
+  \item \textbf{Ausdruckskraft}\cite{ghosh}\cite{fowler}
+  
+  \item \textbf{Skalierbarkeit} \cite{ghosh} 
+  Wobei Völter das eher als Gefahr sieht.
+\end{itemize}
+
+\subsection*{Nachteile}
+\begin{itemize}
+  \item \textbf{Sprach-Cacophony}\cite{fowler}\cite{ghosh}
+  
+  \item \textbf{Kosten für die Entwicklung der
+  DSL}\cite{fowler}\cite{voelter}\cite{ghosh}
+  
+  \item \textbf{Ghetto Slang} \cite{fowler}
+  
+  \item \textbf{Blinkered Abstraktion}\cite{fowler}
+  
+  \item \textbf{Großes Know-How gefordert}\cite{voelter}\cite{ghosh}
+  
+  \item \textbf{Investitions-Gefängnis}\cite{voelter}
+  
+  \item \textbf{Unvollständige DSLs}\cite{voelter}
+  
+  \item \textbf{Kulturelle Herausforderungen}\cite{voelter}\cite{ghosh}
+  
+\end{itemize}
+
+Zusammenfassend ist der Aufwand für die Vorbereitung des Einsatzes einer DSL
+sehr hoch. Wurde eine DSL jedoch eingeführt, wird sich der Arbeitsaufwand um ein
+Vielfaches verringern.
 \section{Interne DSL}
+Bei einer internen DSL handelt es sich um eine DSL, die in eine GPL integriert
+sind. Sie übernehmen dabei das Typ-System der GPL in die sie
+integriert sind.\cite[S.50]{voelter} In Betrachtung der Ziele auf Kapitel
+\ref{mdsd} können einige dieser mit Applikation Interfaces (API) erreichen werden. 
+Diese APIs werden i.d.R. für GPLs zur Verfügung gestellt. 
+Martin Fowler sieht den großen Unterschied zwischen API und DSL darin, dass das
+eine DSL neben einem abstrahierten Vokabular auch eine spezifische Grammatik
+nutzt. \cite[S.29]{fowler} Zwischen einer internen DSL und einem API steht das
+\emph{Fluent Interface} (\cite[S.50]{voelter}), welches als
+Implementierungstechnik von internen DSL im Folgenden genauer beleuchtet wird.
 \subsection{Implementierungstechniken}
+\subsubsection*{Fluent Interfaces}
+\subsubsection*{Parse-Tree Manipulation}
+\subsubsection*{Annotationen}
 \section{Externe DSL}
 \subsection{Implementierungstechniken}
-\subsection{Parser}
-\section{Textuelle vs. Nicht-Textuelle DSL}
+Bei den Implementierungstechniken von externen DSL geht es um die Art und Weise,
+wie der DSL-Code vom Parser in ein semantisches Model oder einem AST überführt
+wird. \cite[S.89]{fowler}  
+\subsubsection*{Parser Generator}
+\subsubsection*{Parser Kombinator}
+\subsubsection*{Vermischung mit anderen Sprachen}
+\section{Nicht-Textuelle DSL}
+Bei den in den letzten Kapiteln vorgestellten internen und externen DSLs
+handelt es sich um textuelle DSLs. Auch wenn eine DSL eine bestimmte domäne
+repräsentiert, bedeutet dies nicht, dass diese Repräsentation 
+immer textuell erfolgen muss. \cite[S.19]{ghosh} 
+Es gibt einige Gründe, mit einer nicht-textuellen DSL zu arbeiten:
+\begin{itemize}
+  \item Viele Domänenprobleme können durch die Domänen-Nutzer besser durch
+  Tabellen oder grafischen Darstellungen erklärt werden
+  \item Domänenlogik ist in textueller Form oft zu komplex und enthält zu viele
+  syntaktische strukturen
+  \item visuelle Modelle sind einfacher zu durchdringen und zu verändern durch
+  Domänenexperten
+\end{itemize}\cite[S.19]{ghosh}
+Für diesen Ansatz muss der Domänen-Nutzer die Repräsentation des Wissens über
+eine Domäne in einem Editor (Projection Editor) visualisieren. Mit diesem Editor
+kann der Domänen-Nutzer die Sicht auf die Domäne verändern, ohne auch nur eine
+Zeile code schreiben zu müssen. Im Hintergrund generiert dieser Editor den Code,
+welcher Sicht auf die Domäne modelliert. \cite[S.19f]{ghosh}

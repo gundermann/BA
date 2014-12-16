@@ -1,7 +1,66 @@
 \chapter{GUI-DSL}\label{GUI-DSL}
-\section{Beschreibung der Anforderung an die GUI}
-\section{Vorstellung ausgewählter DSL zur Beschreibung von GUIs}
+\section{Beschreibung der Anforderung an die GUI-Beschreibung}
+Die allgemeinen Anfroderung an die GUI wurden in Kapitel \ref{AllgAnforderungen}
+erläutert. Die folgenden Anforderungen beziehen sich auf die Aspekte der GUI die
+beschrieben werden müssen, da sie von den Entwicklern im Verlauf der
+Zeit geändert werden müssen, oder es nicht sinnvoll ist diese zu abstrahieren,
+da keine Wiederverwendung stattfindet. Bei der Beschreibung der Anforderungen
+muss darauf eingegangen werden, welche Elemente der GUI mit anderen Elementen
+kommunizieren können und wie die GUI beschrieben wird.\\
+Traditionell werden GUIs mit Hilfe von Layout-Containern strukturiert. In der
+Vergangenheit hat sich gezeigt, dass die strukturierung über ein spezifisches
+Layout zu einer Orientierung an ein bestimmtes Framework führt. Von daher ist
+das Layout in der GUI-Beschreibung soweit zu abstrahieren, dass die
+Grundsturktur\footnote{Das zu Grunde liegende Layout} von Generator bestimmt
+wird.\\
+\gloss{Triviale Elemente einer GUI}, die für profil c/s relevant sind, müssen
+beschrieben werden können.
+Welche Attribute dieser Elemente beschrieben werden, wird in Kaptiel \ref{Entwicklung
+einer DSL zur Beschreibung der GUI in profil c/s} genauer analysiert. Im
+Gegensatz dazu steht, dass die GUI durch die Beschreibung fachlicher Modelle
+automatisch generiert wird und somit keine Elemente einer GUI beschrieben
+werden müssen (Motivation für MDSD \cite{3}). Jedoch soll den Entwicklern
+weiterhin die Möglichkeit gegeben werden, die UIs selbst zu entwerfen. Grund
+dafür ist, dass es ein zu großer Aufwand wäre alle Module von profil c/s auf
+MDSD umzustellen und die GUIs generieren zu lassen. Nur die Beschreibung der GUI
+umzustellen scheint überschaubar zu sein.\\
+Weiterhin müssen auch komplexe Elemente einer GUI beschrieben werden können.
+Unter komplexen GUI-Elementen in profil c/s versteht man vordefinierte
+Zusammensetzungen von trivialen GUI-Elementen, die für einen bestimmten Input
+einen entsprechenden Output auf der Benutzerschnittstelle erzeugen. Die
+Verarbeitung des Input ist dabei bereits an die Domäne angepasst. An diesem
+Punkt kann die vorherige Anforderung wiederum angefochten werden, da komplexe
+GUI-Elemente auf einer höheren Abstraktionsebene liegen als triviale
+GUI-Elemente. Die Anzahl der komplexen GUI-Elemente für profil c/s reicht jedoch
+nicht, um alle Benutzerschnittstellen für profil c/s zu beschreiben. Außerdem
+ist die Wiederverwendbarkeit einiger komplex GUI-Elemente (gemäß dem Fall, dass
+eine Vielzahl solcher Elemente bestünde und sich die Benutzerschnittstellen
+von profil c/s damit abbilden ließen) meiner Meinung nach fragwürdig.\\
+Da bereits Ansätze von DSLs zur Beschreibung von GUIs existieren muss geprüft
+werden, ob sie die oben beschreibenen Anforderungen umsetzen können. Dazu werden
+im folgenden Kapitel drei ausgewählte DSLs vorgestellt und im nachfolgenden
+Kapitel hinsichtlich der Anforderungen bewertet.
+\section{Vorstellung ausgewählter DSLs zur Beschreibung von GUIs}
 \subsection{The Snow}
 \subsection{glc-dsl}
 \subsection{Sculptor}
 \section{Bewertung}
+\begin{table}[!htb]
+\centering
+\small
+			\begin{tabular}[c]{|l|r|r|r|}
+			\hline
+				\textbf{Anforderung} &
+				\textbf{The Snow} & \textbf{glc-dsl} &
+				\textbf{Sculptor} \\
+				\hline\hline
+				\textbf{keine Layout-Spezifikation} & & &\\
+				\hline
+				\textbf{Beschreibung trivialer Elemente} & 	& & \\
+				\hline
+				\textbf{Beschreibung komplexer Elemente} & & &\\
+				\hline
+			\end{tabular}
+		\caption{Bewertung ausgewählter DSLs zur Beschreibung von GUIs}
+\label{tab:guidsl}
+	\end{table}\\

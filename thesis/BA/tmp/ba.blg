@@ -15,6 +15,8 @@ A level-1 auxiliary file: Anhang.aux
 Database file #1: thesis.bib
 Warning--I didn't find a database entry for ""
 Warning--to sort, need author, editor, or key in ghosh
+Warning--to sort, need author, editor, or key in mdsdvoelter
 Warning--empty author and editor in ghosh
 Warning--empty year in 1
-(There were 4 warnings)
+Warning--empty author and editor in mdsdvoelter
+(There were 6 warnings)

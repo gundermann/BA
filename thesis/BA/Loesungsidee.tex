@@ -1,21 +1,33 @@
 \chapter{Entwicklung einer Lösungsidee}\label{Entwicklung einer Lösungsidee}
 \section{Allgemeine Beschreibung der Lösungsidee}
-Aufgrund der nur schwer machbaren Integration neuer Frameworks in das
-bestehende Multichannel-Framework und der Tatsache, dass die derzeit genutzten
-Frameworks (Swing und wingS) veraltet sind, wird ein neuer Ansatz für die
-Umsetzung von GUIs auf unterschiedlichen Plattformen gesucht.
+Eine Lösungsidee für die in Kapitel \ref{Probleme} beschriebenen Probleme wurde
+im Kapitel \ref{Ziel} bereits angedeutet. Es geht um die Nutzung einer
+DSL zur Beschreibung von GUIs. Diese GUIs sollen durch die DSL so beschrieben
+werden, dass sie in der Domäne von profil c/s für unterschiedliche UI-frameworks 
+genutzt werden kann. Damit kann das MCF langfristig betrachtet abgelöst werden.
+\section{Architektur}
+In diesem Lösungsansatz ist die DSL der Ausgangspunkt. Die abstrakte
+Beschreibung der GUI wird über die DSL vorgenommen. Ein Generator
+kann nach dem parsen für diese Beschreibung der GUI frameworkspezifischen Code
+generieren. Somit ist die Integration neuer Frameworks an die Implementierung
+eines spezifischen Generators gekoppelt. Abbildung \ref{Abb_neuerAnsatz} zeigt die
+Architektur für diesen Ansatz auf. Dabei wurden exemplarisch drei
+unterschiedliche Generatoren für unterschiedliche Frameworks mit aufgenommen.
 \myBigFigure{neuerAnsatz.png}{DSL-Ansatz für gleich GUIs auf
 unterschiedlichen Plattformen}{neuerAnsatz}\\
-Der neue Ansatz basiert auf der folgenden Idee. Die GUIs sollen weiterhin nur
-einmal beschrieben werden sollen. Diese Beschreibung soll über eine DSL
-erfolgen und sich nicht an bestehende Frameworks orientieren. Grund dafür ist,
-dass ansonsten die Gefahr besteht, dass langfristig betrachtet mit diesem Ansatz
-das gleiche Problem auftirtt wie beim Multichannel-Framework. Aus der
-Beschreibung der GUIs wird ein Generator speziellen Quellcode erzeugen, der sich
-auf entsprechenden Plattformen ausführen lässt. Für jedes eingesetzte Framework
-muss somit ein eigener Generator entwickelt werden. Abbildung \ref{Abb_neuerAnsatz}
-bildet die aus dieser Idee resultierende Architektur ab\footnote{Hier: Vaadin als
-Web-Framework, JavaFX als Framework für den Standalone-Client und
-Android als Repräsentant für einen möglichen Mobile-Client}.
-\section{Architektur}
+Somit wird erreicht, dass die GUI weiterhin nur einmal beschrieben werden muss.
+
 \section{Vorteile gegenüber dem Multichannel-Framework}
+Wie in Kapitel \ref{Probleme} erläutert, weißt das MCF einige Probleme auf. Mit
+dem neuen Ansatz kann das Problem der inaktuellen Frameworks und das Problem der
+starken Orientiertung an Swing (oder an ein anderes Framework) beseitigt werden.
+Eine DSL sollte sich nicht an Besonderheiten bestehender
+Frameworks orientieren, sondern an dem Domänenproblem. \cite[S.15]{mdsdvoelter}
+Von daher ist sichergestellt, dass die Integration von unterschiedlichen Frameworks gleicher Maßen gut funktioniert.\\
+Ein weiterer Vorteil ist, dass durch die wegfallende Orientiertung an Swing auch
+die Beschreibungsform ausdrucksstärker wird. Grund dafür ist, dass die
+syntaktischen Strukten, die in Swing vorhanden sind, nicht mehr benötigt
+werden.\\
+Dazu kommt, dass fachliche Konzepte zur Beschreibung der UIs benutzt werden
+können und die Umsetzung auf technischer Ebene von den Generatoren übernommen
+wird.
