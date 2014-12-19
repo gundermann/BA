@@ -64,6 +64,7 @@
   technische DSLs von Programmierern genutzt werden und fachliche DSL von
   Personen, die keine Programmierer sind (bspw. Kunden bzw. Personen, die sich
   in der Domäne auskennen). \cite[S.26]{voelter}
+  
   \item[] \textbf{Grammatik}\\
   Grammatiken und insbesondere Grammatikregeln können dazu verwendet um
   Sprachen zu beschreiben und somit auch den Aufbau eines
@@ -179,66 +180,204 @@ Eigenschaft des Domänen Fokus als ein Schlüsselelement der Definition einer DSL.
 Nachteile von DSLs oder GPLs ableiten. Diese werden im folgenden Kapitel genauer
 betrachtet.\\
 \section{Vor- und Nachteile von DSL gegenüber GPL}
-Gründe weshalb man eine DSL nutzen sollte, gibt es viele. Allerdings dürfen die
-Herausforderungen, die aufkommen noch bevor man eine DSL einsetzen kann, nicht
-außer Acht lassen. Bei der Erklärung der Vorteile wird davon ausgegangen, dass
-eine DSL zum Einsatz bereit steht. Bei den Nachteilen hingegen wird i.d.R davon
-ausgegangen, dass eine solche DSL erst noch entwickelt werden muss.
 \subsection*{Vorteile}
 \begin{itemize}
+ \item \textbf{Ausdruckskraft}\\
+ Laut Ghosh sollten DSLs so umgesetzt werden, dass sie präsize sind. Das
+ bedeutet, dass eine DSL zu sehen, zu betrachten,
+ vorzustellen und es zu zeigen ist.\footnote{Diese vier
+ Schritte beschreiben den Prozess des visuellen Denkens. \cite{Roam2009}}
+ Weiterhin ist es wichtig bei der Entwicklung einer DSL darauf zu
+ achten, dass sich die Abstraktion der Sprache präzise an der semantik
+ der Domäne orientiert. \cite[S.20]{ghosh} Resultat dessen ist es, dass das
+ Verständis für den Code verbessert wird.
+ 
+  \item \textbf{Höhere Qualität}\cite{voelter}\\
+  Bei der Entwicklung einer DSL werden Sprachkonstrukte und Freiheitsgrade
+  der Sprache festgelegt. Richtig konzipiert, schränken sie den Entwickler beim
+  Umgang mit dieser DSL so ein, dass doppelter Code und doppelte Arbeit
+  verhindert wird. Zusätzlich wird die Anzahl von Fehlern
+  verringert. \cite[S.40f]{voelter} Auch durch die hohe Abstraktion einer DSL
+  wird die Wiederverwendung von Code gefördert, was ebenso zu qualitativ höherem
+  Code führt. \cite[S.21]{ghosh}
+  
+  \newpage
   \item \textbf{Verbesserte Produktivität bei der Entwicklung der
-  Software}\cite{fowler}\cite{voelter}\cite{ghosh}
+  Software}\\
+  Durch die Ausdruckskraft und der Abstraktion der Sprache muss i.d.R. auch
+  weniger DSL-Code für die Implementierung eines Programms geschrieben werden, als wenn dieses
+  Programm mit einer GPL implementiert wird. Wobei man
+  mit einem entsprechenden Framework für GPLs
+  ähnliches erreichen könnte. \cite[S.40]{voelter}\\
+  Die stärkere Ausdruckskraft führt zu einer
+  bessere Lesbarkeit von DSL-Code im
+  Verlgiech zu GPL-Code, wordurch DSL-Code einfacher
+  zu verstehen ist. Dadurch ist es
+  auch einfacher Fehler in diesem Code zu
+  finden, sowie Apassungen an dem System
+  vorzunehmen. Bei einer GPL werden diese Vorteile durch Dokumentationen,
+  ausdrucksvolle Varialblenbezeichnungen und festgeleten Konventionen
+  angestrebt.
+  \cite[S.33]{fowler} Dies ist jedoch mit einem
+  höheren Aufwand verbunden. Zumal der Entwickler diese Vorschriften
+  von sich aus einhalten muss. Bei der Verwendung
+  einer DSL ist er zur Umsetzung einer besseren Lesbarkeit gezwungen, da die
+  Sprache es nicht anders zulässt.
+  
   
   \item \textbf{Bessere Kommunikation mit
-  Domänen-Experten}\cite{fowler}\cite{voelter}\cite{ghosh}
+  Domänen-Experten und Kunden}\\
+  Aufgrund domänenspezifischer und präziser Ausdrücke,
+  die in der Sprache verwendet
+  werden, sind die Domänen-Experten bzw.
+  die Kunden vertrauter mit der Implementiertung,
+  als wenn für die Umsetzung eine GPL
+  verwendet werden würde. \cite[S.42]{voelter}  Die hohe Ausdruckskraft fördert
+  das Verständnis dieser DSL. Damit ist es einfacher, die Kunden in die
+  Entwicklung mit einzubeziehen. Dabei sollten jedoch zusätzliche Hilfsmittel
+  wie Visualisierungen oder Simulationen verwendet
+  werden.\cite[S.34]{fowler}, \cite[S.42]{voelter} Das fördert die Kommunikation
+  zwischen Kunden und Auftragnehmen, die oft vernachlässnigt wird. Martin Fowler beschreibt sogar den Einsatz einer DSL als reine Kommunikationplattform als
+  vorteilhaft. \cite[S.34f]{fowler} Grund dafür ist auch, dass die Entwicklung
+  einer DSL das Verständnis der Domäne des Auftragnehmers steigert.
+  \cite[S.41]{voelter}
   
-  \item \textbf{Veränderung des Ausführungskontextes}\cite{fowler}
+  \newpage
+  \item \textbf{Plattformunabhängigkeit}\cite{fowler}\\
+  Durch die Nutzung einer DSL kann ein Teil der Logik von der Kompilierung in
+  den Ausführungskontext überführt werden. Die Definition der Logik findet dabei
+  in der DSL statt, welche erst bei der Ausführung evaluiert werden. Das wird
+  auch oft unter der Verwendung von XML umgesetzt. \cite[S.35]{fowler} Dadurch
+  ist es möglich die Logik auf unterschiedlichen Plattformen auszuführen.
+  \cite[S.43]{voelter} Dieser Vorteil ist besonders für den praktischen Teil
+  dieser Arbeit interessant.
   
-  \item \textbf{Alternativ berechenbares Model} \cite{fowler}
+  \item \textbf{Einfachere Validierung und Verifizierung}\\
+  Da DSLs Details der implementierung ausblenden sind sie auf semantischer Ebene
+  reichhaltiger als GPLs. Das führt dazu, dass Analsyen einfacher umzusetzten
+  sind und Fehler-Meldungen verständlicher gestaltet werden können, indem die
+  Terminologie der Domäne verwendet wird. Dadruch und durch die vereinfachte
+  Kommunikation mit den Domänen-Experten werden Reviews und Validierungen des
+  Code weitaus effizienter. \cite[S.41]{voelter}
   
-  \item \textbf{Höhere Qualität}\cite{voelter}	
   
-  \item \textbf{Einfachere Validierung und Verifizierung}\cite{voelter}
+  \item \textbf{Unabhängigkeit von Technologien}\\
+  Die Modelle, die zur Beschreibung von Systemen verwendet werden, können so
+  gestaltet werden, dass sie von Implementierungstechniken unabhängig sind. Dies
+  wird durch ein hohes Abstarktionsniveau ereicht, welches an die Domäne
+  angepasst ist. Dadruch kann die Beschreibung der Modelle von den genutzten
+  Technologien weitgehend entkoppelt werden. \cite[S.41]{voelter}
   
-  \item \textbf{Einfache Migration}\cite{voelter}
-  
-  \item \textbf{Plattform unabhängig}\cite{voelter}
-  
-  \item \textbf{Ausdruckskraft}\cite{ghosh}\cite{fowler}
-  
-  \item \textbf{Skalierbarkeit} \cite{ghosh} 
-  Wobei Völter das eher als Gefahr sieht.
+  \newpage
+  \item \textbf{Skalierbarkeit des Entwicklungsprozess}\\
+  Die Integration von neuen Mitarbeitern in ein Entwicklerteam forder immer
+  eine gewisse Einarbeitungszeit. Diese Einarbeitungszeit kann durch die
+  Nutzung einer DSL verküzt werden, wenn die DSL eine hohen Abstraktionsgrad
+  hat und dadurch leichter verstehen und zu erlernen ist.\cite[S.21]{ghosh}
+  Innerhalb eines Entwickler-Teams haben die Mitarbeiter oft einen
+  unterschiedlicher Erfahrungstand bzgl. einer speziellen Programmiersprache,
+  die zur Entwicklung genutzt werden soll. Erfahrene Teammitglieder können sich
+  mit der Implementierung der DSL befassen und die Grundlage für die anderen 
+  Teammitglieder schaffen. Diese wiederum nutzen die DSL um die fachlichen
+  Anforderung der Kunden zu implementieren. \cite[S.21]{ghosh} Markus Völter
+  hingegen sieht die Teilung der Programmieraufgaben als Gefahr bzw. Nachteil.
+  \cite[S.44]{voelter}
 \end{itemize}
 
 \subsection*{Nachteile}
 \begin{itemize}
-  \item \textbf{Sprach-Cacophony}\cite{fowler}\cite{ghosh}
+  \item \textbf{Großes Know-How gefordert}\\
+  Bevor die Vorteile einer DSL genutzt werden können, muss die DSL entwickelt
+  werden. \cite[S.43]{voelter} Das Designen einer Sprache ist eine komplexe
+  Aufgabe, die nur schwer skalierbar. \cite[S.21]{ghosh}Die Vorteile, die eine
+  DSL bietet, können nur geboten werden, wenn diese DSL auch entsprachend gutes
+  Konzept hat. Dazu muss zum einen der richtige Abstraktionsgrad gefunden
+  werden und zum anderen die Sprache so einfach wie möglich gehalten werden.
+  Für beide Aufgaben werden Entwickler benötigt, die viel Erfahrung mit
+  Sprach-Design haben. \cite[S.44]{voelter}
   
   \item \textbf{Kosten für die Entwicklung der
-  DSL}\cite{fowler}\cite{voelter}\cite{ghosh}
+  DSL}
+  Bei wirtschaftliche Entscheidungen wird der Input mit dem Output verglichen.
+  Investitionen führen dazu, dass der Input größer wird. Da eine DSL vor dem
+  Einsatz zuerst entwickelt werden muss, ist notwendig Investitionen für die
+  Entwickler der DSL zu tätigen. Ob sich eine Investition lohnt, wird mittels
+  vorher durchzuführenden Analysen überprüft. Dabei muss festgestellt werden,
+  ob die Entwicklung der DSL gerechtfertigt ist. Im Bereich der technischen DSLs
+  ist fällt die Rechtfertigung einfach, da diese DSLs oft wiederverwendet werden
+  können. Fachliche DSL hingegen haben oft eine weitaus kompaktere Domäne, als
+  eine technische DSL. Daher ergeben sich die Möglichkeiten zur
+  Wiederverwendung erst zu einem späteren Zeitpunkt und
+  können nur schwer von der im Vorfeld durchgeführten
+  Analyse wahrgenommen werden.\cite[S.43]{voelter}\\
+  Weiterhin ist in der Phase, in der die DSL entwickelt wird, keine große
+  positive Änderungen in den Kosten zu erwarten. Die Kosten reduzieren sich
+  i.d.R erst wenn die DSL eingesetzt wird. \cite[S.21]{ghosh}\\
+  Bevor eine DSL entwickelt werden kann, sollte ein entsprechendes Know-How
+  aufgebaut werden. Der Aufbau dieses Wissens erfordert wiederum Kosten.
+  \cite[S.37]{fowler}
   
-  \item \textbf{Ghetto Slang} \cite{fowler}
+  \item \textbf{Investitions-Gefängnis}\cite{voelter}\\
+  Der Begriff stammt von Markus Völter. Er beruht auf der Annahme, dass sich ein
+  Unternehmen dessen bewusst ist, dass mehr Investitionen in wiederverwendbare
+  Artefakte zu einer besseren Produktivität führen. \cite[S.45]{voelter}
+  Artefakte, die wiederverwendet werden können, führen dennoch zu Einschränkungen. Die
+  Flexibilität geht dabei verloren. Dabei besteht die Gefahr, dass die Artefakte
+  aufgrund geänderter Anforderungen, unbrauchbar werden.
+  Weiterhin ist es auch gefährlich Artefakte zu Verändern, die häufig wiederverwendet werden, da
+  durch diese Veränderung Nebeneffekte auftreten können, die nicht erwüscht
+  sind.
+  Somit muss das Unternehmen wiederum mehr investieren um die Anforderungen
+  umzusetzen. Von daher der verwendete Begriff \emph{Investitions-Gefängnis}.
+
+  \item \textbf{Kakophonie}\\
+  Die Kakophonie beschreibt eine schlechten Klang einer Sprache. Eine DSL
+  abstrahiert von Domänen-Model. \cite[S.22]{ghosh} Je besser diese Absatrktion
+  ist, desto euphonischer und ausdrucksstärker ist die Sprache. Dass dafür viel
+  Erfahrung benötigt wird, wurde bereits erwähnt.\\
+  Normaler Weise werden für eine Applikation mehrere DSLs benötigt. Diese
+  unterschiedlichen DSLs haben i.d.R unterschiedliche syntaktische Strukturen.
+  Das führt dazu, dass Mitarbeiter immer wieder neue Sprachen lernen müssen. Das
+  wiederum führt zu höheren Kosten. Weiterhin müssen die Entwickler bei der
+  Verwendung mehrerer Sprachen öfter umdenken, als wenn sie fortwährend mit
+  einer Sprache arbeiten würden. Das macht den Entwicklungsprozess weitaus
+  komplizierter. \cite[S.37]{fowler}
+
+  \item \textbf{Ghetto Slang}\\
+  Dieser Nachteil steht in Konstrast zum Punkt \emph{Kakophonie}. Wenn ein
+  Unternehmen nur mit eigenen DSLs arbeitet, die niemand sonst kennt, oder
+  einsatzt, gleichen diese Sprachen einem Ghetto Slang, die niemand sonst
+  versteht. Dadruch ist es schwer neue Technologien in den Bereichen, wo vermehr
+  DSLs eingesetzt werden, zu integrieren. Außerdem ist es kaum möglich von neuen
+  Mitarbeitern in diesem Bereichen zu provitieren, da diese sich
+  höchwahrscheinlich nicht einmal diese DSLs kennen. \cite[S.38]{fowler}\\
+  Dieser Punkt ist auch in Verbindung mit dem \emph{Investitions-Gefängnis} zu
+  betrachten. Durch die Verwendung übermäßig vieler DSLs ist das Unternehmen
+  gezwungen, diese durch eine große Investition abzusetzen und allgemein
+  bekannte Technologien einzuführen, um von diesen zu profitieren, oder das
+  Unternehmen investiert weiter in die Entwicklung eigener DSLs um seine Systeme
+  aufrecht zu erhalten.
   
-  \item \textbf{Blinkered Abstraktion}\cite{fowler}
-  
-  \item \textbf{Großes Know-How gefordert}\cite{voelter}\cite{ghosh}
-  
-  \item \textbf{Investitions-Gefängnis}\cite{voelter}
-  
-  \item \textbf{Unvollständige DSLs}\cite{voelter}
+  \item \textbf{Zu starke Abstraktion}\cite{fowler}
   
   \item \textbf{Kulturelle Herausforderungen}\cite{voelter}\cite{ghosh}
   
+  \item \textbf{Unvollständige DSLs}\cite{voelter}\cite[cost of
+  building]{fowler}
+  
+  
 \end{itemize}
 
-Zusammenfassend ist der Aufwand für die Vorbereitung des Einsatzes einer DSL
-sehr hoch. Wurde eine DSL jedoch eingeführt, wird sich der Arbeitsaufwand um ein
-Vielfaches verringern.
+Zusammenfassend ist zu sagen, dass der Aufwand für die Vorbereitung des
+Einsatzes einer DSL sehr hoch ist. Wurde eine DSL jedoch eingeführt, wird sich
+der Arbeitsaufwand um ein Vielfaches verringern und der letzendliche
+Gewinn laut Ghosh höher. \cite[S.21]{ghosh}
 \section{Interne DSL}
 Bei einer internen DSL handelt es sich um eine DSL, die in eine GPL integriert
 sind. Sie übernehmen dabei das Typ-System der GPL in die sie
-integriert sind.\cite[S.50]{voelter} In Betrachtung der Ziele auf Kapitel
-\ref{mdsd} können einige dieser mit Applikation Interfaces (API) erreichen werden. 
+integriert sind.\cite[S.50]{voelter} In Betrachtung der Ziele aus Kapitel
+\ref{mdsd} können einige dieser mit Application Programming Interfaces (API)
+erreichen werden.
 Diese APIs werden i.d.R. für GPLs zur Verfügung gestellt. 
 Martin Fowler sieht den großen Unterschied zwischen API und DSL darin, dass das
 eine DSL neben einem abstrahierten Vokabular auch eine spezifische Grammatik

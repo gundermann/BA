@@ -61,11 +61,6 @@
 \newblock \Btxtechreplong{}, Shandong University.
 \newblock Verfügar unter URL: http://ceur-ws.org/Vol-297/paper7.pdf.
 
-\bibitem[Maa07]{jwammc}
-{\sc Maaß, Dirk}: {\em JWAMMC - Das Multichannel-Framework der data-experts
-  gmbh}.
-\newblock Vortrag, Dezember 2007.
-
 \bibitem[mds06]{mdsdvoelter}
 {\em Model-Driven Software Development}.
 \newblock John Wiley & Sons Ltd, Februar 2006.
@@ -89,6 +84,11 @@
   https://docs.oracle.com/javase/jp/8/\\technotes/guides/swing/index.html.
 \newblock Zuletzt eingesehen am 02.12.2014.
 
+\bibitem[Roa09]{Roam2009}
+{\sc Roam, Dan}: {\em The Back of the Napkin (Expanded Edition) - Solving
+  Problems and Selling Ideas with Pictures}.
+\newblock Penguin, New York, Expanded \btxeditionlong{}, 2009.
+
 \bibitem[SKNH05]{3}
 {\sc Sukaviriya, Noi}, {\sc Santhosh Kumaran}, {\sc Prabir Nandi}
   \btxandlong{}\ {\sc Terry Heath}: {\em Integrate Model-driven UI with
@@ -96,6 +96,11 @@
 \newblock \Btxtechreplong{}, IBM T.J. Watson Research Center, Oktober 2005.
 \newblock Verfügar unter URL:
   http://www.research.ibm.com/people/p/prabir/MDDAUI.pdf.
+
+\bibitem[Ste07]{jwammc}
+{\sc Stechow, Dirk}: {\em JWAMMC - Das Multichannel-Framework der data-experts
+  gmbh}.
+\newblock Vortrag, Dezember 2007.
 
 \bibitem[{Use}12]{usability}
 {\sc {Userlutions GmbH}}: {\em 3 Gründe, warum gute Usability wichtig ist}.

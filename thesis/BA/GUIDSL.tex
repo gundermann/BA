@@ -1,5 +1,5 @@
 \chapter{GUI-DSL}\label{GUI-DSL}
-\section{Beschreibung der Anforderung an die GUI-Beschreibung}
+\section{Beschreibung der Anforderung an die GUI}
 Die allgemeinen Anfroderung an die GUI wurden in Kapitel \ref{AllgAnforderungen}
 erläutert. Die folgenden Anforderungen beziehen sich auf die Aspekte der GUI die
 beschrieben werden müssen, da sie von den Entwicklern im Verlauf der
@@ -9,12 +9,16 @@ muss darauf eingegangen werden, welche Elemente der GUI mit anderen Elementen
 kommunizieren können und wie die GUI beschrieben wird.\\
 Traditionell werden GUIs mit Hilfe von Layout-Containern strukturiert. In der
 Vergangenheit hat sich gezeigt, dass die strukturierung über ein spezifisches
-Layout zu einer Orientierung an ein bestimmtes Framework führt. Von daher ist
-das Layout in der GUI-Beschreibung soweit zu abstrahieren, dass die
-Grundsturktur\footnote{Das zu Grunde liegende Layout} von Generator bestimmt
-wird.\\
-\gloss{Triviale Elemente einer GUI}, die für profil c/s relevant sind, müssen
-beschrieben werden können.
+Layout zu einer Orientierung an ein bestimmtes Framework führt. Das ist ein
+Problem, da bestimmte Layout im Web oder auf mobilen Plattformen nicht
+genauso dargestellt werden können, wie auf einer Desktop-Anwendung. Von daher
+ist das Layout in der GUI-Beschreibung so zu beschreiben, dass
+das Layout auf allem Plattformen gleichermaßen gut dargestellt werden kann.\\
+Neben dem Layout sind auch die Haupte lemente einer GUI-Struktur zu beachten.
+Damit ist bspw. das Fenster für den Desktop gemeint. Im Web lässt sich eine
+solche Fenster-Sicht kaum darstellen. Bei der definition muss demnach auf eine
+abstrakte Beschreibung solcher Elemente zurückgegriffen werden.\\
+\gloss{Triviale Elemente einer GUI}, die für profil c/s relevant sind, müssen beschrieben werden können.
 Welche Attribute dieser Elemente beschrieben werden, wird in Kaptiel \ref{Entwicklung
 einer DSL zur Beschreibung der GUI in profil c/s} genauer analysiert. Im
 Gegensatz dazu steht, dass die GUI durch die Beschreibung fachlicher Modelle
@@ -54,7 +58,9 @@ Kapitel hinsichtlich der Anforderungen bewertet.
 				\textbf{The Snow} & \textbf{glc-dsl} &
 				\textbf{Sculptor} \\
 				\hline\hline
-				\textbf{keine Layout-Spezifikation} & & &\\
+				\textbf{abstraktes Layout} & & &\\
+				\hline
+				\textbf{abstrakte Hauptelemente} & & &\\
 				\hline
 				\textbf{Beschreibung trivialer Elemente} & 	& & \\
 				\hline

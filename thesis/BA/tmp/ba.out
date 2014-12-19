@@ -23,7 +23,7 @@
 \BOOKMARK [1][-]{section.4.2}{Architektur}{chapter.4}% 23
 \BOOKMARK [1][-]{section.4.3}{Vorteile gegen\374ber dem Multichannel-Framework}{chapter.4}% 24
 \BOOKMARK [0][-]{chapter.5}{GUI-DSL}{}% 25
-\BOOKMARK [1][-]{section.5.1}{Beschreibung der Anforderung an die GUI-Beschreibung}{chapter.5}% 26
+\BOOKMARK [1][-]{section.5.1}{Beschreibung der Anforderung an die GUI}{chapter.5}% 26
 \BOOKMARK [1][-]{section.5.2}{Vorstellung ausgew\344hlter DSLs zur Beschreibung von GUIs}{chapter.5}% 27
 \BOOKMARK [2][-]{subsection.5.2.1}{The Snow}{section.5.2}% 28
 \BOOKMARK [2][-]{subsection.5.2.2}{glc-dsl}{section.5.2}% 29
