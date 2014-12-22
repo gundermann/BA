@@ -165,16 +165,6 @@ public class GuiDSLAdapterFactory extends AdapterFactoryImpl
         return createLabelDefinitionAdapter();
       }
       @Override
-      public Adapter caseAction(Action object)
-      {
-        return createActionAdapter();
-      }
-      @Override
-      public Adapter caseInputAction(InputAction object)
-      {
-        return createInputActionAdapter();
-      }
-      @Override
       public Adapter caseUIAction(UIAction object)
       {
         return createUIActionAdapter();
@@ -477,36 +467,6 @@ public class GuiDSLAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createLabelDefinitionAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.deg.xtext.gui.guiDSL.Action <em>Action</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.deg.xtext.gui.guiDSL.Action
-   * @generated
-   */
-  public Adapter createActionAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.deg.xtext.gui.guiDSL.InputAction <em>Input Action</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.deg.xtext.gui.guiDSL.InputAction
-   * @generated
-   */
-  public Adapter createInputActionAdapter()
   {
     return null;
   }

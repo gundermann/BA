@@ -70,17 +70,12 @@ ButtonDefinition:
 	('interaction=' interaction=Interaction)?;
 
 Interaction:
-	name=STRING ' type=' Interactiontype ' with actions:' actions+=(Action)*;
+	name=STRING ' type=' Interactiontype ' with actions:' actions+=(UIAction)*;
 
 LabelDefinition:
 	type='Label' ' as ' name=STRING ':'
 	('text=' text=STRING)?;
 
-Action:
-	UIAction | InputAction;
-
-InputAction:
-	'type=' type='InputAction';
 
 UIAction:
 	'type=' type='UiAction'

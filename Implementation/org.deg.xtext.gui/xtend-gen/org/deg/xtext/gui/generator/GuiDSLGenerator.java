@@ -9,7 +9,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import org.deg.xtext.gui.guiDSL.Action;
 import org.deg.xtext.gui.guiDSL.AreaAssignment;
 import org.deg.xtext.gui.guiDSL.ButtonDefinition;
 import org.deg.xtext.gui.guiDSL.CheckboxDefinition;
@@ -422,8 +421,8 @@ public class GuiDSLGenerator implements IGenerator {
         _builder.append("(){");
         _builder.newLineIfNotEmpty();
         {
-          EList<Action> _actions = i.getActions();
-          for(final Action a : _actions) {
+          EList<UIAction> _actions = i.getActions();
+          for(final UIAction a : _actions) {
             {
               String _type = a.getType();
               boolean _equals = _type.equals("UiAction");

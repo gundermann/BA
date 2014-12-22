@@ -1,70 +1,77 @@
 \chapter{Entwicklung einer DSL zur Beschreibung der GUI in profil c/s}\label{Entwicklung einer DSL zur Beschreibung der GUI in profil c/s}
+Die Entwicklung der DSL und die Entwicklung des Generators (siehe Kapitel
+\ref{Entwicklung des Generators für das Generieren von Klassen für das
+Multichannel-Framework}) gliedern sich in mehrere Versionen. In jeder Version
+sind Ideen umgesetzt, die nach der Fertigstellung einer Version in der deg
+begutachtet wurden und wenn nötig abgewandelt oder verändert.
 \section{Analyse der Metadaten der GUI}
+\subsection*{Version 1}
 Überlegungen bzgl. des Aufbaus der UIs gingen dahin, dass sich die DSL an dem
 Komponentenmodel von RCP4 orientieren soll. Das bedeutet, dass es Meta-Ebene
 gibt, die den groben Aufbau der GUI beschreibt und eine Implementierungs-Ebene,
 welche spezifische Komponenten innerhalb der GUI umsetzen soll. Beim Aufbau
-der GUI wurde Anfangs zwischen zwei Typen unterschieden (siehe semantisches
-Model Type). Jede GUI enthält eine bestimmte Anzahl von Bereichen, denen andere
-UI-Komponenten zugeordnet werden können (siehe semantisches Model Areas und
+der GUI wurde zwischen zwei Typen unterschieden (siehe semantisches
+Model Type). Für die Beschreibung des Aufbaus enthält jede beschriebene GUI
+eine bestimmte Anzahl von Bereichen (Area), denen genau eine andere
+UI-Komponent zugeordnet werden kann (siehe semantisches Model Areas und
 areacount).
 Weiterhin können von einer GUI-Beschreibung andere GUI-Beschreibungen verwendet
-werden (siehe semantisches Model Use). Die erwendeten Beschreibungen können
-jedoch nicht erweitert werden. Den Kern der GUI-Beschreibung bildet jedoch die
+werden (siehe semantisches Model Use). Die verwendeten GUI-Beschreibungen können
+jedoch nicht erweitert werden. Den Kern der GUI-Beschreibung jedoch die
 Kompnentendefinition (siehe semantisches Model componentDefinition). Dort werden
 einzelne Komponeten der GUI durch die Meta-Daten beschrieben.\\
-Bezogen auf die tivialen Komponenten des UIs war für die ersten Versuche nur die
+Bezogen auf die tivialen Komponenten des UIs die
 Beschreibung eines Textes wichtig. Im Falle eines Buttons oder eines Labels
-beschreibt dieser die Aufschrift der Komponente. Weiterhin war es für die
-Zuweisung zu den entsprechenden Bereich wichtig, dass diese Komponenten
+(andere triviale Komponenten sind in dieser Version nicht umgesetzt) beschreibt
+dieser die Aufschrift der Komponente.
+Weiterhin war es für die Zuweisung zu den entsprechenden Bereich wichtig, dass diese Komponenten
 innerhalb der Datei referenziert werden können. Das wurde durch den Titel
-umgesetzt, der an der Komponente gesetzt werden muss. Die Festlegungen die bis
-hierhin getroffen wurden, umfassten auch die Beschreibung von Interaktionen.
-Daher muss an jeder trivialen Komponente ein Interaktionstyp beschrieben
-werden können. Zusammenfassend ergaben sich bis hierhin folgende Meta-Daten
-der trivialen Komponenten.
+umgesetzt, der für jede Komponente definiert werden muss. An den trivialen
+Komponenten können daruber hinaus Interaktionen beschrieben werden. Hierzu
+ist ein Interaktionstyp nötig. Eine einfacher Klick auf die Komponente ist
+der einzige Interaktionstyp in dieser Version. An dieser Interaktion können
+ebenso Aktionen definiert werden, die Auswirkungen auf andere Komponenten haben.
+Zusammenfassend ergeben sich folgende Meta-Daten der trivialen
+Komponenten.
 \begin{itemize}
   \item Typ
   \item Titel
   \item Text
-  \item Interaktionsform
+  \item Interaktion
 \end{itemize}
-Bei den komplexen Komponenten musste vor der Analyse eine weitere Entscheidung
-getroffen werden, da es zwei Implementierungsmöglichkeiten gab, die in Frage
-kamen. 
+Die Interaktion benötigt folgende Attributen, die beschrieben werden müssen.
 \begin{itemize}
-  \item Die komplexen Komponenten wedern als in der Grammatik als
-  Komponenten-Definition aufgenommen.
-  \item Die komplexen Komponenten werden als verwendete Komponenten aufgenommen.
+  \item Titel
+  \item Interaktionstyp
+  \item Aktion
 \end{itemize}
-Da mit der zweiten Variante keine Erweiterungsmöglichkeiten des Inputs der
-genutzen Komponenten möglich ist, ist die erste Variante die bessere Wahl.
-Außerdem wird somit das Fehlerrisiko in der DSL eingeschränkt, da die Zuweisung
-verwendeter Komponenten mittels Strings getätigt wird. 
+Die Aktion benötigt einen \emph{ActionType}, das \emph{Element} auf das sich
+die Interaktion auswirken soll und die Veränderung der Attribute des
+entsprechenden Elements (\emph{Properties}.\\
+Die komplexen Komponenten müssen für jedes verwendete UI-Framework
+implementiert werden. Das hat zur Folge, dass die Implementierung dieser
+Komponenten nicht so stark abstrahiert wird, dass sie nur einmal
+ebtwickelt werden müssen. Damit wird jedoch auch verhindert, dass die
+Entwickler, die bzgl. der GUI nur mit der DSL arbeiten, eigene komplexe
+Komponenten entwerfen, deren Wiederverwendungsgrad nierdirger ist, als wenn
+diese Komponenten nach ausreichender Evaluation an einer zentralen Stelle
+implementiert und bereitgestellt werden.\\
+Komplexe Komponenten werden wie die trivialen Komponenten in einer
+Komponentendefinition beschrieben. Dazu wird nach der Implementierung der
+Komponente für jedes Framework ein neues Schlüsselwort für eine
+Komponentendefinition eingebaut. Jede komplexe Komponente benötigt wiederum
+einen Titel um referenziert zu werden. In dieser Version ist eine
+\gloss{Multiselection-Komponente} umgesetzt. Diese Komponente ist generisch
+implementiert. Der generische Typ kann in der DSL an dem Schlüsselwort
+\emph{InputType} beschrieben werden. Die Werte, die in dieser Komponente
+selektiert werden können, werden über das Schlüsselwort \emph{selectableValues}
+gesetzt und die Werte, die selektiert sind am Schlüsselwort
+\emph{selectedValues}.
 
-
-
-
-
-
-
-
-
-
-
-Die GUI bei der deg teilt sich in drei Bereiche. Diese Dreiteilung entspricht
-dem WAM-Ansatz entnommen. Auf diesen Ansatz wird in Kapitel \ref{Entwicklung des
-Generators für das Generieren von Klassen für das Multichannel-Framework} etwas
-genauer eingegangen. Der erste Teil übernimmt die Beschreibung des Aufbaus
-des UIs (GUI-Part). Der zweite Teil enthält die Interaktionsformen mit den
-Komponenten, welche im GUI-Part deklariert wurden. Dieser Teil wird als
-\emph{Interaction Part} (IP) bezeichnet. Der dritte Teil enthält den
-funktionalen Teil der GUI und wird \emph{Functionally Part} (FP) genannt.\\
-Bei den Überlegungen darüber, wie die DSL umzusetzen ist, wurde frühzeitig
-entschieden, dass der FP in der DSL nicht beschrieben wird. Es soll nur
-der GUI-Part neben einigen Inhalten aus dem IP beschrieben.\\
-
+\subsection*{Version 2}
 \section{Semantisches Model}
+\subsection*{Version 1}
 Das Semantische Model in den ersten Wochen beinhaltete 
 \section{Syntax}
+\subsection*{Version 1}
 

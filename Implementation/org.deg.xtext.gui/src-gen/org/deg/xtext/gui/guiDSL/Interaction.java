@@ -53,7 +53,7 @@ public interface Interaction extends EObject
 
   /**
    * Returns the value of the '<em><b>Actions</b></em>' containment reference list.
-   * The list contents are of type {@link org.deg.xtext.gui.guiDSL.Action}.
+   * The list contents are of type {@link org.deg.xtext.gui.guiDSL.UIAction}.
    * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Actions</em>' containment reference list isn't clear,
@@ -65,6 +65,6 @@ public interface Interaction extends EObject
    * @model containment="true"
    * @generated
    */
-  EList<Action> getActions();
+  EList<UIAction> getActions();
 
 } // Interaction

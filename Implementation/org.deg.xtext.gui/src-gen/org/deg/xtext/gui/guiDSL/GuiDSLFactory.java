@@ -185,24 +185,6 @@ public interface GuiDSLFactory extends EFactory
   LabelDefinition createLabelDefinition();
 
   /**
-   * Returns a new object of class '<em>Action</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Action</em>'.
-   * @generated
-   */
-  Action createAction();
-
-  /**
-   * Returns a new object of class '<em>Input Action</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Input Action</em>'.
-   * @generated
-   */
-  InputAction createInputAction();
-
-  /**
    * Returns a new object of class '<em>UI Action</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

@@ -74,11 +74,8 @@
     <genClasses ecoreClass="GuiDSL.ecore#//LabelDefinition">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GuiDSL.ecore#//LabelDefinition/text"/>
     </genClasses>
-    <genClasses ecoreClass="GuiDSL.ecore#//Action">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GuiDSL.ecore#//Action/type"/>
-    </genClasses>
-    <genClasses ecoreClass="GuiDSL.ecore#//InputAction"/>
     <genClasses ecoreClass="GuiDSL.ecore#//UIAction">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GuiDSL.ecore#//UIAction/type"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GuiDSL.ecore#//UIAction/uiElementName"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GuiDSL.ecore#//UIAction/properties"/>
     </genClasses>

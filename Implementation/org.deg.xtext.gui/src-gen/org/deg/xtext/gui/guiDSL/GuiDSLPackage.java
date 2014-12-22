@@ -822,62 +822,6 @@ public interface GuiDSLPackage extends EPackage
   int LABEL_DEFINITION_FEATURE_COUNT = COMPONENT_DEFINITION_FEATURE_COUNT + 1;
 
   /**
-   * The meta object id for the '{@link org.deg.xtext.gui.guiDSL.impl.ActionImpl <em>Action</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.deg.xtext.gui.guiDSL.impl.ActionImpl
-   * @see org.deg.xtext.gui.guiDSL.impl.GuiDSLPackageImpl#getAction()
-   * @generated
-   */
-  int ACTION = 18;
-
-  /**
-   * The feature id for the '<em><b>Type</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int ACTION__TYPE = 0;
-
-  /**
-   * The number of structural features of the '<em>Action</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int ACTION_FEATURE_COUNT = 1;
-
-  /**
-   * The meta object id for the '{@link org.deg.xtext.gui.guiDSL.impl.InputActionImpl <em>Input Action</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.deg.xtext.gui.guiDSL.impl.InputActionImpl
-   * @see org.deg.xtext.gui.guiDSL.impl.GuiDSLPackageImpl#getInputAction()
-   * @generated
-   */
-  int INPUT_ACTION = 19;
-
-  /**
-   * The feature id for the '<em><b>Type</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int INPUT_ACTION__TYPE = ACTION__TYPE;
-
-  /**
-   * The number of structural features of the '<em>Input Action</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int INPUT_ACTION_FEATURE_COUNT = ACTION_FEATURE_COUNT + 0;
-
-  /**
    * The meta object id for the '{@link org.deg.xtext.gui.guiDSL.impl.UIActionImpl <em>UI Action</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -885,7 +829,7 @@ public interface GuiDSLPackage extends EPackage
    * @see org.deg.xtext.gui.guiDSL.impl.GuiDSLPackageImpl#getUIAction()
    * @generated
    */
-  int UI_ACTION = 20;
+  int UI_ACTION = 18;
 
   /**
    * The feature id for the '<em><b>Type</b></em>' attribute.
@@ -894,7 +838,7 @@ public interface GuiDSLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int UI_ACTION__TYPE = ACTION__TYPE;
+  int UI_ACTION__TYPE = 0;
 
   /**
    * The feature id for the '<em><b>Ui Element Name</b></em>' attribute.
@@ -903,7 +847,7 @@ public interface GuiDSLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int UI_ACTION__UI_ELEMENT_NAME = ACTION_FEATURE_COUNT + 0;
+  int UI_ACTION__UI_ELEMENT_NAME = 1;
 
   /**
    * The feature id for the '<em><b>Properties</b></em>' containment reference list.
@@ -912,7 +856,7 @@ public interface GuiDSLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int UI_ACTION__PROPERTIES = ACTION_FEATURE_COUNT + 1;
+  int UI_ACTION__PROPERTIES = 2;
 
   /**
    * The number of structural features of the '<em>UI Action</em>' class.
@@ -921,7 +865,7 @@ public interface GuiDSLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int UI_ACTION_FEATURE_COUNT = ACTION_FEATURE_COUNT + 2;
+  int UI_ACTION_FEATURE_COUNT = 3;
 
   /**
    * The meta object id for the '{@link org.deg.xtext.gui.guiDSL.impl.PropertyImpl <em>Property</em>}' class.
@@ -931,7 +875,7 @@ public interface GuiDSLPackage extends EPackage
    * @see org.deg.xtext.gui.guiDSL.impl.GuiDSLPackageImpl#getProperty()
    * @generated
    */
-  int PROPERTY = 21;
+  int PROPERTY = 19;
 
   /**
    * The number of structural features of the '<em>Property</em>' class.
@@ -950,7 +894,7 @@ public interface GuiDSLPackage extends EPackage
    * @see org.deg.xtext.gui.guiDSL.impl.GuiDSLPackageImpl#getCommonProperty()
    * @generated
    */
-  int COMMON_PROPERTY = 22;
+  int COMMON_PROPERTY = 20;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1502,37 +1446,6 @@ public interface GuiDSLPackage extends EPackage
   EAttribute getLabelDefinition_Text();
 
   /**
-   * Returns the meta object for class '{@link org.deg.xtext.gui.guiDSL.Action <em>Action</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Action</em>'.
-   * @see org.deg.xtext.gui.guiDSL.Action
-   * @generated
-   */
-  EClass getAction();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.deg.xtext.gui.guiDSL.Action#getType <em>Type</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Type</em>'.
-   * @see org.deg.xtext.gui.guiDSL.Action#getType()
-   * @see #getAction()
-   * @generated
-   */
-  EAttribute getAction_Type();
-
-  /**
-   * Returns the meta object for class '{@link org.deg.xtext.gui.guiDSL.InputAction <em>Input Action</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Input Action</em>'.
-   * @see org.deg.xtext.gui.guiDSL.InputAction
-   * @generated
-   */
-  EClass getInputAction();
-
-  /**
    * Returns the meta object for class '{@link org.deg.xtext.gui.guiDSL.UIAction <em>UI Action</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1541,6 +1454,17 @@ public interface GuiDSLPackage extends EPackage
    * @generated
    */
   EClass getUIAction();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.deg.xtext.gui.guiDSL.UIAction#getType <em>Type</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Type</em>'.
+   * @see org.deg.xtext.gui.guiDSL.UIAction#getType()
+   * @see #getUIAction()
+   * @generated
+   */
+  EAttribute getUIAction_Type();
 
   /**
    * Returns the meta object for the attribute '{@link org.deg.xtext.gui.guiDSL.UIAction#getUiElementName <em>Ui Element Name</em>}'.
@@ -2058,34 +1982,6 @@ public interface GuiDSLPackage extends EPackage
     EAttribute LABEL_DEFINITION__TEXT = eINSTANCE.getLabelDefinition_Text();
 
     /**
-     * The meta object literal for the '{@link org.deg.xtext.gui.guiDSL.impl.ActionImpl <em>Action</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.deg.xtext.gui.guiDSL.impl.ActionImpl
-     * @see org.deg.xtext.gui.guiDSL.impl.GuiDSLPackageImpl#getAction()
-     * @generated
-     */
-    EClass ACTION = eINSTANCE.getAction();
-
-    /**
-     * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute ACTION__TYPE = eINSTANCE.getAction_Type();
-
-    /**
-     * The meta object literal for the '{@link org.deg.xtext.gui.guiDSL.impl.InputActionImpl <em>Input Action</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.deg.xtext.gui.guiDSL.impl.InputActionImpl
-     * @see org.deg.xtext.gui.guiDSL.impl.GuiDSLPackageImpl#getInputAction()
-     * @generated
-     */
-    EClass INPUT_ACTION = eINSTANCE.getInputAction();
-
-    /**
      * The meta object literal for the '{@link org.deg.xtext.gui.guiDSL.impl.UIActionImpl <em>UI Action</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -2094,6 +1990,14 @@ public interface GuiDSLPackage extends EPackage
      * @generated
      */
     EClass UI_ACTION = eINSTANCE.getUIAction();
+
+    /**
+     * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute UI_ACTION__TYPE = eINSTANCE.getUIAction_Type();
 
     /**
      * The meta object literal for the '<em><b>Ui Element Name</b></em>' attribute feature.

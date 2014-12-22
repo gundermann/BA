@@ -39,7 +39,6 @@ public class GuiDSLParser extends AbstractContentAssistParser {
 				{
 					put(grammarAccess.getAreaAssignmentAccess().getAlternatives(), "rule__AreaAssignment__Alternatives");
 					put(grammarAccess.getComponentDefinitionAccess().getAlternatives(), "rule__ComponentDefinition__Alternatives");
-					put(grammarAccess.getActionAccess().getAlternatives(), "rule__Action__Alternatives");
 					put(grammarAccess.getUIDescriptionAccess().getGroup_0(), "rule__UIDescription__Group_0__0");
 					put(grammarAccess.getUIDescriptionAccess().getGroup_2(), "rule__UIDescription__Group_2__0");
 					put(grammarAccess.getInputTypeAccess().getGroup(), "rule__InputType__Group__0");
@@ -71,7 +70,6 @@ public class GuiDSLParser extends AbstractContentAssistParser {
 					put(grammarAccess.getInteractionAccess().getGroup(), "rule__Interaction__Group__0");
 					put(grammarAccess.getLabelDefinitionAccess().getGroup(), "rule__LabelDefinition__Group__0");
 					put(grammarAccess.getLabelDefinitionAccess().getGroup_4(), "rule__LabelDefinition__Group_4__0");
-					put(grammarAccess.getInputActionAccess().getGroup(), "rule__InputAction__Group__0");
 					put(grammarAccess.getUIActionAccess().getGroup(), "rule__UIAction__Group__0");
 					put(grammarAccess.getCommonPropertyAccess().getGroup(), "rule__CommonProperty__Group__0");
 					put(grammarAccess.getUIDescriptionAccess().getAreaCountAssignment_0_0(), "rule__UIDescription__AreaCountAssignment_0_0");
@@ -121,7 +119,6 @@ public class GuiDSLParser extends AbstractContentAssistParser {
 					put(grammarAccess.getLabelDefinitionAccess().getTypeAssignment_0(), "rule__LabelDefinition__TypeAssignment_0");
 					put(grammarAccess.getLabelDefinitionAccess().getNameAssignment_2(), "rule__LabelDefinition__NameAssignment_2");
 					put(grammarAccess.getLabelDefinitionAccess().getTextAssignment_4_1(), "rule__LabelDefinition__TextAssignment_4_1");
-					put(grammarAccess.getInputActionAccess().getTypeAssignment_1(), "rule__InputAction__TypeAssignment_1");
 					put(grammarAccess.getUIActionAccess().getTypeAssignment_1(), "rule__UIAction__TypeAssignment_1");
 					put(grammarAccess.getUIActionAccess().getUiElementNameAssignment_3(), "rule__UIAction__UiElementNameAssignment_3");
 					put(grammarAccess.getUIActionAccess().getPropertiesAssignment_5(), "rule__UIAction__PropertiesAssignment_5");

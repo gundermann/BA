@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.10.14)  19 DEC 2014 12:49
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.10.14)  22 DEC 2014 11:27
 entering extended mode
 **ba.tex
 (C:\Users\ngundermann\git\BA\thesis\BA\ba.tex
@@ -647,7 +647,7 @@ See the babel package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.64 \select@language{English}
+l.63 \select@language{English}
                               
 Your command will be ignored, type <return> to proceed
 
@@ -1196,27 +1196,41 @@ less on input line 27.
 Kapitel 8.
 
 Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
-less on input line 26.
+less on input line 36.
 
 [32
 
 
 
 ]
-Overfull \hbox (44.41972pt too wide) in paragraph at lines 36--38
-[][]\T1/ppl/m/n/12 Die kom-ple-xen Kom-po-nen-ten we-dern als in der Gram-ma-ti
-k als Komponenten-
- []
+
+! Package glossaries Error: Glossary entry `Multiselection-Komponente' has not 
+been defined.
+
+See the glossaries package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.64 \gloss{Multiselection-Komponente}
+                                       umgesetzt. Diese Komponente ist gener...
+
+You need to define a glossary entry before you can use it.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 55--66
-
+Overfull \hbox (4.49707pt too wide) in paragraph at lines 48--70
+\T1/ppl/m/n/12 der Kom-po-nen-te für je-des Fra-me-work ein neu-es Schlüs-sel-w
+ort für ei-ne Kom-
  []
 
 [33]) [34] (C:\Users\ngundermann\git\BA\thesis\BA\EntwicklungGen.tex
 Kapitel 9.
 
-Overfull \hbox (4.83632pt too wide) in paragraph at lines 5--5
+Underfull \hbox (badness 10000) in paragraph at lines 6--17
+
+ []
+
+
+Overfull \hbox (4.83632pt too wide) in paragraph at lines 17--17
 []\T1/ppl/b/n/17.28 Syntax und Se-man-tik für die Be-schrei-bung der
  []
 
@@ -1229,14 +1243,14 @@ less on input line 29.
 
 
 
-] (C:\Users\ngundermann\git\BA\thesis\BA\Fazit.tex
+] [36] (C:\Users\ngundermann\git\BA\thesis\BA\Fazit.tex
 Kapitel 10.
 )
 
 Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
 less on input line 30.
 
-[36
+[37
 
 
 
@@ -1399,13 +1413,20 @@ Your command will be ignored, type <return> to proceed
 )
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 49.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 49.
-Package rerunfilecheck Info: File `ba.out' has not changed.
-(rerunfilecheck)             Checksum: F198BCF019A7BC7E88B21227369D1E37;3868.
+
+
+Package rerunfilecheck Warning: File `ba.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `ba.out':
+(rerunfilecheck)             Before: 34FE6DAABF45A008DBF3CB1A83D604A6;3868
+(rerunfilecheck)             After:  5BFB8D7FC84398105C8A9225F79E55DA;3868.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 49.
  ) 
 Here is how much of TeX's memory you used:
- 13424 strings out of 493921
- 199787 string characters out of 3150471
+ 13432 strings out of 493921
+ 199874 string characters out of 3150471
  345996 words of memory out of 3000000
  16137 multiletter control sequences out of 15000+200000
  58207 words of font info for 72 fonts, out of 3000000 for 9000
@@ -1438,6 +1459,12 @@ ot exist, replaced by a fixed one
 pdfTeX warning (dest): name{glo:Ausdruckskraft} has been referenced but does no
 t exist, replaced by a fixed one
 
+pdfTeX warning (dest): name{appendix*.18} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{appendix*.16} has been referenced but does not exis
+t, replaced by a fixed one
+
 {D:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{D:/Program Files/MiKTeX/
 fonts/enc/dvips/lm/lm-mathit.enc}{D:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm
 -mathsy.enc}{D:/Program Files/MiKTeX/fonts/enc/dvips/fontname/8r.enc}<D:/Progra
@@ -1449,9 +1476,9 @@ type1/public/lm/lmsy10.pfb><D:/Program Files/MiKTeX/fonts/type1/urw/palatino/up
 lb8a.pfb><D:/Program Files/MiKTeX/fonts/type1/urw/palatino/uplr8a.pfb><D:/Progr
 am Files/MiKTeX/fonts/type1/urw/palatino/uplr8a.pfb><D:/Program Files/MiKTeX/fo
 nts/type1/urw/palatino/uplri8a.pfb>
-Output written on ba.pdf (49 pages, 881357 bytes).
+Output written on ba.pdf (50 pages, 884949 bytes).
 PDF statistics:
- 832 PDF objects out of 1000 (max. 8388607)
- 179 named destinations out of 1000 (max. 500000)
+ 848 PDF objects out of 1000 (max. 8388607)
+ 187 named destinations out of 1000 (max. 500000)
  447 words of extra memory for PDF output out of 10000 (max. 10000000)
 

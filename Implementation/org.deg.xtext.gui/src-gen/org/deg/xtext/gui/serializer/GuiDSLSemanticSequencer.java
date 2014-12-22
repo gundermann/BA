@@ -9,7 +9,6 @@ import org.deg.xtext.gui.guiDSL.CheckboxDefinition;
 import org.deg.xtext.gui.guiDSL.CommonProperty;
 import org.deg.xtext.gui.guiDSL.Definition;
 import org.deg.xtext.gui.guiDSL.GuiDSLPackage;
-import org.deg.xtext.gui.guiDSL.InputAction;
 import org.deg.xtext.gui.guiDSL.Interaction;
 import org.deg.xtext.gui.guiDSL.LabelDefinition;
 import org.deg.xtext.gui.guiDSL.MultiSelectionDefinition;
@@ -83,13 +82,6 @@ public class GuiDSLSemanticSequencer extends AbstractDelegatingSemanticSequencer
 					return; 
 				}
 				else break;
-			case GuiDSLPackage.INPUT_ACTION:
-				if(context == grammarAccess.getActionRule() ||
-				   context == grammarAccess.getInputActionRule()) {
-					sequence_InputAction(context, (InputAction) semanticObject); 
-					return; 
-				}
-				else break;
 			case GuiDSLPackage.INTERACTION:
 				if(context == grammarAccess.getInteractionRule()) {
 					sequence_Interaction(context, (Interaction) semanticObject); 
@@ -145,8 +137,7 @@ public class GuiDSLSemanticSequencer extends AbstractDelegatingSemanticSequencer
 				}
 				else break;
 			case GuiDSLPackage.UI_ACTION:
-				if(context == grammarAccess.getActionRule() ||
-				   context == grammarAccess.getUIActionRule()) {
+				if(context == grammarAccess.getUIActionRule()) {
 					sequence_UIAction(context, (UIAction) semanticObject); 
 					return; 
 				}
@@ -259,23 +250,7 @@ public class GuiDSLSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	
 	/**
 	 * Constraint:
-	 *     type='InputAction'
-	 */
-	protected void sequence_InputAction(EObject context, InputAction semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, GuiDSLPackage.Literals.ACTION__TYPE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, GuiDSLPackage.Literals.ACTION__TYPE));
-		}
-		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getInputActionAccess().getTypeInputActionKeyword_1_0(), semanticObject.getType());
-		feeder.finish();
-	}
-	
-	
-	/**
-	 * Constraint:
-	 *     (name=STRING actions+=Action*)
+	 *     (name=STRING actions+=UIAction*)
 	 */
 	protected void sequence_Interaction(EObject context, Interaction semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

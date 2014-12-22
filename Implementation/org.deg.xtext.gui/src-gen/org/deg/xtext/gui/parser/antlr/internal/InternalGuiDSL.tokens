@@ -5,24 +5,23 @@
 '->'=22
 ':'=27
 '<-'=21
-'='=42
+'='=41
 'Area count: '=15
 'Area:'=20
 'Button'=33
-'CLICK'=44
+'CLICK'=43
 'Checkbox'=26
 'DEF '=16
 'END DEF'=17
-'InputAction'=39
 'Label'=37
 'MultiSelection'=23
 'Radiobox'=29
 'Table'=30
-'Text'=43
+'Text'=42
 'Textfield'=32
 'Tree'=31
-'UiAction'=40
-'element='=41
+'UiAction'=39
+'element='=40
 'inputType='=12
 'interaction='=34
 'selectableValues='=24
@@ -71,4 +70,3 @@ T__40=40
 T__41=41
 T__42=42
 T__43=43
-T__44=44

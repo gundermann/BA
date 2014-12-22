@@ -1458,9 +1458,9 @@ ruleInteractiontype
 (
 (
 		{ 
-	        newCompositeNode(grammarAccess.getInteractionAccess().getActionsActionParserRuleCall_4_0()); 
+	        newCompositeNode(grammarAccess.getInteractionAccess().getActionsUIActionParserRuleCall_4_0()); 
 	    }
-		lv_actions_4_0=ruleAction		{
+		lv_actions_4_0=ruleUIAction		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getInteractionRule());
 	        }
@@ -1468,7 +1468,7 @@ ruleInteractiontype
        			$current, 
        			"actions",
         		lv_actions_4_0, 
-        		"Action");
+        		"UIAction");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -1558,86 +1558,6 @@ ruleLabelDefinition returns [EObject current=null]
 
 )
 ))?)
-;
-
-
-
-
-
-// Entry rule entryRuleAction
-entryRuleAction returns [EObject current=null] 
-	:
-	{ newCompositeNode(grammarAccess.getActionRule()); }
-	 iv_ruleAction=ruleAction 
-	 { $current=$iv_ruleAction.current; } 
-	 EOF 
-;
-
-// Rule Action
-ruleAction returns [EObject current=null] 
-    @init { enterRule(); 
-    }
-    @after { leaveRule(); }:
-(
-    { 
-        newCompositeNode(grammarAccess.getActionAccess().getUIActionParserRuleCall_0()); 
-    }
-    this_UIAction_0=ruleUIAction
-    { 
-        $current = $this_UIAction_0.current; 
-        afterParserOrEnumRuleCall();
-    }
-
-    |
-    { 
-        newCompositeNode(grammarAccess.getActionAccess().getInputActionParserRuleCall_1()); 
-    }
-    this_InputAction_1=ruleInputAction
-    { 
-        $current = $this_InputAction_1.current; 
-        afterParserOrEnumRuleCall();
-    }
-)
-;
-
-
-
-
-
-// Entry rule entryRuleInputAction
-entryRuleInputAction returns [EObject current=null] 
-	:
-	{ newCompositeNode(grammarAccess.getInputActionRule()); }
-	 iv_ruleInputAction=ruleInputAction 
-	 { $current=$iv_ruleInputAction.current; } 
-	 EOF 
-;
-
-// Rule InputAction
-ruleInputAction returns [EObject current=null] 
-    @init { enterRule(); 
-    }
-    @after { leaveRule(); }:
-(	otherlv_0='type=' 
-    {
-    	newLeafNode(otherlv_0, grammarAccess.getInputActionAccess().getTypeKeyword_0());
-    }
-(
-(
-		lv_type_1_0=	'InputAction' 
-    {
-        newLeafNode(lv_type_1_0, grammarAccess.getInputActionAccess().getTypeInputActionKeyword_1_0());
-    }
- 
-	    {
-	        if ($current==null) {
-	            $current = createModelElement(grammarAccess.getInputActionRule());
-	        }
-       		setWithLastConsumed($current, "type", lv_type_1_0, "InputAction");
-	    }
-
-)
-))
 ;
 
 

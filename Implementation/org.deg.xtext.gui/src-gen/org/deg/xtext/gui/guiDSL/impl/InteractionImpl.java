@@ -4,9 +4,9 @@ package org.deg.xtext.gui.guiDSL.impl;
 
 import java.util.Collection;
 
-import org.deg.xtext.gui.guiDSL.Action;
 import org.deg.xtext.gui.guiDSL.GuiDSLPackage;
 import org.deg.xtext.gui.guiDSL.Interaction;
+import org.deg.xtext.gui.guiDSL.UIAction;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -66,7 +66,7 @@ public class InteractionImpl extends MinimalEObjectImpl.Container implements Int
    * @generated
    * @ordered
    */
-  protected EList<Action> actions;
+  protected EList<UIAction> actions;
 
   /**
    * <!-- begin-user-doc -->
@@ -117,11 +117,11 @@ public class InteractionImpl extends MinimalEObjectImpl.Container implements Int
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<Action> getActions()
+  public EList<UIAction> getActions()
   {
     if (actions == null)
     {
-      actions = new EObjectContainmentEList<Action>(Action.class, this, GuiDSLPackage.INTERACTION__ACTIONS);
+      actions = new EObjectContainmentEList<UIAction>(UIAction.class, this, GuiDSLPackage.INTERACTION__ACTIONS);
     }
     return actions;
   }
@@ -176,7 +176,7 @@ public class InteractionImpl extends MinimalEObjectImpl.Container implements Int
         return;
       case GuiDSLPackage.INTERACTION__ACTIONS:
         getActions().clear();
-        getActions().addAll((Collection<? extends Action>)newValue);
+        getActions().addAll((Collection<? extends UIAction>)newValue);
         return;
     }
     super.eSet(featureID, newValue);

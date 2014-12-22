@@ -560,62 +560,6 @@ finally {
 
 
 
-// Entry rule entryRuleAction
-entryRuleAction 
-:
-{ before(grammarAccess.getActionRule()); }
-	 ruleAction
-{ after(grammarAccess.getActionRule()); } 
-	 EOF 
-;
-
-// Rule Action
-ruleAction
-    @init {
-		int stackSize = keepStackSize();
-    }
-	:
-(
-{ before(grammarAccess.getActionAccess().getAlternatives()); }
-(rule__Action__Alternatives)
-{ after(grammarAccess.getActionAccess().getAlternatives()); }
-)
-
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-
-
-// Entry rule entryRuleInputAction
-entryRuleInputAction 
-:
-{ before(grammarAccess.getInputActionRule()); }
-	 ruleInputAction
-{ after(grammarAccess.getInputActionRule()); } 
-	 EOF 
-;
-
-// Rule InputAction
-ruleInputAction
-    @init {
-		int stackSize = keepStackSize();
-    }
-	:
-(
-{ before(grammarAccess.getInputActionAccess().getGroup()); }
-(rule__InputAction__Group__0)
-{ after(grammarAccess.getInputActionAccess().getGroup()); }
-)
-
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-
-
 // Entry rule entryRuleUIAction
 entryRuleUIAction 
 :
@@ -834,28 +778,6 @@ rule__ComponentDefinition__Alternatives
 { before(grammarAccess.getComponentDefinitionAccess().getMultiSelectionDefinitionParserRuleCall_7()); }
 	ruleMultiSelectionDefinition
 { after(grammarAccess.getComponentDefinitionAccess().getMultiSelectionDefinitionParserRuleCall_7()); }
-)
-
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__Action__Alternatives
-    @init {
-		int stackSize = keepStackSize();
-    }
-:
-(
-{ before(grammarAccess.getActionAccess().getUIActionParserRuleCall_0()); }
-	ruleUIAction
-{ after(grammarAccess.getActionAccess().getUIActionParserRuleCall_0()); }
-)
-
-    |(
-{ before(grammarAccess.getActionAccess().getInputActionParserRuleCall_1()); }
-	ruleInputAction
-{ after(grammarAccess.getActionAccess().getInputActionParserRuleCall_1()); }
 )
 
 ;
@@ -3983,69 +3905,6 @@ finally {
 
 
 
-rule__InputAction__Group__0
-    @init {
-		int stackSize = keepStackSize();
-    }
-:
-	rule__InputAction__Group__0__Impl
-	rule__InputAction__Group__1
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__InputAction__Group__0__Impl
-    @init {
-		int stackSize = keepStackSize();
-    }
-:
-(
-{ before(grammarAccess.getInputActionAccess().getTypeKeyword_0()); }
-
-	'type=' 
-
-{ after(grammarAccess.getInputActionAccess().getTypeKeyword_0()); }
-)
-
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-
-rule__InputAction__Group__1
-    @init {
-		int stackSize = keepStackSize();
-    }
-:
-	rule__InputAction__Group__1__Impl
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__InputAction__Group__1__Impl
-    @init {
-		int stackSize = keepStackSize();
-    }
-:
-(
-{ before(grammarAccess.getInputActionAccess().getTypeAssignment_1()); }
-(rule__InputAction__TypeAssignment_1)
-{ after(grammarAccess.getInputActionAccess().getTypeAssignment_1()); }
-)
-
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-
-
-
-
-
 rule__UIAction__Group__0
     @init {
 		int stackSize = keepStackSize();
@@ -5173,8 +5032,8 @@ rule__Interaction__ActionsAssignment_4
     }
 :
 (
-{ before(grammarAccess.getInteractionAccess().getActionsActionParserRuleCall_4_0()); }
-	ruleAction{ after(grammarAccess.getInteractionAccess().getActionsActionParserRuleCall_4_0()); }
+{ before(grammarAccess.getInteractionAccess().getActionsUIActionParserRuleCall_4_0()); }
+	ruleUIAction{ after(grammarAccess.getInteractionAccess().getActionsUIActionParserRuleCall_4_0()); }
 )
 
 ;
@@ -5228,29 +5087,6 @@ rule__LabelDefinition__TextAssignment_4_1
 (
 { before(grammarAccess.getLabelDefinitionAccess().getTextSTRINGTerminalRuleCall_4_1_0()); }
 	RULE_STRING{ after(grammarAccess.getLabelDefinitionAccess().getTextSTRINGTerminalRuleCall_4_1_0()); }
-)
-
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__InputAction__TypeAssignment_1
-    @init {
-		int stackSize = keepStackSize();
-    }
-:
-(
-{ before(grammarAccess.getInputActionAccess().getTypeInputActionKeyword_1_0()); }
-(
-{ before(grammarAccess.getInputActionAccess().getTypeInputActionKeyword_1_0()); }
-
-	'InputAction' 
-
-{ after(grammarAccess.getInputActionAccess().getTypeInputActionKeyword_1_0()); }
-)
-
-{ after(grammarAccess.getInputActionAccess().getTypeInputActionKeyword_1_0()); }
 )
 
 ;

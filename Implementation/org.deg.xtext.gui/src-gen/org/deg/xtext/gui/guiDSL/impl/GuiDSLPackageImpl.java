@@ -2,7 +2,6 @@
  */
 package org.deg.xtext.gui.guiDSL.impl;
 
-import org.deg.xtext.gui.guiDSL.Action;
 import org.deg.xtext.gui.guiDSL.AreaAssignment;
 import org.deg.xtext.gui.guiDSL.AreaCount;
 import org.deg.xtext.gui.guiDSL.ButtonDefinition;
@@ -12,7 +11,6 @@ import org.deg.xtext.gui.guiDSL.ComponentDefinition;
 import org.deg.xtext.gui.guiDSL.Definition;
 import org.deg.xtext.gui.guiDSL.GuiDSLFactory;
 import org.deg.xtext.gui.guiDSL.GuiDSLPackage;
-import org.deg.xtext.gui.guiDSL.InputAction;
 import org.deg.xtext.gui.guiDSL.Interaction;
 import org.deg.xtext.gui.guiDSL.LabelDefinition;
 import org.deg.xtext.gui.guiDSL.MultiSelectionDefinition;
@@ -168,20 +166,6 @@ public class GuiDSLPackageImpl extends EPackageImpl implements GuiDSLPackage
    * @generated
    */
   private EClass labelDefinitionEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass actionEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass inputActionEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -762,36 +746,6 @@ public class GuiDSLPackageImpl extends EPackageImpl implements GuiDSLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getAction()
-  {
-    return actionEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getAction_Type()
-  {
-    return (EAttribute)actionEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getInputAction()
-  {
-    return inputActionEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public EClass getUIAction()
   {
     return uiActionEClass;
@@ -802,7 +756,7 @@ public class GuiDSLPackageImpl extends EPackageImpl implements GuiDSLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getUIAction_UiElementName()
+  public EAttribute getUIAction_Type()
   {
     return (EAttribute)uiActionEClass.getEStructuralFeatures().get(0);
   }
@@ -812,9 +766,19 @@ public class GuiDSLPackageImpl extends EPackageImpl implements GuiDSLPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EAttribute getUIAction_UiElementName()
+  {
+    return (EAttribute)uiActionEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EReference getUIAction_Properties()
   {
-    return (EReference)uiActionEClass.getEStructuralFeatures().get(1);
+    return (EReference)uiActionEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -954,12 +918,8 @@ public class GuiDSLPackageImpl extends EPackageImpl implements GuiDSLPackage
     labelDefinitionEClass = createEClass(LABEL_DEFINITION);
     createEAttribute(labelDefinitionEClass, LABEL_DEFINITION__TEXT);
 
-    actionEClass = createEClass(ACTION);
-    createEAttribute(actionEClass, ACTION__TYPE);
-
-    inputActionEClass = createEClass(INPUT_ACTION);
-
     uiActionEClass = createEClass(UI_ACTION);
+    createEAttribute(uiActionEClass, UI_ACTION__TYPE);
     createEAttribute(uiActionEClass, UI_ACTION__UI_ELEMENT_NAME);
     createEReference(uiActionEClass, UI_ACTION__PROPERTIES);
 
@@ -1007,8 +967,6 @@ public class GuiDSLPackageImpl extends EPackageImpl implements GuiDSLPackage
     textfieldDefinitionEClass.getESuperTypes().add(this.getComponentDefinition());
     buttonDefinitionEClass.getESuperTypes().add(this.getComponentDefinition());
     labelDefinitionEClass.getESuperTypes().add(this.getComponentDefinition());
-    inputActionEClass.getESuperTypes().add(this.getAction());
-    uiActionEClass.getESuperTypes().add(this.getAction());
     commonPropertyEClass.getESuperTypes().add(this.getProperty());
 
     // Initialize classes and features; add operations and parameters
@@ -1074,17 +1032,13 @@ public class GuiDSLPackageImpl extends EPackageImpl implements GuiDSLPackage
 
     initEClass(interactionEClass, Interaction.class, "Interaction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getInteraction_Name(), ecorePackage.getEString(), "name", null, 0, 1, Interaction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getInteraction_Actions(), this.getAction(), null, "actions", null, 0, -1, Interaction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getInteraction_Actions(), this.getUIAction(), null, "actions", null, 0, -1, Interaction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(labelDefinitionEClass, LabelDefinition.class, "LabelDefinition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getLabelDefinition_Text(), ecorePackage.getEString(), "text", null, 0, 1, LabelDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(actionEClass, Action.class, "Action", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getAction_Type(), ecorePackage.getEString(), "type", null, 0, 1, Action.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(inputActionEClass, InputAction.class, "InputAction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
     initEClass(uiActionEClass, UIAction.class, "UIAction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getUIAction_Type(), ecorePackage.getEString(), "type", null, 0, 1, UIAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getUIAction_UiElementName(), ecorePackage.getEString(), "uiElementName", null, 0, 1, UIAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getUIAction_Properties(), this.getProperty(), null, "properties", null, 0, -1, UIAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 

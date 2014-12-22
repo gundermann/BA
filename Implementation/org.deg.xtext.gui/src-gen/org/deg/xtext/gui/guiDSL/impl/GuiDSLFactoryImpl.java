@@ -82,8 +82,6 @@ public class GuiDSLFactoryImpl extends EFactoryImpl implements GuiDSLFactory
       case GuiDSLPackage.BUTTON_DEFINITION: return createButtonDefinition();
       case GuiDSLPackage.INTERACTION: return createInteraction();
       case GuiDSLPackage.LABEL_DEFINITION: return createLabelDefinition();
-      case GuiDSLPackage.ACTION: return createAction();
-      case GuiDSLPackage.INPUT_ACTION: return createInputAction();
       case GuiDSLPackage.UI_ACTION: return createUIAction();
       case GuiDSLPackage.PROPERTY: return createProperty();
       case GuiDSLPackage.COMMON_PROPERTY: return createCommonProperty();
@@ -288,28 +286,6 @@ public class GuiDSLFactoryImpl extends EFactoryImpl implements GuiDSLFactory
   {
     LabelDefinitionImpl labelDefinition = new LabelDefinitionImpl();
     return labelDefinition;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Action createAction()
-  {
-    ActionImpl action = new ActionImpl();
-    return action;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public InputAction createInputAction()
-  {
-    InputActionImpl inputAction = new InputActionImpl();
-    return inputAction;
   }
 
   /**

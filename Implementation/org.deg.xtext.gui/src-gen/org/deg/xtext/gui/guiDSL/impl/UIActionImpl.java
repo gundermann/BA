@@ -17,6 +17,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
@@ -28,6 +29,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <p>
  * The following features are implemented:
  * <ul>
+ *   <li>{@link org.deg.xtext.gui.guiDSL.impl.UIActionImpl#getType <em>Type</em>}</li>
  *   <li>{@link org.deg.xtext.gui.guiDSL.impl.UIActionImpl#getUiElementName <em>Ui Element Name</em>}</li>
  *   <li>{@link org.deg.xtext.gui.guiDSL.impl.UIActionImpl#getProperties <em>Properties</em>}</li>
  * </ul>
@@ -35,8 +37,28 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public class UIActionImpl extends ActionImpl implements UIAction
+public class UIActionImpl extends MinimalEObjectImpl.Container implements UIAction
 {
+  /**
+   * The default value of the '{@link #getType() <em>Type</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getType()
+   * @generated
+   * @ordered
+   */
+  protected static final String TYPE_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getType() <em>Type</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getType()
+   * @generated
+   * @ordered
+   */
+  protected String type = TYPE_EDEFAULT;
+
   /**
    * The default value of the '{@link #getUiElementName() <em>Ui Element Name</em>}' attribute.
    * <!-- begin-user-doc -->
@@ -86,6 +108,29 @@ public class UIActionImpl extends ActionImpl implements UIAction
   protected EClass eStaticClass()
   {
     return GuiDSLPackage.Literals.UI_ACTION;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String getType()
+  {
+    return type;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setType(String newType)
+  {
+    String oldType = type;
+    type = newType;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, GuiDSLPackage.UI_ACTION__TYPE, oldType, type));
   }
 
   /**
@@ -151,6 +196,8 @@ public class UIActionImpl extends ActionImpl implements UIAction
   {
     switch (featureID)
     {
+      case GuiDSLPackage.UI_ACTION__TYPE:
+        return getType();
       case GuiDSLPackage.UI_ACTION__UI_ELEMENT_NAME:
         return getUiElementName();
       case GuiDSLPackage.UI_ACTION__PROPERTIES:
@@ -170,6 +217,9 @@ public class UIActionImpl extends ActionImpl implements UIAction
   {
     switch (featureID)
     {
+      case GuiDSLPackage.UI_ACTION__TYPE:
+        setType((String)newValue);
+        return;
       case GuiDSLPackage.UI_ACTION__UI_ELEMENT_NAME:
         setUiElementName((String)newValue);
         return;
@@ -191,6 +241,9 @@ public class UIActionImpl extends ActionImpl implements UIAction
   {
     switch (featureID)
     {
+      case GuiDSLPackage.UI_ACTION__TYPE:
+        setType(TYPE_EDEFAULT);
+        return;
       case GuiDSLPackage.UI_ACTION__UI_ELEMENT_NAME:
         setUiElementName(UI_ELEMENT_NAME_EDEFAULT);
         return;
@@ -211,6 +264,8 @@ public class UIActionImpl extends ActionImpl implements UIAction
   {
     switch (featureID)
     {
+      case GuiDSLPackage.UI_ACTION__TYPE:
+        return TYPE_EDEFAULT == null ? type != null : !TYPE_EDEFAULT.equals(type);
       case GuiDSLPackage.UI_ACTION__UI_ELEMENT_NAME:
         return UI_ELEMENT_NAME_EDEFAULT == null ? uiElementName != null : !UI_ELEMENT_NAME_EDEFAULT.equals(uiElementName);
       case GuiDSLPackage.UI_ACTION__PROPERTIES:
@@ -230,7 +285,9 @@ public class UIActionImpl extends ActionImpl implements UIAction
     if (eIsProxy()) return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (uiElementName: ");
+    result.append(" (type: ");
+    result.append(type);
+    result.append(", uiElementName: ");
     result.append(uiElementName);
     result.append(')');
     return result.toString();

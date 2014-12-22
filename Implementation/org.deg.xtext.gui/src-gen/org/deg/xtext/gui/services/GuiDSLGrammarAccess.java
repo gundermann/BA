@@ -794,13 +794,13 @@ public class GuiDSLGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cInteractiontypeParserRuleCall_2 = (RuleCall)cGroup.eContents().get(2);
 		private final Keyword cWithActionsKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		private final Assignment cActionsAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cActionsActionParserRuleCall_4_0 = (RuleCall)cActionsAssignment_4.eContents().get(0);
+		private final RuleCall cActionsUIActionParserRuleCall_4_0 = (RuleCall)cActionsAssignment_4.eContents().get(0);
 		
 		//Interaction:
-		//	name=STRING " type=" Interactiontype " with actions:" actions+=Action*;
+		//	name=STRING " type=" Interactiontype " with actions:" actions+=UIAction*;
 		public ParserRule getRule() { return rule; }
 
-		//name=STRING " type=" Interactiontype " with actions:" actions+=Action*
+		//name=STRING " type=" Interactiontype " with actions:" actions+=UIAction*
 		public Group getGroup() { return cGroup; }
 
 		//name=STRING
@@ -818,11 +818,11 @@ public class GuiDSLGrammarAccess extends AbstractGrammarElementFinder {
 		//" with actions:"
 		public Keyword getWithActionsKeyword_3() { return cWithActionsKeyword_3; }
 
-		//actions+=Action*
+		//actions+=UIAction*
 		public Assignment getActionsAssignment_4() { return cActionsAssignment_4; }
 
-		//Action
-		public RuleCall getActionsActionParserRuleCall_4_0() { return cActionsActionParserRuleCall_4_0; }
+		//UIAction
+		public RuleCall getActionsUIActionParserRuleCall_4_0() { return cActionsUIActionParserRuleCall_4_0; }
 	}
 
 	public class LabelDefinitionElements extends AbstractParserRuleElementFinder {
@@ -875,50 +875,6 @@ public class GuiDSLGrammarAccess extends AbstractGrammarElementFinder {
 
 		//STRING
 		public RuleCall getTextSTRINGTerminalRuleCall_4_1_0() { return cTextSTRINGTerminalRuleCall_4_1_0; }
-	}
-
-	public class ActionElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Action");
-		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final RuleCall cUIActionParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
-		private final RuleCall cInputActionParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
-		
-		//Action:
-		//	UIAction | InputAction;
-		public ParserRule getRule() { return rule; }
-
-		//UIAction | InputAction
-		public Alternatives getAlternatives() { return cAlternatives; }
-
-		//UIAction
-		public RuleCall getUIActionParserRuleCall_0() { return cUIActionParserRuleCall_0; }
-
-		//InputAction
-		public RuleCall getInputActionParserRuleCall_1() { return cInputActionParserRuleCall_1; }
-	}
-
-	public class InputActionElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "InputAction");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cTypeKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Assignment cTypeAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final Keyword cTypeInputActionKeyword_1_0 = (Keyword)cTypeAssignment_1.eContents().get(0);
-		
-		//InputAction:
-		//	"type=" type="InputAction";
-		public ParserRule getRule() { return rule; }
-
-		//"type=" type="InputAction"
-		public Group getGroup() { return cGroup; }
-
-		//"type="
-		public Keyword getTypeKeyword_0() { return cTypeKeyword_0; }
-
-		//type="InputAction"
-		public Assignment getTypeAssignment_1() { return cTypeAssignment_1; }
-
-		//"InputAction"
-		public Keyword getTypeInputActionKeyword_1_0() { return cTypeInputActionKeyword_1_0; }
 	}
 
 	public class UIActionElements extends AbstractParserRuleElementFinder {
@@ -1057,8 +1013,6 @@ public class GuiDSLGrammarAccess extends AbstractGrammarElementFinder {
 	private final ButtonDefinitionElements pButtonDefinition;
 	private final InteractionElements pInteraction;
 	private final LabelDefinitionElements pLabelDefinition;
-	private final ActionElements pAction;
-	private final InputActionElements pInputAction;
 	private final UIActionElements pUIAction;
 	private final PropertyElements pProperty;
 	private final CommonPropertyElements pCommonProperty;
@@ -1093,8 +1047,6 @@ public class GuiDSLGrammarAccess extends AbstractGrammarElementFinder {
 		this.pButtonDefinition = new ButtonDefinitionElements();
 		this.pInteraction = new InteractionElements();
 		this.pLabelDefinition = new LabelDefinitionElements();
-		this.pAction = new ActionElements();
-		this.pInputAction = new InputActionElements();
 		this.pUIAction = new UIActionElements();
 		this.pProperty = new PropertyElements();
 		this.pCommonProperty = new CommonPropertyElements();
@@ -1299,7 +1251,7 @@ public class GuiDSLGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Interaction:
-	//	name=STRING " type=" Interactiontype " with actions:" actions+=Action*;
+	//	name=STRING " type=" Interactiontype " with actions:" actions+=UIAction*;
 	public InteractionElements getInteractionAccess() {
 		return pInteraction;
 	}
@@ -1316,26 +1268,6 @@ public class GuiDSLGrammarAccess extends AbstractGrammarElementFinder {
 	
 	public ParserRule getLabelDefinitionRule() {
 		return getLabelDefinitionAccess().getRule();
-	}
-
-	//Action:
-	//	UIAction | InputAction;
-	public ActionElements getActionAccess() {
-		return pAction;
-	}
-	
-	public ParserRule getActionRule() {
-		return getActionAccess().getRule();
-	}
-
-	//InputAction:
-	//	"type=" type="InputAction";
-	public InputActionElements getInputActionAccess() {
-		return pInputAction;
-	}
-	
-	public ParserRule getInputActionRule() {
-		return getInputActionAccess().getRule();
 	}
 
 	//UIAction:
