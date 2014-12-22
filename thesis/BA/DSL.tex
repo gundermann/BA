@@ -155,12 +155,13 @@ Daraus lassen sich folgende Ziele des MDSD ableiten:
   \item bessere Softwarequalität durch automatisierte Transformationen
   (Generation) und formalen Model-Definitionen
   \item Verhinderung von Wiederholungen und besseres Management von veränderbare
-  Technologien durch die separierung der Gegenstandsbereiche\ldots\ldots\ldots.
-  \item Bessere Wiederverwendung von Architekturen,
+  Technologien durch die Trennung der Funktionsbereiche (Separation of Concers).
+  \item Architekturen,
   Modelierungssprachen\footnote{bspw. eine DSL} und Generatoren/Transformatoren
+  können besser wiederverwendet werden
   \item Verringerte Komplexität durch höhere Abstraktion
 \end{itemize}
-\cite[S.13f]{mdsdvoelter}
+\cite[S.13f]{mdsdvoelter}\\
 Die Modelle sind somit nicht länger nur zur Dokumentation geeignet. Sie sind
 Teil der Software. \cite[S.14f]{mdsdvoelter} Die Modelle sind dabei auf ein
 bestimmtes Domänenproblem angepasst. Um diese Modelle zu beschreiben wird eine
@@ -296,6 +297,7 @@ betrachtet.\\
   Für beide Aufgaben werden Entwickler benötigt, die viel Erfahrung mit
   Sprach-Design haben. \cite[S.44]{voelter}
   
+  \newpage
   \item \textbf{Kosten für die Entwicklung der
   DSL}
   Bei wirtschaftliche Entscheidungen wird der Input mit dem Output verglichen.
@@ -330,6 +332,7 @@ betrachtet.\\
   Somit muss das Unternehmen wiederum mehr investieren um die Anforderungen
   umzusetzen. Von daher der verwendete Begriff \emph{Investitions-Gefängnis}.
 
+\newpage
   \item \textbf{Kakophonie}\\
   Die Kakophonie beschreibt eine schlechten Klang einer Sprache. Eine DSL
   abstrahiert von Domänen-Model. \cite[S.22]{ghosh} Je besser diese Absatrktion
@@ -358,32 +361,72 @@ betrachtet.\\
   Unternehmen investiert weiter in die Entwicklung eigener DSLs um seine Systeme
   aufrecht zu erhalten.
   
-  \item \textbf{Zu starke Abstraktion}\cite{fowler}
+  \newpage
+  \item \textbf{Abstraktion als Scheuklappen}\\
+  Abstraktion ist von großer Wichtigkeit für eine DSL. Wenn ein Entwickler mit
+  der Arbeit an einer DSL begonnen hat, hat dieser die Abstraktion
+  in einem bestimmen Maß bereits festgelegt. Ein Problem tritt auf,
+  wenn im Nachhinein etwas mit der Sprache beschrieben werden soll,
+  dass nicht zu der Abstraktion der Sprache passt. Dabei besteht
+  die Gefahr, dass der Entwickler sich von der Abstraktion der
+  Sprache gefangen nehmen lässt. Das bedeutet, dass der Entwickler
+  versucht, das Problem aus der realen Welt auf seine Abstraktion
+  anzupassen. Der richtige Weg hingegen ist es, die Sprache und
+  deren Abstraktionsgrad so anzupassen, dass das Problem mit
+  beschrieben werden kann. \cite[S.39]{fowler}
   
-  \item \textbf{Kulturelle Herausforderungen}\cite{voelter}\cite{ghosh}
+  \item \textbf{Kulturelle Herausforderungen}\\
+  Die genannten Nachteile den Einsatzes von DSLs führen zu Äußerungen wie
+  \emph{Die Entwicklung von Sprachen ist kompliziert}, \emph{Domänen-Experten
+  sind keine Programmieren} oder \emph{Ich möchte nicht schon wieder eine
+  neue Sprache lernen} (\emph{Yet-Another-Language-To-Learn
+  Syndrom}\cite[S.22]{ghosh}).
+  Solche kulturellen Probleme entstehen immer, wenn etwas neues eingeführt
+  werden soll. \cite[S.45]{voelter} Die Mitarbeiten müssen demnach entsprechend
+  geschult und motiviert werden.
   
-  \item \textbf{Unvollständige DSLs}\cite{voelter}\cite[cost of
-  building]{fowler}
-  
-  
+  \newpage
+  \item \textbf{Unvollständige DSLs}\\
+  Wenn ein Unternehmen viel Erfahrung bei der
+  Entwicklung von DSLs aufgebaut hat und die Entwicklung
+  durch entsprechende Tools vereinfacht wurde, besteht
+  die Gefahr, dass DSLs zu schnell entwickelt werden.  Durch die
+  Einfachheit der Entwicklung scheint es einfacher eine neue DSL zu entwickeln,
+  als nach bestehenden Ansätzen für dasselbe Problem zu suchen.
+  \cite[S.44f]{voelter} Der Gedanke daran, dass sich die Investition in die
+  Entwicklung einer DSL zu einem späteren Zeitpunkt armotisieren wird, bestätigt
+  diese Haltung. \cite[S.38]{fowler} Dadurch entstehen immer mehr DSLs, die auf
+  gleichen Problemen basieren, aber inkopatibel zueinander sind. Außerdem
+  führt der Fakt, dass die Entwicklung einer DSL bei dem Verstehen der Domäne
+  und dem Entwerfen des Models sehr hilfreich ist, dazu,
+  dass eine DSL nur zum Verständis des Problems oder der Domäne genutzt
+  wird. \cite[S.38]{fowler} Das wiederum führt dazu, dass mehrere halb-fertige
+  DSLs existieren. Markus Völter et. Al. nennen dieses Phanomän die \emph{DSL
+  Hell}.
+  \cite[S.44f]{voelter}
 \end{itemize}
-
 Zusammenfassend ist zu sagen, dass der Aufwand für die Vorbereitung des
 Einsatzes einer DSL sehr hoch ist. Wurde eine DSL jedoch eingeführt, wird sich
 der Arbeitsaufwand um ein Vielfaches verringern und der letzendliche
-Gewinn laut Ghosh höher. \cite[S.21]{ghosh}
+Gewinn fällt höher aus. \cite[S.21]{ghosh}
 \section{Interne DSL}
 Bei einer internen DSL handelt es sich um eine DSL, die in eine GPL integriert
 sind. Sie übernehmen dabei das Typ-System der GPL in die sie
 integriert sind.\cite[S.50]{voelter} In Betrachtung der Ziele aus Kapitel
 \ref{mdsd} können einige dieser mit Application Programming Interfaces (API)
 erreichen werden.
-Diese APIs werden i.d.R. für GPLs zur Verfügung gestellt. 
-Martin Fowler sieht den großen Unterschied zwischen API und DSL darin, dass das
+In vielen Fällen ist eine DSL nicht mehr als ein API.
+Martin Fowler sieht den größten Unterschied zwischen API und DSL darin, dass das
 eine DSL neben einem abstrahierten Vokabular auch eine spezifische Grammatik
-nutzt. \cite[S.29]{fowler} Zwischen einer internen DSL und einem API steht das
-\emph{Fluent Interface} (\cite[S.50]{voelter}), welches als
-Implementierungstechnik von internen DSL im Folgenden genauer beleuchtet wird.
+nutzt (\cite[S.29]{fowler}), welche die Syntax der DSL bestimmt. Eine API
+hingegen besitzt die gleich syntaktischen Strukturen wie die GPL, in der das
+API bereitgestellt wurde. In einem klassischen API hat jede Methode eine
+eigene Aufgabe und ist nicht von anderen Methoden in diesem API
+abhängig. \cite[S.28]{fowler} In einer internen DSL hingenen ist es
+möglich Methoden bereitzustellen, die hintereinander gekettet werden
+können und somit komplette Sätze i.a.S. darstellen. Solche Methoden sind für
+APIs eine eher schlechte Wahl. \cite[S.28]{fowler} Soeine Verkettung von
+Methoden wird als \emph{Fluent Interface} bezeichnet. \cite[S.50]{voelter} 
 \subsection{Implementierungstechniken}
 \subsubsection*{Fluent Interfaces}
 \subsubsection*{Parse-Tree Manipulation}
@@ -409,7 +452,7 @@ Es gibt einige Gründe, mit einer nicht-textuellen DSL zu arbeiten:
   syntaktische strukturen
   \item visuelle Modelle sind einfacher zu durchdringen und zu verändern durch
   Domänenexperten
-\end{itemize}\cite[S.19]{ghosh}
+\end{itemize}\cite[S.19]{ghosh}\\
 Für diesen Ansatz muss der Domänen-Nutzer die Repräsentation des Wissens über
 eine Domäne in einem Editor (Projection Editor) visualisieren. Mit diesem Editor
 kann der Domänen-Nutzer die Sicht auf die Domäne verändern, ohne auch nur eine

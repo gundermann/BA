@@ -1,0 +1,100 @@
+grammar org.deg.xtext.gui.GuiDSL with org.eclipse.xtext.common.Terminals
+
+generate guiDSL "http://www.deg.org/xtext/gui/GuiDSL"
+
+
+UIDescription:
+	areaCount=AreaCount
+	typeDefinition=(TypeDefinition)
+	usedDescriptions+=(UsedDescriptions)* &
+	inputTypes+=(inputType)* &
+	definitions+=(Definition)*
+	areas+=(AreaAssignment)*;
+
+inputType:
+	'inputType=' type=STRING ' as ' name=STRING
+;
+
+UsedDescriptions:
+	'use: ' description=UIDescriptionImport;
+
+AreaCount:
+	'Area count: ' areaCount=INT;
+
+Definition:
+	'DEF ' concreteDefition=ComponentDefinition 'END DEF';
+
+TypeDefinition:
+	'type: ' type=TYPE;
+
+terminal TYPE:
+	('WINDOW' | 'INNERCOMPLEX');
+
+UIDescriptionImport:
+	descriptionName=STRING (' As: ' localName=STRING)?;
+
+AreaAssignment:
+	'Area:' area=INT '<-' element=STRING
+	| element=STRING '->' 'Area:' area=INT ;
+
+ComponentDefinition:
+	LabelDefinition | ButtonDefinition | TextfieldDefinition | TreeDefinition | TableDefinition | RadioboxDefinition |
+	CheckboxDefinition | MultiSelectionDefinition;
+
+MultiSelectionDefinition:
+	type='MultiSelection' ' as ' name=STRING ('inputType=' inputType=STRING ('selectableValues=' selectableValuesLocation=STRING ('selectedValues=' selectedValuesLocation=STRING)?)?)?;
+
+CheckboxDefinition:
+	type='Checkbox' ' as ' name=STRING ':'
+	('text=' text=STRING)?;
+
+RadioboxDefinition:
+	type='Radiobox' ' as ' name=STRING ':'
+	('text=' text=STRING)?;
+
+TableDefinition:
+	type='Table' ' as ' name=STRING ':'
+	('text=' text=STRING)?;
+
+TreeDefinition:
+	type='Tree' ' as ' name=STRING ':'
+	('text=' text=STRING)?;
+
+TextfieldDefinition:
+	type='Textfield' ' as ' name=STRING ':'
+	('text=' text=STRING)?;
+
+ButtonDefinition:
+	type='Button' ' as ' name=STRING ':'
+	('text=' text=STRING)?
+	('interaction=' interaction=Interaction)?;
+
+Interaction:
+	name=STRING ' type=' Interactiontype ' with actions:' actions+=(Action)*;
+
+LabelDefinition:
+	type='Label' ' as ' name=STRING ':'
+	('text=' text=STRING)?;
+
+Action:
+	UIAction | InputAction;
+
+InputAction:
+	'type=' type='InputAction';
+
+UIAction:
+	'type=' type='UiAction'
+	'element=' uiElementName=STRING ':'
+	properties+=(Property)*;
+
+Property:
+	CommonProperty;
+
+CommonProperty:
+	(name=CommonPropertyType '=' value=STRING);
+
+CommonPropertyType:
+	'Text';
+
+Interactiontype:
+	'CLICK';

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.10.14)  19 DEC 2014 08:51
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.10.14)  19 DEC 2014 12:49
 entering extended mode
 **ba.tex
 (C:\Users\ngundermann\git\BA\thesis\BA\ba.tex
@@ -647,7 +647,7 @@ See the babel package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.63 \select@language{English}
+l.64 \select@language{English}
                               
 Your command will be ignored, type <return> to proceed
 
@@ -821,7 +821,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.i}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.23 ...cklung einer L\"osungsidee}{23}{chapter.4}
+l.23 ...cklung einer L\"osungsidee}{25}{chapter.4}
                                                    [1
 
 
@@ -1039,58 +1039,58 @@ che-ma-ti-scher Quell-
  []
 
 [13]
-Overfull \hbox (10.70082pt too wide) in paragraph at lines 159--161
-[]\T1/ppl/m/n/12 Bessere Wie-der-ver-wen-dung von Ar-chi-tek-tu-ren, Mo-de-lie-
-rungs-spra-chen[][][]
+Overfull \hbox (2.08488pt too wide) in paragraph at lines 159--162
+[]\T1/ppl/m/n/12 Architekturen, Mo-de-lie-rungs-spra-chen[][][] und Ge-ne-ra-to
+-ren/Trans-for-ma-
  []
 
 <Bilder/mdsd.jpg, id=522, 663.22781pt x 380.92313pt>
 File: Bilder/mdsd.jpg Graphic file (type jpg)
  <use Bilder/mdsd.jpg>
-Package pdftex.def Info: Bilder/mdsd.jpg used on input line 170.
+Package pdftex.def Info: Bilder/mdsd.jpg used on input line 171.
 (pdftex.def)             Requested size: 398.3386pt x 228.7823pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 172--182
+Underfull \hbox (badness 10000) in paragraph at lines 173--183
 
  []
 
 [14 <C:/Users/ngundermann/git/BA/thesis/BA/Bilder/mdsd.jpg>] [15]
-Overfull \hbox (3.44054pt too wide) in paragraph at lines 206--226
+Overfull \hbox (3.44054pt too wide) in paragraph at lines 207--227
 \T1/ppl/m/n/12 Durch die Aus-drucks-kraft und der Ab-strak-ti-on der Spra-che m
 uss i.d.R.
  []
 
 
-Overfull \hbox (3.78821pt too wide) in paragraph at lines 206--226
+Overfull \hbox (3.78821pt too wide) in paragraph at lines 207--227
 \T1/ppl/m/n/12 Die stär-ke-re Aus-drucks-kraft führt zu ei-ner bes-se-re Les-ba
 r-keit von DSL-
  []
 
 
-Overfull \hbox (3.45766pt too wide) in paragraph at lines 229--244
+Overfull \hbox (3.45766pt too wide) in paragraph at lines 230--245
 \T1/ppl/m/n/12 Spra-che ver-wen-det wer-den, sind die Domänen-Experten bzw. die
  Kun-
  []
 
 [16] [17]
-Overfull \hbox (1.01976pt too wide) in paragraph at lines 272--285
+Overfull \hbox (1.01976pt too wide) in paragraph at lines 273--286
 \T1/ppl/m/n/12 Mit-ar-bei-ter oft einen un-ter-schied-li-cher Er-fah-rungs-tand
  bzgl. ei-ner spe-
  []
 
 
-Overfull \hbox (2.04869pt too wide) in paragraph at lines 272--285
+Overfull \hbox (2.04869pt too wide) in paragraph at lines 273--286
 \T1/ppl/m/n/12 zi-el-len Pro-gram-mier-spra-che, die zur Ent-wick-lung ge-nutzt
  wer-den soll.
  []
 
 
-Overfull \hbox (6.22392pt too wide) in paragraph at lines 272--285
+Overfull \hbox (6.22392pt too wide) in paragraph at lines 273--286
 \T1/ppl/m/n/12 DSL be-fas-sen und die Grund-la-ge für die an-de-ren Team-mit-gl
 ie-der schaf-
  []
 
-[18] [19] [20] [21]) [22]
+[18] [19] [20] [21] [22] [23]) [24]
 (C:\Users\ngundermann\git\BA\thesis\BA\Loesungsidee.tex
 Kapitel 4.
 
@@ -1099,7 +1099,7 @@ Overfull \hbox (13.27025pt too wide) in paragraph at lines 3--9
 li-che UI-frameworks
  []
 
-<Bilder/neuerAnsatz.png, id=625, 632.3625pt x 269.50688pt>
+<Bilder/neuerAnsatz.png, id=638, 632.3625pt x 269.50688pt>
 File: Bilder/neuerAnsatz.png Graphic file (type png)
 
 <use Bilder/neuerAnsatz.png>
@@ -1120,11 +1120,11 @@ Overfull \hbox (34.36719pt too wide) in paragraph at lines 22--22
 Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
 less on input line 24.
 
-[23
+[25
 
 
 
-] [24 <C:/Users/ngundermann/git/BA/thesis/BA/Bilder/neuerAnsatz.png>]
+] [26 <C:/Users/ngundermann/git/BA/thesis/BA/Bilder/neuerAnsatz.png>]
 (C:\Users\ngundermann\git\BA\thesis\BA\GUIDSL.tex
 Kapitel 5.
 
@@ -1144,14 +1144,14 @@ You need to define a glossary entry before you can use it.
 Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
 less on input line 47.
 
-[25
+[27
 
 
 
 ]
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <10.95> not available
 (Font)              Font shape `T1/ppl/b/n' tried instead on input line 57.
- [26])
+ [28])
 
 ! LaTeX Error: There's no line here to end.
 
@@ -1165,7 +1165,7 @@ Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-[27] (C:\Users\ngundermann\git\BA\thesis\BA\Framework.tex
+[29] (C:\Users\ngundermann\git\BA\thesis\BA\Framework.tex
 Kapitel 6.
 
 Overfull \hbox (9.25923pt too wide) in paragraph at lines 11--11
@@ -1177,7 +1177,7 @@ Overfull \hbox (9.25923pt too wide) in paragraph at lines 11--11
 Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
 less on input line 26.
 
-[28
+[30
 
 
 
@@ -1188,22 +1188,32 @@ Kapitel 7.
 Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
 less on input line 27.
 
-[29
+[31
 
 
 
 ] (C:\Users\ngundermann\git\BA\thesis\BA\EntwerfenDSL.tex
 Kapitel 8.
-)
 
 Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
-less on input line 28.
+less on input line 26.
 
-[30
+[32
 
 
 
-] (C:\Users\ngundermann\git\BA\thesis\BA\EntwicklungGen.tex
+]
+Overfull \hbox (44.41972pt too wide) in paragraph at lines 36--38
+[][]\T1/ppl/m/n/12 Die kom-ple-xen Kom-po-nen-ten we-dern als in der Gram-ma-ti
+k als Komponenten-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 55--66
+
+ []
+
+[33]) [34] (C:\Users\ngundermann\git\BA\thesis\BA\EntwicklungGen.tex
 Kapitel 9.
 
 Overfull \hbox (4.83632pt too wide) in paragraph at lines 5--5
@@ -1215,7 +1225,7 @@ Overfull \hbox (4.83632pt too wide) in paragraph at lines 5--5
 Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
 less on input line 29.
 
-[31
+[35
 
 
 
@@ -1226,7 +1236,7 @@ Kapitel 10.
 Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
 less on input line 30.
 
-[32
+[36
 
 
 
@@ -1390,12 +1400,12 @@ Your command will be ignored, type <return> to proceed
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 49.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 49.
 Package rerunfilecheck Info: File `ba.out' has not changed.
-(rerunfilecheck)             Checksum: 086EC0B62DB5F1398F9A4AA0625D2CC0;3858.
+(rerunfilecheck)             Checksum: F198BCF019A7BC7E88B21227369D1E37;3868.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 49.
  ) 
 Here is how much of TeX's memory you used:
- 13420 strings out of 493921
- 199759 string characters out of 3150471
+ 13424 strings out of 493921
+ 199787 string characters out of 3150471
  345996 words of memory out of 3000000
  16137 multiletter control sequences out of 15000+200000
  58207 words of font info for 72 fonts, out of 3000000 for 9000
@@ -1439,9 +1449,9 @@ type1/public/lm/lmsy10.pfb><D:/Program Files/MiKTeX/fonts/type1/urw/palatino/up
 lb8a.pfb><D:/Program Files/MiKTeX/fonts/type1/urw/palatino/uplr8a.pfb><D:/Progr
 am Files/MiKTeX/fonts/type1/urw/palatino/uplr8a.pfb><D:/Program Files/MiKTeX/fo
 nts/type1/urw/palatino/uplri8a.pfb>
-Output written on ba.pdf (45 pages, 872043 bytes).
+Output written on ba.pdf (49 pages, 881357 bytes).
 PDF statistics:
- 808 PDF objects out of 1000 (max. 8388607)
- 175 named destinations out of 1000 (max. 500000)
+ 832 PDF objects out of 1000 (max. 8388607)
+ 179 named destinations out of 1000 (max. 500000)
  447 words of extra memory for PDF output out of 10000 (max. 10000000)
 

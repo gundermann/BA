@@ -40,8 +40,8 @@
 \BOOKMARK [1][-]{section.7.2}{Anforderung an den Generators}{chapter.7}% 40
 \BOOKMARK [0][-]{chapter.8}{Entwicklung einer DSL zur Beschreibung der GUI in profil c/s}{}% 41
 \BOOKMARK [1][-]{section.8.1}{Analyse der Metadaten der GUI}{chapter.8}% 42
-\BOOKMARK [1][-]{section.8.2}{Syntax}{chapter.8}% 43
-\BOOKMARK [1][-]{section.8.3}{Semantik}{chapter.8}% 44
+\BOOKMARK [1][-]{section.8.2}{Semantisches Model}{chapter.8}% 43
+\BOOKMARK [1][-]{section.8.3}{Syntax}{chapter.8}% 44
 \BOOKMARK [0][-]{chapter.9}{Entwicklung des Generators f\374r das Generieren von Klassen f\374r das Multichannel-Framework}{}% 45
 \BOOKMARK [1][-]{section.9.1}{WAM-GUI Architektur}{chapter.9}% 46
 \BOOKMARK [1][-]{section.9.2}{Syntax und Semantik f\374r die Beschreibung der GUIs}{chapter.9}% 47
