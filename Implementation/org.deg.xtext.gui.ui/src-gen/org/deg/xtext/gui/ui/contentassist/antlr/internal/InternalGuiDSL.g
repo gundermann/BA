@@ -224,6 +224,34 @@ finally {
 
 
 
+// Entry rule entryRuleTYPE
+entryRuleTYPE 
+:
+{ before(grammarAccess.getTYPERule()); }
+	 ruleTYPE
+{ after(grammarAccess.getTYPERule()); } 
+	 EOF 
+;
+
+// Rule TYPE
+ruleTYPE
+    @init {
+		int stackSize = keepStackSize();
+    }
+	:
+(
+{ before(grammarAccess.getTYPEAccess().getAlternatives()); }
+(rule__TYPE__Alternatives)
+{ after(grammarAccess.getTYPEAccess().getAlternatives()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
+
 // Entry rule entryRuleUIDescriptionImport
 entryRuleUIDescriptionImport 
 :
@@ -704,6 +732,32 @@ finally {
 
 
 
+
+rule__TYPE__Alternatives
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getTYPEAccess().getWINDOWKeyword_0()); }
+
+	'WINDOW' 
+
+{ after(grammarAccess.getTYPEAccess().getWINDOWKeyword_0()); }
+)
+
+    |(
+{ before(grammarAccess.getTYPEAccess().getINNERCOMPLEXKeyword_1()); }
+
+	'INNERCOMPLEX' 
+
+{ after(grammarAccess.getTYPEAccess().getINNERCOMPLEXKeyword_1()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
 
 rule__AreaAssignment__Alternatives
     @init {
@@ -4496,8 +4550,8 @@ rule__TypeDefinition__TypeAssignment_1
     }
 :
 (
-{ before(grammarAccess.getTypeDefinitionAccess().getTypeTYPETerminalRuleCall_1_0()); }
-	RULE_TYPE{ after(grammarAccess.getTypeDefinitionAccess().getTypeTYPETerminalRuleCall_1_0()); }
+{ before(grammarAccess.getTypeDefinitionAccess().getTypeTYPEParserRuleCall_1_0()); }
+	ruleTYPE{ after(grammarAccess.getTypeDefinitionAccess().getTypeTYPEParserRuleCall_1_0()); }
 )
 
 ;
@@ -5177,8 +5231,6 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-
-RULE_TYPE : ('WINDOW'|'INNERCOMPLEX');
 
 RULE_ID : '^'? ('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;
 

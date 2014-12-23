@@ -37,6 +37,7 @@ public class GuiDSLParser extends AbstractContentAssistParser {
 			nameMappings = new HashMap<AbstractElement, String>() {
 				private static final long serialVersionUID = 1L;
 				{
+					put(grammarAccess.getTYPEAccess().getAlternatives(), "rule__TYPE__Alternatives");
 					put(grammarAccess.getAreaAssignmentAccess().getAlternatives(), "rule__AreaAssignment__Alternatives");
 					put(grammarAccess.getComponentDefinitionAccess().getAlternatives(), "rule__ComponentDefinition__Alternatives");
 					put(grammarAccess.getUIDescriptionAccess().getGroup_0(), "rule__UIDescription__Group_0__0");

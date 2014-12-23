@@ -1,43 +1,45 @@
-' As: '=21
-' as '=15
-' type='=30
-' with actions:'=31
-'->'=24
-':'=27
-'<-'=23
-'='=34
-'Area count: '=17
-'Area:'=22
-'Button'=41
-'CLICK'=13
-'Checkbox'=36
-'DEF '=18
-'END DEF'=19
-'Label'=42
-'MultiSelection'=35
-'Radiobox'=37
-'Table'=38
-'Text'=12
-'Textfield'=40
-'Tree'=39
-'UiAction'=43
-'element='=33
-'inputType='=14
-'interaction='=29
-'selectableValues='=25
-'selectedValues='=26
-'text='=28
-'type: '=20
-'type='=32
-'use: '=16
-RULE_ANY_OTHER=11
-RULE_ID=7
+' As: '=22
+' as '=16
+' type='=31
+' with actions:'=32
+'->'=25
+':'=28
+'<-'=24
+'='=35
+'Area count: '=18
+'Area:'=23
+'Button'=42
+'CLICK'=12
+'Checkbox'=37
+'DEF '=19
+'END DEF'=20
+'INNERCOMPLEX'=14
+'Label'=43
+'MultiSelection'=36
+'Radiobox'=38
+'Table'=39
+'Text'=11
+'Textfield'=41
+'Tree'=40
+'UiAction'=44
+'WINDOW'=13
+'element='=34
+'inputType='=15
+'interaction='=30
+'selectableValues='=26
+'selectedValues='=27
+'text='=29
+'type: '=21
+'type='=33
+'use: '=17
+RULE_ANY_OTHER=10
+RULE_ID=6
 RULE_INT=5
-RULE_ML_COMMENT=8
-RULE_SL_COMMENT=9
+RULE_ML_COMMENT=7
+RULE_SL_COMMENT=8
 RULE_STRING=4
-RULE_TYPE=6
-RULE_WS=10
+RULE_WS=9
+T__11=11
 T__12=12
 T__13=13
 T__14=14
@@ -70,3 +72,4 @@ T__40=40
 T__41=41
 T__42=42
 T__43=43
+T__44=44

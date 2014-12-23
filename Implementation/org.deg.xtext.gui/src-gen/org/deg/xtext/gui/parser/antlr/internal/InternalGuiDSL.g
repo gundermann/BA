@@ -463,24 +463,58 @@ ruleTypeDefinition returns [EObject current=null]
     }
 (
 (
-		lv_type_1_0=RULE_TYPE
-		{
-			newLeafNode(lv_type_1_0, grammarAccess.getTypeDefinitionAccess().getTypeTYPETerminalRuleCall_1_0()); 
-		}
-		{
+		{ 
+	        newCompositeNode(grammarAccess.getTypeDefinitionAccess().getTypeTYPEParserRuleCall_1_0()); 
+	    }
+		lv_type_1_0=ruleTYPE		{
 	        if ($current==null) {
-	            $current = createModelElement(grammarAccess.getTypeDefinitionRule());
+	            $current = createModelElementForParent(grammarAccess.getTypeDefinitionRule());
 	        }
-       		setWithLastConsumed(
+       		set(
        			$current, 
        			"type",
         		lv_type_1_0, 
         		"TYPE");
+	        afterParserOrEnumRuleCall();
 	    }
 
 )
 ))
 ;
+
+
+
+
+
+// Entry rule entryRuleTYPE
+entryRuleTYPE returns [String current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getTYPERule()); } 
+	 iv_ruleTYPE=ruleTYPE 
+	 { $current=$iv_ruleTYPE.current.getText(); }  
+	 EOF 
+;
+
+// Rule TYPE
+ruleTYPE returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
+(
+	kw='WINDOW' 
+    {
+        $current.merge(kw);
+        newLeafNode(kw, grammarAccess.getTYPEAccess().getWINDOWKeyword_0()); 
+    }
+
+    |
+	kw='INNERCOMPLEX' 
+    {
+        $current.merge(kw);
+        newLeafNode(kw, grammarAccess.getTYPEAccess().getINNERCOMPLEXKeyword_1()); 
+    }
+)
+    ;
 
 
 
@@ -1792,8 +1826,6 @@ ruleInteractiontype returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRul
 
 
 
-
-RULE_TYPE : ('WINDOW'|'INNERCOMPLEX');
 
 RULE_ID : '^'? ('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;
 

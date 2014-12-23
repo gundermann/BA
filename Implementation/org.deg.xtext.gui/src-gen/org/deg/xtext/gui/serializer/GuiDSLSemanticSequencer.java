@@ -322,7 +322,7 @@ public class GuiDSLSemanticSequencer extends AbstractDelegatingSemanticSequencer
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getTypeDefinitionAccess().getTypeTYPETerminalRuleCall_1_0(), semanticObject.getType());
+		feeder.accept(grammarAccess.getTypeDefinitionAccess().getTypeTYPEParserRuleCall_1_0(), semanticObject.getType());
 		feeder.finish();
 	}
 	

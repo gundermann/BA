@@ -11,14 +11,14 @@ Komponentenmodel von RCP4 orientieren soll. Das bedeutet, dass es Meta-Ebene
 gibt, die den groben Aufbau der GUI beschreibt und eine Implementierungs-Ebene,
 welche spezifische Komponenten innerhalb der GUI umsetzen soll. Beim Aufbau
 der GUI wurde zwischen zwei Typen unterschieden (siehe semantisches
-Model Type). Für die Beschreibung des Aufbaus enthält jede beschriebene GUI
-eine bestimmte Anzahl von Bereichen (Area), denen genau eine andere
-UI-Komponent zugeordnet werden kann (siehe semantisches Model Areas und
-areacount).
+Model \emph{TypeDefinition}). Für die Beschreibung des Aufbaus enthält jede
+beschriebene GUI eine bestimmte Anzahl von Bereichen (\emph{Area}), denen genau
+eine andere UI-Komponent zugeordnet werden kann (siehe semantisches Model
+\emph{AreaCount} und \emph{AreaAssingment}).
 Weiterhin können von einer GUI-Beschreibung andere GUI-Beschreibungen verwendet
 werden (siehe semantisches Model Use). Die verwendeten GUI-Beschreibungen können
 jedoch nicht erweitert werden. Den Kern der GUI-Beschreibung jedoch die
-Kompnentendefinition (siehe semantisches Model componentDefinition). Dort werden
+Kompnentendefinition (siehe semantisches Model \emph{Definition}). Dort werden
 einzelne Komponeten der GUI durch die Meta-Daten beschrieben.\\
 Bezogen auf die tivialen Komponenten des UIs die
 Beschreibung eines Textes wichtig. Im Falle eines Buttons oder eines Labels
@@ -56,22 +56,84 @@ Entwickler, die bzgl. der GUI nur mit der DSL arbeiten, eigene komplexe
 Komponenten entwerfen, deren Wiederverwendungsgrad nierdirger ist, als wenn
 diese Komponenten nach ausreichender Evaluation an einer zentralen Stelle
 implementiert und bereitgestellt werden.\\
-Komplexe Komponenten werden wie die trivialen Komponenten in einer
-Komponentendefinition beschrieben. Dazu wird nach der Implementierung der
-Komponente für jedes Framework ein neues Schlüsselwort für eine
+Da für die komplexe Komponenten eine Klasse im Classpath vorliegen muss, könnten
+diese Komponenten in eine GUI-Beschreibung wie andere verwendete
+GUI-Beschreibungen über \emph{use} eingebundern werden. An komplexen
+Komponenten sollen jedoch weitere optionale Wertzuweisungen möglich
+sein. Deshalb werden komplexe Komponenten wie die trivialen Komponenten
+in einer Komponentendefinition beschrieben. Dazu wird nach der Implementierung
+der Komponente für jedes Framework ein neues Schlüsselwort für eine
 Komponentendefinition eingebaut. Jede komplexe Komponente benötigt wiederum
 einen Titel um referenziert zu werden. In dieser Version ist eine
 \gloss{Multiselection-Komponente} umgesetzt. Diese Komponente ist generisch
 implementiert. Der generische Typ kann in der DSL an dem Schlüsselwort
 \emph{InputType} beschrieben werden. Die Werte, die in dieser Komponente
 selektiert werden können, werden über das Schlüsselwort \emph{selectableValues}
-gesetzt und die Werte, die selektiert sind am Schlüsselwort
-\emph{selectedValues}.
+gesetzt und die Werte, die selektiert sind am Schlüsselwort \emph{selectedValues}.
 
 \subsection*{Version 2}
+
+
 \section{Semantisches Model}
-\subsection*{Version 1}
-Das Semantische Model in den ersten Wochen beinhaltete 
-\section{Syntax}
+Die zum Verständis nötigen Referenzen auf Teile des semantischen Models sind im
+vorherigen Kapitel zu finden. In diesem Kapitel das semantische Model durch
+UML-Diagramme dargestellt.
 \subsection*{Version 1}
 
+\myBigFigure{v1-1.jpg}{Teil 1: Semantisches Model Version 1}{Teil1-1}
+Das Artefakt, welches beim semantischen Model im Mittelpunkt steht ist die
+\emph{UIDescription} (siehe \ref{Abb_Teil1-1}). Die aggregierten Artefakte sind
+aus dem Diagrammm gut zu entnehmen. Die wichtigen Methoden umfassen nur die Getter- und Setter-Methoden
+der Attributer einer Klasse. Die anderen Methoden
+werden von Xtext ebenfalls generiert. Diese sind für
+diese Arbeit jedoch nicht von Belang. Die Klasse
+\emph{DefinitionImpl} aggregiert weitere Artefakte des Models. Diese sind um
+die Übersicht zu wahren Abbildung \ref{Abb_Teil2-1} zu entnehmen.\\
+\myBigFigure{v1-2.jpg}{Teil 2:
+Semantisches Model Version 1}{Teil2-1} 
+Dort sind die drei umgesetzten Ausprägungen einer \emph{Definition} zu erkennen.
+Dabei handelt es sich um \emph{Label}, \emph{Button} und \emph{MultiSelection}.
+Weiterhin ist zu erkennen, dass nur der Button eine \emph{Interaction}
+aggregieren kann. Das bedeutet, dass nur an dieser Komponente eine Interaktion
+beschrieben werden kann. Der letzte Interessante Teil wäre wohl die
+\emph{Property}. Dieses Interface wird benötigt um bestimmte Werte an
+Komponenten zu setze, ohne das Wissen um welchen Komponentetyp es sich handelt.
+Dazu wurden die allgemein gültigen Einstellungsmöglichkeiten von trivialen
+Komponenten in \emph{CommonProperty} zusammengefasst. die Klasse
+\emph{PropertyImpl} ist ein Artefakt, welches von Xtext zu Vollstänigkeit
+erzeugt wurde. Es wird in dieser Version jedoch nicht benötigt.
+
+\subsection*{Version 2}
+\section{Konkrete Syntax}
+Die Syntax wird durch Beispiele beschreiben. Zu jeder Version ist ein minimaler
+DSL-Code zu finden. Besondere Änderungen bzgl. der konkreten Syntax sind jeweils
+nachfolgend genannt. Die Grammatiken befinden sich im Anhang
+\ref{AppGrammatiken}. Sie sind dort ebenfalls in Versionen aufgeteilt.
+ \subsection*{Version 1}
+\begin{lstlisting}
+Area count: 4
+type: WINDOW use: "AnotherDescription"
+DEF Label as "HEAD" :
+END DEF
+DEF Button as "Interactbt": 
+	text="Interagiere"
+	interaction="btinteraction" type=CLICK with actions:type=UiAction element="HEAD":Text="Du hast interagiert"
+END DEF
+DEF MultiSelection as "Multiselect" :
+inputType="valuepackage.Values" 
+selectableValues="valuepackage.Values.asList()"
+END DEF
+Area:1<-"HEAD"
+Area:2<-"AnotherDescription"
+Area:3<-"Interactbt"
+Area:4<-"Multiselect"
+\end{lstlisting}
+Die Bezeichnung \emph{Area} wurde bewusst so gewählt, da dieser Begriff
+abstrakter ist als die in verschiedenen UI-Frameworks verwendeteten Begrifft
+wie, Panel oder Pane. In der Syntax dieser DSL gilt es sich vor allem bzgl. des
+Aufbaus der GUI an keinem UI-Framework zu orientieren. Die einzelnen
+Komponentendefinitionen werden durch das Schlüsselwort \emph{DEF} eingeleitet und durch das Schlüsselwort \emph{END DEF} abgeschlossen. Der Definitionskoft wird durch das Zeichen \emph{:} beendet. Dort sind die Pflichtfelder der Komponentendefinition zu finden (\emph{Titel} und
+\emph{Typ}).
+Bei der Multiselection-Komponente fällt auf, dass ein Referenzwert verwendet
+wird, der in dieser Beschreibung nicht deklariert wurde (\emph{valuespackage.Values}).
+Dabie handelt es sich um einen vollqualifizierten Namen einer Klasse. 

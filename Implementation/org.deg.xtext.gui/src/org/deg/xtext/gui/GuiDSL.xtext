@@ -27,7 +27,7 @@ Definition:
 TypeDefinition:
 	'type: ' type=TYPE;
 
-terminal TYPE:
+TYPE:
 	('WINDOW' | 'INNERCOMPLEX');
 
 UIDescriptionImport:

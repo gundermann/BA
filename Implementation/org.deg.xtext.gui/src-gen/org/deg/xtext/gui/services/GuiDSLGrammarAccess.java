@@ -205,7 +205,7 @@ public class GuiDSLGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cTypeKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cTypeAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cTypeTYPETerminalRuleCall_1_0 = (RuleCall)cTypeAssignment_1.eContents().get(0);
+		private final RuleCall cTypeTYPEParserRuleCall_1_0 = (RuleCall)cTypeAssignment_1.eContents().get(0);
 		
 		//TypeDefinition:
 		//	"type: " type=TYPE;
@@ -221,7 +221,27 @@ public class GuiDSLGrammarAccess extends AbstractGrammarElementFinder {
 		public Assignment getTypeAssignment_1() { return cTypeAssignment_1; }
 
 		//TYPE
-		public RuleCall getTypeTYPETerminalRuleCall_1_0() { return cTypeTYPETerminalRuleCall_1_0; }
+		public RuleCall getTypeTYPEParserRuleCall_1_0() { return cTypeTYPEParserRuleCall_1_0; }
+	}
+
+	public class TYPEElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "TYPE");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final Keyword cWINDOWKeyword_0 = (Keyword)cAlternatives.eContents().get(0);
+		private final Keyword cINNERCOMPLEXKeyword_1 = (Keyword)cAlternatives.eContents().get(1);
+		
+		//TYPE:
+		//	"WINDOW" | "INNERCOMPLEX";
+		public ParserRule getRule() { return rule; }
+
+		//"WINDOW" | "INNERCOMPLEX"
+		public Alternatives getAlternatives() { return cAlternatives; }
+
+		//"WINDOW"
+		public Keyword getWINDOWKeyword_0() { return cWINDOWKeyword_0; }
+
+		//"INNERCOMPLEX"
+		public Keyword getINNERCOMPLEXKeyword_1() { return cINNERCOMPLEXKeyword_1; }
 	}
 
 	public class UIDescriptionImportElements extends AbstractParserRuleElementFinder {
@@ -1000,7 +1020,7 @@ public class GuiDSLGrammarAccess extends AbstractGrammarElementFinder {
 	private final AreaCountElements pAreaCount;
 	private final DefinitionElements pDefinition;
 	private final TypeDefinitionElements pTypeDefinition;
-	private final TerminalRule tTYPE;
+	private final TYPEElements pTYPE;
 	private final UIDescriptionImportElements pUIDescriptionImport;
 	private final AreaAssignmentElements pAreaAssignment;
 	private final ComponentDefinitionElements pComponentDefinition;
@@ -1034,7 +1054,7 @@ public class GuiDSLGrammarAccess extends AbstractGrammarElementFinder {
 		this.pAreaCount = new AreaCountElements();
 		this.pDefinition = new DefinitionElements();
 		this.pTypeDefinition = new TypeDefinitionElements();
-		this.tTYPE = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "TYPE");
+		this.pTYPE = new TYPEElements();
 		this.pUIDescriptionImport = new UIDescriptionImportElements();
 		this.pAreaAssignment = new AreaAssignmentElements();
 		this.pComponentDefinition = new ComponentDefinitionElements();
@@ -1142,11 +1162,15 @@ public class GuiDSLGrammarAccess extends AbstractGrammarElementFinder {
 		return getTypeDefinitionAccess().getRule();
 	}
 
-	//terminal TYPE:
+	//TYPE:
 	//	"WINDOW" | "INNERCOMPLEX";
-	public TerminalRule getTYPERule() {
-		return tTYPE;
-	} 
+	public TYPEElements getTYPEAccess() {
+		return pTYPE;
+	}
+	
+	public ParserRule getTYPERule() {
+		return getTYPEAccess().getRule();
+	}
 
 	//UIDescriptionImport:
 	//	descriptionName=STRING (" As: " localName=STRING)?;
