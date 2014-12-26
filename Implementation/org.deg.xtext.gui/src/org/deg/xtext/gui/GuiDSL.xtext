@@ -5,16 +5,31 @@ generate guiDSL "http://www.deg.org/xtext/gui/GuiDSL"
 UIDescription:
 	areaCount=AreaCount
 	typeDefinition=(TypeDefinition)
-	property=(Property)& 
+	(property=(Property))?
 	usedDescriptions+=(UsedDescriptions)*
+	refinements+=(Refinement)*
 	definitions+=(Definition)*
 	areas+=(AreaAssignment)*;
+
+Refinement:
+	'REFINE' concreteRefinement=ComponentRefinement 'END REFINE';
+
+ComponentRefinement:
+	LabelRefinement | ButtonRefinement;
+
+ButtonRefinement:
+	type='Button' ' with name: ' name=STRING
+	properties=(Properties)?;
+
+LabelRefinement:
+	type='Label' ' with name: ' name=STRING
+	properties=(Properties)?;
 
 Property:
 	'get properties from:' propertiesFile=STRING;
 
 UsedDescriptions:
-	'use: ' description=(UIDescriptionImport | complexComponent) (' as: ' localName=STRING)?;
+	'use: ' description=(UIDescriptionImport | ComplexComponent) (' as: ' localName=STRING)?;
 
 AreaCount:
 	'Area count: ' areaCount=INT;
@@ -29,13 +44,13 @@ Type:
 	('WINDOW' | 'INNERCOMPLEX');
 
 UIDescriptionImport:
-	descriptionName=(STRING) ;
+	descriptionName=(STRING);
 
-complexComponent:
+ComplexComponent:
 	(Multiselection);
 
 Multiselection:
-	descriptionName='Multiselection'('<'inputType=STRING'>')?;
+	descriptionName='Multiselection' ('<' inputType=STRING '>')?;
 
 AreaAssignment:
 	'Area:' area=INT '<-' elements+=(STRING)+
@@ -66,18 +81,17 @@ TextfieldDefinition:
 	('text=' text=STRING)?;
 
 ButtonDefinition:
-	type='Button' ' as ' name=STRING ':'
-	('propertyKey=' propertyKey=STRING)?
+	type='Button' ' as ' name=STRING
+	properties=(Properties)?;
+
+Properties:
+	':' ('propertyKey=' propertyKey=STRING)?
 	('text=' text=STRING)?
 	('interactiontype=' interactiontype+=(Interactiontype)+)?;
 
-Interaction:
-	name=STRING ' type=' Interactiontype;
-
 LabelDefinition:
-	type='Label' ' as ' name=STRING ':'
-	('propertyKey=' propertyKey=STRING)?
-	('text=' text=STRING)?;
+	type='Label' ' as ' name=STRING
+	properties=(Properties)?;
 
 Interactiontype:
 	'Click' | 'ChangeText';

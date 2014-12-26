@@ -65,13 +65,17 @@ public class GuiDSLFactoryImpl extends EFactoryImpl implements GuiDSLFactory
     switch (eClass.getClassifierID())
     {
       case GuiDSLPackage.UI_DESCRIPTION: return createUIDescription();
+      case GuiDSLPackage.REFINEMENT: return createRefinement();
+      case GuiDSLPackage.COMPONENT_REFINEMENT: return createComponentRefinement();
+      case GuiDSLPackage.BUTTON_REFINEMENT: return createButtonRefinement();
+      case GuiDSLPackage.LABEL_REFINEMENT: return createLabelRefinement();
       case GuiDSLPackage.PROPERTY: return createProperty();
       case GuiDSLPackage.USED_DESCRIPTIONS: return createUsedDescriptions();
       case GuiDSLPackage.AREA_COUNT: return createAreaCount();
       case GuiDSLPackage.DEFINITION: return createDefinition();
       case GuiDSLPackage.TYPE_DEFINITION: return createTypeDefinition();
       case GuiDSLPackage.UI_DESCRIPTION_IMPORT: return createUIDescriptionImport();
-      case GuiDSLPackage.COMPLEX_COMPONENT: return createcomplexComponent();
+      case GuiDSLPackage.COMPLEX_COMPONENT: return createComplexComponent();
       case GuiDSLPackage.MULTISELECTION: return createMultiselection();
       case GuiDSLPackage.AREA_ASSIGNMENT: return createAreaAssignment();
       case GuiDSLPackage.COMPONENT_DEFINITION: return createComponentDefinition();
@@ -81,7 +85,7 @@ public class GuiDSLFactoryImpl extends EFactoryImpl implements GuiDSLFactory
       case GuiDSLPackage.TREE_DEFINITION: return createTreeDefinition();
       case GuiDSLPackage.TEXTFIELD_DEFINITION: return createTextfieldDefinition();
       case GuiDSLPackage.BUTTON_DEFINITION: return createButtonDefinition();
-      case GuiDSLPackage.INTERACTION: return createInteraction();
+      case GuiDSLPackage.PROPERTIES: return createProperties();
       case GuiDSLPackage.LABEL_DEFINITION: return createLabelDefinition();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
@@ -97,6 +101,50 @@ public class GuiDSLFactoryImpl extends EFactoryImpl implements GuiDSLFactory
   {
     UIDescriptionImpl uiDescription = new UIDescriptionImpl();
     return uiDescription;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Refinement createRefinement()
+  {
+    RefinementImpl refinement = new RefinementImpl();
+    return refinement;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public ComponentRefinement createComponentRefinement()
+  {
+    ComponentRefinementImpl componentRefinement = new ComponentRefinementImpl();
+    return componentRefinement;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public ButtonRefinement createButtonRefinement()
+  {
+    ButtonRefinementImpl buttonRefinement = new ButtonRefinementImpl();
+    return buttonRefinement;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public LabelRefinement createLabelRefinement()
+  {
+    LabelRefinementImpl labelRefinement = new LabelRefinementImpl();
+    return labelRefinement;
   }
 
   /**
@@ -170,9 +218,9 @@ public class GuiDSLFactoryImpl extends EFactoryImpl implements GuiDSLFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public complexComponent createcomplexComponent()
+  public ComplexComponent createComplexComponent()
   {
-    complexComponentImpl complexComponent = new complexComponentImpl();
+    ComplexComponentImpl complexComponent = new ComplexComponentImpl();
     return complexComponent;
   }
 
@@ -280,10 +328,10 @@ public class GuiDSLFactoryImpl extends EFactoryImpl implements GuiDSLFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public Interaction createInteraction()
+  public Properties createProperties()
   {
-    InteractionImpl interaction = new InteractionImpl();
-    return interaction;
+    PropertiesImpl properties = new PropertiesImpl();
+    return properties;
   }
 
   /**

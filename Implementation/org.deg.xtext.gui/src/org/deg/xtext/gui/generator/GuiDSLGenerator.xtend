@@ -10,7 +10,6 @@ import java.util.Map
 import org.deg.xtext.gui.guiDSL.ButtonDefinition
 import org.deg.xtext.gui.guiDSL.CheckboxDefinition
 import org.deg.xtext.gui.guiDSL.Definition
-import org.deg.xtext.gui.guiDSL.Interaction
 import org.deg.xtext.gui.guiDSL.LabelDefinition
 import org.deg.xtext.gui.guiDSL.RadioboxDefinition
 import org.deg.xtext.gui.guiDSL.TextfieldDefinition
@@ -29,7 +28,7 @@ class GuiDSLGenerator implements IGenerator {
 	String name
 	List<String> imports = new ArrayList<String>()
 	Boolean compiled = false
-	List<Interaction> interactions = new ArrayList<Interaction>()
+//	List<Interaction> interactions = new ArrayList<Interaction>()
 	Map<String, String> uiElemetsToType = new HashMap()
 	List<String> globalVars = new ArrayList<String>()
 
@@ -52,7 +51,7 @@ class GuiDSLGenerator implements IGenerator {
 			//Müssen geleert werden, da sie ansonsten beim nächsten Übersetzen wieder benutzt werden.
 			imports.clear
 			globalVars.clear
-			interactions.clear
+//			interactions.clear
 		}
 
 	}
@@ -188,7 +187,7 @@ class GuiDSLGenerator implements IGenerator {
 	'''
 
 	def genInteractions() '''
-		«FOR i : interactions»
+«««		«FOR i : interactions»
 «««			public void invoke«i.name»(){
 «««				«FOR a : i.actions»
 «««					«IF a.type.equals('UiAction')»
@@ -196,9 +195,9 @@ class GuiDSLGenerator implements IGenerator {
 «««					«ENDIF»
 «««				«ENDFOR»
 «««			}
-		«ENDFOR»
-		
-	'''
+«««		«ENDFOR»
+«««		
+«««	'''
 
 //	def extract(UIAction action) '''
 //		«FOR p : action.properties»
@@ -271,7 +270,7 @@ class GuiDSLGenerator implements IGenerator {
 		«addImport("import javafx.scene.control.Label;")»
 		«addGlobalVar("Label " + definition.name + ";")»
 			«definition.name» = new Label();
-			«definition.name».setText("«definition.text»");
+«««			«definition.name».setText("«definition.text»");
 			return «definition.name»;
 	'''
 
@@ -285,7 +284,7 @@ class GuiDSLGenerator implements IGenerator {
 		«addImport("import javafx.scene.control.Button;")»
 		«addGlobalVar("Button " + definition.name + ";")»
 			«definition.name»= new Button();
-			«definition.name».setText("«definition.text»");
+«««			«definition.name».setText("«definition.text»");
 «««			«IF definition.interaction != null»
 «««				«addImport("import javafx.event.ActionEvent;")»
 «««				«addImport("import javafx.event.EventHandler;")»
@@ -300,9 +299,9 @@ class GuiDSLGenerator implements IGenerator {
 			return «definition.name»;
 	'''
 
-	def String addInteractionMethod(Interaction interaction) {
-		interactions.add(interaction)
-		return ""
-	}
+//	def String addInteractionMethod(Interaction interaction) {
+//		interactions.add(interaction)
+//		return ""
+//	}
 
 }

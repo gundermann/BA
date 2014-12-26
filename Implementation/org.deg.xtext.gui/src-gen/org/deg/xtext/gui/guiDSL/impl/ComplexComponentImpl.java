@@ -2,8 +2,8 @@
  */
 package org.deg.xtext.gui.guiDSL.impl;
 
+import org.deg.xtext.gui.guiDSL.ComplexComponent;
 import org.deg.xtext.gui.guiDSL.GuiDSLPackage;
-import org.deg.xtext.gui.guiDSL.complexComponent;
 
 import org.eclipse.emf.ecore.EClass;
 
@@ -11,21 +11,21 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>complex Component</b></em>'.
+ * An implementation of the model object '<em><b>Complex Component</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * </p>
  *
  * @generated
  */
-public class complexComponentImpl extends MinimalEObjectImpl.Container implements complexComponent
+public class ComplexComponentImpl extends MinimalEObjectImpl.Container implements ComplexComponent
 {
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected complexComponentImpl()
+  protected ComplexComponentImpl()
   {
     super();
   }
@@ -41,4 +41,4 @@ public class complexComponentImpl extends MinimalEObjectImpl.Container implement
     return GuiDSLPackage.Literals.COMPLEX_COMPONENT;
   }
 
-} //complexComponentImpl
+} //ComplexComponentImpl

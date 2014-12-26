@@ -92,19 +92,24 @@ Bezüglich der Komponenten, die mittels \emph{use} eingebunden werden, ist es
 für die Lokalisierung der entsprechenden Quellen besser, wenn in der
 GUI-Beschreibung der qualifizierte Name angegeben wird. Dadruch wird die
 Besschreibung zwar länger, im Gegenzug dazu jedoch auch eindeutig.\\
-Eine weitere Diskussion regte die Art und Weise der Zuweisungen von Komponenten
-zu einem Area an. Bei der Lösung aus Version 1 ist es nicht möglich mehrere
-Komponenten einem Area zuzuweisen. Für die Meta-Daten einer Areazuweisung
-(siehe semantisches Model \emph{AreaAssignment}) bedeutet dies, dass diese nicht
-nur mit einer Komponenten umgehen können muss, sondern mit einer Vielzahl
-von Komponenten.\\
-Ein weiterer wichtiger Punkt, welcher in der
-ersten Version keine Beachtung fand, ist die Art und Weise, wie an den
-Komponenten bestimmte Werte wie bspw. die Aufschrift gesetzt werden. In der deg
-werden dazu so genannte \emph{Properties}-Dateien verwendet, die mittels eines
-Frameworks ausgelesen werden und über einen Schlüssel den Komponenten zugewiesen
-werden. Damit wird die eigentliche Klasse zur Beschreibung der GUI in der deg
-entlastet. Auch die GUI-Beschreibung mittels DSL kann damit entlastet werden.
+Die in diesen eingebundenen GUI-Beschreibungen definierten Komponenten können in
+dieser Version weiter verfeinert werden. Dabei überschreiben die Werte, die in
+der bearbeiteten Beschreibung definiert wurden, die Werte die in der
+Originaldatei definiert sind. Werte die nicht überschrieben werden, werden aus
+der Originaldatei übernommen.\\
+Eine weitere Diskussion regte die Art und Weise
+der Zuweisungen von Komponenten zu einem Area an. Bei der Lösung aus Version 1
+ist es nicht möglich mehrere Komponenten einem Area zuzuweisen. Für die
+Meta-Daten einer Areazuweisung (siehe semantisches Model \emph{AreaAssignment})
+bedeutet dies, dass diese nicht nur mit einer Komponenten umgehen können muss,
+sondern mit einer Vielzahl von Komponenten.\\
+Ein weiterer wichtiger Punkt, welcher in der ersten Version keine Beachtung
+fand, ist die Art und Weise, wie an den Komponenten bestimmte Werte wie bspw.
+die Aufschrift gesetzt werden. In der deg werden dazu so genannte
+\emph{Properties}-Dateien verwendet, die mittels eines Frameworks ausgelesen
+werden und über einen Schlüssel den Komponenten zugewiesen werden. Damit wird
+die eigentliche Klasse zur Beschreibung der GUI in der deg entlastet. Auch die
+GUI-Beschreibung mittels DSL kann damit entlastet werden.
 Dazu wird jedoch ein Konzept benötigt, wie diese Properties-Dateien in
 die GUI-Beschreibung eingebunden und verwendet werden. Hierzu müssen die
 Meta-Daten für die GUI angepasst werden. Neben der Anzahl an Areas sowie der
@@ -124,6 +129,8 @@ der Generation müssen die in der GUI-Beschreibung festgelegten Werte vorrangig
 behandelt werden. Grund dafür ist, dass im Vorfeld geprüft werden kann, ob die
 Werte in der GUI-Beschreibung definiert sind. Somit muss die Properties-Datei
 nicht zwingend nach dem richtigen Schlüssel durchsucht werden.
+
+\subsection*{Version 3}
 
 
 \section{Semantisches Model}
@@ -172,8 +179,8 @@ DEF Button as "Interactbt":
 	interaction="btinteraction" type=CLICK with actions:type=UiAction element="HEAD":Text="Du hast interagiert"
 END DEF
 DEF MultiSelection as "Multiselect" :
-inputType="valuepackage.Values" 
-selectableValues="valuepackage.Values.asList()"
+	inputType="valuepackage.Values" 
+	selectableValues="valuepackage.Values.asList()"
 END DEF
 Area:1<-"HEAD"
 Area:2<-"AnotherDescription"
@@ -198,12 +205,12 @@ Schlüssel vergeben wurden. Das Label mit der Bezeichnung \emph{OneLabel} enthält
 keinen Property-Key. In diesem Fall wird der Titel als
 solcher verwendet.
 \begin{lstlisting}[{caption = Properties in Version 2},{label =
-LST_Properties2}] type: WINDOW 
+LST_Properties2}] 
+type: WINDOW 
 get properties from: 'sources.ui.properties' 
-DEF Label as "OneLabel" :
-END DEF
+DEF Label as "OneLabel" END DEF
 DEF Label as "AnotherLabel":
-propertyKey='AnotherLabel2'
+	propertyKey='AnotherLabel2'
 END DEF
 \end{lstlisting}
 Aufgrund der Reduzierung der Meta-Daten für eine Interaktion stand die Frage
@@ -257,14 +264,52 @@ Area-Zuweisung von drei Komponenten zu entnehmen.
 2},{label=LST_Moeglichkeit2_2}]
 Area count: 1
 type: WINDOW 
-DEF Label as "OneLabel" :
-END DEF
-DEF Label as "AnotherLabel":
-END DEF
+DEF Label as "OneLabel" END DEF
+DEF Label as "AnotherLabel" END DEF
 DEF Button as "InteractButton": 
 	interactiontype=Click,ChangeText
 END DEF
 Area:1<-"OneLabel","InteractButton","AnotherLabel"
 
 \end{lstlisting}
+Das Überschreiben Werte der Komponenten, die in einer eingebundenen
+GUI-Beschreibung definiert wurden, können über das Schlüsselwort \emph{REFINE}
+getätigt werden. Der erste Teil von Listing \ref{} zeigt die Originaldatei,
+deren Beschreibung eingebunden wird. Der zweite Teil zeigt, wie die
+Aufschrift einer Komponente \emph{OverriddenButton} überschrieben
+wird.
+\begin{lstlisting}[{caption=Überschreiben einer eingebundenen Komponente Version
+2},{label=LST_Override2}]
+PART 1
+Area count: 2
+type: INNERCOMPLEX
+DEF Label as "Label" :
+	text="Text" 
+END DEF
+DEF Button as "Button":
+	text="AlterText" 
+END DEF
+Area:1<-'Label'	
+Area:2<-"Button"
 
+
+PART 2
+Area count: 1
+type: WINDOW 
+use: "guidescription.LabelAndButton" as: 'Embedded'
+REFINE Button with name: 'OverriddenButton':
+	text='NewText'
+END REFINE
+Area:1<-'Embedded'
+\end{lstlisting}
+Sollten mehrere Komponenten eingebunden sein, in denen Komponenten mit den
+selben Namen definiert sind, muss der Titel der eingebundenen Ressource zur
+eideutigen Identifikation stehen (siehe Listing \ref{LST_Override2_2})
+\begin{lstlisting}[{caption=Überschreiben einer eingebundenen Komponente mit
+Titel der Komponente Version 2},{label=LST_Override2_2}]
+use: "guidescription.LabelAndButton" as: 'Embedded1'
+use: "guidescription.LabelAndTwoButton" as: 'Embedded2'
+REFINE Button with name: 'Embedded2.OverriddenButton':
+	text='NewText'
+END REFINE
+\end{lstlisting}

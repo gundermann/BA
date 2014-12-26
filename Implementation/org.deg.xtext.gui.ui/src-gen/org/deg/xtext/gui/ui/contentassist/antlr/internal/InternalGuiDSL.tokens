@@ -1,32 +1,35 @@
-' as '=27
-' as: '=17
-'->'=26
-':'=28
-'<'=22
-'<-'=25
-'>'=23
-'Area count: '=18
-'Area:'=24
-'Button'=38
+' as '=30
+' as: '=20
+' with name: '=17
+'->'=29
+':'=31
+'<'=25
+'<-'=28
+'>'=26
+'Area count: '=21
+'Area:'=27
+'Button'=35
 'ChangeText'=14
-'Checkbox'=33
+'Checkbox'=38
 'Click'=13
-'DEF '=19
-'END DEF'=20
+'DEF '=22
+'END DEF'=23
+'END REFINE'=16
 'INNERCOMPLEX'=12
-'Label'=39
-'Multiselection'=32
-'Radiobox'=34
-'Table'=35
-'Textfield'=37
-'Tree'=36
+'Label'=36
+'Multiselection'=37
+'REFINE'=15
+'Radiobox'=39
+'Table'=40
+'Textfield'=42
+'Tree'=41
 'WINDOW'=11
-'get properties from:'=15
-'interactiontype='=31
-'propertyKey='=30
-'text='=29
-'type: '=21
-'use: '=16
+'get properties from:'=18
+'interactiontype='=34
+'propertyKey='=33
+'text='=32
+'type: '=24
+'use: '=19
 RULE_ANY_OTHER=10
 RULE_ID=7
 RULE_INT=5
@@ -63,3 +66,6 @@ T__36=36
 T__37=37
 T__38=38
 T__39=39
+T__40=40
+T__41=41
+T__42=42

@@ -20,7 +20,7 @@ package org.deg.xtext.gui.guiDSL;
  * @model
  * @generated
  */
-public interface Multiselection extends complexComponent
+public interface Multiselection extends ComplexComponent
 {
   /**
    * Returns the value of the '<em><b>Description Name</b></em>' attribute.

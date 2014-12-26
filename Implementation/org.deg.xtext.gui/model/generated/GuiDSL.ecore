@@ -10,11 +10,25 @@
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="usedDescriptions" upperBound="-1"
         eType="#//UsedDescriptions" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="refinements" upperBound="-1"
+        eType="#//Refinement" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="definitions" upperBound="-1"
         eType="#//Definition" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="areas" upperBound="-1"
         eType="#//AreaAssignment" containment="true"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Refinement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="concreteRefinement" eType="#//ComponentRefinement"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ComponentRefinement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="properties" eType="#//Properties"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ButtonRefinement" eSuperTypes="#//ComponentRefinement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="LabelRefinement" eSuperTypes="#//ComponentRefinement"/>
   <eClassifiers xsi:type="ecore:EClass" name="Property">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="propertiesFile" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
@@ -36,8 +50,8 @@
   <eClassifiers xsi:type="ecore:EClass" name="UIDescriptionImport">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="descriptionName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="complexComponent"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Multiselection" eSuperTypes="#//complexComponent">
+  <eClassifiers xsi:type="ecore:EClass" name="ComplexComponent"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Multiselection" eSuperTypes="#//ComplexComponent">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="descriptionName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="inputType" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
@@ -49,22 +63,34 @@
   <eClassifiers xsi:type="ecore:EClass" name="ComponentDefinition">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CheckboxDefinition" eSuperTypes="#//ComponentDefinition">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="text" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="CheckboxDefinition" eSuperTypes="#//ComponentDefinition"/>
-  <eClassifiers xsi:type="ecore:EClass" name="RadioboxDefinition" eSuperTypes="#//ComponentDefinition"/>
-  <eClassifiers xsi:type="ecore:EClass" name="TableDefinition" eSuperTypes="#//ComponentDefinition"/>
-  <eClassifiers xsi:type="ecore:EClass" name="TreeDefinition" eSuperTypes="#//ComponentDefinition"/>
-  <eClassifiers xsi:type="ecore:EClass" name="TextfieldDefinition" eSuperTypes="#//ComponentDefinition"/>
+  <eClassifiers xsi:type="ecore:EClass" name="RadioboxDefinition" eSuperTypes="#//ComponentDefinition">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="text" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TableDefinition" eSuperTypes="#//ComponentDefinition">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="text" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TreeDefinition" eSuperTypes="#//ComponentDefinition">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="text" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TextfieldDefinition" eSuperTypes="#//ComponentDefinition">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="text" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ButtonDefinition" eSuperTypes="#//ComponentDefinition">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="properties" eType="#//Properties"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Properties">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="propertyKey" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="text" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="interactiontype" unique="false"
         upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Interaction">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="LabelDefinition" eSuperTypes="#//ComponentDefinition">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="propertyKey" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="properties" eType="#//Properties"
+        containment="true"/>
   </eClassifiers>
 </ecore:EPackage>

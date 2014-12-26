@@ -25,7 +25,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class MultiselectionImpl extends complexComponentImpl implements Multiselection
+public class MultiselectionImpl extends ComplexComponentImpl implements Multiselection
 {
   /**
    * The default value of the '{@link #getDescriptionName() <em>Description Name</em>}' attribute.

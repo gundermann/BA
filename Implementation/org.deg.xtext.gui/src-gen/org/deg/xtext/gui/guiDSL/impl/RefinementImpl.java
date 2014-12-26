@@ -2,9 +2,9 @@
  */
 package org.deg.xtext.gui.guiDSL.impl;
 
-import org.deg.xtext.gui.guiDSL.ButtonDefinition;
+import org.deg.xtext.gui.guiDSL.ComponentRefinement;
 import org.deg.xtext.gui.guiDSL.GuiDSLPackage;
-import org.deg.xtext.gui.guiDSL.Properties;
+import org.deg.xtext.gui.guiDSL.Refinement;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -13,38 +13,39 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Button Definition</b></em>'.
+ * An implementation of the model object '<em><b>Refinement</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.deg.xtext.gui.guiDSL.impl.ButtonDefinitionImpl#getProperties <em>Properties</em>}</li>
+ *   <li>{@link org.deg.xtext.gui.guiDSL.impl.RefinementImpl#getConcreteRefinement <em>Concrete Refinement</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class ButtonDefinitionImpl extends ComponentDefinitionImpl implements ButtonDefinition
+public class RefinementImpl extends MinimalEObjectImpl.Container implements Refinement
 {
   /**
-   * The cached value of the '{@link #getProperties() <em>Properties</em>}' containment reference.
+   * The cached value of the '{@link #getConcreteRefinement() <em>Concrete Refinement</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getProperties()
+   * @see #getConcreteRefinement()
    * @generated
    * @ordered
    */
-  protected Properties properties;
+  protected ComponentRefinement concreteRefinement;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected ButtonDefinitionImpl()
+  protected RefinementImpl()
   {
     super();
   }
@@ -57,7 +58,7 @@ public class ButtonDefinitionImpl extends ComponentDefinitionImpl implements But
   @Override
   protected EClass eStaticClass()
   {
-    return GuiDSLPackage.Literals.BUTTON_DEFINITION;
+    return GuiDSLPackage.Literals.REFINEMENT;
   }
 
   /**
@@ -65,9 +66,9 @@ public class ButtonDefinitionImpl extends ComponentDefinitionImpl implements But
    * <!-- end-user-doc -->
    * @generated
    */
-  public Properties getProperties()
+  public ComponentRefinement getConcreteRefinement()
   {
-    return properties;
+    return concreteRefinement;
   }
 
   /**
@@ -75,13 +76,13 @@ public class ButtonDefinitionImpl extends ComponentDefinitionImpl implements But
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetProperties(Properties newProperties, NotificationChain msgs)
+  public NotificationChain basicSetConcreteRefinement(ComponentRefinement newConcreteRefinement, NotificationChain msgs)
   {
-    Properties oldProperties = properties;
-    properties = newProperties;
+    ComponentRefinement oldConcreteRefinement = concreteRefinement;
+    concreteRefinement = newConcreteRefinement;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GuiDSLPackage.BUTTON_DEFINITION__PROPERTIES, oldProperties, newProperties);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GuiDSLPackage.REFINEMENT__CONCRETE_REFINEMENT, oldConcreteRefinement, newConcreteRefinement);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -92,20 +93,20 @@ public class ButtonDefinitionImpl extends ComponentDefinitionImpl implements But
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setProperties(Properties newProperties)
+  public void setConcreteRefinement(ComponentRefinement newConcreteRefinement)
   {
-    if (newProperties != properties)
+    if (newConcreteRefinement != concreteRefinement)
     {
       NotificationChain msgs = null;
-      if (properties != null)
-        msgs = ((InternalEObject)properties).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GuiDSLPackage.BUTTON_DEFINITION__PROPERTIES, null, msgs);
-      if (newProperties != null)
-        msgs = ((InternalEObject)newProperties).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GuiDSLPackage.BUTTON_DEFINITION__PROPERTIES, null, msgs);
-      msgs = basicSetProperties(newProperties, msgs);
+      if (concreteRefinement != null)
+        msgs = ((InternalEObject)concreteRefinement).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GuiDSLPackage.REFINEMENT__CONCRETE_REFINEMENT, null, msgs);
+      if (newConcreteRefinement != null)
+        msgs = ((InternalEObject)newConcreteRefinement).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GuiDSLPackage.REFINEMENT__CONCRETE_REFINEMENT, null, msgs);
+      msgs = basicSetConcreteRefinement(newConcreteRefinement, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, GuiDSLPackage.BUTTON_DEFINITION__PROPERTIES, newProperties, newProperties));
+      eNotify(new ENotificationImpl(this, Notification.SET, GuiDSLPackage.REFINEMENT__CONCRETE_REFINEMENT, newConcreteRefinement, newConcreteRefinement));
   }
 
   /**
@@ -118,8 +119,8 @@ public class ButtonDefinitionImpl extends ComponentDefinitionImpl implements But
   {
     switch (featureID)
     {
-      case GuiDSLPackage.BUTTON_DEFINITION__PROPERTIES:
-        return basicSetProperties(null, msgs);
+      case GuiDSLPackage.REFINEMENT__CONCRETE_REFINEMENT:
+        return basicSetConcreteRefinement(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -134,8 +135,8 @@ public class ButtonDefinitionImpl extends ComponentDefinitionImpl implements But
   {
     switch (featureID)
     {
-      case GuiDSLPackage.BUTTON_DEFINITION__PROPERTIES:
-        return getProperties();
+      case GuiDSLPackage.REFINEMENT__CONCRETE_REFINEMENT:
+        return getConcreteRefinement();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -150,8 +151,8 @@ public class ButtonDefinitionImpl extends ComponentDefinitionImpl implements But
   {
     switch (featureID)
     {
-      case GuiDSLPackage.BUTTON_DEFINITION__PROPERTIES:
-        setProperties((Properties)newValue);
+      case GuiDSLPackage.REFINEMENT__CONCRETE_REFINEMENT:
+        setConcreteRefinement((ComponentRefinement)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -167,8 +168,8 @@ public class ButtonDefinitionImpl extends ComponentDefinitionImpl implements But
   {
     switch (featureID)
     {
-      case GuiDSLPackage.BUTTON_DEFINITION__PROPERTIES:
-        setProperties((Properties)null);
+      case GuiDSLPackage.REFINEMENT__CONCRETE_REFINEMENT:
+        setConcreteRefinement((ComponentRefinement)null);
         return;
     }
     super.eUnset(featureID);
@@ -184,10 +185,10 @@ public class ButtonDefinitionImpl extends ComponentDefinitionImpl implements But
   {
     switch (featureID)
     {
-      case GuiDSLPackage.BUTTON_DEFINITION__PROPERTIES:
-        return properties != null;
+      case GuiDSLPackage.REFINEMENT__CONCRETE_REFINEMENT:
+        return concreteRefinement != null;
     }
     return super.eIsSet(featureID);
   }
 
-} //ButtonDefinitionImpl
+} //RefinementImpl

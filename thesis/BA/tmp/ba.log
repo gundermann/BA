@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.10.14)  26 DEC 2014 20:26
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.10.14)  26 DEC 2014 21:17
 entering extended mode
 **ba.tex
 (C:\Users\ngundermann\git\BA\thesis\BA\ba.tex
@@ -912,13 +912,13 @@ less on input line 35.
 Kapitel 2.
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <17.28> not available
 (Font)              Font shape `T1/ppl/b/n' tried instead on input line 5.
-<Bilder/web.jpg, id=375, 1264.725pt x 472.76625pt>
+<Bilder/web.jpg, id=380, 1264.725pt x 472.76625pt>
 File: Bilder/web.jpg Graphic file (type jpg)
  <use Bilder/web.jpg>
 Package pdftex.def Info: Bilder/web.jpg used on input line 14.
 (pdftex.def)             Requested size: 731.23584pt x 273.34616pt.
 
-<Bilder/standalone.jpg, id=377, 570.63188pt x 464.4853pt>
+<Bilder/standalone.jpg, id=382, 570.63188pt x 464.4853pt>
 File: Bilder/standalone.jpg Graphic file (type jpg)
 
 <use Bilder/standalone.jpg>
@@ -934,7 +934,7 @@ Overfull \hbox (11.6785pt too wide) in paragraph at lines 21--21
 []\T1/ppl/b/n/17.28 Umsetzung der Be-nut-zer-schnitt-stel-len für meh-
  []
 
-<Bilder/mcgrob.png, id=380, 452.4403pt x 231.11343pt>
+<Bilder/mcgrob.png, id=385, 452.4403pt x 231.11343pt>
 File: Bilder/mcgrob.png Graphic file (type png)
  <use Bilder/mcgrob.png>
 Package pdftex.def Info: Bilder/mcgrob.png used on input line 35.
@@ -1044,7 +1044,7 @@ Overfull \hbox (2.08488pt too wide) in paragraph at lines 159--162
 -ren/Trans-for-ma-
  []
 
-<Bilder/mdsd.jpg, id=539, 663.22781pt x 380.92313pt>
+<Bilder/mdsd.jpg, id=544, 663.22781pt x 380.92313pt>
 File: Bilder/mdsd.jpg Graphic file (type jpg)
  <use Bilder/mdsd.jpg>
 Package pdftex.def Info: Bilder/mdsd.jpg used on input line 171.
@@ -1099,7 +1099,7 @@ Overfull \hbox (13.27025pt too wide) in paragraph at lines 3--9
 li-che UI-frameworks
  []
 
-<Bilder/neuerAnsatz.png, id=655, 632.3625pt x 269.50688pt>
+<Bilder/neuerAnsatz.png, id=660, 632.3625pt x 269.50688pt>
 File: Bilder/neuerAnsatz.png Graphic file (type png)
 
 <use Bilder/neuerAnsatz.png>
@@ -1196,64 +1196,62 @@ Overfull \hbox (4.17305pt too wide) in paragraph at lines 48--75
  []
 
 [33]
-Overfull \hbox (5.74957pt too wide) in paragraph at lines 77--127
+Overfull \hbox (5.74957pt too wide) in paragraph at lines 77--132
 \T1/ppl/m/n/12 mög-lich meh-re-re Kom-po-nen-ten ei-nem Area zu-zu-wei-sen. Für
  die Meta-Daten
  []
 
 
-Overfull \hbox (0.82944pt too wide) in paragraph at lines 77--127
+Overfull \hbox (0.82944pt too wide) in paragraph at lines 77--132
 \T1/ppl/m/n/12 in die GUI-Beschreibung ein-ge-bun-den und ver-wen-det wer-den. 
 Hier-zu müs-
  []
 
-[34] [35] <Bilder/v1-1.jpg, id=719, 1393.45593pt x 1086.30844pt>
+[34] [35] <Bilder/v1-1.jpg, id=724, 1393.45593pt x 1086.30844pt>
 File: Bilder/v1-1.jpg Graphic file (type jpg)
 
 <use Bilder/v1-1.jpg>
-Package pdftex.def Info: Bilder/v1-1.jpg used on input line 135.
+Package pdftex.def Info: Bilder/v1-1.jpg used on input line 142.
 (pdftex.def)             Requested size: 398.3386pt x 310.52936pt.
- <Bilder/v1-2.jpg, id=722, 1425.07407pt x 1158.57843pt>
+ <Bilder/v1-2.jpg, id=727, 1425.07407pt x 1158.57843pt>
 File: Bilder/v1-2.jpg Graphic file (type jpg)
 
 <use Bilder/v1-2.jpg>
-Package pdftex.def Info: Bilder/v1-2.jpg used on input line 145.
+Package pdftex.def Info: Bilder/v1-2.jpg used on input line 152.
 (pdftex.def)             Requested size: 398.3386pt x 323.83403pt.
- [36] [37 <C:/Users/ngundermann/git/BA/thesis/BA/Bilder/v1-1.jpg> <C:/Users/ngu
-ndermann/git/BA/thesis/BA/Bilder/v1-2.jpg>]
+ [36] [37 <C:/Users/ngundermann/git/BA/thesis/BA/Bilder/v1-1.jpg>]
 
-Package Listings Warning: Text dropped after begin of listing on input line 165
+Package Listings Warning: Text dropped after begin of listing on input line 172
 .
 
-
-Overfull \hbox (11.55698pt too wide) in paragraph at lines 183--192
+[38 <C:/Users/ngundermann/git/BA/thesis/BA/Bilder/v1-2.jpg>]
+Overfull \hbox (11.55698pt too wide) in paragraph at lines 190--199
 \T1/ppl/m/n/12 nen-ten-de-fi-ni-ti-on zu fin-den (\T1/ppl/m/it/12 Ti-tel \T1/pp
 l/m/n/12 und \T1/ppl/m/it/12 Typ\T1/ppl/m/n/12 ). Bei der Multiselection-Kompon
 ente
  []
 
-[38]
 
-Package Listings Warning: Text dropped after begin of listing on input line 201
-.
-
-
-Overfull \hbox (1.76544pt too wide) in paragraph at lines 209--216
+Overfull \hbox (1.76544pt too wide) in paragraph at lines 216--223
 \T1/ppl/m/n/12 mit dem ent-spre-chen-den Schlüs-sel-wort auf-ge-zählt wer-den s
 ol-len. Auf-grund
  []
 
 [39]
 
-LaTeX Warning: Reference `' on page 40 undefined on input line 232.
+LaTeX Warning: Reference `' on page 40 undefined on input line 239.
 
 
-Overfull \hbox (0.87715pt too wide) in paragraph at lines 247--257
+Overfull \hbox (0.87715pt too wide) in paragraph at lines 254--264
 \T1/ppl/m/n/12 ver-fei-nern. Li-sting []8.6[] ist ein Bei-spiel für die Area-Zu
 weisung von drei Kom-
  []
 
-[40]) [41] (C:\Users\ngundermann\git\BA\thesis\BA\EntwicklungGen.tex
+[40]
+
+LaTeX Warning: Reference `' on page 41 undefined on input line 277.
+
+[41]) [42] (C:\Users\ngundermann\git\BA\thesis\BA\EntwicklungGen.tex
 Kapitel 9.
 
 Underfull \hbox (badness 10000) in paragraph at lines 6--17
@@ -1270,18 +1268,18 @@ Overfull \hbox (4.83632pt too wide) in paragraph at lines 17--17
 Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
 less on input line 29.
 
-[42
+[43
 
 
 
-] [43] (C:\Users\ngundermann\git\BA\thesis\BA\Fazit.tex
+] [44] (C:\Users\ngundermann\git\BA\thesis\BA\Fazit.tex
 Kapitel 10.
 )
 
 Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
 less on input line 30.
 
-[44
+[45
 
 
 
@@ -1448,7 +1446,7 @@ Your command will be ignored, type <return> to proceed
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 49.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 49.
 Package rerunfilecheck Info: File `ba.out' has not changed.
-(rerunfilecheck)             Checksum: 2C236A8D9F7E573880C6F84BE9E2C88A;3872.
+(rerunfilecheck)             Checksum: C53D0F3BAA305F42AB7D30F445110194;3872.
 
 
 LaTeX Warning: There were undefined references.
@@ -1456,13 +1454,13 @@ LaTeX Warning: There were undefined references.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 49.
  ) 
 Here is how much of TeX's memory you used:
- 14042 strings out of 493921
- 207939 string characters out of 3150471
- 402230 words of memory out of 3000000
- 16606 multiletter control sequences out of 15000+200000
+ 14074 strings out of 493921
+ 208418 string characters out of 3150471
+ 402422 words of memory out of 3000000
+ 16610 multiletter control sequences out of 15000+200000
  60069 words of font info for 75 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 50i,12n,49p,1722b,2009s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 50i,12n,49p,1722b,2064s stack positions out of 5000i,500n,10000p,200000b,50000s
 pdfTeX warning (dest): name{glo:Multiselection-Komponente} has been reference
 d but does not exist, replaced by a fixed one
 
@@ -1508,9 +1506,9 @@ lm/lmsy10.pfb><D:/Program Files/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><D:/Prog
 ram Files/MiKTeX/fonts/type1/urw/palatino/uplb8a.pfb><D:/Program Files/MiKTeX/f
 onts/type1/urw/palatino/uplr8a.pfb><D:/Program Files/MiKTeX/fonts/type1/urw/pal
 atino/uplr8a.pfb><D:/Program Files/MiKTeX/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on ba.pdf (58 pages, 1787101 bytes).
+Output written on ba.pdf (59 pages, 1794752 bytes).
 PDF statistics:
- 1064 PDF objects out of 1200 (max. 8388607)
- 324 named destinations out of 1000 (max. 500000)
+ 1105 PDF objects out of 1200 (max. 8388607)
+ 352 named destinations out of 1000 (max. 500000)
  457 words of extra memory for PDF output out of 10000 (max. 10000000)
 

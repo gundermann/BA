@@ -4,10 +4,13 @@ package org.deg.xtext.gui.guiDSL.impl;
 
 import org.deg.xtext.gui.guiDSL.GuiDSLPackage;
 import org.deg.xtext.gui.guiDSL.LabelDefinition;
+import org.deg.xtext.gui.guiDSL.Properties;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
@@ -18,7 +21,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.deg.xtext.gui.guiDSL.impl.LabelDefinitionImpl#getPropertyKey <em>Property Key</em>}</li>
+ *   <li>{@link org.deg.xtext.gui.guiDSL.impl.LabelDefinitionImpl#getProperties <em>Properties</em>}</li>
  * </ul>
  * </p>
  *
@@ -27,24 +30,14 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 public class LabelDefinitionImpl extends ComponentDefinitionImpl implements LabelDefinition
 {
   /**
-   * The default value of the '{@link #getPropertyKey() <em>Property Key</em>}' attribute.
+   * The cached value of the '{@link #getProperties() <em>Properties</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getPropertyKey()
+   * @see #getProperties()
    * @generated
    * @ordered
    */
-  protected static final String PROPERTY_KEY_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getPropertyKey() <em>Property Key</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getPropertyKey()
-   * @generated
-   * @ordered
-   */
-  protected String propertyKey = PROPERTY_KEY_EDEFAULT;
+  protected Properties properties;
 
   /**
    * <!-- begin-user-doc -->
@@ -72,9 +65,9 @@ public class LabelDefinitionImpl extends ComponentDefinitionImpl implements Labe
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getPropertyKey()
+  public Properties getProperties()
   {
-    return propertyKey;
+    return properties;
   }
 
   /**
@@ -82,12 +75,53 @@ public class LabelDefinitionImpl extends ComponentDefinitionImpl implements Labe
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setPropertyKey(String newPropertyKey)
+  public NotificationChain basicSetProperties(Properties newProperties, NotificationChain msgs)
   {
-    String oldPropertyKey = propertyKey;
-    propertyKey = newPropertyKey;
+    Properties oldProperties = properties;
+    properties = newProperties;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, GuiDSLPackage.LABEL_DEFINITION__PROPERTY_KEY, oldPropertyKey, propertyKey));
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GuiDSLPackage.LABEL_DEFINITION__PROPERTIES, oldProperties, newProperties);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setProperties(Properties newProperties)
+  {
+    if (newProperties != properties)
+    {
+      NotificationChain msgs = null;
+      if (properties != null)
+        msgs = ((InternalEObject)properties).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GuiDSLPackage.LABEL_DEFINITION__PROPERTIES, null, msgs);
+      if (newProperties != null)
+        msgs = ((InternalEObject)newProperties).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GuiDSLPackage.LABEL_DEFINITION__PROPERTIES, null, msgs);
+      msgs = basicSetProperties(newProperties, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, GuiDSLPackage.LABEL_DEFINITION__PROPERTIES, newProperties, newProperties));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+  {
+    switch (featureID)
+    {
+      case GuiDSLPackage.LABEL_DEFINITION__PROPERTIES:
+        return basicSetProperties(null, msgs);
+    }
+    return super.eInverseRemove(otherEnd, featureID, msgs);
   }
 
   /**
@@ -100,8 +134,8 @@ public class LabelDefinitionImpl extends ComponentDefinitionImpl implements Labe
   {
     switch (featureID)
     {
-      case GuiDSLPackage.LABEL_DEFINITION__PROPERTY_KEY:
-        return getPropertyKey();
+      case GuiDSLPackage.LABEL_DEFINITION__PROPERTIES:
+        return getProperties();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -116,8 +150,8 @@ public class LabelDefinitionImpl extends ComponentDefinitionImpl implements Labe
   {
     switch (featureID)
     {
-      case GuiDSLPackage.LABEL_DEFINITION__PROPERTY_KEY:
-        setPropertyKey((String)newValue);
+      case GuiDSLPackage.LABEL_DEFINITION__PROPERTIES:
+        setProperties((Properties)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -133,8 +167,8 @@ public class LabelDefinitionImpl extends ComponentDefinitionImpl implements Labe
   {
     switch (featureID)
     {
-      case GuiDSLPackage.LABEL_DEFINITION__PROPERTY_KEY:
-        setPropertyKey(PROPERTY_KEY_EDEFAULT);
+      case GuiDSLPackage.LABEL_DEFINITION__PROPERTIES:
+        setProperties((Properties)null);
         return;
     }
     super.eUnset(featureID);
@@ -150,27 +184,10 @@ public class LabelDefinitionImpl extends ComponentDefinitionImpl implements Labe
   {
     switch (featureID)
     {
-      case GuiDSLPackage.LABEL_DEFINITION__PROPERTY_KEY:
-        return PROPERTY_KEY_EDEFAULT == null ? propertyKey != null : !PROPERTY_KEY_EDEFAULT.equals(propertyKey);
+      case GuiDSLPackage.LABEL_DEFINITION__PROPERTIES:
+        return properties != null;
     }
     return super.eIsSet(featureID);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public String toString()
-  {
-    if (eIsProxy()) return super.toString();
-
-    StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (propertyKey: ");
-    result.append(propertyKey);
-    result.append(')');
-    return result.toString();
   }
 
 } //LabelDefinitionImpl

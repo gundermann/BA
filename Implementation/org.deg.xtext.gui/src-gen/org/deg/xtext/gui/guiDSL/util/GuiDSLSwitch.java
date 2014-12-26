@@ -79,6 +79,36 @@ public class GuiDSLSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case GuiDSLPackage.REFINEMENT:
+      {
+        Refinement refinement = (Refinement)theEObject;
+        T result = caseRefinement(refinement);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case GuiDSLPackage.COMPONENT_REFINEMENT:
+      {
+        ComponentRefinement componentRefinement = (ComponentRefinement)theEObject;
+        T result = caseComponentRefinement(componentRefinement);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case GuiDSLPackage.BUTTON_REFINEMENT:
+      {
+        ButtonRefinement buttonRefinement = (ButtonRefinement)theEObject;
+        T result = caseButtonRefinement(buttonRefinement);
+        if (result == null) result = caseComponentRefinement(buttonRefinement);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case GuiDSLPackage.LABEL_REFINEMENT:
+      {
+        LabelRefinement labelRefinement = (LabelRefinement)theEObject;
+        T result = caseLabelRefinement(labelRefinement);
+        if (result == null) result = caseComponentRefinement(labelRefinement);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case GuiDSLPackage.PROPERTY:
       {
         Property property = (Property)theEObject;
@@ -123,8 +153,8 @@ public class GuiDSLSwitch<T> extends Switch<T>
       }
       case GuiDSLPackage.COMPLEX_COMPONENT:
       {
-        complexComponent complexComponent = (complexComponent)theEObject;
-        T result = casecomplexComponent(complexComponent);
+        ComplexComponent complexComponent = (ComplexComponent)theEObject;
+        T result = caseComplexComponent(complexComponent);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -132,7 +162,7 @@ public class GuiDSLSwitch<T> extends Switch<T>
       {
         Multiselection multiselection = (Multiselection)theEObject;
         T result = caseMultiselection(multiselection);
-        if (result == null) result = casecomplexComponent(multiselection);
+        if (result == null) result = caseComplexComponent(multiselection);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -198,10 +228,10 @@ public class GuiDSLSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case GuiDSLPackage.INTERACTION:
+      case GuiDSLPackage.PROPERTIES:
       {
-        Interaction interaction = (Interaction)theEObject;
-        T result = caseInteraction(interaction);
+        Properties properties = (Properties)theEObject;
+        T result = caseProperties(properties);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -229,6 +259,70 @@ public class GuiDSLSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseUIDescription(UIDescription object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Refinement</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Refinement</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseRefinement(Refinement object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Component Refinement</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Component Refinement</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseComponentRefinement(ComponentRefinement object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Button Refinement</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Button Refinement</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseButtonRefinement(ButtonRefinement object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Label Refinement</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Label Refinement</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseLabelRefinement(LabelRefinement object)
   {
     return null;
   }
@@ -330,17 +424,17 @@ public class GuiDSLSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>complex Component</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Complex Component</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>complex Component</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Complex Component</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T casecomplexComponent(complexComponent object)
+  public T caseComplexComponent(ComplexComponent object)
   {
     return null;
   }
@@ -490,17 +584,17 @@ public class GuiDSLSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Interaction</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Properties</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Interaction</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Properties</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseInteraction(Interaction object)
+  public T caseProperties(Properties object)
   {
     return null;
   }

@@ -13,7 +13,6 @@ import org.deg.xtext.gui.guiDSL.ButtonDefinition;
 import org.deg.xtext.gui.guiDSL.CheckboxDefinition;
 import org.deg.xtext.gui.guiDSL.ComponentDefinition;
 import org.deg.xtext.gui.guiDSL.Definition;
-import org.deg.xtext.gui.guiDSL.Interaction;
 import org.deg.xtext.gui.guiDSL.LabelDefinition;
 import org.deg.xtext.gui.guiDSL.RadioboxDefinition;
 import org.deg.xtext.gui.guiDSL.TextfieldDefinition;
@@ -42,8 +41,6 @@ public class GuiDSLGenerator implements IGenerator {
   private List<String> imports = new ArrayList<String>();
   
   private Boolean compiled = Boolean.valueOf(false);
-  
-  private List<Interaction> interactions = new ArrayList<Interaction>();
   
   private Map<String, String> uiElemetsToType = new HashMap<String, String>();
   
@@ -88,7 +85,6 @@ public class GuiDSLGenerator implements IGenerator {
         }
         this.imports.clear();
         this.globalVars.clear();
-        this.interactions.clear();
       }
     }
   }
@@ -338,11 +334,8 @@ public class GuiDSLGenerator implements IGenerator {
   
   public CharSequence genInteractions() {
     StringConcatenation _builder = new StringConcatenation();
-    {
-      for(final Interaction i : this.interactions) {
-      }
-    }
     _builder.newLine();
+    _builder.append("//\tdef extract(UIAction action) ");
     return _builder;
   }
   
@@ -506,17 +499,9 @@ public class GuiDSLGenerator implements IGenerator {
     _builder.append(" = new Label();");
     _builder.newLineIfNotEmpty();
     _builder.append("\t");
+    _builder.append("return ");
     String _name_2 = definition.getName();
     _builder.append(_name_2, "\t");
-    _builder.append(".setText(\"");
-    String _text = definition.getText();
-    _builder.append(_text, "\t");
-    _builder.append("\");");
-    _builder.newLineIfNotEmpty();
-    _builder.append("\t");
-    _builder.append("return ");
-    String _name_3 = definition.getName();
-    _builder.append(_name_3, "\t");
     _builder.append(";");
     _builder.newLineIfNotEmpty();
     return _builder;
@@ -548,24 +533,11 @@ public class GuiDSLGenerator implements IGenerator {
     _builder.append("= new Button();");
     _builder.newLineIfNotEmpty();
     _builder.append("\t");
+    _builder.append("return ");
     String _name_2 = definition.getName();
     _builder.append(_name_2, "\t");
-    _builder.append(".setText(\"");
-    String _text = definition.getText();
-    _builder.append(_text, "\t");
-    _builder.append("\");");
-    _builder.newLineIfNotEmpty();
-    _builder.append("\t");
-    _builder.append("return ");
-    String _name_3 = definition.getName();
-    _builder.append(_name_3, "\t");
     _builder.append(";");
     _builder.newLineIfNotEmpty();
     return _builder;
-  }
-  
-  public String addInteractionMethod(final Interaction interaction) {
-    this.interactions.add(interaction);
-    return "";
   }
 }

@@ -32,6 +32,42 @@ public interface GuiDSLFactory extends EFactory
   UIDescription createUIDescription();
 
   /**
+   * Returns a new object of class '<em>Refinement</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Refinement</em>'.
+   * @generated
+   */
+  Refinement createRefinement();
+
+  /**
+   * Returns a new object of class '<em>Component Refinement</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Component Refinement</em>'.
+   * @generated
+   */
+  ComponentRefinement createComponentRefinement();
+
+  /**
+   * Returns a new object of class '<em>Button Refinement</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Button Refinement</em>'.
+   * @generated
+   */
+  ButtonRefinement createButtonRefinement();
+
+  /**
+   * Returns a new object of class '<em>Label Refinement</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Label Refinement</em>'.
+   * @generated
+   */
+  LabelRefinement createLabelRefinement();
+
+  /**
    * Returns a new object of class '<em>Property</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -86,13 +122,13 @@ public interface GuiDSLFactory extends EFactory
   UIDescriptionImport createUIDescriptionImport();
 
   /**
-   * Returns a new object of class '<em>complex Component</em>'.
+   * Returns a new object of class '<em>Complex Component</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>complex Component</em>'.
+   * @return a new object of class '<em>Complex Component</em>'.
    * @generated
    */
-  complexComponent createcomplexComponent();
+  ComplexComponent createComplexComponent();
 
   /**
    * Returns a new object of class '<em>Multiselection</em>'.
@@ -176,13 +212,13 @@ public interface GuiDSLFactory extends EFactory
   ButtonDefinition createButtonDefinition();
 
   /**
-   * Returns a new object of class '<em>Interaction</em>'.
+   * Returns a new object of class '<em>Properties</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Interaction</em>'.
+   * @return a new object of class '<em>Properties</em>'.
    * @generated
    */
-  Interaction createInteraction();
+  Properties createProperties();
 
   /**
    * Returns a new object of class '<em>Label Definition</em>'.

@@ -18,6 +18,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.deg.xtext.gui.guiDSL.UIDescription#getTypeDefinition <em>Type Definition</em>}</li>
  *   <li>{@link org.deg.xtext.gui.guiDSL.UIDescription#getProperty <em>Property</em>}</li>
  *   <li>{@link org.deg.xtext.gui.guiDSL.UIDescription#getUsedDescriptions <em>Used Descriptions</em>}</li>
+ *   <li>{@link org.deg.xtext.gui.guiDSL.UIDescription#getRefinements <em>Refinements</em>}</li>
  *   <li>{@link org.deg.xtext.gui.guiDSL.UIDescription#getDefinitions <em>Definitions</em>}</li>
  *   <li>{@link org.deg.xtext.gui.guiDSL.UIDescription#getAreas <em>Areas</em>}</li>
  * </ul>
@@ -122,6 +123,22 @@ public interface UIDescription extends EObject
    * @generated
    */
   EList<UsedDescriptions> getUsedDescriptions();
+
+  /**
+   * Returns the value of the '<em><b>Refinements</b></em>' containment reference list.
+   * The list contents are of type {@link org.deg.xtext.gui.guiDSL.Refinement}.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Refinements</em>' containment reference list isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Refinements</em>' containment reference list.
+   * @see org.deg.xtext.gui.guiDSL.GuiDSLPackage#getUIDescription_Refinements()
+   * @model containment="true"
+   * @generated
+   */
+  EList<Refinement> getRefinements();
 
   /**
    * Returns the value of the '<em><b>Definitions</b></em>' containment reference list.

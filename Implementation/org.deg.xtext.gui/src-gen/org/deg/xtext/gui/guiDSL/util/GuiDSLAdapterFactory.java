@@ -80,6 +80,26 @@ public class GuiDSLAdapterFactory extends AdapterFactoryImpl
         return createUIDescriptionAdapter();
       }
       @Override
+      public Adapter caseRefinement(Refinement object)
+      {
+        return createRefinementAdapter();
+      }
+      @Override
+      public Adapter caseComponentRefinement(ComponentRefinement object)
+      {
+        return createComponentRefinementAdapter();
+      }
+      @Override
+      public Adapter caseButtonRefinement(ButtonRefinement object)
+      {
+        return createButtonRefinementAdapter();
+      }
+      @Override
+      public Adapter caseLabelRefinement(LabelRefinement object)
+      {
+        return createLabelRefinementAdapter();
+      }
+      @Override
       public Adapter caseProperty(Property object)
       {
         return createPropertyAdapter();
@@ -110,9 +130,9 @@ public class GuiDSLAdapterFactory extends AdapterFactoryImpl
         return createUIDescriptionImportAdapter();
       }
       @Override
-      public Adapter casecomplexComponent(complexComponent object)
+      public Adapter caseComplexComponent(ComplexComponent object)
       {
-        return createcomplexComponentAdapter();
+        return createComplexComponentAdapter();
       }
       @Override
       public Adapter caseMultiselection(Multiselection object)
@@ -160,9 +180,9 @@ public class GuiDSLAdapterFactory extends AdapterFactoryImpl
         return createButtonDefinitionAdapter();
       }
       @Override
-      public Adapter caseInteraction(Interaction object)
+      public Adapter caseProperties(Properties object)
       {
-        return createInteractionAdapter();
+        return createPropertiesAdapter();
       }
       @Override
       public Adapter caseLabelDefinition(LabelDefinition object)
@@ -202,6 +222,66 @@ public class GuiDSLAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createUIDescriptionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.deg.xtext.gui.guiDSL.Refinement <em>Refinement</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.deg.xtext.gui.guiDSL.Refinement
+   * @generated
+   */
+  public Adapter createRefinementAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.deg.xtext.gui.guiDSL.ComponentRefinement <em>Component Refinement</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.deg.xtext.gui.guiDSL.ComponentRefinement
+   * @generated
+   */
+  public Adapter createComponentRefinementAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.deg.xtext.gui.guiDSL.ButtonRefinement <em>Button Refinement</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.deg.xtext.gui.guiDSL.ButtonRefinement
+   * @generated
+   */
+  public Adapter createButtonRefinementAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.deg.xtext.gui.guiDSL.LabelRefinement <em>Label Refinement</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.deg.xtext.gui.guiDSL.LabelRefinement
+   * @generated
+   */
+  public Adapter createLabelRefinementAdapter()
   {
     return null;
   }
@@ -297,16 +377,16 @@ public class GuiDSLAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.deg.xtext.gui.guiDSL.complexComponent <em>complex Component</em>}'.
+   * Creates a new adapter for an object of class '{@link org.deg.xtext.gui.guiDSL.ComplexComponent <em>Complex Component</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see org.deg.xtext.gui.guiDSL.complexComponent
+   * @see org.deg.xtext.gui.guiDSL.ComplexComponent
    * @generated
    */
-  public Adapter createcomplexComponentAdapter()
+  public Adapter createComplexComponentAdapter()
   {
     return null;
   }
@@ -447,16 +527,16 @@ public class GuiDSLAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.deg.xtext.gui.guiDSL.Interaction <em>Interaction</em>}'.
+   * Creates a new adapter for an object of class '{@link org.deg.xtext.gui.guiDSL.Properties <em>Properties</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see org.deg.xtext.gui.guiDSL.Interaction
+   * @see org.deg.xtext.gui.guiDSL.Properties
    * @generated
    */
-  public Adapter createInteractionAdapter()
+  public Adapter createPropertiesAdapter()
   {
     return null;
   }

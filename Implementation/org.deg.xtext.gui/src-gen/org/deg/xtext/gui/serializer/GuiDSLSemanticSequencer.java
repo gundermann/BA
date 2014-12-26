@@ -5,14 +5,17 @@ import com.google.inject.Provider;
 import org.deg.xtext.gui.guiDSL.AreaAssignment;
 import org.deg.xtext.gui.guiDSL.AreaCount;
 import org.deg.xtext.gui.guiDSL.ButtonDefinition;
+import org.deg.xtext.gui.guiDSL.ButtonRefinement;
 import org.deg.xtext.gui.guiDSL.CheckboxDefinition;
 import org.deg.xtext.gui.guiDSL.Definition;
 import org.deg.xtext.gui.guiDSL.GuiDSLPackage;
-import org.deg.xtext.gui.guiDSL.Interaction;
 import org.deg.xtext.gui.guiDSL.LabelDefinition;
+import org.deg.xtext.gui.guiDSL.LabelRefinement;
 import org.deg.xtext.gui.guiDSL.Multiselection;
+import org.deg.xtext.gui.guiDSL.Properties;
 import org.deg.xtext.gui.guiDSL.Property;
 import org.deg.xtext.gui.guiDSL.RadioboxDefinition;
+import org.deg.xtext.gui.guiDSL.Refinement;
 import org.deg.xtext.gui.guiDSL.TableDefinition;
 import org.deg.xtext.gui.guiDSL.TextfieldDefinition;
 import org.deg.xtext.gui.guiDSL.TreeDefinition;
@@ -60,6 +63,13 @@ public class GuiDSLSemanticSequencer extends AbstractDelegatingSemanticSequencer
 					return; 
 				}
 				else break;
+			case GuiDSLPackage.BUTTON_REFINEMENT:
+				if(context == grammarAccess.getButtonRefinementRule() ||
+				   context == grammarAccess.getComponentRefinementRule()) {
+					sequence_ButtonRefinement(context, (ButtonRefinement) semanticObject); 
+					return; 
+				}
+				else break;
 			case GuiDSLPackage.CHECKBOX_DEFINITION:
 				if(context == grammarAccess.getCheckboxDefinitionRule() ||
 				   context == grammarAccess.getComponentDefinitionRule()) {
@@ -73,12 +83,6 @@ public class GuiDSLSemanticSequencer extends AbstractDelegatingSemanticSequencer
 					return; 
 				}
 				else break;
-			case GuiDSLPackage.INTERACTION:
-				if(context == grammarAccess.getInteractionRule()) {
-					sequence_Interaction(context, (Interaction) semanticObject); 
-					return; 
-				}
-				else break;
 			case GuiDSLPackage.LABEL_DEFINITION:
 				if(context == grammarAccess.getComponentDefinitionRule() ||
 				   context == grammarAccess.getLabelDefinitionRule()) {
@@ -86,10 +90,23 @@ public class GuiDSLSemanticSequencer extends AbstractDelegatingSemanticSequencer
 					return; 
 				}
 				else break;
+			case GuiDSLPackage.LABEL_REFINEMENT:
+				if(context == grammarAccess.getComponentRefinementRule() ||
+				   context == grammarAccess.getLabelRefinementRule()) {
+					sequence_LabelRefinement(context, (LabelRefinement) semanticObject); 
+					return; 
+				}
+				else break;
 			case GuiDSLPackage.MULTISELECTION:
-				if(context == grammarAccess.getMultiselectionRule() ||
-				   context == grammarAccess.getComplexComponentRule()) {
+				if(context == grammarAccess.getComplexComponentRule() ||
+				   context == grammarAccess.getMultiselectionRule()) {
 					sequence_Multiselection(context, (Multiselection) semanticObject); 
+					return; 
+				}
+				else break;
+			case GuiDSLPackage.PROPERTIES:
+				if(context == grammarAccess.getPropertiesRule()) {
+					sequence_Properties(context, (Properties) semanticObject); 
 					return; 
 				}
 				else break;
@@ -103,6 +120,12 @@ public class GuiDSLSemanticSequencer extends AbstractDelegatingSemanticSequencer
 				if(context == grammarAccess.getComponentDefinitionRule() ||
 				   context == grammarAccess.getRadioboxDefinitionRule()) {
 					sequence_RadioboxDefinition(context, (RadioboxDefinition) semanticObject); 
+					return; 
+				}
+				else break;
+			case GuiDSLPackage.REFINEMENT:
+				if(context == grammarAccess.getRefinementRule()) {
+					sequence_Refinement(context, (Refinement) semanticObject); 
 					return; 
 				}
 				else break;
@@ -182,9 +205,18 @@ public class GuiDSLSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	
 	/**
 	 * Constraint:
-	 *     (type='Button' name=STRING propertyKey=STRING? text=STRING? interactiontype+=Interactiontype*)
+	 *     (type='Button' name=STRING properties=Properties?)
 	 */
 	protected void sequence_ButtonDefinition(EObject context, ButtonDefinition semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (type='Button' name=STRING properties=Properties?)
+	 */
+	protected void sequence_ButtonRefinement(EObject context, ButtonRefinement semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -216,25 +248,18 @@ public class GuiDSLSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	
 	/**
 	 * Constraint:
-	 *     name=STRING
+	 *     (type='Label' name=STRING properties=Properties?)
 	 */
-	protected void sequence_Interaction(EObject context, Interaction semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, GuiDSLPackage.Literals.INTERACTION__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, GuiDSLPackage.Literals.INTERACTION__NAME));
-		}
-		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getInteractionAccess().getNameSTRINGTerminalRuleCall_0_0(), semanticObject.getName());
-		feeder.finish();
+	protected void sequence_LabelDefinition(EObject context, LabelDefinition semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
 	 * Constraint:
-	 *     (type='Label' name=STRING propertyKey=STRING? text=STRING?)
+	 *     (type='Label' name=STRING properties=Properties?)
 	 */
-	protected void sequence_LabelDefinition(EObject context, LabelDefinition semanticObject) {
+	protected void sequence_LabelRefinement(EObject context, LabelRefinement semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -244,6 +269,15 @@ public class GuiDSLSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	 *     (descriptionName='Multiselection' inputType=STRING?)
 	 */
 	protected void sequence_Multiselection(EObject context, Multiselection semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (propertyKey=STRING? text=STRING? interactiontype+=Interactiontype*)
+	 */
+	protected void sequence_Properties(EObject context, Properties semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -270,6 +304,22 @@ public class GuiDSLSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	 */
 	protected void sequence_RadioboxDefinition(EObject context, RadioboxDefinition semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     concreteRefinement=ComponentRefinement
+	 */
+	protected void sequence_Refinement(EObject context, Refinement semanticObject) {
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, GuiDSLPackage.Literals.REFINEMENT__CONCRETE_REFINEMENT) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, GuiDSLPackage.Literals.REFINEMENT__CONCRETE_REFINEMENT));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getRefinementAccess().getConcreteRefinementComponentRefinementParserRuleCall_1_0(), semanticObject.getConcreteRefinement());
+		feeder.finish();
 	}
 	
 	
@@ -337,8 +387,9 @@ public class GuiDSLSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	 *     (
 	 *         areaCount=AreaCount 
 	 *         typeDefinition=TypeDefinition 
-	 *         property=Property 
+	 *         property=Property? 
 	 *         usedDescriptions+=UsedDescriptions* 
+	 *         refinements+=Refinement* 
 	 *         definitions+=Definition* 
 	 *         areas+=AreaAssignment*
 	 *     )
@@ -350,7 +401,7 @@ public class GuiDSLSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	
 	/**
 	 * Constraint:
-	 *     ((description=UIDescriptionImport | description=complexComponent) localName=STRING?)
+	 *     ((description=UIDescriptionImport | description=ComplexComponent) localName=STRING?)
 	 */
 	protected void sequence_UsedDescriptions(EObject context, UsedDescriptions semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

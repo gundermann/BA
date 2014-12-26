@@ -23,20 +23,9 @@ public class GuiDSLSyntacticSequencer extends AbstractSyntacticSequencer {
 	
 	@Override
 	protected String getUnassignedRuleCallToken(EObject semanticObject, RuleCall ruleCall, INode node) {
-		if(ruleCall.getRule() == grammarAccess.getInteractiontypeRule())
-			return getInteractiontypeToken(semanticObject, ruleCall, node);
 		return "";
 	}
 	
-	/**
-	 * Interactiontype:
-	 * 	'Click' | 'ChangeText';
-	 */
-	protected String getInteractiontypeToken(EObject semanticObject, RuleCall ruleCall, INode node) {
-		if (node != null)
-			return getTokenText(node);
-		return "Click";
-	}
 	
 	@Override
 	protected void emitUnassignedTokens(EObject semanticObject, ISynTransition transition, INode fromNode, INode toNode) {

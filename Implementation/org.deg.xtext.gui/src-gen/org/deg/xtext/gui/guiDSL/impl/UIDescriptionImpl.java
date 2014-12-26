@@ -9,6 +9,7 @@ import org.deg.xtext.gui.guiDSL.AreaCount;
 import org.deg.xtext.gui.guiDSL.Definition;
 import org.deg.xtext.gui.guiDSL.GuiDSLPackage;
 import org.deg.xtext.gui.guiDSL.Property;
+import org.deg.xtext.gui.guiDSL.Refinement;
 import org.deg.xtext.gui.guiDSL.TypeDefinition;
 import org.deg.xtext.gui.guiDSL.UIDescription;
 import org.deg.xtext.gui.guiDSL.UsedDescriptions;
@@ -38,6 +39,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link org.deg.xtext.gui.guiDSL.impl.UIDescriptionImpl#getTypeDefinition <em>Type Definition</em>}</li>
  *   <li>{@link org.deg.xtext.gui.guiDSL.impl.UIDescriptionImpl#getProperty <em>Property</em>}</li>
  *   <li>{@link org.deg.xtext.gui.guiDSL.impl.UIDescriptionImpl#getUsedDescriptions <em>Used Descriptions</em>}</li>
+ *   <li>{@link org.deg.xtext.gui.guiDSL.impl.UIDescriptionImpl#getRefinements <em>Refinements</em>}</li>
  *   <li>{@link org.deg.xtext.gui.guiDSL.impl.UIDescriptionImpl#getDefinitions <em>Definitions</em>}</li>
  *   <li>{@link org.deg.xtext.gui.guiDSL.impl.UIDescriptionImpl#getAreas <em>Areas</em>}</li>
  * </ul>
@@ -86,6 +88,16 @@ public class UIDescriptionImpl extends MinimalEObjectImpl.Container implements U
    * @ordered
    */
   protected EList<UsedDescriptions> usedDescriptions;
+
+  /**
+   * The cached value of the '{@link #getRefinements() <em>Refinements</em>}' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getRefinements()
+   * @generated
+   * @ordered
+   */
+  protected EList<Refinement> refinements;
 
   /**
    * The cached value of the '{@link #getDefinitions() <em>Definitions</em>}' containment reference list.
@@ -291,6 +303,20 @@ public class UIDescriptionImpl extends MinimalEObjectImpl.Container implements U
    * <!-- end-user-doc -->
    * @generated
    */
+  public EList<Refinement> getRefinements()
+  {
+    if (refinements == null)
+    {
+      refinements = new EObjectContainmentEList<Refinement>(Refinement.class, this, GuiDSLPackage.UI_DESCRIPTION__REFINEMENTS);
+    }
+    return refinements;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EList<Definition> getDefinitions()
   {
     if (definitions == null)
@@ -332,6 +358,8 @@ public class UIDescriptionImpl extends MinimalEObjectImpl.Container implements U
         return basicSetProperty(null, msgs);
       case GuiDSLPackage.UI_DESCRIPTION__USED_DESCRIPTIONS:
         return ((InternalEList<?>)getUsedDescriptions()).basicRemove(otherEnd, msgs);
+      case GuiDSLPackage.UI_DESCRIPTION__REFINEMENTS:
+        return ((InternalEList<?>)getRefinements()).basicRemove(otherEnd, msgs);
       case GuiDSLPackage.UI_DESCRIPTION__DEFINITIONS:
         return ((InternalEList<?>)getDefinitions()).basicRemove(otherEnd, msgs);
       case GuiDSLPackage.UI_DESCRIPTION__AREAS:
@@ -358,6 +386,8 @@ public class UIDescriptionImpl extends MinimalEObjectImpl.Container implements U
         return getProperty();
       case GuiDSLPackage.UI_DESCRIPTION__USED_DESCRIPTIONS:
         return getUsedDescriptions();
+      case GuiDSLPackage.UI_DESCRIPTION__REFINEMENTS:
+        return getRefinements();
       case GuiDSLPackage.UI_DESCRIPTION__DEFINITIONS:
         return getDefinitions();
       case GuiDSLPackage.UI_DESCRIPTION__AREAS:
@@ -389,6 +419,10 @@ public class UIDescriptionImpl extends MinimalEObjectImpl.Container implements U
       case GuiDSLPackage.UI_DESCRIPTION__USED_DESCRIPTIONS:
         getUsedDescriptions().clear();
         getUsedDescriptions().addAll((Collection<? extends UsedDescriptions>)newValue);
+        return;
+      case GuiDSLPackage.UI_DESCRIPTION__REFINEMENTS:
+        getRefinements().clear();
+        getRefinements().addAll((Collection<? extends Refinement>)newValue);
         return;
       case GuiDSLPackage.UI_DESCRIPTION__DEFINITIONS:
         getDefinitions().clear();
@@ -424,6 +458,9 @@ public class UIDescriptionImpl extends MinimalEObjectImpl.Container implements U
       case GuiDSLPackage.UI_DESCRIPTION__USED_DESCRIPTIONS:
         getUsedDescriptions().clear();
         return;
+      case GuiDSLPackage.UI_DESCRIPTION__REFINEMENTS:
+        getRefinements().clear();
+        return;
       case GuiDSLPackage.UI_DESCRIPTION__DEFINITIONS:
         getDefinitions().clear();
         return;
@@ -452,6 +489,8 @@ public class UIDescriptionImpl extends MinimalEObjectImpl.Container implements U
         return property != null;
       case GuiDSLPackage.UI_DESCRIPTION__USED_DESCRIPTIONS:
         return usedDescriptions != null && !usedDescriptions.isEmpty();
+      case GuiDSLPackage.UI_DESCRIPTION__REFINEMENTS:
+        return refinements != null && !refinements.isEmpty();
       case GuiDSLPackage.UI_DESCRIPTION__DEFINITIONS:
         return definitions != null && !definitions.isEmpty();
       case GuiDSLPackage.UI_DESCRIPTION__AREAS:
