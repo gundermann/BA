@@ -80,9 +80,9 @@ public class GuiDSLAdapterFactory extends AdapterFactoryImpl
         return createUIDescriptionAdapter();
       }
       @Override
-      public Adapter caseinputType(inputType object)
+      public Adapter caseProperty(Property object)
       {
-        return createinputTypeAdapter();
+        return createPropertyAdapter();
       }
       @Override
       public Adapter caseUsedDescriptions(UsedDescriptions object)
@@ -110,6 +110,16 @@ public class GuiDSLAdapterFactory extends AdapterFactoryImpl
         return createUIDescriptionImportAdapter();
       }
       @Override
+      public Adapter casecomplexComponent(complexComponent object)
+      {
+        return createcomplexComponentAdapter();
+      }
+      @Override
+      public Adapter caseMultiselection(Multiselection object)
+      {
+        return createMultiselectionAdapter();
+      }
+      @Override
       public Adapter caseAreaAssignment(AreaAssignment object)
       {
         return createAreaAssignmentAdapter();
@@ -118,11 +128,6 @@ public class GuiDSLAdapterFactory extends AdapterFactoryImpl
       public Adapter caseComponentDefinition(ComponentDefinition object)
       {
         return createComponentDefinitionAdapter();
-      }
-      @Override
-      public Adapter caseMultiSelectionDefinition(MultiSelectionDefinition object)
-      {
-        return createMultiSelectionDefinitionAdapter();
       }
       @Override
       public Adapter caseCheckboxDefinition(CheckboxDefinition object)
@@ -165,21 +170,6 @@ public class GuiDSLAdapterFactory extends AdapterFactoryImpl
         return createLabelDefinitionAdapter();
       }
       @Override
-      public Adapter caseUIAction(UIAction object)
-      {
-        return createUIActionAdapter();
-      }
-      @Override
-      public Adapter caseProperty(Property object)
-      {
-        return createPropertyAdapter();
-      }
-      @Override
-      public Adapter caseCommonProperty(CommonProperty object)
-      {
-        return createCommonPropertyAdapter();
-      }
-      @Override
       public Adapter defaultCase(EObject object)
       {
         return createEObjectAdapter();
@@ -217,16 +207,16 @@ public class GuiDSLAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.deg.xtext.gui.guiDSL.inputType <em>input Type</em>}'.
+   * Creates a new adapter for an object of class '{@link org.deg.xtext.gui.guiDSL.Property <em>Property</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see org.deg.xtext.gui.guiDSL.inputType
+   * @see org.deg.xtext.gui.guiDSL.Property
    * @generated
    */
-  public Adapter createinputTypeAdapter()
+  public Adapter createPropertyAdapter()
   {
     return null;
   }
@@ -307,6 +297,36 @@ public class GuiDSLAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
+   * Creates a new adapter for an object of class '{@link org.deg.xtext.gui.guiDSL.complexComponent <em>complex Component</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.deg.xtext.gui.guiDSL.complexComponent
+   * @generated
+   */
+  public Adapter createcomplexComponentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.deg.xtext.gui.guiDSL.Multiselection <em>Multiselection</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.deg.xtext.gui.guiDSL.Multiselection
+   * @generated
+   */
+  public Adapter createMultiselectionAdapter()
+  {
+    return null;
+  }
+
+  /**
    * Creates a new adapter for an object of class '{@link org.deg.xtext.gui.guiDSL.AreaAssignment <em>Area Assignment</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -332,21 +352,6 @@ public class GuiDSLAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createComponentDefinitionAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.deg.xtext.gui.guiDSL.MultiSelectionDefinition <em>Multi Selection Definition</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.deg.xtext.gui.guiDSL.MultiSelectionDefinition
-   * @generated
-   */
-  public Adapter createMultiSelectionDefinitionAdapter()
   {
     return null;
   }
@@ -467,51 +472,6 @@ public class GuiDSLAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createLabelDefinitionAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.deg.xtext.gui.guiDSL.UIAction <em>UI Action</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.deg.xtext.gui.guiDSL.UIAction
-   * @generated
-   */
-  public Adapter createUIActionAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.deg.xtext.gui.guiDSL.Property <em>Property</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.deg.xtext.gui.guiDSL.Property
-   * @generated
-   */
-  public Adapter createPropertyAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.deg.xtext.gui.guiDSL.CommonProperty <em>Common Property</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.deg.xtext.gui.guiDSL.CommonProperty
-   * @generated
-   */
-  public Adapter createCommonPropertyAdapter()
   {
     return null;
   }

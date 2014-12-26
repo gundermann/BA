@@ -6,22 +6,20 @@ import org.deg.xtext.gui.guiDSL.AreaAssignment;
 import org.deg.xtext.gui.guiDSL.AreaCount;
 import org.deg.xtext.gui.guiDSL.ButtonDefinition;
 import org.deg.xtext.gui.guiDSL.CheckboxDefinition;
-import org.deg.xtext.gui.guiDSL.CommonProperty;
 import org.deg.xtext.gui.guiDSL.Definition;
 import org.deg.xtext.gui.guiDSL.GuiDSLPackage;
 import org.deg.xtext.gui.guiDSL.Interaction;
 import org.deg.xtext.gui.guiDSL.LabelDefinition;
-import org.deg.xtext.gui.guiDSL.MultiSelectionDefinition;
+import org.deg.xtext.gui.guiDSL.Multiselection;
+import org.deg.xtext.gui.guiDSL.Property;
 import org.deg.xtext.gui.guiDSL.RadioboxDefinition;
 import org.deg.xtext.gui.guiDSL.TableDefinition;
 import org.deg.xtext.gui.guiDSL.TextfieldDefinition;
 import org.deg.xtext.gui.guiDSL.TreeDefinition;
 import org.deg.xtext.gui.guiDSL.TypeDefinition;
-import org.deg.xtext.gui.guiDSL.UIAction;
 import org.deg.xtext.gui.guiDSL.UIDescription;
 import org.deg.xtext.gui.guiDSL.UIDescriptionImport;
 import org.deg.xtext.gui.guiDSL.UsedDescriptions;
-import org.deg.xtext.gui.guiDSL.inputType;
 import org.deg.xtext.gui.services.GuiDSLGrammarAccess;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.xtext.serializer.acceptor.ISemanticSequenceAcceptor;
@@ -69,13 +67,6 @@ public class GuiDSLSemanticSequencer extends AbstractDelegatingSemanticSequencer
 					return; 
 				}
 				else break;
-			case GuiDSLPackage.COMMON_PROPERTY:
-				if(context == grammarAccess.getCommonPropertyRule() ||
-				   context == grammarAccess.getPropertyRule()) {
-					sequence_CommonProperty(context, (CommonProperty) semanticObject); 
-					return; 
-				}
-				else break;
 			case GuiDSLPackage.DEFINITION:
 				if(context == grammarAccess.getDefinitionRule()) {
 					sequence_Definition(context, (Definition) semanticObject); 
@@ -95,10 +86,16 @@ public class GuiDSLSemanticSequencer extends AbstractDelegatingSemanticSequencer
 					return; 
 				}
 				else break;
-			case GuiDSLPackage.MULTI_SELECTION_DEFINITION:
-				if(context == grammarAccess.getComponentDefinitionRule() ||
-				   context == grammarAccess.getMultiSelectionDefinitionRule()) {
-					sequence_MultiSelectionDefinition(context, (MultiSelectionDefinition) semanticObject); 
+			case GuiDSLPackage.MULTISELECTION:
+				if(context == grammarAccess.getMultiselectionRule() ||
+				   context == grammarAccess.getComplexComponentRule()) {
+					sequence_Multiselection(context, (Multiselection) semanticObject); 
+					return; 
+				}
+				else break;
+			case GuiDSLPackage.PROPERTY:
+				if(context == grammarAccess.getPropertyRule()) {
+					sequence_Property(context, (Property) semanticObject); 
 					return; 
 				}
 				else break;
@@ -136,12 +133,6 @@ public class GuiDSLSemanticSequencer extends AbstractDelegatingSemanticSequencer
 					return; 
 				}
 				else break;
-			case GuiDSLPackage.UI_ACTION:
-				if(context == grammarAccess.getUIActionRule()) {
-					sequence_UIAction(context, (UIAction) semanticObject); 
-					return; 
-				}
-				else break;
 			case GuiDSLPackage.UI_DESCRIPTION:
 				if(context == grammarAccess.getUIDescriptionRule()) {
 					sequence_UIDescription(context, (UIDescription) semanticObject); 
@@ -160,19 +151,13 @@ public class GuiDSLSemanticSequencer extends AbstractDelegatingSemanticSequencer
 					return; 
 				}
 				else break;
-			case GuiDSLPackage.INPUT_TYPE:
-				if(context == grammarAccess.getInputTypeRule()) {
-					sequence_inputType(context, (inputType) semanticObject); 
-					return; 
-				}
-				else break;
 			}
 		if (errorAcceptor != null) errorAcceptor.accept(diagnosticProvider.createInvalidContextOrTypeDiagnostic(semanticObject, context));
 	}
 	
 	/**
 	 * Constraint:
-	 *     ((area=INT element=STRING) | (element=STRING area=INT))
+	 *     ((area=INT elements+=STRING+) | (elements+=STRING+ area=INT))
 	 */
 	protected void sequence_AreaAssignment(EObject context, AreaAssignment semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -197,7 +182,7 @@ public class GuiDSLSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	
 	/**
 	 * Constraint:
-	 *     (type='Button' name=STRING text=STRING? interaction=Interaction?)
+	 *     (type='Button' name=STRING propertyKey=STRING? text=STRING? interactiontype+=Interactiontype*)
 	 */
 	protected void sequence_ButtonDefinition(EObject context, ButtonDefinition semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -210,25 +195,6 @@ public class GuiDSLSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	 */
 	protected void sequence_CheckboxDefinition(EObject context, CheckboxDefinition semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Constraint:
-	 *     (name=CommonPropertyType value=STRING)
-	 */
-	protected void sequence_CommonProperty(EObject context, CommonProperty semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, GuiDSLPackage.Literals.COMMON_PROPERTY__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, GuiDSLPackage.Literals.COMMON_PROPERTY__NAME));
-			if(transientValues.isValueTransient(semanticObject, GuiDSLPackage.Literals.COMMON_PROPERTY__VALUE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, GuiDSLPackage.Literals.COMMON_PROPERTY__VALUE));
-		}
-		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getCommonPropertyAccess().getNameCommonPropertyTypeParserRuleCall_0_0(), semanticObject.getName());
-		feeder.accept(grammarAccess.getCommonPropertyAccess().getValueSTRINGTerminalRuleCall_2_0(), semanticObject.getValue());
-		feeder.finish();
 	}
 	
 	
@@ -250,16 +216,23 @@ public class GuiDSLSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	
 	/**
 	 * Constraint:
-	 *     (name=STRING actions+=UIAction*)
+	 *     name=STRING
 	 */
 	protected void sequence_Interaction(EObject context, Interaction semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, GuiDSLPackage.Literals.INTERACTION__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, GuiDSLPackage.Literals.INTERACTION__NAME));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getInteractionAccess().getNameSTRINGTerminalRuleCall_0_0(), semanticObject.getName());
+		feeder.finish();
 	}
 	
 	
 	/**
 	 * Constraint:
-	 *     (type='Label' name=STRING text=STRING?)
+	 *     (type='Label' name=STRING propertyKey=STRING? text=STRING?)
 	 */
 	protected void sequence_LabelDefinition(EObject context, LabelDefinition semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -268,10 +241,26 @@ public class GuiDSLSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	
 	/**
 	 * Constraint:
-	 *     (type='MultiSelection' name=STRING (inputType=STRING (selectableValuesLocation=STRING selectedValuesLocation=STRING?)?)?)
+	 *     (descriptionName='Multiselection' inputType=STRING?)
 	 */
-	protected void sequence_MultiSelectionDefinition(EObject context, MultiSelectionDefinition semanticObject) {
+	protected void sequence_Multiselection(EObject context, Multiselection semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     propertiesFile=STRING
+	 */
+	protected void sequence_Property(EObject context, Property semanticObject) {
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, GuiDSLPackage.Literals.PROPERTY__PROPERTIES_FILE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, GuiDSLPackage.Literals.PROPERTY__PROPERTIES_FILE));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getPropertyAccess().getPropertiesFileSTRINGTerminalRuleCall_1_0(), semanticObject.getPropertiesFile());
+		feeder.finish();
 	}
 	
 	
@@ -313,7 +302,7 @@ public class GuiDSLSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	
 	/**
 	 * Constraint:
-	 *     type=TYPE
+	 *     type=Type
 	 */
 	protected void sequence_TypeDefinition(EObject context, TypeDefinition semanticObject) {
 		if(errorAcceptor != null) {
@@ -322,26 +311,24 @@ public class GuiDSLSemanticSequencer extends AbstractDelegatingSemanticSequencer
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getTypeDefinitionAccess().getTypeTYPEParserRuleCall_1_0(), semanticObject.getType());
+		feeder.accept(grammarAccess.getTypeDefinitionAccess().getTypeTypeParserRuleCall_1_0(), semanticObject.getType());
 		feeder.finish();
 	}
 	
 	
 	/**
 	 * Constraint:
-	 *     (type='UiAction' uiElementName=STRING properties+=Property*)
-	 */
-	protected void sequence_UIAction(EObject context, UIAction semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Constraint:
-	 *     (descriptionName=STRING localName=STRING?)
+	 *     descriptionName=STRING
 	 */
 	protected void sequence_UIDescriptionImport(EObject context, UIDescriptionImport semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, GuiDSLPackage.Literals.UI_DESCRIPTION_IMPORT__DESCRIPTION_NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, GuiDSLPackage.Literals.UI_DESCRIPTION_IMPORT__DESCRIPTION_NAME));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getUIDescriptionImportAccess().getDescriptionNameSTRINGTerminalRuleCall_0(), semanticObject.getDescriptionName());
+		feeder.finish();
 	}
 	
 	
@@ -350,8 +337,8 @@ public class GuiDSLSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	 *     (
 	 *         areaCount=AreaCount 
 	 *         typeDefinition=TypeDefinition 
+	 *         property=Property 
 	 *         usedDescriptions+=UsedDescriptions* 
-	 *         inputTypes+=inputType* 
 	 *         definitions+=Definition* 
 	 *         areas+=AreaAssignment*
 	 *     )
@@ -363,35 +350,9 @@ public class GuiDSLSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	
 	/**
 	 * Constraint:
-	 *     description=UIDescriptionImport
+	 *     ((description=UIDescriptionImport | description=complexComponent) localName=STRING?)
 	 */
 	protected void sequence_UsedDescriptions(EObject context, UsedDescriptions semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, GuiDSLPackage.Literals.USED_DESCRIPTIONS__DESCRIPTION) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, GuiDSLPackage.Literals.USED_DESCRIPTIONS__DESCRIPTION));
-		}
-		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getUsedDescriptionsAccess().getDescriptionUIDescriptionImportParserRuleCall_1_0(), semanticObject.getDescription());
-		feeder.finish();
-	}
-	
-	
-	/**
-	 * Constraint:
-	 *     (type=STRING name=STRING)
-	 */
-	protected void sequence_inputType(EObject context, inputType semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, GuiDSLPackage.Literals.INPUT_TYPE__TYPE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, GuiDSLPackage.Literals.INPUT_TYPE__TYPE));
-			if(transientValues.isValueTransient(semanticObject, GuiDSLPackage.Literals.INPUT_TYPE__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, GuiDSLPackage.Literals.INPUT_TYPE__NAME));
-		}
-		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getInputTypeAccess().getTypeSTRINGTerminalRuleCall_1_0(), semanticObject.getType());
-		feeder.accept(grammarAccess.getInputTypeAccess().getNameSTRINGTerminalRuleCall_3_0(), semanticObject.getName());
-		feeder.finish();
+		genericSequencer.createSequence(context, semanticObject);
 	}
 }

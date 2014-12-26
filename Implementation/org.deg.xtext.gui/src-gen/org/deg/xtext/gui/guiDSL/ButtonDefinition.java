@@ -2,6 +2,7 @@
  */
 package org.deg.xtext.gui.guiDSL;
 
+import org.eclipse.emf.common.util.EList;
 
 /**
  * <!-- begin-user-doc -->
@@ -11,8 +12,8 @@ package org.deg.xtext.gui.guiDSL;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.deg.xtext.gui.guiDSL.ButtonDefinition#getText <em>Text</em>}</li>
- *   <li>{@link org.deg.xtext.gui.guiDSL.ButtonDefinition#getInteraction <em>Interaction</em>}</li>
+ *   <li>{@link org.deg.xtext.gui.guiDSL.ButtonDefinition#getPropertyKey <em>Property Key</em>}</li>
+ *   <li>{@link org.deg.xtext.gui.guiDSL.ButtonDefinition#getInteractiontype <em>Interactiontype</em>}</li>
  * </ul>
  * </p>
  *
@@ -23,55 +24,45 @@ package org.deg.xtext.gui.guiDSL;
 public interface ButtonDefinition extends ComponentDefinition
 {
   /**
-   * Returns the value of the '<em><b>Text</b></em>' attribute.
+   * Returns the value of the '<em><b>Property Key</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Text</em>' attribute isn't clear,
+   * If the meaning of the '<em>Property Key</em>' attribute isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Text</em>' attribute.
-   * @see #setText(String)
-   * @see org.deg.xtext.gui.guiDSL.GuiDSLPackage#getButtonDefinition_Text()
+   * @return the value of the '<em>Property Key</em>' attribute.
+   * @see #setPropertyKey(String)
+   * @see org.deg.xtext.gui.guiDSL.GuiDSLPackage#getButtonDefinition_PropertyKey()
    * @model
    * @generated
    */
-  String getText();
+  String getPropertyKey();
 
   /**
-   * Sets the value of the '{@link org.deg.xtext.gui.guiDSL.ButtonDefinition#getText <em>Text</em>}' attribute.
+   * Sets the value of the '{@link org.deg.xtext.gui.guiDSL.ButtonDefinition#getPropertyKey <em>Property Key</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Text</em>' attribute.
-   * @see #getText()
+   * @param value the new value of the '<em>Property Key</em>' attribute.
+   * @see #getPropertyKey()
    * @generated
    */
-  void setText(String value);
+  void setPropertyKey(String value);
 
   /**
-   * Returns the value of the '<em><b>Interaction</b></em>' containment reference.
+   * Returns the value of the '<em><b>Interactiontype</b></em>' attribute list.
+   * The list contents are of type {@link java.lang.String}.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Interaction</em>' containment reference isn't clear,
+   * If the meaning of the '<em>Interactiontype</em>' attribute list isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Interaction</em>' containment reference.
-   * @see #setInteraction(Interaction)
-   * @see org.deg.xtext.gui.guiDSL.GuiDSLPackage#getButtonDefinition_Interaction()
-   * @model containment="true"
+   * @return the value of the '<em>Interactiontype</em>' attribute list.
+   * @see org.deg.xtext.gui.guiDSL.GuiDSLPackage#getButtonDefinition_Interactiontype()
+   * @model unique="false"
    * @generated
    */
-  Interaction getInteraction();
-
-  /**
-   * Sets the value of the '{@link org.deg.xtext.gui.guiDSL.ButtonDefinition#getInteraction <em>Interaction</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Interaction</em>' containment reference.
-   * @see #getInteraction()
-   * @generated
-   */
-  void setInteraction(Interaction value);
+  EList<String> getInteractiontype();
 
 } // ButtonDefinition

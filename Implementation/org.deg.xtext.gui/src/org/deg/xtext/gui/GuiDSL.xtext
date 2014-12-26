@@ -2,21 +2,19 @@ grammar org.deg.xtext.gui.GuiDSL with org.eclipse.xtext.common.Terminals
 
 generate guiDSL "http://www.deg.org/xtext/gui/GuiDSL"
 
-
 UIDescription:
 	areaCount=AreaCount
 	typeDefinition=(TypeDefinition)
-	usedDescriptions+=(UsedDescriptions)* &
-	inputTypes+=(inputType)* &
+	property=(Property)& 
+	usedDescriptions+=(UsedDescriptions)*
 	definitions+=(Definition)*
 	areas+=(AreaAssignment)*;
 
-inputType:
-	'inputType=' type=STRING ' as ' name=STRING
-;
+Property:
+	'get properties from:' propertiesFile=STRING;
 
 UsedDescriptions:
-	'use: ' description=UIDescriptionImport;
+	'use: ' description=(UIDescriptionImport | complexComponent) (' as: ' localName=STRING)?;
 
 AreaCount:
 	'Area count: ' areaCount=INT;
@@ -25,24 +23,27 @@ Definition:
 	'DEF ' concreteDefition=ComponentDefinition 'END DEF';
 
 TypeDefinition:
-	'type: ' type=TYPE;
+	'type: ' type=Type;
 
-TYPE:
+Type:
 	('WINDOW' | 'INNERCOMPLEX');
 
 UIDescriptionImport:
-	descriptionName=STRING (' As: ' localName=STRING)?;
+	descriptionName=(STRING) ;
+
+complexComponent:
+	(Multiselection);
+
+Multiselection:
+	descriptionName='Multiselection'('<'inputType=STRING'>')?;
 
 AreaAssignment:
-	'Area:' area=INT '<-' element=STRING
-	| element=STRING '->' 'Area:' area=INT ;
+	'Area:' area=INT '<-' elements+=(STRING)+
+	| elements+=(STRING)+ '->' 'Area:' area=INT;
 
 ComponentDefinition:
 	LabelDefinition | ButtonDefinition | TextfieldDefinition | TreeDefinition | TableDefinition | RadioboxDefinition |
-	CheckboxDefinition | MultiSelectionDefinition;
-
-MultiSelectionDefinition:
-	type='MultiSelection' ' as ' name=STRING ('inputType=' inputType=STRING ('selectableValues=' selectableValuesLocation=STRING ('selectedValues=' selectedValuesLocation=STRING)?)?)?;
+	CheckboxDefinition;
 
 CheckboxDefinition:
 	type='Checkbox' ' as ' name=STRING ':'
@@ -66,30 +67,20 @@ TextfieldDefinition:
 
 ButtonDefinition:
 	type='Button' ' as ' name=STRING ':'
+	('propertyKey=' propertyKey=STRING)?
 	('text=' text=STRING)?
-	('interaction=' interaction=Interaction)?;
+	('interactiontype=' interactiontype+=(Interactiontype)+)?;
 
 Interaction:
-	name=STRING ' type=' Interactiontype ' with actions:' actions+=(UIAction)*;
+	name=STRING ' type=' Interactiontype;
 
 LabelDefinition:
 	type='Label' ' as ' name=STRING ':'
+	('propertyKey=' propertyKey=STRING)?
 	('text=' text=STRING)?;
 
-
-UIAction:
-	'type=' type='UiAction'
-	'element=' uiElementName=STRING ':'
-	properties+=(Property)*;
-
-Property:
-	CommonProperty;
-
-CommonProperty:
-	(name=CommonPropertyType '=' value=STRING);
-
-CommonPropertyType:
-	'Text';
-
 Interactiontype:
-	'CLICK';
+	'Click' | 'ChangeText';
+
+terminal WS:
+	(' ' | '\t' | '\r' | '\n' | ',')+;

@@ -13,6 +13,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * <ul>
  *   <li>{@link org.deg.xtext.gui.guiDSL.UsedDescriptions#getDescription <em>Description</em>}</li>
+ *   <li>{@link org.deg.xtext.gui.guiDSL.UsedDescriptions#getLocalName <em>Local Name</em>}</li>
  * </ul>
  * </p>
  *
@@ -31,12 +32,12 @@ public interface UsedDescriptions extends EObject
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Description</em>' containment reference.
-   * @see #setDescription(UIDescriptionImport)
+   * @see #setDescription(EObject)
    * @see org.deg.xtext.gui.guiDSL.GuiDSLPackage#getUsedDescriptions_Description()
    * @model containment="true"
    * @generated
    */
-  UIDescriptionImport getDescription();
+  EObject getDescription();
 
   /**
    * Sets the value of the '{@link org.deg.xtext.gui.guiDSL.UsedDescriptions#getDescription <em>Description</em>}' containment reference.
@@ -46,6 +47,32 @@ public interface UsedDescriptions extends EObject
    * @see #getDescription()
    * @generated
    */
-  void setDescription(UIDescriptionImport value);
+  void setDescription(EObject value);
+
+  /**
+   * Returns the value of the '<em><b>Local Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Local Name</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Local Name</em>' attribute.
+   * @see #setLocalName(String)
+   * @see org.deg.xtext.gui.guiDSL.GuiDSLPackage#getUsedDescriptions_LocalName()
+   * @model
+   * @generated
+   */
+  String getLocalName();
+
+  /**
+   * Sets the value of the '{@link org.deg.xtext.gui.guiDSL.UsedDescriptions#getLocalName <em>Local Name</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Local Name</em>' attribute.
+   * @see #getLocalName()
+   * @generated
+   */
+  void setLocalName(String value);
 
 } // UsedDescriptions

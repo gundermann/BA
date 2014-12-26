@@ -32,13 +32,13 @@ public interface GuiDSLFactory extends EFactory
   UIDescription createUIDescription();
 
   /**
-   * Returns a new object of class '<em>input Type</em>'.
+   * Returns a new object of class '<em>Property</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>input Type</em>'.
+   * @return a new object of class '<em>Property</em>'.
    * @generated
    */
-  inputType createinputType();
+  Property createProperty();
 
   /**
    * Returns a new object of class '<em>Used Descriptions</em>'.
@@ -86,6 +86,24 @@ public interface GuiDSLFactory extends EFactory
   UIDescriptionImport createUIDescriptionImport();
 
   /**
+   * Returns a new object of class '<em>complex Component</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>complex Component</em>'.
+   * @generated
+   */
+  complexComponent createcomplexComponent();
+
+  /**
+   * Returns a new object of class '<em>Multiselection</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Multiselection</em>'.
+   * @generated
+   */
+  Multiselection createMultiselection();
+
+  /**
    * Returns a new object of class '<em>Area Assignment</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -102,15 +120,6 @@ public interface GuiDSLFactory extends EFactory
    * @generated
    */
   ComponentDefinition createComponentDefinition();
-
-  /**
-   * Returns a new object of class '<em>Multi Selection Definition</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Multi Selection Definition</em>'.
-   * @generated
-   */
-  MultiSelectionDefinition createMultiSelectionDefinition();
 
   /**
    * Returns a new object of class '<em>Checkbox Definition</em>'.
@@ -183,33 +192,6 @@ public interface GuiDSLFactory extends EFactory
    * @generated
    */
   LabelDefinition createLabelDefinition();
-
-  /**
-   * Returns a new object of class '<em>UI Action</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>UI Action</em>'.
-   * @generated
-   */
-  UIAction createUIAction();
-
-  /**
-   * Returns a new object of class '<em>Property</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Property</em>'.
-   * @generated
-   */
-  Property createProperty();
-
-  /**
-   * Returns a new object of class '<em>Common Property</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Common Property</em>'.
-   * @generated
-   */
-  CommonProperty createCommonProperty();
 
   /**
    * Returns the package supported by this factory.

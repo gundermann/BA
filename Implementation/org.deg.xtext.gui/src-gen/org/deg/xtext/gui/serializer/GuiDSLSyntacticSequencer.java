@@ -30,12 +30,12 @@ public class GuiDSLSyntacticSequencer extends AbstractSyntacticSequencer {
 	
 	/**
 	 * Interactiontype:
-	 * 	'CLICK';
+	 * 	'Click' | 'ChangeText';
 	 */
 	protected String getInteractiontypeToken(EObject semanticObject, RuleCall ruleCall, INode node) {
 		if (node != null)
 			return getTokenText(node);
-		return "CLICK";
+		return "Click";
 	}
 	
 	@Override

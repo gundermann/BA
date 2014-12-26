@@ -3,7 +3,6 @@
  */
 package org.deg.xtext.gui.generator;
 
-import com.google.common.base.Objects;
 import com.google.common.collect.Iterables;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -12,21 +11,15 @@ import java.util.Map;
 import org.deg.xtext.gui.guiDSL.AreaAssignment;
 import org.deg.xtext.gui.guiDSL.ButtonDefinition;
 import org.deg.xtext.gui.guiDSL.CheckboxDefinition;
-import org.deg.xtext.gui.guiDSL.CommonProperty;
 import org.deg.xtext.gui.guiDSL.ComponentDefinition;
 import org.deg.xtext.gui.guiDSL.Definition;
 import org.deg.xtext.gui.guiDSL.Interaction;
 import org.deg.xtext.gui.guiDSL.LabelDefinition;
-import org.deg.xtext.gui.guiDSL.MultiSelectionDefinition;
-import org.deg.xtext.gui.guiDSL.Property;
 import org.deg.xtext.gui.guiDSL.RadioboxDefinition;
 import org.deg.xtext.gui.guiDSL.TextfieldDefinition;
 import org.deg.xtext.gui.guiDSL.TypeDefinition;
-import org.deg.xtext.gui.guiDSL.UIAction;
 import org.deg.xtext.gui.guiDSL.UIDescription;
-import org.deg.xtext.gui.guiDSL.UIDescriptionImport;
 import org.deg.xtext.gui.guiDSL.UsedDescriptions;
-import org.deg.xtext.gui.guiDSL.inputType;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.TreeIterator;
 import org.eclipse.emf.common.util.URI;
@@ -35,7 +28,6 @@ import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.xtend2.lib.StringConcatenation;
 import org.eclipse.xtext.generator.IFileSystemAccess;
 import org.eclipse.xtext.generator.IGenerator;
-import org.eclipse.xtext.xbase.lib.IterableExtensions;
 import org.eclipse.xtext.xbase.lib.IteratorExtensions;
 
 /**
@@ -209,19 +201,6 @@ public class GuiDSLGenerator implements IGenerator {
         {
           EList<Definition> _definitions = description.getDefinitions();
           for(final Definition def : _definitions) {
-            {
-              String _element = area_1.getElement();
-              ComponentDefinition _concreteDefition = def.getConcreteDefition();
-              String _name = _concreteDefition.getName();
-              boolean _equals = _element.equals(_name);
-              if (_equals) {
-                _builder.append("\t\t");
-                _builder.append("\t");
-                CharSequence _compileDefinition = this.compileDefinition(def);
-                _builder.append(_compileDefinition, "\t\t\t");
-                _builder.newLineIfNotEmpty();
-              }
-            }
           }
         }
         {
@@ -229,31 +208,6 @@ public class GuiDSLGenerator implements IGenerator {
             {
               EList<UsedDescriptions> _usedDescriptions = description.getUsedDescriptions();
               for(final UsedDescriptions used : _usedDescriptions) {
-                {
-                  boolean _or = false;
-                  UIDescriptionImport _description = used.getDescription();
-                  String _descriptionName = _description.getDescriptionName();
-                  String _element_1 = area_1.getElement();
-                  boolean _equals_1 = _descriptionName.equals(_element_1);
-                  if (_equals_1) {
-                    _or = true;
-                  } else {
-                    UIDescriptionImport _description_1 = used.getDescription();
-                    String _localName = _description_1.getLocalName();
-                    String _element_2 = area_1.getElement();
-                    boolean _equals_2 = _localName.equals(_element_2);
-                    _or = _equals_2;
-                  }
-                  if (_or) {
-                    _builder.append("\t\t");
-                    _builder.append("\t");
-                    _builder.append("return new ");
-                    String _element_3 = area_1.getElement();
-                    _builder.append(_element_3, "\t\t\t");
-                    _builder.append("();");
-                    _builder.newLineIfNotEmpty();
-                  }
-                }
               }
             }
           } else {
@@ -317,11 +271,7 @@ public class GuiDSLGenerator implements IGenerator {
     _builder.append("\t\t");
     _builder.append("public ");
     _builder.append(this.name, "\t\t");
-    _builder.append("(");
-    EList<inputType> _inputTypes = description.getInputTypes();
-    String _genConstrutorParameter = this.genConstrutorParameter(_inputTypes);
-    _builder.append(_genConstrutorParameter, "\t\t");
-    _builder.append("){");
+    _builder.append("(){");
     _builder.newLineIfNotEmpty();
     _builder.append("\t\t");
     _builder.append("super(null);");
@@ -346,31 +296,6 @@ public class GuiDSLGenerator implements IGenerator {
     _builder.append("}");
     _builder.newLine();
     return _builder;
-  }
-  
-  public String genConstrutorParameter(final EList<inputType> inputTypes) {
-    final StringBuilder parameterBuilder = new StringBuilder();
-    for (final inputType input : inputTypes) {
-      {
-        String _type = input.getType();
-        String _plus = (_type + " ");
-        String _name = input.getName();
-        String _plus_1 = (_plus + _name);
-        String _plus_2 = (_plus_1 + ";");
-        this.addGlobalVar(_plus_2);
-        String _type_1 = input.getType();
-        String _plus_3 = (_type_1 + " ");
-        String _name_1 = input.getName();
-        String _plus_4 = (_plus_3 + _name_1);
-        parameterBuilder.append(_plus_4);
-        inputType _last = IterableExtensions.<inputType>last(inputTypes);
-        boolean _notEquals = (!Objects.equal(input, _last));
-        if (_notEquals) {
-          parameterBuilder.append(", ");
-        }
-      }
-    }
-    return parameterBuilder.toString();
   }
   
   public CharSequence genOtherStuff(final UIDescription description) {
@@ -415,61 +340,9 @@ public class GuiDSLGenerator implements IGenerator {
     StringConcatenation _builder = new StringConcatenation();
     {
       for(final Interaction i : this.interactions) {
-        _builder.append("public void invoke");
-        String _name = i.getName();
-        _builder.append(_name, "");
-        _builder.append("(){");
-        _builder.newLineIfNotEmpty();
-        {
-          EList<UIAction> _actions = i.getActions();
-          for(final UIAction a : _actions) {
-            {
-              String _type = a.getType();
-              boolean _equals = _type.equals("UiAction");
-              if (_equals) {
-                _builder.append("\t");
-                CharSequence _extract = this.extract(((UIAction) a));
-                _builder.append(_extract, "\t");
-                _builder.newLineIfNotEmpty();
-              }
-            }
-          }
-        }
-        _builder.append("}");
-        _builder.newLine();
       }
     }
     _builder.newLine();
-    return _builder;
-  }
-  
-  public CharSequence extract(final UIAction action) {
-    StringConcatenation _builder = new StringConcatenation();
-    {
-      EList<Property> _properties = action.getProperties();
-      for(final Property p : _properties) {
-        String _uiElementName = action.getUiElementName();
-        _builder.append(_uiElementName, "");
-        _builder.append(".");
-        String _uiElementName_1 = action.getUiElementName();
-        CharSequence _methodName = this.methodName(p, _uiElementName_1);
-        _builder.append(_methodName, "");
-        _builder.newLineIfNotEmpty();
-      }
-    }
-    return _builder;
-  }
-  
-  public CharSequence methodName(final Property property, final String uiElement) {
-    StringConcatenation _builder = new StringConcatenation();
-    _builder.append("set");
-    String _name = ((CommonProperty) property).getName();
-    _builder.append(_name, "");
-    _builder.append("(\"");
-    String _value = ((CommonProperty) property).getValue();
-    _builder.append(_value, "");
-    _builder.append("\");");
-    _builder.newLineIfNotEmpty();
     return _builder;
   }
   
@@ -504,109 +377,15 @@ public class GuiDSLGenerator implements IGenerator {
             _builder.newLineIfNotEmpty();
           } else {
             ComponentDefinition _concreteDefition_6 = definition.getConcreteDefition();
-            String _type_3 = _concreteDefition_6.getType();
-            boolean _equals_3 = _type_3.equals("MultiSelection");
-            if (_equals_3) {
-              ComponentDefinition _concreteDefition_7 = definition.getConcreteDefition();
-              CharSequence _compileMultiSelection = this.compileMultiSelection(((MultiSelectionDefinition) _concreteDefition_7));
-              _builder.append(_compileMultiSelection, "");
-              _builder.newLineIfNotEmpty();
-            } else {
-              ComponentDefinition _concreteDefition_8 = definition.getConcreteDefition();
-              CharSequence _compileLabel = this.compileLabel(((LabelDefinition) _concreteDefition_8));
-              _builder.append(_compileLabel, "");
-              _builder.newLineIfNotEmpty();
-            }
+            CharSequence _compileLabel = this.compileLabel(((LabelDefinition) _concreteDefition_6));
+            _builder.append(_compileLabel, "");
+            _builder.newLineIfNotEmpty();
           }
         }
       }
     }
     String _switchCompiled = this.switchCompiled();
     _builder.append(_switchCompiled, "");
-    _builder.newLineIfNotEmpty();
-    return _builder;
-  }
-  
-  public CharSequence compileMultiSelection(final MultiSelectionDefinition definition) {
-    StringConcatenation _builder = new StringConcatenation();
-    String _addImport = this.addImport("import test.JavaFXMultiSelection;");
-    _builder.append(_addImport, "");
-    _builder.newLineIfNotEmpty();
-    {
-      String _inputType = definition.getInputType();
-      boolean _notEquals = (!Objects.equal(_inputType, null));
-      if (_notEquals) {
-        _builder.append("\t");
-        String _inputType_1 = definition.getInputType();
-        String _plus = ("import " + _inputType_1);
-        String _plus_1 = (_plus + ";");
-        String _addImport_1 = this.addImport(_plus_1);
-        _builder.append(_addImport_1, "\t");
-        _builder.newLineIfNotEmpty();
-        _builder.append("\t");
-        String _inputType_2 = definition.getInputType();
-        String _plus_2 = ("JavaFXMultiSelection<" + _inputType_2);
-        String _plus_3 = (_plus_2 + "> ");
-        String _name = definition.getName();
-        String _plus_4 = (_plus_3 + _name);
-        String _plus_5 = (_plus_4 + ";");
-        String _addGlobalVar = this.addGlobalVar(_plus_5);
-        _builder.append(_addGlobalVar, "\t");
-        _builder.newLineIfNotEmpty();
-        _builder.append("\t");
-        String _name_1 = definition.getName();
-        _builder.append(_name_1, "\t");
-        _builder.append(" = new JavaFXMultiSelection<");
-        String _inputType_3 = definition.getInputType();
-        _builder.append(_inputType_3, "\t");
-        _builder.append(">();");
-        _builder.newLineIfNotEmpty();
-        {
-          String _selectableValuesLocation = definition.getSelectableValuesLocation();
-          boolean _notEquals_1 = (!Objects.equal(_selectableValuesLocation, null));
-          if (_notEquals_1) {
-            _builder.append("\t");
-            String _name_2 = definition.getName();
-            _builder.append(_name_2, "\t");
-            _builder.append(".setSelectable(");
-            String _selectableValuesLocation_1 = definition.getSelectableValuesLocation();
-            _builder.append(_selectableValuesLocation_1, "\t");
-            _builder.append(");");
-            _builder.newLineIfNotEmpty();
-            {
-              String _selectedValuesLocation = definition.getSelectedValuesLocation();
-              boolean _notEquals_2 = (!Objects.equal(_selectedValuesLocation, null));
-              if (_notEquals_2) {
-                String _name_3 = definition.getName();
-                _builder.append(_name_3, "");
-                _builder.append(".setSelected(");
-                String _selectedValuesLocation_1 = definition.getSelectedValuesLocation();
-                _builder.append(_selectedValuesLocation_1, "");
-                _builder.append(");");
-                _builder.newLineIfNotEmpty();
-              }
-            }
-          }
-        }
-      } else {
-        String _name_4 = definition.getName();
-        String _plus_6 = ("JavaFXMultiSelection<?> " + _name_4);
-        String _plus_7 = (_plus_6 + ";");
-        String _addGlobalVar_1 = this.addGlobalVar(_plus_7);
-        _builder.append(_addGlobalVar_1, "");
-        _builder.newLineIfNotEmpty();
-        _builder.append("\t\t");
-        String _name_5 = definition.getName();
-        _builder.append(_name_5, "\t\t");
-        _builder.append(" = new JavaFXMultiSelection<?>();");
-        _builder.newLineIfNotEmpty();
-      }
-    }
-    _builder.append("\t");
-    _builder.append("return ");
-    String _name_6 = definition.getName();
-    _builder.append(_name_6, "\t");
-    _builder.append(";");
     _builder.newLineIfNotEmpty();
     return _builder;
   }
@@ -776,57 +555,10 @@ public class GuiDSLGenerator implements IGenerator {
     _builder.append(_text, "\t");
     _builder.append("\");");
     _builder.newLineIfNotEmpty();
-    {
-      Interaction _interaction = definition.getInteraction();
-      boolean _notEquals = (!Objects.equal(_interaction, null));
-      if (_notEquals) {
-        _builder.append("\t");
-        String _addImport_1 = this.addImport("import javafx.event.ActionEvent;");
-        _builder.append(_addImport_1, "\t");
-        _builder.newLineIfNotEmpty();
-        _builder.append("\t");
-        String _addImport_2 = this.addImport("import javafx.event.EventHandler;");
-        _builder.append(_addImport_2, "\t");
-        _builder.newLineIfNotEmpty();
-        _builder.append("\t");
-        String _name_3 = definition.getName();
-        _builder.append(_name_3, "\t");
-        _builder.append(".setOnAction(new EventHandler<ActionEvent>() {");
-        _builder.newLineIfNotEmpty();
-        _builder.append("\t");
-        _builder.append("\t");
-        _builder.append("@Override");
-        _builder.newLine();
-        _builder.append("\t");
-        _builder.append("\t");
-        _builder.append("public void handle(ActionEvent actionEvent) {");
-        _builder.newLine();
-        _builder.append("\t");
-        _builder.append("\t\t");
-        _builder.append("invoke");
-        Interaction _interaction_1 = ((ButtonDefinition) definition).getInteraction();
-        String _name_4 = _interaction_1.getName();
-        _builder.append(_name_4, "\t\t\t");
-        _builder.append("();");
-        _builder.newLineIfNotEmpty();
-        _builder.append("\t");
-        _builder.append("\t");
-        _builder.append("}");
-        _builder.newLine();
-        _builder.append("\t");
-        _builder.append("});");
-        _builder.newLine();
-        _builder.append("\t");
-        Interaction _interaction_2 = definition.getInteraction();
-        String _addInteractionMethod = this.addInteractionMethod(_interaction_2);
-        _builder.append(_addInteractionMethod, "\t");
-        _builder.newLineIfNotEmpty();
-      }
-    }
     _builder.append("\t");
     _builder.append("return ");
-    String _name_5 = definition.getName();
-    _builder.append(_name_5, "\t");
+    String _name_3 = definition.getName();
+    _builder.append(_name_3, "\t");
     _builder.append(";");
     _builder.newLineIfNotEmpty();
     return _builder;

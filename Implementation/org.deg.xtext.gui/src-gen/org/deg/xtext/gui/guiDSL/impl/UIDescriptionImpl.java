@@ -8,10 +8,10 @@ import org.deg.xtext.gui.guiDSL.AreaAssignment;
 import org.deg.xtext.gui.guiDSL.AreaCount;
 import org.deg.xtext.gui.guiDSL.Definition;
 import org.deg.xtext.gui.guiDSL.GuiDSLPackage;
+import org.deg.xtext.gui.guiDSL.Property;
 import org.deg.xtext.gui.guiDSL.TypeDefinition;
 import org.deg.xtext.gui.guiDSL.UIDescription;
 import org.deg.xtext.gui.guiDSL.UsedDescriptions;
-import org.deg.xtext.gui.guiDSL.inputType;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -36,8 +36,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <ul>
  *   <li>{@link org.deg.xtext.gui.guiDSL.impl.UIDescriptionImpl#getAreaCount <em>Area Count</em>}</li>
  *   <li>{@link org.deg.xtext.gui.guiDSL.impl.UIDescriptionImpl#getTypeDefinition <em>Type Definition</em>}</li>
+ *   <li>{@link org.deg.xtext.gui.guiDSL.impl.UIDescriptionImpl#getProperty <em>Property</em>}</li>
  *   <li>{@link org.deg.xtext.gui.guiDSL.impl.UIDescriptionImpl#getUsedDescriptions <em>Used Descriptions</em>}</li>
- *   <li>{@link org.deg.xtext.gui.guiDSL.impl.UIDescriptionImpl#getInputTypes <em>Input Types</em>}</li>
  *   <li>{@link org.deg.xtext.gui.guiDSL.impl.UIDescriptionImpl#getDefinitions <em>Definitions</em>}</li>
  *   <li>{@link org.deg.xtext.gui.guiDSL.impl.UIDescriptionImpl#getAreas <em>Areas</em>}</li>
  * </ul>
@@ -68,6 +68,16 @@ public class UIDescriptionImpl extends MinimalEObjectImpl.Container implements U
   protected TypeDefinition typeDefinition;
 
   /**
+   * The cached value of the '{@link #getProperty() <em>Property</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getProperty()
+   * @generated
+   * @ordered
+   */
+  protected Property property;
+
+  /**
    * The cached value of the '{@link #getUsedDescriptions() <em>Used Descriptions</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -76,16 +86,6 @@ public class UIDescriptionImpl extends MinimalEObjectImpl.Container implements U
    * @ordered
    */
   protected EList<UsedDescriptions> usedDescriptions;
-
-  /**
-   * The cached value of the '{@link #getInputTypes() <em>Input Types</em>}' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getInputTypes()
-   * @generated
-   * @ordered
-   */
-  protected EList<inputType> inputTypes;
 
   /**
    * The cached value of the '{@link #getDefinitions() <em>Definitions</em>}' containment reference list.
@@ -229,13 +229,9 @@ public class UIDescriptionImpl extends MinimalEObjectImpl.Container implements U
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<UsedDescriptions> getUsedDescriptions()
+  public Property getProperty()
   {
-    if (usedDescriptions == null)
-    {
-      usedDescriptions = new EObjectContainmentEList<UsedDescriptions>(UsedDescriptions.class, this, GuiDSLPackage.UI_DESCRIPTION__USED_DESCRIPTIONS);
-    }
-    return usedDescriptions;
+    return property;
   }
 
   /**
@@ -243,13 +239,51 @@ public class UIDescriptionImpl extends MinimalEObjectImpl.Container implements U
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<inputType> getInputTypes()
+  public NotificationChain basicSetProperty(Property newProperty, NotificationChain msgs)
   {
-    if (inputTypes == null)
+    Property oldProperty = property;
+    property = newProperty;
+    if (eNotificationRequired())
     {
-      inputTypes = new EObjectContainmentEList<inputType>(inputType.class, this, GuiDSLPackage.UI_DESCRIPTION__INPUT_TYPES);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GuiDSLPackage.UI_DESCRIPTION__PROPERTY, oldProperty, newProperty);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
     }
-    return inputTypes;
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setProperty(Property newProperty)
+  {
+    if (newProperty != property)
+    {
+      NotificationChain msgs = null;
+      if (property != null)
+        msgs = ((InternalEObject)property).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GuiDSLPackage.UI_DESCRIPTION__PROPERTY, null, msgs);
+      if (newProperty != null)
+        msgs = ((InternalEObject)newProperty).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GuiDSLPackage.UI_DESCRIPTION__PROPERTY, null, msgs);
+      msgs = basicSetProperty(newProperty, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, GuiDSLPackage.UI_DESCRIPTION__PROPERTY, newProperty, newProperty));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EList<UsedDescriptions> getUsedDescriptions()
+  {
+    if (usedDescriptions == null)
+    {
+      usedDescriptions = new EObjectContainmentEList<UsedDescriptions>(UsedDescriptions.class, this, GuiDSLPackage.UI_DESCRIPTION__USED_DESCRIPTIONS);
+    }
+    return usedDescriptions;
   }
 
   /**
@@ -294,10 +328,10 @@ public class UIDescriptionImpl extends MinimalEObjectImpl.Container implements U
         return basicSetAreaCount(null, msgs);
       case GuiDSLPackage.UI_DESCRIPTION__TYPE_DEFINITION:
         return basicSetTypeDefinition(null, msgs);
+      case GuiDSLPackage.UI_DESCRIPTION__PROPERTY:
+        return basicSetProperty(null, msgs);
       case GuiDSLPackage.UI_DESCRIPTION__USED_DESCRIPTIONS:
         return ((InternalEList<?>)getUsedDescriptions()).basicRemove(otherEnd, msgs);
-      case GuiDSLPackage.UI_DESCRIPTION__INPUT_TYPES:
-        return ((InternalEList<?>)getInputTypes()).basicRemove(otherEnd, msgs);
       case GuiDSLPackage.UI_DESCRIPTION__DEFINITIONS:
         return ((InternalEList<?>)getDefinitions()).basicRemove(otherEnd, msgs);
       case GuiDSLPackage.UI_DESCRIPTION__AREAS:
@@ -320,10 +354,10 @@ public class UIDescriptionImpl extends MinimalEObjectImpl.Container implements U
         return getAreaCount();
       case GuiDSLPackage.UI_DESCRIPTION__TYPE_DEFINITION:
         return getTypeDefinition();
+      case GuiDSLPackage.UI_DESCRIPTION__PROPERTY:
+        return getProperty();
       case GuiDSLPackage.UI_DESCRIPTION__USED_DESCRIPTIONS:
         return getUsedDescriptions();
-      case GuiDSLPackage.UI_DESCRIPTION__INPUT_TYPES:
-        return getInputTypes();
       case GuiDSLPackage.UI_DESCRIPTION__DEFINITIONS:
         return getDefinitions();
       case GuiDSLPackage.UI_DESCRIPTION__AREAS:
@@ -349,13 +383,12 @@ public class UIDescriptionImpl extends MinimalEObjectImpl.Container implements U
       case GuiDSLPackage.UI_DESCRIPTION__TYPE_DEFINITION:
         setTypeDefinition((TypeDefinition)newValue);
         return;
+      case GuiDSLPackage.UI_DESCRIPTION__PROPERTY:
+        setProperty((Property)newValue);
+        return;
       case GuiDSLPackage.UI_DESCRIPTION__USED_DESCRIPTIONS:
         getUsedDescriptions().clear();
         getUsedDescriptions().addAll((Collection<? extends UsedDescriptions>)newValue);
-        return;
-      case GuiDSLPackage.UI_DESCRIPTION__INPUT_TYPES:
-        getInputTypes().clear();
-        getInputTypes().addAll((Collection<? extends inputType>)newValue);
         return;
       case GuiDSLPackage.UI_DESCRIPTION__DEFINITIONS:
         getDefinitions().clear();
@@ -385,11 +418,11 @@ public class UIDescriptionImpl extends MinimalEObjectImpl.Container implements U
       case GuiDSLPackage.UI_DESCRIPTION__TYPE_DEFINITION:
         setTypeDefinition((TypeDefinition)null);
         return;
+      case GuiDSLPackage.UI_DESCRIPTION__PROPERTY:
+        setProperty((Property)null);
+        return;
       case GuiDSLPackage.UI_DESCRIPTION__USED_DESCRIPTIONS:
         getUsedDescriptions().clear();
-        return;
-      case GuiDSLPackage.UI_DESCRIPTION__INPUT_TYPES:
-        getInputTypes().clear();
         return;
       case GuiDSLPackage.UI_DESCRIPTION__DEFINITIONS:
         getDefinitions().clear();
@@ -415,10 +448,10 @@ public class UIDescriptionImpl extends MinimalEObjectImpl.Container implements U
         return areaCount != null;
       case GuiDSLPackage.UI_DESCRIPTION__TYPE_DEFINITION:
         return typeDefinition != null;
+      case GuiDSLPackage.UI_DESCRIPTION__PROPERTY:
+        return property != null;
       case GuiDSLPackage.UI_DESCRIPTION__USED_DESCRIPTIONS:
         return usedDescriptions != null && !usedDescriptions.isEmpty();
-      case GuiDSLPackage.UI_DESCRIPTION__INPUT_TYPES:
-        return inputTypes != null && !inputTypes.isEmpty();
       case GuiDSLPackage.UI_DESCRIPTION__DEFINITIONS:
         return definitions != null && !definitions.isEmpty();
       case GuiDSLPackage.UI_DESCRIPTION__AREAS:

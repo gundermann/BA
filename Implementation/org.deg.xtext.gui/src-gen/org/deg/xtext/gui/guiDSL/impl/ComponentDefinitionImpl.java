@@ -21,6 +21,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <ul>
  *   <li>{@link org.deg.xtext.gui.guiDSL.impl.ComponentDefinitionImpl#getType <em>Type</em>}</li>
  *   <li>{@link org.deg.xtext.gui.guiDSL.impl.ComponentDefinitionImpl#getName <em>Name</em>}</li>
+ *   <li>{@link org.deg.xtext.gui.guiDSL.impl.ComponentDefinitionImpl#getText <em>Text</em>}</li>
  * </ul>
  * </p>
  *
@@ -67,6 +68,26 @@ public class ComponentDefinitionImpl extends MinimalEObjectImpl.Container implem
    * @ordered
    */
   protected String name = NAME_EDEFAULT;
+
+  /**
+   * The default value of the '{@link #getText() <em>Text</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getText()
+   * @generated
+   * @ordered
+   */
+  protected static final String TEXT_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getText() <em>Text</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getText()
+   * @generated
+   * @ordered
+   */
+  protected String text = TEXT_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -140,6 +161,29 @@ public class ComponentDefinitionImpl extends MinimalEObjectImpl.Container implem
    * <!-- end-user-doc -->
    * @generated
    */
+  public String getText()
+  {
+    return text;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setText(String newText)
+  {
+    String oldText = text;
+    text = newText;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, GuiDSLPackage.COMPONENT_DEFINITION__TEXT, oldText, text));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
@@ -149,6 +193,8 @@ public class ComponentDefinitionImpl extends MinimalEObjectImpl.Container implem
         return getType();
       case GuiDSLPackage.COMPONENT_DEFINITION__NAME:
         return getName();
+      case GuiDSLPackage.COMPONENT_DEFINITION__TEXT:
+        return getText();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -168,6 +214,9 @@ public class ComponentDefinitionImpl extends MinimalEObjectImpl.Container implem
         return;
       case GuiDSLPackage.COMPONENT_DEFINITION__NAME:
         setName((String)newValue);
+        return;
+      case GuiDSLPackage.COMPONENT_DEFINITION__TEXT:
+        setText((String)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -189,6 +238,9 @@ public class ComponentDefinitionImpl extends MinimalEObjectImpl.Container implem
       case GuiDSLPackage.COMPONENT_DEFINITION__NAME:
         setName(NAME_EDEFAULT);
         return;
+      case GuiDSLPackage.COMPONENT_DEFINITION__TEXT:
+        setText(TEXT_EDEFAULT);
+        return;
     }
     super.eUnset(featureID);
   }
@@ -207,6 +259,8 @@ public class ComponentDefinitionImpl extends MinimalEObjectImpl.Container implem
         return TYPE_EDEFAULT == null ? type != null : !TYPE_EDEFAULT.equals(type);
       case GuiDSLPackage.COMPONENT_DEFINITION__NAME:
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+      case GuiDSLPackage.COMPONENT_DEFINITION__TEXT:
+        return TEXT_EDEFAULT == null ? text != null : !TEXT_EDEFAULT.equals(text);
     }
     return super.eIsSet(featureID);
   }
@@ -226,6 +280,8 @@ public class ComponentDefinitionImpl extends MinimalEObjectImpl.Container implem
     result.append(type);
     result.append(", name: ");
     result.append(name);
+    result.append(", text: ");
+    result.append(text);
     result.append(')');
     return result.toString();
   }

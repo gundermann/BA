@@ -2,17 +2,20 @@
  */
 package org.deg.xtext.gui.guiDSL.impl;
 
+import java.util.Collection;
+
 import org.deg.xtext.gui.guiDSL.ButtonDefinition;
 import org.deg.xtext.gui.guiDSL.GuiDSLPackage;
-import org.deg.xtext.gui.guiDSL.Interaction;
 
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.notify.NotificationChain;
+
+import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
+import org.eclipse.emf.ecore.util.EDataTypeEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -21,8 +24,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.deg.xtext.gui.guiDSL.impl.ButtonDefinitionImpl#getText <em>Text</em>}</li>
- *   <li>{@link org.deg.xtext.gui.guiDSL.impl.ButtonDefinitionImpl#getInteraction <em>Interaction</em>}</li>
+ *   <li>{@link org.deg.xtext.gui.guiDSL.impl.ButtonDefinitionImpl#getPropertyKey <em>Property Key</em>}</li>
+ *   <li>{@link org.deg.xtext.gui.guiDSL.impl.ButtonDefinitionImpl#getInteractiontype <em>Interactiontype</em>}</li>
  * </ul>
  * </p>
  *
@@ -31,34 +34,34 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 public class ButtonDefinitionImpl extends ComponentDefinitionImpl implements ButtonDefinition
 {
   /**
-   * The default value of the '{@link #getText() <em>Text</em>}' attribute.
+   * The default value of the '{@link #getPropertyKey() <em>Property Key</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getText()
+   * @see #getPropertyKey()
    * @generated
    * @ordered
    */
-  protected static final String TEXT_EDEFAULT = null;
+  protected static final String PROPERTY_KEY_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getText() <em>Text</em>}' attribute.
+   * The cached value of the '{@link #getPropertyKey() <em>Property Key</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getText()
+   * @see #getPropertyKey()
    * @generated
    * @ordered
    */
-  protected String text = TEXT_EDEFAULT;
+  protected String propertyKey = PROPERTY_KEY_EDEFAULT;
 
   /**
-   * The cached value of the '{@link #getInteraction() <em>Interaction</em>}' containment reference.
+   * The cached value of the '{@link #getInteractiontype() <em>Interactiontype</em>}' attribute list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getInteraction()
+   * @see #getInteractiontype()
    * @generated
    * @ordered
    */
-  protected Interaction interaction;
+  protected EList<String> interactiontype;
 
   /**
    * <!-- begin-user-doc -->
@@ -86,9 +89,9 @@ public class ButtonDefinitionImpl extends ComponentDefinitionImpl implements But
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getText()
+  public String getPropertyKey()
   {
-    return text;
+    return propertyKey;
   }
 
   /**
@@ -96,12 +99,12 @@ public class ButtonDefinitionImpl extends ComponentDefinitionImpl implements But
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setText(String newText)
+  public void setPropertyKey(String newPropertyKey)
   {
-    String oldText = text;
-    text = newText;
+    String oldPropertyKey = propertyKey;
+    propertyKey = newPropertyKey;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, GuiDSLPackage.BUTTON_DEFINITION__TEXT, oldText, text));
+      eNotify(new ENotificationImpl(this, Notification.SET, GuiDSLPackage.BUTTON_DEFINITION__PROPERTY_KEY, oldPropertyKey, propertyKey));
   }
 
   /**
@@ -109,63 +112,13 @@ public class ButtonDefinitionImpl extends ComponentDefinitionImpl implements But
    * <!-- end-user-doc -->
    * @generated
    */
-  public Interaction getInteraction()
+  public EList<String> getInteractiontype()
   {
-    return interaction;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public NotificationChain basicSetInteraction(Interaction newInteraction, NotificationChain msgs)
-  {
-    Interaction oldInteraction = interaction;
-    interaction = newInteraction;
-    if (eNotificationRequired())
+    if (interactiontype == null)
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GuiDSLPackage.BUTTON_DEFINITION__INTERACTION, oldInteraction, newInteraction);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
+      interactiontype = new EDataTypeEList<String>(String.class, this, GuiDSLPackage.BUTTON_DEFINITION__INTERACTIONTYPE);
     }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setInteraction(Interaction newInteraction)
-  {
-    if (newInteraction != interaction)
-    {
-      NotificationChain msgs = null;
-      if (interaction != null)
-        msgs = ((InternalEObject)interaction).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GuiDSLPackage.BUTTON_DEFINITION__INTERACTION, null, msgs);
-      if (newInteraction != null)
-        msgs = ((InternalEObject)newInteraction).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GuiDSLPackage.BUTTON_DEFINITION__INTERACTION, null, msgs);
-      msgs = basicSetInteraction(newInteraction, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, GuiDSLPackage.BUTTON_DEFINITION__INTERACTION, newInteraction, newInteraction));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
-  {
-    switch (featureID)
-    {
-      case GuiDSLPackage.BUTTON_DEFINITION__INTERACTION:
-        return basicSetInteraction(null, msgs);
-    }
-    return super.eInverseRemove(otherEnd, featureID, msgs);
+    return interactiontype;
   }
 
   /**
@@ -178,10 +131,10 @@ public class ButtonDefinitionImpl extends ComponentDefinitionImpl implements But
   {
     switch (featureID)
     {
-      case GuiDSLPackage.BUTTON_DEFINITION__TEXT:
-        return getText();
-      case GuiDSLPackage.BUTTON_DEFINITION__INTERACTION:
-        return getInteraction();
+      case GuiDSLPackage.BUTTON_DEFINITION__PROPERTY_KEY:
+        return getPropertyKey();
+      case GuiDSLPackage.BUTTON_DEFINITION__INTERACTIONTYPE:
+        return getInteractiontype();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -191,16 +144,18 @@ public class ButtonDefinitionImpl extends ComponentDefinitionImpl implements But
    * <!-- end-user-doc -->
    * @generated
    */
+  @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {
     switch (featureID)
     {
-      case GuiDSLPackage.BUTTON_DEFINITION__TEXT:
-        setText((String)newValue);
+      case GuiDSLPackage.BUTTON_DEFINITION__PROPERTY_KEY:
+        setPropertyKey((String)newValue);
         return;
-      case GuiDSLPackage.BUTTON_DEFINITION__INTERACTION:
-        setInteraction((Interaction)newValue);
+      case GuiDSLPackage.BUTTON_DEFINITION__INTERACTIONTYPE:
+        getInteractiontype().clear();
+        getInteractiontype().addAll((Collection<? extends String>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -216,11 +171,11 @@ public class ButtonDefinitionImpl extends ComponentDefinitionImpl implements But
   {
     switch (featureID)
     {
-      case GuiDSLPackage.BUTTON_DEFINITION__TEXT:
-        setText(TEXT_EDEFAULT);
+      case GuiDSLPackage.BUTTON_DEFINITION__PROPERTY_KEY:
+        setPropertyKey(PROPERTY_KEY_EDEFAULT);
         return;
-      case GuiDSLPackage.BUTTON_DEFINITION__INTERACTION:
-        setInteraction((Interaction)null);
+      case GuiDSLPackage.BUTTON_DEFINITION__INTERACTIONTYPE:
+        getInteractiontype().clear();
         return;
     }
     super.eUnset(featureID);
@@ -236,10 +191,10 @@ public class ButtonDefinitionImpl extends ComponentDefinitionImpl implements But
   {
     switch (featureID)
     {
-      case GuiDSLPackage.BUTTON_DEFINITION__TEXT:
-        return TEXT_EDEFAULT == null ? text != null : !TEXT_EDEFAULT.equals(text);
-      case GuiDSLPackage.BUTTON_DEFINITION__INTERACTION:
-        return interaction != null;
+      case GuiDSLPackage.BUTTON_DEFINITION__PROPERTY_KEY:
+        return PROPERTY_KEY_EDEFAULT == null ? propertyKey != null : !PROPERTY_KEY_EDEFAULT.equals(propertyKey);
+      case GuiDSLPackage.BUTTON_DEFINITION__INTERACTIONTYPE:
+        return interactiontype != null && !interactiontype.isEmpty();
     }
     return super.eIsSet(featureID);
   }
@@ -255,8 +210,10 @@ public class ButtonDefinitionImpl extends ComponentDefinitionImpl implements But
     if (eIsProxy()) return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (text: ");
-    result.append(text);
+    result.append(" (propertyKey: ");
+    result.append(propertyKey);
+    result.append(", interactiontype: ");
+    result.append(interactiontype);
     result.append(')');
     return result.toString();
   }

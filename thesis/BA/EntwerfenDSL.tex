@@ -51,11 +51,13 @@ entsprechenden Elements (\emph{Properties}.\\
 Die komplexen Komponenten müssen für jedes verwendete UI-Framework
 implementiert werden. Das hat zur Folge, dass die Implementierung dieser
 Komponenten nicht so stark abstrahiert wird, dass sie nur einmal
-ebtwickelt werden müssen. Damit wird jedoch auch verhindert, dass die
+entwickelt werden müssen. Damit wird jedoch auch verhindert, dass die
 Entwickler, die bzgl. der GUI nur mit der DSL arbeiten, eigene komplexe
 Komponenten entwerfen, deren Wiederverwendungsgrad nierdirger ist, als wenn
 diese Komponenten nach ausreichender Evaluation an einer zentralen Stelle
-implementiert und bereitgestellt werden.\\
+implementiert und bereitgestellt werden. Ein Nachteil dieses konzeptes ist es,
+dass gewährleistet sein muss, das die Quellen für diese komplexen Komponenten
+sowohl zur Entwicklungszeit, als auch zur Laufzeit vorhanden sind.\\
 Da für die komplexe Komponenten eine Klasse im Classpath vorliegen muss, könnten
 diese Komponenten in eine GUI-Beschreibung wie andere verwendete
 GUI-Beschreibungen über \emph{use} eingebundern werden. An komplexen
@@ -72,6 +74,56 @@ selektiert werden können, werden über das Schlüsselwort \emph{selectableValues}
 gesetzt und die Werte, die selektiert sind am Schlüsselwort \emph{selectedValues}.
 
 \subsection*{Version 2}
+Aus der Begutachtung der ersten Version kam heraus, dass die
+Aktionen, die bei Interaktionen ausgeführt werden, nicht in der DSL beschrieben
+werden müssen. Grund dafür ist, dass diese Aktionen teilweise sehr komplex sind
+und kaum abstrahiert werden können. Daher fällt der gesamte Teil zur
+Beschreibung von Aktionen bei Interaktionen weg.\\
+Bezogen auf die komplexen Komponenten hat sich ergeben, dass lediglich nur
+den Input-Typ angegeben werden muss. Die Festlegung über selektierbare und
+selektierte Elemente ist ebenso wie die Aktion einer Interaktion teilweise zu
+komplex und schwer abstrahierbar. Das ermöglicht, die komplexen Elemente mittels
+\emph{use} (siehe semantisches Model \emph{UsedDefinitions}) in die
+GUI-Beschreibung einzubinden (siehe konkrete Syntax). Da für komplexe
+Komponenten immer noch der Input-Typ angegeben werden kann, werden komplexen
+internen Komponenten und anderen komplexen externen Komponenten zwischen zwei
+Artefakten unterschieden (siehe semantisches Model \emph{UsedDescription})\\
+Bezüglich der Komponenten, die mittels \emph{use} eingebunden werden, ist es
+für die Lokalisierung der entsprechenden Quellen besser, wenn in der
+GUI-Beschreibung der qualifizierte Name angegeben wird. Dadruch wird die
+Besschreibung zwar länger, im Gegenzug dazu jedoch auch eindeutig.\\
+Eine weitere Diskussion regte die Art und Weise der Zuweisungen von Komponenten
+zu einem Area an. Bei der Lösung aus Version 1 ist es nicht möglich mehrere
+Komponenten einem Area zuzuweisen. Für die Meta-Daten einer Areazuweisung
+(siehe semantisches Model \emph{AreaAssignment}) bedeutet dies, dass diese nicht
+nur mit einer Komponenten umgehen können muss, sondern mit einer Vielzahl
+von Komponenten.\\
+Ein weiterer wichtiger Punkt, welcher in der
+ersten Version keine Beachtung fand, ist die Art und Weise, wie an den
+Komponenten bestimmte Werte wie bspw. die Aufschrift gesetzt werden. In der deg
+werden dazu so genannte \emph{Properties}-Dateien verwendet, die mittels eines
+Frameworks ausgelesen werden und über einen Schlüssel den Komponenten zugewiesen
+werden. Damit wird die eigentliche Klasse zur Beschreibung der GUI in der deg
+entlastet. Auch die GUI-Beschreibung mittels DSL kann damit entlastet werden.
+Dazu wird jedoch ein Konzept benötigt, wie diese Properties-Dateien in
+die GUI-Beschreibung eingebunden und verwendet werden. Hierzu müssen die
+Meta-Daten für die GUI angepasst werden. Neben der Anzahl an Areas sowie der
+Zuweisung von Komponenten zu diesen und den Einbindung anderer Komponenten, wird
+die benutzte Properties-Datei mit angegeben. Der benötigte Schlüssel für die
+Wertzuweisung wird innerhalb der Komponenten angegeben. Sind in einer
+Properties-Datei mehrere Werte für unterschiedliche Attribute einer Komponente
+angegeben, werden sie entsprechend zugeordnet, sodass in der GUI-Beschreibung
+nur der Schlüssel angegeben werden muss. Das hat den Vorteil, dass die
+GUI-Beschreibung dadurch weitaus verkürzt wird, und dass bei Fehlern bzgl. der
+Werten, die den Attributen der Komponenten zugewiesen wurden, nur die
+Properties-Datei verändert werden muss und nicht die GUI-Beschreibung. Das
+Verändern der GUI-Beschreibung würde dazu führen, dass die Klassen neu generiert
+werden müssten. Abgesehen von den Properties-Dateien besteht in der
+eigentlichen GUI-Beschreibung weiterhin die Möglichkeit, Werte festzulegen. Bei
+der Generation müssen die in der GUI-Beschreibung festgelegten Werte vorrangig
+behandelt werden. Grund dafür ist, dass im Vorfeld geprüft werden kann, ob die
+Werte in der GUI-Beschreibung definiert sind. Somit muss die Properties-Datei
+nicht zwingend nach dem richtigen Schlüssel durchsucht werden.
 
 
 \section{Semantisches Model}
@@ -110,7 +162,7 @@ DSL-Code zu finden. Besondere Änderungen bzgl. der konkreten Syntax sind jeweils
 nachfolgend genannt. Die Grammatiken befinden sich im Anhang
 \ref{AppGrammatiken}. Sie sind dort ebenfalls in Versionen aufgeteilt.
  \subsection*{Version 1}
-\begin{lstlisting}
+\begin{lstlisting}[caption = Syntax Version 1][label = LST_Syntax1]
 Area count: 4
 type: WINDOW use: "AnotherDescription"
 DEF Label as "HEAD" :
@@ -136,4 +188,83 @@ Komponentendefinitionen werden durch das Schlüsselwort \emph{DEF} eingeleitet un
 \emph{Typ}).
 Bei der Multiselection-Komponente fällt auf, dass ein Referenzwert verwendet
 wird, der in dieser Beschreibung nicht deklariert wurde (\emph{valuespackage.Values}).
-Dabie handelt es sich um einen vollqualifizierten Namen einer Klasse. 
+Dabei handelt es sich um einen qualifizierten Namen einer Klasse.
+
+\subsection*{Version 2}
+Die einfachste der Veränderungen bzgl. der Syntax in Version 2 ist die
+festlegung der Properties-Dateien. In Listing \ref{LST_Properties2} ist zu erkennen, dass eine
+entsprechende Datei festgelegt wurde und in den Komponenten entsprechende
+Schlüssel vergeben wurden. Das Label mit der Bezeichnung \emph{OneLabel} enthält
+keinen Property-Key. In diesem Fall wird der Titel als
+solcher verwendet.
+\begin{lstlisting}[{caption = Properties in Version 2},{label =
+LST_Properties2}] type: WINDOW 
+get properties from: 'sources.ui.properties' 
+DEF Label as "OneLabel" :
+END DEF
+DEF Label as "AnotherLabel":
+propertyKey='AnotherLabel2'
+END DEF
+\end{lstlisting}
+Aufgrund der Reduzierung der Meta-Daten für eine Interaktion stand die Frage
+offen, ob die Interaktionstypen einfach hintereinander mit Komma aufgeählt
+werden sollen, oder ob sie untereinander und jedes Mal wieder mit dem
+entsprechenden Schlüsselwort aufgezählt werden sollen. Aufgrund der Tatsache,
+dass in der deg höchstens 4 Interaktionstypen in einer Komponente verwendet
+werden, werden diese in der GUI-Beschreibung per DSL hintereinander mit Komma
+aufgezählt, wie in Listing \ref{LST_Interaktion2} zu erkennen ist.
+\begin{lstlisting}[{caption=Interaktion in Version 2},{label=LST_Interaktion2}]
+DEF Button as "InteractButton": 
+	interactiontype=Click,ChangeText
+END DEF
+\end{lstlisting}
+Die komplexen Komponenten werden wie in Listing \ref{LST_Komplexe2} mit
+der Komponente Multiselection gezeigt ist, über das Schlüsselwort \emph{use}
+eingebunden werden.
+Der Input-Typ kann dabei optional innerhalb der Zeichen \emph{<} und \emph{>} angegeben. 
+\begin{lstlisting}[{caption=Komplexe Komponenten in Version
+2},{label=LST_Komplexe2}]
+type: WINDOW 
+use: Multiselection<'valuepackage.Values'> as: 'Multi'
+\end{lstlisting}
+Für die Zuweisung mehrer Komponenten zu den Areas kamen zwei Lösungen in
+Betracht. Bei der einen finden die Definitionen der Komponenten zusammen mit der
+Zuweisung zu dem Area statt. Dies könnte bspw. wie in Listing \ref{} dargestellt
+werden.
+\begin{lstlisting}[{caption=Area-Zuweisung Möglichkeit 1 Version
+2},{label=LST_Moeglichkeit1_2}]
+Area count: 1
+type: WINDOW 
+Area:1={
+DEF Button as "Button:
+	text="Button"
+END DEF
+DEF Label as "Label":
+	text="Label"
+END DEF
+}
+\end{lstlisting}
+Eine andere Möglichkeit wäre es, die aktuelle Form der Zuweisung zu verfeinern
+und somit die Komponenten bei der Zuweisung mit komma getrennt von einander
+aufzählen. Die erste Möglichkeit würde sich sehr gut eignen, wenn nur die in der
+Datei definierten Komponenten dem Area zugewiesen werden müssten. Da die
+eingebundenen Komponenten auch Areas zugewordnet werden, würde für dieses
+Verfahren ein zusätzliches syntaktisches Konzept innerhalb der Area-Zuweisung
+benötigt werden. Um dies zu umgehen wurde die Entscheidung getroffen, das alte
+Verfahren zu verfeinern. Listing \ref{LST_Moeglichkeit2_2} ist ein Beispiel für die
+Area-Zuweisung von drei Komponenten zu entnehmen.
+\begin{lstlisting}[{caption=Area-Zuweisung Möglichkeit 2 Version
+2},{label=LST_Moeglichkeit2_2}]
+Area count: 1
+type: WINDOW 
+DEF Label as "OneLabel" :
+END DEF
+DEF Label as "AnotherLabel":
+END DEF
+DEF Button as "InteractButton": 
+	interactiontype=Click,ChangeText
+END DEF
+Area:1<-"OneLabel","InteractButton","AnotherLabel"
+
+\end{lstlisting}
+

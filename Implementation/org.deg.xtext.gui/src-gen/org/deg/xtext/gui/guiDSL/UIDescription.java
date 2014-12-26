@@ -16,8 +16,8 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link org.deg.xtext.gui.guiDSL.UIDescription#getAreaCount <em>Area Count</em>}</li>
  *   <li>{@link org.deg.xtext.gui.guiDSL.UIDescription#getTypeDefinition <em>Type Definition</em>}</li>
+ *   <li>{@link org.deg.xtext.gui.guiDSL.UIDescription#getProperty <em>Property</em>}</li>
  *   <li>{@link org.deg.xtext.gui.guiDSL.UIDescription#getUsedDescriptions <em>Used Descriptions</em>}</li>
- *   <li>{@link org.deg.xtext.gui.guiDSL.UIDescription#getInputTypes <em>Input Types</em>}</li>
  *   <li>{@link org.deg.xtext.gui.guiDSL.UIDescription#getDefinitions <em>Definitions</em>}</li>
  *   <li>{@link org.deg.xtext.gui.guiDSL.UIDescription#getAreas <em>Areas</em>}</li>
  * </ul>
@@ -82,6 +82,32 @@ public interface UIDescription extends EObject
   void setTypeDefinition(TypeDefinition value);
 
   /**
+   * Returns the value of the '<em><b>Property</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Property</em>' containment reference isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Property</em>' containment reference.
+   * @see #setProperty(Property)
+   * @see org.deg.xtext.gui.guiDSL.GuiDSLPackage#getUIDescription_Property()
+   * @model containment="true"
+   * @generated
+   */
+  Property getProperty();
+
+  /**
+   * Sets the value of the '{@link org.deg.xtext.gui.guiDSL.UIDescription#getProperty <em>Property</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Property</em>' containment reference.
+   * @see #getProperty()
+   * @generated
+   */
+  void setProperty(Property value);
+
+  /**
    * Returns the value of the '<em><b>Used Descriptions</b></em>' containment reference list.
    * The list contents are of type {@link org.deg.xtext.gui.guiDSL.UsedDescriptions}.
    * <!-- begin-user-doc -->
@@ -96,22 +122,6 @@ public interface UIDescription extends EObject
    * @generated
    */
   EList<UsedDescriptions> getUsedDescriptions();
-
-  /**
-   * Returns the value of the '<em><b>Input Types</b></em>' containment reference list.
-   * The list contents are of type {@link org.deg.xtext.gui.guiDSL.inputType}.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Input Types</em>' containment reference list isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Input Types</em>' containment reference list.
-   * @see org.deg.xtext.gui.guiDSL.GuiDSLPackage#getUIDescription_InputTypes()
-   * @model containment="true"
-   * @generated
-   */
-  EList<inputType> getInputTypes();
 
   /**
    * Returns the value of the '<em><b>Definitions</b></em>' containment reference list.

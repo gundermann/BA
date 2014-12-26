@@ -127,25 +127,7 @@ ruleUIDescription returns [EObject current=null]
 	    }
 
 )
-)(
-(
-		{ 
-	        newCompositeNode(grammarAccess.getUIDescriptionAccess().getUsedDescriptionsUsedDescriptionsParserRuleCall_0_2_0()); 
-	    }
-		lv_usedDescriptions_3_0=ruleUsedDescriptions		{
-	        if ($current==null) {
-	            $current = createModelElementForParent(grammarAccess.getUIDescriptionRule());
-	        }
-       		add(
-       			$current, 
-       			"usedDescriptions",
-        		lv_usedDescriptions_3_0, 
-        		"UsedDescriptions");
-	        afterParserOrEnumRuleCall();
-	    }
-
-)
-)*))
+)))
 					{ 
 	 				  getUnorderedGroupHelper().returnFromSelection(grammarAccess.getUIDescriptionAccess().getUnorderedGroup());
 	 				}
@@ -157,40 +139,46 @@ ruleUIDescription returns [EObject current=null]
 					{ 
 	 				  getUnorderedGroupHelper().select(grammarAccess.getUIDescriptionAccess().getUnorderedGroup(), 1);
 	 				}
-					({true}?=>(
+					({true}?=>((
 (
 		{ 
-	        newCompositeNode(grammarAccess.getUIDescriptionAccess().getInputTypesInputTypeParserRuleCall_1_0()); 
+	        newCompositeNode(grammarAccess.getUIDescriptionAccess().getPropertyPropertyParserRuleCall_1_0_0()); 
 	    }
-		lv_inputTypes_4_0=ruleinputType		{
+		lv_property_3_0=ruleProperty		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getUIDescriptionRule());
+	        }
+       		set(
+       			$current, 
+       			"property",
+        		lv_property_3_0, 
+        		"Property");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+)(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getUIDescriptionAccess().getUsedDescriptionsUsedDescriptionsParserRuleCall_1_1_0()); 
+	    }
+		lv_usedDescriptions_4_0=ruleUsedDescriptions		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getUIDescriptionRule());
 	        }
        		add(
        			$current, 
-       			"inputTypes",
-        		lv_inputTypes_4_0, 
-        		"inputType");
+       			"usedDescriptions",
+        		lv_usedDescriptions_4_0, 
+        		"UsedDescriptions");
 	        afterParserOrEnumRuleCall();
 	    }
 
 )
-))+
-					{ 
-	 				  getUnorderedGroupHelper().returnFromSelection(grammarAccess.getUIDescriptionAccess().getUnorderedGroup());
-	 				}
- 				)
-			)  |
-
-			( 
-				{getUnorderedGroupHelper().canSelect(grammarAccess.getUIDescriptionAccess().getUnorderedGroup(), 2)}?=>(
-					{ 
-	 				  getUnorderedGroupHelper().select(grammarAccess.getUIDescriptionAccess().getUnorderedGroup(), 2);
-	 				}
-					({true}?=>((
+)*(
 (
 		{ 
-	        newCompositeNode(grammarAccess.getUIDescriptionAccess().getDefinitionsDefinitionParserRuleCall_2_0_0()); 
+	        newCompositeNode(grammarAccess.getUIDescriptionAccess().getDefinitionsDefinitionParserRuleCall_1_2_0()); 
 	    }
 		lv_definitions_5_0=ruleDefinition		{
 	        if ($current==null) {
@@ -208,7 +196,7 @@ ruleUIDescription returns [EObject current=null]
 )*(
 (
 		{ 
-	        newCompositeNode(grammarAccess.getUIDescriptionAccess().getAreasAreaAssignmentParserRuleCall_2_1_0()); 
+	        newCompositeNode(grammarAccess.getUIDescriptionAccess().getAreasAreaAssignmentParserRuleCall_1_3_0()); 
 	    }
 		lv_areas_6_0=ruleAreaAssignment		{
 	        if ($current==null) {
@@ -245,60 +233,38 @@ ruleUIDescription returns [EObject current=null]
 
 
 
-// Entry rule entryRuleinputType
-entryRuleinputType returns [EObject current=null] 
+// Entry rule entryRuleProperty
+entryRuleProperty returns [EObject current=null] 
 	:
-	{ newCompositeNode(grammarAccess.getInputTypeRule()); }
-	 iv_ruleinputType=ruleinputType 
-	 { $current=$iv_ruleinputType.current; } 
+	{ newCompositeNode(grammarAccess.getPropertyRule()); }
+	 iv_ruleProperty=ruleProperty 
+	 { $current=$iv_ruleProperty.current; } 
 	 EOF 
 ;
 
-// Rule inputType
-ruleinputType returns [EObject current=null] 
+// Rule Property
+ruleProperty returns [EObject current=null] 
     @init { enterRule(); 
     }
     @after { leaveRule(); }:
-(	otherlv_0='inputType=' 
+(	otherlv_0='get properties from:' 
     {
-    	newLeafNode(otherlv_0, grammarAccess.getInputTypeAccess().getInputTypeKeyword_0());
+    	newLeafNode(otherlv_0, grammarAccess.getPropertyAccess().getGetPropertiesFromKeyword_0());
     }
 (
 (
-		lv_type_1_0=RULE_STRING
+		lv_propertiesFile_1_0=RULE_STRING
 		{
-			newLeafNode(lv_type_1_0, grammarAccess.getInputTypeAccess().getTypeSTRINGTerminalRuleCall_1_0()); 
+			newLeafNode(lv_propertiesFile_1_0, grammarAccess.getPropertyAccess().getPropertiesFileSTRINGTerminalRuleCall_1_0()); 
 		}
 		{
 	        if ($current==null) {
-	            $current = createModelElement(grammarAccess.getInputTypeRule());
+	            $current = createModelElement(grammarAccess.getPropertyRule());
 	        }
        		setWithLastConsumed(
        			$current, 
-       			"type",
-        		lv_type_1_0, 
-        		"STRING");
-	    }
-
-)
-)	otherlv_2=' as ' 
-    {
-    	newLeafNode(otherlv_2, grammarAccess.getInputTypeAccess().getAsKeyword_2());
-    }
-(
-(
-		lv_name_3_0=RULE_STRING
-		{
-			newLeafNode(lv_name_3_0, grammarAccess.getInputTypeAccess().getNameSTRINGTerminalRuleCall_3_0()); 
-		}
-		{
-	        if ($current==null) {
-	            $current = createModelElement(grammarAccess.getInputTypeRule());
-	        }
-       		setWithLastConsumed(
-       			$current, 
-       			"name",
-        		lv_name_3_0, 
+       			"propertiesFile",
+        		lv_propertiesFile_1_0, 
         		"STRING");
 	    }
 
@@ -330,23 +296,63 @@ ruleUsedDescriptions returns [EObject current=null]
     }
 (
 (
+(
 		{ 
-	        newCompositeNode(grammarAccess.getUsedDescriptionsAccess().getDescriptionUIDescriptionImportParserRuleCall_1_0()); 
+	        newCompositeNode(grammarAccess.getUsedDescriptionsAccess().getDescriptionUIDescriptionImportParserRuleCall_1_0_0()); 
 	    }
-		lv_description_1_0=ruleUIDescriptionImport		{
+		lv_description_1_1=ruleUIDescriptionImport		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getUsedDescriptionsRule());
 	        }
        		set(
        			$current, 
        			"description",
-        		lv_description_1_0, 
+        		lv_description_1_1, 
         		"UIDescriptionImport");
 	        afterParserOrEnumRuleCall();
 	    }
 
+    |		{ 
+	        newCompositeNode(grammarAccess.getUsedDescriptionsAccess().getDescriptionComplexComponentParserRuleCall_1_0_1()); 
+	    }
+		lv_description_1_2=rulecomplexComponent		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getUsedDescriptionsRule());
+	        }
+       		set(
+       			$current, 
+       			"description",
+        		lv_description_1_2, 
+        		"complexComponent");
+	        afterParserOrEnumRuleCall();
+	    }
+
 )
-))
+
+)
+)(	otherlv_2=' as: ' 
+    {
+    	newLeafNode(otherlv_2, grammarAccess.getUsedDescriptionsAccess().getAsKeyword_2_0());
+    }
+(
+(
+		lv_localName_3_0=RULE_STRING
+		{
+			newLeafNode(lv_localName_3_0, grammarAccess.getUsedDescriptionsAccess().getLocalNameSTRINGTerminalRuleCall_2_1_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getUsedDescriptionsRule());
+	        }
+       		setWithLastConsumed(
+       			$current, 
+       			"localName",
+        		lv_localName_3_0, 
+        		"STRING");
+	    }
+
+)
+))?)
 ;
 
 
@@ -464,9 +470,9 @@ ruleTypeDefinition returns [EObject current=null]
 (
 (
 		{ 
-	        newCompositeNode(grammarAccess.getTypeDefinitionAccess().getTypeTYPEParserRuleCall_1_0()); 
+	        newCompositeNode(grammarAccess.getTypeDefinitionAccess().getTypeTypeParserRuleCall_1_0()); 
 	    }
-		lv_type_1_0=ruleTYPE		{
+		lv_type_1_0=ruleType		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getTypeDefinitionRule());
 	        }
@@ -474,7 +480,7 @@ ruleTypeDefinition returns [EObject current=null]
        			$current, 
        			"type",
         		lv_type_1_0, 
-        		"TYPE");
+        		"Type");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -486,17 +492,17 @@ ruleTypeDefinition returns [EObject current=null]
 
 
 
-// Entry rule entryRuleTYPE
-entryRuleTYPE returns [String current=null] 
+// Entry rule entryRuleType
+entryRuleType returns [String current=null] 
 	:
-	{ newCompositeNode(grammarAccess.getTYPERule()); } 
-	 iv_ruleTYPE=ruleTYPE 
-	 { $current=$iv_ruleTYPE.current.getText(); }  
+	{ newCompositeNode(grammarAccess.getTypeRule()); } 
+	 iv_ruleType=ruleType 
+	 { $current=$iv_ruleType.current.getText(); }  
 	 EOF 
 ;
 
-// Rule TYPE
-ruleTYPE returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] 
+// Rule Type
+ruleType returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] 
     @init { enterRule(); 
     }
     @after { leaveRule(); }:
@@ -504,14 +510,14 @@ ruleTYPE returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()]
 	kw='WINDOW' 
     {
         $current.merge(kw);
-        newLeafNode(kw, grammarAccess.getTYPEAccess().getWINDOWKeyword_0()); 
+        newLeafNode(kw, grammarAccess.getTypeAccess().getWINDOWKeyword_0()); 
     }
 
     |
 	kw='INNERCOMPLEX' 
     {
         $current.merge(kw);
-        newLeafNode(kw, grammarAccess.getTYPEAccess().getINNERCOMPLEXKeyword_1()); 
+        newLeafNode(kw, grammarAccess.getTypeAccess().getINNERCOMPLEXKeyword_1()); 
     }
 )
     ;
@@ -534,11 +540,11 @@ ruleUIDescriptionImport returns [EObject current=null]
     @init { enterRule(); 
     }
     @after { leaveRule(); }:
-((
+(
 (
 		lv_descriptionName_0_0=RULE_STRING
 		{
-			newLeafNode(lv_descriptionName_0_0, grammarAccess.getUIDescriptionImportAccess().getDescriptionNameSTRINGTerminalRuleCall_0_0()); 
+			newLeafNode(lv_descriptionName_0_0, grammarAccess.getUIDescriptionImportAccess().getDescriptionNameSTRINGTerminalRuleCall_0()); 
 		}
 		{
 	        if ($current==null) {
@@ -552,29 +558,99 @@ ruleUIDescriptionImport returns [EObject current=null]
 	    }
 
 )
-)(	otherlv_1=' As: ' 
+)
+;
+
+
+
+
+
+// Entry rule entryRulecomplexComponent
+entryRulecomplexComponent returns [EObject current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getComplexComponentRule()); }
+	 iv_rulecomplexComponent=rulecomplexComponent 
+	 { $current=$iv_rulecomplexComponent.current; } 
+	 EOF 
+;
+
+// Rule complexComponent
+rulecomplexComponent returns [EObject current=null] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
+
+    { 
+        newCompositeNode(grammarAccess.getComplexComponentAccess().getMultiselectionParserRuleCall()); 
+    }
+    this_Multiselection_0=ruleMultiselection
+    { 
+        $current = $this_Multiselection_0.current; 
+        afterParserOrEnumRuleCall();
+    }
+
+;
+
+
+
+
+
+// Entry rule entryRuleMultiselection
+entryRuleMultiselection returns [EObject current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getMultiselectionRule()); }
+	 iv_ruleMultiselection=ruleMultiselection 
+	 { $current=$iv_ruleMultiselection.current; } 
+	 EOF 
+;
+
+// Rule Multiselection
+ruleMultiselection returns [EObject current=null] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
+((
+(
+		lv_descriptionName_0_0=	'Multiselection' 
     {
-    	newLeafNode(otherlv_1, grammarAccess.getUIDescriptionImportAccess().getAsKeyword_1_0());
+        newLeafNode(lv_descriptionName_0_0, grammarAccess.getMultiselectionAccess().getDescriptionNameMultiselectionKeyword_0_0());
+    }
+ 
+	    {
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getMultiselectionRule());
+	        }
+       		setWithLastConsumed($current, "descriptionName", lv_descriptionName_0_0, "Multiselection");
+	    }
+
+)
+)(	otherlv_1='<' 
+    {
+    	newLeafNode(otherlv_1, grammarAccess.getMultiselectionAccess().getLessThanSignKeyword_1_0());
     }
 (
 (
-		lv_localName_2_0=RULE_STRING
+		lv_inputType_2_0=RULE_STRING
 		{
-			newLeafNode(lv_localName_2_0, grammarAccess.getUIDescriptionImportAccess().getLocalNameSTRINGTerminalRuleCall_1_1_0()); 
+			newLeafNode(lv_inputType_2_0, grammarAccess.getMultiselectionAccess().getInputTypeSTRINGTerminalRuleCall_1_1_0()); 
 		}
 		{
 	        if ($current==null) {
-	            $current = createModelElement(grammarAccess.getUIDescriptionImportRule());
+	            $current = createModelElement(grammarAccess.getMultiselectionRule());
 	        }
        		setWithLastConsumed(
        			$current, 
-       			"localName",
-        		lv_localName_2_0, 
+       			"inputType",
+        		lv_inputType_2_0, 
         		"STRING");
 	    }
 
 )
-))?)
+)	otherlv_3='>' 
+    {
+    	newLeafNode(otherlv_3, grammarAccess.getMultiselectionAccess().getGreaterThanSignKeyword_1_2());
+    }
+)?)
 ;
 
 
@@ -623,42 +699,42 @@ ruleAreaAssignment returns [EObject current=null]
     }
 (
 (
-		lv_element_3_0=RULE_STRING
+		lv_elements_3_0=RULE_STRING
 		{
-			newLeafNode(lv_element_3_0, grammarAccess.getAreaAssignmentAccess().getElementSTRINGTerminalRuleCall_0_3_0()); 
+			newLeafNode(lv_elements_3_0, grammarAccess.getAreaAssignmentAccess().getElementsSTRINGTerminalRuleCall_0_3_0()); 
 		}
 		{
 	        if ($current==null) {
 	            $current = createModelElement(grammarAccess.getAreaAssignmentRule());
 	        }
-       		setWithLastConsumed(
+       		addWithLastConsumed(
        			$current, 
-       			"element",
-        		lv_element_3_0, 
+       			"elements",
+        		lv_elements_3_0, 
         		"STRING");
 	    }
 
 )
-))
+)+)
     |((
 (
-		lv_element_4_0=RULE_STRING
+		lv_elements_4_0=RULE_STRING
 		{
-			newLeafNode(lv_element_4_0, grammarAccess.getAreaAssignmentAccess().getElementSTRINGTerminalRuleCall_1_0_0()); 
+			newLeafNode(lv_elements_4_0, grammarAccess.getAreaAssignmentAccess().getElementsSTRINGTerminalRuleCall_1_0_0()); 
 		}
 		{
 	        if ($current==null) {
 	            $current = createModelElement(grammarAccess.getAreaAssignmentRule());
 	        }
-       		setWithLastConsumed(
+       		addWithLastConsumed(
        			$current, 
-       			"element",
-        		lv_element_4_0, 
+       			"elements",
+        		lv_elements_4_0, 
         		"STRING");
 	    }
 
 )
-)	otherlv_5='->' 
+)+	otherlv_5='->' 
     {
     	newLeafNode(otherlv_5, grammarAccess.getAreaAssignmentAccess().getHyphenMinusGreaterThanSignKeyword_1_1());
     }
@@ -774,141 +850,7 @@ ruleComponentDefinition returns [EObject current=null]
         $current = $this_CheckboxDefinition_6.current; 
         afterParserOrEnumRuleCall();
     }
-
-    |
-    { 
-        newCompositeNode(grammarAccess.getComponentDefinitionAccess().getMultiSelectionDefinitionParserRuleCall_7()); 
-    }
-    this_MultiSelectionDefinition_7=ruleMultiSelectionDefinition
-    { 
-        $current = $this_MultiSelectionDefinition_7.current; 
-        afterParserOrEnumRuleCall();
-    }
 )
-;
-
-
-
-
-
-// Entry rule entryRuleMultiSelectionDefinition
-entryRuleMultiSelectionDefinition returns [EObject current=null] 
-	:
-	{ newCompositeNode(grammarAccess.getMultiSelectionDefinitionRule()); }
-	 iv_ruleMultiSelectionDefinition=ruleMultiSelectionDefinition 
-	 { $current=$iv_ruleMultiSelectionDefinition.current; } 
-	 EOF 
-;
-
-// Rule MultiSelectionDefinition
-ruleMultiSelectionDefinition returns [EObject current=null] 
-    @init { enterRule(); 
-    }
-    @after { leaveRule(); }:
-((
-(
-		lv_type_0_0=	'MultiSelection' 
-    {
-        newLeafNode(lv_type_0_0, grammarAccess.getMultiSelectionDefinitionAccess().getTypeMultiSelectionKeyword_0_0());
-    }
- 
-	    {
-	        if ($current==null) {
-	            $current = createModelElement(grammarAccess.getMultiSelectionDefinitionRule());
-	        }
-       		setWithLastConsumed($current, "type", lv_type_0_0, "MultiSelection");
-	    }
-
-)
-)	otherlv_1=' as ' 
-    {
-    	newLeafNode(otherlv_1, grammarAccess.getMultiSelectionDefinitionAccess().getAsKeyword_1());
-    }
-(
-(
-		lv_name_2_0=RULE_STRING
-		{
-			newLeafNode(lv_name_2_0, grammarAccess.getMultiSelectionDefinitionAccess().getNameSTRINGTerminalRuleCall_2_0()); 
-		}
-		{
-	        if ($current==null) {
-	            $current = createModelElement(grammarAccess.getMultiSelectionDefinitionRule());
-	        }
-       		setWithLastConsumed(
-       			$current, 
-       			"name",
-        		lv_name_2_0, 
-        		"STRING");
-	    }
-
-)
-)(	otherlv_3='inputType=' 
-    {
-    	newLeafNode(otherlv_3, grammarAccess.getMultiSelectionDefinitionAccess().getInputTypeKeyword_3_0());
-    }
-(
-(
-		lv_inputType_4_0=RULE_STRING
-		{
-			newLeafNode(lv_inputType_4_0, grammarAccess.getMultiSelectionDefinitionAccess().getInputTypeSTRINGTerminalRuleCall_3_1_0()); 
-		}
-		{
-	        if ($current==null) {
-	            $current = createModelElement(grammarAccess.getMultiSelectionDefinitionRule());
-	        }
-       		setWithLastConsumed(
-       			$current, 
-       			"inputType",
-        		lv_inputType_4_0, 
-        		"STRING");
-	    }
-
-)
-)(	otherlv_5='selectableValues=' 
-    {
-    	newLeafNode(otherlv_5, grammarAccess.getMultiSelectionDefinitionAccess().getSelectableValuesKeyword_3_2_0());
-    }
-(
-(
-		lv_selectableValuesLocation_6_0=RULE_STRING
-		{
-			newLeafNode(lv_selectableValuesLocation_6_0, grammarAccess.getMultiSelectionDefinitionAccess().getSelectableValuesLocationSTRINGTerminalRuleCall_3_2_1_0()); 
-		}
-		{
-	        if ($current==null) {
-	            $current = createModelElement(grammarAccess.getMultiSelectionDefinitionRule());
-	        }
-       		setWithLastConsumed(
-       			$current, 
-       			"selectableValuesLocation",
-        		lv_selectableValuesLocation_6_0, 
-        		"STRING");
-	    }
-
-)
-)(	otherlv_7='selectedValues=' 
-    {
-    	newLeafNode(otherlv_7, grammarAccess.getMultiSelectionDefinitionAccess().getSelectedValuesKeyword_3_2_2_0());
-    }
-(
-(
-		lv_selectedValuesLocation_8_0=RULE_STRING
-		{
-			newLeafNode(lv_selectedValuesLocation_8_0, grammarAccess.getMultiSelectionDefinitionAccess().getSelectedValuesLocationSTRINGTerminalRuleCall_3_2_2_1_0()); 
-		}
-		{
-	        if ($current==null) {
-	            $current = createModelElement(grammarAccess.getMultiSelectionDefinitionRule());
-	        }
-       		setWithLastConsumed(
-       			$current, 
-       			"selectedValuesLocation",
-        		lv_selectedValuesLocation_8_0, 
-        		"STRING");
-	    }
-
-)
-))?)?)?)
 ;
 
 
@@ -1390,15 +1332,37 @@ ruleButtonDefinition returns [EObject current=null]
     {
     	newLeafNode(otherlv_3, grammarAccess.getButtonDefinitionAccess().getColonKeyword_3());
     }
-(	otherlv_4='text=' 
+(	otherlv_4='propertyKey=' 
     {
-    	newLeafNode(otherlv_4, grammarAccess.getButtonDefinitionAccess().getTextKeyword_4_0());
+    	newLeafNode(otherlv_4, grammarAccess.getButtonDefinitionAccess().getPropertyKeyKeyword_4_0());
     }
 (
 (
-		lv_text_5_0=RULE_STRING
+		lv_propertyKey_5_0=RULE_STRING
 		{
-			newLeafNode(lv_text_5_0, grammarAccess.getButtonDefinitionAccess().getTextSTRINGTerminalRuleCall_4_1_0()); 
+			newLeafNode(lv_propertyKey_5_0, grammarAccess.getButtonDefinitionAccess().getPropertyKeySTRINGTerminalRuleCall_4_1_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getButtonDefinitionRule());
+	        }
+       		setWithLastConsumed(
+       			$current, 
+       			"propertyKey",
+        		lv_propertyKey_5_0, 
+        		"STRING");
+	    }
+
+)
+))?(	otherlv_6='text=' 
+    {
+    	newLeafNode(otherlv_6, grammarAccess.getButtonDefinitionAccess().getTextKeyword_5_0());
+    }
+(
+(
+		lv_text_7_0=RULE_STRING
+		{
+			newLeafNode(lv_text_7_0, grammarAccess.getButtonDefinitionAccess().getTextSTRINGTerminalRuleCall_5_1_0()); 
 		}
 		{
 	        if ($current==null) {
@@ -1407,108 +1371,37 @@ ruleButtonDefinition returns [EObject current=null]
        		setWithLastConsumed(
        			$current, 
        			"text",
-        		lv_text_5_0, 
+        		lv_text_7_0, 
         		"STRING");
 	    }
 
 )
-))?(	otherlv_6='interaction=' 
+))?(	otherlv_8='interactiontype=' 
     {
-    	newLeafNode(otherlv_6, grammarAccess.getButtonDefinitionAccess().getInteractionKeyword_5_0());
+    	newLeafNode(otherlv_8, grammarAccess.getButtonDefinitionAccess().getInteractiontypeKeyword_6_0());
     }
 (
 (
 		{ 
-	        newCompositeNode(grammarAccess.getButtonDefinitionAccess().getInteractionInteractionParserRuleCall_5_1_0()); 
+	        newCompositeNode(grammarAccess.getButtonDefinitionAccess().getInteractiontypeInteractiontypeParserRuleCall_6_1_0()); 
 	    }
-		lv_interaction_7_0=ruleInteraction		{
+		lv_interactiontype_9_0=ruleInteractiontype		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getButtonDefinitionRule());
 	        }
-       		set(
-       			$current, 
-       			"interaction",
-        		lv_interaction_7_0, 
-        		"Interaction");
-	        afterParserOrEnumRuleCall();
-	    }
-
-)
-))?)
-;
-
-
-
-
-
-// Entry rule entryRuleInteraction
-entryRuleInteraction returns [EObject current=null] 
-	:
-	{ newCompositeNode(grammarAccess.getInteractionRule()); }
-	 iv_ruleInteraction=ruleInteraction 
-	 { $current=$iv_ruleInteraction.current; } 
-	 EOF 
-;
-
-// Rule Interaction
-ruleInteraction returns [EObject current=null] 
-    @init { enterRule(); 
-    }
-    @after { leaveRule(); }:
-((
-(
-		lv_name_0_0=RULE_STRING
-		{
-			newLeafNode(lv_name_0_0, grammarAccess.getInteractionAccess().getNameSTRINGTerminalRuleCall_0_0()); 
-		}
-		{
-	        if ($current==null) {
-	            $current = createModelElement(grammarAccess.getInteractionRule());
-	        }
-       		setWithLastConsumed(
-       			$current, 
-       			"name",
-        		lv_name_0_0, 
-        		"STRING");
-	    }
-
-)
-)	otherlv_1=' type=' 
-    {
-    	newLeafNode(otherlv_1, grammarAccess.getInteractionAccess().getTypeKeyword_1());
-    }
-
-    { 
-        newCompositeNode(grammarAccess.getInteractionAccess().getInteractiontypeParserRuleCall_2()); 
-    }
-ruleInteractiontype
-    { 
-        afterParserOrEnumRuleCall();
-    }
-	otherlv_3=' with actions:' 
-    {
-    	newLeafNode(otherlv_3, grammarAccess.getInteractionAccess().getWithActionsKeyword_3());
-    }
-(
-(
-		{ 
-	        newCompositeNode(grammarAccess.getInteractionAccess().getActionsUIActionParserRuleCall_4_0()); 
-	    }
-		lv_actions_4_0=ruleUIAction		{
-	        if ($current==null) {
-	            $current = createModelElementForParent(grammarAccess.getInteractionRule());
-	        }
        		add(
        			$current, 
-       			"actions",
-        		lv_actions_4_0, 
-        		"UIAction");
+       			"interactiontype",
+        		lv_interactiontype_9_0, 
+        		"Interactiontype");
 	        afterParserOrEnumRuleCall();
 	    }
 
 )
-)*)
+)+)?)
 ;
+
+
 
 
 
@@ -1569,15 +1462,37 @@ ruleLabelDefinition returns [EObject current=null]
     {
     	newLeafNode(otherlv_3, grammarAccess.getLabelDefinitionAccess().getColonKeyword_3());
     }
-(	otherlv_4='text=' 
+(	otherlv_4='propertyKey=' 
     {
-    	newLeafNode(otherlv_4, grammarAccess.getLabelDefinitionAccess().getTextKeyword_4_0());
+    	newLeafNode(otherlv_4, grammarAccess.getLabelDefinitionAccess().getPropertyKeyKeyword_4_0());
     }
 (
 (
-		lv_text_5_0=RULE_STRING
+		lv_propertyKey_5_0=RULE_STRING
 		{
-			newLeafNode(lv_text_5_0, grammarAccess.getLabelDefinitionAccess().getTextSTRINGTerminalRuleCall_4_1_0()); 
+			newLeafNode(lv_propertyKey_5_0, grammarAccess.getLabelDefinitionAccess().getPropertyKeySTRINGTerminalRuleCall_4_1_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getLabelDefinitionRule());
+	        }
+       		setWithLastConsumed(
+       			$current, 
+       			"propertyKey",
+        		lv_propertyKey_5_0, 
+        		"STRING");
+	    }
+
+)
+))?(	otherlv_6='text=' 
+    {
+    	newLeafNode(otherlv_6, grammarAccess.getLabelDefinitionAccess().getTextKeyword_5_0());
+    }
+(
+(
+		lv_text_7_0=RULE_STRING
+		{
+			newLeafNode(lv_text_7_0, grammarAccess.getLabelDefinitionAccess().getTextSTRINGTerminalRuleCall_5_1_0()); 
 		}
 		{
 	        if ($current==null) {
@@ -1586,215 +1501,13 @@ ruleLabelDefinition returns [EObject current=null]
        		setWithLastConsumed(
        			$current, 
        			"text",
-        		lv_text_5_0, 
+        		lv_text_7_0, 
         		"STRING");
 	    }
 
 )
 ))?)
 ;
-
-
-
-
-
-// Entry rule entryRuleUIAction
-entryRuleUIAction returns [EObject current=null] 
-	:
-	{ newCompositeNode(grammarAccess.getUIActionRule()); }
-	 iv_ruleUIAction=ruleUIAction 
-	 { $current=$iv_ruleUIAction.current; } 
-	 EOF 
-;
-
-// Rule UIAction
-ruleUIAction returns [EObject current=null] 
-    @init { enterRule(); 
-    }
-    @after { leaveRule(); }:
-(	otherlv_0='type=' 
-    {
-    	newLeafNode(otherlv_0, grammarAccess.getUIActionAccess().getTypeKeyword_0());
-    }
-(
-(
-		lv_type_1_0=	'UiAction' 
-    {
-        newLeafNode(lv_type_1_0, grammarAccess.getUIActionAccess().getTypeUiActionKeyword_1_0());
-    }
- 
-	    {
-	        if ($current==null) {
-	            $current = createModelElement(grammarAccess.getUIActionRule());
-	        }
-       		setWithLastConsumed($current, "type", lv_type_1_0, "UiAction");
-	    }
-
-)
-)	otherlv_2='element=' 
-    {
-    	newLeafNode(otherlv_2, grammarAccess.getUIActionAccess().getElementKeyword_2());
-    }
-(
-(
-		lv_uiElementName_3_0=RULE_STRING
-		{
-			newLeafNode(lv_uiElementName_3_0, grammarAccess.getUIActionAccess().getUiElementNameSTRINGTerminalRuleCall_3_0()); 
-		}
-		{
-	        if ($current==null) {
-	            $current = createModelElement(grammarAccess.getUIActionRule());
-	        }
-       		setWithLastConsumed(
-       			$current, 
-       			"uiElementName",
-        		lv_uiElementName_3_0, 
-        		"STRING");
-	    }
-
-)
-)	otherlv_4=':' 
-    {
-    	newLeafNode(otherlv_4, grammarAccess.getUIActionAccess().getColonKeyword_4());
-    }
-(
-(
-		{ 
-	        newCompositeNode(grammarAccess.getUIActionAccess().getPropertiesPropertyParserRuleCall_5_0()); 
-	    }
-		lv_properties_5_0=ruleProperty		{
-	        if ($current==null) {
-	            $current = createModelElementForParent(grammarAccess.getUIActionRule());
-	        }
-       		add(
-       			$current, 
-       			"properties",
-        		lv_properties_5_0, 
-        		"Property");
-	        afterParserOrEnumRuleCall();
-	    }
-
-)
-)*)
-;
-
-
-
-
-
-// Entry rule entryRuleProperty
-entryRuleProperty returns [EObject current=null] 
-	:
-	{ newCompositeNode(grammarAccess.getPropertyRule()); }
-	 iv_ruleProperty=ruleProperty 
-	 { $current=$iv_ruleProperty.current; } 
-	 EOF 
-;
-
-// Rule Property
-ruleProperty returns [EObject current=null] 
-    @init { enterRule(); 
-    }
-    @after { leaveRule(); }:
-
-    { 
-        newCompositeNode(grammarAccess.getPropertyAccess().getCommonPropertyParserRuleCall()); 
-    }
-    this_CommonProperty_0=ruleCommonProperty
-    { 
-        $current = $this_CommonProperty_0.current; 
-        afterParserOrEnumRuleCall();
-    }
-
-;
-
-
-
-
-
-// Entry rule entryRuleCommonProperty
-entryRuleCommonProperty returns [EObject current=null] 
-	:
-	{ newCompositeNode(grammarAccess.getCommonPropertyRule()); }
-	 iv_ruleCommonProperty=ruleCommonProperty 
-	 { $current=$iv_ruleCommonProperty.current; } 
-	 EOF 
-;
-
-// Rule CommonProperty
-ruleCommonProperty returns [EObject current=null] 
-    @init { enterRule(); 
-    }
-    @after { leaveRule(); }:
-((
-(
-		{ 
-	        newCompositeNode(grammarAccess.getCommonPropertyAccess().getNameCommonPropertyTypeParserRuleCall_0_0()); 
-	    }
-		lv_name_0_0=ruleCommonPropertyType		{
-	        if ($current==null) {
-	            $current = createModelElementForParent(grammarAccess.getCommonPropertyRule());
-	        }
-       		set(
-       			$current, 
-       			"name",
-        		lv_name_0_0, 
-        		"CommonPropertyType");
-	        afterParserOrEnumRuleCall();
-	    }
-
-)
-)	otherlv_1='=' 
-    {
-    	newLeafNode(otherlv_1, grammarAccess.getCommonPropertyAccess().getEqualsSignKeyword_1());
-    }
-(
-(
-		lv_value_2_0=RULE_STRING
-		{
-			newLeafNode(lv_value_2_0, grammarAccess.getCommonPropertyAccess().getValueSTRINGTerminalRuleCall_2_0()); 
-		}
-		{
-	        if ($current==null) {
-	            $current = createModelElement(grammarAccess.getCommonPropertyRule());
-	        }
-       		setWithLastConsumed(
-       			$current, 
-       			"value",
-        		lv_value_2_0, 
-        		"STRING");
-	    }
-
-)
-))
-;
-
-
-
-
-
-// Entry rule entryRuleCommonPropertyType
-entryRuleCommonPropertyType returns [String current=null] 
-	:
-	{ newCompositeNode(grammarAccess.getCommonPropertyTypeRule()); } 
-	 iv_ruleCommonPropertyType=ruleCommonPropertyType 
-	 { $current=$iv_ruleCommonPropertyType.current.getText(); }  
-	 EOF 
-;
-
-// Rule CommonPropertyType
-ruleCommonPropertyType returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] 
-    @init { enterRule(); 
-    }
-    @after { leaveRule(); }:
-
-	kw='Text' 
-    {
-        $current.merge(kw);
-        newLeafNode(kw, grammarAccess.getCommonPropertyTypeAccess().getTextKeyword()); 
-    }
-
-    ;
 
 
 
@@ -1814,18 +1527,27 @@ ruleInteractiontype returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRul
     @init { enterRule(); 
     }
     @after { leaveRule(); }:
-
-	kw='CLICK' 
+(
+	kw='Click' 
     {
         $current.merge(kw);
-        newLeafNode(kw, grammarAccess.getInteractiontypeAccess().getCLICKKeyword()); 
+        newLeafNode(kw, grammarAccess.getInteractiontypeAccess().getClickKeyword_0()); 
     }
 
+    |
+	kw='ChangeText' 
+    {
+        $current.merge(kw);
+        newLeafNode(kw, grammarAccess.getInteractiontypeAccess().getChangeTextKeyword_1()); 
+    }
+)
     ;
 
 
 
 
+
+RULE_WS : (' '|'\t'|'\r'|'\n'|',')+;
 
 RULE_ID : '^'? ('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;
 
@@ -1836,8 +1558,6 @@ RULE_STRING : ('"' ('\\' .|~(('\\'|'"')))* '"'|'\'' ('\\' .|~(('\\'|'\'')))* '\'
 RULE_ML_COMMENT : '/*' ( options {greedy=false;} : . )*'*/';
 
 RULE_SL_COMMENT : '//' ~(('\n'|'\r'))* ('\r'? '\n')?;
-
-RULE_WS : (' '|'\t'|'\r'|'\n')+;
 
 RULE_ANY_OTHER : .;
 

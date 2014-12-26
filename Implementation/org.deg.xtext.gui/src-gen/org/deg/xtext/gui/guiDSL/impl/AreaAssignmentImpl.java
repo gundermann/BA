@@ -2,15 +2,21 @@
  */
 package org.deg.xtext.gui.guiDSL.impl;
 
+import java.util.Collection;
+
 import org.deg.xtext.gui.guiDSL.AreaAssignment;
 import org.deg.xtext.gui.guiDSL.GuiDSLPackage;
 
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
+import org.eclipse.emf.ecore.util.EDataTypeEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -20,7 +26,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * The following features are implemented:
  * <ul>
  *   <li>{@link org.deg.xtext.gui.guiDSL.impl.AreaAssignmentImpl#getArea <em>Area</em>}</li>
- *   <li>{@link org.deg.xtext.gui.guiDSL.impl.AreaAssignmentImpl#getElement <em>Element</em>}</li>
+ *   <li>{@link org.deg.xtext.gui.guiDSL.impl.AreaAssignmentImpl#getElements <em>Elements</em>}</li>
  * </ul>
  * </p>
  *
@@ -49,24 +55,14 @@ public class AreaAssignmentImpl extends MinimalEObjectImpl.Container implements 
   protected int area = AREA_EDEFAULT;
 
   /**
-   * The default value of the '{@link #getElement() <em>Element</em>}' attribute.
+   * The cached value of the '{@link #getElements() <em>Elements</em>}' attribute list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getElement()
+   * @see #getElements()
    * @generated
    * @ordered
    */
-  protected static final String ELEMENT_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getElement() <em>Element</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getElement()
-   * @generated
-   * @ordered
-   */
-  protected String element = ELEMENT_EDEFAULT;
+  protected EList<String> elements;
 
   /**
    * <!-- begin-user-doc -->
@@ -117,22 +113,13 @@ public class AreaAssignmentImpl extends MinimalEObjectImpl.Container implements 
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getElement()
+  public EList<String> getElements()
   {
-    return element;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setElement(String newElement)
-  {
-    String oldElement = element;
-    element = newElement;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, GuiDSLPackage.AREA_ASSIGNMENT__ELEMENT, oldElement, element));
+    if (elements == null)
+    {
+      elements = new EDataTypeEList<String>(String.class, this, GuiDSLPackage.AREA_ASSIGNMENT__ELEMENTS);
+    }
+    return elements;
   }
 
   /**
@@ -147,8 +134,8 @@ public class AreaAssignmentImpl extends MinimalEObjectImpl.Container implements 
     {
       case GuiDSLPackage.AREA_ASSIGNMENT__AREA:
         return getArea();
-      case GuiDSLPackage.AREA_ASSIGNMENT__ELEMENT:
-        return getElement();
+      case GuiDSLPackage.AREA_ASSIGNMENT__ELEMENTS:
+        return getElements();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -158,6 +145,7 @@ public class AreaAssignmentImpl extends MinimalEObjectImpl.Container implements 
    * <!-- end-user-doc -->
    * @generated
    */
+  @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {
@@ -166,8 +154,9 @@ public class AreaAssignmentImpl extends MinimalEObjectImpl.Container implements 
       case GuiDSLPackage.AREA_ASSIGNMENT__AREA:
         setArea((Integer)newValue);
         return;
-      case GuiDSLPackage.AREA_ASSIGNMENT__ELEMENT:
-        setElement((String)newValue);
+      case GuiDSLPackage.AREA_ASSIGNMENT__ELEMENTS:
+        getElements().clear();
+        getElements().addAll((Collection<? extends String>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -186,8 +175,8 @@ public class AreaAssignmentImpl extends MinimalEObjectImpl.Container implements 
       case GuiDSLPackage.AREA_ASSIGNMENT__AREA:
         setArea(AREA_EDEFAULT);
         return;
-      case GuiDSLPackage.AREA_ASSIGNMENT__ELEMENT:
-        setElement(ELEMENT_EDEFAULT);
+      case GuiDSLPackage.AREA_ASSIGNMENT__ELEMENTS:
+        getElements().clear();
         return;
     }
     super.eUnset(featureID);
@@ -205,8 +194,8 @@ public class AreaAssignmentImpl extends MinimalEObjectImpl.Container implements 
     {
       case GuiDSLPackage.AREA_ASSIGNMENT__AREA:
         return area != AREA_EDEFAULT;
-      case GuiDSLPackage.AREA_ASSIGNMENT__ELEMENT:
-        return ELEMENT_EDEFAULT == null ? element != null : !ELEMENT_EDEFAULT.equals(element);
+      case GuiDSLPackage.AREA_ASSIGNMENT__ELEMENTS:
+        return elements != null && !elements.isEmpty();
     }
     return super.eIsSet(featureID);
   }
@@ -224,8 +213,8 @@ public class AreaAssignmentImpl extends MinimalEObjectImpl.Container implements 
     StringBuffer result = new StringBuffer(super.toString());
     result.append(" (area: ");
     result.append(area);
-    result.append(", element: ");
-    result.append(element);
+    result.append(", elements: ");
+    result.append(elements);
     result.append(')');
     return result.toString();
   }

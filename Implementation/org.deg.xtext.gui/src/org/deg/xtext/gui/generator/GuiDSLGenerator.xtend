@@ -9,18 +9,12 @@ import java.util.List
 import java.util.Map
 import org.deg.xtext.gui.guiDSL.ButtonDefinition
 import org.deg.xtext.gui.guiDSL.CheckboxDefinition
-import org.deg.xtext.gui.guiDSL.CommonProperty
-import org.deg.xtext.gui.guiDSL.Property
 import org.deg.xtext.gui.guiDSL.Definition
 import org.deg.xtext.gui.guiDSL.Interaction
 import org.deg.xtext.gui.guiDSL.LabelDefinition
-import org.deg.xtext.gui.guiDSL.MultiSelectionDefinition
 import org.deg.xtext.gui.guiDSL.RadioboxDefinition
 import org.deg.xtext.gui.guiDSL.TextfieldDefinition
-import org.deg.xtext.gui.guiDSL.UIAction
 import org.deg.xtext.gui.guiDSL.UIDescription
-import org.deg.xtext.gui.guiDSL.inputType
-import org.eclipse.emf.common.util.EList
 import org.eclipse.emf.ecore.resource.Resource
 import org.eclipse.xtext.generator.IFileSystemAccess
 import org.eclipse.xtext.generator.IGenerator
@@ -108,15 +102,15 @@ class GuiDSLGenerator implements IGenerator {
 				«FOR area : description.areas»
 					public Node initArea«area.area»(){
 						«FOR def : description.definitions»
-							«IF area.element.equals(def.concreteDefition.name)»
-								«def.compileDefinition»
-							«ENDIF»
+«««							«IF area.element.equals(def.concreteDefition.name)»
+«««								«def.compileDefinition»
+«««							«ENDIF»
 						«ENDFOR»
 						«IF !compiled»
 							«FOR used : description.usedDescriptions»
-								«IF used.description.descriptionName.equals(area.element) || used.description.localName.equals(area.element)»
-									return new «area.element»();
-								«ENDIF»
+«««								«IF used.description.descriptionName.equals(area.element) || used.description.localName.equals(area.element)»
+«««									return new «area.element»();
+«««								«ENDIF»
 							«ENDFOR»	
 						«ELSE»				
 							«switchCompiled»
@@ -149,7 +143,8 @@ class GuiDSLGenerator implements IGenerator {
 		
 		public class «name» extends Scene{
 			
-				public «name»(«description.inputTypes.genConstrutorParameter»){
+				public «name»(){
+«««				«description.inputTypes.genConstrutorParameter»
 				super(null);
 				VBox b = new VBox();
 				setRoot(b);
@@ -160,17 +155,17 @@ class GuiDSLGenerator implements IGenerator {
 		}
 	'''
 	
-	def String genConstrutorParameter(EList<inputType> inputTypes){
-		val parameterBuilder = new StringBuilder()
-		for(inputType input : inputTypes){
-			addGlobalVar(input.type+' '+input.name+';');
-			parameterBuilder.append(input.type + ' ' + input.name)
-			if(input!=inputTypes.last){
-				parameterBuilder.append(', ')
-			}
-		}
-		return parameterBuilder.toString;
-	}
+//	def String genConstrutorParameter(EList<inputType> inputTypes){
+//		val parameterBuilder = new StringBuilder()
+//		for(inputType input : inputTypes){
+//			addGlobalVar(input.type+' '+input.name+';');
+//			parameterBuilder.append(input.type + ' ' + input.name)
+//			if(input!=inputTypes.last){
+//				parameterBuilder.append(', ')
+//			}
+//		}
+//		return parameterBuilder.toString;
+//	}
 	
 	
 	def genOtherStuff(UIDescription description)'''
@@ -194,26 +189,26 @@ class GuiDSLGenerator implements IGenerator {
 
 	def genInteractions() '''
 		«FOR i : interactions»
-			public void invoke«i.name»(){
-				«FOR a : i.actions»
-					«IF a.type.equals('UiAction')»
-						«(a as UIAction).extract»
-					«ENDIF»
-				«ENDFOR»
-			}
+«««			public void invoke«i.name»(){
+«««				«FOR a : i.actions»
+«««					«IF a.type.equals('UiAction')»
+«««						«(a as UIAction).extract»
+«««					«ENDIF»
+«««				«ENDFOR»
+«««			}
 		«ENDFOR»
 		
 	'''
 
-	def extract(UIAction action) '''
-		«FOR p : action.properties»
-			«action.uiElementName».«methodName(p, action.uiElementName)»
-		«ENDFOR»
-	'''
+//	def extract(UIAction action) '''
+//		«FOR p : action.properties»
+//			«action.uiElementName».«methodName(p, action.uiElementName)»
+//		«ENDFOR»
+//	'''
 
-	def methodName(Property property, String uiElement) '''
-		set«(property as CommonProperty).name»("«(property as CommonProperty).value»");
-	'''
+//	def methodName(Property property, String uiElement) '''
+//		set«(property as CommonProperty).name»("«(property as CommonProperty).value»");
+//	'''
 
 	def compileDefinition(Definition definition) '''
 		«IF definition.concreteDefition.type.equals("Button")»
@@ -222,32 +217,30 @@ class GuiDSLGenerator implements IGenerator {
 			«(definition.concreteDefition as CheckboxDefinition).compileCheckbox»
 		«ELSEIF definition.concreteDefition.type.equals("Radiobox")»
 			«(definition.concreteDefition as RadioboxDefinition).compileRadiobox»
-		«ELSEIF definition.concreteDefition.type.equals("MultiSelection")»
-			«(definition.concreteDefition as MultiSelectionDefinition).compileMultiSelection»
 		«ELSE»
 			«(definition.concreteDefition as LabelDefinition).compileLabel»
 		«ENDIF»
 		«switchCompiled»
 	'''
 	
-	def compileMultiSelection(MultiSelectionDefinition definition)'''
-		«addImport("import test.JavaFXMultiSelection;")»
-			«IF definition.inputType != null»
-				«addImport("import "+definition.inputType+";")»
-				«addGlobalVar( "JavaFXMultiSelection<"+definition.inputType+"> " + definition.name + ";")»
-				«definition.name» = new JavaFXMultiSelection<«definition.inputType»>();
-				«IF definition.selectableValuesLocation != null»
-				«definition.name».setSelectable(«definition.selectableValuesLocation»);
-					«IF definition.selectedValuesLocation != null»
-				«definition.name».setSelected(«definition.selectedValuesLocation»);
-					«ENDIF»
-				«ENDIF»
-			«ELSE»
-		«addGlobalVar( "JavaFXMultiSelection<?> " + definition.name + ";")»
-				«definition.name» = new JavaFXMultiSelection<?>();
-			«ENDIF»
-			return «definition.name»;
-	'''
+//	def compileMultiSelection(MultiSelectionDefinition definition)'''
+//		«addImport("import test.JavaFXMultiSelection;")»
+//			«IF definition.inputType != null»
+//				«addImport("import "+definition.inputType+";")»
+//				«addGlobalVar( "JavaFXMultiSelection<"+definition.inputType+"> " + definition.name + ";")»
+//				«definition.name» = new JavaFXMultiSelection<«definition.inputType»>();
+//				«IF definition.selectableValuesLocation != null»
+//				«definition.name».setSelectable(«definition.selectableValuesLocation»);
+//					«IF definition.selectedValuesLocation != null»
+//				«definition.name».setSelected(«definition.selectedValuesLocation»);
+//					«ENDIF»
+//				«ENDIF»
+//			«ELSE»
+//		«addGlobalVar( "JavaFXMultiSelection<?> " + definition.name + ";")»
+//				«definition.name» = new JavaFXMultiSelection<?>();
+//			«ENDIF»
+//			return «definition.name»;
+//	'''
 	
 
 	def compileCheckbox(CheckboxDefinition definition) '''
@@ -293,17 +286,17 @@ class GuiDSLGenerator implements IGenerator {
 		«addGlobalVar("Button " + definition.name + ";")»
 			«definition.name»= new Button();
 			«definition.name».setText("«definition.text»");
-			«IF definition.interaction != null»
-				«addImport("import javafx.event.ActionEvent;")»
-				«addImport("import javafx.event.EventHandler;")»
-				«definition.name».setOnAction(new EventHandler<ActionEvent>() {
-					@Override
-					public void handle(ActionEvent actionEvent) {
-						invoke«(definition as ButtonDefinition).interaction.name»();
-					}
-				});
-				«definition.interaction.addInteractionMethod»
-			«ENDIF»
+«««			«IF definition.interaction != null»
+«««				«addImport("import javafx.event.ActionEvent;")»
+«««				«addImport("import javafx.event.EventHandler;")»
+«««				«definition.name».setOnAction(new EventHandler<ActionEvent>() {
+«««					@Override
+«««					public void handle(ActionEvent actionEvent) {
+«««						invoke«(definition as ButtonDefinition).interaction.name»();
+«««					}
+«««				});
+«««				«definition.interaction.addInteractionMethod»
+«««			«ENDIF»
 			return «definition.name»;
 	'''
 

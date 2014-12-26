@@ -79,10 +79,10 @@ public class GuiDSLSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case GuiDSLPackage.INPUT_TYPE:
+      case GuiDSLPackage.PROPERTY:
       {
-        inputType inputType = (inputType)theEObject;
-        T result = caseinputType(inputType);
+        Property property = (Property)theEObject;
+        T result = caseProperty(property);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -121,6 +121,21 @@ public class GuiDSLSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case GuiDSLPackage.COMPLEX_COMPONENT:
+      {
+        complexComponent complexComponent = (complexComponent)theEObject;
+        T result = casecomplexComponent(complexComponent);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case GuiDSLPackage.MULTISELECTION:
+      {
+        Multiselection multiselection = (Multiselection)theEObject;
+        T result = caseMultiselection(multiselection);
+        if (result == null) result = casecomplexComponent(multiselection);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case GuiDSLPackage.AREA_ASSIGNMENT:
       {
         AreaAssignment areaAssignment = (AreaAssignment)theEObject;
@@ -132,14 +147,6 @@ public class GuiDSLSwitch<T> extends Switch<T>
       {
         ComponentDefinition componentDefinition = (ComponentDefinition)theEObject;
         T result = caseComponentDefinition(componentDefinition);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case GuiDSLPackage.MULTI_SELECTION_DEFINITION:
-      {
-        MultiSelectionDefinition multiSelectionDefinition = (MultiSelectionDefinition)theEObject;
-        T result = caseMultiSelectionDefinition(multiSelectionDefinition);
-        if (result == null) result = caseComponentDefinition(multiSelectionDefinition);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -206,28 +213,6 @@ public class GuiDSLSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case GuiDSLPackage.UI_ACTION:
-      {
-        UIAction uiAction = (UIAction)theEObject;
-        T result = caseUIAction(uiAction);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case GuiDSLPackage.PROPERTY:
-      {
-        Property property = (Property)theEObject;
-        T result = caseProperty(property);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case GuiDSLPackage.COMMON_PROPERTY:
-      {
-        CommonProperty commonProperty = (CommonProperty)theEObject;
-        T result = caseCommonProperty(commonProperty);
-        if (result == null) result = caseProperty(commonProperty);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
       default: return defaultCase(theEObject);
     }
   }
@@ -249,17 +234,17 @@ public class GuiDSLSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>input Type</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Property</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>input Type</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Property</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseinputType(inputType object)
+  public T caseProperty(Property object)
   {
     return null;
   }
@@ -345,6 +330,38 @@ public class GuiDSLSwitch<T> extends Switch<T>
   }
 
   /**
+   * Returns the result of interpreting the object as an instance of '<em>complex Component</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>complex Component</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T casecomplexComponent(complexComponent object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Multiselection</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Multiselection</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseMultiselection(Multiselection object)
+  {
+    return null;
+  }
+
+  /**
    * Returns the result of interpreting the object as an instance of '<em>Area Assignment</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -372,22 +389,6 @@ public class GuiDSLSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseComponentDefinition(ComponentDefinition object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Multi Selection Definition</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Multi Selection Definition</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseMultiSelectionDefinition(MultiSelectionDefinition object)
   {
     return null;
   }
@@ -516,54 +517,6 @@ public class GuiDSLSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseLabelDefinition(LabelDefinition object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>UI Action</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>UI Action</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseUIAction(UIAction object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Property</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Property</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseProperty(Property object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Common Property</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Common Property</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseCommonProperty(CommonProperty object)
   {
     return null;
   }

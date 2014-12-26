@@ -3,13 +3,13 @@
 package org.deg.xtext.gui.guiDSL.impl;
 
 import org.deg.xtext.gui.guiDSL.GuiDSLPackage;
-import org.deg.xtext.gui.guiDSL.UIDescriptionImport;
 import org.deg.xtext.gui.guiDSL.UsedDescriptions;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
@@ -23,6 +23,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * The following features are implemented:
  * <ul>
  *   <li>{@link org.deg.xtext.gui.guiDSL.impl.UsedDescriptionsImpl#getDescription <em>Description</em>}</li>
+ *   <li>{@link org.deg.xtext.gui.guiDSL.impl.UsedDescriptionsImpl#getLocalName <em>Local Name</em>}</li>
  * </ul>
  * </p>
  *
@@ -38,7 +39,27 @@ public class UsedDescriptionsImpl extends MinimalEObjectImpl.Container implement
    * @generated
    * @ordered
    */
-  protected UIDescriptionImport description;
+  protected EObject description;
+
+  /**
+   * The default value of the '{@link #getLocalName() <em>Local Name</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getLocalName()
+   * @generated
+   * @ordered
+   */
+  protected static final String LOCAL_NAME_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getLocalName() <em>Local Name</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getLocalName()
+   * @generated
+   * @ordered
+   */
+  protected String localName = LOCAL_NAME_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -66,7 +87,7 @@ public class UsedDescriptionsImpl extends MinimalEObjectImpl.Container implement
    * <!-- end-user-doc -->
    * @generated
    */
-  public UIDescriptionImport getDescription()
+  public EObject getDescription()
   {
     return description;
   }
@@ -76,9 +97,9 @@ public class UsedDescriptionsImpl extends MinimalEObjectImpl.Container implement
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetDescription(UIDescriptionImport newDescription, NotificationChain msgs)
+  public NotificationChain basicSetDescription(EObject newDescription, NotificationChain msgs)
   {
-    UIDescriptionImport oldDescription = description;
+    EObject oldDescription = description;
     description = newDescription;
     if (eNotificationRequired())
     {
@@ -93,7 +114,7 @@ public class UsedDescriptionsImpl extends MinimalEObjectImpl.Container implement
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setDescription(UIDescriptionImport newDescription)
+  public void setDescription(EObject newDescription)
   {
     if (newDescription != description)
     {
@@ -107,6 +128,29 @@ public class UsedDescriptionsImpl extends MinimalEObjectImpl.Container implement
     }
     else if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, GuiDSLPackage.USED_DESCRIPTIONS__DESCRIPTION, newDescription, newDescription));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String getLocalName()
+  {
+    return localName;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setLocalName(String newLocalName)
+  {
+    String oldLocalName = localName;
+    localName = newLocalName;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, GuiDSLPackage.USED_DESCRIPTIONS__LOCAL_NAME, oldLocalName, localName));
   }
 
   /**
@@ -137,6 +181,8 @@ public class UsedDescriptionsImpl extends MinimalEObjectImpl.Container implement
     {
       case GuiDSLPackage.USED_DESCRIPTIONS__DESCRIPTION:
         return getDescription();
+      case GuiDSLPackage.USED_DESCRIPTIONS__LOCAL_NAME:
+        return getLocalName();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -152,7 +198,10 @@ public class UsedDescriptionsImpl extends MinimalEObjectImpl.Container implement
     switch (featureID)
     {
       case GuiDSLPackage.USED_DESCRIPTIONS__DESCRIPTION:
-        setDescription((UIDescriptionImport)newValue);
+        setDescription((EObject)newValue);
+        return;
+      case GuiDSLPackage.USED_DESCRIPTIONS__LOCAL_NAME:
+        setLocalName((String)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -169,7 +218,10 @@ public class UsedDescriptionsImpl extends MinimalEObjectImpl.Container implement
     switch (featureID)
     {
       case GuiDSLPackage.USED_DESCRIPTIONS__DESCRIPTION:
-        setDescription((UIDescriptionImport)null);
+        setDescription((EObject)null);
+        return;
+      case GuiDSLPackage.USED_DESCRIPTIONS__LOCAL_NAME:
+        setLocalName(LOCAL_NAME_EDEFAULT);
         return;
     }
     super.eUnset(featureID);
@@ -187,8 +239,27 @@ public class UsedDescriptionsImpl extends MinimalEObjectImpl.Container implement
     {
       case GuiDSLPackage.USED_DESCRIPTIONS__DESCRIPTION:
         return description != null;
+      case GuiDSLPackage.USED_DESCRIPTIONS__LOCAL_NAME:
+        return LOCAL_NAME_EDEFAULT == null ? localName != null : !LOCAL_NAME_EDEFAULT.equals(localName);
     }
     return super.eIsSet(featureID);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String toString()
+  {
+    if (eIsProxy()) return super.toString();
+
+    StringBuffer result = new StringBuffer(super.toString());
+    result.append(" (localName: ");
+    result.append(localName);
+    result.append(')');
+    return result.toString();
   }
 
 } //UsedDescriptionsImpl

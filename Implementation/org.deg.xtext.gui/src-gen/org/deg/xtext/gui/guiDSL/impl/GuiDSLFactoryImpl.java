@@ -65,15 +65,16 @@ public class GuiDSLFactoryImpl extends EFactoryImpl implements GuiDSLFactory
     switch (eClass.getClassifierID())
     {
       case GuiDSLPackage.UI_DESCRIPTION: return createUIDescription();
-      case GuiDSLPackage.INPUT_TYPE: return createinputType();
+      case GuiDSLPackage.PROPERTY: return createProperty();
       case GuiDSLPackage.USED_DESCRIPTIONS: return createUsedDescriptions();
       case GuiDSLPackage.AREA_COUNT: return createAreaCount();
       case GuiDSLPackage.DEFINITION: return createDefinition();
       case GuiDSLPackage.TYPE_DEFINITION: return createTypeDefinition();
       case GuiDSLPackage.UI_DESCRIPTION_IMPORT: return createUIDescriptionImport();
+      case GuiDSLPackage.COMPLEX_COMPONENT: return createcomplexComponent();
+      case GuiDSLPackage.MULTISELECTION: return createMultiselection();
       case GuiDSLPackage.AREA_ASSIGNMENT: return createAreaAssignment();
       case GuiDSLPackage.COMPONENT_DEFINITION: return createComponentDefinition();
-      case GuiDSLPackage.MULTI_SELECTION_DEFINITION: return createMultiSelectionDefinition();
       case GuiDSLPackage.CHECKBOX_DEFINITION: return createCheckboxDefinition();
       case GuiDSLPackage.RADIOBOX_DEFINITION: return createRadioboxDefinition();
       case GuiDSLPackage.TABLE_DEFINITION: return createTableDefinition();
@@ -82,9 +83,6 @@ public class GuiDSLFactoryImpl extends EFactoryImpl implements GuiDSLFactory
       case GuiDSLPackage.BUTTON_DEFINITION: return createButtonDefinition();
       case GuiDSLPackage.INTERACTION: return createInteraction();
       case GuiDSLPackage.LABEL_DEFINITION: return createLabelDefinition();
-      case GuiDSLPackage.UI_ACTION: return createUIAction();
-      case GuiDSLPackage.PROPERTY: return createProperty();
-      case GuiDSLPackage.COMMON_PROPERTY: return createCommonProperty();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
     }
@@ -106,10 +104,10 @@ public class GuiDSLFactoryImpl extends EFactoryImpl implements GuiDSLFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public inputType createinputType()
+  public Property createProperty()
   {
-    inputTypeImpl inputType = new inputTypeImpl();
-    return inputType;
+    PropertyImpl property = new PropertyImpl();
+    return property;
   }
 
   /**
@@ -172,6 +170,28 @@ public class GuiDSLFactoryImpl extends EFactoryImpl implements GuiDSLFactory
    * <!-- end-user-doc -->
    * @generated
    */
+  public complexComponent createcomplexComponent()
+  {
+    complexComponentImpl complexComponent = new complexComponentImpl();
+    return complexComponent;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Multiselection createMultiselection()
+  {
+    MultiselectionImpl multiselection = new MultiselectionImpl();
+    return multiselection;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public AreaAssignment createAreaAssignment()
   {
     AreaAssignmentImpl areaAssignment = new AreaAssignmentImpl();
@@ -187,17 +207,6 @@ public class GuiDSLFactoryImpl extends EFactoryImpl implements GuiDSLFactory
   {
     ComponentDefinitionImpl componentDefinition = new ComponentDefinitionImpl();
     return componentDefinition;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public MultiSelectionDefinition createMultiSelectionDefinition()
-  {
-    MultiSelectionDefinitionImpl multiSelectionDefinition = new MultiSelectionDefinitionImpl();
-    return multiSelectionDefinition;
   }
 
   /**
@@ -286,39 +295,6 @@ public class GuiDSLFactoryImpl extends EFactoryImpl implements GuiDSLFactory
   {
     LabelDefinitionImpl labelDefinition = new LabelDefinitionImpl();
     return labelDefinition;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public UIAction createUIAction()
-  {
-    UIActionImpl uiAction = new UIActionImpl();
-    return uiAction;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Property createProperty()
-  {
-    PropertyImpl property = new PropertyImpl();
-    return property;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public CommonProperty createCommonProperty()
-  {
-    CommonPropertyImpl commonProperty = new CommonPropertyImpl();
-    return commonProperty;
   }
 
   /**
