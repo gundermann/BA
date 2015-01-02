@@ -169,6 +169,8 @@ DSL benötigt. \cite[S.15]{mdsdvoelter} In Abbildung \ref{mdsd} ist die Idee des
 MDSD schematisch dargestellt.
 \myBigFigure{mdsd.jpg}{Die grundlegenden Ideen hinter dem MDSD
 \cite[S.15]{mdsdvoelter}}{mdsd}
+
+\newpage
 \section{Abgrenzung zu GPL}
 Wie zu Beginn dieses Kapitels schon erwähnt sind GPLs. Sprachen mit denen alles
 Berechnet werden kann, was auch mit einer Turing-Maschine berechenbar ist.
@@ -179,7 +181,7 @@ ihr gelöst werden.\cite[S.28]{voelter} Martin Fowler bezeichnet diese
 Eigenschaft des Domänen Fokus als ein Schlüsselelement der Definition einer DSL.
 \cite[S.27f]{fowler} Allein aus dieser Abgrenzung lassen sich bereits Vor- und
 Nachteile von DSLs oder GPLs ableiten. Diese werden im folgenden Kapitel genauer
-betrachtet.\\
+betrachtet.
 \section{Vor- und Nachteile von DSL gegenüber GPL}
 \subsection*{Vorteile}
 \begin{itemize}
@@ -418,24 +420,90 @@ erreichen werden.
 In vielen Fällen ist eine DSL nicht mehr als ein API.
 Martin Fowler sieht den größten Unterschied zwischen API und DSL darin, dass das
 eine DSL neben einem abstrahierten Vokabular auch eine spezifische Grammatik
-nutzt (\cite[S.29]{fowler}), welche die Syntax der DSL bestimmt. Eine API
-hingegen besitzt die gleich syntaktischen Strukturen wie die GPL, in der das
-API bereitgestellt wurde. In einem klassischen API hat jede Methode eine
-eigene Aufgabe und ist nicht von anderen Methoden in diesem API
-abhängig. \cite[S.28]{fowler} In einer internen DSL hingenen ist es
-möglich Methoden bereitzustellen, die hintereinander gekettet werden
-können und somit komplette Sätze i.a.S. darstellen. Solche Methoden sind für
-APIs eine eher schlechte Wahl. \cite[S.28]{fowler} Soeine Verkettung von
-Methoden wird als \emph{Fluent Interface} bezeichnet. \cite[S.50]{voelter} 
+nutzt (\cite[S.29]{fowler}), welche die Syntax der DSL bestimmt. Ein API
+hingegen besitzt die gleichen syntaktischen Strukturen wie die GPL, in der das
+API bereitgestellt wurde. Somit werden überflüssige Notationsformen in das API
+mit übernommen, was bei einer DSL nicht der Fall ist. \cite[S.30]{voelter}
+Weiterhin können DSLs so konstruiert werden, dass durch Restriktionen und
+Limitierungen nur korrekte Programme geschrieben werden können. Markus Völter
+et. al. bezeichnen diese Eigenschaft als \emph{correct-by-construction}.
+\cite[S.30]{voelter} 
 \subsection{Implementierungstechniken}
-\subsubsection*{Fluent Interfaces}
 \subsubsection*{Parse-Tree Manipulation}
+Allgemein betrachtet funktioniert diese Technik wie folgt.\\ Ein Code-Fragment,
+welches zu einem Späteren Zeitpunkt ausgewertet werden soll, als es gelesen
+wurder, wird in einem Parse-Tree hinterlegt. Dieser Parse-Tree wird noch vor der
+Ausführung modifiziert. Um diese Implementierungstechnik nutzen zu können, muss
+eine Umgebung vorliegen in der es möglich ist ein Code-Fragment in einen
+Parse-Tree umzuformen und diesen zu bearbeiten. Diese Möglichkeit existiert
+nur in wenigen Sprachen.
+Martin Fowler et. al. geben hierzu nur die Beispiele C\#, ParseTree (Ruby) und
+Lisp. \cite[S.45f]{fowler}\\
+Anders als Lisp bieten die anderen Beispiele die
+Möglichkeit über den Parse-Tree zu iterieren. Bei Lisp-Code handelt es sich
+schon um einen Parse-Tree von verschachtelten Listen. Bei der Iteration über den
+Parse-Tree ist aufgrund der Performance darauf zu achten, dass möglichst nur die
+notwendigen Teile des Baum beachtet werden. \cite[S.46]{fowler}\\
+Konstrukte, die in der Hostsprache geschrieben
+wurden und nicht verändert werden sollen, spielen
+bei der Parse-Tree Manipulation keine Rolle, um das semantische Model zu
+erzeugen. \cite[S.46]{fowler}
+
+\newpage
+\subsubsection*{Fluent Interfaces}
+In einem klassischen API hat jede Methode eine eigene
+Aufgabe und ist nicht von anderen Methoden in diesem API abhängig.
+\cite[S.28]{fowler} In einer internen DSL hingenen ist es möglich Methoden
+bereitzustellen, die hintereinander gekettet werden können und somit komplette
+Sätze darstellen. Somit wird der Output einer Methode zum Input der folgenden
+Methode. Die Lesbarkeit der DSL wird dadurch weitaus besser, da es einer
+Sequenz von Aktionen gleicht, die in der Domäne ausgeführt werden
+(vgl. \cite[S.94]{ghosh}) und ohne eine Vielzahl von Variablen aufgerufen werden
+müssen (vgl. \cite[S.68]{fowler}). Eine solche Verkettung von Methoden wird als
+\emph{Fluent Interface} bezeichnet. Das Fluent Interface steht laut Voelter et.
+al. zwischen dem API und einer DSL. \cite[S.50]{voelter} Ein Beispiel für ein
+Fluent Interface bietet Fowler et. al. Dabei wird ein
+Computer mit einem Processor und zwei Festplatten
+beschrieben.
+\begin{lstlisting}[caption = Beispiel: Fluent Interface]
+computer()
+	.processor()
+		.cores(2)
+		.speed(2500)
+		.i386()
+	.disk()
+		.size(150)
+	.disk()
+		.size(75)
+		.speed(7200)
+		.sata()
+	.end()
+\end{lstlisting}
+vgl. \cite[S.68]{fowler}
+
+\newpage
 \subsubsection*{Annotationen}
+Annotationen sind ein Teil der Informationen über ein Programmelement, wie eine
+Methoden oder Variablen. Diese Informationen können zur
+Laufzeit oder zur Übersetzungzeit (wenn die Umgebung die
+Möglichkeit dazu bietet) manipuliert werden. \cite[S.445]{fowler} \\
+Bevor eine Annotation verarbeitet werden kann muss sie definiert werden. Die
+Definition von Annotationen variiert zwischen unterschiedlichen Sprachen.
+\cite[S.446]{fowler} Die Verarbeitung von Annotationen findet normalerweise
+während der Übersetzung, während des Ladens des Programms oder während der
+Ausführung des Programms statt. \cite[S.447]{fowler} Verarbeitungen während der
+Laufzeit beeinflussen i.d.R. das Verhalten von Objekten. Beim Laden des
+Programms werden meist Validierungs-Annotationen verwendet. Solche
+Annotationen werden bspw. dazu verwendet das Mapping für die Datenbanken
+auszulesen. Somit wird die Definition von Elementen von der Verarbeitung
+getrennt, was zu einem übersichtlichen und lesbaren Code beiträgt.
+\cite[S.449]{fowler} 
 \section{Externe DSL}
 \subsection{Implementierungstechniken}
 Bei den Implementierungstechniken von externen DSL geht es um die Art und Weise,
 wie der DSL-Code vom Parser in ein semantisches Model oder einem AST überführt
 wird. \cite[S.89]{fowler}  
+\newpage
 \subsubsection*{Parser Generator}
 \subsubsection*{Parser Kombinator}
 \subsubsection*{Vermischung mit anderen Sprachen}
