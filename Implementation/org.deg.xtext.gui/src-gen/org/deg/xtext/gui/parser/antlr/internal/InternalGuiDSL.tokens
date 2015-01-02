@@ -1,17 +1,16 @@
-' as '=32
+' as '=31
 ' as: '=18
 ' with name: '=14
 '->'=30
-':'=33
+':'=32
 '<'=26
 '<-'=29
 '>'=27
 'Area count: '=19
 'Area:'=28
 'Button'=13
-'ChangeText'=42
-'Checkbox'=31
-'Click'=41
+'ChangeText'=37
+'Click'=36
 'DEF '=20
 'END DEF'=21
 'END REFINE'=12
@@ -19,14 +18,10 @@
 'Label'=15
 'Multiselection'=25
 'REFINE'=11
-'Radiobox'=35
-'Table'=36
-'Textfield'=38
-'Tree'=37
 'WINDOW'=23
 'get properties from:'=16
-'interactiontype='=40
-'propertyKey='=39
+'interactiontype='=35
+'propertyKey='=33
 'text='=34
 'type: '=22
 'use: '=17
@@ -64,8 +59,3 @@ T__34=34
 T__35=35
 T__36=36
 T__37=37
-T__38=38
-T__39=39
-T__40=40
-T__41=41
-T__42=42

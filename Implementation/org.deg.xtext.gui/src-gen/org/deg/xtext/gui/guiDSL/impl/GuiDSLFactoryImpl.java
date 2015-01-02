@@ -71,6 +71,7 @@ public class GuiDSLFactoryImpl extends EFactoryImpl implements GuiDSLFactory
       case GuiDSLPackage.LABEL_REFINEMENT: return createLabelRefinement();
       case GuiDSLPackage.PROPERTY: return createProperty();
       case GuiDSLPackage.USED_DESCRIPTIONS: return createUsedDescriptions();
+      case GuiDSLPackage.DESCRIPTION_TYPE: return createDescriptionType();
       case GuiDSLPackage.AREA_COUNT: return createAreaCount();
       case GuiDSLPackage.DEFINITION: return createDefinition();
       case GuiDSLPackage.TYPE_DEFINITION: return createTypeDefinition();
@@ -79,11 +80,6 @@ public class GuiDSLFactoryImpl extends EFactoryImpl implements GuiDSLFactory
       case GuiDSLPackage.MULTISELECTION: return createMultiselection();
       case GuiDSLPackage.AREA_ASSIGNMENT: return createAreaAssignment();
       case GuiDSLPackage.COMPONENT_DEFINITION: return createComponentDefinition();
-      case GuiDSLPackage.CHECKBOX_DEFINITION: return createCheckboxDefinition();
-      case GuiDSLPackage.RADIOBOX_DEFINITION: return createRadioboxDefinition();
-      case GuiDSLPackage.TABLE_DEFINITION: return createTableDefinition();
-      case GuiDSLPackage.TREE_DEFINITION: return createTreeDefinition();
-      case GuiDSLPackage.TEXTFIELD_DEFINITION: return createTextfieldDefinition();
       case GuiDSLPackage.BUTTON_DEFINITION: return createButtonDefinition();
       case GuiDSLPackage.PROPERTIES: return createProperties();
       case GuiDSLPackage.LABEL_DEFINITION: return createLabelDefinition();
@@ -174,6 +170,17 @@ public class GuiDSLFactoryImpl extends EFactoryImpl implements GuiDSLFactory
    * <!-- end-user-doc -->
    * @generated
    */
+  public DescriptionType createDescriptionType()
+  {
+    DescriptionTypeImpl descriptionType = new DescriptionTypeImpl();
+    return descriptionType;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public AreaCount createAreaCount()
   {
     AreaCountImpl areaCount = new AreaCountImpl();
@@ -255,61 +262,6 @@ public class GuiDSLFactoryImpl extends EFactoryImpl implements GuiDSLFactory
   {
     ComponentDefinitionImpl componentDefinition = new ComponentDefinitionImpl();
     return componentDefinition;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public CheckboxDefinition createCheckboxDefinition()
-  {
-    CheckboxDefinitionImpl checkboxDefinition = new CheckboxDefinitionImpl();
-    return checkboxDefinition;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public RadioboxDefinition createRadioboxDefinition()
-  {
-    RadioboxDefinitionImpl radioboxDefinition = new RadioboxDefinitionImpl();
-    return radioboxDefinition;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public TableDefinition createTableDefinition()
-  {
-    TableDefinitionImpl tableDefinition = new TableDefinitionImpl();
-    return tableDefinition;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public TreeDefinition createTreeDefinition()
-  {
-    TreeDefinitionImpl treeDefinition = new TreeDefinitionImpl();
-    return treeDefinition;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public TextfieldDefinition createTextfieldDefinition()
-  {
-    TextfieldDefinitionImpl textfieldDefinition = new TextfieldDefinitionImpl();
-    return textfieldDefinition;
   }
 
   /**

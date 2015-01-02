@@ -2,28 +2,30 @@
  */
 package org.deg.xtext.gui.guiDSL.impl;
 
-import org.deg.xtext.gui.guiDSL.ButtonDefinition;
+import org.deg.xtext.gui.guiDSL.DescriptionType;
 import org.deg.xtext.gui.guiDSL.GuiDSLPackage;
 
 import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Button Definition</b></em>'.
+ * An implementation of the model object '<em><b>Description Type</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * </p>
  *
  * @generated
  */
-public class ButtonDefinitionImpl extends ComponentDefinitionImpl implements ButtonDefinition
+public class DescriptionTypeImpl extends MinimalEObjectImpl.Container implements DescriptionType
 {
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected ButtonDefinitionImpl()
+  protected DescriptionTypeImpl()
   {
     super();
   }
@@ -36,7 +38,7 @@ public class ButtonDefinitionImpl extends ComponentDefinitionImpl implements But
   @Override
   protected EClass eStaticClass()
   {
-    return GuiDSLPackage.Literals.BUTTON_DEFINITION;
+    return GuiDSLPackage.Literals.DESCRIPTION_TYPE;
   }
 
-} //ButtonDefinitionImpl
+} //DescriptionTypeImpl

@@ -7,8 +7,6 @@ import org.deg.xtext.gui.guiDSL.GuiDSLPackage;
 
 import org.eclipse.emf.ecore.EClass;
 
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 /**
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Complex Component</b></em>'.
@@ -18,7 +16,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *
  * @generated
  */
-public class ComplexComponentImpl extends MinimalEObjectImpl.Container implements ComplexComponent
+public class ComplexComponentImpl extends DescriptionTypeImpl implements ComplexComponent
 {
   /**
    * <!-- begin-user-doc -->

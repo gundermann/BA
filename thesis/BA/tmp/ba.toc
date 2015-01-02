@@ -43,14 +43,14 @@
 \contentsline {chapter}{\numberline {8}Entwicklung einer DSL zur Beschreibung der GUI in profil c/s}{32}{chapter.8}
 \contentsline {section}{\numberline {8.1}Analyse der Metadaten der GUI}{32}{section.8.1}
 \contentsline {section}{\numberline {8.2}Semantisches Model}{36}{section.8.2}
-\contentsline {section}{\numberline {8.3}Konkrete Syntax}{38}{section.8.3}
-\contentsline {chapter}{\numberline {9}Entwicklung des Generators f\"ur das Generieren von Klassen f\"ur das Multichannel-Framework}{43}{chapter.9}
-\contentsline {section}{\numberline {9.1}WAM-GUI Architektur}{43}{section.9.1}
-\contentsline {section}{\numberline {9.2}Syntax und Semantik f\"ur die Beschreibung der GUIs}{44}{section.9.2}
-\contentsline {section}{\numberline {9.3}Umsetzung des frameworkspezifischen Generators}{44}{section.9.3}
-\contentsline {chapter}{\numberline {10}Zusammenfassung und Ausblick}{45}{chapter.10}
-\contentsline {chapter}{Anhang}{xi}{appendix*.20}
-\contentsline {chapter}{Glossar}{xiii}{lstnumber.-1.69}
-\contentsline {chapter}{Literaturverzeichnis}{xiv}{appendix*.24}
+\contentsline {section}{\numberline {8.3}Konkrete Syntax}{39}{section.8.3}
+\contentsline {chapter}{\numberline {9}Entwicklung des Generators f\"ur das Generieren von Klassen f\"ur das Multichannel-Framework}{46}{chapter.9}
+\contentsline {section}{\numberline {9.1}WAM-GUI Architektur}{46}{section.9.1}
+\contentsline {section}{\numberline {9.2}Syntax und Semantik f\"ur die Beschreibung der GUIs}{47}{section.9.2}
+\contentsline {section}{\numberline {9.3}Umsetzung des frameworkspezifischen Generators}{47}{section.9.3}
+\contentsline {chapter}{\numberline {10}Zusammenfassung und Ausblick}{48}{chapter.10}
+\contentsline {chapter}{Anhang}{xi}{appendix*.21}
+\contentsline {chapter}{Glossar}{xv}{lstnumber.-2.79}
+\contentsline {chapter}{Literaturverzeichnis}{xvi}{appendix*.26}
 \select@language {English}
 \select@language {german}

@@ -33,6 +33,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GuiDSL.ecore#//UsedDescriptions/description"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GuiDSL.ecore#//UsedDescriptions/localName"/>
     </genClasses>
+    <genClasses ecoreClass="GuiDSL.ecore#//DescriptionType"/>
     <genClasses ecoreClass="GuiDSL.ecore#//AreaCount">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GuiDSL.ecore#//AreaCount/areaCount"/>
     </genClasses>
@@ -57,32 +58,14 @@
     <genClasses ecoreClass="GuiDSL.ecore#//ComponentDefinition">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GuiDSL.ecore#//ComponentDefinition/type"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GuiDSL.ecore#//ComponentDefinition/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GuiDSL.ecore#//ComponentDefinition/properties"/>
     </genClasses>
-    <genClasses ecoreClass="GuiDSL.ecore#//CheckboxDefinition">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GuiDSL.ecore#//CheckboxDefinition/text"/>
-    </genClasses>
-    <genClasses ecoreClass="GuiDSL.ecore#//RadioboxDefinition">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GuiDSL.ecore#//RadioboxDefinition/text"/>
-    </genClasses>
-    <genClasses ecoreClass="GuiDSL.ecore#//TableDefinition">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GuiDSL.ecore#//TableDefinition/text"/>
-    </genClasses>
-    <genClasses ecoreClass="GuiDSL.ecore#//TreeDefinition">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GuiDSL.ecore#//TreeDefinition/text"/>
-    </genClasses>
-    <genClasses ecoreClass="GuiDSL.ecore#//TextfieldDefinition">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GuiDSL.ecore#//TextfieldDefinition/text"/>
-    </genClasses>
-    <genClasses ecoreClass="GuiDSL.ecore#//ButtonDefinition">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GuiDSL.ecore#//ButtonDefinition/properties"/>
-    </genClasses>
+    <genClasses ecoreClass="GuiDSL.ecore#//ButtonDefinition"/>
     <genClasses ecoreClass="GuiDSL.ecore#//Properties">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GuiDSL.ecore#//Properties/propertyKey"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GuiDSL.ecore#//Properties/text"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GuiDSL.ecore#//Properties/interactiontype"/>
     </genClasses>
-    <genClasses ecoreClass="GuiDSL.ecore#//LabelDefinition">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GuiDSL.ecore#//LabelDefinition/properties"/>
-    </genClasses>
+    <genClasses ecoreClass="GuiDSL.ecore#//LabelDefinition"/>
   </genPackages>
 </genmodel:GenModel>

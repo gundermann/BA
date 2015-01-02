@@ -86,6 +86,15 @@ public interface GuiDSLFactory extends EFactory
   UsedDescriptions createUsedDescriptions();
 
   /**
+   * Returns a new object of class '<em>Description Type</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Description Type</em>'.
+   * @generated
+   */
+  DescriptionType createDescriptionType();
+
+  /**
    * Returns a new object of class '<em>Area Count</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -156,51 +165,6 @@ public interface GuiDSLFactory extends EFactory
    * @generated
    */
   ComponentDefinition createComponentDefinition();
-
-  /**
-   * Returns a new object of class '<em>Checkbox Definition</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Checkbox Definition</em>'.
-   * @generated
-   */
-  CheckboxDefinition createCheckboxDefinition();
-
-  /**
-   * Returns a new object of class '<em>Radiobox Definition</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Radiobox Definition</em>'.
-   * @generated
-   */
-  RadioboxDefinition createRadioboxDefinition();
-
-  /**
-   * Returns a new object of class '<em>Table Definition</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Table Definition</em>'.
-   * @generated
-   */
-  TableDefinition createTableDefinition();
-
-  /**
-   * Returns a new object of class '<em>Tree Definition</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Tree Definition</em>'.
-   * @generated
-   */
-  TreeDefinition createTreeDefinition();
-
-  /**
-   * Returns a new object of class '<em>Textfield Definition</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Textfield Definition</em>'.
-   * @generated
-   */
-  TextfieldDefinition createTextfieldDefinition();
 
   /**
    * Returns a new object of class '<em>Button Definition</em>'.

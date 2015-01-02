@@ -2,6 +2,7 @@
  */
 package org.deg.xtext.gui.guiDSL.impl;
 
+import org.deg.xtext.gui.guiDSL.DescriptionType;
 import org.deg.xtext.gui.guiDSL.GuiDSLPackage;
 import org.deg.xtext.gui.guiDSL.UsedDescriptions;
 
@@ -9,7 +10,6 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
@@ -39,7 +39,7 @@ public class UsedDescriptionsImpl extends MinimalEObjectImpl.Container implement
    * @generated
    * @ordered
    */
-  protected EObject description;
+  protected DescriptionType description;
 
   /**
    * The default value of the '{@link #getLocalName() <em>Local Name</em>}' attribute.
@@ -87,7 +87,7 @@ public class UsedDescriptionsImpl extends MinimalEObjectImpl.Container implement
    * <!-- end-user-doc -->
    * @generated
    */
-  public EObject getDescription()
+  public DescriptionType getDescription()
   {
     return description;
   }
@@ -97,9 +97,9 @@ public class UsedDescriptionsImpl extends MinimalEObjectImpl.Container implement
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetDescription(EObject newDescription, NotificationChain msgs)
+  public NotificationChain basicSetDescription(DescriptionType newDescription, NotificationChain msgs)
   {
-    EObject oldDescription = description;
+    DescriptionType oldDescription = description;
     description = newDescription;
     if (eNotificationRequired())
     {
@@ -114,7 +114,7 @@ public class UsedDescriptionsImpl extends MinimalEObjectImpl.Container implement
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setDescription(EObject newDescription)
+  public void setDescription(DescriptionType newDescription)
   {
     if (newDescription != description)
     {
@@ -198,7 +198,7 @@ public class UsedDescriptionsImpl extends MinimalEObjectImpl.Container implement
     switch (featureID)
     {
       case GuiDSLPackage.USED_DESCRIPTIONS__DESCRIPTION:
-        setDescription((EObject)newValue);
+        setDescription((DescriptionType)newValue);
         return;
       case GuiDSLPackage.USED_DESCRIPTIONS__LOCAL_NAME:
         setLocalName((String)newValue);
@@ -218,7 +218,7 @@ public class UsedDescriptionsImpl extends MinimalEObjectImpl.Container implement
     switch (featureID)
     {
       case GuiDSLPackage.USED_DESCRIPTIONS__DESCRIPTION:
-        setDescription((EObject)null);
+        setDescription((DescriptionType)null);
         return;
       case GuiDSLPackage.USED_DESCRIPTIONS__LOCAL_NAME:
         setLocalName(LOCAL_NAME_EDEFAULT);

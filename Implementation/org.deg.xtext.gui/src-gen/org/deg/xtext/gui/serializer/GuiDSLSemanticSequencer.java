@@ -6,7 +6,6 @@ import org.deg.xtext.gui.guiDSL.AreaAssignment;
 import org.deg.xtext.gui.guiDSL.AreaCount;
 import org.deg.xtext.gui.guiDSL.ButtonDefinition;
 import org.deg.xtext.gui.guiDSL.ButtonRefinement;
-import org.deg.xtext.gui.guiDSL.CheckboxDefinition;
 import org.deg.xtext.gui.guiDSL.Definition;
 import org.deg.xtext.gui.guiDSL.GuiDSLPackage;
 import org.deg.xtext.gui.guiDSL.LabelDefinition;
@@ -14,11 +13,7 @@ import org.deg.xtext.gui.guiDSL.LabelRefinement;
 import org.deg.xtext.gui.guiDSL.Multiselection;
 import org.deg.xtext.gui.guiDSL.Properties;
 import org.deg.xtext.gui.guiDSL.Property;
-import org.deg.xtext.gui.guiDSL.RadioboxDefinition;
 import org.deg.xtext.gui.guiDSL.Refinement;
-import org.deg.xtext.gui.guiDSL.TableDefinition;
-import org.deg.xtext.gui.guiDSL.TextfieldDefinition;
-import org.deg.xtext.gui.guiDSL.TreeDefinition;
 import org.deg.xtext.gui.guiDSL.TypeDefinition;
 import org.deg.xtext.gui.guiDSL.UIDescription;
 import org.deg.xtext.gui.guiDSL.UIDescriptionImport;
@@ -70,13 +65,6 @@ public class GuiDSLSemanticSequencer extends AbstractDelegatingSemanticSequencer
 					return; 
 				}
 				else break;
-			case GuiDSLPackage.CHECKBOX_DEFINITION:
-				if(context == grammarAccess.getCheckboxDefinitionRule() ||
-				   context == grammarAccess.getComponentDefinitionRule()) {
-					sequence_CheckboxDefinition(context, (CheckboxDefinition) semanticObject); 
-					return; 
-				}
-				else break;
 			case GuiDSLPackage.DEFINITION:
 				if(context == grammarAccess.getDefinitionRule()) {
 					sequence_Definition(context, (Definition) semanticObject); 
@@ -99,6 +87,7 @@ public class GuiDSLSemanticSequencer extends AbstractDelegatingSemanticSequencer
 				else break;
 			case GuiDSLPackage.MULTISELECTION:
 				if(context == grammarAccess.getComplexComponentRule() ||
+				   context == grammarAccess.getDescriptionTypeRule() ||
 				   context == grammarAccess.getMultiselectionRule()) {
 					sequence_Multiselection(context, (Multiselection) semanticObject); 
 					return; 
@@ -116,37 +105,9 @@ public class GuiDSLSemanticSequencer extends AbstractDelegatingSemanticSequencer
 					return; 
 				}
 				else break;
-			case GuiDSLPackage.RADIOBOX_DEFINITION:
-				if(context == grammarAccess.getComponentDefinitionRule() ||
-				   context == grammarAccess.getRadioboxDefinitionRule()) {
-					sequence_RadioboxDefinition(context, (RadioboxDefinition) semanticObject); 
-					return; 
-				}
-				else break;
 			case GuiDSLPackage.REFINEMENT:
 				if(context == grammarAccess.getRefinementRule()) {
 					sequence_Refinement(context, (Refinement) semanticObject); 
-					return; 
-				}
-				else break;
-			case GuiDSLPackage.TABLE_DEFINITION:
-				if(context == grammarAccess.getComponentDefinitionRule() ||
-				   context == grammarAccess.getTableDefinitionRule()) {
-					sequence_TableDefinition(context, (TableDefinition) semanticObject); 
-					return; 
-				}
-				else break;
-			case GuiDSLPackage.TEXTFIELD_DEFINITION:
-				if(context == grammarAccess.getComponentDefinitionRule() ||
-				   context == grammarAccess.getTextfieldDefinitionRule()) {
-					sequence_TextfieldDefinition(context, (TextfieldDefinition) semanticObject); 
-					return; 
-				}
-				else break;
-			case GuiDSLPackage.TREE_DEFINITION:
-				if(context == grammarAccess.getComponentDefinitionRule() ||
-				   context == grammarAccess.getTreeDefinitionRule()) {
-					sequence_TreeDefinition(context, (TreeDefinition) semanticObject); 
 					return; 
 				}
 				else break;
@@ -163,7 +124,8 @@ public class GuiDSLSemanticSequencer extends AbstractDelegatingSemanticSequencer
 				}
 				else break;
 			case GuiDSLPackage.UI_DESCRIPTION_IMPORT:
-				if(context == grammarAccess.getUIDescriptionImportRule()) {
+				if(context == grammarAccess.getDescriptionTypeRule() ||
+				   context == grammarAccess.getUIDescriptionImportRule()) {
 					sequence_UIDescriptionImport(context, (UIDescriptionImport) semanticObject); 
 					return; 
 				}
@@ -217,15 +179,6 @@ public class GuiDSLSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	 *     (type='Button' name=STRING properties=Properties?)
 	 */
 	protected void sequence_ButtonRefinement(EObject context, ButtonRefinement semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Constraint:
-	 *     (type='Checkbox' name=STRING text=STRING?)
-	 */
-	protected void sequence_CheckboxDefinition(EObject context, CheckboxDefinition semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -300,15 +253,6 @@ public class GuiDSLSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	
 	/**
 	 * Constraint:
-	 *     (type='Radiobox' name=STRING text=STRING?)
-	 */
-	protected void sequence_RadioboxDefinition(EObject context, RadioboxDefinition semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Constraint:
 	 *     concreteRefinement=ComponentRefinement
 	 */
 	protected void sequence_Refinement(EObject context, Refinement semanticObject) {
@@ -320,33 +264,6 @@ public class GuiDSLSemanticSequencer extends AbstractDelegatingSemanticSequencer
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
 		feeder.accept(grammarAccess.getRefinementAccess().getConcreteRefinementComponentRefinementParserRuleCall_1_0(), semanticObject.getConcreteRefinement());
 		feeder.finish();
-	}
-	
-	
-	/**
-	 * Constraint:
-	 *     (type='Table' name=STRING text=STRING?)
-	 */
-	protected void sequence_TableDefinition(EObject context, TableDefinition semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Constraint:
-	 *     (type='Textfield' name=STRING text=STRING?)
-	 */
-	protected void sequence_TextfieldDefinition(EObject context, TextfieldDefinition semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Constraint:
-	 *     (type='Tree' name=STRING text=STRING?)
-	 */
-	protected void sequence_TreeDefinition(EObject context, TreeDefinition semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
@@ -401,7 +318,7 @@ public class GuiDSLSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	
 	/**
 	 * Constraint:
-	 *     ((description=UIDescriptionImport | description=ComplexComponent) localName=STRING?)
+	 *     (description=DescriptionType localName=STRING?)
 	 */
 	protected void sequence_UsedDescriptions(EObject context, UsedDescriptions semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

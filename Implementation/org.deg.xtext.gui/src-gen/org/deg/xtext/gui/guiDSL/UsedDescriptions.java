@@ -32,12 +32,12 @@ public interface UsedDescriptions extends EObject
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Description</em>' containment reference.
-   * @see #setDescription(EObject)
+   * @see #setDescription(DescriptionType)
    * @see org.deg.xtext.gui.guiDSL.GuiDSLPackage#getUsedDescriptions_Description()
    * @model containment="true"
    * @generated
    */
-  EObject getDescription();
+  DescriptionType getDescription();
 
   /**
    * Sets the value of the '{@link org.deg.xtext.gui.guiDSL.UsedDescriptions#getDescription <em>Description</em>}' containment reference.
@@ -47,7 +47,7 @@ public interface UsedDescriptions extends EObject
    * @see #getDescription()
    * @generated
    */
-  void setDescription(EObject value);
+  void setDescription(DescriptionType value);
 
   /**
    * Returns the value of the '<em><b>Local Name</b></em>' attribute.

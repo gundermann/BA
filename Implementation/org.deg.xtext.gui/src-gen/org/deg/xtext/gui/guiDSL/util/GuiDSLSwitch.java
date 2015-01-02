@@ -123,6 +123,13 @@ public class GuiDSLSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case GuiDSLPackage.DESCRIPTION_TYPE:
+      {
+        DescriptionType descriptionType = (DescriptionType)theEObject;
+        T result = caseDescriptionType(descriptionType);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case GuiDSLPackage.AREA_COUNT:
       {
         AreaCount areaCount = (AreaCount)theEObject;
@@ -148,6 +155,7 @@ public class GuiDSLSwitch<T> extends Switch<T>
       {
         UIDescriptionImport uiDescriptionImport = (UIDescriptionImport)theEObject;
         T result = caseUIDescriptionImport(uiDescriptionImport);
+        if (result == null) result = caseDescriptionType(uiDescriptionImport);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -155,6 +163,7 @@ public class GuiDSLSwitch<T> extends Switch<T>
       {
         ComplexComponent complexComponent = (ComplexComponent)theEObject;
         T result = caseComplexComponent(complexComponent);
+        if (result == null) result = caseDescriptionType(complexComponent);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -163,6 +172,7 @@ public class GuiDSLSwitch<T> extends Switch<T>
         Multiselection multiselection = (Multiselection)theEObject;
         T result = caseMultiselection(multiselection);
         if (result == null) result = caseComplexComponent(multiselection);
+        if (result == null) result = caseDescriptionType(multiselection);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -177,46 +187,6 @@ public class GuiDSLSwitch<T> extends Switch<T>
       {
         ComponentDefinition componentDefinition = (ComponentDefinition)theEObject;
         T result = caseComponentDefinition(componentDefinition);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case GuiDSLPackage.CHECKBOX_DEFINITION:
-      {
-        CheckboxDefinition checkboxDefinition = (CheckboxDefinition)theEObject;
-        T result = caseCheckboxDefinition(checkboxDefinition);
-        if (result == null) result = caseComponentDefinition(checkboxDefinition);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case GuiDSLPackage.RADIOBOX_DEFINITION:
-      {
-        RadioboxDefinition radioboxDefinition = (RadioboxDefinition)theEObject;
-        T result = caseRadioboxDefinition(radioboxDefinition);
-        if (result == null) result = caseComponentDefinition(radioboxDefinition);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case GuiDSLPackage.TABLE_DEFINITION:
-      {
-        TableDefinition tableDefinition = (TableDefinition)theEObject;
-        T result = caseTableDefinition(tableDefinition);
-        if (result == null) result = caseComponentDefinition(tableDefinition);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case GuiDSLPackage.TREE_DEFINITION:
-      {
-        TreeDefinition treeDefinition = (TreeDefinition)theEObject;
-        T result = caseTreeDefinition(treeDefinition);
-        if (result == null) result = caseComponentDefinition(treeDefinition);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case GuiDSLPackage.TEXTFIELD_DEFINITION:
-      {
-        TextfieldDefinition textfieldDefinition = (TextfieldDefinition)theEObject;
-        T result = caseTextfieldDefinition(textfieldDefinition);
-        if (result == null) result = caseComponentDefinition(textfieldDefinition);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -360,6 +330,22 @@ public class GuiDSLSwitch<T> extends Switch<T>
   }
 
   /**
+   * Returns the result of interpreting the object as an instance of '<em>Description Type</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Description Type</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseDescriptionType(DescriptionType object)
+  {
+    return null;
+  }
+
+  /**
    * Returns the result of interpreting the object as an instance of '<em>Area Count</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -483,86 +469,6 @@ public class GuiDSLSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseComponentDefinition(ComponentDefinition object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Checkbox Definition</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Checkbox Definition</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseCheckboxDefinition(CheckboxDefinition object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Radiobox Definition</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Radiobox Definition</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseRadioboxDefinition(RadioboxDefinition object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Table Definition</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Table Definition</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseTableDefinition(TableDefinition object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Tree Definition</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Tree Definition</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseTreeDefinition(TreeDefinition object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Textfield Definition</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Textfield Definition</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseTextfieldDefinition(TextfieldDefinition object)
   {
     return null;
   }

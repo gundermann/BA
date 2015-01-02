@@ -29,7 +29,10 @@ Property:
 	'get properties from:' propertiesFile=STRING;
 
 UsedDescriptions:
-	'use: ' description=(UIDescriptionImport | ComplexComponent) (' as: ' localName=STRING)?;
+	'use: ' description=DescriptionType (' as: ' localName=STRING)?;
+
+DescriptionType:
+	UIDescriptionImport | ComplexComponent;
 
 AreaCount:
 	'Area count: ' areaCount=INT;
@@ -57,28 +60,7 @@ AreaAssignment:
 	| elements+=(STRING)+ '->' 'Area:' area=INT;
 
 ComponentDefinition:
-	LabelDefinition | ButtonDefinition | TextfieldDefinition | TreeDefinition | TableDefinition | RadioboxDefinition |
-	CheckboxDefinition;
-
-CheckboxDefinition:
-	type='Checkbox' ' as ' name=STRING ':'
-	('text=' text=STRING)?;
-
-RadioboxDefinition:
-	type='Radiobox' ' as ' name=STRING ':'
-	('text=' text=STRING)?;
-
-TableDefinition:
-	type='Table' ' as ' name=STRING ':'
-	('text=' text=STRING)?;
-
-TreeDefinition:
-	type='Tree' ' as ' name=STRING ':'
-	('text=' text=STRING)?;
-
-TextfieldDefinition:
-	type='Textfield' ' as ' name=STRING ':'
-	('text=' text=STRING)?;
+	LabelDefinition | ButtonDefinition;
 
 ButtonDefinition:
 	type='Button' ' as ' name=STRING

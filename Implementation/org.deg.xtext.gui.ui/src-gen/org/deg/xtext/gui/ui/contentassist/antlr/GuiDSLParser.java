@@ -38,7 +38,7 @@ public class GuiDSLParser extends AbstractContentAssistParser {
 				private static final long serialVersionUID = 1L;
 				{
 					put(grammarAccess.getComponentRefinementAccess().getAlternatives(), "rule__ComponentRefinement__Alternatives");
-					put(grammarAccess.getUsedDescriptionsAccess().getDescriptionAlternatives_1_0(), "rule__UsedDescriptions__DescriptionAlternatives_1_0");
+					put(grammarAccess.getDescriptionTypeAccess().getAlternatives(), "rule__DescriptionType__Alternatives");
 					put(grammarAccess.getTypeAccess().getAlternatives(), "rule__Type__Alternatives");
 					put(grammarAccess.getAreaAssignmentAccess().getAlternatives(), "rule__AreaAssignment__Alternatives");
 					put(grammarAccess.getComponentDefinitionAccess().getAlternatives(), "rule__ComponentDefinition__Alternatives");
@@ -57,16 +57,6 @@ public class GuiDSLParser extends AbstractContentAssistParser {
 					put(grammarAccess.getMultiselectionAccess().getGroup_1(), "rule__Multiselection__Group_1__0");
 					put(grammarAccess.getAreaAssignmentAccess().getGroup_0(), "rule__AreaAssignment__Group_0__0");
 					put(grammarAccess.getAreaAssignmentAccess().getGroup_1(), "rule__AreaAssignment__Group_1__0");
-					put(grammarAccess.getCheckboxDefinitionAccess().getGroup(), "rule__CheckboxDefinition__Group__0");
-					put(grammarAccess.getCheckboxDefinitionAccess().getGroup_4(), "rule__CheckboxDefinition__Group_4__0");
-					put(grammarAccess.getRadioboxDefinitionAccess().getGroup(), "rule__RadioboxDefinition__Group__0");
-					put(grammarAccess.getRadioboxDefinitionAccess().getGroup_4(), "rule__RadioboxDefinition__Group_4__0");
-					put(grammarAccess.getTableDefinitionAccess().getGroup(), "rule__TableDefinition__Group__0");
-					put(grammarAccess.getTableDefinitionAccess().getGroup_4(), "rule__TableDefinition__Group_4__0");
-					put(grammarAccess.getTreeDefinitionAccess().getGroup(), "rule__TreeDefinition__Group__0");
-					put(grammarAccess.getTreeDefinitionAccess().getGroup_4(), "rule__TreeDefinition__Group_4__0");
-					put(grammarAccess.getTextfieldDefinitionAccess().getGroup(), "rule__TextfieldDefinition__Group__0");
-					put(grammarAccess.getTextfieldDefinitionAccess().getGroup_4(), "rule__TextfieldDefinition__Group_4__0");
 					put(grammarAccess.getButtonDefinitionAccess().getGroup(), "rule__ButtonDefinition__Group__0");
 					put(grammarAccess.getPropertiesAccess().getGroup(), "rule__Properties__Group__0");
 					put(grammarAccess.getPropertiesAccess().getGroup_1(), "rule__Properties__Group_1__0");
@@ -100,21 +90,6 @@ public class GuiDSLParser extends AbstractContentAssistParser {
 					put(grammarAccess.getAreaAssignmentAccess().getElementsAssignment_0_3(), "rule__AreaAssignment__ElementsAssignment_0_3");
 					put(grammarAccess.getAreaAssignmentAccess().getElementsAssignment_1_0(), "rule__AreaAssignment__ElementsAssignment_1_0");
 					put(grammarAccess.getAreaAssignmentAccess().getAreaAssignment_1_3(), "rule__AreaAssignment__AreaAssignment_1_3");
-					put(grammarAccess.getCheckboxDefinitionAccess().getTypeAssignment_0(), "rule__CheckboxDefinition__TypeAssignment_0");
-					put(grammarAccess.getCheckboxDefinitionAccess().getNameAssignment_2(), "rule__CheckboxDefinition__NameAssignment_2");
-					put(grammarAccess.getCheckboxDefinitionAccess().getTextAssignment_4_1(), "rule__CheckboxDefinition__TextAssignment_4_1");
-					put(grammarAccess.getRadioboxDefinitionAccess().getTypeAssignment_0(), "rule__RadioboxDefinition__TypeAssignment_0");
-					put(grammarAccess.getRadioboxDefinitionAccess().getNameAssignment_2(), "rule__RadioboxDefinition__NameAssignment_2");
-					put(grammarAccess.getRadioboxDefinitionAccess().getTextAssignment_4_1(), "rule__RadioboxDefinition__TextAssignment_4_1");
-					put(grammarAccess.getTableDefinitionAccess().getTypeAssignment_0(), "rule__TableDefinition__TypeAssignment_0");
-					put(grammarAccess.getTableDefinitionAccess().getNameAssignment_2(), "rule__TableDefinition__NameAssignment_2");
-					put(grammarAccess.getTableDefinitionAccess().getTextAssignment_4_1(), "rule__TableDefinition__TextAssignment_4_1");
-					put(grammarAccess.getTreeDefinitionAccess().getTypeAssignment_0(), "rule__TreeDefinition__TypeAssignment_0");
-					put(grammarAccess.getTreeDefinitionAccess().getNameAssignment_2(), "rule__TreeDefinition__NameAssignment_2");
-					put(grammarAccess.getTreeDefinitionAccess().getTextAssignment_4_1(), "rule__TreeDefinition__TextAssignment_4_1");
-					put(grammarAccess.getTextfieldDefinitionAccess().getTypeAssignment_0(), "rule__TextfieldDefinition__TypeAssignment_0");
-					put(grammarAccess.getTextfieldDefinitionAccess().getNameAssignment_2(), "rule__TextfieldDefinition__NameAssignment_2");
-					put(grammarAccess.getTextfieldDefinitionAccess().getTextAssignment_4_1(), "rule__TextfieldDefinition__TextAssignment_4_1");
 					put(grammarAccess.getButtonDefinitionAccess().getTypeAssignment_0(), "rule__ButtonDefinition__TypeAssignment_0");
 					put(grammarAccess.getButtonDefinitionAccess().getNameAssignment_2(), "rule__ButtonDefinition__NameAssignment_2");
 					put(grammarAccess.getButtonDefinitionAccess().getPropertiesAssignment_3(), "rule__ButtonDefinition__PropertiesAssignment_3");

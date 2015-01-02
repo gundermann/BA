@@ -2,7 +2,6 @@
  */
 package org.deg.xtext.gui.guiDSL;
 
-import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -14,6 +13,6 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface ComplexComponent extends EObject
+public interface ComplexComponent extends DescriptionType
 {
 } // ComplexComponent

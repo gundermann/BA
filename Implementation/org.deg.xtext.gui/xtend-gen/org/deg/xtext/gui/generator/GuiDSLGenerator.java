@@ -10,12 +10,9 @@ import java.util.List;
 import java.util.Map;
 import org.deg.xtext.gui.guiDSL.AreaAssignment;
 import org.deg.xtext.gui.guiDSL.ButtonDefinition;
-import org.deg.xtext.gui.guiDSL.CheckboxDefinition;
 import org.deg.xtext.gui.guiDSL.ComponentDefinition;
 import org.deg.xtext.gui.guiDSL.Definition;
 import org.deg.xtext.gui.guiDSL.LabelDefinition;
-import org.deg.xtext.gui.guiDSL.RadioboxDefinition;
-import org.deg.xtext.gui.guiDSL.TextfieldDefinition;
 import org.deg.xtext.gui.guiDSL.TypeDefinition;
 import org.deg.xtext.gui.guiDSL.UIDescription;
 import org.deg.xtext.gui.guiDSL.UsedDescriptions;
@@ -340,146 +337,38 @@ public class GuiDSLGenerator implements IGenerator {
   }
   
   public CharSequence compileDefinition(final Definition definition) {
-    StringConcatenation _builder = new StringConcatenation();
-    {
-      ComponentDefinition _concreteDefition = definition.getConcreteDefition();
-      String _type = _concreteDefition.getType();
-      boolean _equals = _type.equals("Button");
-      if (_equals) {
-        ComponentDefinition _concreteDefition_1 = definition.getConcreteDefition();
-        CharSequence _compileButton = this.compileButton(((ButtonDefinition) _concreteDefition_1));
-        _builder.append(_compileButton, "");
-        _builder.newLineIfNotEmpty();
-      } else {
-        ComponentDefinition _concreteDefition_2 = definition.getConcreteDefition();
-        String _type_1 = _concreteDefition_2.getType();
-        boolean _equals_1 = _type_1.equals("Checkbox");
-        if (_equals_1) {
-          ComponentDefinition _concreteDefition_3 = definition.getConcreteDefition();
-          CharSequence _compileCheckbox = this.compileCheckbox(((CheckboxDefinition) _concreteDefition_3));
-          _builder.append(_compileCheckbox, "");
-          _builder.newLineIfNotEmpty();
-        } else {
-          ComponentDefinition _concreteDefition_4 = definition.getConcreteDefition();
-          String _type_2 = _concreteDefition_4.getType();
-          boolean _equals_2 = _type_2.equals("Radiobox");
-          if (_equals_2) {
-            ComponentDefinition _concreteDefition_5 = definition.getConcreteDefition();
-            CharSequence _compileRadiobox = this.compileRadiobox(((RadioboxDefinition) _concreteDefition_5));
-            _builder.append(_compileRadiobox, "");
-            _builder.newLineIfNotEmpty();
-          } else {
-            ComponentDefinition _concreteDefition_6 = definition.getConcreteDefition();
-            CharSequence _compileLabel = this.compileLabel(((LabelDefinition) _concreteDefition_6));
-            _builder.append(_compileLabel, "");
-            _builder.newLineIfNotEmpty();
-          }
-        }
-      }
-    }
-    String _switchCompiled = this.switchCompiled();
-    _builder.append(_switchCompiled, "");
-    _builder.newLineIfNotEmpty();
-    return _builder;
+    throw new Error("Unresolved compilation problems:"
+      + "\nCheckboxDefinition cannot be resolved to a type."
+      + "\nRadioboxDefinition cannot be resolved to a type."
+      + "\ncompileCheckbox cannot be resolved"
+      + "\ncompileRadiobox cannot be resolved");
   }
   
-  public CharSequence compileCheckbox(final CheckboxDefinition definition) {
-    StringConcatenation _builder = new StringConcatenation();
-    String _addImport = this.addImport("import javafx.scene.control.CheckBox;");
-    _builder.append(_addImport, "");
-    _builder.newLineIfNotEmpty();
-    String _name = definition.getName();
-    String _plus = ("CheckBox " + _name);
-    String _plus_1 = (_plus + ";");
-    String _addGlobalVar = this.addGlobalVar(_plus_1);
-    _builder.append(_addGlobalVar, "");
-    _builder.newLineIfNotEmpty();
-    _builder.append("\t");
-    String _name_1 = definition.getName();
-    _builder.append(_name_1, "\t");
-    _builder.append(" = new CheckBox();");
-    _builder.newLineIfNotEmpty();
-    _builder.append("\t");
-    String _name_2 = definition.getName();
-    _builder.append(_name_2, "\t");
-    _builder.append(".setText(\"");
-    String _text = definition.getText();
-    _builder.append(_text, "\t");
-    _builder.append("\");");
-    _builder.newLineIfNotEmpty();
-    _builder.append("\t");
-    _builder.append("return ");
-    String _name_3 = definition.getName();
-    _builder.append(_name_3, "\t");
-    _builder.append(";");
-    _builder.newLineIfNotEmpty();
-    return _builder;
+  public CharSequence compileCheckbox(final /* CheckboxDefinition */Object definition) {
+    throw new Error("Unresolved compilation problems:"
+      + "\nname cannot be resolved"
+      + "\nname cannot be resolved"
+      + "\nname cannot be resolved"
+      + "\ntext cannot be resolved"
+      + "\nname cannot be resolved");
   }
   
-  public CharSequence compileRadiobox(final RadioboxDefinition definition) {
-    StringConcatenation _builder = new StringConcatenation();
-    String _addImport = this.addImport("import javafx.scene.control.RadioButton;");
-    _builder.append(_addImport, "");
-    _builder.newLineIfNotEmpty();
-    String _name = definition.getName();
-    String _plus = ("RadioButton " + _name);
-    String _plus_1 = (_plus + ";");
-    String _addGlobalVar = this.addGlobalVar(_plus_1);
-    _builder.append(_addGlobalVar, "");
-    _builder.newLineIfNotEmpty();
-    _builder.append("\t");
-    String _name_1 = definition.getName();
-    _builder.append(_name_1, "\t");
-    _builder.append(" = new RadioButton();");
-    _builder.newLineIfNotEmpty();
-    _builder.append("\t");
-    String _name_2 = definition.getName();
-    _builder.append(_name_2, "\t");
-    _builder.append(".setText(\"");
-    String _text = definition.getText();
-    _builder.append(_text, "\t");
-    _builder.append("\");");
-    _builder.newLineIfNotEmpty();
-    _builder.append("\t");
-    _builder.append("return ");
-    String _name_3 = definition.getName();
-    _builder.append(_name_3, "\t");
-    _builder.append(";");
-    _builder.newLineIfNotEmpty();
-    return _builder;
+  public CharSequence compileRadiobox(final /* RadioboxDefinition */Object definition) {
+    throw new Error("Unresolved compilation problems:"
+      + "\nname cannot be resolved"
+      + "\nname cannot be resolved"
+      + "\nname cannot be resolved"
+      + "\ntext cannot be resolved"
+      + "\nname cannot be resolved");
   }
   
-  public CharSequence compileTextfield(final TextfieldDefinition definition) {
-    StringConcatenation _builder = new StringConcatenation();
-    String _addImport = this.addImport("import javafx.scene.control.TextField;");
-    _builder.append(_addImport, "");
-    _builder.newLineIfNotEmpty();
-    String _name = definition.getName();
-    String _plus = ("TextField " + _name);
-    String _plus_1 = (_plus + ";");
-    String _addGlobalVar = this.addGlobalVar(_plus_1);
-    _builder.append(_addGlobalVar, "");
-    _builder.newLineIfNotEmpty();
-    _builder.append("\t");
-    String _name_1 = definition.getName();
-    _builder.append(_name_1, "\t");
-    _builder.append(" = new TextField();");
-    _builder.newLineIfNotEmpty();
-    _builder.append("\t");
-    String _name_2 = definition.getName();
-    _builder.append(_name_2, "\t");
-    _builder.append(".setText(\"");
-    String _text = definition.getText();
-    _builder.append(_text, "\t");
-    _builder.append("\");");
-    _builder.newLineIfNotEmpty();
-    _builder.append("\t");
-    _builder.append("return ");
-    String _name_3 = definition.getName();
-    _builder.append(_name_3, "\t");
-    _builder.append(";");
-    _builder.newLineIfNotEmpty();
-    return _builder;
+  public CharSequence compileTextfield(final /* TextfieldDefinition */Object definition) {
+    throw new Error("Unresolved compilation problems:"
+      + "\nname cannot be resolved"
+      + "\nname cannot be resolved"
+      + "\nname cannot be resolved"
+      + "\ntext cannot be resolved"
+      + "\nname cannot be resolved");
   }
   
   public CharSequence compileLabel(final LabelDefinition definition) {

@@ -2,7 +2,6 @@
  */
 package org.deg.xtext.gui.guiDSL;
 
-import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -20,7 +19,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface UIDescriptionImport extends EObject
+public interface UIDescriptionImport extends DescriptionType
 {
   /**
    * Returns the value of the '<em><b>Description Name</b></em>' attribute.

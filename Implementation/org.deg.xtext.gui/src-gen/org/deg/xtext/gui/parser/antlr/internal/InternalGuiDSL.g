@@ -512,38 +512,20 @@ ruleUsedDescriptions returns [EObject current=null]
     }
 (
 (
-(
 		{ 
-	        newCompositeNode(grammarAccess.getUsedDescriptionsAccess().getDescriptionUIDescriptionImportParserRuleCall_1_0_0()); 
+	        newCompositeNode(grammarAccess.getUsedDescriptionsAccess().getDescriptionDescriptionTypeParserRuleCall_1_0()); 
 	    }
-		lv_description_1_1=ruleUIDescriptionImport		{
+		lv_description_1_0=ruleDescriptionType		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getUsedDescriptionsRule());
 	        }
        		set(
        			$current, 
        			"description",
-        		lv_description_1_1, 
-        		"UIDescriptionImport");
+        		lv_description_1_0, 
+        		"DescriptionType");
 	        afterParserOrEnumRuleCall();
 	    }
-
-    |		{ 
-	        newCompositeNode(grammarAccess.getUsedDescriptionsAccess().getDescriptionComplexComponentParserRuleCall_1_0_1()); 
-	    }
-		lv_description_1_2=ruleComplexComponent		{
-	        if ($current==null) {
-	            $current = createModelElementForParent(grammarAccess.getUsedDescriptionsRule());
-	        }
-       		set(
-       			$current, 
-       			"description",
-        		lv_description_1_2, 
-        		"ComplexComponent");
-	        afterParserOrEnumRuleCall();
-	    }
-
-)
 
 )
 )(	otherlv_2=' as: ' 
@@ -569,6 +551,46 @@ ruleUsedDescriptions returns [EObject current=null]
 
 )
 ))?)
+;
+
+
+
+
+
+// Entry rule entryRuleDescriptionType
+entryRuleDescriptionType returns [EObject current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getDescriptionTypeRule()); }
+	 iv_ruleDescriptionType=ruleDescriptionType 
+	 { $current=$iv_ruleDescriptionType.current; } 
+	 EOF 
+;
+
+// Rule DescriptionType
+ruleDescriptionType returns [EObject current=null] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
+(
+    { 
+        newCompositeNode(grammarAccess.getDescriptionTypeAccess().getUIDescriptionImportParserRuleCall_0()); 
+    }
+    this_UIDescriptionImport_0=ruleUIDescriptionImport
+    { 
+        $current = $this_UIDescriptionImport_0.current; 
+        afterParserOrEnumRuleCall();
+    }
+
+    |
+    { 
+        newCompositeNode(grammarAccess.getDescriptionTypeAccess().getComplexComponentParserRuleCall_1()); 
+    }
+    this_ComplexComponent_1=ruleComplexComponent
+    { 
+        $current = $this_ComplexComponent_1.current; 
+        afterParserOrEnumRuleCall();
+    }
+)
 ;
 
 
@@ -1016,477 +1038,7 @@ ruleComponentDefinition returns [EObject current=null]
         $current = $this_ButtonDefinition_1.current; 
         afterParserOrEnumRuleCall();
     }
-
-    |
-    { 
-        newCompositeNode(grammarAccess.getComponentDefinitionAccess().getTextfieldDefinitionParserRuleCall_2()); 
-    }
-    this_TextfieldDefinition_2=ruleTextfieldDefinition
-    { 
-        $current = $this_TextfieldDefinition_2.current; 
-        afterParserOrEnumRuleCall();
-    }
-
-    |
-    { 
-        newCompositeNode(grammarAccess.getComponentDefinitionAccess().getTreeDefinitionParserRuleCall_3()); 
-    }
-    this_TreeDefinition_3=ruleTreeDefinition
-    { 
-        $current = $this_TreeDefinition_3.current; 
-        afterParserOrEnumRuleCall();
-    }
-
-    |
-    { 
-        newCompositeNode(grammarAccess.getComponentDefinitionAccess().getTableDefinitionParserRuleCall_4()); 
-    }
-    this_TableDefinition_4=ruleTableDefinition
-    { 
-        $current = $this_TableDefinition_4.current; 
-        afterParserOrEnumRuleCall();
-    }
-
-    |
-    { 
-        newCompositeNode(grammarAccess.getComponentDefinitionAccess().getRadioboxDefinitionParserRuleCall_5()); 
-    }
-    this_RadioboxDefinition_5=ruleRadioboxDefinition
-    { 
-        $current = $this_RadioboxDefinition_5.current; 
-        afterParserOrEnumRuleCall();
-    }
-
-    |
-    { 
-        newCompositeNode(grammarAccess.getComponentDefinitionAccess().getCheckboxDefinitionParserRuleCall_6()); 
-    }
-    this_CheckboxDefinition_6=ruleCheckboxDefinition
-    { 
-        $current = $this_CheckboxDefinition_6.current; 
-        afterParserOrEnumRuleCall();
-    }
 )
-;
-
-
-
-
-
-// Entry rule entryRuleCheckboxDefinition
-entryRuleCheckboxDefinition returns [EObject current=null] 
-	:
-	{ newCompositeNode(grammarAccess.getCheckboxDefinitionRule()); }
-	 iv_ruleCheckboxDefinition=ruleCheckboxDefinition 
-	 { $current=$iv_ruleCheckboxDefinition.current; } 
-	 EOF 
-;
-
-// Rule CheckboxDefinition
-ruleCheckboxDefinition returns [EObject current=null] 
-    @init { enterRule(); 
-    }
-    @after { leaveRule(); }:
-((
-(
-		lv_type_0_0=	'Checkbox' 
-    {
-        newLeafNode(lv_type_0_0, grammarAccess.getCheckboxDefinitionAccess().getTypeCheckboxKeyword_0_0());
-    }
- 
-	    {
-	        if ($current==null) {
-	            $current = createModelElement(grammarAccess.getCheckboxDefinitionRule());
-	        }
-       		setWithLastConsumed($current, "type", lv_type_0_0, "Checkbox");
-	    }
-
-)
-)	otherlv_1=' as ' 
-    {
-    	newLeafNode(otherlv_1, grammarAccess.getCheckboxDefinitionAccess().getAsKeyword_1());
-    }
-(
-(
-		lv_name_2_0=RULE_STRING
-		{
-			newLeafNode(lv_name_2_0, grammarAccess.getCheckboxDefinitionAccess().getNameSTRINGTerminalRuleCall_2_0()); 
-		}
-		{
-	        if ($current==null) {
-	            $current = createModelElement(grammarAccess.getCheckboxDefinitionRule());
-	        }
-       		setWithLastConsumed(
-       			$current, 
-       			"name",
-        		lv_name_2_0, 
-        		"STRING");
-	    }
-
-)
-)	otherlv_3=':' 
-    {
-    	newLeafNode(otherlv_3, grammarAccess.getCheckboxDefinitionAccess().getColonKeyword_3());
-    }
-(	otherlv_4='text=' 
-    {
-    	newLeafNode(otherlv_4, grammarAccess.getCheckboxDefinitionAccess().getTextKeyword_4_0());
-    }
-(
-(
-		lv_text_5_0=RULE_STRING
-		{
-			newLeafNode(lv_text_5_0, grammarAccess.getCheckboxDefinitionAccess().getTextSTRINGTerminalRuleCall_4_1_0()); 
-		}
-		{
-	        if ($current==null) {
-	            $current = createModelElement(grammarAccess.getCheckboxDefinitionRule());
-	        }
-       		setWithLastConsumed(
-       			$current, 
-       			"text",
-        		lv_text_5_0, 
-        		"STRING");
-	    }
-
-)
-))?)
-;
-
-
-
-
-
-// Entry rule entryRuleRadioboxDefinition
-entryRuleRadioboxDefinition returns [EObject current=null] 
-	:
-	{ newCompositeNode(grammarAccess.getRadioboxDefinitionRule()); }
-	 iv_ruleRadioboxDefinition=ruleRadioboxDefinition 
-	 { $current=$iv_ruleRadioboxDefinition.current; } 
-	 EOF 
-;
-
-// Rule RadioboxDefinition
-ruleRadioboxDefinition returns [EObject current=null] 
-    @init { enterRule(); 
-    }
-    @after { leaveRule(); }:
-((
-(
-		lv_type_0_0=	'Radiobox' 
-    {
-        newLeafNode(lv_type_0_0, grammarAccess.getRadioboxDefinitionAccess().getTypeRadioboxKeyword_0_0());
-    }
- 
-	    {
-	        if ($current==null) {
-	            $current = createModelElement(grammarAccess.getRadioboxDefinitionRule());
-	        }
-       		setWithLastConsumed($current, "type", lv_type_0_0, "Radiobox");
-	    }
-
-)
-)	otherlv_1=' as ' 
-    {
-    	newLeafNode(otherlv_1, grammarAccess.getRadioboxDefinitionAccess().getAsKeyword_1());
-    }
-(
-(
-		lv_name_2_0=RULE_STRING
-		{
-			newLeafNode(lv_name_2_0, grammarAccess.getRadioboxDefinitionAccess().getNameSTRINGTerminalRuleCall_2_0()); 
-		}
-		{
-	        if ($current==null) {
-	            $current = createModelElement(grammarAccess.getRadioboxDefinitionRule());
-	        }
-       		setWithLastConsumed(
-       			$current, 
-       			"name",
-        		lv_name_2_0, 
-        		"STRING");
-	    }
-
-)
-)	otherlv_3=':' 
-    {
-    	newLeafNode(otherlv_3, grammarAccess.getRadioboxDefinitionAccess().getColonKeyword_3());
-    }
-(	otherlv_4='text=' 
-    {
-    	newLeafNode(otherlv_4, grammarAccess.getRadioboxDefinitionAccess().getTextKeyword_4_0());
-    }
-(
-(
-		lv_text_5_0=RULE_STRING
-		{
-			newLeafNode(lv_text_5_0, grammarAccess.getRadioboxDefinitionAccess().getTextSTRINGTerminalRuleCall_4_1_0()); 
-		}
-		{
-	        if ($current==null) {
-	            $current = createModelElement(grammarAccess.getRadioboxDefinitionRule());
-	        }
-       		setWithLastConsumed(
-       			$current, 
-       			"text",
-        		lv_text_5_0, 
-        		"STRING");
-	    }
-
-)
-))?)
-;
-
-
-
-
-
-// Entry rule entryRuleTableDefinition
-entryRuleTableDefinition returns [EObject current=null] 
-	:
-	{ newCompositeNode(grammarAccess.getTableDefinitionRule()); }
-	 iv_ruleTableDefinition=ruleTableDefinition 
-	 { $current=$iv_ruleTableDefinition.current; } 
-	 EOF 
-;
-
-// Rule TableDefinition
-ruleTableDefinition returns [EObject current=null] 
-    @init { enterRule(); 
-    }
-    @after { leaveRule(); }:
-((
-(
-		lv_type_0_0=	'Table' 
-    {
-        newLeafNode(lv_type_0_0, grammarAccess.getTableDefinitionAccess().getTypeTableKeyword_0_0());
-    }
- 
-	    {
-	        if ($current==null) {
-	            $current = createModelElement(grammarAccess.getTableDefinitionRule());
-	        }
-       		setWithLastConsumed($current, "type", lv_type_0_0, "Table");
-	    }
-
-)
-)	otherlv_1=' as ' 
-    {
-    	newLeafNode(otherlv_1, grammarAccess.getTableDefinitionAccess().getAsKeyword_1());
-    }
-(
-(
-		lv_name_2_0=RULE_STRING
-		{
-			newLeafNode(lv_name_2_0, grammarAccess.getTableDefinitionAccess().getNameSTRINGTerminalRuleCall_2_0()); 
-		}
-		{
-	        if ($current==null) {
-	            $current = createModelElement(grammarAccess.getTableDefinitionRule());
-	        }
-       		setWithLastConsumed(
-       			$current, 
-       			"name",
-        		lv_name_2_0, 
-        		"STRING");
-	    }
-
-)
-)	otherlv_3=':' 
-    {
-    	newLeafNode(otherlv_3, grammarAccess.getTableDefinitionAccess().getColonKeyword_3());
-    }
-(	otherlv_4='text=' 
-    {
-    	newLeafNode(otherlv_4, grammarAccess.getTableDefinitionAccess().getTextKeyword_4_0());
-    }
-(
-(
-		lv_text_5_0=RULE_STRING
-		{
-			newLeafNode(lv_text_5_0, grammarAccess.getTableDefinitionAccess().getTextSTRINGTerminalRuleCall_4_1_0()); 
-		}
-		{
-	        if ($current==null) {
-	            $current = createModelElement(grammarAccess.getTableDefinitionRule());
-	        }
-       		setWithLastConsumed(
-       			$current, 
-       			"text",
-        		lv_text_5_0, 
-        		"STRING");
-	    }
-
-)
-))?)
-;
-
-
-
-
-
-// Entry rule entryRuleTreeDefinition
-entryRuleTreeDefinition returns [EObject current=null] 
-	:
-	{ newCompositeNode(grammarAccess.getTreeDefinitionRule()); }
-	 iv_ruleTreeDefinition=ruleTreeDefinition 
-	 { $current=$iv_ruleTreeDefinition.current; } 
-	 EOF 
-;
-
-// Rule TreeDefinition
-ruleTreeDefinition returns [EObject current=null] 
-    @init { enterRule(); 
-    }
-    @after { leaveRule(); }:
-((
-(
-		lv_type_0_0=	'Tree' 
-    {
-        newLeafNode(lv_type_0_0, grammarAccess.getTreeDefinitionAccess().getTypeTreeKeyword_0_0());
-    }
- 
-	    {
-	        if ($current==null) {
-	            $current = createModelElement(grammarAccess.getTreeDefinitionRule());
-	        }
-       		setWithLastConsumed($current, "type", lv_type_0_0, "Tree");
-	    }
-
-)
-)	otherlv_1=' as ' 
-    {
-    	newLeafNode(otherlv_1, grammarAccess.getTreeDefinitionAccess().getAsKeyword_1());
-    }
-(
-(
-		lv_name_2_0=RULE_STRING
-		{
-			newLeafNode(lv_name_2_0, grammarAccess.getTreeDefinitionAccess().getNameSTRINGTerminalRuleCall_2_0()); 
-		}
-		{
-	        if ($current==null) {
-	            $current = createModelElement(grammarAccess.getTreeDefinitionRule());
-	        }
-       		setWithLastConsumed(
-       			$current, 
-       			"name",
-        		lv_name_2_0, 
-        		"STRING");
-	    }
-
-)
-)	otherlv_3=':' 
-    {
-    	newLeafNode(otherlv_3, grammarAccess.getTreeDefinitionAccess().getColonKeyword_3());
-    }
-(	otherlv_4='text=' 
-    {
-    	newLeafNode(otherlv_4, grammarAccess.getTreeDefinitionAccess().getTextKeyword_4_0());
-    }
-(
-(
-		lv_text_5_0=RULE_STRING
-		{
-			newLeafNode(lv_text_5_0, grammarAccess.getTreeDefinitionAccess().getTextSTRINGTerminalRuleCall_4_1_0()); 
-		}
-		{
-	        if ($current==null) {
-	            $current = createModelElement(grammarAccess.getTreeDefinitionRule());
-	        }
-       		setWithLastConsumed(
-       			$current, 
-       			"text",
-        		lv_text_5_0, 
-        		"STRING");
-	    }
-
-)
-))?)
-;
-
-
-
-
-
-// Entry rule entryRuleTextfieldDefinition
-entryRuleTextfieldDefinition returns [EObject current=null] 
-	:
-	{ newCompositeNode(grammarAccess.getTextfieldDefinitionRule()); }
-	 iv_ruleTextfieldDefinition=ruleTextfieldDefinition 
-	 { $current=$iv_ruleTextfieldDefinition.current; } 
-	 EOF 
-;
-
-// Rule TextfieldDefinition
-ruleTextfieldDefinition returns [EObject current=null] 
-    @init { enterRule(); 
-    }
-    @after { leaveRule(); }:
-((
-(
-		lv_type_0_0=	'Textfield' 
-    {
-        newLeafNode(lv_type_0_0, grammarAccess.getTextfieldDefinitionAccess().getTypeTextfieldKeyword_0_0());
-    }
- 
-	    {
-	        if ($current==null) {
-	            $current = createModelElement(grammarAccess.getTextfieldDefinitionRule());
-	        }
-       		setWithLastConsumed($current, "type", lv_type_0_0, "Textfield");
-	    }
-
-)
-)	otherlv_1=' as ' 
-    {
-    	newLeafNode(otherlv_1, grammarAccess.getTextfieldDefinitionAccess().getAsKeyword_1());
-    }
-(
-(
-		lv_name_2_0=RULE_STRING
-		{
-			newLeafNode(lv_name_2_0, grammarAccess.getTextfieldDefinitionAccess().getNameSTRINGTerminalRuleCall_2_0()); 
-		}
-		{
-	        if ($current==null) {
-	            $current = createModelElement(grammarAccess.getTextfieldDefinitionRule());
-	        }
-       		setWithLastConsumed(
-       			$current, 
-       			"name",
-        		lv_name_2_0, 
-        		"STRING");
-	    }
-
-)
-)	otherlv_3=':' 
-    {
-    	newLeafNode(otherlv_3, grammarAccess.getTextfieldDefinitionAccess().getColonKeyword_3());
-    }
-(	otherlv_4='text=' 
-    {
-    	newLeafNode(otherlv_4, grammarAccess.getTextfieldDefinitionAccess().getTextKeyword_4_0());
-    }
-(
-(
-		lv_text_5_0=RULE_STRING
-		{
-			newLeafNode(lv_text_5_0, grammarAccess.getTextfieldDefinitionAccess().getTextSTRINGTerminalRuleCall_4_1_0()); 
-		}
-		{
-	        if ($current==null) {
-	            $current = createModelElement(grammarAccess.getTextfieldDefinitionRule());
-	        }
-       		setWithLastConsumed(
-       			$current, 
-       			"text",
-        		lv_text_5_0, 
-        		"STRING");
-	    }
-
-)
-))?)
 ;
 
 
