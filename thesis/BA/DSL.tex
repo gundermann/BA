@@ -76,6 +76,14 @@
   verarbeitet werden. \cite[S. 16f]{hedtstueck}
   
   \newpage
+  \item[] \textbf{Lexikalische Analyse}\\
+  Bevor ein DSL-Script verarbeitet werden kann, muss es vom so genannten
+  \emph{Lexer} oder \emph{Scanner} gelesen werden. \cite[S.221]{fowler} Dabei
+  wird ein Texte (DSL-Script) als Input-Stream betrachtet. Der Lexer wandelt diesen Input-Stream in einzelne
+  Tokens. vgl. \cite[S.220]{ghosh} Allgemein ist der Lexer die Instanz
+  innerhalb der Infrastruktur einer DSL, die für das Auslesen des
+  DSL-Scriptes verantwortlich ist.
+    
   \item[] \textbf{Parser}\\
   Ein Parser ist ein Teil der Infrastruktur der DSL. \cite[S.211]{ghosh} Er ist
   dafür verantworlich aus dem DSL-Script ein Output zu generieren, mit dem
@@ -499,14 +507,128 @@ auszulesen. Somit wird die Definition von Elementen von der Verarbeitung
 getrennt, was zu einem übersichtlichen und lesbaren Code beiträgt.
 \cite[S.449]{fowler} 
 \section{Externe DSL}
+Eine externe DSL ist eine separate Sprache, welche die Infrastruktur vorhandener
+Sprachen nicht nutzt. \cite[S.18]{ghosh} Das bedeutet, dass eine externe DSL eine eigene Syntax sowie ein eigenes Typsytem
+besitzt. In der Regel wird mit einer externen DSL ein Skript geschrieben,
+welches von einem Programm gelesen wird. Dieser Vorgang wird auch als
+parsen bezeichnet. \cite[S.28]{fowler} Für den Parser sowie den lexikalischen
+Analysen werden oft vorhandene Infrastrukturen genutzt.
+\cite[S.19]{ghosh}
+
 \subsection{Implementierungstechniken}
 Bei den Implementierungstechniken von externen DSL geht es um die Art und Weise,
 wie der DSL-Code vom Parser in ein semantisches Model oder einem AST überführt
-wird. \cite[S.89]{fowler}  
+wird. \cite[S.89]{fowler} Die Allemeine Vorgehensweise bei der Verwendung von
+Parsern ist Abbildung \ref{Abb_Parsing} zu entnehmen.
+\myBigFigure{parsing.jpg}{Parsen allgemein}{Parsing}
+
 \newpage
 \subsubsection*{Parser Generator}
-\subsubsection*{Parser Kombinator}
-\subsubsection*{Vermischung mit anderen Sprachen}
+Bei der Generierung von Parsern muss der Parser nicht manuell implementiert
+werden. Diese Aufgabe wird an den Generator delegiert. Damit dies möglich ist,
+muss eine Grammatik in der \gloss{EBNF}, sowie bestimmte Aktionen, die bei der
+Bestätigung bestimmter Grammatik-Regeln ausgeführt werden sollen
+(Validierungs-Regeln), definiert werden. \cite[S.218]{ghosh} Wird der Parser
+Generator ausgetauscht führt dies auch häufig dazu, dass die notwendigen
+Artefakte (Grammatik und Aktionen bei der Bestätigung von Grammatikregeln) neu
+definiert werden müssen. \cite[S.269]{fowler} Weiterhin arbeiten die meisten
+Parser Generatoren mit Code-Generierung, wodruch der Build-Process komplexer wird.
+\cite[S.272]{fowler} Vorteile dieser Technik im Vergleich dazu, dass der Parser
+manuell entwickelt wird, sind die folgenden.
+\begin{itemize}
+  \item Programmieren auf einem höheren Abstraktionsniveau \cite[S.218]{ghosh}
+  \item Weniger Code zum Implementieren des Parsers \cite[S.218]{ghosh}
+  \item Möglichkeit des Generieren eines Parser in unterschiedlichen Sprachen
+  \cite[S.218]{ghosh}, \cite[S.270]{fowler}
+  \item Validierung der Grammatik durch Fehlererkennung und -behandlung
+  \cite[S.272]{fowler}
+\end{itemize}
+\subsection{Recursive Decent Parser (RD-Parser)}
+Dieser Parser basiert auf Funktionen, die rekursiv aufgerufen werden. Es handelt
+sich dabei um einen \gloss{Top-Down Parser}. \cite[S.226]{ghosh} Die Funktionen implementieren dabei die Parsing-Regeln für
+die nonterminalen Symbole der Grammatik. \cite[S.245]{fowler} Die Funktionen
+geben dabei einen Boolean-Wert zurück, der Auskunft darüber gibt, ob die Symbole
+aus dem DSL-Script mit den Symbolen übereinstimmen, die laut Grammatik erwartet
+werden. \cite[S.246]{fowler} Tabelle \ref{tab_RD_Implementierung} zeigt die
+Implementierungsmöglichkeiten von einfachen Grammatikregeln auf.
+\begin{table}[!htb]
+\centering
+\small
+			\begin{tabular}[c]{|l|l|}
+			\hline\hline
+				\textbf{Grammatik-Regel} &
+				\textbf{Implementierung}\\
+				\hline\hline
+				A | B & 
+\begin{lstlisting}
+if(A())
+	then true
+	else if(B())
+		then true
+		else false
+\end{lstlisting}\\
+				\hline
+				A B & 
+\begin{lstlisting}
+if(A())
+	then if(B())
+		then true
+		else false
+	else false
+\end{lstlisting}\\
+				\hline
+				A? & 
+\begin{lstlisting}
+A();
+true
+\end{lstlisting}\\
+				\hline
+				A* & 	
+\begin{lstlisting}
+while(A());
+true
+\end{lstlisting}\\
+				\hline
+		A+ & 
+\begin{lstlisting}
+if(A())
+	then while(A());
+	else false
+\end{lstlisting}\\
+				\hline
+				\hline
+			\end{tabular}
+		\caption{Implementierung einfacher Grammatikregeln mit einem RD-Parser
+		\cite[S.248]{fowler}}
+\label{tab_RD_Implementierung}
+	\end{table}\\
+Da dieser Parser direkt implementiert werden kann, ist es ebenso möglich diesen
+Parser zu Debuggen. Das ist neben der einfachen Implementierung (solange es
+sich um eine einfache Grammatik handelt) ein größer Vorteil dieser Technik.
+\cite[S.249]{fowler} Ein großer Nachteil ist, dass keine Grammatik definiert
+wird. Laut Fowler et. al. wird dadurch einer DSL ein großer Vorteil entzogen.
+\cite[S.249]{fowler} 
+
+\subsubsection*{Parser-Kombinator}
+Bei der Kombination von Parsern wird die Grammatik mittels einer Strutkur von
+Parser Objekten implementiert. \cite[S.256]{fowler} Wenn ein Teil des
+Input-Streams von einerm Parser erfolgreich oder fehlerhaft verarbeitet wurde, kann der Rest den
+Input-Streams an einen anderen Parser übergeben werden. Somit ist es möglich
+Parser beliebig zu verketten. \cite[S.242]{ghosh} Die Elemente, die verkettet
+werden können werden \emph{Parser-Kombinatoren} genannt. Abbildung
+\ref{Abb_parsercombinator} stellt schematisch diese Funktionsweise dar. 
+\myBigFigure{parsercombinator.jpg}{Funktionsweise von Parser-Kombinatoren (in
+Anlehnung an \cite[S.243]{ghosh})}{parsercombinator} Bezogen
+darauf, dass ein Parser aus Funktionen besteht, sind diese Parser-Kombinatoren Funktionen erster Ordnung, die unterschiedlich kombiniert werden können.
+\cite[S.243]{ghosh}, \cite[S.256]{fowler} Durch diese Kombination wird eine
+Struktur gebildet, welche das semantische
+Model repräsentiert. \cite[S.256]{fowler} Ein großer Vorteil dieser Technik ist,
+dass einfache Parser zu komplexeren Parsern zusammengefügt werden können.
+Weiterhin wird durch die Kombination mehrerer Grammatik-bestimmender Komponenten
+auch die Lesbarkeit der Grammatik gefördert, was bei einem RD-Parser ein großer
+Nachteil war. Daher bezeichnen Fowler et. al. Parser-Kombinatoren auch als
+Mittelweg zwischen RD-Parsern und Parser Generatoren. \cite[S.261]{fowler}
+
 \section{Nicht-Textuelle DSL}
 Bei den in den letzten Kapiteln vorgestellten internen und externen DSLs
 handelt es sich um textuelle DSLs. Auch wenn eine DSL eine bestimmte domäne

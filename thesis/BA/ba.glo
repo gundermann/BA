@@ -15,8 +15,10 @@
 \glossaryentry{Abstrakter Syntax Baum?\glossentry{AST}|setentrycounter[]{page}\glsnumberformat}{11}
 \glossaryentry{DSL Umgebung?\glossentry{DSL Umgebung}|setentrycounter[]{page}\glsnumberformat}{12}
 \glossaryentry{Zielumgebung?\glossentry{Zielumgebung}|setentrycounter[]{page}\glsnumberformat}{12}
-\glossaryentry{Triviale UI-Komponenten?\glossentry{Triviale UI-Komponenten}|setentrycounter[]{page}\glsnumberformat}{30}
-\glossaryentry{Multiselection-Komponente?\glossentry{Multiselection-Komponente}|setentrycounter[]{page}\glsnumberformat}{36}
+\glossaryentry{EBNF?\glossentry{EBNF}|setentrycounter[]{page}\glsnumberformat}{26}
+\glossaryentry{Top-Down Parser?\glossentry{Top-Down Parser}|setentrycounter[]{page}\glsnumberformat}{27}
+\glossaryentry{Triviale UI-Komponenten?\glossentry{Triviale UI-Komponenten}|setentrycounter[]{page}\glsnumberformat}{33}
+\glossaryentry{Multiselection-Komponente?\glossentry{Multiselection-Komponente}|setentrycounter[]{page}\glsnumberformat}{39}
 \glossaryentry{Swing?\glossentry{Swing}|setentrycounter[]{page}\glsnumberformat}{xv}
 \glossaryentry{Zuwendungsblatt?\glossentry{Zuwendungsblatt}|setentrycounter[]{page}\glsnumberformat}{xvi}
 \glossaryentry{Zuwendungs-Berechner?\glossentry{Zuwendungs-Berechner}|setentrycounter[]{page}\glsnumberformat}{xvi}
