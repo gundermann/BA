@@ -5,7 +5,50 @@ dafür notwendige Funktionalitäten bereit stellt. Hierzu werden die Frameworks
 \emph{PetitParser}, \emph{Xtext} und \emph{MPS} kurz vorgestellt und im
 Anschluss verglichen.
 \subsection{PetitParser}
+Dieses Frameworks arbeitet mit Parser-Kombinatoren. Somit ist es mit
+PatitParser einfach Grammatiken zusammenzustellen, zu transformieren oder zu
+erweitern, sowie Teile dieser dynamisch wiederzuverwenden. Alles
+geschieht auf der Basis von Pharo Smalltalk, womit das Framework ursprünglich
+implementiert wurde. Es existieren jedoch auch Versionen des Frameworks für
+Java\footnote{https://github.com/petitparser/java-petitparser},
+Dart\footnote{https://github.com/petitparser/dart-petitparser} und
+PHP\footnote{https://github.com/mindplay-dk/petitparserphp}. Einfache Parser
+bestehen aus Sequenzen von Funktionen, welche die Produktionsregeln
+(Produktionen) der Grammatik abbilden. Komplexere Parser werden durch die
+Kombination anderer Parser implementiert. (vgl. \cite{Renggli}) Die Kombination kann
+in einer einzelne Methode implementiert werden, was dazu führt, dass man den
+Parser in einer Skript-Form erhält. Alternativ können die zu kombinierenden
+Parser auch in Methoden von Unterklassen des PetitParsers implementiert werden.
+(\cite[S.6]{brauer2010dsl}) Das fördert die Lesbarkeit, Überschichtlichkeit und schließlich
+die Wartbarkeit des Codes.\\
+Tool Support ist für dieses Frame gewährleistet. Mithilfe dessen können
+Produktions editiert und grafisch abgebeildet werden. Aus Zufallsbeispiele
+für ausgewählte Produktionen werden generiert um so Fehler in der Grammatik
+aufzudecken. Darüberhinaus wird die Effiziens einer Grammatik durch die
+Darstellung direkter, ineffizienter Zyklen in der Grammatik verbessert.
+(vgl. \cite{Renggli})
 \subsection{Xtext}
+Bei \emph{Xtext} handelt es sich um eine Open-Source-Lösung für einen
+\emph{ANTLR}-basierten Parser- und Editorgenerator mit der externe, textuelle
+DSLs entwickelt werden können.
+Die Grammatiken für den Parser-Generator werden in der EBNF definiert. Durch die
+Intergration in Eclipse kann der Eclipse-Editor für sämtliche Artefakte der
+Infrastruktur verwendet werden. Aus der Grammatik wir der LL(k)-Parser,
+sowie ein Model, mit dessen Hilfe der Generator implementiert
+werden kann, generiert. Die Klassen für Validierungs-Reglen und den Generator
+werden ebenfalls vom Tool erzeugt. Diese müssen im Anschluss daran vom Nutzer
+entsprechend erweitert werden. Zur Editierung der entsprechenden Dateien wird
+eine eigene Syntax verwendet, die meiner Meinung jedoch stark an die Java-Syntax erinnert.\\
+Wenn der Parser generiert wurde, ist Xtext in der Lage einen in Eclipse
+integrierten Editor zu erzeugen. \cite[S.1]{carpediem} Dieser Editor ist in
+der Lage die Validierungs-Regeln auf die DSL-Scripte anzuwenden. Darüber
+hinaus wird auch Code-Completion vom Editor angeboten.
 \subsection{MPS}
 \section{Vergleich und Bewertung der vorgestellten
 Frameworks}\label{vergleichFramework}
+Know-How
+Erlernbarkeit
+Machbarkeit der Intergration
+Verwendung eines Editors für DSL-Scripte
+Erweiterbarkeit der Grammatik
+Erweiterbarkeit der Validierungen

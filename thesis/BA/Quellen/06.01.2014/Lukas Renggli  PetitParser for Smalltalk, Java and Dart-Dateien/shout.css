@@ -1,0 +1,320 @@
+.shout span.default {
+	color: #000;
+}
+.shout span.invalid {
+	color: #f00;
+}
+.shout span.excessCode {
+	color: #f00;
+}
+.shout span.comment {
+	color: #080;
+}
+.shout span.unfinishedComment {
+	color: #f00;
+}
+.shout span.character {
+	color: #808;
+}
+.shout span.integer {
+	color: #808;
+}
+.shout span.number {
+	color: #808;
+}
+.shout span.symbol {
+	color: #808;
+}
+.shout span.stringSymbol {
+	color: #808;
+}
+.shout span.literalArray {
+	color: #808;
+}
+.shout span.string {
+	color: #808;
+}
+.shout span.unfinishedString {
+	color: #f00;
+}
+.shout span.assignment {
+	color: #000;
+}
+.shout span.ansiAssignment {
+	color: #000;
+}
+.shout span.literal {
+	color: #000;
+}
+.shout span.keyword {
+	color: #000;
+}
+.shout span.binary {
+	color: #000;
+}
+.shout span.unary {
+	color: #000;
+}
+.shout span.incompleteKeyword {
+	color: #000;
+}
+.shout span.incompleteBinary {
+	color: #000;
+}
+.shout span.incompleteUnary {
+	color: #000;
+}
+.shout span.undefinedKeyword {
+	color: #000;
+}
+.shout span.undefinedBinary {
+	color: #000;
+}
+.shout span.undefinedUnary {
+	color: #000;
+}
+.shout span.patternKeyword {
+	color: #000;
+	font-weight: bold;
+}
+.shout span.patternBinary {
+	color: #000;
+	font-weight: bold;
+}
+.shout span.patternUnary {
+	color: #000;
+	font-weight: bold;
+}
+.shout span.self {
+	color: #088;
+}
+.shout span.super {
+	color: #088;
+}
+.shout span.true {
+	color: #088;
+}
+.shout span.false {
+	color: #088;
+}
+.shout span.nil {
+	color: #088;
+}
+.shout span.thisContext {
+	color: #088;
+}
+.shout span.return {
+	color: #000;
+}
+.shout span.patternArg {
+	color: #008;
+}
+.shout span.methodArg {
+	color: #008;
+}
+.shout span.blockPatternArg {
+	color: #008;
+}
+.shout span.blockArg {
+	color: #008;
+}
+.shout span.argument {
+	color: #008;
+}
+.shout span.blockArgColon {
+	color: #000;
+}
+.shout span.leftParenthesis {
+	color: #000;
+}
+.shout span.rightParenthesis {
+	color: #000;
+}
+.shout span.leftParenthesis1 {
+	color: #000;
+}
+.shout span.rightParenthesis1 {
+	color: #000;
+}
+.shout span.leftParenthesis2 {
+	color: #000;
+}
+.shout span.rightParenthesis2 {
+	color: #000;
+}
+.shout span.leftParenthesis3 {
+	color: #000;
+}
+.shout span.rightParenthesis3 {
+	color: #000;
+}
+.shout span.leftParenthesis4 {
+	color: #000;
+}
+.shout span.rightParenthesis4 {
+	color: #000;
+}
+.shout span.leftParenthesis5 {
+	color: #000;
+}
+.shout span.rightParenthesis5 {
+	color: #000;
+}
+.shout span.leftParenthesis6 {
+	color: #000;
+}
+.shout span.rightParenthesis6 {
+	color: #000;
+}
+.shout span.leftParenthesis7 {
+	color: #000;
+}
+.shout span.rightParenthesis7 {
+	color: #000;
+}
+.shout span.blockStart {
+	color: #000;
+}
+.shout span.blockEnd {
+	color: #000;
+}
+.shout span.blockStart1 {
+	color: #000;
+}
+.shout span.blockEnd1 {
+	color: #000;
+}
+.shout span.blockStart2 {
+	color: #000;
+}
+.shout span.blockEnd2 {
+	color: #000;
+}
+.shout span.blockStart3 {
+	color: #000;
+}
+.shout span.blockEnd3 {
+	color: #000;
+}
+.shout span.blockStart4 {
+	color: #000;
+}
+.shout span.blockEnd4 {
+	color: #000;
+}
+.shout span.blockStart5 {
+	color: #000;
+}
+.shout span.blockEnd5 {
+	color: #000;
+}
+.shout span.blockStart6 {
+	color: #000;
+}
+.shout span.blockEnd6 {
+	color: #000;
+}
+.shout span.blockStart7 {
+	color: #000;
+}
+.shout span.blockEnd7 {
+	color: #000;
+}
+.shout span.arrayStart {
+	color: #000;
+}
+.shout span.arrayEnd {
+	color: #000;
+}
+.shout span.arrayStart1 {
+	color: #000;
+}
+.shout span.arrayEnd1 {
+	color: #000;
+}
+.shout span.leftBrace {
+	color: #000;
+}
+.shout span.rightBrace {
+	color: #000;
+}
+.shout span.cascadeSeparator {
+	color: #000;
+}
+.shout span.statementSeparator {
+	color: #000;
+}
+.shout span.externalCallType {
+	color: #000;
+}
+.shout span.externalCallTypePointerIndicator {
+	color: #000;
+}
+.shout span.primitiveOrExternalCallStart {
+	color: #000;
+	font-weight: bold;
+}
+.shout span.primitiveOrExternalCallEnd {
+	color: #000;
+	font-weight: bold;
+}
+.shout span.methodTempBar {
+	color: #000;
+}
+.shout span.blockTempBar {
+	color: #000;
+}
+.shout span.blockArgsBar {
+	color: #000;
+}
+.shout span.primitive {
+	color: #444;
+}
+.shout span.pragmaKeyword {
+	color: #444;
+}
+.shout span.pragmaUnary {
+	color: #444;
+}
+.shout span.pragmaBinary {
+	color: #444;
+}
+.shout span.externalFunctionCallingConvention {
+	color: #444;
+}
+.shout span.module {
+	color: #444;
+}
+.shout span.blockTempVar {
+	color: #008;
+}
+.shout span.blockPatternTempVar {
+	color: #008;
+}
+.shout span.instVar {
+	color: #008;
+}
+.shout span.workspaceVar {
+	color: #008;
+}
+.shout span.undefinedIdentifier {
+	color: #008;
+}
+.shout span.incompleteIdentifier {
+	color: #008;
+}
+.shout span.tempVar {
+	color: #008;
+}
+.shout span.patternTempVar {
+	color: #008;
+}
+.shout span.poolConstant {
+	color: #008;
+}
+.shout span.classVar {
+	color: #008;
+}
+.shout span.globalVar {
+	color: #008;
+}

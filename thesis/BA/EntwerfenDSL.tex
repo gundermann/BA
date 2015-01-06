@@ -133,14 +133,12 @@ nicht zwingend nach dem richtigen Schlüssel durchsucht werden.
 \subsection*{Version 3}
 
 
-\section{Semantisches Model}
-Die zum Verständis nötigen Referenzen auf Teile des semantischen Models sind im
-vorherigen Kapitel zu finden. In diesem Kapitel das semantische Model durch
-UML-Diagramme dargestellt.
+\section{GUI-Beschreibungs-Model zur Verarbeitung im Generator}
+
 \subsection*{Version 1}
 
-\myBigFigure{v1-1.jpg}{Teil 1: Semantisches Model Version 1}{Teil1-1}
-Das Artefakt, welches beim semantischen Model im Mittelpunkt steht ist die
+\myBigFigure{v1-1.jpg}{Teil 1: GUI-Beschreibungs-Model Version 1}{Teil1-1}
+Das Artefakt, welches beim dieserm Model im Mittelpunkt steht ist die
 \emph{UIDescription} (siehe \ref{Abb_Teil1-1}). Die aggregierten Artefakte sind
 aus dem Diagrammm gut zu entnehmen. Die wichtigen Methoden umfassen nur die Getter- und Setter-Methoden
 der Attributer einer Klasse. Die anderen Methoden
@@ -149,7 +147,7 @@ diese Arbeit jedoch nicht von Belang. Die Klasse
 \emph{DefinitionImpl} aggregiert weitere Artefakte des Models. Diese sind um
 die Übersicht zu wahren Abbildung \ref{Abb_Teil2-1} zu entnehmen.\\
 \myBigFigure{v1-2.jpg}{Teil 2:
-Semantisches Model Version 1}{Teil2-1} 
+GUI-Beschreibungs-Model Version 1}{Teil2-1} 
 Dort sind die drei umgesetzten Ausprägungen einer \emph{Definition} zu erkennen.
 Dabei handelt es sich um \emph{Label}, \emph{Button} und \emph{MultiSelection}.
 Weiterhin ist zu erkennen, dass nur der Button eine \emph{Interaction}
@@ -168,22 +166,22 @@ In dieser Version wurden an den Artefakten \emph{AreaCount},
 Artefakte wie \emph{Property} und \emph{Refinement} sind hinzugekommen. Die
 weiteren Artefakte, die von \emph{UIDescriptionImpl} aggregiert werden
 (siehe Abbildung \ref{Abb_Teil2-1}), wurden verändert.
-\myBigFigure{v2-1.jpg}{Teil 1: Semantisches Model Version 2}{Teil1-2}
+\myBigFigure{v2-1.jpg}{Teil 1: GUI-Beschreibungs-Model Version 2}{Teil1-2}
 Das Artefakt \emph{Property} bildet die Property-Datei ab. Sie ist nicht zu
 verwechseln mit dem Artefakt \emph{Properties}, welches die Eigenschaften von
 Komponenten abbildet. Abbildung \ref{Abb_Teil2-2} zeigt beide Artefakte auf.
-\myBigFigure{v2-2}{Teil 2: Semantisches Model Version 2}{Teil2-2}
+\myBigFigure{v2-2}{Teil 2: GUI-Beschreibungs-Model Version 2}{Teil2-2}
 Die \emph{UsedDescription} enthält in dieser Version ein \emph{DefinitionType}.
 Dieser bestimmt, ob es sich bei der importierten Komponente um ein beschriebenes
 GUI handelt, oder um eine komplexe Komponente, für die ein Input-Typ
 (\emph{inputType}) festgelegt werden kann.
-\myBigFigure{v2-3}{Teil 3: Semantisches Model Version 2}{Teil3-2}
+\myBigFigure{v2-3}{Teil 3: GUI-Beschreibungs-Model Version 2}{Teil3-2}
 Zwischen \emph{Definition} und \emph{Refinement} wird unterschieden. Die
 \emph{Definition} bildet neu definierte Komponenten für das GUI ab. Ein
 \emph{Refinement} hingegen bildet die Veränderten Komponenten importierter
 Komponenten ab (siehe Abbildung \ref{Abb_Teil4-2} und Abbildung \ref{Abb_Teil5-2}).
-\myBigFigure{v2-4}{Teil 4: Semantisches Model Version 2}{Teil4-2}
-\myBigFigure{v2-5}{Teil 5: Semantisches Model Version 2}{Teil5-2}
+\myBigFigure{v2-4}{Teil 4: GUI-Beschreibungs-Model Version 2}{Teil4-2}
+\myBigFigure{v2-5}{Teil 5: GUI-Beschreibungs-Model Version 2}{Teil5-2}
 
 \subsubsection*{Version 3}
 

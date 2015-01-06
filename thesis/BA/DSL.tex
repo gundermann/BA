@@ -187,9 +187,7 @@ gelöst werden. Eine DSL hat diese Eigenschaft nicht. Da sie auf eine bestimmte
 Domäne zugeschnitten ist, können auch nur Probleme innerhalb dieser Domäne mit
 ihr gelöst werden.\cite[S.28]{voelter} Martin Fowler bezeichnet diese
 Eigenschaft des Domänen Fokus als ein Schlüsselelement der Definition einer DSL.
-\cite[S.27f]{fowler} Allein aus dieser Abgrenzung lassen sich bereits Vor- und
-Nachteile von DSLs oder GPLs ableiten. Diese werden im folgenden Kapitel genauer
-betrachtet.
+\cite[S.27f]{fowler}
 \section{Vor- und Nachteile von DSL gegenüber GPL}
 \subsection*{Vorteile}
 \begin{itemize}
@@ -201,7 +199,8 @@ betrachtet.
  Weiterhin ist es wichtig bei der Entwicklung einer DSL darauf zu
  achten, dass sich die Abstraktion der Sprache präzise an der semantik
  der Domäne orientiert. \cite[S.20]{ghosh} Resultat dessen ist es, dass das
- Verständis für den Code verbessert wird.
+ Verständis für das, was entwickelt wird verbessert wird und die Abstraktion
+ auf einer höheren Ebene beherrschbar bleibt. (vgl. \cite{journals/insk/BrauerCK08})
  
   \item \textbf{Höhere Qualität}\cite{voelter}\\
   Bei der Entwicklung einer DSL werden Sprachkonstrukte und Freiheitsgrade
@@ -522,7 +521,6 @@ wird. \cite[S.89]{fowler} Die Allemeine Vorgehensweise bei der Verwendung von
 Parsern ist Abbildung \ref{Abb_Parsing} zu entnehmen.
 \myBigFigure{parsing.jpg}{Parsen allgemein}{Parsing}
 
-\newpage
 \subsubsection*{Parser Generator}
 Bei der Generierung von Parsern muss der Parser nicht manuell implementiert
 werden. Diese Aufgabe wird an den Generator delegiert. Damit dies möglich ist,
@@ -543,7 +541,7 @@ manuell entwickelt wird, sind die folgenden.
   \item Validierung der Grammatik durch Fehlererkennung und -behandlung
   \cite[S.272]{fowler}
 \end{itemize}
-\subsection{Recursive Decent Parser (RD-Parser)}
+\subsubsection*{Recursive Decent Parser (RD-Parser)}
 Dieser Parser basiert auf Funktionen, die rekursiv aufgerufen werden. Es handelt
 sich dabei um einen \gloss{Top-Down Parser}. \cite[S.226]{ghosh} Die Funktionen implementieren dabei die Parsing-Regeln für
 die nonterminalen Symbole der Grammatik. \cite[S.245]{fowler} Die Funktionen
@@ -620,8 +618,8 @@ werden können werden \emph{Parser-Kombinatoren} genannt. Abbildung
 \myBigFigure{parsercombinator.jpg}{Funktionsweise von Parser-Kombinatoren (in
 Anlehnung an \cite[S.243]{ghosh})}{parsercombinator} Bezogen
 darauf, dass ein Parser aus Funktionen besteht, sind diese Parser-Kombinatoren Funktionen erster Ordnung, die unterschiedlich kombiniert werden können.
-\cite[S.243]{ghosh}, \cite[S.256]{fowler} Durch diese Kombination wird eine
-Struktur gebildet, welche das semantische
+(vgl. \cite[S.243]{ghosh}, \cite[S.256]{fowler}) Durch
+diese Kombination wird eine Struktur gebildet, welche das semantische
 Model repräsentiert. \cite[S.256]{fowler} Ein großer Vorteil dieser Technik ist,
 dass einfache Parser zu komplexeren Parsern zusammengefügt werden können.
 Weiterhin wird durch die Kombination mehrerer Grammatik-bestimmender Komponenten

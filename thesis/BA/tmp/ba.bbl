@@ -1,9 +1,26 @@
 \newcommand{\etalchar}[1]{$^{#1}$}
-\begin{thebibliography}{VBK{\etalchar{+}}13}
+\begin{thebibliography}{RDGN10}
 
 \bibitem[Aho08]{alfred}
 {\sc Aho, Alfred~V}: {\em Compiler: Prinzipien, Techniken und Werkzeuge}.
 \newblock Pearson Studium, 2008.
+
+\bibitem[BCK08]{journals/insk/BrauerCK08}
+{\sc Brauer, Johannes}, {\sc Christoph Crasemann} \btxandlong{}\ {\sc Hartmut
+  Krasemann}: {\em Auf dem Weg zu idealen Programmierwerkzeugen -
+  Bestandsaufnahme und Ausblick.}
+\newblock Informatik Spektrum, 31(6):580--590, 2008.
+
+\bibitem[BPL13]{11}
+{\sc Bacikov{\'a}, Michaela}, {\sc Jaroslav Porub{\"a}n} \btxandlong{}\ {\sc
+  Dominik Lakatos}: {\em Defining Domain Language of Graphical User
+  Interfaces}.
+\newblock \Btxinlong{}\ {\em OASIcs-OpenAccess Series in Informatics},
+  \btxvolumelong{}~29. Schloss Dagstuhl-Leibniz-Zentrum fuer Informatik, 2013.
+
+\bibitem[bra10]{brauer2010dsl}
+{\em Eine DSL f{\"u}r Harel-Statecharts mit PetitParser}.
+\newblock Arbeitspapiere der Nordakademie. Nordakad., 2010.
 
 \bibitem[{dat}14]{pcswikifoerd}
 {\sc {data experts GmbH}}: {\em Förderantrag}.
@@ -83,6 +100,16 @@
 \newblock URL:
   https://docs.oracle.com/javase/jp/8/\\technotes/guides/swing/index.html.
 \newblock Zuletzt eingesehen am 02.12.2014.
+
+\bibitem[RDGN10]{Renggli}
+{\sc Renggli, Lukas}, {\sc Stephane Ducasse}, {\sc Tudor Gîbra} \btxandlong{}\
+  {\sc Oscar Nierstrasz}: {\em Practical Dynamic Grammars for Dynamic
+  Languages}.
+\newblock \Btxinlong{}\ {\em {4th Workshop on Dynamic Languages and
+  Applications (DYLA 2010)}}, 2010.
+\newblock Online verfügbar unter URL:
+  http://bergel.eu/download/Dyla2010/dyla10\_submission\_4.pdf Zuletzt
+  eingesehen am 6.1.2015.
 
 \bibitem[Roa09]{Roam2009}
 {\sc Roam, Dan}: {\em The Back of the Napkin (Expanded Edition) - Solving

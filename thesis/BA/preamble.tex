@@ -5,6 +5,7 @@
 \usepackage{lmodern}
 \usepackage[top=2cm, left=3cm, bottom=2cm, right=4cm]{geometry}
 \usepackage{graphicx}
+\usepackage{float}
 \usepackage{listings} 
 \usepackage{multirow}
 \usepackage{color}		 % für Farben im allgemeinen
@@ -87,14 +88,7 @@
 %picture using full width of the page
 \newcommand{\myBigFigure}[4][Abb]
 {
-\begin{figure}[t!bp]
-	\checkoddpage
-	\ifcpoddpage
-		%nothing
-	\else
-		\hspace{-\marginparsep}\hspace{-\marginparwidth}
-	\fi
-	%use minipage to center the label beneath the figure
+\begin{figure}[H]
 	\center{
 	\begin{minipage}{\fullwidth}
 		\includegraphics[width= \fullwidth]{#2}
@@ -104,9 +98,6 @@
 	}
 \end{figure}
 }
-
-
-
 
 
 

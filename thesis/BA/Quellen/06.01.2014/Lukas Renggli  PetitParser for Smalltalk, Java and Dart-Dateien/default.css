@@ -1,0 +1,364 @@
+/* @override http://www.lukas-renggli.ch/include/css/default.css */
+
+/* Copyright (c) 2006 Lukas Renggli */
+
+body {
+	margin: 0;
+	background-color: #2e3436;
+	background-repeat: repeat-x;
+	background-position: 0px 0px;
+	background-image: url(../img/body.png); 
+	font-family: "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+}
+
+a {
+	color: #2e3436;
+}
+
+a:hover {
+	color: #000;
+}
+
+/* blueprintcss */
+
+h1 {
+	font-size: 2em; 
+	margin-bottom: 0.75em;
+}
+
+h2 {
+	font-size: 1.5em; 
+	line-height: 1; 
+	margin-bottom: 1em;
+}
+
+h3 {
+	font-size: 1.2em; 
+	line-height: 1.25; 
+	margin-bottom: 1.25em; 
+	height: 1.25em;
+}
+
+h4 {
+	font-size: 1em; 
+	font-weight: bold; 
+	margin-bottom: 1.5em;
+}
+
+h5 {
+	font-size: 1em; 
+	font-weight: bold;
+}
+
+h6 {
+	font-size: 1em;
+}
+
+table {
+	width: auto;
+}
+
+th, td {
+	padding-left: 0;
+	vertical-align: top;
+	background-color: inherit;
+}
+
+p img {
+	float: none;
+}
+
+.error {
+	border: 0; 
+	padding: 4px 10px 4px 5px;
+}
+
+textarea {
+	width: 95%;
+}
+
+pre {
+	padding: 5px;
+    background-color: #ddd;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+code, tt { }
+
+/* -- custom ------------------------------------- */
+
+/* page */
+
+#page {
+	width: 810px; 
+	margin: 0 auto;
+	text-align: left;
+	background-repeat: repeat-y;
+	background-position: 0px 0px;
+	background-image: url(../img/page.png);
+}
+
+/* area */
+
+#area {
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+	background-image: url(../img/area.png);
+}
+
+/* head */
+
+#head {
+	height: 68px;
+	margin: 0 30px 0 30px;
+}
+
+#head h1 {
+	float: left;
+	font-size: 30px;
+	font-weight: bold; 
+	margin: 30px 0 0 -1px; 
+	text-shadow: #000 0 0 10px;
+}
+
+#head h1 a {
+	color: #fff;
+	outline: none;
+	text-decoration: none;
+}
+
+#head .find {
+	float: right;
+	margin-top: 35px;
+}
+
+#head .find input {
+	margin: 0; 
+	width: 154px; 
+	border: none; 
+	outline: none;
+}
+
+#head .find div {
+	margin-top: -1px; 
+	position: relative; 
+	background-color: #eee;
+}
+
+#head .find ul {
+	margin: 0; 
+	padding: 0; 
+	list-style: none;
+}
+
+#head .find li {
+	padding: 2px 5px;
+	border-top: #fff 1px solid;
+	border-bottom: #ccc 1px solid;
+}
+
+#head .find li a {
+	color: #222; 
+	text-decoration: none;
+}
+
+#head .find ul li.selected,
+#head .find ul li.selected a {
+	color: #fff; 
+	background-color: #222;
+}
+
+/* menu */
+
+.menu {
+	margin: -1px 30px 0 30px; 
+	border-bottom: #ccc 1px solid;
+}
+
+.menu ul {
+	margin: 0; 
+	list-style: none;
+}
+
+.menu li {
+	display: inline;
+}
+
+.menu a {
+	float: left; 
+	height: 24px; 
+	outline: none; 
+	display: block; 
+	color: #2e3436; 
+	font-size: 12px; 
+	font-weight: bold; 
+	text-decoration: none; 
+	padding: 7px 30px 0 30px;
+}
+
+.menu a:hover {
+	color: #000; 
+	text-decoration: underline;
+}
+
+.menu a.active,
+.menu a.path {
+	text-decoration: underline; 
+	background-repeat: no-repeat;
+	background-position: bottom center;
+	background-image: url(../img/mark.png);
+}
+
+/* name */
+
+#name {
+	margin: 20px 60px;
+}
+
+#name h1 {
+    font-weight: bold;
+}
+
+/* side */
+
+#side {
+	width: 130px; 
+	float: right; 
+	padding-left: 30px;
+	margin: 0 60px 0 0;
+	background-color: white;
+}
+
+#side ul {
+	margin-left: 0; 
+	list-style: none;
+}
+
+/* main */
+
+#main {
+	width: 690px; 
+	padding: 0 60px 0 60px;
+}
+
+/* foot */
+
+#foot {
+	height: 60px; 
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+	background-image: url(../img/foot.png);
+}
+
+#foot p {
+	color: #aaa; 
+	margin-top: -5px; 
+	padding-top: 45px; 
+	font-size: smaller; 
+	text-align: center;
+}
+
+#foot a {
+	color: #aaa; 
+	text-decoration: none;
+}
+
+#foot a:hover {
+	color: #fff;
+}
+
+/* admin */
+
+#self {
+	width: 0; 
+	height: 0; 
+	overflow: hidden;
+}
+
+#root {
+	bottom: 0;
+	margin: auto;
+	margin-top: 3em;
+	background-color: #fff;
+}
+
+/* -- blog --------------------------------------- */
+
+#main .meta {
+	margin: 0 0 1.5em; 
+	font-style: italic;
+}
+
+#main .meta .tags {
+    margin-right: 1em;
+}
+
+#main .post {
+	margin-bottom: 3em;
+}
+
+#main .post h1 a {
+    color: inherit;
+    text-decoration: none;
+}
+
+#main .comments {
+	margin: 1em 0 1em 30px;
+}
+
+#main .comments textarea {
+	width: 300px;
+	height: 80px;
+}
+
+#main .batcher,
+#main .subscribe {
+	text-align: center;
+}
+
+#main .subscribe {
+	margin-top: 1.5em;
+}
+
+#main ul.postticker, #main ul.twitter {
+	margin: 0;
+	list-style-type: none;
+}
+
+#main ul.twitter {
+	width: 230px;
+	margin-left: 20px;
+}
+
+#main ul.postticker li, #main ul.twitter li {
+	text-align: left;
+	margin-bottom: 1.5em;
+}
+
+#main ul.postticker li .timestamp, #main ul.twitter .entry-meta {
+	color: #888;
+	float: right;
+	font-style: italic;
+}
+
+#main ul.twitter .entry-meta a {
+	color: #888;
+	text-decoration: none;
+}
+
+#main ul.postticker li .timestamp .time {
+	display: none;
+}
+
+/* -- magritte ----------------------------------- */
+
+.magritte td, .magritte th {
+	padding-left: 0;
+}
+
+.magritte td.required:after {
+	content: "*"; 
+	color: #8a1f11; 
+	font-weight: bold; 
+	margin-left: 0.5em;
+}
