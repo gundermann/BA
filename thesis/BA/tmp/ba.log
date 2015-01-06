@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.10.14)  5 JAN 2015 13:15
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.10.14)  6 JAN 2015 10:03
 entering extended mode
 **ba.tex
 (C:\Users\ngundermann\git\BA\thesis\BA\ba.tex
@@ -1149,25 +1149,14 @@ Overfull \hbox (18.70676pt too wide) in paragraph at lines 613--631
 [27] [28 <C:/Users/ngundermann/git/BA/thesis/BA/Bilder/parsercombinator.jpg>])
 [29] (C:\Users\ngundermann\git\BA\thesis\BA\Loesungsidee.tex
 Kapitel 4.
-
-Overfull \hbox (13.27025pt too wide) in paragraph at lines 3--9
-\T1/ppl/m/n/12 den, dass sie in der Do-mä-ne von pro-fil c/s für un-ter-schied-
-li-che UI-frameworks
- []
-
 <Bilder/neuerAnsatz.png, id=790, 632.3625pt x 269.50688pt>
 File: Bilder/neuerAnsatz.png Graphic file (type png)
 
 <use Bilder/neuerAnsatz.png>
-Package pdftex.def Info: Bilder/neuerAnsatz.png used on input line 19.
+Package pdftex.def Info: Bilder/neuerAnsatz.png used on input line 21.
 (pdftex.def)             Requested size: 398.3386pt x 169.76965pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 10--20
-
- []
-
-
-Overfull \hbox (34.36719pt too wide) in paragraph at lines 22--22
+Overfull \hbox (34.36719pt too wide) in paragraph at lines 23--23
 []\T1/ppl/b/n/17.28 Vorteile ge-gen-über dem Multichannel-Framework 
  []
 
@@ -1184,8 +1173,26 @@ less on input line 22.
 (C:\Users\ngundermann\git\BA\thesis\BA\GUIDSL.tex
 Kapitel 5.
 
+Overfull \hbox (0.1329pt too wide) in paragraph at lines 3--63
+\T1/ppl/m/n/12 Beim er-sten An-satz wird die GUI durch fach-li-che Mo-del-le be
+-schrie-ben. (Mo-
+ []
+
+
+Overfull \hbox (33.56126pt too wide) in paragraph at lines 3--63
+\T1/ppl/m/n/12 sich um UI-Komponenten, de-ren Funk-tio-nen in un-ter-schied-li-
+chen UI-Frameworks
+ []
+
+
+Overfull \hbox (2.23358pt too wide) in paragraph at lines 3--63
+\T1/ppl/m/n/12 Bezüglich des Lay-outs ist ei-ne wei-te-re An-for-de-rung zu nen
+-nen. Hier-zu muss
+ []
+
+
 Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
-less on input line 48.
+less on input line 63.
 
 [32
 
@@ -1260,44 +1267,44 @@ Overfull \hbox (0.82944pt too wide) in paragraph at lines 77--132
 Hier-zu müs-
  []
 
-[39] [40] <Bilder/v1-1.jpg, id=855, 1393.45593pt x 1086.30844pt>
+[39] [40] <Bilder/v1-1.jpg, id=856, 1393.45593pt x 1086.30844pt>
 File: Bilder/v1-1.jpg Graphic file (type jpg)
 
 <use Bilder/v1-1.jpg>
 Package pdftex.def Info: Bilder/v1-1.jpg used on input line 142.
 (pdftex.def)             Requested size: 398.3386pt x 310.52936pt.
- <Bilder/v1-2.jpg, id=858, 1425.07407pt x 1158.57843pt>
+ <Bilder/v1-2.jpg, id=859, 1425.07407pt x 1158.57843pt>
 File: Bilder/v1-2.jpg Graphic file (type jpg)
 
 <use Bilder/v1-2.jpg>
 Package pdftex.def Info: Bilder/v1-2.jpg used on input line 152.
 (pdftex.def)             Requested size: 398.3386pt x 323.83403pt.
  [41]
-<Bilder/v2-1.jpg, id=866, 1146.53343pt x 823.57687pt>
+<Bilder/v2-1.jpg, id=867, 1146.53343pt x 823.57687pt>
 File: Bilder/v2-1.jpg Graphic file (type jpg)
  <use Bilder/v2-1.jpg>
 Package pdftex.def Info: Bilder/v2-1.jpg used on input line 171.
 (pdftex.def)             Requested size: 398.3386pt x 286.13243pt.
 
-<Bilder/v2-2.jpg, id=868, 395.97937pt x 445.665pt>
+<Bilder/v2-2.jpg, id=869, 395.97937pt x 445.665pt>
 File: Bilder/v2-2.jpg Graphic file (type jpg)
  <use Bilder/v2-2.jpg>
 Package pdftex.def Info: Bilder/v2-2.jpg used on input line 175.
 (pdftex.def)             Requested size: 398.3386pt x 448.32962pt.
 
-<Bilder/v2-3.jpg, id=869, 1039.63406pt x 1041.1397pt>
+<Bilder/v2-3.jpg, id=870, 1039.63406pt x 1041.1397pt>
 File: Bilder/v2-3.jpg Graphic file (type jpg)
  <use Bilder/v2-3.jpg>
 Package pdftex.def Info: Bilder/v2-3.jpg used on input line 180.
 (pdftex.def)             Requested size: 398.3386pt x 398.9098pt.
 
-<Bilder/v2-4.jpg, id=872, 855.94781pt x 867.99281pt>
+<Bilder/v2-4.jpg, id=873, 855.94781pt x 867.99281pt>
 File: Bilder/v2-4.jpg Graphic file (type jpg)
  <use Bilder/v2-4.jpg>
 Package pdftex.def Info: Bilder/v2-4.jpg used on input line 185.
 (pdftex.def)             Requested size: 398.3386pt x 403.9436pt.
 
-<Bilder/v2-5.jpg, id=873, 783.67781pt x 863.47594pt>
+<Bilder/v2-5.jpg, id=874, 783.67781pt x 863.47594pt>
 File: Bilder/v2-5.jpg Graphic file (type jpg)
  <use Bilder/v2-5.jpg>
 Package pdftex.def Info: Bilder/v2-5.jpg used on input line 186.
@@ -1501,9 +1508,9 @@ Underfull \hbox (badness 1325) in paragraph at lines 106--111
  []
 
 [18])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 47.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 48.
  [19]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 47.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 48.
  (C:\Users\ngundermann\git\BA\thesis\BA\ba.aux
 (C:\Users\ngundermann\git\BA\thesis\BA\titlepage.aux)
 (C:\Users\ngundermann\git\BA\thesis\BA\Einleitung.aux)
@@ -1529,29 +1536,26 @@ l.64 \select@language{English}
 Your command will be ignored, type <return> to proceed
 
 )
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 47.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 47.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 48.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 48.
 Package rerunfilecheck Info: File `ba.out' has not changed.
 (rerunfilecheck)             Checksum: 7034905FD7515A98F17EF51FD11EDF45;3964.
 
 
 LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 47.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 48.
  ) 
 Here is how much of TeX's memory you used:
- 14354 strings out of 493921
- 212860 string characters out of 3150471
- 422676 words of memory out of 3000000
- 16743 multiletter control sequences out of 15000+200000
- 61518 words of font info for 77 fonts, out of 3000000 for 9000
+ 14326 strings out of 493921
+ 211835 string characters out of 3150471
+ 422298 words of memory out of 3000000
+ 16714 multiletter control sequences out of 15000+200000
+ 63071 words of font info for 79 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 50i,18n,49p,1722b,2008s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 50i,18n,48p,1722b,2008s stack positions out of 5000i,500n,10000p,200000b,50000s
 pdfTeX warning (dest): name{glo:Multiselection-Komponente} has been reference
 d but does not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{glo:Triviale\040UI-Komponenten} has been referenced
- but does not exist, replaced by a fixed one
 
 pdfTeX warning (dest): name{glo:Top-Down\040Parser} has been referenced but doe
 s not exist, replaced by a fixed one
@@ -1601,9 +1605,9 @@ lm/lmsy10.pfb><D:/Program Files/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><D:/Prog
 ram Files/MiKTeX/fonts/type1/urw/palatino/uplb8a.pfb><D:/Program Files/MiKTeX/f
 onts/type1/urw/palatino/uplr8a.pfb><D:/Program Files/MiKTeX/fonts/type1/urw/pal
 atino/uplr8a.pfb><D:/Program Files/MiKTeX/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on ba.pdf (69 pages, 2736941 bytes).
+Output written on ba.pdf (69 pages, 2738126 bytes).
 PDF statistics:
- 1376 PDF objects out of 1440 (max. 8388607)
+ 1377 PDF objects out of 1440 (max. 8388607)
  491 named destinations out of 1000 (max. 500000)
  500 words of extra memory for PDF output out of 10000 (max. 10000000)
 

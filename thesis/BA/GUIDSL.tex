@@ -1,50 +1,66 @@
 \chapter{GUI-DSL}\label{GUI-DSL}
 \section{Beschreibung der Anforderung an die GUI}
 Die allgemeinen Anfroderung an die GUI wurden in Kapitel \ref{AllgAnforderungen}
-erläutert. Die folgenden Anforderungen beziehen sich auf die Aspekte der GUI die
-beschrieben werden müssen, da sie von den Entwicklern im Verlauf der
-Zeit geändert werden müssen, oder es nicht sinnvoll ist diese zu abstrahieren,
-da keine Wiederverwendung stattfindet. Bei der Beschreibung der Anforderungen
-muss darauf eingegangen werden, welche Elemente der GUI mit anderen Elementen
-kommunizieren können und wie die GUI beschrieben wird.\\
-Traditionell werden GUIs mit Hilfe von Layout-Containern strukturiert. In der
-Vergangenheit hat sich gezeigt, dass die strukturierung über ein spezifisches
-Layout zu einer Orientierung an ein bestimmtes Framework führt. Das ist ein
-Problem, da bestimmte Layout im Web oder auf mobilen Plattformen nicht
+erläutert. Die folgenden Anforderungen beziehen sich auf die Aspekte der GUIs
+die beschrieben werden müssen.
+Ein UI ermöglicht die Interaktion mit einem Programm mit Hilfe unterschiedlicher
+UI-Komponenten (vgl. \cite[S.4]{}). Mithilfe dieser Komponenten werden
+Informationen dargestellt, oder Eingaben vom Nutzer getätigt. Um die
+Zusammensetzung dieser Komponenten zu beschreiben gibt es zwei Ansätze.\\
+Beim ersten Ansatz wird die GUI durch fachliche Modelle beschrieben. (Motivation
+für MDSD \cite{3}) Das bedeutet, dass in der Beschreibung der GUI keine
+UI-Komponenten, wie aus anderen UI-Frameworks bekannt ist, auftauchen. In der
+deg soll den Entwicklern weiterhin die Möglichkeit gegeben werden, die UIs
+selbst zu entwerfen. Grund dafür ist, dass es ein zu großer Aufwand wäre alle
+Module von profil c/s auf MDSD umzustellen und die GUIs generieren zu lassen.
+Von daher ist dieser Ansatz vorerst nicht umsetzbar.\\
+Die Komplexität des zweiten Ansatzes schein weitaus geringer zu sein. Dabei
+werden weiterhin UI-Komponenten in der GUI-Beschreibung verwendet. Die
+Entwickler haben somit die Möglichkeit die UIs in einem gewissen Grad
+anzupassen.\\
+Für die GUI-DSL wird bzgl. der Komponenten zwischen drei Kategorien
+unterschieden.\\
+Die erste Kategorie sind umfasst \emph{triviale UI-Komponenten}. Dabei handelt
+es sich um UI-Komponenten, deren Funktionen in unterschiedlichen UI-Frameworks 
+ähnlich sind und allgemein einsetzbar sind. Das bedeutet, dass sie nicht als
+domänenspezifisch angesehen werden können. Beispiele hierfür sind UI-Komponenten
+wie der \emph{Button} oder das \emph{Label}. Welche Attribute dieser Elemente
+beschrieben werden, wird in Kaptiel \ref{Entwicklung einer DSL zur Beschreibung
+der GUI in profil c/s} genauer analysiert.\\
+Die zweite Kategorie umfasst \emph{komplexe UI-Komponenten}. Diese zeichnen sich
+dadurch aus, dass sie domänenspezifisch sind und speziell für profil c/s
+entwickelt wurden. Ein Beispiel hierfür ist die
+\gloss{Multiselection-Komponente}.\\
+Die dritte Kategorie umfasse \emph{Layout Komponenten}. Dabei handelt es sich
+um strukturgebende Komponenten. In anderen UI-Frameworks sind die bspw.
+\emph{Panel}, \emph{Div} oder \emph{Pane}. In der GUI-DSL müssen auch solche
+Komponenten verfügbar sein. Dabei ist besonders auf die Ausdruckskraft der
+für die Beschreibung dieser Komponenten verwendeten Bezeichnungen zu
+achten\footnote{Auf dem Desktop lassen sich Fenster darstellen. In einem
+Web-Browser ist der Begriff \emph{Fenster} nicht geläuft. Die Komponente,
+die hier dem Fester auf dem Desktop meiner Meinung nach gleicht, ist das
+Tab.}.\\
+Bezüglich des Layouts ist eine weitere Anforderung zu nennen. Hierzu muss
+erwähnt werden, dass in der traditionellen UI-Entiwcklung GUIs mit Hilfe von
+Layout-Containern strukturiert werden. In der Vergangenheit hat sich gezeigt,
+dass die strukturierung über ein spezifisches Layout zu einer Orientierung an
+ein bestimmtes Framework führt (Beispiel: MCF orientiert sich an Swing). Das ist
+ein Problem, da bestimmte Layout im Web oder auf mobilen Plattformen nicht
 genauso dargestellt werden können, wie auf einer Desktop-Anwendung. Von daher
-ist das Layout in der GUI-Beschreibung so zu beschreiben, dass
-das Layout auf allem Plattformen gleichermaßen gut dargestellt werden kann.\\
-Neben dem Layout sind auch die Haupte lemente einer GUI-Struktur zu beachten.
-Damit ist bspw. das Fenster für den Desktop gemeint. Im Web lässt sich eine
-solche Fenster-Sicht kaum darstellen. Bei der definition muss demnach auf eine
-abstrakte Beschreibung solcher Elemente zurückgegriffen werden.\\
-\gloss{Triviale UI-Komponenten}, die für profil c/s relevant sind, müssen
-beschrieben werden können.
-Welche Attribute dieser Elemente beschrieben werden, wird in Kaptiel \ref{Entwicklung
-einer DSL zur Beschreibung der GUI in profil c/s} genauer analysiert. Im
-Gegensatz dazu steht, dass die GUI durch die Beschreibung fachlicher Modelle
-automatisch generiert wird und somit keine Elemente einer GUI beschrieben
-werden müssen (Motivation für MDSD \cite{3}). Jedoch soll den Entwicklern
-weiterhin die Möglichkeit gegeben werden, die UIs selbst zu entwerfen. Grund
-dafür ist, dass es ein zu großer Aufwand wäre alle Module von profil c/s auf
-MDSD umzustellen und die GUIs generieren zu lassen. Nur die Beschreibung der GUI
-umzustellen scheint überschaubar zu sein.\\
-Weiterhin müssen auch komplexe Elemente einer GUI beschrieben werden können.
-Unter komplexen GUI-Elementen in profil c/s versteht man vordefinierte
-Zusammensetzungen von trivialen GUI-Elementen, die für einen bestimmten Input
-einen entsprechenden Output auf der Benutzerschnittstelle erzeugen. Die
-Verarbeitung des Input ist dabei bereits an die Domäne angepasst. An diesem
-Punkt kann die vorherige Anforderung wiederum angefochten werden, da komplexe
-GUI-Elemente auf einer höheren Abstraktionsebene liegen als triviale
-GUI-Elemente. Die Anzahl der komplexen GUI-Elemente für profil c/s reicht jedoch
-nicht, um alle Benutzerschnittstellen für profil c/s zu beschreiben. Außerdem
-ist die Wiederverwendbarkeit einiger komplex GUI-Elemente (gemäß dem Fall, dass
-eine Vielzahl solcher Elemente bestünde und sich die Benutzerschnittstellen
-von profil c/s damit abbilden ließen) meiner Meinung nach fragwürdig.\\
-Da bereits Ansätze von DSLs zur Beschreibung von GUIs existieren muss geprüft
-werden, ob sie die oben beschreibenen Anforderungen umsetzen können. Dazu werden
-im folgenden Kapitel drei ausgewählte DSLs vorgestellt und im nachfolgenden
-Kapitel hinsichtlich der Anforderungen bewertet.
+ist das Layout in der GUI-Beschreibung so zu beschreiben, dass das Layout auf
+allem Plattformen gleichermaßen gut dargestellt werden kann.\\
+Darüber hinaus ist es für die Effizens in deg der wichtig, dass mit dem neuen
+Ansatz vom GUI-Entwickler weniger Code geschrieben werden muss als mit
+dem alten Ansatz.\\
+Weiterhin ist für ein effizientes Arbeiten auch die Bereitstellung
+eines Editors für die DSL von großer Wichtigkeit. Dieser Editor soll
+nach Möglichkeit auch Validierungen durchführen können und
+Code-Completion anbieten. Eine Integration dieses Editors in die von der deg
+verwendete Entwicklungsumgebung (Eclipse) wäre dazu wünschenswert.\\
+Bezüglich der Anforderungen an die Komponenten ist anschließend zu sagen, dass
+bei den trivialen und die komplexen UI-Komponenten die Möglichkeit bestehen muss
+Interaktionen festzulegen.
+
 \section{Vorstellung ausgewählter DSLs zur Beschreibung von GUIs}
 \subsection{The Snow}
 \subsection{glc-dsl}

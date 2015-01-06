@@ -2,22 +2,23 @@
 \section{Allgemeine Beschreibung der Lösungsidee}
 Eine Lösungsidee für die in Kapitel \ref{Probleme} beschriebenen Probleme wurde
 im Kapitel \ref{Ziel} bereits angedeutet. Es geht um die Nutzung einer
-DSL zur Beschreibung von GUIs. Diese GUIs sollen durch die DSL so beschrieben
+DSL zur Beschreibung von GUIs. Diese GUIs sollen so beschrieben
 werden, dass sie in der Domäne von profil c/s für unterschiedliche
-UI-frameworks genutzt werden kann. Damit kann das MCF langfristig betrachtet
-abgelöst werden.
+UI-Frameworks genutzt werden können. Die GUIs werden dabei weiterhin nur
+ein mal beschrieben. Der Code, welcher das GUI im entsprechenden Framework
+darstellt wird frameworkspezifisch als der GUI-Beschreibung generiert.
+Langfristig betrachtet kann das MCF damit abgelöst werden.
 \section{Architektur}
-In diesem Lösungsansatz ist die DSL der Ausgangspunkt. Die abstrakte
-Beschreibung der GUI wird über die DSL vorgenommen. Somit ist gewährleistet,
+In diesem Lösungsansatz ist die DSL der Ausgangspunkt, mit deren Hilfe eine
+abstrakte Beschreibung der GUI vorgenommen wird. Somit ist gewährleistet,
 dass die GUI weiterhin nur einmal beschrieben werden muss. Ein Generator kann
-nach dem parsen für diese Beschreibung der GUI frameworkspezifischen Code
+nach dem parsen für diese Beschreibung der GUI, frameworkspezifischen Code
 generieren. Somit ist die Integration neuer Frameworks an die Implementierung
 eines spezifischen Generators gekoppelt. Abbildung \ref{Abb_neuerAnsatz} zeigt
 die Architektur für diesen Ansatz auf. Dabei wurden exemplarisch drei
 unterschiedliche Generatoren für unterschiedliche Frameworks mit aufgenommen.
 \myBigFigure{neuerAnsatz.png}{DSL-Ansatz für gleich GUIs auf
-unterschiedlichen Plattformen}{neuerAnsatz}\\
-
+unterschiedlichen Plattformen}{neuerAnsatz}
 
 \section{Vorteile gegenüber dem Multichannel-Framework}
 Wie in Kapitel \ref{Probleme} erläutert, weißt das MCF einige Probleme auf. Mit
@@ -25,12 +26,15 @@ dem neuen Ansatz kann das Problem der inaktuellen Frameworks und das Problem der
 starken Orientiertung an Swing (oder an ein anderes Framework) beseitigt werden.
 Eine DSL sollte sich nicht an Besonderheiten bestehender
 Frameworks orientieren, sondern an dem Domänenproblem. \cite[S.15]{mdsdvoelter}
-Von daher ist sichergestellt, dass die Integration von unterschiedlichen
-Frameworks gleicher Maßen gut funktioniert.\\
+Von daher sollte bei korrekter Umsetzung sichergestellt sein, dass die
+Integration von unterschiedlichen Frameworks gleicher Maßen gut funktioniert.\\
 Ein weiterer Vorteil ist, dass durch die wegfallende Orientiertung an Swing auch
 die Beschreibungsform ausdrucksstärker wird. Grund dafür ist, dass die
 syntaktischen Strukten, die in Swing vorhanden sind, nicht mehr benötigt
 werden.\\
-Dazu kommt, dass fachliche Konzepte zur Beschreibung der UIs benutzt werden
-können und die Umsetzung auf technischer Ebene von den Generatoren übernommen
-wird.
+Dazu kommt, dass die DSL so erweitert werden kann, dass fachliche Konzepte zur
+Beschreibung der UIs benutzt werden können. Die Umsetzung dieser Konzepte
+auf technischer Ebene würde von den Generatoren übernommen werden und den
+Entwickler nicht tangieren.\\
+Weiterhin kann dem Entwickler durch die Codegenerierung die o.g. fehleranfällige
+Routinearbeit abgenommen werden.
