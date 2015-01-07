@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.10.14)  6 JAN 2015 22:52
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.10.14)  7 JAN 2015 08:49
 entering extended mode
 **ba.tex
 (C:\Users\ngundermann\git\BA\thesis\BA\ba.tex
@@ -893,16 +893,22 @@ less on input line 18.
 ] (C:\Users\ngundermann\git\BA\thesis\BA\Einleitung.tex
 Kapitel 1.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 6.
+(Font)              <5> on input line 3.
 
-Overfull \hbox (7.32957pt too wide) in paragraph at lines 2--41
+Overfull \hbox (8.34047pt too wide) in paragraph at lines 2--42
+\T1/ppl/m/n/12 Die Usa-bi-li-ty wird haupt-säch-lich von der Be-nut-zer-schitt-
+stel-le be-stimmt. Folg-
+ []
+
+
+Overfull \hbox (7.32957pt too wide) in paragraph at lines 2--42
 \T1/ppl/m/n/12 Ein an-de-rer An-satz zur Be-schrei-bung von Be-nut-ze-ro-ber-fl
 ä-chen ist das Model-
  []
 
 
 Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
-less on input line 41.
+less on input line 42.
 
 [1
 
@@ -1305,13 +1311,13 @@ Overfull \hbox (15.15158pt too wide) in paragraph at lines 136--136
 []\T1/ppl/b/n/17.28 GUI-Beschreibungs-Model zur Ver-ar-bei-tung im
  []
 
-<Bilder/v1-1.jpg, id=875, 1393.45593pt x 1086.30844pt>
+<Bilder/v1-1.jpg, id=876, 1393.45593pt x 1086.30844pt>
 File: Bilder/v1-1.jpg Graphic file (type jpg)
  <use Bilder/v1-1.jpg>
 Package pdftex.def Info: Bilder/v1-1.jpg used on input line 140.
 (pdftex.def)             Requested size: 398.3386pt x 310.52936pt.
 
-[43] <Bilder/v1-2.jpg, id=882, 1425.07407pt x 1158.57843pt>
+[43] <Bilder/v1-2.jpg, id=883, 1425.07407pt x 1158.57843pt>
 File: Bilder/v1-2.jpg Graphic file (type jpg)
 
 <use Bilder/v1-2.jpg>
@@ -1329,7 +1335,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 141--150
  []
 
 [44 <C:/Users/ngundermann/git/BA/thesis/BA/Bilder/v1-1.jpg>]
-<Bilder/v2-1.jpg, id=890, 1146.53343pt x 823.57687pt>
+<Bilder/v2-1.jpg, id=891, 1146.53343pt x 823.57687pt>
 File: Bilder/v2-1.jpg Graphic file (type jpg)
  <use Bilder/v2-1.jpg>
 Package pdftex.def Info: Bilder/v2-1.jpg used on input line 169.
@@ -1340,27 +1346,27 @@ Underfull \hbox (badness 10000) in paragraph at lines 164--169
  []
 
 [45 <C:/Users/ngundermann/git/BA/thesis/BA/Bilder/v1-2.jpg>]
-<Bilder/v2-2.jpg, id=897, 395.97937pt x 445.665pt>
+<Bilder/v2-2.jpg, id=898, 395.97937pt x 445.665pt>
 File: Bilder/v2-2.jpg Graphic file (type jpg)
  <use Bilder/v2-2.jpg>
 Package pdftex.def Info: Bilder/v2-2.jpg used on input line 173.
 (pdftex.def)             Requested size: 398.3386pt x 448.32962pt.
 
 [46 <C:/Users/ngundermann/git/BA/thesis/BA/Bilder/v2-1.jpg>]
-<Bilder/v2-3.jpg, id=902, 1039.63406pt x 1041.1397pt>
+<Bilder/v2-3.jpg, id=903, 1039.63406pt x 1041.1397pt>
 File: Bilder/v2-3.jpg Graphic file (type jpg)
  <use Bilder/v2-3.jpg>
 Package pdftex.def Info: Bilder/v2-3.jpg used on input line 178.
 (pdftex.def)             Requested size: 398.3386pt x 398.9098pt.
 
 [47 <C:/Users/ngundermann/git/BA/thesis/BA/Bilder/v2-2.jpg>]
-<Bilder/v2-4.jpg, id=909, 855.94781pt x 867.99281pt>
+<Bilder/v2-4.jpg, id=910, 855.94781pt x 867.99281pt>
 File: Bilder/v2-4.jpg Graphic file (type jpg)
  <use Bilder/v2-4.jpg>
 Package pdftex.def Info: Bilder/v2-4.jpg used on input line 183.
 (pdftex.def)             Requested size: 398.3386pt x 403.9436pt.
 
-<Bilder/v2-5.jpg, id=910, 783.67781pt x 863.47594pt>
+<Bilder/v2-5.jpg, id=911, 783.67781pt x 863.47594pt>
 File: Bilder/v2-5.jpg Graphic file (type jpg)
  <use Bilder/v2-5.jpg>
 Package pdftex.def Info: Bilder/v2-5.jpg used on input line 184.
@@ -1659,9 +1665,9 @@ lm/lmsy10.pfb><D:/Program Files/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><D:/Prog
 ram Files/MiKTeX/fonts/type1/urw/palatino/uplb8a.pfb><D:/Program Files/MiKTeX/f
 onts/type1/urw/palatino/uplr8a.pfb><D:/Program Files/MiKTeX/fonts/type1/urw/pal
 atino/uplr8a.pfb><D:/Program Files/MiKTeX/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on ba.pdf (73 pages, 2747563 bytes).
+Output written on ba.pdf (73 pages, 2747874 bytes).
 PDF statistics:
- 1407 PDF objects out of 1440 (max. 8388607)
+ 1408 PDF objects out of 1440 (max. 8388607)
  501 named destinations out of 1000 (max. 500000)
  492 words of extra memory for PDF output out of 10000 (max. 10000000)
 

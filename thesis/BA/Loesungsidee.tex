@@ -1,18 +1,18 @@
 \chapter{Entwicklung einer Lösungsidee}\label{Entwicklung einer Lösungsidee}
 \section{Allgemeine Beschreibung der Lösungsidee}
 Eine Lösungsidee für die in Kapitel \ref{Probleme} beschriebenen Probleme wurde
-im Kapitel \ref{Ziel} bereits angedeutet. Es geht um die Nutzung einer
-DSL zur Beschreibung von GUIs. Diese GUIs sollen so beschrieben
+im Kapitel \ref{Ziel} bereits angedeutet. Kern dieser Idee ist, eine
+DSL zur Beschreibung von GUIs zu nutzen. Diese GUIs sollen so beschrieben
 werden, dass sie in der Domäne von profil c/s für unterschiedliche
-UI-Frameworks genutzt werden können. Die GUIs werden dabei weiterhin nur
-ein mal beschrieben. Der Code, welcher das GUI im entsprechenden Framework
-darstellt wird frameworkspezifisch als der GUI-Beschreibung generiert.
-Langfristig betrachtet kann das MCF damit abgelöst werden.
+UI-Frameworks genutzt werden können. Diese Beschreibung soll weiterhin nur ein
+mal statt finden. Der Quell-Code, welcher das GUI im entsprechenden Framework
+darstellt, wird frameworkspezifisch aus der GUI-Beschreibung generiert.
+Langfristig betrachtet kann das MCF damit theoretisch abgelöst werden.
 \section{Architektur}
-In diesem Lösungsansatz ist die DSL der Ausgangspunkt, mit deren Hilfe eine
-abstrakte Beschreibung der GUI vorgenommen wird. Somit ist gewährleistet,
+In diesem Lösungsansatz ist die DSL der Ausgangspunkt. Mit deren Hilfe wird eine
+abstrakte Beschreibung der GUI vorgenommen. Somit ist gewährleistet,
 dass die GUI weiterhin nur einmal beschrieben werden muss. Ein Generator kann
-nach dem parsen für diese Beschreibung der GUI, frameworkspezifischen Code
+nach dem parsen dieser Beschreibung, frameworkspezifischen Quell-Code
 generieren. Somit ist die Integration neuer Frameworks an die Implementierung
 eines spezifischen Generators gekoppelt. Abbildung \ref{Abb_neuerAnsatz} zeigt
 die Architektur für diesen Ansatz auf. Dabei wurden exemplarisch drei
@@ -22,19 +22,18 @@ unterschiedlichen Plattformen}{neuerAnsatz}
 
 \section{Vorteile gegenüber dem Multichannel-Framework}
 Wie in Kapitel \ref{Probleme} erläutert, weißt das MCF einige Probleme auf. Mit
-dem neuen Ansatz kann das Problem der inaktuellen Frameworks und das Problem der
-starken Orientiertung an Swing (oder an ein anderes Framework) beseitigt werden.
+der vorgestellten Lösungs kann das Problem der inaktuellen
+Frameworks und das Problem der starken Orientiertung an Swing (oder an ein anderes Framework) beseitigt werden.
 Eine DSL sollte sich nicht an Besonderheiten bestehender
-Frameworks orientieren, sondern an dem Domänenproblem. \cite[S.15]{mdsdvoelter}
-Von daher sollte bei korrekter Umsetzung sichergestellt sein, dass die
-Integration von unterschiedlichen Frameworks gleicher Maßen gut funktioniert.\\
+Frameworks orientieren, sondern an dem Domänenproblem.
+(vgl. \cite[S.15]{mdsdvoelter}) Von daher sollte bei korrekter Umsetzung
+sichergestellt sein, dass die Integration von unterschiedlichen Frameworks gleicher Maßen gut funktioniert.\\
 Ein weiterer Vorteil ist, dass durch die wegfallende Orientiertung an Swing auch
 die Beschreibungsform ausdrucksstärker wird. Grund dafür ist, dass die
 syntaktischen Strukten, die in Swing vorhanden sind, nicht mehr benötigt
-werden.\\
-Dazu kommt, dass die DSL so erweitert werden kann, dass fachliche Konzepte zur
-Beschreibung der UIs benutzt werden können. Die Umsetzung dieser Konzepte
-auf technischer Ebene würde von den Generatoren übernommen werden und den
-Entwickler nicht tangieren.\\
-Weiterhin kann dem Entwickler durch die Codegenerierung die o.g. fehleranfällige
-Routinearbeit abgenommen werden.
+werden und die DSL auf einer höheren Abstraktionsebene konzipiert werden kann.
+Das erweitern der DSL um fachliche Konzepte aus profil c/s sollte somit
+ermöglicht werden. Mit diesen fachlichen Konzepten wird eine Annäherung an das
+Model-Driven Development (siehen Kapitel \ref{mdsd}) erreicht.\\
+Darüber hinaus werden dem Entwickler durch die Codegenerierung die o.g.
+fehleranfällige Routinearbeit abgenommen.
