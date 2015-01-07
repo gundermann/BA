@@ -43,13 +43,10 @@
   Languages}.
 \newblock Addison-Wesley, 2011.
 
-\bibitem[{Gen}14]{europa}
-{\sc {Generaldirektion Landwirtschaft und ländliche Entwicklung}}: {\em Das
-  Integrierte Verwaltungs- und Kontrollsystem (InVeKoS)}.
-\newblock URL:
-  http://ec.europa.eu/agriculture/direct-support/iacs/index\_de.htm, November
-  2014.
-\newblock Zuletzt eingesehen am 02.12.2014.
+\bibitem[Gal07]{Galitz2007}
+{\sc Galitz, Wilbert~O.}: {\em The Essential Guide to User Interface Design -
+  An Introduction to GUI Design Principles and Techniques}.
+\newblock John Wiley & Sons, New York, 2007.
 
 \bibitem[gho11]{ghosh}
 {\em DSLs in Action}.

@@ -1,90 +1,88 @@
-\chapter{GUI-DSL}\label{GUI-DSL}
-\section{Beschreibung der Anforderung an die GUI}
+\chapter{Anforderung an die GUI-DSL}\label{GUI-DSL}
 Die allgemeinen Anfroderung an die GUI wurden in Kapitel \ref{AllgAnforderungen}
 erläutert. Die folgenden Anforderungen beziehen sich auf die Aspekte der GUIs
 die beschrieben werden müssen.
 Ein UI ermöglicht die Interaktion mit einem Programm mit Hilfe unterschiedlicher
-UI-Komponenten (vgl. \cite[S.4]{}). Mithilfe dieser Komponenten werden
+UI-Komponenten (vgl. \cite[S.4]{Galitz2007}). Mithilfe dieser Komponenten werden
 Informationen dargestellt, oder Eingaben vom Nutzer getätigt. Um die
 Zusammensetzung dieser Komponenten zu beschreiben gibt es zwei Ansätze.\\
 Beim ersten Ansatz wird die GUI durch fachliche Modelle beschrieben. (Motivation
 für MDSD \cite{3}) Das bedeutet, dass in der Beschreibung der GUI keine
-UI-Komponenten, wie aus anderen UI-Frameworks bekannt ist, auftauchen. In der
-deg soll den Entwicklern weiterhin die Möglichkeit gegeben werden, die UIs
-selbst zu entwerfen. Grund dafür ist, dass es ein zu großer Aufwand wäre alle
-Module von profil c/s auf MDSD umzustellen und die GUIs generieren zu lassen.
+UI-Komponenten verwendet werden, wie es in allgemein bekannten UI-Frameworks
+(JavaFX, Swing) der Fall ist. In der deg soll den Entwicklern weiterhin die
+Möglichkeit gegeben werden, die UIs selbst zu entwerfen. Ein Grund dafür ist,
+dass es ein zu großer Aufwand wäre alle Module von profil c/s auf MDSD umzustellen
+und die GUIs generieren zu lassen.
 Von daher ist dieser Ansatz vorerst nicht umsetzbar.\\
 Die Komplexität des zweiten Ansatzes schein weitaus geringer zu sein. Dabei
 werden weiterhin UI-Komponenten in der GUI-Beschreibung verwendet. Die
 Entwickler haben somit die Möglichkeit die UIs in einem gewissen Grad
-anzupassen.\\
-Für die GUI-DSL wird bzgl. der Komponenten zwischen drei Kategorien
-unterschieden.\\
+anzupassen. Die GUI von profil c/s wird dabei als Domäne betrachtet und nicht
+die fachlichen Hintergründe. Durch die Festlegung dieser Domäne lässt sich
+bei der Beschreibung von GUIs eine höhere Absatrktionsebene nutzen, als es bei
+den verwendeten UI-Frameworks der Fall ist.\\
+Der Entwickler soll somit in der Lage sein ein UI relatic frei zu gestalten.
+Außerdem sollte er dadurch die Möglichkeit haben bestimmte Konzepte einfach
+wieder zu verwenden.
+Für die GUI-DSL wird bzgl. der Anfroderungen an die Komponenten zwischen drei
+Kategorien unterschieden.\\
 Die erste Kategorie sind umfasst \emph{triviale UI-Komponenten}. Dabei handelt
 es sich um UI-Komponenten, deren Funktionen in unterschiedlichen UI-Frameworks 
-ähnlich sind und allgemein einsetzbar sind. Das bedeutet, dass sie nicht als
-domänenspezifisch angesehen werden können. Beispiele hierfür sind UI-Komponenten
-wie der \emph{Button} oder das \emph{Label}. Welche Attribute dieser Elemente
-beschrieben werden, wird in Kaptiel \ref{Entwicklung einer DSL zur Beschreibung
-der GUI in profil c/s} genauer analysiert.\\
+ähnlich sind und in unterschiedlichen Anwendungen eingesetzt werden
+könne. Das bedeutet, dass sie nicht als domänenspezifisch angesehen werden
+können. Beispiele hierfür sind UI-Komponenten wie der \emph{Button} oder das
+\emph{Label}.\\
 Die zweite Kategorie umfasst \emph{komplexe UI-Komponenten}. Diese zeichnen sich
 dadurch aus, dass sie domänenspezifisch sind und speziell für profil c/s
-entwickelt wurden. Ein Beispiel hierfür ist die
-\gloss{Multiselection-Komponente}.\\
-Die dritte Kategorie umfasse \emph{Layout Komponenten}. Dabei handelt es sich
-um strukturgebende Komponenten. In anderen UI-Frameworks sind die bspw.
+entwickelt wurden. Ein Beispiel für eine komplexe Komponenten ist die
+\gloss{Multiselection-Komponente}. \\
+Die dritte Kategorie umfasst \emph{Layout Komponenten}. Dabei handelt es sich
+um strukturgebende Komponenten. In anderen UI-Frameworks sind dies bspw.
 \emph{Panel}, \emph{Div} oder \emph{Pane}. In der GUI-DSL müssen auch solche
 Komponenten verfügbar sein. Dabei ist besonders auf die Ausdruckskraft der
 für die Beschreibung dieser Komponenten verwendeten Bezeichnungen zu
-achten\footnote{Auf dem Desktop lassen sich Fenster darstellen. In einem
-Web-Browser ist der Begriff \emph{Fenster} nicht geläuft. Die Komponente,
-die hier dem Fester auf dem Desktop meiner Meinung nach gleicht, ist das
-Tab.}.\\
-Bezüglich des Layouts ist eine weitere Anforderung zu nennen. Hierzu muss
-erwähnt werden, dass in der traditionellen UI-Entiwcklung GUIs mit Hilfe von
-Layout-Containern strukturiert werden. In der Vergangenheit hat sich gezeigt,
+achten. Grund dafür ist, das sich bspw. auf dem Desktop ein Fenster als
+oberste Layout Komponente festlegen lässt. In einem Web-Browser ist der Begriff
+\emph{Fenster} als oberste Layout Komponenten jedoch nicht geläuft. Die
+Komponente, die in einem Browser dem Fester auf dem Desktop am nähsten 
+kommt, ist meiner Meinung nach das Tab.\\
+Die Attribute, die für die einzelnen Komponenten beschrieben werden
+müssen, werden in Kaptiel \ref{Entwicklung einer DSL zur Beschreibung der GUI in
+profil c/s} genauer analysiert.\\
+Bezüglich des Layouts ist neben den Layout Komponenten eine weitere Anforderung
+zu nennen. Hierzu muss erwähnt werden, dass in der traditionellen UI-Entiwcklung
+GUIs mit Hilfe von Layout-Containern strukturiert werden. In der Vergangenheit hat sich gezeigt,
 dass die strukturierung über ein spezifisches Layout zu einer Orientierung an
 ein bestimmtes Framework führt (Beispiel: MCF orientiert sich an Swing). Das ist
-ein Problem, da bestimmte Layout im Web oder auf mobilen Plattformen nicht
+ein Problem, da bestimmte Layouts im Web oder auf mobilen Plattformen nicht
 genauso dargestellt werden können, wie auf einer Desktop-Anwendung. Von daher
-ist das Layout in der GUI-Beschreibung so zu beschreiben, dass das Layout auf
+ist das Layout in der GUI-Beschreibung so zu beschreiben, dass es auf
 allem Plattformen gleichermaßen gut dargestellt werden kann.\\
 Darüber hinaus ist es für die Effizens in deg der wichtig, dass mit dem neuen
-Ansatz vom GUI-Entwickler weniger Code geschrieben werden muss als mit
+Ansatz weniger Codezeilen (LOC) geschrieben werden müssen als mit
 dem alten Ansatz.\\
 Weiterhin ist für ein effizientes Arbeiten auch die Bereitstellung
-eines Editors für die DSL von großer Wichtigkeit. Dieser Editor soll
+eines Editors für die DSL von großer Bedeutung. Dieser Editor soll
 nach Möglichkeit auch Validierungen durchführen können und
 Code-Completion anbieten. Eine Integration dieses Editors in die von der deg
-verwendete Entwicklungsumgebung (Eclipse) wäre dazu wünschenswert.\\
-Bezüglich der Anforderungen an die Komponenten ist anschließend zu sagen, dass
-bei den trivialen und die komplexen UI-Komponenten die Möglichkeit bestehen muss
-Interaktionen festzulegen. Außerdem muss die GUI-DSL um weitere Komponenten
-erweiterbar sein.
-
-\section{Vorstellung ausgewählter DSLs zur Beschreibung von GUIs}
-\subsection{The Snow}
-\subsection{glc-dsl}
-\subsection{Sculptor}
-\section{Bewertung}
-\begin{table}[!htb]
-\centering
-\small
-			\begin{tabular}[c]{|l|r|r|r|}
-			\hline
-				\textbf{Anforderung} &
-				\textbf{The Snow} & \textbf{glc-dsl} &
-				\textbf{Sculptor} \\
-				\hline\hline
-				\textbf{abstraktes Layout} & & &\\
-				\hline
-				\textbf{abstrakte Hauptelemente} & & &\\
-				\hline
-				\textbf{Beschreibung trivialer Elemente} & 	& & \\
-				\hline
-				\textbf{Beschreibung komplexer Elemente} & & &\\
-				\hline
-			\end{tabular}
-		\caption{Bewertung ausgewählter DSLs zur Beschreibung von GUIs}
-\label{tab:guidsl}
-	\end{table}\\
+verwendete Entwicklungsumgebung (Eclipse) wäre wünschenswert.\\
+Bezüglich der Anforderungen an die Komponenten ist abschließend zu sagen, dass
+bei den trivialen und den komplexen UI-Komponenten die Möglichkeit bestehen muss
+Interaktionen festzulegen. Außerdem muss die GUI-DSL um weitere
+triviale und komplexe Komponenten erweiterbar sein.\\
+Zusammenfassen bestehen die Sprache folgenden Anforderungen
+\begin{itemize}
+  \item Beschreibung trivialer UI-Komponenten
+  \item Beschreibung komplexer UI-Komponenten
+  \item Beschreibung von Layout Komponenten
+  \item Verwendung einer abstrakten Layoutbeschreibung
+  \item Weniger LOC zur Beschreibung von UIs
+  \item Beschreibung von Interaktionen an trivialen und komplexen UI-Komponenten
+  \item Erweiterung um neue triviale und komplexe UI-Komponenten
+\end{itemize}
+Für die Infrastruktur der DSL bestehend die folgenden Anforderungen.
+\begin{itemize}
+   \item Bereitstellung eines Editors mit Code-Completion und
+  Validierungsmöglichkeiten
+  \item Integration in die Eclipse IDE
+\end{itemize}

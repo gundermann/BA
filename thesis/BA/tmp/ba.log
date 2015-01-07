@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.10.14)  7 JAN 2015 08:49
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.10.14)  7 JAN 2015 09:39
 entering extended mode
 **ba.tex
 (C:\Users\ngundermann\git\BA\thesis\BA\ba.tex
@@ -647,7 +647,7 @@ See the babel package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.63 \select@language{English}
+l.62 \select@language{English}
                               
 Your command will be ignored, type <return> to proceed
 
@@ -745,7 +745,7 @@ LaTeX Info: Redefining \nameref on input line 4.
 sh.dict"
 Dictionary: glossaries-dictionary, Language: English 
 ) (C:\Users\ngundermann\git\BA\thesis\BA\titlepage.tex
-<Bilder/nak.png, id=211, 578.16pt x 174.8934pt>
+<Bilder/nak.png, id=187, 578.16pt x 174.8934pt>
 File: Bilder/nak.png Graphic file (type png)
  <use Bilder/nak.png>
 Package pdftex.def Info: Bilder/nak.png used on input line 10.
@@ -825,7 +825,7 @@ l.23 ...cklung einer L\"osungsidee}{30}{chapter.4}
                                                    [1
 
 
-] [2]
+]
 
 ! Package babel Error: You haven't defined the language English yet.
 
@@ -833,13 +833,13 @@ See the babel package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.55 \select@language {English}
+l.49 \select@language {English}
                                
 Your command will be ignored, type <return> to proceed
 
 )
 \tf@toc=\write6
- [3] (C:\Users\ngundermann\git\BA\thesis\BA\ba.lof
+ [2] (C:\Users\ngundermann\git\BA\thesis\BA\ba.lof
 
 ! Package babel Error: You haven't defined the language English yet.
 
@@ -858,7 +858,7 @@ Your command will be ignored, type <return> to proceed
 Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
 less on input line 13.
 
-[4
+[3
 
 ] (C:\Users\ngundermann\git\BA\thesis\BA\ba.lot
 
@@ -868,7 +868,7 @@ See the babel package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.16 \select@language {English}
+l.15 \select@language {English}
                                
 Your command will be ignored, type <return> to proceed
 
@@ -879,7 +879,7 @@ Your command will be ignored, type <return> to proceed
 Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
 less on input line 15.
 
-[5
+[4
 
 ] (C:\Users\ngundermann\git\BA\thesis\BA\ba.lol)
 \tf@lol=\write9
@@ -888,18 +888,12 @@ less on input line 15.
 Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
 less on input line 18.
 
-[6
+[5
 
 ] (C:\Users\ngundermann\git\BA\thesis\BA\Einleitung.tex
 Kapitel 1.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <5> on input line 3.
-
-Overfull \hbox (8.34047pt too wide) in paragraph at lines 2--42
-\T1/ppl/m/n/12 Die Usa-bi-li-ty wird haupt-säch-lich von der Be-nut-zer-schitt-
-stel-le be-stimmt. Folg-
- []
-
 
 Overfull \hbox (7.32957pt too wide) in paragraph at lines 2--42
 \T1/ppl/m/n/12 Ein an-de-rer An-satz zur Be-schrei-bung von Be-nut-ze-ro-ber-fl
@@ -918,13 +912,13 @@ less on input line 42.
 Kapitel 2.
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <17.28> not available
 (Font)              Font shape `T1/ppl/b/n' tried instead on input line 5.
-<Bilder/web.jpg, id=402, 1264.725pt x 472.76625pt>
+<Bilder/web.jpg, id=370, 1264.725pt x 472.76625pt>
 File: Bilder/web.jpg Graphic file (type jpg)
  <use Bilder/web.jpg>
 Package pdftex.def Info: Bilder/web.jpg used on input line 14.
 (pdftex.def)             Requested size: 731.23584pt x 273.34616pt.
 
-<Bilder/standalone.jpg, id=404, 570.63188pt x 464.4853pt>
+<Bilder/standalone.jpg, id=372, 570.63188pt x 464.4853pt>
 File: Bilder/standalone.jpg Graphic file (type jpg)
 
 <use Bilder/standalone.jpg>
@@ -949,7 +943,7 @@ Overfull \hbox (11.6785pt too wide) in paragraph at lines 21--21
 []\T1/ppl/b/n/17.28 Umsetzung der Be-nut-zer-schnitt-stel-len für meh-
  []
 
-<Bilder/mcgrob.png, id=422, 452.4403pt x 231.11343pt>
+<Bilder/mcgrob.png, id=390, 452.4403pt x 231.11343pt>
 File: Bilder/mcgrob.png Graphic file (type png)
  <use Bilder/mcgrob.png>
 Package pdftex.def Info: Bilder/mcgrob.png used on input line 35.
@@ -1056,7 +1050,7 @@ Overfull \hbox (2.08488pt too wide) in paragraph at lines 167--170
 -ren/Trans-for-ma-
  []
 
-<Bilder/mdsd.jpg, id=567, 663.22781pt x 380.92313pt>
+<Bilder/mdsd.jpg, id=535, 663.22781pt x 380.92313pt>
 File: Bilder/mdsd.jpg Graphic file (type jpg)
  <use Bilder/mdsd.jpg>
 Package pdftex.def Info: Bilder/mdsd.jpg used on input line 179.
@@ -1110,7 +1104,7 @@ Overfull \hbox (0.94485pt too wide) in paragraph at lines 440--458
 eit über den Parse-
  []
 
-[23] [24] <Bilder/parsing.jpg, id=702, 576.65437pt x 209.28188pt>
+[23] [24] <Bilder/parsing.jpg, id=669, 576.65437pt x 209.28188pt>
 File: Bilder/parsing.jpg Graphic file (type jpg)
 
 <use Bilder/parsing.jpg>
@@ -1140,7 +1134,7 @@ k er-war-tet wer-
  []
 
 [26 <C:/Users/ngundermann/git/BA/thesis/BA/Bilder/parsing.jpg>]
-<Bilder/parsercombinator.jpg, id=738, 456.95718pt x 276.28218pt>
+<Bilder/parsercombinator.jpg, id=706, 456.95718pt x 276.28218pt>
 File: Bilder/parsercombinator.jpg Graphic file (type jpg)
 
 <use Bilder/parsercombinator.jpg>
@@ -1161,7 +1155,7 @@ ind die-se Parser-
 [28 <C:/Users/ngundermann/git/BA/thesis/BA/Bilder/parsercombinator.jpg>])
 [29] (C:\Users\ngundermann\git\BA\thesis\BA\Loesungsidee.tex
 Kapitel 4.
-<Bilder/neuerAnsatz.png, id=789, 632.3625pt x 269.50688pt>
+<Bilder/neuerAnsatz.png, id=757, 632.3625pt x 269.50688pt>
 File: Bilder/neuerAnsatz.png Graphic file (type png)
 
 <use Bilder/neuerAnsatz.png>
@@ -1185,46 +1179,32 @@ Overfull \hbox (34.36719pt too wide) in paragraph at lines 23--23
 (C:\Users\ngundermann\git\BA\thesis\BA\GUIDSL.tex
 Kapitel 5.
 
-Overfull \hbox (0.1329pt too wide) in paragraph at lines 3--64
+Overfull \hbox (0.1329pt too wide) in paragraph at lines 2--74
 \T1/ppl/m/n/12 Beim er-sten An-satz wird die GUI durch fach-li-che Mo-del-le be
 -schrie-ben. (Mo-
  []
 
 
-Overfull \hbox (33.56126pt too wide) in paragraph at lines 3--64
+Overfull \hbox (33.56126pt too wide) in paragraph at lines 2--74
 \T1/ppl/m/n/12 sich um UI-Komponenten, de-ren Funk-tio-nen in un-ter-schied-li-
 chen UI-Frameworks
  []
 
 
-Overfull \hbox (2.23358pt too wide) in paragraph at lines 3--64
-\T1/ppl/m/n/12 Bezüglich des Lay-outs ist ei-ne wei-te-re An-for-de-rung zu nen
--nen. Hier-zu muss
- []
-
-
 Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
-less on input line 64.
+less on input line 74.
 
 [32
 
 
 
-] [33])
+] [33]
+Overfull \hbox (42.58316pt too wide) in paragraph at lines 80--81
+[][]\T1/ppl/m/n/12 Beschreibung von In-ter-ak-tio-nen an tri-via-len und kom-pl
+e-xen UI-Komponenten 
+ []
 
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.23 \include{GUIDSL}
-                     
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-[34] (C:\Users\ngundermann\git\BA\thesis\BA\Framework.tex
+) [34] (C:\Users\ngundermann\git\BA\thesis\BA\Framework.tex
 Kapitel 6.
 
 Overfull \hbox (8.70186pt too wide) in paragraph at lines 8--30
@@ -1311,13 +1291,13 @@ Overfull \hbox (15.15158pt too wide) in paragraph at lines 136--136
 []\T1/ppl/b/n/17.28 GUI-Beschreibungs-Model zur Ver-ar-bei-tung im
  []
 
-<Bilder/v1-1.jpg, id=876, 1393.45593pt x 1086.30844pt>
+<Bilder/v1-1.jpg, id=844, 1393.45593pt x 1086.30844pt>
 File: Bilder/v1-1.jpg Graphic file (type jpg)
  <use Bilder/v1-1.jpg>
 Package pdftex.def Info: Bilder/v1-1.jpg used on input line 140.
 (pdftex.def)             Requested size: 398.3386pt x 310.52936pt.
 
-[43] <Bilder/v1-2.jpg, id=883, 1425.07407pt x 1158.57843pt>
+[43] <Bilder/v1-2.jpg, id=852, 1425.07407pt x 1158.57843pt>
 File: Bilder/v1-2.jpg Graphic file (type jpg)
 
 <use Bilder/v1-2.jpg>
@@ -1335,7 +1315,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 141--150
  []
 
 [44 <C:/Users/ngundermann/git/BA/thesis/BA/Bilder/v1-1.jpg>]
-<Bilder/v2-1.jpg, id=891, 1146.53343pt x 823.57687pt>
+<Bilder/v2-1.jpg, id=860, 1146.53343pt x 823.57687pt>
 File: Bilder/v2-1.jpg Graphic file (type jpg)
  <use Bilder/v2-1.jpg>
 Package pdftex.def Info: Bilder/v2-1.jpg used on input line 169.
@@ -1346,27 +1326,27 @@ Underfull \hbox (badness 10000) in paragraph at lines 164--169
  []
 
 [45 <C:/Users/ngundermann/git/BA/thesis/BA/Bilder/v1-2.jpg>]
-<Bilder/v2-2.jpg, id=898, 395.97937pt x 445.665pt>
+<Bilder/v2-2.jpg, id=867, 395.97937pt x 445.665pt>
 File: Bilder/v2-2.jpg Graphic file (type jpg)
  <use Bilder/v2-2.jpg>
 Package pdftex.def Info: Bilder/v2-2.jpg used on input line 173.
 (pdftex.def)             Requested size: 398.3386pt x 448.32962pt.
 
 [46 <C:/Users/ngundermann/git/BA/thesis/BA/Bilder/v2-1.jpg>]
-<Bilder/v2-3.jpg, id=903, 1039.63406pt x 1041.1397pt>
+<Bilder/v2-3.jpg, id=872, 1039.63406pt x 1041.1397pt>
 File: Bilder/v2-3.jpg Graphic file (type jpg)
  <use Bilder/v2-3.jpg>
 Package pdftex.def Info: Bilder/v2-3.jpg used on input line 178.
 (pdftex.def)             Requested size: 398.3386pt x 398.9098pt.
 
 [47 <C:/Users/ngundermann/git/BA/thesis/BA/Bilder/v2-2.jpg>]
-<Bilder/v2-4.jpg, id=910, 855.94781pt x 867.99281pt>
+<Bilder/v2-4.jpg, id=879, 855.94781pt x 867.99281pt>
 File: Bilder/v2-4.jpg Graphic file (type jpg)
  <use Bilder/v2-4.jpg>
 Package pdftex.def Info: Bilder/v2-4.jpg used on input line 183.
 (pdftex.def)             Requested size: 398.3386pt x 403.9436pt.
 
-<Bilder/v2-5.jpg, id=911, 783.67781pt x 863.47594pt>
+<Bilder/v2-5.jpg, id=880, 783.67781pt x 863.47594pt>
 File: Bilder/v2-5.jpg Graphic file (type jpg)
  <use Bilder/v2-5.jpg>
 Package pdftex.def Info: Bilder/v2-5.jpg used on input line 184.
@@ -1450,34 +1430,46 @@ less on input line 41.
 
 
 ] [12] [13]) [14] (C:\Users\ngundermann\git\BA\thesis\BA\ba.gls
+
+Package glossaries Warning: Glossary entry `INVEKOS' has not been defined on in
+put line 13.
+
+
+Package glossaries Warning: Glossary entry `INVEKOS' has not been defined on in
+put line 13.
+
+
+Package glossaries Warning: Glossary entry `INVEKOS' has not been defined on in
+put line 13.
+
+
 Overfull \hbox (9.11963pt too wide) in paragraph at lines 20--20
 \T1/ppl/m/n/12 bau der GUI ge-nau be-schrie-ben. Für die In-ter-ak-ti-on mit de
 n UI-Widgets,
  []
 
 
+Package glossaries Warning: Glossary entry `WingS' has not been defined on inpu
+t line 26.
+
+
+Package glossaries Warning: Glossary entry `WingS' has not been defined on inpu
+t line 26.
+
+
+Package glossaries Warning: Glossary entry `WingS' has not been defined on inpu
+t line 26.
+
+
 Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
-less on input line 23.
+less on input line 32.
 
 [15
 
 
 
 
-]
-
-Package glossaries Warning: Glossary entry `WingS' has not been defined on inpu
-t line 26.
-
-
-Package glossaries Warning: Glossary entry `WingS' has not been defined on inpu
-t line 26.
-
-
-Package glossaries Warning: Glossary entry `WingS' has not been defined on inpu
-t line 26.
-
-) (C:\Users\ngundermann\git\BA\thesis\BA\ba.bbl [16]
+]) (C:\Users\ngundermann\git\BA\thesis\BA\ba.bbl [16]
 
 ! Package babel Error: You haven't defined the language English yet.
 
@@ -1489,26 +1481,25 @@ l.34 \selectlanguage{\English}
                               
 Your command will be ignored, type <return> to proceed
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 47--53
-[][]\T1/ppl/m/sc/12 Generaldirektion Land-wirt-schaft und länd-li-che
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 47--53
-\T1/ppl/m/it/12 (In-Ve-KoS)\T1/ppl/m/n/12 .  URL: http://ec.europa.eu/agricultu
-re/direct-
- []
+! Misplaced alignment tab character &.
+l.49 \newblock John Wiley &
+                            Sons, New York, 2007.
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
 
 
 Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
-less on input line 53.
+less on input line 51.
 
 [17
 
 ]
 ! Misplaced alignment tab character &.
-l.83 \newblock John Wiley &
+l.80 \newblock John Wiley &
                             Sons Ltd, Februar 2006.
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -1518,52 +1509,52 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 93--97
+Underfull \hbox (badness 10000) in paragraph at lines 90--94
 [][]\T1/ppl/m/sc/12 Oracle\T1/ppl/m/n/12 : \T1/ppl/m/it/12 Class Grid-BagLay-ou
 t\T1/ppl/m/n/12 .  URL: htt-
  []
 
 
-Underfull \hbox (badness 1173) in paragraph at lines 105--113
+Underfull \hbox (badness 1173) in paragraph at lines 102--110
 \T1/ppl/m/sc/12 Os-car Nier-strasz\T1/ppl/m/n/12 : \T1/ppl/m/it/12 Prac-ti-cal 
 Dy-na-mic Gram-mars for Dy-na-
  []
 
 
-Overfull \hbox (13.13264pt too wide) in paragraph at lines 105--113
+Overfull \hbox (13.13264pt too wide) in paragraph at lines 102--110
 \T1/ppl/m/n/12 http://bergel.eu/download/Dyla2010/dyla10_submission_4.pdf
  []
 
 [18]
-Underfull \hbox (badness 10000) in paragraph at lines 120--126
+Underfull \hbox (badness 10000) in paragraph at lines 117--123
 [][]\T1/ppl/m/sc/12 Sukaviriya, Noi\T1/ppl/m/n/12 , \T1/ppl/m/sc/12 San-thosh K
 u-ma-ran\T1/ppl/m/n/12 , \T1/ppl/m/sc/12 Pra-b-ir
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 120--126
+Underfull \hbox (badness 10000) in paragraph at lines 117--123
 \T1/ppl/m/sc/12 Nan-di \T1/ppl/m/n/12 und \T1/ppl/m/sc/12 Ter-ry Heath\T1/ppl/m
 /n/12 : \T1/ppl/m/it/12 In-te-gra-te Model-driven UI
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 120--126
+Underfull \hbox (badness 10000) in paragraph at lines 117--123
 \T1/ppl/m/it/12 with Busi-ness Trans-for-ma-ti-ons: Shif-ting Fo-cus of Model-
  []
 
 
-Underfull \hbox (badness 6445) in paragraph at lines 120--126
+Underfull \hbox (badness 6445) in paragraph at lines 117--123
 \T1/ppl/m/it/12 driven UI\T1/ppl/m/n/12 .  Tech-ni-scher Be-richt, IBM T.J. Wat
 -son Re-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 120--126
+Underfull \hbox (badness 10000) in paragraph at lines 117--123
 \T1/ppl/m/n/12 se-arch Cen-ter, Ok-to-ber 2005.  Ver-fü-gar un-ter URL:
  []
 
 
-Overfull \hbox (10.85233pt too wide) in paragraph at lines 120--126
+Overfull \hbox (10.85233pt too wide) in paragraph at lines 117--123
 \T1/ppl/m/n/12 http://www.research.ibm.com/people/p/prabir/MDDAUI.pdf. 
  []
 
@@ -1591,7 +1582,7 @@ See the babel package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.63 \select@language{English}
+l.62 \select@language{English}
                               
 Your command will be ignored, type <return> to proceed
 
@@ -1599,7 +1590,7 @@ Your command will be ignored, type <return> to proceed
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 48.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 48.
 Package rerunfilecheck Info: File `ba.out' has not changed.
-(rerunfilecheck)             Checksum: 0B3FC3DCF58A00C9035D14A42B056526;3907.
+(rerunfilecheck)             Checksum: C34522E6C691D91EDECDA79F3AF14E84;3488.
 
 
 LaTeX Warning: There were undefined references.
@@ -1607,11 +1598,11 @@ LaTeX Warning: There were undefined references.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 48.
  ) 
 Here is how much of TeX's memory you used:
- 14328 strings out of 493921
- 211936 string characters out of 3150471
- 422432 words of memory out of 3000000
- 16706 multiletter control sequences out of 15000+200000
- 63071 words of font info for 79 fonts, out of 3000000 for 9000
+ 14343 strings out of 493921
+ 212167 string characters out of 3150471
+ 422488 words of memory out of 3000000
+ 16728 multiletter control sequences out of 15000+200000
+ 61518 words of font info for 77 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  50i,18n,49p,1722b,2009s stack positions out of 5000i,500n,10000p,200000b,50000s
 pdfTeX warning (dest): name{glo:Multiselection-Komponente} has been reference
@@ -1650,6 +1641,12 @@ ot exist, replaced by a fixed one
 pdfTeX warning (dest): name{glo:Ausdruckskraft} has been referenced but does no
 t exist, replaced by a fixed one
 
+pdfTeX warning (dest): name{glo:InVeKoS} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{glo:JEE} has been referenced but does not exist, re
+placed by a fixed one
+
 pdfTeX warning (dest): name{lstnumber.-7.79} has been referenced but does not e
 xist, replaced by a fixed one
 
@@ -1665,9 +1662,9 @@ lm/lmsy10.pfb><D:/Program Files/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><D:/Prog
 ram Files/MiKTeX/fonts/type1/urw/palatino/uplb8a.pfb><D:/Program Files/MiKTeX/f
 onts/type1/urw/palatino/uplr8a.pfb><D:/Program Files/MiKTeX/fonts/type1/urw/pal
 atino/uplr8a.pfb><D:/Program Files/MiKTeX/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on ba.pdf (73 pages, 2747874 bytes).
+Output written on ba.pdf (72 pages, 2743688 bytes).
 PDF statistics:
- 1408 PDF objects out of 1440 (max. 8388607)
- 501 named destinations out of 1000 (max. 500000)
- 492 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1373 PDF objects out of 1440 (max. 8388607)
+ 495 named destinations out of 1000 (max. 500000)
+ 444 words of extra memory for PDF output out of 10000 (max. 10000000)
 
