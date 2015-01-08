@@ -80,6 +80,16 @@ public class GuiDSLAdapterFactory extends AdapterFactoryImpl
         return createUIDescriptionAdapter();
       }
       @Override
+      public Adapter caseStructure(Structure object)
+      {
+        return createStructureAdapter();
+      }
+      @Override
+      public Adapter caseElement(Element object)
+      {
+        return createElementAdapter();
+      }
+      @Override
       public Adapter caseRefinement(Refinement object)
       {
         return createRefinementAdapter();
@@ -115,11 +125,6 @@ public class GuiDSLAdapterFactory extends AdapterFactoryImpl
         return createDescriptionTypeAdapter();
       }
       @Override
-      public Adapter caseAreaCount(AreaCount object)
-      {
-        return createAreaCountAdapter();
-      }
-      @Override
       public Adapter caseDefinition(Definition object)
       {
         return createDefinitionAdapter();
@@ -143,11 +148,6 @@ public class GuiDSLAdapterFactory extends AdapterFactoryImpl
       public Adapter caseMultiselection(Multiselection object)
       {
         return createMultiselectionAdapter();
-      }
-      @Override
-      public Adapter caseAreaAssignment(AreaAssignment object)
-      {
-        return createAreaAssignmentAdapter();
       }
       @Override
       public Adapter caseComponentDefinition(ComponentDefinition object)
@@ -202,6 +202,36 @@ public class GuiDSLAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createUIDescriptionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.deg.xtext.gui.guiDSL.Structure <em>Structure</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.deg.xtext.gui.guiDSL.Structure
+   * @generated
+   */
+  public Adapter createStructureAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.deg.xtext.gui.guiDSL.Element <em>Element</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.deg.xtext.gui.guiDSL.Element
+   * @generated
+   */
+  public Adapter createElementAdapter()
   {
     return null;
   }
@@ -312,21 +342,6 @@ public class GuiDSLAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.deg.xtext.gui.guiDSL.AreaCount <em>Area Count</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.deg.xtext.gui.guiDSL.AreaCount
-   * @generated
-   */
-  public Adapter createAreaCountAdapter()
-  {
-    return null;
-  }
-
-  /**
    * Creates a new adapter for an object of class '{@link org.deg.xtext.gui.guiDSL.Definition <em>Definition</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -397,21 +412,6 @@ public class GuiDSLAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createMultiselectionAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.deg.xtext.gui.guiDSL.AreaAssignment <em>Area Assignment</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.deg.xtext.gui.guiDSL.AreaAssignment
-   * @generated
-   */
-  public Adapter createAreaAssignmentAdapter()
   {
     return null;
   }

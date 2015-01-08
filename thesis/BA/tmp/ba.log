@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.10.14)  8 JAN 2015 14:04
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.10.14)  8 JAN 2015 14:26
 entering extended mode
 **ba.tex
 (C:\Users\ngundermann\git\BA\thesis\BA\ba.tex
@@ -1827,10 +1827,10 @@ LaTeX Warning: There were undefined references.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 48.
  ) 
 Here is how much of TeX's memory you used:
- 14434 strings out of 493921
- 213436 string characters out of 3150471
- 422935 words of memory out of 3000000
- 16781 multiletter control sequences out of 15000+200000
+ 14433 strings out of 493921
+ 213423 string characters out of 3150471
+ 421935 words of memory out of 3000000
+ 16780 multiletter control sequences out of 15000+200000
  62139 words of font info for 79 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  50i,18n,49p,1722b,2009s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1889,7 +1889,7 @@ ram Files/MiKTeX/fonts/type1/urw/courier/ucrr8a.pfb><D:/Program Files/MiKTeX/fo
 nts/type1/urw/palatino/uplb8a.pfb><D:/Program Files/MiKTeX/fonts/type1/urw/pala
 tino/uplr8a.pfb><D:/Program Files/MiKTeX/fonts/type1/urw/palatino/uplr8a.pfb><D
 :/Program Files/MiKTeX/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on ba.pdf (83 pages, 3007278 bytes).
+Output written on ba.pdf (83 pages, 3007240 bytes).
 PDF statistics:
  1494 PDF objects out of 1728 (max. 8388607)
  523 named destinations out of 1000 (max. 500000)

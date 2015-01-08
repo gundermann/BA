@@ -2,7 +2,7 @@
  */
 package org.deg.xtext.gui.guiDSL.impl;
 
-import org.deg.xtext.gui.guiDSL.AreaCount;
+import org.deg.xtext.gui.guiDSL.Element;
 import org.deg.xtext.gui.guiDSL.GuiDSLPackage;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -14,45 +14,45 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Area Count</b></em>'.
+ * An implementation of the model object '<em><b>Element</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.deg.xtext.gui.guiDSL.impl.AreaCountImpl#getAreaCount <em>Area Count</em>}</li>
+ *   <li>{@link org.deg.xtext.gui.guiDSL.impl.ElementImpl#getId <em>Id</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class AreaCountImpl extends MinimalEObjectImpl.Container implements AreaCount
+public class ElementImpl extends MinimalEObjectImpl.Container implements Element
 {
   /**
-   * The default value of the '{@link #getAreaCount() <em>Area Count</em>}' attribute.
+   * The default value of the '{@link #getId() <em>Id</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getAreaCount()
+   * @see #getId()
    * @generated
    * @ordered
    */
-  protected static final int AREA_COUNT_EDEFAULT = 0;
+  protected static final String ID_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getAreaCount() <em>Area Count</em>}' attribute.
+   * The cached value of the '{@link #getId() <em>Id</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getAreaCount()
+   * @see #getId()
    * @generated
    * @ordered
    */
-  protected int areaCount = AREA_COUNT_EDEFAULT;
+  protected String id = ID_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected AreaCountImpl()
+  protected ElementImpl()
   {
     super();
   }
@@ -65,7 +65,7 @@ public class AreaCountImpl extends MinimalEObjectImpl.Container implements AreaC
   @Override
   protected EClass eStaticClass()
   {
-    return GuiDSLPackage.Literals.AREA_COUNT;
+    return GuiDSLPackage.Literals.ELEMENT;
   }
 
   /**
@@ -73,9 +73,9 @@ public class AreaCountImpl extends MinimalEObjectImpl.Container implements AreaC
    * <!-- end-user-doc -->
    * @generated
    */
-  public int getAreaCount()
+  public String getId()
   {
-    return areaCount;
+    return id;
   }
 
   /**
@@ -83,12 +83,12 @@ public class AreaCountImpl extends MinimalEObjectImpl.Container implements AreaC
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setAreaCount(int newAreaCount)
+  public void setId(String newId)
   {
-    int oldAreaCount = areaCount;
-    areaCount = newAreaCount;
+    String oldId = id;
+    id = newId;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, GuiDSLPackage.AREA_COUNT__AREA_COUNT, oldAreaCount, areaCount));
+      eNotify(new ENotificationImpl(this, Notification.SET, GuiDSLPackage.ELEMENT__ID, oldId, id));
   }
 
   /**
@@ -101,8 +101,8 @@ public class AreaCountImpl extends MinimalEObjectImpl.Container implements AreaC
   {
     switch (featureID)
     {
-      case GuiDSLPackage.AREA_COUNT__AREA_COUNT:
-        return getAreaCount();
+      case GuiDSLPackage.ELEMENT__ID:
+        return getId();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -117,8 +117,8 @@ public class AreaCountImpl extends MinimalEObjectImpl.Container implements AreaC
   {
     switch (featureID)
     {
-      case GuiDSLPackage.AREA_COUNT__AREA_COUNT:
-        setAreaCount((Integer)newValue);
+      case GuiDSLPackage.ELEMENT__ID:
+        setId((String)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -134,8 +134,8 @@ public class AreaCountImpl extends MinimalEObjectImpl.Container implements AreaC
   {
     switch (featureID)
     {
-      case GuiDSLPackage.AREA_COUNT__AREA_COUNT:
-        setAreaCount(AREA_COUNT_EDEFAULT);
+      case GuiDSLPackage.ELEMENT__ID:
+        setId(ID_EDEFAULT);
         return;
     }
     super.eUnset(featureID);
@@ -151,8 +151,8 @@ public class AreaCountImpl extends MinimalEObjectImpl.Container implements AreaC
   {
     switch (featureID)
     {
-      case GuiDSLPackage.AREA_COUNT__AREA_COUNT:
-        return areaCount != AREA_COUNT_EDEFAULT;
+      case GuiDSLPackage.ELEMENT__ID:
+        return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
     }
     return super.eIsSet(featureID);
   }
@@ -168,10 +168,10 @@ public class AreaCountImpl extends MinimalEObjectImpl.Container implements AreaC
     if (eIsProxy()) return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (areaCount: ");
-    result.append(areaCount);
+    result.append(" (id: ");
+    result.append(id);
     result.append(')');
     return result.toString();
   }
 
-} //AreaCountImpl
+} //ElementImpl

@@ -23,7 +23,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * The following features are implemented:
  * <ul>
  *   <li>{@link org.deg.xtext.gui.guiDSL.impl.UsedDescriptionsImpl#getDescription <em>Description</em>}</li>
- *   <li>{@link org.deg.xtext.gui.guiDSL.impl.UsedDescriptionsImpl#getLocalName <em>Local Name</em>}</li>
+ *   <li>{@link org.deg.xtext.gui.guiDSL.impl.UsedDescriptionsImpl#getId <em>Id</em>}</li>
  * </ul>
  * </p>
  *
@@ -42,24 +42,24 @@ public class UsedDescriptionsImpl extends MinimalEObjectImpl.Container implement
   protected DescriptionType description;
 
   /**
-   * The default value of the '{@link #getLocalName() <em>Local Name</em>}' attribute.
+   * The default value of the '{@link #getId() <em>Id</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getLocalName()
+   * @see #getId()
    * @generated
    * @ordered
    */
-  protected static final String LOCAL_NAME_EDEFAULT = null;
+  protected static final String ID_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getLocalName() <em>Local Name</em>}' attribute.
+   * The cached value of the '{@link #getId() <em>Id</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getLocalName()
+   * @see #getId()
    * @generated
    * @ordered
    */
-  protected String localName = LOCAL_NAME_EDEFAULT;
+  protected String id = ID_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -135,9 +135,9 @@ public class UsedDescriptionsImpl extends MinimalEObjectImpl.Container implement
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getLocalName()
+  public String getId()
   {
-    return localName;
+    return id;
   }
 
   /**
@@ -145,12 +145,12 @@ public class UsedDescriptionsImpl extends MinimalEObjectImpl.Container implement
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setLocalName(String newLocalName)
+  public void setId(String newId)
   {
-    String oldLocalName = localName;
-    localName = newLocalName;
+    String oldId = id;
+    id = newId;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, GuiDSLPackage.USED_DESCRIPTIONS__LOCAL_NAME, oldLocalName, localName));
+      eNotify(new ENotificationImpl(this, Notification.SET, GuiDSLPackage.USED_DESCRIPTIONS__ID, oldId, id));
   }
 
   /**
@@ -181,8 +181,8 @@ public class UsedDescriptionsImpl extends MinimalEObjectImpl.Container implement
     {
       case GuiDSLPackage.USED_DESCRIPTIONS__DESCRIPTION:
         return getDescription();
-      case GuiDSLPackage.USED_DESCRIPTIONS__LOCAL_NAME:
-        return getLocalName();
+      case GuiDSLPackage.USED_DESCRIPTIONS__ID:
+        return getId();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -200,8 +200,8 @@ public class UsedDescriptionsImpl extends MinimalEObjectImpl.Container implement
       case GuiDSLPackage.USED_DESCRIPTIONS__DESCRIPTION:
         setDescription((DescriptionType)newValue);
         return;
-      case GuiDSLPackage.USED_DESCRIPTIONS__LOCAL_NAME:
-        setLocalName((String)newValue);
+      case GuiDSLPackage.USED_DESCRIPTIONS__ID:
+        setId((String)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -220,8 +220,8 @@ public class UsedDescriptionsImpl extends MinimalEObjectImpl.Container implement
       case GuiDSLPackage.USED_DESCRIPTIONS__DESCRIPTION:
         setDescription((DescriptionType)null);
         return;
-      case GuiDSLPackage.USED_DESCRIPTIONS__LOCAL_NAME:
-        setLocalName(LOCAL_NAME_EDEFAULT);
+      case GuiDSLPackage.USED_DESCRIPTIONS__ID:
+        setId(ID_EDEFAULT);
         return;
     }
     super.eUnset(featureID);
@@ -239,8 +239,8 @@ public class UsedDescriptionsImpl extends MinimalEObjectImpl.Container implement
     {
       case GuiDSLPackage.USED_DESCRIPTIONS__DESCRIPTION:
         return description != null;
-      case GuiDSLPackage.USED_DESCRIPTIONS__LOCAL_NAME:
-        return LOCAL_NAME_EDEFAULT == null ? localName != null : !LOCAL_NAME_EDEFAULT.equals(localName);
+      case GuiDSLPackage.USED_DESCRIPTIONS__ID:
+        return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
     }
     return super.eIsSet(featureID);
   }
@@ -256,8 +256,8 @@ public class UsedDescriptionsImpl extends MinimalEObjectImpl.Container implement
     if (eIsProxy()) return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (localName: ");
-    result.append(localName);
+    result.append(" (id: ");
+    result.append(id);
     result.append(')');
     return result.toString();
   }

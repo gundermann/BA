@@ -1,38 +1,32 @@
-' as '=31
-' as: '=18
-' with name: '=14
-'->'=30
-':'=32
-'<'=26
-'<-'=29
-'>'=27
-'Area count: '=19
-'Area:'=28
-'Button'=13
-'ChangeText'=37
-'Click'=36
-'DEF '=20
-'END DEF'=21
-'END REFINE'=12
+'->'=26
+':'=13
+';'=14
+'Button'=15
+'ChangeText'=32
+'Click'=31
 'INNERCOMPLEX'=24
-'Label'=15
+'Label'=17
 'Multiselection'=25
-'REFINE'=11
+'Structure'=12
 'WINDOW'=23
-'get properties from:'=16
-'interactiontype='=35
-'propertyKey='=33
-'text='=34
+'as'=30
+'as:'=21
+'from: '=18
+'from:'=16
+'get properties from:'=19
+'interactiontype='=29
+'propertyKey='=27
+'text='=28
 'type: '=22
-'use: '=17
-RULE_ANY_OTHER=10
+'use: '=20
+RULE_ANY_OTHER=11
 RULE_ID=7
-RULE_INT=5
-RULE_ML_COMMENT=8
-RULE_SL_COMMENT=9
+RULE_INPUT_DESCRIPTION=5
+RULE_INT=8
+RULE_ML_COMMENT=9
+RULE_SL_COMMENT=10
 RULE_STRING=4
 RULE_WS=6
-T__11=11
 T__12=12
 T__13=13
 T__14=14
@@ -54,8 +48,3 @@ T__29=29
 T__30=30
 T__31=31
 T__32=32
-T__33=33
-T__34=34
-T__35=35
-T__36=36
-T__37=37

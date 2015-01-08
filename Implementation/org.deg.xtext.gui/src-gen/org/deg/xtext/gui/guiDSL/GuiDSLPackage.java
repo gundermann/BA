@@ -67,22 +67,13 @@ public interface GuiDSLPackage extends EPackage
   int UI_DESCRIPTION = 0;
 
   /**
-   * The feature id for the '<em><b>Area Count</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int UI_DESCRIPTION__AREA_COUNT = 0;
-
-  /**
    * The feature id for the '<em><b>Type Definition</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int UI_DESCRIPTION__TYPE_DEFINITION = 1;
+  int UI_DESCRIPTION__TYPE_DEFINITION = 0;
 
   /**
    * The feature id for the '<em><b>Property</b></em>' containment reference.
@@ -91,7 +82,7 @@ public interface GuiDSLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int UI_DESCRIPTION__PROPERTY = 2;
+  int UI_DESCRIPTION__PROPERTY = 1;
 
   /**
    * The feature id for the '<em><b>Used Descriptions</b></em>' containment reference list.
@@ -100,7 +91,7 @@ public interface GuiDSLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int UI_DESCRIPTION__USED_DESCRIPTIONS = 3;
+  int UI_DESCRIPTION__USED_DESCRIPTIONS = 2;
 
   /**
    * The feature id for the '<em><b>Refinements</b></em>' containment reference list.
@@ -109,7 +100,7 @@ public interface GuiDSLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int UI_DESCRIPTION__REFINEMENTS = 4;
+  int UI_DESCRIPTION__REFINEMENTS = 3;
 
   /**
    * The feature id for the '<em><b>Definitions</b></em>' containment reference list.
@@ -118,16 +109,16 @@ public interface GuiDSLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int UI_DESCRIPTION__DEFINITIONS = 5;
+  int UI_DESCRIPTION__DEFINITIONS = 4;
 
   /**
-   * The feature id for the '<em><b>Areas</b></em>' containment reference list.
+   * The feature id for the '<em><b>Structure</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int UI_DESCRIPTION__AREAS = 6;
+  int UI_DESCRIPTION__STRUCTURE = 5;
 
   /**
    * The number of structural features of the '<em>UI Description</em>' class.
@@ -136,7 +127,72 @@ public interface GuiDSLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int UI_DESCRIPTION_FEATURE_COUNT = 7;
+  int UI_DESCRIPTION_FEATURE_COUNT = 6;
+
+  /**
+   * The meta object id for the '{@link org.deg.xtext.gui.guiDSL.impl.StructureImpl <em>Structure</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.deg.xtext.gui.guiDSL.impl.StructureImpl
+   * @see org.deg.xtext.gui.guiDSL.impl.GuiDSLPackageImpl#getStructure()
+   * @generated
+   */
+  int STRUCTURE = 1;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int STRUCTURE__NAME = 0;
+
+  /**
+   * The feature id for the '<em><b>Ordered Elements</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int STRUCTURE__ORDERED_ELEMENTS = 1;
+
+  /**
+   * The number of structural features of the '<em>Structure</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int STRUCTURE_FEATURE_COUNT = 2;
+
+  /**
+   * The meta object id for the '{@link org.deg.xtext.gui.guiDSL.impl.ElementImpl <em>Element</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.deg.xtext.gui.guiDSL.impl.ElementImpl
+   * @see org.deg.xtext.gui.guiDSL.impl.GuiDSLPackageImpl#getElement()
+   * @generated
+   */
+  int ELEMENT = 2;
+
+  /**
+   * The feature id for the '<em><b>Id</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ELEMENT__ID = 0;
+
+  /**
+   * The number of structural features of the '<em>Element</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ELEMENT_FEATURE_COUNT = 1;
 
   /**
    * The meta object id for the '{@link org.deg.xtext.gui.guiDSL.impl.RefinementImpl <em>Refinement</em>}' class.
@@ -146,7 +202,7 @@ public interface GuiDSLPackage extends EPackage
    * @see org.deg.xtext.gui.guiDSL.impl.GuiDSLPackageImpl#getRefinement()
    * @generated
    */
-  int REFINEMENT = 1;
+  int REFINEMENT = 3;
 
   /**
    * The feature id for the '<em><b>Concrete Refinement</b></em>' containment reference.
@@ -174,16 +230,7 @@ public interface GuiDSLPackage extends EPackage
    * @see org.deg.xtext.gui.guiDSL.impl.GuiDSLPackageImpl#getComponentRefinement()
    * @generated
    */
-  int COMPONENT_REFINEMENT = 2;
-
-  /**
-   * The feature id for the '<em><b>Type</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int COMPONENT_REFINEMENT__TYPE = 0;
+  int COMPONENT_REFINEMENT = 4;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -192,7 +239,16 @@ public interface GuiDSLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int COMPONENT_REFINEMENT__NAME = 1;
+  int COMPONENT_REFINEMENT__NAME = 0;
+
+  /**
+   * The feature id for the '<em><b>Id</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int COMPONENT_REFINEMENT__ID = 1;
 
   /**
    * The feature id for the '<em><b>Properties</b></em>' containment reference.
@@ -220,16 +276,7 @@ public interface GuiDSLPackage extends EPackage
    * @see org.deg.xtext.gui.guiDSL.impl.GuiDSLPackageImpl#getButtonRefinement()
    * @generated
    */
-  int BUTTON_REFINEMENT = 3;
-
-  /**
-   * The feature id for the '<em><b>Type</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int BUTTON_REFINEMENT__TYPE = COMPONENT_REFINEMENT__TYPE;
+  int BUTTON_REFINEMENT = 5;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -239,6 +286,15 @@ public interface GuiDSLPackage extends EPackage
    * @ordered
    */
   int BUTTON_REFINEMENT__NAME = COMPONENT_REFINEMENT__NAME;
+
+  /**
+   * The feature id for the '<em><b>Id</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BUTTON_REFINEMENT__ID = COMPONENT_REFINEMENT__ID;
 
   /**
    * The feature id for the '<em><b>Properties</b></em>' containment reference.
@@ -266,16 +322,7 @@ public interface GuiDSLPackage extends EPackage
    * @see org.deg.xtext.gui.guiDSL.impl.GuiDSLPackageImpl#getLabelRefinement()
    * @generated
    */
-  int LABEL_REFINEMENT = 4;
-
-  /**
-   * The feature id for the '<em><b>Type</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int LABEL_REFINEMENT__TYPE = COMPONENT_REFINEMENT__TYPE;
+  int LABEL_REFINEMENT = 6;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -285,6 +332,15 @@ public interface GuiDSLPackage extends EPackage
    * @ordered
    */
   int LABEL_REFINEMENT__NAME = COMPONENT_REFINEMENT__NAME;
+
+  /**
+   * The feature id for the '<em><b>Id</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LABEL_REFINEMENT__ID = COMPONENT_REFINEMENT__ID;
 
   /**
    * The feature id for the '<em><b>Properties</b></em>' containment reference.
@@ -312,7 +368,7 @@ public interface GuiDSLPackage extends EPackage
    * @see org.deg.xtext.gui.guiDSL.impl.GuiDSLPackageImpl#getProperty()
    * @generated
    */
-  int PROPERTY = 5;
+  int PROPERTY = 7;
 
   /**
    * The feature id for the '<em><b>Properties File</b></em>' attribute.
@@ -340,7 +396,7 @@ public interface GuiDSLPackage extends EPackage
    * @see org.deg.xtext.gui.guiDSL.impl.GuiDSLPackageImpl#getUsedDescriptions()
    * @generated
    */
-  int USED_DESCRIPTIONS = 6;
+  int USED_DESCRIPTIONS = 8;
 
   /**
    * The feature id for the '<em><b>Description</b></em>' containment reference.
@@ -352,13 +408,13 @@ public interface GuiDSLPackage extends EPackage
   int USED_DESCRIPTIONS__DESCRIPTION = 0;
 
   /**
-   * The feature id for the '<em><b>Local Name</b></em>' attribute.
+   * The feature id for the '<em><b>Id</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int USED_DESCRIPTIONS__LOCAL_NAME = 1;
+  int USED_DESCRIPTIONS__ID = 1;
 
   /**
    * The number of structural features of the '<em>Used Descriptions</em>' class.
@@ -377,7 +433,7 @@ public interface GuiDSLPackage extends EPackage
    * @see org.deg.xtext.gui.guiDSL.impl.GuiDSLPackageImpl#getDescriptionType()
    * @generated
    */
-  int DESCRIPTION_TYPE = 7;
+  int DESCRIPTION_TYPE = 9;
 
   /**
    * The number of structural features of the '<em>Description Type</em>' class.
@@ -389,34 +445,6 @@ public interface GuiDSLPackage extends EPackage
   int DESCRIPTION_TYPE_FEATURE_COUNT = 0;
 
   /**
-   * The meta object id for the '{@link org.deg.xtext.gui.guiDSL.impl.AreaCountImpl <em>Area Count</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.deg.xtext.gui.guiDSL.impl.AreaCountImpl
-   * @see org.deg.xtext.gui.guiDSL.impl.GuiDSLPackageImpl#getAreaCount()
-   * @generated
-   */
-  int AREA_COUNT = 8;
-
-  /**
-   * The feature id for the '<em><b>Area Count</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int AREA_COUNT__AREA_COUNT = 0;
-
-  /**
-   * The number of structural features of the '<em>Area Count</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int AREA_COUNT_FEATURE_COUNT = 1;
-
-  /**
    * The meta object id for the '{@link org.deg.xtext.gui.guiDSL.impl.DefinitionImpl <em>Definition</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -424,7 +452,7 @@ public interface GuiDSLPackage extends EPackage
    * @see org.deg.xtext.gui.guiDSL.impl.GuiDSLPackageImpl#getDefinition()
    * @generated
    */
-  int DEFINITION = 9;
+  int DEFINITION = 10;
 
   /**
    * The feature id for the '<em><b>Concrete Defition</b></em>' containment reference.
@@ -452,7 +480,7 @@ public interface GuiDSLPackage extends EPackage
    * @see org.deg.xtext.gui.guiDSL.impl.GuiDSLPackageImpl#getTypeDefinition()
    * @generated
    */
-  int TYPE_DEFINITION = 10;
+  int TYPE_DEFINITION = 11;
 
   /**
    * The feature id for the '<em><b>Type</b></em>' attribute.
@@ -480,7 +508,7 @@ public interface GuiDSLPackage extends EPackage
    * @see org.deg.xtext.gui.guiDSL.impl.GuiDSLPackageImpl#getUIDescriptionImport()
    * @generated
    */
-  int UI_DESCRIPTION_IMPORT = 11;
+  int UI_DESCRIPTION_IMPORT = 12;
 
   /**
    * The feature id for the '<em><b>Description Name</b></em>' attribute.
@@ -508,7 +536,7 @@ public interface GuiDSLPackage extends EPackage
    * @see org.deg.xtext.gui.guiDSL.impl.GuiDSLPackageImpl#getComplexComponent()
    * @generated
    */
-  int COMPLEX_COMPONENT = 12;
+  int COMPLEX_COMPONENT = 13;
 
   /**
    * The number of structural features of the '<em>Complex Component</em>' class.
@@ -527,7 +555,7 @@ public interface GuiDSLPackage extends EPackage
    * @see org.deg.xtext.gui.guiDSL.impl.GuiDSLPackageImpl#getMultiselection()
    * @generated
    */
-  int MULTISELECTION = 13;
+  int MULTISELECTION = 14;
 
   /**
    * The feature id for the '<em><b>Description Name</b></em>' attribute.
@@ -557,43 +585,6 @@ public interface GuiDSLPackage extends EPackage
   int MULTISELECTION_FEATURE_COUNT = COMPLEX_COMPONENT_FEATURE_COUNT + 2;
 
   /**
-   * The meta object id for the '{@link org.deg.xtext.gui.guiDSL.impl.AreaAssignmentImpl <em>Area Assignment</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.deg.xtext.gui.guiDSL.impl.AreaAssignmentImpl
-   * @see org.deg.xtext.gui.guiDSL.impl.GuiDSLPackageImpl#getAreaAssignment()
-   * @generated
-   */
-  int AREA_ASSIGNMENT = 14;
-
-  /**
-   * The feature id for the '<em><b>Area</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int AREA_ASSIGNMENT__AREA = 0;
-
-  /**
-   * The feature id for the '<em><b>Elements</b></em>' attribute list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int AREA_ASSIGNMENT__ELEMENTS = 1;
-
-  /**
-   * The number of structural features of the '<em>Area Assignment</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int AREA_ASSIGNMENT_FEATURE_COUNT = 2;
-
-  /**
    * The meta object id for the '{@link org.deg.xtext.gui.guiDSL.impl.ComponentDefinitionImpl <em>Component Definition</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -604,22 +595,22 @@ public interface GuiDSLPackage extends EPackage
   int COMPONENT_DEFINITION = 15;
 
   /**
-   * The feature id for the '<em><b>Type</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int COMPONENT_DEFINITION__TYPE = 0;
-
-  /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int COMPONENT_DEFINITION__NAME = 1;
+  int COMPONENT_DEFINITION__NAME = 0;
+
+  /**
+   * The feature id for the '<em><b>Id</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int COMPONENT_DEFINITION__ID = 1;
 
   /**
    * The feature id for the '<em><b>Properties</b></em>' containment reference.
@@ -650,15 +641,6 @@ public interface GuiDSLPackage extends EPackage
   int BUTTON_DEFINITION = 16;
 
   /**
-   * The feature id for the '<em><b>Type</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int BUTTON_DEFINITION__TYPE = COMPONENT_DEFINITION__TYPE;
-
-  /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -666,6 +648,15 @@ public interface GuiDSLPackage extends EPackage
    * @ordered
    */
   int BUTTON_DEFINITION__NAME = COMPONENT_DEFINITION__NAME;
+
+  /**
+   * The feature id for the '<em><b>Id</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BUTTON_DEFINITION__ID = COMPONENT_DEFINITION__ID;
 
   /**
    * The feature id for the '<em><b>Properties</b></em>' containment reference.
@@ -742,15 +733,6 @@ public interface GuiDSLPackage extends EPackage
   int LABEL_DEFINITION = 18;
 
   /**
-   * The feature id for the '<em><b>Type</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int LABEL_DEFINITION__TYPE = COMPONENT_DEFINITION__TYPE;
-
-  /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -758,6 +740,15 @@ public interface GuiDSLPackage extends EPackage
    * @ordered
    */
   int LABEL_DEFINITION__NAME = COMPONENT_DEFINITION__NAME;
+
+  /**
+   * The feature id for the '<em><b>Id</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LABEL_DEFINITION__ID = COMPONENT_DEFINITION__ID;
 
   /**
    * The feature id for the '<em><b>Properties</b></em>' containment reference.
@@ -787,17 +778,6 @@ public interface GuiDSLPackage extends EPackage
    * @generated
    */
   EClass getUIDescription();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.deg.xtext.gui.guiDSL.UIDescription#getAreaCount <em>Area Count</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Area Count</em>'.
-   * @see org.deg.xtext.gui.guiDSL.UIDescription#getAreaCount()
-   * @see #getUIDescription()
-   * @generated
-   */
-  EReference getUIDescription_AreaCount();
 
   /**
    * Returns the meta object for the containment reference '{@link org.deg.xtext.gui.guiDSL.UIDescription#getTypeDefinition <em>Type Definition</em>}'.
@@ -855,15 +835,68 @@ public interface GuiDSLPackage extends EPackage
   EReference getUIDescription_Definitions();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.deg.xtext.gui.guiDSL.UIDescription#getAreas <em>Areas</em>}'.
+   * Returns the meta object for the containment reference '{@link org.deg.xtext.gui.guiDSL.UIDescription#getStructure <em>Structure</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Areas</em>'.
-   * @see org.deg.xtext.gui.guiDSL.UIDescription#getAreas()
+   * @return the meta object for the containment reference '<em>Structure</em>'.
+   * @see org.deg.xtext.gui.guiDSL.UIDescription#getStructure()
    * @see #getUIDescription()
    * @generated
    */
-  EReference getUIDescription_Areas();
+  EReference getUIDescription_Structure();
+
+  /**
+   * Returns the meta object for class '{@link org.deg.xtext.gui.guiDSL.Structure <em>Structure</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Structure</em>'.
+   * @see org.deg.xtext.gui.guiDSL.Structure
+   * @generated
+   */
+  EClass getStructure();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.deg.xtext.gui.guiDSL.Structure#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see org.deg.xtext.gui.guiDSL.Structure#getName()
+   * @see #getStructure()
+   * @generated
+   */
+  EAttribute getStructure_Name();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.deg.xtext.gui.guiDSL.Structure#getOrderedElements <em>Ordered Elements</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Ordered Elements</em>'.
+   * @see org.deg.xtext.gui.guiDSL.Structure#getOrderedElements()
+   * @see #getStructure()
+   * @generated
+   */
+  EReference getStructure_OrderedElements();
+
+  /**
+   * Returns the meta object for class '{@link org.deg.xtext.gui.guiDSL.Element <em>Element</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Element</em>'.
+   * @see org.deg.xtext.gui.guiDSL.Element
+   * @generated
+   */
+  EClass getElement();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.deg.xtext.gui.guiDSL.Element#getId <em>Id</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Id</em>'.
+   * @see org.deg.xtext.gui.guiDSL.Element#getId()
+   * @see #getElement()
+   * @generated
+   */
+  EAttribute getElement_Id();
 
   /**
    * Returns the meta object for class '{@link org.deg.xtext.gui.guiDSL.Refinement <em>Refinement</em>}'.
@@ -897,17 +930,6 @@ public interface GuiDSLPackage extends EPackage
   EClass getComponentRefinement();
 
   /**
-   * Returns the meta object for the attribute '{@link org.deg.xtext.gui.guiDSL.ComponentRefinement#getType <em>Type</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Type</em>'.
-   * @see org.deg.xtext.gui.guiDSL.ComponentRefinement#getType()
-   * @see #getComponentRefinement()
-   * @generated
-   */
-  EAttribute getComponentRefinement_Type();
-
-  /**
    * Returns the meta object for the attribute '{@link org.deg.xtext.gui.guiDSL.ComponentRefinement#getName <em>Name</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -917,6 +939,17 @@ public interface GuiDSLPackage extends EPackage
    * @generated
    */
   EAttribute getComponentRefinement_Name();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.deg.xtext.gui.guiDSL.ComponentRefinement#getId <em>Id</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Id</em>'.
+   * @see org.deg.xtext.gui.guiDSL.ComponentRefinement#getId()
+   * @see #getComponentRefinement()
+   * @generated
+   */
+  EAttribute getComponentRefinement_Id();
 
   /**
    * Returns the meta object for the containment reference '{@link org.deg.xtext.gui.guiDSL.ComponentRefinement#getProperties <em>Properties</em>}'.
@@ -992,15 +1025,15 @@ public interface GuiDSLPackage extends EPackage
   EReference getUsedDescriptions_Description();
 
   /**
-   * Returns the meta object for the attribute '{@link org.deg.xtext.gui.guiDSL.UsedDescriptions#getLocalName <em>Local Name</em>}'.
+   * Returns the meta object for the attribute '{@link org.deg.xtext.gui.guiDSL.UsedDescriptions#getId <em>Id</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Local Name</em>'.
-   * @see org.deg.xtext.gui.guiDSL.UsedDescriptions#getLocalName()
+   * @return the meta object for the attribute '<em>Id</em>'.
+   * @see org.deg.xtext.gui.guiDSL.UsedDescriptions#getId()
    * @see #getUsedDescriptions()
    * @generated
    */
-  EAttribute getUsedDescriptions_LocalName();
+  EAttribute getUsedDescriptions_Id();
 
   /**
    * Returns the meta object for class '{@link org.deg.xtext.gui.guiDSL.DescriptionType <em>Description Type</em>}'.
@@ -1011,27 +1044,6 @@ public interface GuiDSLPackage extends EPackage
    * @generated
    */
   EClass getDescriptionType();
-
-  /**
-   * Returns the meta object for class '{@link org.deg.xtext.gui.guiDSL.AreaCount <em>Area Count</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Area Count</em>'.
-   * @see org.deg.xtext.gui.guiDSL.AreaCount
-   * @generated
-   */
-  EClass getAreaCount();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.deg.xtext.gui.guiDSL.AreaCount#getAreaCount <em>Area Count</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Area Count</em>'.
-   * @see org.deg.xtext.gui.guiDSL.AreaCount#getAreaCount()
-   * @see #getAreaCount()
-   * @generated
-   */
-  EAttribute getAreaCount_AreaCount();
 
   /**
    * Returns the meta object for class '{@link org.deg.xtext.gui.guiDSL.Definition <em>Definition</em>}'.
@@ -1139,38 +1151,6 @@ public interface GuiDSLPackage extends EPackage
   EAttribute getMultiselection_InputType();
 
   /**
-   * Returns the meta object for class '{@link org.deg.xtext.gui.guiDSL.AreaAssignment <em>Area Assignment</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Area Assignment</em>'.
-   * @see org.deg.xtext.gui.guiDSL.AreaAssignment
-   * @generated
-   */
-  EClass getAreaAssignment();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.deg.xtext.gui.guiDSL.AreaAssignment#getArea <em>Area</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Area</em>'.
-   * @see org.deg.xtext.gui.guiDSL.AreaAssignment#getArea()
-   * @see #getAreaAssignment()
-   * @generated
-   */
-  EAttribute getAreaAssignment_Area();
-
-  /**
-   * Returns the meta object for the attribute list '{@link org.deg.xtext.gui.guiDSL.AreaAssignment#getElements <em>Elements</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute list '<em>Elements</em>'.
-   * @see org.deg.xtext.gui.guiDSL.AreaAssignment#getElements()
-   * @see #getAreaAssignment()
-   * @generated
-   */
-  EAttribute getAreaAssignment_Elements();
-
-  /**
    * Returns the meta object for class '{@link org.deg.xtext.gui.guiDSL.ComponentDefinition <em>Component Definition</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1179,17 +1159,6 @@ public interface GuiDSLPackage extends EPackage
    * @generated
    */
   EClass getComponentDefinition();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.deg.xtext.gui.guiDSL.ComponentDefinition#getType <em>Type</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Type</em>'.
-   * @see org.deg.xtext.gui.guiDSL.ComponentDefinition#getType()
-   * @see #getComponentDefinition()
-   * @generated
-   */
-  EAttribute getComponentDefinition_Type();
 
   /**
    * Returns the meta object for the attribute '{@link org.deg.xtext.gui.guiDSL.ComponentDefinition#getName <em>Name</em>}'.
@@ -1201,6 +1170,17 @@ public interface GuiDSLPackage extends EPackage
    * @generated
    */
   EAttribute getComponentDefinition_Name();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.deg.xtext.gui.guiDSL.ComponentDefinition#getId <em>Id</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Id</em>'.
+   * @see org.deg.xtext.gui.guiDSL.ComponentDefinition#getId()
+   * @see #getComponentDefinition()
+   * @generated
+   */
+  EAttribute getComponentDefinition_Id();
 
   /**
    * Returns the meta object for the containment reference '{@link org.deg.xtext.gui.guiDSL.ComponentDefinition#getProperties <em>Properties</em>}'.
@@ -1310,14 +1290,6 @@ public interface GuiDSLPackage extends EPackage
     EClass UI_DESCRIPTION = eINSTANCE.getUIDescription();
 
     /**
-     * The meta object literal for the '<em><b>Area Count</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference UI_DESCRIPTION__AREA_COUNT = eINSTANCE.getUIDescription_AreaCount();
-
-    /**
      * The meta object literal for the '<em><b>Type Definition</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -1358,12 +1330,56 @@ public interface GuiDSLPackage extends EPackage
     EReference UI_DESCRIPTION__DEFINITIONS = eINSTANCE.getUIDescription_Definitions();
 
     /**
-     * The meta object literal for the '<em><b>Areas</b></em>' containment reference list feature.
+     * The meta object literal for the '<em><b>Structure</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference UI_DESCRIPTION__AREAS = eINSTANCE.getUIDescription_Areas();
+    EReference UI_DESCRIPTION__STRUCTURE = eINSTANCE.getUIDescription_Structure();
+
+    /**
+     * The meta object literal for the '{@link org.deg.xtext.gui.guiDSL.impl.StructureImpl <em>Structure</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.deg.xtext.gui.guiDSL.impl.StructureImpl
+     * @see org.deg.xtext.gui.guiDSL.impl.GuiDSLPackageImpl#getStructure()
+     * @generated
+     */
+    EClass STRUCTURE = eINSTANCE.getStructure();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute STRUCTURE__NAME = eINSTANCE.getStructure_Name();
+
+    /**
+     * The meta object literal for the '<em><b>Ordered Elements</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference STRUCTURE__ORDERED_ELEMENTS = eINSTANCE.getStructure_OrderedElements();
+
+    /**
+     * The meta object literal for the '{@link org.deg.xtext.gui.guiDSL.impl.ElementImpl <em>Element</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.deg.xtext.gui.guiDSL.impl.ElementImpl
+     * @see org.deg.xtext.gui.guiDSL.impl.GuiDSLPackageImpl#getElement()
+     * @generated
+     */
+    EClass ELEMENT = eINSTANCE.getElement();
+
+    /**
+     * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute ELEMENT__ID = eINSTANCE.getElement_Id();
 
     /**
      * The meta object literal for the '{@link org.deg.xtext.gui.guiDSL.impl.RefinementImpl <em>Refinement</em>}' class.
@@ -1394,20 +1410,20 @@ public interface GuiDSLPackage extends EPackage
     EClass COMPONENT_REFINEMENT = eINSTANCE.getComponentRefinement();
 
     /**
-     * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute COMPONENT_REFINEMENT__TYPE = eINSTANCE.getComponentRefinement_Type();
-
-    /**
      * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
     EAttribute COMPONENT_REFINEMENT__NAME = eINSTANCE.getComponentRefinement_Name();
+
+    /**
+     * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute COMPONENT_REFINEMENT__ID = eINSTANCE.getComponentRefinement_Id();
 
     /**
      * The meta object literal for the '<em><b>Properties</b></em>' containment reference feature.
@@ -1474,12 +1490,12 @@ public interface GuiDSLPackage extends EPackage
     EReference USED_DESCRIPTIONS__DESCRIPTION = eINSTANCE.getUsedDescriptions_Description();
 
     /**
-     * The meta object literal for the '<em><b>Local Name</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute USED_DESCRIPTIONS__LOCAL_NAME = eINSTANCE.getUsedDescriptions_LocalName();
+    EAttribute USED_DESCRIPTIONS__ID = eINSTANCE.getUsedDescriptions_Id();
 
     /**
      * The meta object literal for the '{@link org.deg.xtext.gui.guiDSL.impl.DescriptionTypeImpl <em>Description Type</em>}' class.
@@ -1490,24 +1506,6 @@ public interface GuiDSLPackage extends EPackage
      * @generated
      */
     EClass DESCRIPTION_TYPE = eINSTANCE.getDescriptionType();
-
-    /**
-     * The meta object literal for the '{@link org.deg.xtext.gui.guiDSL.impl.AreaCountImpl <em>Area Count</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.deg.xtext.gui.guiDSL.impl.AreaCountImpl
-     * @see org.deg.xtext.gui.guiDSL.impl.GuiDSLPackageImpl#getAreaCount()
-     * @generated
-     */
-    EClass AREA_COUNT = eINSTANCE.getAreaCount();
-
-    /**
-     * The meta object literal for the '<em><b>Area Count</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute AREA_COUNT__AREA_COUNT = eINSTANCE.getAreaCount_AreaCount();
 
     /**
      * The meta object literal for the '{@link org.deg.xtext.gui.guiDSL.impl.DefinitionImpl <em>Definition</em>}' class.
@@ -1600,32 +1598,6 @@ public interface GuiDSLPackage extends EPackage
     EAttribute MULTISELECTION__INPUT_TYPE = eINSTANCE.getMultiselection_InputType();
 
     /**
-     * The meta object literal for the '{@link org.deg.xtext.gui.guiDSL.impl.AreaAssignmentImpl <em>Area Assignment</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.deg.xtext.gui.guiDSL.impl.AreaAssignmentImpl
-     * @see org.deg.xtext.gui.guiDSL.impl.GuiDSLPackageImpl#getAreaAssignment()
-     * @generated
-     */
-    EClass AREA_ASSIGNMENT = eINSTANCE.getAreaAssignment();
-
-    /**
-     * The meta object literal for the '<em><b>Area</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute AREA_ASSIGNMENT__AREA = eINSTANCE.getAreaAssignment_Area();
-
-    /**
-     * The meta object literal for the '<em><b>Elements</b></em>' attribute list feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute AREA_ASSIGNMENT__ELEMENTS = eINSTANCE.getAreaAssignment_Elements();
-
-    /**
      * The meta object literal for the '{@link org.deg.xtext.gui.guiDSL.impl.ComponentDefinitionImpl <em>Component Definition</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -1636,20 +1608,20 @@ public interface GuiDSLPackage extends EPackage
     EClass COMPONENT_DEFINITION = eINSTANCE.getComponentDefinition();
 
     /**
-     * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute COMPONENT_DEFINITION__TYPE = eINSTANCE.getComponentDefinition_Type();
-
-    /**
      * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
     EAttribute COMPONENT_DEFINITION__NAME = eINSTANCE.getComponentDefinition_Name();
+
+    /**
+     * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute COMPONENT_DEFINITION__ID = eINSTANCE.getComponentDefinition_Id();
 
     /**
      * The meta object literal for the '<em><b>Properties</b></em>' containment reference feature.

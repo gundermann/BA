@@ -8,15 +8,12 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import org.deg.xtext.gui.guiDSL.AreaAssignment;
 import org.deg.xtext.gui.guiDSL.ButtonDefinition;
 import org.deg.xtext.gui.guiDSL.ComponentDefinition;
 import org.deg.xtext.gui.guiDSL.Definition;
 import org.deg.xtext.gui.guiDSL.LabelDefinition;
 import org.deg.xtext.gui.guiDSL.TypeDefinition;
 import org.deg.xtext.gui.guiDSL.UIDescription;
-import org.deg.xtext.gui.guiDSL.UsedDescriptions;
-import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.TreeIterator;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EObject;
@@ -53,13 +50,8 @@ public class GuiDSLGenerator implements IGenerator {
     Iterable<EObject> _iterable = IteratorExtensions.<EObject>toIterable(_allContents);
     Iterable<Definition> _filter = Iterables.<Definition>filter(_iterable, Definition.class);
     for (final Definition def : _filter) {
-      {
-        ComponentDefinition _concreteDefition = def.getConcreteDefition();
-        String element = _concreteDefition.getName();
-        ComponentDefinition _concreteDefition_1 = def.getConcreteDefition();
-        String type = _concreteDefition_1.getType();
-        this.uiElemetsToType.put(element, type);
-      }
+      ComponentDefinition _concreteDefition = def.getConcreteDefition();
+      String element = _concreteDefition.getName();
     }
     TreeIterator<EObject> _allContents_1 = resource.getAllContents();
     Iterable<EObject> _iterable_1 = IteratorExtensions.<EObject>toIterable(_allContents_1);
@@ -166,59 +158,11 @@ public class GuiDSLGenerator implements IGenerator {
     StringConcatenation _builder = new StringConcatenation();
     _builder.append("public void initBox(VBox b){");
     _builder.newLine();
-    {
-      EList<AreaAssignment> _areas = description.getAreas();
-      for(final AreaAssignment area : _areas) {
-        _builder.append("\t\t");
-        _builder.append("b.getChildren().add(initArea");
-        int _area = area.getArea();
-        _builder.append(_area, "\t\t");
-        _builder.append("());\t\t\t");
-        _builder.newLineIfNotEmpty();
-      }
-    }
     _builder.append("\t\t");
     _builder.append("}");
     _builder.newLine();
     _builder.append("\t\t");
     _builder.newLine();
-    {
-      EList<AreaAssignment> _areas_1 = description.getAreas();
-      for(final AreaAssignment area_1 : _areas_1) {
-        _builder.append("\t\t");
-        _builder.append("public Node initArea");
-        int _area_1 = area_1.getArea();
-        _builder.append(_area_1, "\t\t");
-        _builder.append("(){");
-        _builder.newLineIfNotEmpty();
-        {
-          EList<Definition> _definitions = description.getDefinitions();
-          for(final Definition def : _definitions) {
-          }
-        }
-        {
-          if ((!(this.compiled).booleanValue())) {
-            {
-              EList<UsedDescriptions> _usedDescriptions = description.getUsedDescriptions();
-              for(final UsedDescriptions used : _usedDescriptions) {
-              }
-            }
-          } else {
-            _builder.append("\t\t");
-            _builder.append("\t");
-            String _switchCompiled = this.switchCompiled();
-            _builder.append(_switchCompiled, "\t\t\t");
-            _builder.newLineIfNotEmpty();
-          }
-        }
-        _builder.append("\t\t");
-        _builder.append("}\t");
-        _builder.newLine();
-        _builder.append("\t\t");
-        _builder.append("\t\t");
-        _builder.newLine();
-      }
-    }
     return _builder;
   }
   
@@ -338,22 +282,6 @@ public class GuiDSLGenerator implements IGenerator {
   
   public CharSequence compileDefinition(final Definition definition) {
     StringConcatenation _builder = new StringConcatenation();
-    {
-      ComponentDefinition _concreteDefition = definition.getConcreteDefition();
-      String _type = _concreteDefition.getType();
-      boolean _equals = _type.equals("Button");
-      if (_equals) {
-        ComponentDefinition _concreteDefition_1 = definition.getConcreteDefition();
-        CharSequence _compileButton = this.compileButton(((ButtonDefinition) _concreteDefition_1));
-        _builder.append(_compileButton, "");
-        _builder.newLineIfNotEmpty();
-      } else {
-        ComponentDefinition _concreteDefition_2 = definition.getConcreteDefition();
-        CharSequence _compileLabel = this.compileLabel(((LabelDefinition) _concreteDefition_2));
-        _builder.append(_compileLabel, "");
-        _builder.newLineIfNotEmpty();
-      }
-    }
     String _switchCompiled = this.switchCompiled();
     _builder.append(_switchCompiled, "");
     _builder.newLineIfNotEmpty();

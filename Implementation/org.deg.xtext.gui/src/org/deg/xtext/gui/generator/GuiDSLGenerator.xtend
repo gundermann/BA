@@ -35,8 +35,8 @@ class GuiDSLGenerator implements IGenerator {
 		name = resource.URI.segment(3).split('\\.').get(0)
 		for (def : resource.allContents.toIterable.filter(Definition)) {
 			var element = def.concreteDefition.name
-			var type = def.concreteDefition.type
-			uiElemetsToType.put(element, type)
+//			var type = def.concreteDefition.type
+//			uiElemetsToType.put(element, type)
 		}
 
 		for (d : resource.allContents.toIterable.filter(UIDescription)) {
@@ -92,30 +92,30 @@ class GuiDSLGenerator implements IGenerator {
 
 	def getInitMainBox(UIDescription description) '''
 		public void initBox(VBox b){
-				«FOR area : description.areas»
-					b.getChildren().add(initArea«area.area»());			
-				«ENDFOR»	
+«««				«FOR area : description.areas»
+«««					b.getChildren().add(initArea«area.area»());			
+«««				«ENDFOR»	
 				}
 				
-				«FOR area : description.areas»
-					public Node initArea«area.area»(){
-						«FOR def : description.definitions»
-«««							«IF area.element.equals(def.concreteDefition.name)»
-«««								«def.compileDefinition»
-«««							«ENDIF»
-						«ENDFOR»
-						«IF !compiled»
-							«FOR used : description.usedDescriptions»
-«««								«IF used.description.descriptionName.equals(area.element) || used.description.localName.equals(area.element)»
-«««									return new «area.element»();
-«««								«ENDIF»
-							«ENDFOR»	
-						«ELSE»				
-							«switchCompiled»
-						«ENDIF»
-					}	
-							
-				«ENDFOR»	
+«««				«FOR area : description.areas»
+«««					public Node initArea«area.area»(){
+«««						«FOR def : description.definitions»
+««««««							«IF area.element.equals(def.concreteDefition.name)»
+««««««								«def.compileDefinition»
+««««««							«ENDIF»
+«««						«ENDFOR»
+«««						«IF !compiled»
+«««							«FOR used : description.usedDescriptions»
+««««««								«IF used.description.descriptionName.equals(area.element) || used.description.localName.equals(area.element)»
+««««««									return new «area.element»();
+««««««								«ENDIF»
+«««							«ENDFOR»	
+«««						«ELSE»				
+«««							«switchCompiled»
+«««						«ENDIF»
+«««					}	
+«««							
+«««				«ENDFOR»	
 	'''
 
 	def String addImport(String newImport) {
@@ -209,15 +209,15 @@ class GuiDSLGenerator implements IGenerator {
 //	'''
 
 	def compileDefinition(Definition definition) '''
-		«IF definition.concreteDefition.type.equals("Button")»
-			«(definition.concreteDefition as ButtonDefinition).compileButton»
-«««		«ELSEIF definition.concreteDefition.type.equals("Checkbox")»
-«««			«(definition.concreteDefition as CheckboxDefinition).compileCheckbox»
-«««		«ELSEIF definition.concreteDefition.type.equals("Radiobox")»
-«««			«(definition.concreteDefition as RadioboxDefinition).compileRadiobox»
-		«ELSE»
-			«(definition.concreteDefition as LabelDefinition).compileLabel»
-		«ENDIF»
+«««		«IF definition.concreteDefition.type.equals("Button")»
+«««			«(definition.concreteDefition as ButtonDefinition).compileButton»
+««««««		«ELSEIF definition.concreteDefition.type.equals("Checkbox")»
+««««««			«(definition.concreteDefition as CheckboxDefinition).compileCheckbox»
+««««««		«ELSEIF definition.concreteDefition.type.equals("Radiobox")»
+««««««			«(definition.concreteDefition as RadioboxDefinition).compileRadiobox»
+«««		«ELSE»
+«««			«(definition.concreteDefition as LabelDefinition).compileLabel»
+«««		«ENDIF»
 		«switchCompiled»
 	'''
 	

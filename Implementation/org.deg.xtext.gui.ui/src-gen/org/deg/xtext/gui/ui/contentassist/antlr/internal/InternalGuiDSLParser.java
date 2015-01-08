@@ -22,7 +22,7 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_INT", "RULE_WS", "RULE_ID", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_ANY_OTHER", "'WINDOW'", "'INNERCOMPLEX'", "'Click'", "'ChangeText'", "'REFINE'", "'END REFINE'", "' with name: '", "'get properties from:'", "'use: '", "' as: '", "'Area count: '", "'DEF '", "'END DEF'", "'type: '", "'<'", "'>'", "'Area:'", "'<-'", "'->'", "' as '", "':'", "'propertyKey='", "'text='", "'interactiontype='", "'Button'", "'Label'", "'Multiselection'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_INPUT_DESCRIPTION", "RULE_WS", "RULE_ID", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_ANY_OTHER", "'WINDOW'", "'INNERCOMPLEX'", "'Click'", "'ChangeText'", "':'", "';'", "'from:'", "'from: '", "'get properties from:'", "'use: '", "'as:'", "'type: '", "'->'", "'propertyKey='", "'text='", "'interactiontype='", "'as'", "'Structure'", "'Button'", "'Label'", "'Multiselection'"
     };
     public static final int RULE_ID=7;
     public static final int T__29=29;
@@ -32,32 +32,27 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
     public static final int T__25=25;
     public static final int T__24=24;
     public static final int T__23=23;
+    public static final int RULE_INPUT_DESCRIPTION=5;
     public static final int T__22=22;
-    public static final int RULE_ANY_OTHER=10;
+    public static final int RULE_ANY_OTHER=11;
     public static final int T__21=21;
     public static final int T__20=20;
-    public static final int RULE_SL_COMMENT=9;
+    public static final int RULE_SL_COMMENT=10;
     public static final int EOF=-1;
-    public static final int RULE_ML_COMMENT=8;
+    public static final int RULE_ML_COMMENT=9;
     public static final int T__30=30;
     public static final int T__19=19;
     public static final int T__31=31;
     public static final int RULE_STRING=4;
     public static final int T__32=32;
-    public static final int T__33=33;
     public static final int T__16=16;
-    public static final int T__34=34;
     public static final int T__15=15;
-    public static final int T__35=35;
     public static final int T__18=18;
-    public static final int T__36=36;
     public static final int T__17=17;
-    public static final int T__37=37;
     public static final int T__12=12;
-    public static final int T__11=11;
     public static final int T__14=14;
     public static final int T__13=13;
-    public static final int RULE_INT=5;
+    public static final int RULE_INT=8;
     public static final int RULE_WS=6;
 
     // delegates
@@ -174,21 +169,175 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "ruleUIDescription"
 
 
+    // $ANTLR start "entryRuleStructure"
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:88:1: entryRuleStructure : ruleStructure EOF ;
+    public final void entryRuleStructure() throws RecognitionException {
+        try {
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:89:1: ( ruleStructure EOF )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:90:1: ruleStructure EOF
+            {
+             before(grammarAccess.getStructureRule()); 
+            pushFollow(FOLLOW_ruleStructure_in_entryRuleStructure121);
+            ruleStructure();
+
+            state._fsp--;
+
+             after(grammarAccess.getStructureRule()); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleStructure128); 
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+        }
+        return ;
+    }
+    // $ANTLR end "entryRuleStructure"
+
+
+    // $ANTLR start "ruleStructure"
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:97:1: ruleStructure : ( ( rule__Structure__Group__0 ) ) ;
+    public final void ruleStructure() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:101:2: ( ( ( rule__Structure__Group__0 ) ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:102:1: ( ( rule__Structure__Group__0 ) )
+            {
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:102:1: ( ( rule__Structure__Group__0 ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:103:1: ( rule__Structure__Group__0 )
+            {
+             before(grammarAccess.getStructureAccess().getGroup()); 
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:104:1: ( rule__Structure__Group__0 )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:104:2: rule__Structure__Group__0
+            {
+            pushFollow(FOLLOW_rule__Structure__Group__0_in_ruleStructure154);
+            rule__Structure__Group__0();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getStructureAccess().getGroup()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "ruleStructure"
+
+
+    // $ANTLR start "entryRuleElement"
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:116:1: entryRuleElement : ruleElement EOF ;
+    public final void entryRuleElement() throws RecognitionException {
+        try {
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:117:1: ( ruleElement EOF )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:118:1: ruleElement EOF
+            {
+             before(grammarAccess.getElementRule()); 
+            pushFollow(FOLLOW_ruleElement_in_entryRuleElement181);
+            ruleElement();
+
+            state._fsp--;
+
+             after(grammarAccess.getElementRule()); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleElement188); 
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+        }
+        return ;
+    }
+    // $ANTLR end "entryRuleElement"
+
+
+    // $ANTLR start "ruleElement"
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:125:1: ruleElement : ( ( rule__Element__IdAssignment ) ) ;
+    public final void ruleElement() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:129:2: ( ( ( rule__Element__IdAssignment ) ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:130:1: ( ( rule__Element__IdAssignment ) )
+            {
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:130:1: ( ( rule__Element__IdAssignment ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:131:1: ( rule__Element__IdAssignment )
+            {
+             before(grammarAccess.getElementAccess().getIdAssignment()); 
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:132:1: ( rule__Element__IdAssignment )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:132:2: rule__Element__IdAssignment
+            {
+            pushFollow(FOLLOW_rule__Element__IdAssignment_in_ruleElement214);
+            rule__Element__IdAssignment();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getElementAccess().getIdAssignment()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "ruleElement"
+
+
     // $ANTLR start "entryRuleRefinement"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:88:1: entryRuleRefinement : ruleRefinement EOF ;
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:144:1: entryRuleRefinement : ruleRefinement EOF ;
     public final void entryRuleRefinement() throws RecognitionException {
         try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:89:1: ( ruleRefinement EOF )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:90:1: ruleRefinement EOF
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:145:1: ( ruleRefinement EOF )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:146:1: ruleRefinement EOF
             {
              before(grammarAccess.getRefinementRule()); 
-            pushFollow(FOLLOW_ruleRefinement_in_entryRuleRefinement121);
+            pushFollow(FOLLOW_ruleRefinement_in_entryRuleRefinement241);
             ruleRefinement();
 
             state._fsp--;
 
              after(grammarAccess.getRefinementRule()); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleRefinement128); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleRefinement248); 
 
             }
 
@@ -205,23 +354,23 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "ruleRefinement"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:97:1: ruleRefinement : ( ( rule__Refinement__Group__0 ) ) ;
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:153:1: ruleRefinement : ( ( rule__Refinement__Group__0 ) ) ;
     public final void ruleRefinement() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:101:2: ( ( ( rule__Refinement__Group__0 ) ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:102:1: ( ( rule__Refinement__Group__0 ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:157:2: ( ( ( rule__Refinement__Group__0 ) ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:158:1: ( ( rule__Refinement__Group__0 ) )
             {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:102:1: ( ( rule__Refinement__Group__0 ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:103:1: ( rule__Refinement__Group__0 )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:158:1: ( ( rule__Refinement__Group__0 ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:159:1: ( rule__Refinement__Group__0 )
             {
              before(grammarAccess.getRefinementAccess().getGroup()); 
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:104:1: ( rule__Refinement__Group__0 )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:104:2: rule__Refinement__Group__0
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:160:1: ( rule__Refinement__Group__0 )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:160:2: rule__Refinement__Group__0
             {
-            pushFollow(FOLLOW_rule__Refinement__Group__0_in_ruleRefinement154);
+            pushFollow(FOLLOW_rule__Refinement__Group__0_in_ruleRefinement274);
             rule__Refinement__Group__0();
 
             state._fsp--;
@@ -252,20 +401,20 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "entryRuleComponentRefinement"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:116:1: entryRuleComponentRefinement : ruleComponentRefinement EOF ;
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:172:1: entryRuleComponentRefinement : ruleComponentRefinement EOF ;
     public final void entryRuleComponentRefinement() throws RecognitionException {
         try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:117:1: ( ruleComponentRefinement EOF )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:118:1: ruleComponentRefinement EOF
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:173:1: ( ruleComponentRefinement EOF )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:174:1: ruleComponentRefinement EOF
             {
              before(grammarAccess.getComponentRefinementRule()); 
-            pushFollow(FOLLOW_ruleComponentRefinement_in_entryRuleComponentRefinement181);
+            pushFollow(FOLLOW_ruleComponentRefinement_in_entryRuleComponentRefinement301);
             ruleComponentRefinement();
 
             state._fsp--;
 
              after(grammarAccess.getComponentRefinementRule()); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleComponentRefinement188); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleComponentRefinement308); 
 
             }
 
@@ -282,23 +431,23 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "ruleComponentRefinement"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:125:1: ruleComponentRefinement : ( ( rule__ComponentRefinement__Alternatives ) ) ;
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:181:1: ruleComponentRefinement : ( ( rule__ComponentRefinement__Alternatives ) ) ;
     public final void ruleComponentRefinement() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:129:2: ( ( ( rule__ComponentRefinement__Alternatives ) ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:130:1: ( ( rule__ComponentRefinement__Alternatives ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:185:2: ( ( ( rule__ComponentRefinement__Alternatives ) ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:186:1: ( ( rule__ComponentRefinement__Alternatives ) )
             {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:130:1: ( ( rule__ComponentRefinement__Alternatives ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:131:1: ( rule__ComponentRefinement__Alternatives )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:186:1: ( ( rule__ComponentRefinement__Alternatives ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:187:1: ( rule__ComponentRefinement__Alternatives )
             {
              before(grammarAccess.getComponentRefinementAccess().getAlternatives()); 
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:132:1: ( rule__ComponentRefinement__Alternatives )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:132:2: rule__ComponentRefinement__Alternatives
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:188:1: ( rule__ComponentRefinement__Alternatives )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:188:2: rule__ComponentRefinement__Alternatives
             {
-            pushFollow(FOLLOW_rule__ComponentRefinement__Alternatives_in_ruleComponentRefinement214);
+            pushFollow(FOLLOW_rule__ComponentRefinement__Alternatives_in_ruleComponentRefinement334);
             rule__ComponentRefinement__Alternatives();
 
             state._fsp--;
@@ -329,20 +478,20 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "entryRuleButtonRefinement"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:144:1: entryRuleButtonRefinement : ruleButtonRefinement EOF ;
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:200:1: entryRuleButtonRefinement : ruleButtonRefinement EOF ;
     public final void entryRuleButtonRefinement() throws RecognitionException {
         try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:145:1: ( ruleButtonRefinement EOF )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:146:1: ruleButtonRefinement EOF
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:201:1: ( ruleButtonRefinement EOF )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:202:1: ruleButtonRefinement EOF
             {
              before(grammarAccess.getButtonRefinementRule()); 
-            pushFollow(FOLLOW_ruleButtonRefinement_in_entryRuleButtonRefinement241);
+            pushFollow(FOLLOW_ruleButtonRefinement_in_entryRuleButtonRefinement361);
             ruleButtonRefinement();
 
             state._fsp--;
 
              after(grammarAccess.getButtonRefinementRule()); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleButtonRefinement248); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleButtonRefinement368); 
 
             }
 
@@ -359,23 +508,23 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "ruleButtonRefinement"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:153:1: ruleButtonRefinement : ( ( rule__ButtonRefinement__Group__0 ) ) ;
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:209:1: ruleButtonRefinement : ( ( rule__ButtonRefinement__Group__0 ) ) ;
     public final void ruleButtonRefinement() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:157:2: ( ( ( rule__ButtonRefinement__Group__0 ) ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:158:1: ( ( rule__ButtonRefinement__Group__0 ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:213:2: ( ( ( rule__ButtonRefinement__Group__0 ) ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:214:1: ( ( rule__ButtonRefinement__Group__0 ) )
             {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:158:1: ( ( rule__ButtonRefinement__Group__0 ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:159:1: ( rule__ButtonRefinement__Group__0 )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:214:1: ( ( rule__ButtonRefinement__Group__0 ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:215:1: ( rule__ButtonRefinement__Group__0 )
             {
              before(grammarAccess.getButtonRefinementAccess().getGroup()); 
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:160:1: ( rule__ButtonRefinement__Group__0 )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:160:2: rule__ButtonRefinement__Group__0
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:216:1: ( rule__ButtonRefinement__Group__0 )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:216:2: rule__ButtonRefinement__Group__0
             {
-            pushFollow(FOLLOW_rule__ButtonRefinement__Group__0_in_ruleButtonRefinement274);
+            pushFollow(FOLLOW_rule__ButtonRefinement__Group__0_in_ruleButtonRefinement394);
             rule__ButtonRefinement__Group__0();
 
             state._fsp--;
@@ -406,20 +555,20 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "entryRuleLabelRefinement"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:172:1: entryRuleLabelRefinement : ruleLabelRefinement EOF ;
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:228:1: entryRuleLabelRefinement : ruleLabelRefinement EOF ;
     public final void entryRuleLabelRefinement() throws RecognitionException {
         try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:173:1: ( ruleLabelRefinement EOF )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:174:1: ruleLabelRefinement EOF
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:229:1: ( ruleLabelRefinement EOF )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:230:1: ruleLabelRefinement EOF
             {
              before(grammarAccess.getLabelRefinementRule()); 
-            pushFollow(FOLLOW_ruleLabelRefinement_in_entryRuleLabelRefinement301);
+            pushFollow(FOLLOW_ruleLabelRefinement_in_entryRuleLabelRefinement421);
             ruleLabelRefinement();
 
             state._fsp--;
 
              after(grammarAccess.getLabelRefinementRule()); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleLabelRefinement308); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleLabelRefinement428); 
 
             }
 
@@ -436,23 +585,23 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "ruleLabelRefinement"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:181:1: ruleLabelRefinement : ( ( rule__LabelRefinement__Group__0 ) ) ;
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:237:1: ruleLabelRefinement : ( ( rule__LabelRefinement__Group__0 ) ) ;
     public final void ruleLabelRefinement() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:185:2: ( ( ( rule__LabelRefinement__Group__0 ) ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:186:1: ( ( rule__LabelRefinement__Group__0 ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:241:2: ( ( ( rule__LabelRefinement__Group__0 ) ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:242:1: ( ( rule__LabelRefinement__Group__0 ) )
             {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:186:1: ( ( rule__LabelRefinement__Group__0 ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:187:1: ( rule__LabelRefinement__Group__0 )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:242:1: ( ( rule__LabelRefinement__Group__0 ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:243:1: ( rule__LabelRefinement__Group__0 )
             {
              before(grammarAccess.getLabelRefinementAccess().getGroup()); 
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:188:1: ( rule__LabelRefinement__Group__0 )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:188:2: rule__LabelRefinement__Group__0
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:244:1: ( rule__LabelRefinement__Group__0 )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:244:2: rule__LabelRefinement__Group__0
             {
-            pushFollow(FOLLOW_rule__LabelRefinement__Group__0_in_ruleLabelRefinement334);
+            pushFollow(FOLLOW_rule__LabelRefinement__Group__0_in_ruleLabelRefinement454);
             rule__LabelRefinement__Group__0();
 
             state._fsp--;
@@ -483,20 +632,20 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "entryRuleProperty"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:200:1: entryRuleProperty : ruleProperty EOF ;
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:256:1: entryRuleProperty : ruleProperty EOF ;
     public final void entryRuleProperty() throws RecognitionException {
         try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:201:1: ( ruleProperty EOF )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:202:1: ruleProperty EOF
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:257:1: ( ruleProperty EOF )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:258:1: ruleProperty EOF
             {
              before(grammarAccess.getPropertyRule()); 
-            pushFollow(FOLLOW_ruleProperty_in_entryRuleProperty361);
+            pushFollow(FOLLOW_ruleProperty_in_entryRuleProperty481);
             ruleProperty();
 
             state._fsp--;
 
              after(grammarAccess.getPropertyRule()); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleProperty368); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleProperty488); 
 
             }
 
@@ -513,23 +662,23 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "ruleProperty"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:209:1: ruleProperty : ( ( rule__Property__Group__0 ) ) ;
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:265:1: ruleProperty : ( ( rule__Property__Group__0 ) ) ;
     public final void ruleProperty() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:213:2: ( ( ( rule__Property__Group__0 ) ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:214:1: ( ( rule__Property__Group__0 ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:269:2: ( ( ( rule__Property__Group__0 ) ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:270:1: ( ( rule__Property__Group__0 ) )
             {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:214:1: ( ( rule__Property__Group__0 ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:215:1: ( rule__Property__Group__0 )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:270:1: ( ( rule__Property__Group__0 ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:271:1: ( rule__Property__Group__0 )
             {
              before(grammarAccess.getPropertyAccess().getGroup()); 
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:216:1: ( rule__Property__Group__0 )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:216:2: rule__Property__Group__0
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:272:1: ( rule__Property__Group__0 )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:272:2: rule__Property__Group__0
             {
-            pushFollow(FOLLOW_rule__Property__Group__0_in_ruleProperty394);
+            pushFollow(FOLLOW_rule__Property__Group__0_in_ruleProperty514);
             rule__Property__Group__0();
 
             state._fsp--;
@@ -560,20 +709,20 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "entryRuleUsedDescriptions"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:228:1: entryRuleUsedDescriptions : ruleUsedDescriptions EOF ;
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:284:1: entryRuleUsedDescriptions : ruleUsedDescriptions EOF ;
     public final void entryRuleUsedDescriptions() throws RecognitionException {
         try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:229:1: ( ruleUsedDescriptions EOF )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:230:1: ruleUsedDescriptions EOF
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:285:1: ( ruleUsedDescriptions EOF )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:286:1: ruleUsedDescriptions EOF
             {
              before(grammarAccess.getUsedDescriptionsRule()); 
-            pushFollow(FOLLOW_ruleUsedDescriptions_in_entryRuleUsedDescriptions421);
+            pushFollow(FOLLOW_ruleUsedDescriptions_in_entryRuleUsedDescriptions541);
             ruleUsedDescriptions();
 
             state._fsp--;
 
              after(grammarAccess.getUsedDescriptionsRule()); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleUsedDescriptions428); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleUsedDescriptions548); 
 
             }
 
@@ -590,23 +739,23 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "ruleUsedDescriptions"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:237:1: ruleUsedDescriptions : ( ( rule__UsedDescriptions__Group__0 ) ) ;
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:293:1: ruleUsedDescriptions : ( ( rule__UsedDescriptions__Group__0 ) ) ;
     public final void ruleUsedDescriptions() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:241:2: ( ( ( rule__UsedDescriptions__Group__0 ) ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:242:1: ( ( rule__UsedDescriptions__Group__0 ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:297:2: ( ( ( rule__UsedDescriptions__Group__0 ) ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:298:1: ( ( rule__UsedDescriptions__Group__0 ) )
             {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:242:1: ( ( rule__UsedDescriptions__Group__0 ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:243:1: ( rule__UsedDescriptions__Group__0 )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:298:1: ( ( rule__UsedDescriptions__Group__0 ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:299:1: ( rule__UsedDescriptions__Group__0 )
             {
              before(grammarAccess.getUsedDescriptionsAccess().getGroup()); 
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:244:1: ( rule__UsedDescriptions__Group__0 )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:244:2: rule__UsedDescriptions__Group__0
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:300:1: ( rule__UsedDescriptions__Group__0 )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:300:2: rule__UsedDescriptions__Group__0
             {
-            pushFollow(FOLLOW_rule__UsedDescriptions__Group__0_in_ruleUsedDescriptions454);
+            pushFollow(FOLLOW_rule__UsedDescriptions__Group__0_in_ruleUsedDescriptions574);
             rule__UsedDescriptions__Group__0();
 
             state._fsp--;
@@ -637,20 +786,20 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "entryRuleDescriptionType"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:256:1: entryRuleDescriptionType : ruleDescriptionType EOF ;
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:312:1: entryRuleDescriptionType : ruleDescriptionType EOF ;
     public final void entryRuleDescriptionType() throws RecognitionException {
         try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:257:1: ( ruleDescriptionType EOF )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:258:1: ruleDescriptionType EOF
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:313:1: ( ruleDescriptionType EOF )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:314:1: ruleDescriptionType EOF
             {
              before(grammarAccess.getDescriptionTypeRule()); 
-            pushFollow(FOLLOW_ruleDescriptionType_in_entryRuleDescriptionType481);
+            pushFollow(FOLLOW_ruleDescriptionType_in_entryRuleDescriptionType601);
             ruleDescriptionType();
 
             state._fsp--;
 
              after(grammarAccess.getDescriptionTypeRule()); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleDescriptionType488); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleDescriptionType608); 
 
             }
 
@@ -667,23 +816,23 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "ruleDescriptionType"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:265:1: ruleDescriptionType : ( ( rule__DescriptionType__Alternatives ) ) ;
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:321:1: ruleDescriptionType : ( ( rule__DescriptionType__Alternatives ) ) ;
     public final void ruleDescriptionType() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:269:2: ( ( ( rule__DescriptionType__Alternatives ) ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:270:1: ( ( rule__DescriptionType__Alternatives ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:325:2: ( ( ( rule__DescriptionType__Alternatives ) ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:326:1: ( ( rule__DescriptionType__Alternatives ) )
             {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:270:1: ( ( rule__DescriptionType__Alternatives ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:271:1: ( rule__DescriptionType__Alternatives )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:326:1: ( ( rule__DescriptionType__Alternatives ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:327:1: ( rule__DescriptionType__Alternatives )
             {
              before(grammarAccess.getDescriptionTypeAccess().getAlternatives()); 
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:272:1: ( rule__DescriptionType__Alternatives )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:272:2: rule__DescriptionType__Alternatives
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:328:1: ( rule__DescriptionType__Alternatives )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:328:2: rule__DescriptionType__Alternatives
             {
-            pushFollow(FOLLOW_rule__DescriptionType__Alternatives_in_ruleDescriptionType514);
+            pushFollow(FOLLOW_rule__DescriptionType__Alternatives_in_ruleDescriptionType634);
             rule__DescriptionType__Alternatives();
 
             state._fsp--;
@@ -713,98 +862,21 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "ruleDescriptionType"
 
 
-    // $ANTLR start "entryRuleAreaCount"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:284:1: entryRuleAreaCount : ruleAreaCount EOF ;
-    public final void entryRuleAreaCount() throws RecognitionException {
-        try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:285:1: ( ruleAreaCount EOF )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:286:1: ruleAreaCount EOF
-            {
-             before(grammarAccess.getAreaCountRule()); 
-            pushFollow(FOLLOW_ruleAreaCount_in_entryRuleAreaCount541);
-            ruleAreaCount();
-
-            state._fsp--;
-
-             after(grammarAccess.getAreaCountRule()); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleAreaCount548); 
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-        }
-        return ;
-    }
-    // $ANTLR end "entryRuleAreaCount"
-
-
-    // $ANTLR start "ruleAreaCount"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:293:1: ruleAreaCount : ( ( rule__AreaCount__Group__0 ) ) ;
-    public final void ruleAreaCount() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:297:2: ( ( ( rule__AreaCount__Group__0 ) ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:298:1: ( ( rule__AreaCount__Group__0 ) )
-            {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:298:1: ( ( rule__AreaCount__Group__0 ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:299:1: ( rule__AreaCount__Group__0 )
-            {
-             before(grammarAccess.getAreaCountAccess().getGroup()); 
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:300:1: ( rule__AreaCount__Group__0 )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:300:2: rule__AreaCount__Group__0
-            {
-            pushFollow(FOLLOW_rule__AreaCount__Group__0_in_ruleAreaCount574);
-            rule__AreaCount__Group__0();
-
-            state._fsp--;
-
-
-            }
-
-             after(grammarAccess.getAreaCountAccess().getGroup()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "ruleAreaCount"
-
-
     // $ANTLR start "entryRuleDefinition"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:312:1: entryRuleDefinition : ruleDefinition EOF ;
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:340:1: entryRuleDefinition : ruleDefinition EOF ;
     public final void entryRuleDefinition() throws RecognitionException {
         try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:313:1: ( ruleDefinition EOF )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:314:1: ruleDefinition EOF
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:341:1: ( ruleDefinition EOF )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:342:1: ruleDefinition EOF
             {
              before(grammarAccess.getDefinitionRule()); 
-            pushFollow(FOLLOW_ruleDefinition_in_entryRuleDefinition601);
+            pushFollow(FOLLOW_ruleDefinition_in_entryRuleDefinition661);
             ruleDefinition();
 
             state._fsp--;
 
              after(grammarAccess.getDefinitionRule()); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleDefinition608); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleDefinition668); 
 
             }
 
@@ -821,23 +893,23 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "ruleDefinition"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:321:1: ruleDefinition : ( ( rule__Definition__Group__0 ) ) ;
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:349:1: ruleDefinition : ( ( rule__Definition__Group__0 ) ) ;
     public final void ruleDefinition() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:325:2: ( ( ( rule__Definition__Group__0 ) ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:326:1: ( ( rule__Definition__Group__0 ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:353:2: ( ( ( rule__Definition__Group__0 ) ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:354:1: ( ( rule__Definition__Group__0 ) )
             {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:326:1: ( ( rule__Definition__Group__0 ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:327:1: ( rule__Definition__Group__0 )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:354:1: ( ( rule__Definition__Group__0 ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:355:1: ( rule__Definition__Group__0 )
             {
              before(grammarAccess.getDefinitionAccess().getGroup()); 
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:328:1: ( rule__Definition__Group__0 )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:328:2: rule__Definition__Group__0
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:356:1: ( rule__Definition__Group__0 )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:356:2: rule__Definition__Group__0
             {
-            pushFollow(FOLLOW_rule__Definition__Group__0_in_ruleDefinition634);
+            pushFollow(FOLLOW_rule__Definition__Group__0_in_ruleDefinition694);
             rule__Definition__Group__0();
 
             state._fsp--;
@@ -868,20 +940,20 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "entryRuleTypeDefinition"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:340:1: entryRuleTypeDefinition : ruleTypeDefinition EOF ;
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:368:1: entryRuleTypeDefinition : ruleTypeDefinition EOF ;
     public final void entryRuleTypeDefinition() throws RecognitionException {
         try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:341:1: ( ruleTypeDefinition EOF )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:342:1: ruleTypeDefinition EOF
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:369:1: ( ruleTypeDefinition EOF )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:370:1: ruleTypeDefinition EOF
             {
              before(grammarAccess.getTypeDefinitionRule()); 
-            pushFollow(FOLLOW_ruleTypeDefinition_in_entryRuleTypeDefinition661);
+            pushFollow(FOLLOW_ruleTypeDefinition_in_entryRuleTypeDefinition721);
             ruleTypeDefinition();
 
             state._fsp--;
 
              after(grammarAccess.getTypeDefinitionRule()); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleTypeDefinition668); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleTypeDefinition728); 
 
             }
 
@@ -898,23 +970,23 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "ruleTypeDefinition"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:349:1: ruleTypeDefinition : ( ( rule__TypeDefinition__Group__0 ) ) ;
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:377:1: ruleTypeDefinition : ( ( rule__TypeDefinition__Group__0 ) ) ;
     public final void ruleTypeDefinition() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:353:2: ( ( ( rule__TypeDefinition__Group__0 ) ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:354:1: ( ( rule__TypeDefinition__Group__0 ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:381:2: ( ( ( rule__TypeDefinition__Group__0 ) ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:382:1: ( ( rule__TypeDefinition__Group__0 ) )
             {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:354:1: ( ( rule__TypeDefinition__Group__0 ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:355:1: ( rule__TypeDefinition__Group__0 )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:382:1: ( ( rule__TypeDefinition__Group__0 ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:383:1: ( rule__TypeDefinition__Group__0 )
             {
              before(grammarAccess.getTypeDefinitionAccess().getGroup()); 
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:356:1: ( rule__TypeDefinition__Group__0 )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:356:2: rule__TypeDefinition__Group__0
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:384:1: ( rule__TypeDefinition__Group__0 )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:384:2: rule__TypeDefinition__Group__0
             {
-            pushFollow(FOLLOW_rule__TypeDefinition__Group__0_in_ruleTypeDefinition694);
+            pushFollow(FOLLOW_rule__TypeDefinition__Group__0_in_ruleTypeDefinition754);
             rule__TypeDefinition__Group__0();
 
             state._fsp--;
@@ -945,20 +1017,20 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "entryRuleType"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:368:1: entryRuleType : ruleType EOF ;
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:396:1: entryRuleType : ruleType EOF ;
     public final void entryRuleType() throws RecognitionException {
         try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:369:1: ( ruleType EOF )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:370:1: ruleType EOF
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:397:1: ( ruleType EOF )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:398:1: ruleType EOF
             {
              before(grammarAccess.getTypeRule()); 
-            pushFollow(FOLLOW_ruleType_in_entryRuleType721);
+            pushFollow(FOLLOW_ruleType_in_entryRuleType781);
             ruleType();
 
             state._fsp--;
 
              after(grammarAccess.getTypeRule()); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleType728); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleType788); 
 
             }
 
@@ -975,23 +1047,23 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "ruleType"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:377:1: ruleType : ( ( rule__Type__Alternatives ) ) ;
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:405:1: ruleType : ( ( rule__Type__Alternatives ) ) ;
     public final void ruleType() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:381:2: ( ( ( rule__Type__Alternatives ) ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:382:1: ( ( rule__Type__Alternatives ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:409:2: ( ( ( rule__Type__Alternatives ) ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:410:1: ( ( rule__Type__Alternatives ) )
             {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:382:1: ( ( rule__Type__Alternatives ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:383:1: ( rule__Type__Alternatives )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:410:1: ( ( rule__Type__Alternatives ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:411:1: ( rule__Type__Alternatives )
             {
              before(grammarAccess.getTypeAccess().getAlternatives()); 
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:384:1: ( rule__Type__Alternatives )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:384:2: rule__Type__Alternatives
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:412:1: ( rule__Type__Alternatives )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:412:2: rule__Type__Alternatives
             {
-            pushFollow(FOLLOW_rule__Type__Alternatives_in_ruleType754);
+            pushFollow(FOLLOW_rule__Type__Alternatives_in_ruleType814);
             rule__Type__Alternatives();
 
             state._fsp--;
@@ -1022,20 +1094,20 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "entryRuleUIDescriptionImport"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:396:1: entryRuleUIDescriptionImport : ruleUIDescriptionImport EOF ;
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:424:1: entryRuleUIDescriptionImport : ruleUIDescriptionImport EOF ;
     public final void entryRuleUIDescriptionImport() throws RecognitionException {
         try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:397:1: ( ruleUIDescriptionImport EOF )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:398:1: ruleUIDescriptionImport EOF
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:425:1: ( ruleUIDescriptionImport EOF )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:426:1: ruleUIDescriptionImport EOF
             {
              before(grammarAccess.getUIDescriptionImportRule()); 
-            pushFollow(FOLLOW_ruleUIDescriptionImport_in_entryRuleUIDescriptionImport781);
+            pushFollow(FOLLOW_ruleUIDescriptionImport_in_entryRuleUIDescriptionImport841);
             ruleUIDescriptionImport();
 
             state._fsp--;
 
              after(grammarAccess.getUIDescriptionImportRule()); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleUIDescriptionImport788); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleUIDescriptionImport848); 
 
             }
 
@@ -1052,23 +1124,23 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "ruleUIDescriptionImport"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:405:1: ruleUIDescriptionImport : ( ( rule__UIDescriptionImport__DescriptionNameAssignment ) ) ;
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:433:1: ruleUIDescriptionImport : ( ( rule__UIDescriptionImport__DescriptionNameAssignment ) ) ;
     public final void ruleUIDescriptionImport() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:409:2: ( ( ( rule__UIDescriptionImport__DescriptionNameAssignment ) ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:410:1: ( ( rule__UIDescriptionImport__DescriptionNameAssignment ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:437:2: ( ( ( rule__UIDescriptionImport__DescriptionNameAssignment ) ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:438:1: ( ( rule__UIDescriptionImport__DescriptionNameAssignment ) )
             {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:410:1: ( ( rule__UIDescriptionImport__DescriptionNameAssignment ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:411:1: ( rule__UIDescriptionImport__DescriptionNameAssignment )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:438:1: ( ( rule__UIDescriptionImport__DescriptionNameAssignment ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:439:1: ( rule__UIDescriptionImport__DescriptionNameAssignment )
             {
              before(grammarAccess.getUIDescriptionImportAccess().getDescriptionNameAssignment()); 
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:412:1: ( rule__UIDescriptionImport__DescriptionNameAssignment )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:412:2: rule__UIDescriptionImport__DescriptionNameAssignment
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:440:1: ( rule__UIDescriptionImport__DescriptionNameAssignment )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:440:2: rule__UIDescriptionImport__DescriptionNameAssignment
             {
-            pushFollow(FOLLOW_rule__UIDescriptionImport__DescriptionNameAssignment_in_ruleUIDescriptionImport814);
+            pushFollow(FOLLOW_rule__UIDescriptionImport__DescriptionNameAssignment_in_ruleUIDescriptionImport874);
             rule__UIDescriptionImport__DescriptionNameAssignment();
 
             state._fsp--;
@@ -1099,20 +1171,20 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "entryRuleComplexComponent"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:424:1: entryRuleComplexComponent : ruleComplexComponent EOF ;
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:452:1: entryRuleComplexComponent : ruleComplexComponent EOF ;
     public final void entryRuleComplexComponent() throws RecognitionException {
         try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:425:1: ( ruleComplexComponent EOF )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:426:1: ruleComplexComponent EOF
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:453:1: ( ruleComplexComponent EOF )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:454:1: ruleComplexComponent EOF
             {
              before(grammarAccess.getComplexComponentRule()); 
-            pushFollow(FOLLOW_ruleComplexComponent_in_entryRuleComplexComponent841);
+            pushFollow(FOLLOW_ruleComplexComponent_in_entryRuleComplexComponent901);
             ruleComplexComponent();
 
             state._fsp--;
 
              after(grammarAccess.getComplexComponentRule()); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleComplexComponent848); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleComplexComponent908); 
 
             }
 
@@ -1129,20 +1201,20 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "ruleComplexComponent"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:433:1: ruleComplexComponent : ( ruleMultiselection ) ;
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:461:1: ruleComplexComponent : ( ruleMultiselection ) ;
     public final void ruleComplexComponent() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:437:2: ( ( ruleMultiselection ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:438:1: ( ruleMultiselection )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:465:2: ( ( ruleMultiselection ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:466:1: ( ruleMultiselection )
             {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:438:1: ( ruleMultiselection )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:439:1: ruleMultiselection
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:466:1: ( ruleMultiselection )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:467:1: ruleMultiselection
             {
              before(grammarAccess.getComplexComponentAccess().getMultiselectionParserRuleCall()); 
-            pushFollow(FOLLOW_ruleMultiselection_in_ruleComplexComponent874);
+            pushFollow(FOLLOW_ruleMultiselection_in_ruleComplexComponent934);
             ruleMultiselection();
 
             state._fsp--;
@@ -1170,20 +1242,20 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "entryRuleMultiselection"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:452:1: entryRuleMultiselection : ruleMultiselection EOF ;
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:480:1: entryRuleMultiselection : ruleMultiselection EOF ;
     public final void entryRuleMultiselection() throws RecognitionException {
         try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:453:1: ( ruleMultiselection EOF )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:454:1: ruleMultiselection EOF
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:481:1: ( ruleMultiselection EOF )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:482:1: ruleMultiselection EOF
             {
              before(grammarAccess.getMultiselectionRule()); 
-            pushFollow(FOLLOW_ruleMultiselection_in_entryRuleMultiselection900);
+            pushFollow(FOLLOW_ruleMultiselection_in_entryRuleMultiselection960);
             ruleMultiselection();
 
             state._fsp--;
 
              after(grammarAccess.getMultiselectionRule()); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleMultiselection907); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleMultiselection967); 
 
             }
 
@@ -1200,23 +1272,23 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "ruleMultiselection"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:461:1: ruleMultiselection : ( ( rule__Multiselection__Group__0 ) ) ;
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:489:1: ruleMultiselection : ( ( rule__Multiselection__Group__0 ) ) ;
     public final void ruleMultiselection() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:465:2: ( ( ( rule__Multiselection__Group__0 ) ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:466:1: ( ( rule__Multiselection__Group__0 ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:493:2: ( ( ( rule__Multiselection__Group__0 ) ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:494:1: ( ( rule__Multiselection__Group__0 ) )
             {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:466:1: ( ( rule__Multiselection__Group__0 ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:467:1: ( rule__Multiselection__Group__0 )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:494:1: ( ( rule__Multiselection__Group__0 ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:495:1: ( rule__Multiselection__Group__0 )
             {
              before(grammarAccess.getMultiselectionAccess().getGroup()); 
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:468:1: ( rule__Multiselection__Group__0 )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:468:2: rule__Multiselection__Group__0
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:496:1: ( rule__Multiselection__Group__0 )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:496:2: rule__Multiselection__Group__0
             {
-            pushFollow(FOLLOW_rule__Multiselection__Group__0_in_ruleMultiselection933);
+            pushFollow(FOLLOW_rule__Multiselection__Group__0_in_ruleMultiselection993);
             rule__Multiselection__Group__0();
 
             state._fsp--;
@@ -1244,83 +1316,6 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
         return ;
     }
     // $ANTLR end "ruleMultiselection"
-
-
-    // $ANTLR start "entryRuleAreaAssignment"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:480:1: entryRuleAreaAssignment : ruleAreaAssignment EOF ;
-    public final void entryRuleAreaAssignment() throws RecognitionException {
-        try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:481:1: ( ruleAreaAssignment EOF )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:482:1: ruleAreaAssignment EOF
-            {
-             before(grammarAccess.getAreaAssignmentRule()); 
-            pushFollow(FOLLOW_ruleAreaAssignment_in_entryRuleAreaAssignment960);
-            ruleAreaAssignment();
-
-            state._fsp--;
-
-             after(grammarAccess.getAreaAssignmentRule()); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleAreaAssignment967); 
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-        }
-        return ;
-    }
-    // $ANTLR end "entryRuleAreaAssignment"
-
-
-    // $ANTLR start "ruleAreaAssignment"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:489:1: ruleAreaAssignment : ( ( rule__AreaAssignment__Alternatives ) ) ;
-    public final void ruleAreaAssignment() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:493:2: ( ( ( rule__AreaAssignment__Alternatives ) ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:494:1: ( ( rule__AreaAssignment__Alternatives ) )
-            {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:494:1: ( ( rule__AreaAssignment__Alternatives ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:495:1: ( rule__AreaAssignment__Alternatives )
-            {
-             before(grammarAccess.getAreaAssignmentAccess().getAlternatives()); 
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:496:1: ( rule__AreaAssignment__Alternatives )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:496:2: rule__AreaAssignment__Alternatives
-            {
-            pushFollow(FOLLOW_rule__AreaAssignment__Alternatives_in_ruleAreaAssignment993);
-            rule__AreaAssignment__Alternatives();
-
-            state._fsp--;
-
-
-            }
-
-             after(grammarAccess.getAreaAssignmentAccess().getAlternatives()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "ruleAreaAssignment"
 
 
     // $ANTLR start "entryRuleComponentDefinition"
@@ -1719,10 +1714,10 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             int alt1=2;
             int LA1_0 = input.LA(1);
 
-            if ( (LA1_0==36) ) {
+            if ( (LA1_0==31) ) {
                 alt1=1;
             }
-            else if ( (LA1_0==35) ) {
+            else if ( (LA1_0==30) ) {
                 alt1=2;
             }
             else {
@@ -1801,7 +1796,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             if ( (LA2_0==RULE_STRING) ) {
                 alt2=1;
             }
-            else if ( (LA2_0==37) ) {
+            else if ( (LA2_0==32) ) {
                 alt2=2;
             }
             else {
@@ -1877,10 +1872,10 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             int alt3=2;
             int LA3_0 = input.LA(1);
 
-            if ( (LA3_0==11) ) {
+            if ( (LA3_0==12) ) {
                 alt3=1;
             }
-            else if ( (LA3_0==12) ) {
+            else if ( (LA3_0==13) ) {
                 alt3=2;
             }
             else {
@@ -1897,7 +1892,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
                     // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:698:1: 'WINDOW'
                     {
                      before(grammarAccess.getTypeAccess().getWINDOWKeyword_0()); 
-                    match(input,11,FOLLOW_11_in_rule__Type__Alternatives1428); 
+                    match(input,12,FOLLOW_12_in_rule__Type__Alternatives1428); 
                      after(grammarAccess.getTypeAccess().getWINDOWKeyword_0()); 
 
                     }
@@ -1912,7 +1907,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
                     // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:706:1: 'INNERCOMPLEX'
                     {
                      before(grammarAccess.getTypeAccess().getINNERCOMPLEXKeyword_1()); 
-                    match(input,12,FOLLOW_12_in_rule__Type__Alternatives1448); 
+                    match(input,13,FOLLOW_13_in_rule__Type__Alternatives1448); 
                      after(grammarAccess.getTypeAccess().getINNERCOMPLEXKeyword_1()); 
 
                     }
@@ -1937,21 +1932,21 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__Type__Alternatives"
 
 
-    // $ANTLR start "rule__AreaAssignment__Alternatives"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:718:1: rule__AreaAssignment__Alternatives : ( ( ( rule__AreaAssignment__Group_0__0 ) ) | ( ( rule__AreaAssignment__Group_1__0 ) ) );
-    public final void rule__AreaAssignment__Alternatives() throws RecognitionException {
+    // $ANTLR start "rule__ComponentDefinition__Alternatives"
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:718:1: rule__ComponentDefinition__Alternatives : ( ( ruleLabelDefinition ) | ( ruleButtonDefinition ) );
+    public final void rule__ComponentDefinition__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:722:1: ( ( ( rule__AreaAssignment__Group_0__0 ) ) | ( ( rule__AreaAssignment__Group_1__0 ) ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:722:1: ( ( ruleLabelDefinition ) | ( ruleButtonDefinition ) )
             int alt4=2;
             int LA4_0 = input.LA(1);
 
-            if ( (LA4_0==27) ) {
+            if ( (LA4_0==31) ) {
                 alt4=1;
             }
-            else if ( (LA4_0==RULE_STRING) ) {
+            else if ( (LA4_0==30) ) {
                 alt4=2;
             }
             else {
@@ -1962,104 +1957,13 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             }
             switch (alt4) {
                 case 1 :
-                    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:723:1: ( ( rule__AreaAssignment__Group_0__0 ) )
+                    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:723:1: ( ruleLabelDefinition )
                     {
-                    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:723:1: ( ( rule__AreaAssignment__Group_0__0 ) )
-                    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:724:1: ( rule__AreaAssignment__Group_0__0 )
-                    {
-                     before(grammarAccess.getAreaAssignmentAccess().getGroup_0()); 
-                    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:725:1: ( rule__AreaAssignment__Group_0__0 )
-                    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:725:2: rule__AreaAssignment__Group_0__0
-                    {
-                    pushFollow(FOLLOW_rule__AreaAssignment__Group_0__0_in_rule__AreaAssignment__Alternatives1482);
-                    rule__AreaAssignment__Group_0__0();
-
-                    state._fsp--;
-
-
-                    }
-
-                     after(grammarAccess.getAreaAssignmentAccess().getGroup_0()); 
-
-                    }
-
-
-                    }
-                    break;
-                case 2 :
-                    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:729:6: ( ( rule__AreaAssignment__Group_1__0 ) )
-                    {
-                    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:729:6: ( ( rule__AreaAssignment__Group_1__0 ) )
-                    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:730:1: ( rule__AreaAssignment__Group_1__0 )
-                    {
-                     before(grammarAccess.getAreaAssignmentAccess().getGroup_1()); 
-                    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:731:1: ( rule__AreaAssignment__Group_1__0 )
-                    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:731:2: rule__AreaAssignment__Group_1__0
-                    {
-                    pushFollow(FOLLOW_rule__AreaAssignment__Group_1__0_in_rule__AreaAssignment__Alternatives1500);
-                    rule__AreaAssignment__Group_1__0();
-
-                    state._fsp--;
-
-
-                    }
-
-                     after(grammarAccess.getAreaAssignmentAccess().getGroup_1()); 
-
-                    }
-
-
-                    }
-                    break;
-
-            }
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__AreaAssignment__Alternatives"
-
-
-    // $ANTLR start "rule__ComponentDefinition__Alternatives"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:740:1: rule__ComponentDefinition__Alternatives : ( ( ruleLabelDefinition ) | ( ruleButtonDefinition ) );
-    public final void rule__ComponentDefinition__Alternatives() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:744:1: ( ( ruleLabelDefinition ) | ( ruleButtonDefinition ) )
-            int alt5=2;
-            int LA5_0 = input.LA(1);
-
-            if ( (LA5_0==36) ) {
-                alt5=1;
-            }
-            else if ( (LA5_0==35) ) {
-                alt5=2;
-            }
-            else {
-                NoViableAltException nvae =
-                    new NoViableAltException("", 5, 0, input);
-
-                throw nvae;
-            }
-            switch (alt5) {
-                case 1 :
-                    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:745:1: ( ruleLabelDefinition )
-                    {
-                    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:745:1: ( ruleLabelDefinition )
-                    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:746:1: ruleLabelDefinition
+                    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:723:1: ( ruleLabelDefinition )
+                    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:724:1: ruleLabelDefinition
                     {
                      before(grammarAccess.getComponentDefinitionAccess().getLabelDefinitionParserRuleCall_0()); 
-                    pushFollow(FOLLOW_ruleLabelDefinition_in_rule__ComponentDefinition__Alternatives1533);
+                    pushFollow(FOLLOW_ruleLabelDefinition_in_rule__ComponentDefinition__Alternatives1482);
                     ruleLabelDefinition();
 
                     state._fsp--;
@@ -2072,13 +1976,13 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:751:6: ( ruleButtonDefinition )
+                    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:729:6: ( ruleButtonDefinition )
                     {
-                    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:751:6: ( ruleButtonDefinition )
-                    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:752:1: ruleButtonDefinition
+                    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:729:6: ( ruleButtonDefinition )
+                    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:730:1: ruleButtonDefinition
                     {
                      before(grammarAccess.getComponentDefinitionAccess().getButtonDefinitionParserRuleCall_1()); 
-                    pushFollow(FOLLOW_ruleButtonDefinition_in_rule__ComponentDefinition__Alternatives1550);
+                    pushFollow(FOLLOW_ruleButtonDefinition_in_rule__ComponentDefinition__Alternatives1499);
                     ruleButtonDefinition();
 
                     state._fsp--;
@@ -2108,37 +2012,37 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Interactiontype__Alternatives"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:762:1: rule__Interactiontype__Alternatives : ( ( 'Click' ) | ( 'ChangeText' ) );
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:740:1: rule__Interactiontype__Alternatives : ( ( 'Click' ) | ( 'ChangeText' ) );
     public final void rule__Interactiontype__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:766:1: ( ( 'Click' ) | ( 'ChangeText' ) )
-            int alt6=2;
-            int LA6_0 = input.LA(1);
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:744:1: ( ( 'Click' ) | ( 'ChangeText' ) )
+            int alt5=2;
+            int LA5_0 = input.LA(1);
 
-            if ( (LA6_0==13) ) {
-                alt6=1;
+            if ( (LA5_0==14) ) {
+                alt5=1;
             }
-            else if ( (LA6_0==14) ) {
-                alt6=2;
+            else if ( (LA5_0==15) ) {
+                alt5=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 6, 0, input);
+                    new NoViableAltException("", 5, 0, input);
 
                 throw nvae;
             }
-            switch (alt6) {
+            switch (alt5) {
                 case 1 :
-                    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:767:1: ( 'Click' )
+                    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:745:1: ( 'Click' )
                     {
-                    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:767:1: ( 'Click' )
-                    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:768:1: 'Click'
+                    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:745:1: ( 'Click' )
+                    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:746:1: 'Click'
                     {
                      before(grammarAccess.getInteractiontypeAccess().getClickKeyword_0()); 
-                    match(input,13,FOLLOW_13_in_rule__Interactiontype__Alternatives1583); 
+                    match(input,14,FOLLOW_14_in_rule__Interactiontype__Alternatives1532); 
                      after(grammarAccess.getInteractiontypeAccess().getClickKeyword_0()); 
 
                     }
@@ -2147,13 +2051,13 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:775:6: ( 'ChangeText' )
+                    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:753:6: ( 'ChangeText' )
                     {
-                    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:775:6: ( 'ChangeText' )
-                    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:776:1: 'ChangeText'
+                    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:753:6: ( 'ChangeText' )
+                    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:754:1: 'ChangeText'
                     {
                      before(grammarAccess.getInteractiontypeAccess().getChangeTextKeyword_1()); 
-                    match(input,14,FOLLOW_14_in_rule__Interactiontype__Alternatives1603); 
+                    match(input,15,FOLLOW_15_in_rule__Interactiontype__Alternatives1552); 
                      after(grammarAccess.getInteractiontypeAccess().getChangeTextKeyword_1()); 
 
                     }
@@ -2179,21 +2083,21 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__UIDescription__Group__0"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:790:1: rule__UIDescription__Group__0 : rule__UIDescription__Group__0__Impl rule__UIDescription__Group__1 ;
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:768:1: rule__UIDescription__Group__0 : rule__UIDescription__Group__0__Impl rule__UIDescription__Group__1 ;
     public final void rule__UIDescription__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:794:1: ( rule__UIDescription__Group__0__Impl rule__UIDescription__Group__1 )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:795:2: rule__UIDescription__Group__0__Impl rule__UIDescription__Group__1
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:772:1: ( rule__UIDescription__Group__0__Impl rule__UIDescription__Group__1 )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:773:2: rule__UIDescription__Group__0__Impl rule__UIDescription__Group__1
             {
-            pushFollow(FOLLOW_rule__UIDescription__Group__0__Impl_in_rule__UIDescription__Group__01635);
+            pushFollow(FOLLOW_rule__UIDescription__Group__0__Impl_in_rule__UIDescription__Group__01584);
             rule__UIDescription__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__UIDescription__Group__1_in_rule__UIDescription__Group__01638);
+            pushFollow(FOLLOW_rule__UIDescription__Group__1_in_rule__UIDescription__Group__01587);
             rule__UIDescription__Group__1();
 
             state._fsp--;
@@ -2217,31 +2121,31 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__UIDescription__Group__0__Impl"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:802:1: rule__UIDescription__Group__0__Impl : ( ( rule__UIDescription__AreaCountAssignment_0 ) ) ;
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:780:1: rule__UIDescription__Group__0__Impl : ( ( rule__UIDescription__TypeDefinitionAssignment_0 ) ) ;
     public final void rule__UIDescription__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:806:1: ( ( ( rule__UIDescription__AreaCountAssignment_0 ) ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:807:1: ( ( rule__UIDescription__AreaCountAssignment_0 ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:784:1: ( ( ( rule__UIDescription__TypeDefinitionAssignment_0 ) ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:785:1: ( ( rule__UIDescription__TypeDefinitionAssignment_0 ) )
             {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:807:1: ( ( rule__UIDescription__AreaCountAssignment_0 ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:808:1: ( rule__UIDescription__AreaCountAssignment_0 )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:785:1: ( ( rule__UIDescription__TypeDefinitionAssignment_0 ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:786:1: ( rule__UIDescription__TypeDefinitionAssignment_0 )
             {
-             before(grammarAccess.getUIDescriptionAccess().getAreaCountAssignment_0()); 
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:809:1: ( rule__UIDescription__AreaCountAssignment_0 )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:809:2: rule__UIDescription__AreaCountAssignment_0
+             before(grammarAccess.getUIDescriptionAccess().getTypeDefinitionAssignment_0()); 
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:787:1: ( rule__UIDescription__TypeDefinitionAssignment_0 )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:787:2: rule__UIDescription__TypeDefinitionAssignment_0
             {
-            pushFollow(FOLLOW_rule__UIDescription__AreaCountAssignment_0_in_rule__UIDescription__Group__0__Impl1665);
-            rule__UIDescription__AreaCountAssignment_0();
+            pushFollow(FOLLOW_rule__UIDescription__TypeDefinitionAssignment_0_in_rule__UIDescription__Group__0__Impl1614);
+            rule__UIDescription__TypeDefinitionAssignment_0();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getUIDescriptionAccess().getAreaCountAssignment_0()); 
+             after(grammarAccess.getUIDescriptionAccess().getTypeDefinitionAssignment_0()); 
 
             }
 
@@ -2264,21 +2168,21 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__UIDescription__Group__1"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:819:1: rule__UIDescription__Group__1 : rule__UIDescription__Group__1__Impl rule__UIDescription__Group__2 ;
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:797:1: rule__UIDescription__Group__1 : rule__UIDescription__Group__1__Impl rule__UIDescription__Group__2 ;
     public final void rule__UIDescription__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:823:1: ( rule__UIDescription__Group__1__Impl rule__UIDescription__Group__2 )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:824:2: rule__UIDescription__Group__1__Impl rule__UIDescription__Group__2
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:801:1: ( rule__UIDescription__Group__1__Impl rule__UIDescription__Group__2 )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:802:2: rule__UIDescription__Group__1__Impl rule__UIDescription__Group__2
             {
-            pushFollow(FOLLOW_rule__UIDescription__Group__1__Impl_in_rule__UIDescription__Group__11695);
+            pushFollow(FOLLOW_rule__UIDescription__Group__1__Impl_in_rule__UIDescription__Group__11644);
             rule__UIDescription__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__UIDescription__Group__2_in_rule__UIDescription__Group__11698);
+            pushFollow(FOLLOW_rule__UIDescription__Group__2_in_rule__UIDescription__Group__11647);
             rule__UIDescription__Group__2();
 
             state._fsp--;
@@ -2302,31 +2206,42 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__UIDescription__Group__1__Impl"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:831:1: rule__UIDescription__Group__1__Impl : ( ( rule__UIDescription__TypeDefinitionAssignment_1 ) ) ;
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:809:1: rule__UIDescription__Group__1__Impl : ( ( rule__UIDescription__PropertyAssignment_1 )? ) ;
     public final void rule__UIDescription__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:835:1: ( ( ( rule__UIDescription__TypeDefinitionAssignment_1 ) ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:836:1: ( ( rule__UIDescription__TypeDefinitionAssignment_1 ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:813:1: ( ( ( rule__UIDescription__PropertyAssignment_1 )? ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:814:1: ( ( rule__UIDescription__PropertyAssignment_1 )? )
             {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:836:1: ( ( rule__UIDescription__TypeDefinitionAssignment_1 ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:837:1: ( rule__UIDescription__TypeDefinitionAssignment_1 )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:814:1: ( ( rule__UIDescription__PropertyAssignment_1 )? )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:815:1: ( rule__UIDescription__PropertyAssignment_1 )?
             {
-             before(grammarAccess.getUIDescriptionAccess().getTypeDefinitionAssignment_1()); 
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:838:1: ( rule__UIDescription__TypeDefinitionAssignment_1 )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:838:2: rule__UIDescription__TypeDefinitionAssignment_1
-            {
-            pushFollow(FOLLOW_rule__UIDescription__TypeDefinitionAssignment_1_in_rule__UIDescription__Group__1__Impl1725);
-            rule__UIDescription__TypeDefinitionAssignment_1();
+             before(grammarAccess.getUIDescriptionAccess().getPropertyAssignment_1()); 
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:816:1: ( rule__UIDescription__PropertyAssignment_1 )?
+            int alt6=2;
+            int LA6_0 = input.LA(1);
 
-            state._fsp--;
+            if ( (LA6_0==20) ) {
+                alt6=1;
+            }
+            switch (alt6) {
+                case 1 :
+                    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:816:2: rule__UIDescription__PropertyAssignment_1
+                    {
+                    pushFollow(FOLLOW_rule__UIDescription__PropertyAssignment_1_in_rule__UIDescription__Group__1__Impl1674);
+                    rule__UIDescription__PropertyAssignment_1();
 
+                    state._fsp--;
+
+
+                    }
+                    break;
 
             }
 
-             after(grammarAccess.getUIDescriptionAccess().getTypeDefinitionAssignment_1()); 
+             after(grammarAccess.getUIDescriptionAccess().getPropertyAssignment_1()); 
 
             }
 
@@ -2349,21 +2264,21 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__UIDescription__Group__2"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:848:1: rule__UIDescription__Group__2 : rule__UIDescription__Group__2__Impl rule__UIDescription__Group__3 ;
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:826:1: rule__UIDescription__Group__2 : rule__UIDescription__Group__2__Impl rule__UIDescription__Group__3 ;
     public final void rule__UIDescription__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:852:1: ( rule__UIDescription__Group__2__Impl rule__UIDescription__Group__3 )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:853:2: rule__UIDescription__Group__2__Impl rule__UIDescription__Group__3
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:830:1: ( rule__UIDescription__Group__2__Impl rule__UIDescription__Group__3 )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:831:2: rule__UIDescription__Group__2__Impl rule__UIDescription__Group__3
             {
-            pushFollow(FOLLOW_rule__UIDescription__Group__2__Impl_in_rule__UIDescription__Group__21755);
+            pushFollow(FOLLOW_rule__UIDescription__Group__2__Impl_in_rule__UIDescription__Group__21705);
             rule__UIDescription__Group__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__UIDescription__Group__3_in_rule__UIDescription__Group__21758);
+            pushFollow(FOLLOW_rule__UIDescription__Group__3_in_rule__UIDescription__Group__21708);
             rule__UIDescription__Group__3();
 
             state._fsp--;
@@ -2387,42 +2302,49 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__UIDescription__Group__2__Impl"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:860:1: rule__UIDescription__Group__2__Impl : ( ( rule__UIDescription__PropertyAssignment_2 )? ) ;
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:838:1: rule__UIDescription__Group__2__Impl : ( ( rule__UIDescription__UsedDescriptionsAssignment_2 )* ) ;
     public final void rule__UIDescription__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:864:1: ( ( ( rule__UIDescription__PropertyAssignment_2 )? ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:865:1: ( ( rule__UIDescription__PropertyAssignment_2 )? )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:842:1: ( ( ( rule__UIDescription__UsedDescriptionsAssignment_2 )* ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:843:1: ( ( rule__UIDescription__UsedDescriptionsAssignment_2 )* )
             {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:865:1: ( ( rule__UIDescription__PropertyAssignment_2 )? )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:866:1: ( rule__UIDescription__PropertyAssignment_2 )?
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:843:1: ( ( rule__UIDescription__UsedDescriptionsAssignment_2 )* )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:844:1: ( rule__UIDescription__UsedDescriptionsAssignment_2 )*
             {
-             before(grammarAccess.getUIDescriptionAccess().getPropertyAssignment_2()); 
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:867:1: ( rule__UIDescription__PropertyAssignment_2 )?
-            int alt7=2;
-            int LA7_0 = input.LA(1);
+             before(grammarAccess.getUIDescriptionAccess().getUsedDescriptionsAssignment_2()); 
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:845:1: ( rule__UIDescription__UsedDescriptionsAssignment_2 )*
+            loop7:
+            do {
+                int alt7=2;
+                int LA7_0 = input.LA(1);
 
-            if ( (LA7_0==18) ) {
-                alt7=1;
-            }
-            switch (alt7) {
-                case 1 :
-                    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:867:2: rule__UIDescription__PropertyAssignment_2
-                    {
-                    pushFollow(FOLLOW_rule__UIDescription__PropertyAssignment_2_in_rule__UIDescription__Group__2__Impl1785);
-                    rule__UIDescription__PropertyAssignment_2();
-
-                    state._fsp--;
+                if ( (LA7_0==21) ) {
+                    alt7=1;
+                }
 
 
-                    }
-                    break;
+                switch (alt7) {
+            	case 1 :
+            	    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:845:2: rule__UIDescription__UsedDescriptionsAssignment_2
+            	    {
+            	    pushFollow(FOLLOW_rule__UIDescription__UsedDescriptionsAssignment_2_in_rule__UIDescription__Group__2__Impl1735);
+            	    rule__UIDescription__UsedDescriptionsAssignment_2();
 
-            }
+            	    state._fsp--;
 
-             after(grammarAccess.getUIDescriptionAccess().getPropertyAssignment_2()); 
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop7;
+                }
+            } while (true);
+
+             after(grammarAccess.getUIDescriptionAccess().getUsedDescriptionsAssignment_2()); 
 
             }
 
@@ -2445,21 +2367,21 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__UIDescription__Group__3"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:877:1: rule__UIDescription__Group__3 : rule__UIDescription__Group__3__Impl rule__UIDescription__Group__4 ;
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:855:1: rule__UIDescription__Group__3 : rule__UIDescription__Group__3__Impl rule__UIDescription__Group__4 ;
     public final void rule__UIDescription__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:881:1: ( rule__UIDescription__Group__3__Impl rule__UIDescription__Group__4 )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:882:2: rule__UIDescription__Group__3__Impl rule__UIDescription__Group__4
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:859:1: ( rule__UIDescription__Group__3__Impl rule__UIDescription__Group__4 )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:860:2: rule__UIDescription__Group__3__Impl rule__UIDescription__Group__4
             {
-            pushFollow(FOLLOW_rule__UIDescription__Group__3__Impl_in_rule__UIDescription__Group__31816);
+            pushFollow(FOLLOW_rule__UIDescription__Group__3__Impl_in_rule__UIDescription__Group__31766);
             rule__UIDescription__Group__3__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__UIDescription__Group__4_in_rule__UIDescription__Group__31819);
+            pushFollow(FOLLOW_rule__UIDescription__Group__4_in_rule__UIDescription__Group__31769);
             rule__UIDescription__Group__4();
 
             state._fsp--;
@@ -2483,36 +2405,51 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__UIDescription__Group__3__Impl"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:889:1: rule__UIDescription__Group__3__Impl : ( ( rule__UIDescription__UsedDescriptionsAssignment_3 )* ) ;
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:867:1: rule__UIDescription__Group__3__Impl : ( ( rule__UIDescription__RefinementsAssignment_3 )* ) ;
     public final void rule__UIDescription__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:893:1: ( ( ( rule__UIDescription__UsedDescriptionsAssignment_3 )* ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:894:1: ( ( rule__UIDescription__UsedDescriptionsAssignment_3 )* )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:871:1: ( ( ( rule__UIDescription__RefinementsAssignment_3 )* ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:872:1: ( ( rule__UIDescription__RefinementsAssignment_3 )* )
             {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:894:1: ( ( rule__UIDescription__UsedDescriptionsAssignment_3 )* )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:895:1: ( rule__UIDescription__UsedDescriptionsAssignment_3 )*
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:872:1: ( ( rule__UIDescription__RefinementsAssignment_3 )* )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:873:1: ( rule__UIDescription__RefinementsAssignment_3 )*
             {
-             before(grammarAccess.getUIDescriptionAccess().getUsedDescriptionsAssignment_3()); 
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:896:1: ( rule__UIDescription__UsedDescriptionsAssignment_3 )*
+             before(grammarAccess.getUIDescriptionAccess().getRefinementsAssignment_3()); 
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:874:1: ( rule__UIDescription__RefinementsAssignment_3 )*
             loop8:
             do {
                 int alt8=2;
                 int LA8_0 = input.LA(1);
 
-                if ( (LA8_0==19) ) {
-                    alt8=1;
+                if ( (LA8_0==31) ) {
+                    int LA8_1 = input.LA(2);
+
+                    if ( (LA8_1==19) ) {
+                        alt8=1;
+                    }
+
+
+                }
+                else if ( (LA8_0==30) ) {
+                    int LA8_2 = input.LA(2);
+
+                    if ( (LA8_2==18) ) {
+                        alt8=1;
+                    }
+
+
                 }
 
 
                 switch (alt8) {
             	case 1 :
-            	    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:896:2: rule__UIDescription__UsedDescriptionsAssignment_3
+            	    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:874:2: rule__UIDescription__RefinementsAssignment_3
             	    {
-            	    pushFollow(FOLLOW_rule__UIDescription__UsedDescriptionsAssignment_3_in_rule__UIDescription__Group__3__Impl1846);
-            	    rule__UIDescription__UsedDescriptionsAssignment_3();
+            	    pushFollow(FOLLOW_rule__UIDescription__RefinementsAssignment_3_in_rule__UIDescription__Group__3__Impl1796);
+            	    rule__UIDescription__RefinementsAssignment_3();
 
             	    state._fsp--;
 
@@ -2525,7 +2462,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
                 }
             } while (true);
 
-             after(grammarAccess.getUIDescriptionAccess().getUsedDescriptionsAssignment_3()); 
+             after(grammarAccess.getUIDescriptionAccess().getRefinementsAssignment_3()); 
 
             }
 
@@ -2548,21 +2485,21 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__UIDescription__Group__4"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:906:1: rule__UIDescription__Group__4 : rule__UIDescription__Group__4__Impl rule__UIDescription__Group__5 ;
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:884:1: rule__UIDescription__Group__4 : rule__UIDescription__Group__4__Impl rule__UIDescription__Group__5 ;
     public final void rule__UIDescription__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:910:1: ( rule__UIDescription__Group__4__Impl rule__UIDescription__Group__5 )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:911:2: rule__UIDescription__Group__4__Impl rule__UIDescription__Group__5
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:888:1: ( rule__UIDescription__Group__4__Impl rule__UIDescription__Group__5 )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:889:2: rule__UIDescription__Group__4__Impl rule__UIDescription__Group__5
             {
-            pushFollow(FOLLOW_rule__UIDescription__Group__4__Impl_in_rule__UIDescription__Group__41877);
+            pushFollow(FOLLOW_rule__UIDescription__Group__4__Impl_in_rule__UIDescription__Group__41827);
             rule__UIDescription__Group__4__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__UIDescription__Group__5_in_rule__UIDescription__Group__41880);
+            pushFollow(FOLLOW_rule__UIDescription__Group__5_in_rule__UIDescription__Group__41830);
             rule__UIDescription__Group__5();
 
             state._fsp--;
@@ -2586,36 +2523,36 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__UIDescription__Group__4__Impl"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:918:1: rule__UIDescription__Group__4__Impl : ( ( rule__UIDescription__RefinementsAssignment_4 )* ) ;
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:896:1: rule__UIDescription__Group__4__Impl : ( ( rule__UIDescription__DefinitionsAssignment_4 )* ) ;
     public final void rule__UIDescription__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:922:1: ( ( ( rule__UIDescription__RefinementsAssignment_4 )* ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:923:1: ( ( rule__UIDescription__RefinementsAssignment_4 )* )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:900:1: ( ( ( rule__UIDescription__DefinitionsAssignment_4 )* ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:901:1: ( ( rule__UIDescription__DefinitionsAssignment_4 )* )
             {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:923:1: ( ( rule__UIDescription__RefinementsAssignment_4 )* )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:924:1: ( rule__UIDescription__RefinementsAssignment_4 )*
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:901:1: ( ( rule__UIDescription__DefinitionsAssignment_4 )* )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:902:1: ( rule__UIDescription__DefinitionsAssignment_4 )*
             {
-             before(grammarAccess.getUIDescriptionAccess().getRefinementsAssignment_4()); 
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:925:1: ( rule__UIDescription__RefinementsAssignment_4 )*
+             before(grammarAccess.getUIDescriptionAccess().getDefinitionsAssignment_4()); 
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:903:1: ( rule__UIDescription__DefinitionsAssignment_4 )*
             loop9:
             do {
                 int alt9=2;
                 int LA9_0 = input.LA(1);
 
-                if ( (LA9_0==15) ) {
+                if ( ((LA9_0>=30 && LA9_0<=31)) ) {
                     alt9=1;
                 }
 
 
                 switch (alt9) {
             	case 1 :
-            	    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:925:2: rule__UIDescription__RefinementsAssignment_4
+            	    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:903:2: rule__UIDescription__DefinitionsAssignment_4
             	    {
-            	    pushFollow(FOLLOW_rule__UIDescription__RefinementsAssignment_4_in_rule__UIDescription__Group__4__Impl1907);
-            	    rule__UIDescription__RefinementsAssignment_4();
+            	    pushFollow(FOLLOW_rule__UIDescription__DefinitionsAssignment_4_in_rule__UIDescription__Group__4__Impl1857);
+            	    rule__UIDescription__DefinitionsAssignment_4();
 
             	    state._fsp--;
 
@@ -2628,7 +2565,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
                 }
             } while (true);
 
-             after(grammarAccess.getUIDescriptionAccess().getRefinementsAssignment_4()); 
+             after(grammarAccess.getUIDescriptionAccess().getDefinitionsAssignment_4()); 
 
             }
 
@@ -2651,22 +2588,17 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__UIDescription__Group__5"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:935:1: rule__UIDescription__Group__5 : rule__UIDescription__Group__5__Impl rule__UIDescription__Group__6 ;
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:913:1: rule__UIDescription__Group__5 : rule__UIDescription__Group__5__Impl ;
     public final void rule__UIDescription__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:939:1: ( rule__UIDescription__Group__5__Impl rule__UIDescription__Group__6 )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:940:2: rule__UIDescription__Group__5__Impl rule__UIDescription__Group__6
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:917:1: ( rule__UIDescription__Group__5__Impl )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:918:2: rule__UIDescription__Group__5__Impl
             {
-            pushFollow(FOLLOW_rule__UIDescription__Group__5__Impl_in_rule__UIDescription__Group__51938);
+            pushFollow(FOLLOW_rule__UIDescription__Group__5__Impl_in_rule__UIDescription__Group__51888);
             rule__UIDescription__Group__5__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_rule__UIDescription__Group__6_in_rule__UIDescription__Group__51941);
-            rule__UIDescription__Group__6();
 
             state._fsp--;
 
@@ -2689,49 +2621,31 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__UIDescription__Group__5__Impl"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:947:1: rule__UIDescription__Group__5__Impl : ( ( rule__UIDescription__DefinitionsAssignment_5 )* ) ;
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:924:1: rule__UIDescription__Group__5__Impl : ( ( rule__UIDescription__StructureAssignment_5 ) ) ;
     public final void rule__UIDescription__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:951:1: ( ( ( rule__UIDescription__DefinitionsAssignment_5 )* ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:952:1: ( ( rule__UIDescription__DefinitionsAssignment_5 )* )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:928:1: ( ( ( rule__UIDescription__StructureAssignment_5 ) ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:929:1: ( ( rule__UIDescription__StructureAssignment_5 ) )
             {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:952:1: ( ( rule__UIDescription__DefinitionsAssignment_5 )* )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:953:1: ( rule__UIDescription__DefinitionsAssignment_5 )*
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:929:1: ( ( rule__UIDescription__StructureAssignment_5 ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:930:1: ( rule__UIDescription__StructureAssignment_5 )
             {
-             before(grammarAccess.getUIDescriptionAccess().getDefinitionsAssignment_5()); 
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:954:1: ( rule__UIDescription__DefinitionsAssignment_5 )*
-            loop10:
-            do {
-                int alt10=2;
-                int LA10_0 = input.LA(1);
+             before(grammarAccess.getUIDescriptionAccess().getStructureAssignment_5()); 
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:931:1: ( rule__UIDescription__StructureAssignment_5 )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:931:2: rule__UIDescription__StructureAssignment_5
+            {
+            pushFollow(FOLLOW_rule__UIDescription__StructureAssignment_5_in_rule__UIDescription__Group__5__Impl1915);
+            rule__UIDescription__StructureAssignment_5();
 
-                if ( (LA10_0==22) ) {
-                    alt10=1;
-                }
+            state._fsp--;
 
 
-                switch (alt10) {
-            	case 1 :
-            	    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:954:2: rule__UIDescription__DefinitionsAssignment_5
-            	    {
-            	    pushFollow(FOLLOW_rule__UIDescription__DefinitionsAssignment_5_in_rule__UIDescription__Group__5__Impl1968);
-            	    rule__UIDescription__DefinitionsAssignment_5();
+            }
 
-            	    state._fsp--;
-
-
-            	    }
-            	    break;
-
-            	default :
-            	    break loop10;
-                }
-            } while (true);
-
-             after(grammarAccess.getUIDescriptionAccess().getDefinitionsAssignment_5()); 
+             after(grammarAccess.getUIDescriptionAccess().getStructureAssignment_5()); 
 
             }
 
@@ -2753,18 +2667,23 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__UIDescription__Group__5__Impl"
 
 
-    // $ANTLR start "rule__UIDescription__Group__6"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:964:1: rule__UIDescription__Group__6 : rule__UIDescription__Group__6__Impl ;
-    public final void rule__UIDescription__Group__6() throws RecognitionException {
+    // $ANTLR start "rule__Structure__Group__0"
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:953:1: rule__Structure__Group__0 : rule__Structure__Group__0__Impl rule__Structure__Group__1 ;
+    public final void rule__Structure__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:968:1: ( rule__UIDescription__Group__6__Impl )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:969:2: rule__UIDescription__Group__6__Impl
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:957:1: ( rule__Structure__Group__0__Impl rule__Structure__Group__1 )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:958:2: rule__Structure__Group__0__Impl rule__Structure__Group__1
             {
-            pushFollow(FOLLOW_rule__UIDescription__Group__6__Impl_in_rule__UIDescription__Group__61999);
-            rule__UIDescription__Group__6__Impl();
+            pushFollow(FOLLOW_rule__Structure__Group__0__Impl_in_rule__Structure__Group__01957);
+            rule__Structure__Group__0__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_rule__Structure__Group__1_in_rule__Structure__Group__01960);
+            rule__Structure__Group__1();
 
             state._fsp--;
 
@@ -2783,40 +2702,195 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__UIDescription__Group__6"
+    // $ANTLR end "rule__Structure__Group__0"
 
 
-    // $ANTLR start "rule__UIDescription__Group__6__Impl"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:975:1: rule__UIDescription__Group__6__Impl : ( ( rule__UIDescription__AreasAssignment_6 )* ) ;
-    public final void rule__UIDescription__Group__6__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Structure__Group__0__Impl"
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:965:1: rule__Structure__Group__0__Impl : ( ( rule__Structure__NameAssignment_0 ) ) ;
+    public final void rule__Structure__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:979:1: ( ( ( rule__UIDescription__AreasAssignment_6 )* ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:980:1: ( ( rule__UIDescription__AreasAssignment_6 )* )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:969:1: ( ( ( rule__Structure__NameAssignment_0 ) ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:970:1: ( ( rule__Structure__NameAssignment_0 ) )
             {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:980:1: ( ( rule__UIDescription__AreasAssignment_6 )* )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:981:1: ( rule__UIDescription__AreasAssignment_6 )*
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:970:1: ( ( rule__Structure__NameAssignment_0 ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:971:1: ( rule__Structure__NameAssignment_0 )
             {
-             before(grammarAccess.getUIDescriptionAccess().getAreasAssignment_6()); 
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:982:1: ( rule__UIDescription__AreasAssignment_6 )*
-            loop11:
-            do {
-                int alt11=2;
-                int LA11_0 = input.LA(1);
+             before(grammarAccess.getStructureAccess().getNameAssignment_0()); 
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:972:1: ( rule__Structure__NameAssignment_0 )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:972:2: rule__Structure__NameAssignment_0
+            {
+            pushFollow(FOLLOW_rule__Structure__NameAssignment_0_in_rule__Structure__Group__0__Impl1987);
+            rule__Structure__NameAssignment_0();
 
-                if ( (LA11_0==RULE_STRING||LA11_0==27) ) {
-                    alt11=1;
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getStructureAccess().getNameAssignment_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Structure__Group__0__Impl"
+
+
+    // $ANTLR start "rule__Structure__Group__1"
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:982:1: rule__Structure__Group__1 : rule__Structure__Group__1__Impl rule__Structure__Group__2 ;
+    public final void rule__Structure__Group__1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:986:1: ( rule__Structure__Group__1__Impl rule__Structure__Group__2 )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:987:2: rule__Structure__Group__1__Impl rule__Structure__Group__2
+            {
+            pushFollow(FOLLOW_rule__Structure__Group__1__Impl_in_rule__Structure__Group__12017);
+            rule__Structure__Group__1__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_rule__Structure__Group__2_in_rule__Structure__Group__12020);
+            rule__Structure__Group__2();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Structure__Group__1"
+
+
+    // $ANTLR start "rule__Structure__Group__1__Impl"
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:994:1: rule__Structure__Group__1__Impl : ( ':' ) ;
+    public final void rule__Structure__Group__1__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:998:1: ( ( ':' ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:999:1: ( ':' )
+            {
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:999:1: ( ':' )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1000:1: ':'
+            {
+             before(grammarAccess.getStructureAccess().getColonKeyword_1()); 
+            match(input,16,FOLLOW_16_in_rule__Structure__Group__1__Impl2048); 
+             after(grammarAccess.getStructureAccess().getColonKeyword_1()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Structure__Group__1__Impl"
+
+
+    // $ANTLR start "rule__Structure__Group__2"
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1013:1: rule__Structure__Group__2 : rule__Structure__Group__2__Impl ;
+    public final void rule__Structure__Group__2() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1017:1: ( rule__Structure__Group__2__Impl )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1018:2: rule__Structure__Group__2__Impl
+            {
+            pushFollow(FOLLOW_rule__Structure__Group__2__Impl_in_rule__Structure__Group__22079);
+            rule__Structure__Group__2__Impl();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Structure__Group__2"
+
+
+    // $ANTLR start "rule__Structure__Group__2__Impl"
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1024:1: rule__Structure__Group__2__Impl : ( ( rule__Structure__OrderedElementsAssignment_2 )* ) ;
+    public final void rule__Structure__Group__2__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1028:1: ( ( ( rule__Structure__OrderedElementsAssignment_2 )* ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1029:1: ( ( rule__Structure__OrderedElementsAssignment_2 )* )
+            {
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1029:1: ( ( rule__Structure__OrderedElementsAssignment_2 )* )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1030:1: ( rule__Structure__OrderedElementsAssignment_2 )*
+            {
+             before(grammarAccess.getStructureAccess().getOrderedElementsAssignment_2()); 
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1031:1: ( rule__Structure__OrderedElementsAssignment_2 )*
+            loop10:
+            do {
+                int alt10=2;
+                int LA10_0 = input.LA(1);
+
+                if ( (LA10_0==RULE_STRING) ) {
+                    alt10=1;
                 }
 
 
-                switch (alt11) {
+                switch (alt10) {
             	case 1 :
-            	    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:982:2: rule__UIDescription__AreasAssignment_6
+            	    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1031:2: rule__Structure__OrderedElementsAssignment_2
             	    {
-            	    pushFollow(FOLLOW_rule__UIDescription__AreasAssignment_6_in_rule__UIDescription__Group__6__Impl2026);
-            	    rule__UIDescription__AreasAssignment_6();
+            	    pushFollow(FOLLOW_rule__Structure__OrderedElementsAssignment_2_in_rule__Structure__Group__2__Impl2106);
+            	    rule__Structure__OrderedElementsAssignment_2();
 
             	    state._fsp--;
 
@@ -2825,11 +2899,11 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             	    break;
 
             	default :
-            	    break loop11;
+            	    break loop10;
                 }
             } while (true);
 
-             after(grammarAccess.getUIDescriptionAccess().getAreasAssignment_6()); 
+             after(grammarAccess.getStructureAccess().getOrderedElementsAssignment_2()); 
 
             }
 
@@ -2848,25 +2922,25 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__UIDescription__Group__6__Impl"
+    // $ANTLR end "rule__Structure__Group__2__Impl"
 
 
     // $ANTLR start "rule__Refinement__Group__0"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1006:1: rule__Refinement__Group__0 : rule__Refinement__Group__0__Impl rule__Refinement__Group__1 ;
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1047:1: rule__Refinement__Group__0 : rule__Refinement__Group__0__Impl rule__Refinement__Group__1 ;
     public final void rule__Refinement__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1010:1: ( rule__Refinement__Group__0__Impl rule__Refinement__Group__1 )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1011:2: rule__Refinement__Group__0__Impl rule__Refinement__Group__1
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1051:1: ( rule__Refinement__Group__0__Impl rule__Refinement__Group__1 )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1052:2: rule__Refinement__Group__0__Impl rule__Refinement__Group__1
             {
-            pushFollow(FOLLOW_rule__Refinement__Group__0__Impl_in_rule__Refinement__Group__02071);
+            pushFollow(FOLLOW_rule__Refinement__Group__0__Impl_in_rule__Refinement__Group__02143);
             rule__Refinement__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Refinement__Group__1_in_rule__Refinement__Group__02074);
+            pushFollow(FOLLOW_rule__Refinement__Group__1_in_rule__Refinement__Group__02146);
             rule__Refinement__Group__1();
 
             state._fsp--;
@@ -2890,21 +2964,31 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Refinement__Group__0__Impl"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1018:1: rule__Refinement__Group__0__Impl : ( 'REFINE' ) ;
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1059:1: rule__Refinement__Group__0__Impl : ( ( rule__Refinement__ConcreteRefinementAssignment_0 ) ) ;
     public final void rule__Refinement__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1022:1: ( ( 'REFINE' ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1023:1: ( 'REFINE' )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1063:1: ( ( ( rule__Refinement__ConcreteRefinementAssignment_0 ) ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1064:1: ( ( rule__Refinement__ConcreteRefinementAssignment_0 ) )
             {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1023:1: ( 'REFINE' )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1024:1: 'REFINE'
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1064:1: ( ( rule__Refinement__ConcreteRefinementAssignment_0 ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1065:1: ( rule__Refinement__ConcreteRefinementAssignment_0 )
             {
-             before(grammarAccess.getRefinementAccess().getREFINEKeyword_0()); 
-            match(input,15,FOLLOW_15_in_rule__Refinement__Group__0__Impl2102); 
-             after(grammarAccess.getRefinementAccess().getREFINEKeyword_0()); 
+             before(grammarAccess.getRefinementAccess().getConcreteRefinementAssignment_0()); 
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1066:1: ( rule__Refinement__ConcreteRefinementAssignment_0 )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1066:2: rule__Refinement__ConcreteRefinementAssignment_0
+            {
+            pushFollow(FOLLOW_rule__Refinement__ConcreteRefinementAssignment_0_in_rule__Refinement__Group__0__Impl2173);
+            rule__Refinement__ConcreteRefinementAssignment_0();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getRefinementAccess().getConcreteRefinementAssignment_0()); 
 
             }
 
@@ -2927,22 +3011,17 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Refinement__Group__1"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1037:1: rule__Refinement__Group__1 : rule__Refinement__Group__1__Impl rule__Refinement__Group__2 ;
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1076:1: rule__Refinement__Group__1 : rule__Refinement__Group__1__Impl ;
     public final void rule__Refinement__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1041:1: ( rule__Refinement__Group__1__Impl rule__Refinement__Group__2 )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1042:2: rule__Refinement__Group__1__Impl rule__Refinement__Group__2
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1080:1: ( rule__Refinement__Group__1__Impl )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1081:2: rule__Refinement__Group__1__Impl
             {
-            pushFollow(FOLLOW_rule__Refinement__Group__1__Impl_in_rule__Refinement__Group__12133);
+            pushFollow(FOLLOW_rule__Refinement__Group__1__Impl_in_rule__Refinement__Group__12203);
             rule__Refinement__Group__1__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_rule__Refinement__Group__2_in_rule__Refinement__Group__12136);
-            rule__Refinement__Group__2();
 
             state._fsp--;
 
@@ -2965,31 +3044,21 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Refinement__Group__1__Impl"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1049:1: rule__Refinement__Group__1__Impl : ( ( rule__Refinement__ConcreteRefinementAssignment_1 ) ) ;
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1087:1: rule__Refinement__Group__1__Impl : ( ';' ) ;
     public final void rule__Refinement__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1053:1: ( ( ( rule__Refinement__ConcreteRefinementAssignment_1 ) ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1054:1: ( ( rule__Refinement__ConcreteRefinementAssignment_1 ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1091:1: ( ( ';' ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1092:1: ( ';' )
             {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1054:1: ( ( rule__Refinement__ConcreteRefinementAssignment_1 ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1055:1: ( rule__Refinement__ConcreteRefinementAssignment_1 )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1092:1: ( ';' )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1093:1: ';'
             {
-             before(grammarAccess.getRefinementAccess().getConcreteRefinementAssignment_1()); 
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1056:1: ( rule__Refinement__ConcreteRefinementAssignment_1 )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1056:2: rule__Refinement__ConcreteRefinementAssignment_1
-            {
-            pushFollow(FOLLOW_rule__Refinement__ConcreteRefinementAssignment_1_in_rule__Refinement__Group__1__Impl2163);
-            rule__Refinement__ConcreteRefinementAssignment_1();
-
-            state._fsp--;
-
-
-            }
-
-             after(grammarAccess.getRefinementAccess().getConcreteRefinementAssignment_1()); 
+             before(grammarAccess.getRefinementAccess().getSemicolonKeyword_1()); 
+            match(input,17,FOLLOW_17_in_rule__Refinement__Group__1__Impl2231); 
+             after(grammarAccess.getRefinementAccess().getSemicolonKeyword_1()); 
 
             }
 
@@ -3011,92 +3080,22 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__Refinement__Group__1__Impl"
 
 
-    // $ANTLR start "rule__Refinement__Group__2"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1066:1: rule__Refinement__Group__2 : rule__Refinement__Group__2__Impl ;
-    public final void rule__Refinement__Group__2() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1070:1: ( rule__Refinement__Group__2__Impl )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1071:2: rule__Refinement__Group__2__Impl
-            {
-            pushFollow(FOLLOW_rule__Refinement__Group__2__Impl_in_rule__Refinement__Group__22193);
-            rule__Refinement__Group__2__Impl();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Refinement__Group__2"
-
-
-    // $ANTLR start "rule__Refinement__Group__2__Impl"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1077:1: rule__Refinement__Group__2__Impl : ( 'END REFINE' ) ;
-    public final void rule__Refinement__Group__2__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1081:1: ( ( 'END REFINE' ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1082:1: ( 'END REFINE' )
-            {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1082:1: ( 'END REFINE' )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1083:1: 'END REFINE'
-            {
-             before(grammarAccess.getRefinementAccess().getENDREFINEKeyword_2()); 
-            match(input,16,FOLLOW_16_in_rule__Refinement__Group__2__Impl2221); 
-             after(grammarAccess.getRefinementAccess().getENDREFINEKeyword_2()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Refinement__Group__2__Impl"
-
-
     // $ANTLR start "rule__ButtonRefinement__Group__0"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1102:1: rule__ButtonRefinement__Group__0 : rule__ButtonRefinement__Group__0__Impl rule__ButtonRefinement__Group__1 ;
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1110:1: rule__ButtonRefinement__Group__0 : rule__ButtonRefinement__Group__0__Impl rule__ButtonRefinement__Group__1 ;
     public final void rule__ButtonRefinement__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1106:1: ( rule__ButtonRefinement__Group__0__Impl rule__ButtonRefinement__Group__1 )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1107:2: rule__ButtonRefinement__Group__0__Impl rule__ButtonRefinement__Group__1
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1114:1: ( rule__ButtonRefinement__Group__0__Impl rule__ButtonRefinement__Group__1 )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1115:2: rule__ButtonRefinement__Group__0__Impl rule__ButtonRefinement__Group__1
             {
-            pushFollow(FOLLOW_rule__ButtonRefinement__Group__0__Impl_in_rule__ButtonRefinement__Group__02258);
+            pushFollow(FOLLOW_rule__ButtonRefinement__Group__0__Impl_in_rule__ButtonRefinement__Group__02266);
             rule__ButtonRefinement__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__ButtonRefinement__Group__1_in_rule__ButtonRefinement__Group__02261);
+            pushFollow(FOLLOW_rule__ButtonRefinement__Group__1_in_rule__ButtonRefinement__Group__02269);
             rule__ButtonRefinement__Group__1();
 
             state._fsp--;
@@ -3120,31 +3119,31 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ButtonRefinement__Group__0__Impl"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1114:1: rule__ButtonRefinement__Group__0__Impl : ( ( rule__ButtonRefinement__TypeAssignment_0 ) ) ;
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1122:1: rule__ButtonRefinement__Group__0__Impl : ( ( rule__ButtonRefinement__NameAssignment_0 ) ) ;
     public final void rule__ButtonRefinement__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1118:1: ( ( ( rule__ButtonRefinement__TypeAssignment_0 ) ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1119:1: ( ( rule__ButtonRefinement__TypeAssignment_0 ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1126:1: ( ( ( rule__ButtonRefinement__NameAssignment_0 ) ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1127:1: ( ( rule__ButtonRefinement__NameAssignment_0 ) )
             {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1119:1: ( ( rule__ButtonRefinement__TypeAssignment_0 ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1120:1: ( rule__ButtonRefinement__TypeAssignment_0 )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1127:1: ( ( rule__ButtonRefinement__NameAssignment_0 ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1128:1: ( rule__ButtonRefinement__NameAssignment_0 )
             {
-             before(grammarAccess.getButtonRefinementAccess().getTypeAssignment_0()); 
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1121:1: ( rule__ButtonRefinement__TypeAssignment_0 )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1121:2: rule__ButtonRefinement__TypeAssignment_0
+             before(grammarAccess.getButtonRefinementAccess().getNameAssignment_0()); 
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1129:1: ( rule__ButtonRefinement__NameAssignment_0 )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1129:2: rule__ButtonRefinement__NameAssignment_0
             {
-            pushFollow(FOLLOW_rule__ButtonRefinement__TypeAssignment_0_in_rule__ButtonRefinement__Group__0__Impl2288);
-            rule__ButtonRefinement__TypeAssignment_0();
+            pushFollow(FOLLOW_rule__ButtonRefinement__NameAssignment_0_in_rule__ButtonRefinement__Group__0__Impl2296);
+            rule__ButtonRefinement__NameAssignment_0();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getButtonRefinementAccess().getTypeAssignment_0()); 
+             after(grammarAccess.getButtonRefinementAccess().getNameAssignment_0()); 
 
             }
 
@@ -3167,21 +3166,21 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ButtonRefinement__Group__1"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1131:1: rule__ButtonRefinement__Group__1 : rule__ButtonRefinement__Group__1__Impl rule__ButtonRefinement__Group__2 ;
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1139:1: rule__ButtonRefinement__Group__1 : rule__ButtonRefinement__Group__1__Impl rule__ButtonRefinement__Group__2 ;
     public final void rule__ButtonRefinement__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1135:1: ( rule__ButtonRefinement__Group__1__Impl rule__ButtonRefinement__Group__2 )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1136:2: rule__ButtonRefinement__Group__1__Impl rule__ButtonRefinement__Group__2
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1143:1: ( rule__ButtonRefinement__Group__1__Impl rule__ButtonRefinement__Group__2 )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1144:2: rule__ButtonRefinement__Group__1__Impl rule__ButtonRefinement__Group__2
             {
-            pushFollow(FOLLOW_rule__ButtonRefinement__Group__1__Impl_in_rule__ButtonRefinement__Group__12318);
+            pushFollow(FOLLOW_rule__ButtonRefinement__Group__1__Impl_in_rule__ButtonRefinement__Group__12326);
             rule__ButtonRefinement__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__ButtonRefinement__Group__2_in_rule__ButtonRefinement__Group__12321);
+            pushFollow(FOLLOW_rule__ButtonRefinement__Group__2_in_rule__ButtonRefinement__Group__12329);
             rule__ButtonRefinement__Group__2();
 
             state._fsp--;
@@ -3205,21 +3204,21 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ButtonRefinement__Group__1__Impl"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1143:1: rule__ButtonRefinement__Group__1__Impl : ( ' with name: ' ) ;
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1151:1: rule__ButtonRefinement__Group__1__Impl : ( 'from:' ) ;
     public final void rule__ButtonRefinement__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1147:1: ( ( ' with name: ' ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1148:1: ( ' with name: ' )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1155:1: ( ( 'from:' ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1156:1: ( 'from:' )
             {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1148:1: ( ' with name: ' )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1149:1: ' with name: '
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1156:1: ( 'from:' )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1157:1: 'from:'
             {
-             before(grammarAccess.getButtonRefinementAccess().getWithNameKeyword_1()); 
-            match(input,17,FOLLOW_17_in_rule__ButtonRefinement__Group__1__Impl2349); 
-             after(grammarAccess.getButtonRefinementAccess().getWithNameKeyword_1()); 
+             before(grammarAccess.getButtonRefinementAccess().getFromKeyword_1()); 
+            match(input,18,FOLLOW_18_in_rule__ButtonRefinement__Group__1__Impl2357); 
+             after(grammarAccess.getButtonRefinementAccess().getFromKeyword_1()); 
 
             }
 
@@ -3242,21 +3241,21 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ButtonRefinement__Group__2"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1162:1: rule__ButtonRefinement__Group__2 : rule__ButtonRefinement__Group__2__Impl rule__ButtonRefinement__Group__3 ;
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1170:1: rule__ButtonRefinement__Group__2 : rule__ButtonRefinement__Group__2__Impl rule__ButtonRefinement__Group__3 ;
     public final void rule__ButtonRefinement__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1166:1: ( rule__ButtonRefinement__Group__2__Impl rule__ButtonRefinement__Group__3 )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1167:2: rule__ButtonRefinement__Group__2__Impl rule__ButtonRefinement__Group__3
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1174:1: ( rule__ButtonRefinement__Group__2__Impl rule__ButtonRefinement__Group__3 )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1175:2: rule__ButtonRefinement__Group__2__Impl rule__ButtonRefinement__Group__3
             {
-            pushFollow(FOLLOW_rule__ButtonRefinement__Group__2__Impl_in_rule__ButtonRefinement__Group__22380);
+            pushFollow(FOLLOW_rule__ButtonRefinement__Group__2__Impl_in_rule__ButtonRefinement__Group__22388);
             rule__ButtonRefinement__Group__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__ButtonRefinement__Group__3_in_rule__ButtonRefinement__Group__22383);
+            pushFollow(FOLLOW_rule__ButtonRefinement__Group__3_in_rule__ButtonRefinement__Group__22391);
             rule__ButtonRefinement__Group__3();
 
             state._fsp--;
@@ -3280,31 +3279,31 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ButtonRefinement__Group__2__Impl"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1174:1: rule__ButtonRefinement__Group__2__Impl : ( ( rule__ButtonRefinement__NameAssignment_2 ) ) ;
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1182:1: rule__ButtonRefinement__Group__2__Impl : ( ( rule__ButtonRefinement__IdAssignment_2 ) ) ;
     public final void rule__ButtonRefinement__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1178:1: ( ( ( rule__ButtonRefinement__NameAssignment_2 ) ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1179:1: ( ( rule__ButtonRefinement__NameAssignment_2 ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1186:1: ( ( ( rule__ButtonRefinement__IdAssignment_2 ) ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1187:1: ( ( rule__ButtonRefinement__IdAssignment_2 ) )
             {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1179:1: ( ( rule__ButtonRefinement__NameAssignment_2 ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1180:1: ( rule__ButtonRefinement__NameAssignment_2 )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1187:1: ( ( rule__ButtonRefinement__IdAssignment_2 ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1188:1: ( rule__ButtonRefinement__IdAssignment_2 )
             {
-             before(grammarAccess.getButtonRefinementAccess().getNameAssignment_2()); 
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1181:1: ( rule__ButtonRefinement__NameAssignment_2 )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1181:2: rule__ButtonRefinement__NameAssignment_2
+             before(grammarAccess.getButtonRefinementAccess().getIdAssignment_2()); 
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1189:1: ( rule__ButtonRefinement__IdAssignment_2 )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1189:2: rule__ButtonRefinement__IdAssignment_2
             {
-            pushFollow(FOLLOW_rule__ButtonRefinement__NameAssignment_2_in_rule__ButtonRefinement__Group__2__Impl2410);
-            rule__ButtonRefinement__NameAssignment_2();
+            pushFollow(FOLLOW_rule__ButtonRefinement__IdAssignment_2_in_rule__ButtonRefinement__Group__2__Impl2418);
+            rule__ButtonRefinement__IdAssignment_2();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getButtonRefinementAccess().getNameAssignment_2()); 
+             after(grammarAccess.getButtonRefinementAccess().getIdAssignment_2()); 
 
             }
 
@@ -3327,16 +3326,16 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ButtonRefinement__Group__3"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1191:1: rule__ButtonRefinement__Group__3 : rule__ButtonRefinement__Group__3__Impl ;
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1199:1: rule__ButtonRefinement__Group__3 : rule__ButtonRefinement__Group__3__Impl ;
     public final void rule__ButtonRefinement__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1195:1: ( rule__ButtonRefinement__Group__3__Impl )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1196:2: rule__ButtonRefinement__Group__3__Impl
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1203:1: ( rule__ButtonRefinement__Group__3__Impl )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1204:2: rule__ButtonRefinement__Group__3__Impl
             {
-            pushFollow(FOLLOW_rule__ButtonRefinement__Group__3__Impl_in_rule__ButtonRefinement__Group__32440);
+            pushFollow(FOLLOW_rule__ButtonRefinement__Group__3__Impl_in_rule__ButtonRefinement__Group__32448);
             rule__ButtonRefinement__Group__3__Impl();
 
             state._fsp--;
@@ -3360,31 +3359,31 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ButtonRefinement__Group__3__Impl"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1202:1: rule__ButtonRefinement__Group__3__Impl : ( ( rule__ButtonRefinement__PropertiesAssignment_3 )? ) ;
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1210:1: rule__ButtonRefinement__Group__3__Impl : ( ( rule__ButtonRefinement__PropertiesAssignment_3 )? ) ;
     public final void rule__ButtonRefinement__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1206:1: ( ( ( rule__ButtonRefinement__PropertiesAssignment_3 )? ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1207:1: ( ( rule__ButtonRefinement__PropertiesAssignment_3 )? )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1214:1: ( ( ( rule__ButtonRefinement__PropertiesAssignment_3 )? ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1215:1: ( ( rule__ButtonRefinement__PropertiesAssignment_3 )? )
             {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1207:1: ( ( rule__ButtonRefinement__PropertiesAssignment_3 )? )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1208:1: ( rule__ButtonRefinement__PropertiesAssignment_3 )?
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1215:1: ( ( rule__ButtonRefinement__PropertiesAssignment_3 )? )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1216:1: ( rule__ButtonRefinement__PropertiesAssignment_3 )?
             {
              before(grammarAccess.getButtonRefinementAccess().getPropertiesAssignment_3()); 
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1209:1: ( rule__ButtonRefinement__PropertiesAssignment_3 )?
-            int alt12=2;
-            int LA12_0 = input.LA(1);
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1217:1: ( rule__ButtonRefinement__PropertiesAssignment_3 )?
+            int alt11=2;
+            int LA11_0 = input.LA(1);
 
-            if ( (LA12_0==31) ) {
-                alt12=1;
+            if ( (LA11_0==24) ) {
+                alt11=1;
             }
-            switch (alt12) {
+            switch (alt11) {
                 case 1 :
-                    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1209:2: rule__ButtonRefinement__PropertiesAssignment_3
+                    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1217:2: rule__ButtonRefinement__PropertiesAssignment_3
                     {
-                    pushFollow(FOLLOW_rule__ButtonRefinement__PropertiesAssignment_3_in_rule__ButtonRefinement__Group__3__Impl2467);
+                    pushFollow(FOLLOW_rule__ButtonRefinement__PropertiesAssignment_3_in_rule__ButtonRefinement__Group__3__Impl2475);
                     rule__ButtonRefinement__PropertiesAssignment_3();
 
                     state._fsp--;
@@ -3418,21 +3417,21 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__LabelRefinement__Group__0"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1227:1: rule__LabelRefinement__Group__0 : rule__LabelRefinement__Group__0__Impl rule__LabelRefinement__Group__1 ;
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1235:1: rule__LabelRefinement__Group__0 : rule__LabelRefinement__Group__0__Impl rule__LabelRefinement__Group__1 ;
     public final void rule__LabelRefinement__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1231:1: ( rule__LabelRefinement__Group__0__Impl rule__LabelRefinement__Group__1 )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1232:2: rule__LabelRefinement__Group__0__Impl rule__LabelRefinement__Group__1
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1239:1: ( rule__LabelRefinement__Group__0__Impl rule__LabelRefinement__Group__1 )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1240:2: rule__LabelRefinement__Group__0__Impl rule__LabelRefinement__Group__1
             {
-            pushFollow(FOLLOW_rule__LabelRefinement__Group__0__Impl_in_rule__LabelRefinement__Group__02506);
+            pushFollow(FOLLOW_rule__LabelRefinement__Group__0__Impl_in_rule__LabelRefinement__Group__02514);
             rule__LabelRefinement__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__LabelRefinement__Group__1_in_rule__LabelRefinement__Group__02509);
+            pushFollow(FOLLOW_rule__LabelRefinement__Group__1_in_rule__LabelRefinement__Group__02517);
             rule__LabelRefinement__Group__1();
 
             state._fsp--;
@@ -3456,31 +3455,31 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__LabelRefinement__Group__0__Impl"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1239:1: rule__LabelRefinement__Group__0__Impl : ( ( rule__LabelRefinement__TypeAssignment_0 ) ) ;
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1247:1: rule__LabelRefinement__Group__0__Impl : ( ( rule__LabelRefinement__NameAssignment_0 ) ) ;
     public final void rule__LabelRefinement__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1243:1: ( ( ( rule__LabelRefinement__TypeAssignment_0 ) ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1244:1: ( ( rule__LabelRefinement__TypeAssignment_0 ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1251:1: ( ( ( rule__LabelRefinement__NameAssignment_0 ) ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1252:1: ( ( rule__LabelRefinement__NameAssignment_0 ) )
             {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1244:1: ( ( rule__LabelRefinement__TypeAssignment_0 ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1245:1: ( rule__LabelRefinement__TypeAssignment_0 )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1252:1: ( ( rule__LabelRefinement__NameAssignment_0 ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1253:1: ( rule__LabelRefinement__NameAssignment_0 )
             {
-             before(grammarAccess.getLabelRefinementAccess().getTypeAssignment_0()); 
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1246:1: ( rule__LabelRefinement__TypeAssignment_0 )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1246:2: rule__LabelRefinement__TypeAssignment_0
+             before(grammarAccess.getLabelRefinementAccess().getNameAssignment_0()); 
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1254:1: ( rule__LabelRefinement__NameAssignment_0 )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1254:2: rule__LabelRefinement__NameAssignment_0
             {
-            pushFollow(FOLLOW_rule__LabelRefinement__TypeAssignment_0_in_rule__LabelRefinement__Group__0__Impl2536);
-            rule__LabelRefinement__TypeAssignment_0();
+            pushFollow(FOLLOW_rule__LabelRefinement__NameAssignment_0_in_rule__LabelRefinement__Group__0__Impl2544);
+            rule__LabelRefinement__NameAssignment_0();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getLabelRefinementAccess().getTypeAssignment_0()); 
+             after(grammarAccess.getLabelRefinementAccess().getNameAssignment_0()); 
 
             }
 
@@ -3503,21 +3502,21 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__LabelRefinement__Group__1"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1256:1: rule__LabelRefinement__Group__1 : rule__LabelRefinement__Group__1__Impl rule__LabelRefinement__Group__2 ;
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1264:1: rule__LabelRefinement__Group__1 : rule__LabelRefinement__Group__1__Impl rule__LabelRefinement__Group__2 ;
     public final void rule__LabelRefinement__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1260:1: ( rule__LabelRefinement__Group__1__Impl rule__LabelRefinement__Group__2 )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1261:2: rule__LabelRefinement__Group__1__Impl rule__LabelRefinement__Group__2
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1268:1: ( rule__LabelRefinement__Group__1__Impl rule__LabelRefinement__Group__2 )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1269:2: rule__LabelRefinement__Group__1__Impl rule__LabelRefinement__Group__2
             {
-            pushFollow(FOLLOW_rule__LabelRefinement__Group__1__Impl_in_rule__LabelRefinement__Group__12566);
+            pushFollow(FOLLOW_rule__LabelRefinement__Group__1__Impl_in_rule__LabelRefinement__Group__12574);
             rule__LabelRefinement__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__LabelRefinement__Group__2_in_rule__LabelRefinement__Group__12569);
+            pushFollow(FOLLOW_rule__LabelRefinement__Group__2_in_rule__LabelRefinement__Group__12577);
             rule__LabelRefinement__Group__2();
 
             state._fsp--;
@@ -3541,21 +3540,21 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__LabelRefinement__Group__1__Impl"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1268:1: rule__LabelRefinement__Group__1__Impl : ( ' with name: ' ) ;
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1276:1: rule__LabelRefinement__Group__1__Impl : ( 'from: ' ) ;
     public final void rule__LabelRefinement__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1272:1: ( ( ' with name: ' ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1273:1: ( ' with name: ' )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1280:1: ( ( 'from: ' ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1281:1: ( 'from: ' )
             {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1273:1: ( ' with name: ' )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1274:1: ' with name: '
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1281:1: ( 'from: ' )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1282:1: 'from: '
             {
-             before(grammarAccess.getLabelRefinementAccess().getWithNameKeyword_1()); 
-            match(input,17,FOLLOW_17_in_rule__LabelRefinement__Group__1__Impl2597); 
-             after(grammarAccess.getLabelRefinementAccess().getWithNameKeyword_1()); 
+             before(grammarAccess.getLabelRefinementAccess().getFromKeyword_1()); 
+            match(input,19,FOLLOW_19_in_rule__LabelRefinement__Group__1__Impl2605); 
+             after(grammarAccess.getLabelRefinementAccess().getFromKeyword_1()); 
 
             }
 
@@ -3578,21 +3577,21 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__LabelRefinement__Group__2"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1287:1: rule__LabelRefinement__Group__2 : rule__LabelRefinement__Group__2__Impl rule__LabelRefinement__Group__3 ;
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1295:1: rule__LabelRefinement__Group__2 : rule__LabelRefinement__Group__2__Impl rule__LabelRefinement__Group__3 ;
     public final void rule__LabelRefinement__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1291:1: ( rule__LabelRefinement__Group__2__Impl rule__LabelRefinement__Group__3 )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1292:2: rule__LabelRefinement__Group__2__Impl rule__LabelRefinement__Group__3
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1299:1: ( rule__LabelRefinement__Group__2__Impl rule__LabelRefinement__Group__3 )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1300:2: rule__LabelRefinement__Group__2__Impl rule__LabelRefinement__Group__3
             {
-            pushFollow(FOLLOW_rule__LabelRefinement__Group__2__Impl_in_rule__LabelRefinement__Group__22628);
+            pushFollow(FOLLOW_rule__LabelRefinement__Group__2__Impl_in_rule__LabelRefinement__Group__22636);
             rule__LabelRefinement__Group__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__LabelRefinement__Group__3_in_rule__LabelRefinement__Group__22631);
+            pushFollow(FOLLOW_rule__LabelRefinement__Group__3_in_rule__LabelRefinement__Group__22639);
             rule__LabelRefinement__Group__3();
 
             state._fsp--;
@@ -3616,31 +3615,31 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__LabelRefinement__Group__2__Impl"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1299:1: rule__LabelRefinement__Group__2__Impl : ( ( rule__LabelRefinement__NameAssignment_2 ) ) ;
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1307:1: rule__LabelRefinement__Group__2__Impl : ( ( rule__LabelRefinement__IdAssignment_2 ) ) ;
     public final void rule__LabelRefinement__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1303:1: ( ( ( rule__LabelRefinement__NameAssignment_2 ) ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1304:1: ( ( rule__LabelRefinement__NameAssignment_2 ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1311:1: ( ( ( rule__LabelRefinement__IdAssignment_2 ) ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1312:1: ( ( rule__LabelRefinement__IdAssignment_2 ) )
             {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1304:1: ( ( rule__LabelRefinement__NameAssignment_2 ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1305:1: ( rule__LabelRefinement__NameAssignment_2 )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1312:1: ( ( rule__LabelRefinement__IdAssignment_2 ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1313:1: ( rule__LabelRefinement__IdAssignment_2 )
             {
-             before(grammarAccess.getLabelRefinementAccess().getNameAssignment_2()); 
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1306:1: ( rule__LabelRefinement__NameAssignment_2 )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1306:2: rule__LabelRefinement__NameAssignment_2
+             before(grammarAccess.getLabelRefinementAccess().getIdAssignment_2()); 
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1314:1: ( rule__LabelRefinement__IdAssignment_2 )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1314:2: rule__LabelRefinement__IdAssignment_2
             {
-            pushFollow(FOLLOW_rule__LabelRefinement__NameAssignment_2_in_rule__LabelRefinement__Group__2__Impl2658);
-            rule__LabelRefinement__NameAssignment_2();
+            pushFollow(FOLLOW_rule__LabelRefinement__IdAssignment_2_in_rule__LabelRefinement__Group__2__Impl2666);
+            rule__LabelRefinement__IdAssignment_2();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getLabelRefinementAccess().getNameAssignment_2()); 
+             after(grammarAccess.getLabelRefinementAccess().getIdAssignment_2()); 
 
             }
 
@@ -3663,16 +3662,16 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__LabelRefinement__Group__3"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1316:1: rule__LabelRefinement__Group__3 : rule__LabelRefinement__Group__3__Impl ;
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1324:1: rule__LabelRefinement__Group__3 : rule__LabelRefinement__Group__3__Impl ;
     public final void rule__LabelRefinement__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1320:1: ( rule__LabelRefinement__Group__3__Impl )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1321:2: rule__LabelRefinement__Group__3__Impl
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1328:1: ( rule__LabelRefinement__Group__3__Impl )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1329:2: rule__LabelRefinement__Group__3__Impl
             {
-            pushFollow(FOLLOW_rule__LabelRefinement__Group__3__Impl_in_rule__LabelRefinement__Group__32688);
+            pushFollow(FOLLOW_rule__LabelRefinement__Group__3__Impl_in_rule__LabelRefinement__Group__32696);
             rule__LabelRefinement__Group__3__Impl();
 
             state._fsp--;
@@ -3696,31 +3695,31 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__LabelRefinement__Group__3__Impl"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1327:1: rule__LabelRefinement__Group__3__Impl : ( ( rule__LabelRefinement__PropertiesAssignment_3 )? ) ;
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1335:1: rule__LabelRefinement__Group__3__Impl : ( ( rule__LabelRefinement__PropertiesAssignment_3 )? ) ;
     public final void rule__LabelRefinement__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1331:1: ( ( ( rule__LabelRefinement__PropertiesAssignment_3 )? ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1332:1: ( ( rule__LabelRefinement__PropertiesAssignment_3 )? )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1339:1: ( ( ( rule__LabelRefinement__PropertiesAssignment_3 )? ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1340:1: ( ( rule__LabelRefinement__PropertiesAssignment_3 )? )
             {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1332:1: ( ( rule__LabelRefinement__PropertiesAssignment_3 )? )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1333:1: ( rule__LabelRefinement__PropertiesAssignment_3 )?
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1340:1: ( ( rule__LabelRefinement__PropertiesAssignment_3 )? )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1341:1: ( rule__LabelRefinement__PropertiesAssignment_3 )?
             {
              before(grammarAccess.getLabelRefinementAccess().getPropertiesAssignment_3()); 
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1334:1: ( rule__LabelRefinement__PropertiesAssignment_3 )?
-            int alt13=2;
-            int LA13_0 = input.LA(1);
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1342:1: ( rule__LabelRefinement__PropertiesAssignment_3 )?
+            int alt12=2;
+            int LA12_0 = input.LA(1);
 
-            if ( (LA13_0==31) ) {
-                alt13=1;
+            if ( (LA12_0==24) ) {
+                alt12=1;
             }
-            switch (alt13) {
+            switch (alt12) {
                 case 1 :
-                    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1334:2: rule__LabelRefinement__PropertiesAssignment_3
+                    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1342:2: rule__LabelRefinement__PropertiesAssignment_3
                     {
-                    pushFollow(FOLLOW_rule__LabelRefinement__PropertiesAssignment_3_in_rule__LabelRefinement__Group__3__Impl2715);
+                    pushFollow(FOLLOW_rule__LabelRefinement__PropertiesAssignment_3_in_rule__LabelRefinement__Group__3__Impl2723);
                     rule__LabelRefinement__PropertiesAssignment_3();
 
                     state._fsp--;
@@ -3754,21 +3753,21 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Property__Group__0"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1352:1: rule__Property__Group__0 : rule__Property__Group__0__Impl rule__Property__Group__1 ;
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1360:1: rule__Property__Group__0 : rule__Property__Group__0__Impl rule__Property__Group__1 ;
     public final void rule__Property__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1356:1: ( rule__Property__Group__0__Impl rule__Property__Group__1 )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1357:2: rule__Property__Group__0__Impl rule__Property__Group__1
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1364:1: ( rule__Property__Group__0__Impl rule__Property__Group__1 )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1365:2: rule__Property__Group__0__Impl rule__Property__Group__1
             {
-            pushFollow(FOLLOW_rule__Property__Group__0__Impl_in_rule__Property__Group__02754);
+            pushFollow(FOLLOW_rule__Property__Group__0__Impl_in_rule__Property__Group__02762);
             rule__Property__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Property__Group__1_in_rule__Property__Group__02757);
+            pushFollow(FOLLOW_rule__Property__Group__1_in_rule__Property__Group__02765);
             rule__Property__Group__1();
 
             state._fsp--;
@@ -3792,20 +3791,20 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Property__Group__0__Impl"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1364:1: rule__Property__Group__0__Impl : ( 'get properties from:' ) ;
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1372:1: rule__Property__Group__0__Impl : ( 'get properties from:' ) ;
     public final void rule__Property__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1368:1: ( ( 'get properties from:' ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1369:1: ( 'get properties from:' )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1376:1: ( ( 'get properties from:' ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1377:1: ( 'get properties from:' )
             {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1369:1: ( 'get properties from:' )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1370:1: 'get properties from:'
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1377:1: ( 'get properties from:' )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1378:1: 'get properties from:'
             {
              before(grammarAccess.getPropertyAccess().getGetPropertiesFromKeyword_0()); 
-            match(input,18,FOLLOW_18_in_rule__Property__Group__0__Impl2785); 
+            match(input,20,FOLLOW_20_in_rule__Property__Group__0__Impl2793); 
              after(grammarAccess.getPropertyAccess().getGetPropertiesFromKeyword_0()); 
 
             }
@@ -3829,16 +3828,16 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Property__Group__1"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1383:1: rule__Property__Group__1 : rule__Property__Group__1__Impl ;
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1391:1: rule__Property__Group__1 : rule__Property__Group__1__Impl ;
     public final void rule__Property__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1387:1: ( rule__Property__Group__1__Impl )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1388:2: rule__Property__Group__1__Impl
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1395:1: ( rule__Property__Group__1__Impl )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1396:2: rule__Property__Group__1__Impl
             {
-            pushFollow(FOLLOW_rule__Property__Group__1__Impl_in_rule__Property__Group__12816);
+            pushFollow(FOLLOW_rule__Property__Group__1__Impl_in_rule__Property__Group__12824);
             rule__Property__Group__1__Impl();
 
             state._fsp--;
@@ -3862,23 +3861,23 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Property__Group__1__Impl"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1394:1: rule__Property__Group__1__Impl : ( ( rule__Property__PropertiesFileAssignment_1 ) ) ;
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1402:1: rule__Property__Group__1__Impl : ( ( rule__Property__PropertiesFileAssignment_1 ) ) ;
     public final void rule__Property__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1398:1: ( ( ( rule__Property__PropertiesFileAssignment_1 ) ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1399:1: ( ( rule__Property__PropertiesFileAssignment_1 ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1406:1: ( ( ( rule__Property__PropertiesFileAssignment_1 ) ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1407:1: ( ( rule__Property__PropertiesFileAssignment_1 ) )
             {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1399:1: ( ( rule__Property__PropertiesFileAssignment_1 ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1400:1: ( rule__Property__PropertiesFileAssignment_1 )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1407:1: ( ( rule__Property__PropertiesFileAssignment_1 ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1408:1: ( rule__Property__PropertiesFileAssignment_1 )
             {
              before(grammarAccess.getPropertyAccess().getPropertiesFileAssignment_1()); 
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1401:1: ( rule__Property__PropertiesFileAssignment_1 )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1401:2: rule__Property__PropertiesFileAssignment_1
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1409:1: ( rule__Property__PropertiesFileAssignment_1 )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1409:2: rule__Property__PropertiesFileAssignment_1
             {
-            pushFollow(FOLLOW_rule__Property__PropertiesFileAssignment_1_in_rule__Property__Group__1__Impl2843);
+            pushFollow(FOLLOW_rule__Property__PropertiesFileAssignment_1_in_rule__Property__Group__1__Impl2851);
             rule__Property__PropertiesFileAssignment_1();
 
             state._fsp--;
@@ -3909,21 +3908,21 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__UsedDescriptions__Group__0"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1415:1: rule__UsedDescriptions__Group__0 : rule__UsedDescriptions__Group__0__Impl rule__UsedDescriptions__Group__1 ;
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1423:1: rule__UsedDescriptions__Group__0 : rule__UsedDescriptions__Group__0__Impl rule__UsedDescriptions__Group__1 ;
     public final void rule__UsedDescriptions__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1419:1: ( rule__UsedDescriptions__Group__0__Impl rule__UsedDescriptions__Group__1 )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1420:2: rule__UsedDescriptions__Group__0__Impl rule__UsedDescriptions__Group__1
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1427:1: ( rule__UsedDescriptions__Group__0__Impl rule__UsedDescriptions__Group__1 )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1428:2: rule__UsedDescriptions__Group__0__Impl rule__UsedDescriptions__Group__1
             {
-            pushFollow(FOLLOW_rule__UsedDescriptions__Group__0__Impl_in_rule__UsedDescriptions__Group__02877);
+            pushFollow(FOLLOW_rule__UsedDescriptions__Group__0__Impl_in_rule__UsedDescriptions__Group__02885);
             rule__UsedDescriptions__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__UsedDescriptions__Group__1_in_rule__UsedDescriptions__Group__02880);
+            pushFollow(FOLLOW_rule__UsedDescriptions__Group__1_in_rule__UsedDescriptions__Group__02888);
             rule__UsedDescriptions__Group__1();
 
             state._fsp--;
@@ -3947,20 +3946,20 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__UsedDescriptions__Group__0__Impl"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1427:1: rule__UsedDescriptions__Group__0__Impl : ( 'use: ' ) ;
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1435:1: rule__UsedDescriptions__Group__0__Impl : ( 'use: ' ) ;
     public final void rule__UsedDescriptions__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1431:1: ( ( 'use: ' ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1432:1: ( 'use: ' )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1439:1: ( ( 'use: ' ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1440:1: ( 'use: ' )
             {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1432:1: ( 'use: ' )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1433:1: 'use: '
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1440:1: ( 'use: ' )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1441:1: 'use: '
             {
              before(grammarAccess.getUsedDescriptionsAccess().getUseKeyword_0()); 
-            match(input,19,FOLLOW_19_in_rule__UsedDescriptions__Group__0__Impl2908); 
+            match(input,21,FOLLOW_21_in_rule__UsedDescriptions__Group__0__Impl2916); 
              after(grammarAccess.getUsedDescriptionsAccess().getUseKeyword_0()); 
 
             }
@@ -3984,21 +3983,21 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__UsedDescriptions__Group__1"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1446:1: rule__UsedDescriptions__Group__1 : rule__UsedDescriptions__Group__1__Impl rule__UsedDescriptions__Group__2 ;
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1454:1: rule__UsedDescriptions__Group__1 : rule__UsedDescriptions__Group__1__Impl rule__UsedDescriptions__Group__2 ;
     public final void rule__UsedDescriptions__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1450:1: ( rule__UsedDescriptions__Group__1__Impl rule__UsedDescriptions__Group__2 )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1451:2: rule__UsedDescriptions__Group__1__Impl rule__UsedDescriptions__Group__2
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1458:1: ( rule__UsedDescriptions__Group__1__Impl rule__UsedDescriptions__Group__2 )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1459:2: rule__UsedDescriptions__Group__1__Impl rule__UsedDescriptions__Group__2
             {
-            pushFollow(FOLLOW_rule__UsedDescriptions__Group__1__Impl_in_rule__UsedDescriptions__Group__12939);
+            pushFollow(FOLLOW_rule__UsedDescriptions__Group__1__Impl_in_rule__UsedDescriptions__Group__12947);
             rule__UsedDescriptions__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__UsedDescriptions__Group__2_in_rule__UsedDescriptions__Group__12942);
+            pushFollow(FOLLOW_rule__UsedDescriptions__Group__2_in_rule__UsedDescriptions__Group__12950);
             rule__UsedDescriptions__Group__2();
 
             state._fsp--;
@@ -4022,23 +4021,23 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__UsedDescriptions__Group__1__Impl"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1458:1: rule__UsedDescriptions__Group__1__Impl : ( ( rule__UsedDescriptions__DescriptionAssignment_1 ) ) ;
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1466:1: rule__UsedDescriptions__Group__1__Impl : ( ( rule__UsedDescriptions__DescriptionAssignment_1 ) ) ;
     public final void rule__UsedDescriptions__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1462:1: ( ( ( rule__UsedDescriptions__DescriptionAssignment_1 ) ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1463:1: ( ( rule__UsedDescriptions__DescriptionAssignment_1 ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1470:1: ( ( ( rule__UsedDescriptions__DescriptionAssignment_1 ) ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1471:1: ( ( rule__UsedDescriptions__DescriptionAssignment_1 ) )
             {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1463:1: ( ( rule__UsedDescriptions__DescriptionAssignment_1 ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1464:1: ( rule__UsedDescriptions__DescriptionAssignment_1 )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1471:1: ( ( rule__UsedDescriptions__DescriptionAssignment_1 ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1472:1: ( rule__UsedDescriptions__DescriptionAssignment_1 )
             {
              before(grammarAccess.getUsedDescriptionsAccess().getDescriptionAssignment_1()); 
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1465:1: ( rule__UsedDescriptions__DescriptionAssignment_1 )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1465:2: rule__UsedDescriptions__DescriptionAssignment_1
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1473:1: ( rule__UsedDescriptions__DescriptionAssignment_1 )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1473:2: rule__UsedDescriptions__DescriptionAssignment_1
             {
-            pushFollow(FOLLOW_rule__UsedDescriptions__DescriptionAssignment_1_in_rule__UsedDescriptions__Group__1__Impl2969);
+            pushFollow(FOLLOW_rule__UsedDescriptions__DescriptionAssignment_1_in_rule__UsedDescriptions__Group__1__Impl2977);
             rule__UsedDescriptions__DescriptionAssignment_1();
 
             state._fsp--;
@@ -4069,16 +4068,16 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__UsedDescriptions__Group__2"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1475:1: rule__UsedDescriptions__Group__2 : rule__UsedDescriptions__Group__2__Impl ;
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1483:1: rule__UsedDescriptions__Group__2 : rule__UsedDescriptions__Group__2__Impl ;
     public final void rule__UsedDescriptions__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1479:1: ( rule__UsedDescriptions__Group__2__Impl )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1480:2: rule__UsedDescriptions__Group__2__Impl
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1487:1: ( rule__UsedDescriptions__Group__2__Impl )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1488:2: rule__UsedDescriptions__Group__2__Impl
             {
-            pushFollow(FOLLOW_rule__UsedDescriptions__Group__2__Impl_in_rule__UsedDescriptions__Group__22999);
+            pushFollow(FOLLOW_rule__UsedDescriptions__Group__2__Impl_in_rule__UsedDescriptions__Group__23007);
             rule__UsedDescriptions__Group__2__Impl();
 
             state._fsp--;
@@ -4102,31 +4101,31 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__UsedDescriptions__Group__2__Impl"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1486:1: rule__UsedDescriptions__Group__2__Impl : ( ( rule__UsedDescriptions__Group_2__0 )? ) ;
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1494:1: rule__UsedDescriptions__Group__2__Impl : ( ( rule__UsedDescriptions__Group_2__0 )? ) ;
     public final void rule__UsedDescriptions__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1490:1: ( ( ( rule__UsedDescriptions__Group_2__0 )? ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1491:1: ( ( rule__UsedDescriptions__Group_2__0 )? )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1498:1: ( ( ( rule__UsedDescriptions__Group_2__0 )? ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1499:1: ( ( rule__UsedDescriptions__Group_2__0 )? )
             {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1491:1: ( ( rule__UsedDescriptions__Group_2__0 )? )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1492:1: ( rule__UsedDescriptions__Group_2__0 )?
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1499:1: ( ( rule__UsedDescriptions__Group_2__0 )? )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1500:1: ( rule__UsedDescriptions__Group_2__0 )?
             {
              before(grammarAccess.getUsedDescriptionsAccess().getGroup_2()); 
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1493:1: ( rule__UsedDescriptions__Group_2__0 )?
-            int alt14=2;
-            int LA14_0 = input.LA(1);
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1501:1: ( rule__UsedDescriptions__Group_2__0 )?
+            int alt13=2;
+            int LA13_0 = input.LA(1);
 
-            if ( (LA14_0==20) ) {
-                alt14=1;
+            if ( (LA13_0==22) ) {
+                alt13=1;
             }
-            switch (alt14) {
+            switch (alt13) {
                 case 1 :
-                    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1493:2: rule__UsedDescriptions__Group_2__0
+                    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1501:2: rule__UsedDescriptions__Group_2__0
                     {
-                    pushFollow(FOLLOW_rule__UsedDescriptions__Group_2__0_in_rule__UsedDescriptions__Group__2__Impl3026);
+                    pushFollow(FOLLOW_rule__UsedDescriptions__Group_2__0_in_rule__UsedDescriptions__Group__2__Impl3034);
                     rule__UsedDescriptions__Group_2__0();
 
                     state._fsp--;
@@ -4160,21 +4159,21 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__UsedDescriptions__Group_2__0"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1509:1: rule__UsedDescriptions__Group_2__0 : rule__UsedDescriptions__Group_2__0__Impl rule__UsedDescriptions__Group_2__1 ;
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1517:1: rule__UsedDescriptions__Group_2__0 : rule__UsedDescriptions__Group_2__0__Impl rule__UsedDescriptions__Group_2__1 ;
     public final void rule__UsedDescriptions__Group_2__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1513:1: ( rule__UsedDescriptions__Group_2__0__Impl rule__UsedDescriptions__Group_2__1 )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1514:2: rule__UsedDescriptions__Group_2__0__Impl rule__UsedDescriptions__Group_2__1
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1521:1: ( rule__UsedDescriptions__Group_2__0__Impl rule__UsedDescriptions__Group_2__1 )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1522:2: rule__UsedDescriptions__Group_2__0__Impl rule__UsedDescriptions__Group_2__1
             {
-            pushFollow(FOLLOW_rule__UsedDescriptions__Group_2__0__Impl_in_rule__UsedDescriptions__Group_2__03063);
+            pushFollow(FOLLOW_rule__UsedDescriptions__Group_2__0__Impl_in_rule__UsedDescriptions__Group_2__03071);
             rule__UsedDescriptions__Group_2__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__UsedDescriptions__Group_2__1_in_rule__UsedDescriptions__Group_2__03066);
+            pushFollow(FOLLOW_rule__UsedDescriptions__Group_2__1_in_rule__UsedDescriptions__Group_2__03074);
             rule__UsedDescriptions__Group_2__1();
 
             state._fsp--;
@@ -4198,20 +4197,20 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__UsedDescriptions__Group_2__0__Impl"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1521:1: rule__UsedDescriptions__Group_2__0__Impl : ( ' as: ' ) ;
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1529:1: rule__UsedDescriptions__Group_2__0__Impl : ( 'as:' ) ;
     public final void rule__UsedDescriptions__Group_2__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1525:1: ( ( ' as: ' ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1526:1: ( ' as: ' )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1533:1: ( ( 'as:' ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1534:1: ( 'as:' )
             {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1526:1: ( ' as: ' )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1527:1: ' as: '
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1534:1: ( 'as:' )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1535:1: 'as:'
             {
              before(grammarAccess.getUsedDescriptionsAccess().getAsKeyword_2_0()); 
-            match(input,20,FOLLOW_20_in_rule__UsedDescriptions__Group_2__0__Impl3094); 
+            match(input,22,FOLLOW_22_in_rule__UsedDescriptions__Group_2__0__Impl3102); 
              after(grammarAccess.getUsedDescriptionsAccess().getAsKeyword_2_0()); 
 
             }
@@ -4235,16 +4234,16 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__UsedDescriptions__Group_2__1"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1540:1: rule__UsedDescriptions__Group_2__1 : rule__UsedDescriptions__Group_2__1__Impl ;
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1548:1: rule__UsedDescriptions__Group_2__1 : rule__UsedDescriptions__Group_2__1__Impl ;
     public final void rule__UsedDescriptions__Group_2__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1544:1: ( rule__UsedDescriptions__Group_2__1__Impl )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1545:2: rule__UsedDescriptions__Group_2__1__Impl
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1552:1: ( rule__UsedDescriptions__Group_2__1__Impl )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1553:2: rule__UsedDescriptions__Group_2__1__Impl
             {
-            pushFollow(FOLLOW_rule__UsedDescriptions__Group_2__1__Impl_in_rule__UsedDescriptions__Group_2__13125);
+            pushFollow(FOLLOW_rule__UsedDescriptions__Group_2__1__Impl_in_rule__UsedDescriptions__Group_2__13133);
             rule__UsedDescriptions__Group_2__1__Impl();
 
             state._fsp--;
@@ -4268,31 +4267,31 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__UsedDescriptions__Group_2__1__Impl"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1551:1: rule__UsedDescriptions__Group_2__1__Impl : ( ( rule__UsedDescriptions__LocalNameAssignment_2_1 ) ) ;
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1559:1: rule__UsedDescriptions__Group_2__1__Impl : ( ( rule__UsedDescriptions__IdAssignment_2_1 ) ) ;
     public final void rule__UsedDescriptions__Group_2__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1555:1: ( ( ( rule__UsedDescriptions__LocalNameAssignment_2_1 ) ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1556:1: ( ( rule__UsedDescriptions__LocalNameAssignment_2_1 ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1563:1: ( ( ( rule__UsedDescriptions__IdAssignment_2_1 ) ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1564:1: ( ( rule__UsedDescriptions__IdAssignment_2_1 ) )
             {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1556:1: ( ( rule__UsedDescriptions__LocalNameAssignment_2_1 ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1557:1: ( rule__UsedDescriptions__LocalNameAssignment_2_1 )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1564:1: ( ( rule__UsedDescriptions__IdAssignment_2_1 ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1565:1: ( rule__UsedDescriptions__IdAssignment_2_1 )
             {
-             before(grammarAccess.getUsedDescriptionsAccess().getLocalNameAssignment_2_1()); 
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1558:1: ( rule__UsedDescriptions__LocalNameAssignment_2_1 )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1558:2: rule__UsedDescriptions__LocalNameAssignment_2_1
+             before(grammarAccess.getUsedDescriptionsAccess().getIdAssignment_2_1()); 
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1566:1: ( rule__UsedDescriptions__IdAssignment_2_1 )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1566:2: rule__UsedDescriptions__IdAssignment_2_1
             {
-            pushFollow(FOLLOW_rule__UsedDescriptions__LocalNameAssignment_2_1_in_rule__UsedDescriptions__Group_2__1__Impl3152);
-            rule__UsedDescriptions__LocalNameAssignment_2_1();
+            pushFollow(FOLLOW_rule__UsedDescriptions__IdAssignment_2_1_in_rule__UsedDescriptions__Group_2__1__Impl3160);
+            rule__UsedDescriptions__IdAssignment_2_1();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getUsedDescriptionsAccess().getLocalNameAssignment_2_1()); 
+             after(grammarAccess.getUsedDescriptionsAccess().getIdAssignment_2_1()); 
 
             }
 
@@ -4314,177 +4313,22 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__UsedDescriptions__Group_2__1__Impl"
 
 
-    // $ANTLR start "rule__AreaCount__Group__0"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1572:1: rule__AreaCount__Group__0 : rule__AreaCount__Group__0__Impl rule__AreaCount__Group__1 ;
-    public final void rule__AreaCount__Group__0() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1576:1: ( rule__AreaCount__Group__0__Impl rule__AreaCount__Group__1 )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1577:2: rule__AreaCount__Group__0__Impl rule__AreaCount__Group__1
-            {
-            pushFollow(FOLLOW_rule__AreaCount__Group__0__Impl_in_rule__AreaCount__Group__03186);
-            rule__AreaCount__Group__0__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_rule__AreaCount__Group__1_in_rule__AreaCount__Group__03189);
-            rule__AreaCount__Group__1();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__AreaCount__Group__0"
-
-
-    // $ANTLR start "rule__AreaCount__Group__0__Impl"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1584:1: rule__AreaCount__Group__0__Impl : ( 'Area count: ' ) ;
-    public final void rule__AreaCount__Group__0__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1588:1: ( ( 'Area count: ' ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1589:1: ( 'Area count: ' )
-            {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1589:1: ( 'Area count: ' )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1590:1: 'Area count: '
-            {
-             before(grammarAccess.getAreaCountAccess().getAreaCountKeyword_0()); 
-            match(input,21,FOLLOW_21_in_rule__AreaCount__Group__0__Impl3217); 
-             after(grammarAccess.getAreaCountAccess().getAreaCountKeyword_0()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__AreaCount__Group__0__Impl"
-
-
-    // $ANTLR start "rule__AreaCount__Group__1"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1603:1: rule__AreaCount__Group__1 : rule__AreaCount__Group__1__Impl ;
-    public final void rule__AreaCount__Group__1() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1607:1: ( rule__AreaCount__Group__1__Impl )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1608:2: rule__AreaCount__Group__1__Impl
-            {
-            pushFollow(FOLLOW_rule__AreaCount__Group__1__Impl_in_rule__AreaCount__Group__13248);
-            rule__AreaCount__Group__1__Impl();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__AreaCount__Group__1"
-
-
-    // $ANTLR start "rule__AreaCount__Group__1__Impl"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1614:1: rule__AreaCount__Group__1__Impl : ( ( rule__AreaCount__AreaCountAssignment_1 ) ) ;
-    public final void rule__AreaCount__Group__1__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1618:1: ( ( ( rule__AreaCount__AreaCountAssignment_1 ) ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1619:1: ( ( rule__AreaCount__AreaCountAssignment_1 ) )
-            {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1619:1: ( ( rule__AreaCount__AreaCountAssignment_1 ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1620:1: ( rule__AreaCount__AreaCountAssignment_1 )
-            {
-             before(grammarAccess.getAreaCountAccess().getAreaCountAssignment_1()); 
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1621:1: ( rule__AreaCount__AreaCountAssignment_1 )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1621:2: rule__AreaCount__AreaCountAssignment_1
-            {
-            pushFollow(FOLLOW_rule__AreaCount__AreaCountAssignment_1_in_rule__AreaCount__Group__1__Impl3275);
-            rule__AreaCount__AreaCountAssignment_1();
-
-            state._fsp--;
-
-
-            }
-
-             after(grammarAccess.getAreaCountAccess().getAreaCountAssignment_1()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__AreaCount__Group__1__Impl"
-
-
     // $ANTLR start "rule__Definition__Group__0"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1635:1: rule__Definition__Group__0 : rule__Definition__Group__0__Impl rule__Definition__Group__1 ;
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1580:1: rule__Definition__Group__0 : rule__Definition__Group__0__Impl rule__Definition__Group__1 ;
     public final void rule__Definition__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1639:1: ( rule__Definition__Group__0__Impl rule__Definition__Group__1 )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1640:2: rule__Definition__Group__0__Impl rule__Definition__Group__1
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1584:1: ( rule__Definition__Group__0__Impl rule__Definition__Group__1 )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1585:2: rule__Definition__Group__0__Impl rule__Definition__Group__1
             {
-            pushFollow(FOLLOW_rule__Definition__Group__0__Impl_in_rule__Definition__Group__03309);
+            pushFollow(FOLLOW_rule__Definition__Group__0__Impl_in_rule__Definition__Group__03194);
             rule__Definition__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Definition__Group__1_in_rule__Definition__Group__03312);
+            pushFollow(FOLLOW_rule__Definition__Group__1_in_rule__Definition__Group__03197);
             rule__Definition__Group__1();
 
             state._fsp--;
@@ -4508,21 +4352,31 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Definition__Group__0__Impl"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1647:1: rule__Definition__Group__0__Impl : ( 'DEF ' ) ;
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1592:1: rule__Definition__Group__0__Impl : ( ( rule__Definition__ConcreteDefitionAssignment_0 ) ) ;
     public final void rule__Definition__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1651:1: ( ( 'DEF ' ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1652:1: ( 'DEF ' )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1596:1: ( ( ( rule__Definition__ConcreteDefitionAssignment_0 ) ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1597:1: ( ( rule__Definition__ConcreteDefitionAssignment_0 ) )
             {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1652:1: ( 'DEF ' )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1653:1: 'DEF '
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1597:1: ( ( rule__Definition__ConcreteDefitionAssignment_0 ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1598:1: ( rule__Definition__ConcreteDefitionAssignment_0 )
             {
-             before(grammarAccess.getDefinitionAccess().getDEFKeyword_0()); 
-            match(input,22,FOLLOW_22_in_rule__Definition__Group__0__Impl3340); 
-             after(grammarAccess.getDefinitionAccess().getDEFKeyword_0()); 
+             before(grammarAccess.getDefinitionAccess().getConcreteDefitionAssignment_0()); 
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1599:1: ( rule__Definition__ConcreteDefitionAssignment_0 )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1599:2: rule__Definition__ConcreteDefitionAssignment_0
+            {
+            pushFollow(FOLLOW_rule__Definition__ConcreteDefitionAssignment_0_in_rule__Definition__Group__0__Impl3224);
+            rule__Definition__ConcreteDefitionAssignment_0();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getDefinitionAccess().getConcreteDefitionAssignment_0()); 
 
             }
 
@@ -4545,22 +4399,17 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Definition__Group__1"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1666:1: rule__Definition__Group__1 : rule__Definition__Group__1__Impl rule__Definition__Group__2 ;
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1609:1: rule__Definition__Group__1 : rule__Definition__Group__1__Impl ;
     public final void rule__Definition__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1670:1: ( rule__Definition__Group__1__Impl rule__Definition__Group__2 )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1671:2: rule__Definition__Group__1__Impl rule__Definition__Group__2
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1613:1: ( rule__Definition__Group__1__Impl )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1614:2: rule__Definition__Group__1__Impl
             {
-            pushFollow(FOLLOW_rule__Definition__Group__1__Impl_in_rule__Definition__Group__13371);
+            pushFollow(FOLLOW_rule__Definition__Group__1__Impl_in_rule__Definition__Group__13254);
             rule__Definition__Group__1__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_rule__Definition__Group__2_in_rule__Definition__Group__13374);
-            rule__Definition__Group__2();
 
             state._fsp--;
 
@@ -4583,31 +4432,21 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Definition__Group__1__Impl"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1678:1: rule__Definition__Group__1__Impl : ( ( rule__Definition__ConcreteDefitionAssignment_1 ) ) ;
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1620:1: rule__Definition__Group__1__Impl : ( ';' ) ;
     public final void rule__Definition__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1682:1: ( ( ( rule__Definition__ConcreteDefitionAssignment_1 ) ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1683:1: ( ( rule__Definition__ConcreteDefitionAssignment_1 ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1624:1: ( ( ';' ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1625:1: ( ';' )
             {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1683:1: ( ( rule__Definition__ConcreteDefitionAssignment_1 ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1684:1: ( rule__Definition__ConcreteDefitionAssignment_1 )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1625:1: ( ';' )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1626:1: ';'
             {
-             before(grammarAccess.getDefinitionAccess().getConcreteDefitionAssignment_1()); 
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1685:1: ( rule__Definition__ConcreteDefitionAssignment_1 )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1685:2: rule__Definition__ConcreteDefitionAssignment_1
-            {
-            pushFollow(FOLLOW_rule__Definition__ConcreteDefitionAssignment_1_in_rule__Definition__Group__1__Impl3401);
-            rule__Definition__ConcreteDefitionAssignment_1();
-
-            state._fsp--;
-
-
-            }
-
-             after(grammarAccess.getDefinitionAccess().getConcreteDefitionAssignment_1()); 
+             before(grammarAccess.getDefinitionAccess().getSemicolonKeyword_1()); 
+            match(input,17,FOLLOW_17_in_rule__Definition__Group__1__Impl3282); 
+             after(grammarAccess.getDefinitionAccess().getSemicolonKeyword_1()); 
 
             }
 
@@ -4629,92 +4468,22 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__Definition__Group__1__Impl"
 
 
-    // $ANTLR start "rule__Definition__Group__2"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1695:1: rule__Definition__Group__2 : rule__Definition__Group__2__Impl ;
-    public final void rule__Definition__Group__2() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1699:1: ( rule__Definition__Group__2__Impl )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1700:2: rule__Definition__Group__2__Impl
-            {
-            pushFollow(FOLLOW_rule__Definition__Group__2__Impl_in_rule__Definition__Group__23431);
-            rule__Definition__Group__2__Impl();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Definition__Group__2"
-
-
-    // $ANTLR start "rule__Definition__Group__2__Impl"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1706:1: rule__Definition__Group__2__Impl : ( 'END DEF' ) ;
-    public final void rule__Definition__Group__2__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1710:1: ( ( 'END DEF' ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1711:1: ( 'END DEF' )
-            {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1711:1: ( 'END DEF' )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1712:1: 'END DEF'
-            {
-             before(grammarAccess.getDefinitionAccess().getENDDEFKeyword_2()); 
-            match(input,23,FOLLOW_23_in_rule__Definition__Group__2__Impl3459); 
-             after(grammarAccess.getDefinitionAccess().getENDDEFKeyword_2()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Definition__Group__2__Impl"
-
-
     // $ANTLR start "rule__TypeDefinition__Group__0"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1731:1: rule__TypeDefinition__Group__0 : rule__TypeDefinition__Group__0__Impl rule__TypeDefinition__Group__1 ;
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1643:1: rule__TypeDefinition__Group__0 : rule__TypeDefinition__Group__0__Impl rule__TypeDefinition__Group__1 ;
     public final void rule__TypeDefinition__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1735:1: ( rule__TypeDefinition__Group__0__Impl rule__TypeDefinition__Group__1 )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1736:2: rule__TypeDefinition__Group__0__Impl rule__TypeDefinition__Group__1
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1647:1: ( rule__TypeDefinition__Group__0__Impl rule__TypeDefinition__Group__1 )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1648:2: rule__TypeDefinition__Group__0__Impl rule__TypeDefinition__Group__1
             {
-            pushFollow(FOLLOW_rule__TypeDefinition__Group__0__Impl_in_rule__TypeDefinition__Group__03496);
+            pushFollow(FOLLOW_rule__TypeDefinition__Group__0__Impl_in_rule__TypeDefinition__Group__03317);
             rule__TypeDefinition__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__TypeDefinition__Group__1_in_rule__TypeDefinition__Group__03499);
+            pushFollow(FOLLOW_rule__TypeDefinition__Group__1_in_rule__TypeDefinition__Group__03320);
             rule__TypeDefinition__Group__1();
 
             state._fsp--;
@@ -4738,20 +4507,20 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TypeDefinition__Group__0__Impl"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1743:1: rule__TypeDefinition__Group__0__Impl : ( 'type: ' ) ;
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1655:1: rule__TypeDefinition__Group__0__Impl : ( 'type: ' ) ;
     public final void rule__TypeDefinition__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1747:1: ( ( 'type: ' ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1748:1: ( 'type: ' )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1659:1: ( ( 'type: ' ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1660:1: ( 'type: ' )
             {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1748:1: ( 'type: ' )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1749:1: 'type: '
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1660:1: ( 'type: ' )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1661:1: 'type: '
             {
              before(grammarAccess.getTypeDefinitionAccess().getTypeKeyword_0()); 
-            match(input,24,FOLLOW_24_in_rule__TypeDefinition__Group__0__Impl3527); 
+            match(input,23,FOLLOW_23_in_rule__TypeDefinition__Group__0__Impl3348); 
              after(grammarAccess.getTypeDefinitionAccess().getTypeKeyword_0()); 
 
             }
@@ -4775,16 +4544,16 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TypeDefinition__Group__1"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1762:1: rule__TypeDefinition__Group__1 : rule__TypeDefinition__Group__1__Impl ;
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1674:1: rule__TypeDefinition__Group__1 : rule__TypeDefinition__Group__1__Impl ;
     public final void rule__TypeDefinition__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1766:1: ( rule__TypeDefinition__Group__1__Impl )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1767:2: rule__TypeDefinition__Group__1__Impl
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1678:1: ( rule__TypeDefinition__Group__1__Impl )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1679:2: rule__TypeDefinition__Group__1__Impl
             {
-            pushFollow(FOLLOW_rule__TypeDefinition__Group__1__Impl_in_rule__TypeDefinition__Group__13558);
+            pushFollow(FOLLOW_rule__TypeDefinition__Group__1__Impl_in_rule__TypeDefinition__Group__13379);
             rule__TypeDefinition__Group__1__Impl();
 
             state._fsp--;
@@ -4808,23 +4577,23 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TypeDefinition__Group__1__Impl"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1773:1: rule__TypeDefinition__Group__1__Impl : ( ( rule__TypeDefinition__TypeAssignment_1 ) ) ;
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1685:1: rule__TypeDefinition__Group__1__Impl : ( ( rule__TypeDefinition__TypeAssignment_1 ) ) ;
     public final void rule__TypeDefinition__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1777:1: ( ( ( rule__TypeDefinition__TypeAssignment_1 ) ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1778:1: ( ( rule__TypeDefinition__TypeAssignment_1 ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1689:1: ( ( ( rule__TypeDefinition__TypeAssignment_1 ) ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1690:1: ( ( rule__TypeDefinition__TypeAssignment_1 ) )
             {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1778:1: ( ( rule__TypeDefinition__TypeAssignment_1 ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1779:1: ( rule__TypeDefinition__TypeAssignment_1 )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1690:1: ( ( rule__TypeDefinition__TypeAssignment_1 ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1691:1: ( rule__TypeDefinition__TypeAssignment_1 )
             {
              before(grammarAccess.getTypeDefinitionAccess().getTypeAssignment_1()); 
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1780:1: ( rule__TypeDefinition__TypeAssignment_1 )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1780:2: rule__TypeDefinition__TypeAssignment_1
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1692:1: ( rule__TypeDefinition__TypeAssignment_1 )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1692:2: rule__TypeDefinition__TypeAssignment_1
             {
-            pushFollow(FOLLOW_rule__TypeDefinition__TypeAssignment_1_in_rule__TypeDefinition__Group__1__Impl3585);
+            pushFollow(FOLLOW_rule__TypeDefinition__TypeAssignment_1_in_rule__TypeDefinition__Group__1__Impl3406);
             rule__TypeDefinition__TypeAssignment_1();
 
             state._fsp--;
@@ -4855,21 +4624,21 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Multiselection__Group__0"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1794:1: rule__Multiselection__Group__0 : rule__Multiselection__Group__0__Impl rule__Multiselection__Group__1 ;
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1706:1: rule__Multiselection__Group__0 : rule__Multiselection__Group__0__Impl rule__Multiselection__Group__1 ;
     public final void rule__Multiselection__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1798:1: ( rule__Multiselection__Group__0__Impl rule__Multiselection__Group__1 )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1799:2: rule__Multiselection__Group__0__Impl rule__Multiselection__Group__1
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1710:1: ( rule__Multiselection__Group__0__Impl rule__Multiselection__Group__1 )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1711:2: rule__Multiselection__Group__0__Impl rule__Multiselection__Group__1
             {
-            pushFollow(FOLLOW_rule__Multiselection__Group__0__Impl_in_rule__Multiselection__Group__03619);
+            pushFollow(FOLLOW_rule__Multiselection__Group__0__Impl_in_rule__Multiselection__Group__03440);
             rule__Multiselection__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Multiselection__Group__1_in_rule__Multiselection__Group__03622);
+            pushFollow(FOLLOW_rule__Multiselection__Group__1_in_rule__Multiselection__Group__03443);
             rule__Multiselection__Group__1();
 
             state._fsp--;
@@ -4893,23 +4662,23 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Multiselection__Group__0__Impl"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1806:1: rule__Multiselection__Group__0__Impl : ( ( rule__Multiselection__DescriptionNameAssignment_0 ) ) ;
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1718:1: rule__Multiselection__Group__0__Impl : ( ( rule__Multiselection__DescriptionNameAssignment_0 ) ) ;
     public final void rule__Multiselection__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1810:1: ( ( ( rule__Multiselection__DescriptionNameAssignment_0 ) ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1811:1: ( ( rule__Multiselection__DescriptionNameAssignment_0 ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1722:1: ( ( ( rule__Multiselection__DescriptionNameAssignment_0 ) ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1723:1: ( ( rule__Multiselection__DescriptionNameAssignment_0 ) )
             {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1811:1: ( ( rule__Multiselection__DescriptionNameAssignment_0 ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1812:1: ( rule__Multiselection__DescriptionNameAssignment_0 )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1723:1: ( ( rule__Multiselection__DescriptionNameAssignment_0 ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1724:1: ( rule__Multiselection__DescriptionNameAssignment_0 )
             {
              before(grammarAccess.getMultiselectionAccess().getDescriptionNameAssignment_0()); 
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1813:1: ( rule__Multiselection__DescriptionNameAssignment_0 )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1813:2: rule__Multiselection__DescriptionNameAssignment_0
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1725:1: ( rule__Multiselection__DescriptionNameAssignment_0 )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1725:2: rule__Multiselection__DescriptionNameAssignment_0
             {
-            pushFollow(FOLLOW_rule__Multiselection__DescriptionNameAssignment_0_in_rule__Multiselection__Group__0__Impl3649);
+            pushFollow(FOLLOW_rule__Multiselection__DescriptionNameAssignment_0_in_rule__Multiselection__Group__0__Impl3470);
             rule__Multiselection__DescriptionNameAssignment_0();
 
             state._fsp--;
@@ -4940,16 +4709,16 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Multiselection__Group__1"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1823:1: rule__Multiselection__Group__1 : rule__Multiselection__Group__1__Impl ;
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1735:1: rule__Multiselection__Group__1 : rule__Multiselection__Group__1__Impl ;
     public final void rule__Multiselection__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1827:1: ( rule__Multiselection__Group__1__Impl )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1828:2: rule__Multiselection__Group__1__Impl
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1739:1: ( rule__Multiselection__Group__1__Impl )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1740:2: rule__Multiselection__Group__1__Impl
             {
-            pushFollow(FOLLOW_rule__Multiselection__Group__1__Impl_in_rule__Multiselection__Group__13679);
+            pushFollow(FOLLOW_rule__Multiselection__Group__1__Impl_in_rule__Multiselection__Group__13500);
             rule__Multiselection__Group__1__Impl();
 
             state._fsp--;
@@ -4973,32 +4742,32 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Multiselection__Group__1__Impl"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1834:1: rule__Multiselection__Group__1__Impl : ( ( rule__Multiselection__Group_1__0 )? ) ;
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1746:1: rule__Multiselection__Group__1__Impl : ( ( rule__Multiselection__InputTypeAssignment_1 )? ) ;
     public final void rule__Multiselection__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1838:1: ( ( ( rule__Multiselection__Group_1__0 )? ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1839:1: ( ( rule__Multiselection__Group_1__0 )? )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1750:1: ( ( ( rule__Multiselection__InputTypeAssignment_1 )? ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1751:1: ( ( rule__Multiselection__InputTypeAssignment_1 )? )
             {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1839:1: ( ( rule__Multiselection__Group_1__0 )? )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1840:1: ( rule__Multiselection__Group_1__0 )?
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1751:1: ( ( rule__Multiselection__InputTypeAssignment_1 )? )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1752:1: ( rule__Multiselection__InputTypeAssignment_1 )?
             {
-             before(grammarAccess.getMultiselectionAccess().getGroup_1()); 
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1841:1: ( rule__Multiselection__Group_1__0 )?
-            int alt15=2;
-            int LA15_0 = input.LA(1);
+             before(grammarAccess.getMultiselectionAccess().getInputTypeAssignment_1()); 
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1753:1: ( rule__Multiselection__InputTypeAssignment_1 )?
+            int alt14=2;
+            int LA14_0 = input.LA(1);
 
-            if ( (LA15_0==25) ) {
-                alt15=1;
+            if ( (LA14_0==RULE_INPUT_DESCRIPTION) ) {
+                alt14=1;
             }
-            switch (alt15) {
+            switch (alt14) {
                 case 1 :
-                    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1841:2: rule__Multiselection__Group_1__0
+                    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1753:2: rule__Multiselection__InputTypeAssignment_1
                     {
-                    pushFollow(FOLLOW_rule__Multiselection__Group_1__0_in_rule__Multiselection__Group__1__Impl3706);
-                    rule__Multiselection__Group_1__0();
+                    pushFollow(FOLLOW_rule__Multiselection__InputTypeAssignment_1_in_rule__Multiselection__Group__1__Impl3527);
+                    rule__Multiselection__InputTypeAssignment_1();
 
                     state._fsp--;
 
@@ -5008,7 +4777,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
 
             }
 
-             after(grammarAccess.getMultiselectionAccess().getGroup_1()); 
+             after(grammarAccess.getMultiselectionAccess().getInputTypeAssignment_1()); 
 
             }
 
@@ -5030,974 +4799,22 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__Multiselection__Group__1__Impl"
 
 
-    // $ANTLR start "rule__Multiselection__Group_1__0"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1855:1: rule__Multiselection__Group_1__0 : rule__Multiselection__Group_1__0__Impl rule__Multiselection__Group_1__1 ;
-    public final void rule__Multiselection__Group_1__0() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1859:1: ( rule__Multiselection__Group_1__0__Impl rule__Multiselection__Group_1__1 )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1860:2: rule__Multiselection__Group_1__0__Impl rule__Multiselection__Group_1__1
-            {
-            pushFollow(FOLLOW_rule__Multiselection__Group_1__0__Impl_in_rule__Multiselection__Group_1__03741);
-            rule__Multiselection__Group_1__0__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_rule__Multiselection__Group_1__1_in_rule__Multiselection__Group_1__03744);
-            rule__Multiselection__Group_1__1();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Multiselection__Group_1__0"
-
-
-    // $ANTLR start "rule__Multiselection__Group_1__0__Impl"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1867:1: rule__Multiselection__Group_1__0__Impl : ( '<' ) ;
-    public final void rule__Multiselection__Group_1__0__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1871:1: ( ( '<' ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1872:1: ( '<' )
-            {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1872:1: ( '<' )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1873:1: '<'
-            {
-             before(grammarAccess.getMultiselectionAccess().getLessThanSignKeyword_1_0()); 
-            match(input,25,FOLLOW_25_in_rule__Multiselection__Group_1__0__Impl3772); 
-             after(grammarAccess.getMultiselectionAccess().getLessThanSignKeyword_1_0()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Multiselection__Group_1__0__Impl"
-
-
-    // $ANTLR start "rule__Multiselection__Group_1__1"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1886:1: rule__Multiselection__Group_1__1 : rule__Multiselection__Group_1__1__Impl rule__Multiselection__Group_1__2 ;
-    public final void rule__Multiselection__Group_1__1() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1890:1: ( rule__Multiselection__Group_1__1__Impl rule__Multiselection__Group_1__2 )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1891:2: rule__Multiselection__Group_1__1__Impl rule__Multiselection__Group_1__2
-            {
-            pushFollow(FOLLOW_rule__Multiselection__Group_1__1__Impl_in_rule__Multiselection__Group_1__13803);
-            rule__Multiselection__Group_1__1__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_rule__Multiselection__Group_1__2_in_rule__Multiselection__Group_1__13806);
-            rule__Multiselection__Group_1__2();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Multiselection__Group_1__1"
-
-
-    // $ANTLR start "rule__Multiselection__Group_1__1__Impl"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1898:1: rule__Multiselection__Group_1__1__Impl : ( ( rule__Multiselection__InputTypeAssignment_1_1 ) ) ;
-    public final void rule__Multiselection__Group_1__1__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1902:1: ( ( ( rule__Multiselection__InputTypeAssignment_1_1 ) ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1903:1: ( ( rule__Multiselection__InputTypeAssignment_1_1 ) )
-            {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1903:1: ( ( rule__Multiselection__InputTypeAssignment_1_1 ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1904:1: ( rule__Multiselection__InputTypeAssignment_1_1 )
-            {
-             before(grammarAccess.getMultiselectionAccess().getInputTypeAssignment_1_1()); 
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1905:1: ( rule__Multiselection__InputTypeAssignment_1_1 )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1905:2: rule__Multiselection__InputTypeAssignment_1_1
-            {
-            pushFollow(FOLLOW_rule__Multiselection__InputTypeAssignment_1_1_in_rule__Multiselection__Group_1__1__Impl3833);
-            rule__Multiselection__InputTypeAssignment_1_1();
-
-            state._fsp--;
-
-
-            }
-
-             after(grammarAccess.getMultiselectionAccess().getInputTypeAssignment_1_1()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Multiselection__Group_1__1__Impl"
-
-
-    // $ANTLR start "rule__Multiselection__Group_1__2"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1915:1: rule__Multiselection__Group_1__2 : rule__Multiselection__Group_1__2__Impl ;
-    public final void rule__Multiselection__Group_1__2() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1919:1: ( rule__Multiselection__Group_1__2__Impl )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1920:2: rule__Multiselection__Group_1__2__Impl
-            {
-            pushFollow(FOLLOW_rule__Multiselection__Group_1__2__Impl_in_rule__Multiselection__Group_1__23863);
-            rule__Multiselection__Group_1__2__Impl();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Multiselection__Group_1__2"
-
-
-    // $ANTLR start "rule__Multiselection__Group_1__2__Impl"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1926:1: rule__Multiselection__Group_1__2__Impl : ( '>' ) ;
-    public final void rule__Multiselection__Group_1__2__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1930:1: ( ( '>' ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1931:1: ( '>' )
-            {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1931:1: ( '>' )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1932:1: '>'
-            {
-             before(grammarAccess.getMultiselectionAccess().getGreaterThanSignKeyword_1_2()); 
-            match(input,26,FOLLOW_26_in_rule__Multiselection__Group_1__2__Impl3891); 
-             after(grammarAccess.getMultiselectionAccess().getGreaterThanSignKeyword_1_2()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Multiselection__Group_1__2__Impl"
-
-
-    // $ANTLR start "rule__AreaAssignment__Group_0__0"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1951:1: rule__AreaAssignment__Group_0__0 : rule__AreaAssignment__Group_0__0__Impl rule__AreaAssignment__Group_0__1 ;
-    public final void rule__AreaAssignment__Group_0__0() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1955:1: ( rule__AreaAssignment__Group_0__0__Impl rule__AreaAssignment__Group_0__1 )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1956:2: rule__AreaAssignment__Group_0__0__Impl rule__AreaAssignment__Group_0__1
-            {
-            pushFollow(FOLLOW_rule__AreaAssignment__Group_0__0__Impl_in_rule__AreaAssignment__Group_0__03928);
-            rule__AreaAssignment__Group_0__0__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_rule__AreaAssignment__Group_0__1_in_rule__AreaAssignment__Group_0__03931);
-            rule__AreaAssignment__Group_0__1();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__AreaAssignment__Group_0__0"
-
-
-    // $ANTLR start "rule__AreaAssignment__Group_0__0__Impl"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1963:1: rule__AreaAssignment__Group_0__0__Impl : ( 'Area:' ) ;
-    public final void rule__AreaAssignment__Group_0__0__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1967:1: ( ( 'Area:' ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1968:1: ( 'Area:' )
-            {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1968:1: ( 'Area:' )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1969:1: 'Area:'
-            {
-             before(grammarAccess.getAreaAssignmentAccess().getAreaKeyword_0_0()); 
-            match(input,27,FOLLOW_27_in_rule__AreaAssignment__Group_0__0__Impl3959); 
-             after(grammarAccess.getAreaAssignmentAccess().getAreaKeyword_0_0()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__AreaAssignment__Group_0__0__Impl"
-
-
-    // $ANTLR start "rule__AreaAssignment__Group_0__1"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1982:1: rule__AreaAssignment__Group_0__1 : rule__AreaAssignment__Group_0__1__Impl rule__AreaAssignment__Group_0__2 ;
-    public final void rule__AreaAssignment__Group_0__1() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1986:1: ( rule__AreaAssignment__Group_0__1__Impl rule__AreaAssignment__Group_0__2 )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1987:2: rule__AreaAssignment__Group_0__1__Impl rule__AreaAssignment__Group_0__2
-            {
-            pushFollow(FOLLOW_rule__AreaAssignment__Group_0__1__Impl_in_rule__AreaAssignment__Group_0__13990);
-            rule__AreaAssignment__Group_0__1__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_rule__AreaAssignment__Group_0__2_in_rule__AreaAssignment__Group_0__13993);
-            rule__AreaAssignment__Group_0__2();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__AreaAssignment__Group_0__1"
-
-
-    // $ANTLR start "rule__AreaAssignment__Group_0__1__Impl"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1994:1: rule__AreaAssignment__Group_0__1__Impl : ( ( rule__AreaAssignment__AreaAssignment_0_1 ) ) ;
-    public final void rule__AreaAssignment__Group_0__1__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1998:1: ( ( ( rule__AreaAssignment__AreaAssignment_0_1 ) ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1999:1: ( ( rule__AreaAssignment__AreaAssignment_0_1 ) )
-            {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1999:1: ( ( rule__AreaAssignment__AreaAssignment_0_1 ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2000:1: ( rule__AreaAssignment__AreaAssignment_0_1 )
-            {
-             before(grammarAccess.getAreaAssignmentAccess().getAreaAssignment_0_1()); 
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2001:1: ( rule__AreaAssignment__AreaAssignment_0_1 )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2001:2: rule__AreaAssignment__AreaAssignment_0_1
-            {
-            pushFollow(FOLLOW_rule__AreaAssignment__AreaAssignment_0_1_in_rule__AreaAssignment__Group_0__1__Impl4020);
-            rule__AreaAssignment__AreaAssignment_0_1();
-
-            state._fsp--;
-
-
-            }
-
-             after(grammarAccess.getAreaAssignmentAccess().getAreaAssignment_0_1()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__AreaAssignment__Group_0__1__Impl"
-
-
-    // $ANTLR start "rule__AreaAssignment__Group_0__2"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2011:1: rule__AreaAssignment__Group_0__2 : rule__AreaAssignment__Group_0__2__Impl rule__AreaAssignment__Group_0__3 ;
-    public final void rule__AreaAssignment__Group_0__2() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2015:1: ( rule__AreaAssignment__Group_0__2__Impl rule__AreaAssignment__Group_0__3 )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2016:2: rule__AreaAssignment__Group_0__2__Impl rule__AreaAssignment__Group_0__3
-            {
-            pushFollow(FOLLOW_rule__AreaAssignment__Group_0__2__Impl_in_rule__AreaAssignment__Group_0__24050);
-            rule__AreaAssignment__Group_0__2__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_rule__AreaAssignment__Group_0__3_in_rule__AreaAssignment__Group_0__24053);
-            rule__AreaAssignment__Group_0__3();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__AreaAssignment__Group_0__2"
-
-
-    // $ANTLR start "rule__AreaAssignment__Group_0__2__Impl"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2023:1: rule__AreaAssignment__Group_0__2__Impl : ( '<-' ) ;
-    public final void rule__AreaAssignment__Group_0__2__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2027:1: ( ( '<-' ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2028:1: ( '<-' )
-            {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2028:1: ( '<-' )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2029:1: '<-'
-            {
-             before(grammarAccess.getAreaAssignmentAccess().getLessThanSignHyphenMinusKeyword_0_2()); 
-            match(input,28,FOLLOW_28_in_rule__AreaAssignment__Group_0__2__Impl4081); 
-             after(grammarAccess.getAreaAssignmentAccess().getLessThanSignHyphenMinusKeyword_0_2()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__AreaAssignment__Group_0__2__Impl"
-
-
-    // $ANTLR start "rule__AreaAssignment__Group_0__3"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2042:1: rule__AreaAssignment__Group_0__3 : rule__AreaAssignment__Group_0__3__Impl ;
-    public final void rule__AreaAssignment__Group_0__3() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2046:1: ( rule__AreaAssignment__Group_0__3__Impl )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2047:2: rule__AreaAssignment__Group_0__3__Impl
-            {
-            pushFollow(FOLLOW_rule__AreaAssignment__Group_0__3__Impl_in_rule__AreaAssignment__Group_0__34112);
-            rule__AreaAssignment__Group_0__3__Impl();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__AreaAssignment__Group_0__3"
-
-
-    // $ANTLR start "rule__AreaAssignment__Group_0__3__Impl"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2053:1: rule__AreaAssignment__Group_0__3__Impl : ( ( ( rule__AreaAssignment__ElementsAssignment_0_3 ) ) ( ( rule__AreaAssignment__ElementsAssignment_0_3 )* ) ) ;
-    public final void rule__AreaAssignment__Group_0__3__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2057:1: ( ( ( ( rule__AreaAssignment__ElementsAssignment_0_3 ) ) ( ( rule__AreaAssignment__ElementsAssignment_0_3 )* ) ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2058:1: ( ( ( rule__AreaAssignment__ElementsAssignment_0_3 ) ) ( ( rule__AreaAssignment__ElementsAssignment_0_3 )* ) )
-            {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2058:1: ( ( ( rule__AreaAssignment__ElementsAssignment_0_3 ) ) ( ( rule__AreaAssignment__ElementsAssignment_0_3 )* ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2059:1: ( ( rule__AreaAssignment__ElementsAssignment_0_3 ) ) ( ( rule__AreaAssignment__ElementsAssignment_0_3 )* )
-            {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2059:1: ( ( rule__AreaAssignment__ElementsAssignment_0_3 ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2060:1: ( rule__AreaAssignment__ElementsAssignment_0_3 )
-            {
-             before(grammarAccess.getAreaAssignmentAccess().getElementsAssignment_0_3()); 
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2061:1: ( rule__AreaAssignment__ElementsAssignment_0_3 )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2061:2: rule__AreaAssignment__ElementsAssignment_0_3
-            {
-            pushFollow(FOLLOW_rule__AreaAssignment__ElementsAssignment_0_3_in_rule__AreaAssignment__Group_0__3__Impl4141);
-            rule__AreaAssignment__ElementsAssignment_0_3();
-
-            state._fsp--;
-
-
-            }
-
-             after(grammarAccess.getAreaAssignmentAccess().getElementsAssignment_0_3()); 
-
-            }
-
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2064:1: ( ( rule__AreaAssignment__ElementsAssignment_0_3 )* )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2065:1: ( rule__AreaAssignment__ElementsAssignment_0_3 )*
-            {
-             before(grammarAccess.getAreaAssignmentAccess().getElementsAssignment_0_3()); 
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2066:1: ( rule__AreaAssignment__ElementsAssignment_0_3 )*
-            loop16:
-            do {
-                int alt16=2;
-                int LA16_0 = input.LA(1);
-
-                if ( (LA16_0==RULE_STRING) ) {
-                    int LA16_2 = input.LA(2);
-
-                    if ( (LA16_2==EOF||LA16_2==RULE_STRING||LA16_2==27) ) {
-                        alt16=1;
-                    }
-
-
-                }
-
-
-                switch (alt16) {
-            	case 1 :
-            	    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2066:2: rule__AreaAssignment__ElementsAssignment_0_3
-            	    {
-            	    pushFollow(FOLLOW_rule__AreaAssignment__ElementsAssignment_0_3_in_rule__AreaAssignment__Group_0__3__Impl4153);
-            	    rule__AreaAssignment__ElementsAssignment_0_3();
-
-            	    state._fsp--;
-
-
-            	    }
-            	    break;
-
-            	default :
-            	    break loop16;
-                }
-            } while (true);
-
-             after(grammarAccess.getAreaAssignmentAccess().getElementsAssignment_0_3()); 
-
-            }
-
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__AreaAssignment__Group_0__3__Impl"
-
-
-    // $ANTLR start "rule__AreaAssignment__Group_1__0"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2085:1: rule__AreaAssignment__Group_1__0 : rule__AreaAssignment__Group_1__0__Impl rule__AreaAssignment__Group_1__1 ;
-    public final void rule__AreaAssignment__Group_1__0() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2089:1: ( rule__AreaAssignment__Group_1__0__Impl rule__AreaAssignment__Group_1__1 )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2090:2: rule__AreaAssignment__Group_1__0__Impl rule__AreaAssignment__Group_1__1
-            {
-            pushFollow(FOLLOW_rule__AreaAssignment__Group_1__0__Impl_in_rule__AreaAssignment__Group_1__04194);
-            rule__AreaAssignment__Group_1__0__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_rule__AreaAssignment__Group_1__1_in_rule__AreaAssignment__Group_1__04197);
-            rule__AreaAssignment__Group_1__1();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__AreaAssignment__Group_1__0"
-
-
-    // $ANTLR start "rule__AreaAssignment__Group_1__0__Impl"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2097:1: rule__AreaAssignment__Group_1__0__Impl : ( ( ( rule__AreaAssignment__ElementsAssignment_1_0 ) ) ( ( rule__AreaAssignment__ElementsAssignment_1_0 )* ) ) ;
-    public final void rule__AreaAssignment__Group_1__0__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2101:1: ( ( ( ( rule__AreaAssignment__ElementsAssignment_1_0 ) ) ( ( rule__AreaAssignment__ElementsAssignment_1_0 )* ) ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2102:1: ( ( ( rule__AreaAssignment__ElementsAssignment_1_0 ) ) ( ( rule__AreaAssignment__ElementsAssignment_1_0 )* ) )
-            {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2102:1: ( ( ( rule__AreaAssignment__ElementsAssignment_1_0 ) ) ( ( rule__AreaAssignment__ElementsAssignment_1_0 )* ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2103:1: ( ( rule__AreaAssignment__ElementsAssignment_1_0 ) ) ( ( rule__AreaAssignment__ElementsAssignment_1_0 )* )
-            {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2103:1: ( ( rule__AreaAssignment__ElementsAssignment_1_0 ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2104:1: ( rule__AreaAssignment__ElementsAssignment_1_0 )
-            {
-             before(grammarAccess.getAreaAssignmentAccess().getElementsAssignment_1_0()); 
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2105:1: ( rule__AreaAssignment__ElementsAssignment_1_0 )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2105:2: rule__AreaAssignment__ElementsAssignment_1_0
-            {
-            pushFollow(FOLLOW_rule__AreaAssignment__ElementsAssignment_1_0_in_rule__AreaAssignment__Group_1__0__Impl4226);
-            rule__AreaAssignment__ElementsAssignment_1_0();
-
-            state._fsp--;
-
-
-            }
-
-             after(grammarAccess.getAreaAssignmentAccess().getElementsAssignment_1_0()); 
-
-            }
-
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2108:1: ( ( rule__AreaAssignment__ElementsAssignment_1_0 )* )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2109:1: ( rule__AreaAssignment__ElementsAssignment_1_0 )*
-            {
-             before(grammarAccess.getAreaAssignmentAccess().getElementsAssignment_1_0()); 
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2110:1: ( rule__AreaAssignment__ElementsAssignment_1_0 )*
-            loop17:
-            do {
-                int alt17=2;
-                int LA17_0 = input.LA(1);
-
-                if ( (LA17_0==RULE_STRING) ) {
-                    alt17=1;
-                }
-
-
-                switch (alt17) {
-            	case 1 :
-            	    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2110:2: rule__AreaAssignment__ElementsAssignment_1_0
-            	    {
-            	    pushFollow(FOLLOW_rule__AreaAssignment__ElementsAssignment_1_0_in_rule__AreaAssignment__Group_1__0__Impl4238);
-            	    rule__AreaAssignment__ElementsAssignment_1_0();
-
-            	    state._fsp--;
-
-
-            	    }
-            	    break;
-
-            	default :
-            	    break loop17;
-                }
-            } while (true);
-
-             after(grammarAccess.getAreaAssignmentAccess().getElementsAssignment_1_0()); 
-
-            }
-
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__AreaAssignment__Group_1__0__Impl"
-
-
-    // $ANTLR start "rule__AreaAssignment__Group_1__1"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2121:1: rule__AreaAssignment__Group_1__1 : rule__AreaAssignment__Group_1__1__Impl rule__AreaAssignment__Group_1__2 ;
-    public final void rule__AreaAssignment__Group_1__1() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2125:1: ( rule__AreaAssignment__Group_1__1__Impl rule__AreaAssignment__Group_1__2 )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2126:2: rule__AreaAssignment__Group_1__1__Impl rule__AreaAssignment__Group_1__2
-            {
-            pushFollow(FOLLOW_rule__AreaAssignment__Group_1__1__Impl_in_rule__AreaAssignment__Group_1__14271);
-            rule__AreaAssignment__Group_1__1__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_rule__AreaAssignment__Group_1__2_in_rule__AreaAssignment__Group_1__14274);
-            rule__AreaAssignment__Group_1__2();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__AreaAssignment__Group_1__1"
-
-
-    // $ANTLR start "rule__AreaAssignment__Group_1__1__Impl"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2133:1: rule__AreaAssignment__Group_1__1__Impl : ( '->' ) ;
-    public final void rule__AreaAssignment__Group_1__1__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2137:1: ( ( '->' ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2138:1: ( '->' )
-            {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2138:1: ( '->' )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2139:1: '->'
-            {
-             before(grammarAccess.getAreaAssignmentAccess().getHyphenMinusGreaterThanSignKeyword_1_1()); 
-            match(input,29,FOLLOW_29_in_rule__AreaAssignment__Group_1__1__Impl4302); 
-             after(grammarAccess.getAreaAssignmentAccess().getHyphenMinusGreaterThanSignKeyword_1_1()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__AreaAssignment__Group_1__1__Impl"
-
-
-    // $ANTLR start "rule__AreaAssignment__Group_1__2"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2152:1: rule__AreaAssignment__Group_1__2 : rule__AreaAssignment__Group_1__2__Impl rule__AreaAssignment__Group_1__3 ;
-    public final void rule__AreaAssignment__Group_1__2() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2156:1: ( rule__AreaAssignment__Group_1__2__Impl rule__AreaAssignment__Group_1__3 )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2157:2: rule__AreaAssignment__Group_1__2__Impl rule__AreaAssignment__Group_1__3
-            {
-            pushFollow(FOLLOW_rule__AreaAssignment__Group_1__2__Impl_in_rule__AreaAssignment__Group_1__24333);
-            rule__AreaAssignment__Group_1__2__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_rule__AreaAssignment__Group_1__3_in_rule__AreaAssignment__Group_1__24336);
-            rule__AreaAssignment__Group_1__3();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__AreaAssignment__Group_1__2"
-
-
-    // $ANTLR start "rule__AreaAssignment__Group_1__2__Impl"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2164:1: rule__AreaAssignment__Group_1__2__Impl : ( 'Area:' ) ;
-    public final void rule__AreaAssignment__Group_1__2__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2168:1: ( ( 'Area:' ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2169:1: ( 'Area:' )
-            {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2169:1: ( 'Area:' )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2170:1: 'Area:'
-            {
-             before(grammarAccess.getAreaAssignmentAccess().getAreaKeyword_1_2()); 
-            match(input,27,FOLLOW_27_in_rule__AreaAssignment__Group_1__2__Impl4364); 
-             after(grammarAccess.getAreaAssignmentAccess().getAreaKeyword_1_2()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__AreaAssignment__Group_1__2__Impl"
-
-
-    // $ANTLR start "rule__AreaAssignment__Group_1__3"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2183:1: rule__AreaAssignment__Group_1__3 : rule__AreaAssignment__Group_1__3__Impl ;
-    public final void rule__AreaAssignment__Group_1__3() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2187:1: ( rule__AreaAssignment__Group_1__3__Impl )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2188:2: rule__AreaAssignment__Group_1__3__Impl
-            {
-            pushFollow(FOLLOW_rule__AreaAssignment__Group_1__3__Impl_in_rule__AreaAssignment__Group_1__34395);
-            rule__AreaAssignment__Group_1__3__Impl();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__AreaAssignment__Group_1__3"
-
-
-    // $ANTLR start "rule__AreaAssignment__Group_1__3__Impl"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2194:1: rule__AreaAssignment__Group_1__3__Impl : ( ( rule__AreaAssignment__AreaAssignment_1_3 ) ) ;
-    public final void rule__AreaAssignment__Group_1__3__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2198:1: ( ( ( rule__AreaAssignment__AreaAssignment_1_3 ) ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2199:1: ( ( rule__AreaAssignment__AreaAssignment_1_3 ) )
-            {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2199:1: ( ( rule__AreaAssignment__AreaAssignment_1_3 ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2200:1: ( rule__AreaAssignment__AreaAssignment_1_3 )
-            {
-             before(grammarAccess.getAreaAssignmentAccess().getAreaAssignment_1_3()); 
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2201:1: ( rule__AreaAssignment__AreaAssignment_1_3 )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2201:2: rule__AreaAssignment__AreaAssignment_1_3
-            {
-            pushFollow(FOLLOW_rule__AreaAssignment__AreaAssignment_1_3_in_rule__AreaAssignment__Group_1__3__Impl4422);
-            rule__AreaAssignment__AreaAssignment_1_3();
-
-            state._fsp--;
-
-
-            }
-
-             after(grammarAccess.getAreaAssignmentAccess().getAreaAssignment_1_3()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__AreaAssignment__Group_1__3__Impl"
-
-
     // $ANTLR start "rule__ButtonDefinition__Group__0"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2219:1: rule__ButtonDefinition__Group__0 : rule__ButtonDefinition__Group__0__Impl rule__ButtonDefinition__Group__1 ;
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1767:1: rule__ButtonDefinition__Group__0 : rule__ButtonDefinition__Group__0__Impl rule__ButtonDefinition__Group__1 ;
     public final void rule__ButtonDefinition__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2223:1: ( rule__ButtonDefinition__Group__0__Impl rule__ButtonDefinition__Group__1 )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2224:2: rule__ButtonDefinition__Group__0__Impl rule__ButtonDefinition__Group__1
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1771:1: ( rule__ButtonDefinition__Group__0__Impl rule__ButtonDefinition__Group__1 )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1772:2: rule__ButtonDefinition__Group__0__Impl rule__ButtonDefinition__Group__1
             {
-            pushFollow(FOLLOW_rule__ButtonDefinition__Group__0__Impl_in_rule__ButtonDefinition__Group__04460);
+            pushFollow(FOLLOW_rule__ButtonDefinition__Group__0__Impl_in_rule__ButtonDefinition__Group__03562);
             rule__ButtonDefinition__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__ButtonDefinition__Group__1_in_rule__ButtonDefinition__Group__04463);
+            pushFollow(FOLLOW_rule__ButtonDefinition__Group__1_in_rule__ButtonDefinition__Group__03565);
             rule__ButtonDefinition__Group__1();
 
             state._fsp--;
@@ -6021,31 +4838,31 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ButtonDefinition__Group__0__Impl"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2231:1: rule__ButtonDefinition__Group__0__Impl : ( ( rule__ButtonDefinition__TypeAssignment_0 ) ) ;
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1779:1: rule__ButtonDefinition__Group__0__Impl : ( ( rule__ButtonDefinition__NameAssignment_0 ) ) ;
     public final void rule__ButtonDefinition__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2235:1: ( ( ( rule__ButtonDefinition__TypeAssignment_0 ) ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2236:1: ( ( rule__ButtonDefinition__TypeAssignment_0 ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1783:1: ( ( ( rule__ButtonDefinition__NameAssignment_0 ) ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1784:1: ( ( rule__ButtonDefinition__NameAssignment_0 ) )
             {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2236:1: ( ( rule__ButtonDefinition__TypeAssignment_0 ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2237:1: ( rule__ButtonDefinition__TypeAssignment_0 )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1784:1: ( ( rule__ButtonDefinition__NameAssignment_0 ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1785:1: ( rule__ButtonDefinition__NameAssignment_0 )
             {
-             before(grammarAccess.getButtonDefinitionAccess().getTypeAssignment_0()); 
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2238:1: ( rule__ButtonDefinition__TypeAssignment_0 )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2238:2: rule__ButtonDefinition__TypeAssignment_0
+             before(grammarAccess.getButtonDefinitionAccess().getNameAssignment_0()); 
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1786:1: ( rule__ButtonDefinition__NameAssignment_0 )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1786:2: rule__ButtonDefinition__NameAssignment_0
             {
-            pushFollow(FOLLOW_rule__ButtonDefinition__TypeAssignment_0_in_rule__ButtonDefinition__Group__0__Impl4490);
-            rule__ButtonDefinition__TypeAssignment_0();
+            pushFollow(FOLLOW_rule__ButtonDefinition__NameAssignment_0_in_rule__ButtonDefinition__Group__0__Impl3592);
+            rule__ButtonDefinition__NameAssignment_0();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getButtonDefinitionAccess().getTypeAssignment_0()); 
+             after(grammarAccess.getButtonDefinitionAccess().getNameAssignment_0()); 
 
             }
 
@@ -6068,21 +4885,21 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ButtonDefinition__Group__1"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2248:1: rule__ButtonDefinition__Group__1 : rule__ButtonDefinition__Group__1__Impl rule__ButtonDefinition__Group__2 ;
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1796:1: rule__ButtonDefinition__Group__1 : rule__ButtonDefinition__Group__1__Impl rule__ButtonDefinition__Group__2 ;
     public final void rule__ButtonDefinition__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2252:1: ( rule__ButtonDefinition__Group__1__Impl rule__ButtonDefinition__Group__2 )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2253:2: rule__ButtonDefinition__Group__1__Impl rule__ButtonDefinition__Group__2
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1800:1: ( rule__ButtonDefinition__Group__1__Impl rule__ButtonDefinition__Group__2 )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1801:2: rule__ButtonDefinition__Group__1__Impl rule__ButtonDefinition__Group__2
             {
-            pushFollow(FOLLOW_rule__ButtonDefinition__Group__1__Impl_in_rule__ButtonDefinition__Group__14520);
+            pushFollow(FOLLOW_rule__ButtonDefinition__Group__1__Impl_in_rule__ButtonDefinition__Group__13622);
             rule__ButtonDefinition__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__ButtonDefinition__Group__2_in_rule__ButtonDefinition__Group__14523);
+            pushFollow(FOLLOW_rule__ButtonDefinition__Group__2_in_rule__ButtonDefinition__Group__13625);
             rule__ButtonDefinition__Group__2();
 
             state._fsp--;
@@ -6106,20 +4923,20 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ButtonDefinition__Group__1__Impl"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2260:1: rule__ButtonDefinition__Group__1__Impl : ( ' as ' ) ;
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1808:1: rule__ButtonDefinition__Group__1__Impl : ( 'as:' ) ;
     public final void rule__ButtonDefinition__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2264:1: ( ( ' as ' ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2265:1: ( ' as ' )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1812:1: ( ( 'as:' ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1813:1: ( 'as:' )
             {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2265:1: ( ' as ' )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2266:1: ' as '
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1813:1: ( 'as:' )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1814:1: 'as:'
             {
              before(grammarAccess.getButtonDefinitionAccess().getAsKeyword_1()); 
-            match(input,30,FOLLOW_30_in_rule__ButtonDefinition__Group__1__Impl4551); 
+            match(input,22,FOLLOW_22_in_rule__ButtonDefinition__Group__1__Impl3653); 
              after(grammarAccess.getButtonDefinitionAccess().getAsKeyword_1()); 
 
             }
@@ -6143,21 +4960,21 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ButtonDefinition__Group__2"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2279:1: rule__ButtonDefinition__Group__2 : rule__ButtonDefinition__Group__2__Impl rule__ButtonDefinition__Group__3 ;
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1827:1: rule__ButtonDefinition__Group__2 : rule__ButtonDefinition__Group__2__Impl rule__ButtonDefinition__Group__3 ;
     public final void rule__ButtonDefinition__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2283:1: ( rule__ButtonDefinition__Group__2__Impl rule__ButtonDefinition__Group__3 )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2284:2: rule__ButtonDefinition__Group__2__Impl rule__ButtonDefinition__Group__3
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1831:1: ( rule__ButtonDefinition__Group__2__Impl rule__ButtonDefinition__Group__3 )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1832:2: rule__ButtonDefinition__Group__2__Impl rule__ButtonDefinition__Group__3
             {
-            pushFollow(FOLLOW_rule__ButtonDefinition__Group__2__Impl_in_rule__ButtonDefinition__Group__24582);
+            pushFollow(FOLLOW_rule__ButtonDefinition__Group__2__Impl_in_rule__ButtonDefinition__Group__23684);
             rule__ButtonDefinition__Group__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__ButtonDefinition__Group__3_in_rule__ButtonDefinition__Group__24585);
+            pushFollow(FOLLOW_rule__ButtonDefinition__Group__3_in_rule__ButtonDefinition__Group__23687);
             rule__ButtonDefinition__Group__3();
 
             state._fsp--;
@@ -6181,31 +4998,31 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ButtonDefinition__Group__2__Impl"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2291:1: rule__ButtonDefinition__Group__2__Impl : ( ( rule__ButtonDefinition__NameAssignment_2 ) ) ;
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1839:1: rule__ButtonDefinition__Group__2__Impl : ( ( rule__ButtonDefinition__IdAssignment_2 ) ) ;
     public final void rule__ButtonDefinition__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2295:1: ( ( ( rule__ButtonDefinition__NameAssignment_2 ) ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2296:1: ( ( rule__ButtonDefinition__NameAssignment_2 ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1843:1: ( ( ( rule__ButtonDefinition__IdAssignment_2 ) ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1844:1: ( ( rule__ButtonDefinition__IdAssignment_2 ) )
             {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2296:1: ( ( rule__ButtonDefinition__NameAssignment_2 ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2297:1: ( rule__ButtonDefinition__NameAssignment_2 )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1844:1: ( ( rule__ButtonDefinition__IdAssignment_2 ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1845:1: ( rule__ButtonDefinition__IdAssignment_2 )
             {
-             before(grammarAccess.getButtonDefinitionAccess().getNameAssignment_2()); 
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2298:1: ( rule__ButtonDefinition__NameAssignment_2 )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2298:2: rule__ButtonDefinition__NameAssignment_2
+             before(grammarAccess.getButtonDefinitionAccess().getIdAssignment_2()); 
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1846:1: ( rule__ButtonDefinition__IdAssignment_2 )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1846:2: rule__ButtonDefinition__IdAssignment_2
             {
-            pushFollow(FOLLOW_rule__ButtonDefinition__NameAssignment_2_in_rule__ButtonDefinition__Group__2__Impl4612);
-            rule__ButtonDefinition__NameAssignment_2();
+            pushFollow(FOLLOW_rule__ButtonDefinition__IdAssignment_2_in_rule__ButtonDefinition__Group__2__Impl3714);
+            rule__ButtonDefinition__IdAssignment_2();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getButtonDefinitionAccess().getNameAssignment_2()); 
+             after(grammarAccess.getButtonDefinitionAccess().getIdAssignment_2()); 
 
             }
 
@@ -6228,16 +5045,16 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ButtonDefinition__Group__3"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2308:1: rule__ButtonDefinition__Group__3 : rule__ButtonDefinition__Group__3__Impl ;
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1856:1: rule__ButtonDefinition__Group__3 : rule__ButtonDefinition__Group__3__Impl ;
     public final void rule__ButtonDefinition__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2312:1: ( rule__ButtonDefinition__Group__3__Impl )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2313:2: rule__ButtonDefinition__Group__3__Impl
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1860:1: ( rule__ButtonDefinition__Group__3__Impl )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1861:2: rule__ButtonDefinition__Group__3__Impl
             {
-            pushFollow(FOLLOW_rule__ButtonDefinition__Group__3__Impl_in_rule__ButtonDefinition__Group__34642);
+            pushFollow(FOLLOW_rule__ButtonDefinition__Group__3__Impl_in_rule__ButtonDefinition__Group__33744);
             rule__ButtonDefinition__Group__3__Impl();
 
             state._fsp--;
@@ -6261,31 +5078,31 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ButtonDefinition__Group__3__Impl"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2319:1: rule__ButtonDefinition__Group__3__Impl : ( ( rule__ButtonDefinition__PropertiesAssignment_3 )? ) ;
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1867:1: rule__ButtonDefinition__Group__3__Impl : ( ( rule__ButtonDefinition__PropertiesAssignment_3 )? ) ;
     public final void rule__ButtonDefinition__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2323:1: ( ( ( rule__ButtonDefinition__PropertiesAssignment_3 )? ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2324:1: ( ( rule__ButtonDefinition__PropertiesAssignment_3 )? )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1871:1: ( ( ( rule__ButtonDefinition__PropertiesAssignment_3 )? ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1872:1: ( ( rule__ButtonDefinition__PropertiesAssignment_3 )? )
             {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2324:1: ( ( rule__ButtonDefinition__PropertiesAssignment_3 )? )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2325:1: ( rule__ButtonDefinition__PropertiesAssignment_3 )?
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1872:1: ( ( rule__ButtonDefinition__PropertiesAssignment_3 )? )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1873:1: ( rule__ButtonDefinition__PropertiesAssignment_3 )?
             {
              before(grammarAccess.getButtonDefinitionAccess().getPropertiesAssignment_3()); 
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2326:1: ( rule__ButtonDefinition__PropertiesAssignment_3 )?
-            int alt18=2;
-            int LA18_0 = input.LA(1);
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1874:1: ( rule__ButtonDefinition__PropertiesAssignment_3 )?
+            int alt15=2;
+            int LA15_0 = input.LA(1);
 
-            if ( (LA18_0==31) ) {
-                alt18=1;
+            if ( (LA15_0==24) ) {
+                alt15=1;
             }
-            switch (alt18) {
+            switch (alt15) {
                 case 1 :
-                    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2326:2: rule__ButtonDefinition__PropertiesAssignment_3
+                    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1874:2: rule__ButtonDefinition__PropertiesAssignment_3
                     {
-                    pushFollow(FOLLOW_rule__ButtonDefinition__PropertiesAssignment_3_in_rule__ButtonDefinition__Group__3__Impl4669);
+                    pushFollow(FOLLOW_rule__ButtonDefinition__PropertiesAssignment_3_in_rule__ButtonDefinition__Group__3__Impl3771);
                     rule__ButtonDefinition__PropertiesAssignment_3();
 
                     state._fsp--;
@@ -6319,21 +5136,21 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Properties__Group__0"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2344:1: rule__Properties__Group__0 : rule__Properties__Group__0__Impl rule__Properties__Group__1 ;
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1892:1: rule__Properties__Group__0 : rule__Properties__Group__0__Impl rule__Properties__Group__1 ;
     public final void rule__Properties__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2348:1: ( rule__Properties__Group__0__Impl rule__Properties__Group__1 )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2349:2: rule__Properties__Group__0__Impl rule__Properties__Group__1
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1896:1: ( rule__Properties__Group__0__Impl rule__Properties__Group__1 )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1897:2: rule__Properties__Group__0__Impl rule__Properties__Group__1
             {
-            pushFollow(FOLLOW_rule__Properties__Group__0__Impl_in_rule__Properties__Group__04708);
+            pushFollow(FOLLOW_rule__Properties__Group__0__Impl_in_rule__Properties__Group__03810);
             rule__Properties__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Properties__Group__1_in_rule__Properties__Group__04711);
+            pushFollow(FOLLOW_rule__Properties__Group__1_in_rule__Properties__Group__03813);
             rule__Properties__Group__1();
 
             state._fsp--;
@@ -6357,21 +5174,21 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Properties__Group__0__Impl"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2356:1: rule__Properties__Group__0__Impl : ( ':' ) ;
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1904:1: rule__Properties__Group__0__Impl : ( '->' ) ;
     public final void rule__Properties__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2360:1: ( ( ':' ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2361:1: ( ':' )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1908:1: ( ( '->' ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1909:1: ( '->' )
             {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2361:1: ( ':' )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2362:1: ':'
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1909:1: ( '->' )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1910:1: '->'
             {
-             before(grammarAccess.getPropertiesAccess().getColonKeyword_0()); 
-            match(input,31,FOLLOW_31_in_rule__Properties__Group__0__Impl4739); 
-             after(grammarAccess.getPropertiesAccess().getColonKeyword_0()); 
+             before(grammarAccess.getPropertiesAccess().getHyphenMinusGreaterThanSignKeyword_0()); 
+            match(input,24,FOLLOW_24_in_rule__Properties__Group__0__Impl3841); 
+             after(grammarAccess.getPropertiesAccess().getHyphenMinusGreaterThanSignKeyword_0()); 
 
             }
 
@@ -6394,21 +5211,21 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Properties__Group__1"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2375:1: rule__Properties__Group__1 : rule__Properties__Group__1__Impl rule__Properties__Group__2 ;
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1923:1: rule__Properties__Group__1 : rule__Properties__Group__1__Impl rule__Properties__Group__2 ;
     public final void rule__Properties__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2379:1: ( rule__Properties__Group__1__Impl rule__Properties__Group__2 )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2380:2: rule__Properties__Group__1__Impl rule__Properties__Group__2
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1927:1: ( rule__Properties__Group__1__Impl rule__Properties__Group__2 )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1928:2: rule__Properties__Group__1__Impl rule__Properties__Group__2
             {
-            pushFollow(FOLLOW_rule__Properties__Group__1__Impl_in_rule__Properties__Group__14770);
+            pushFollow(FOLLOW_rule__Properties__Group__1__Impl_in_rule__Properties__Group__13872);
             rule__Properties__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Properties__Group__2_in_rule__Properties__Group__14773);
+            pushFollow(FOLLOW_rule__Properties__Group__2_in_rule__Properties__Group__13875);
             rule__Properties__Group__2();
 
             state._fsp--;
@@ -6432,31 +5249,31 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Properties__Group__1__Impl"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2387:1: rule__Properties__Group__1__Impl : ( ( rule__Properties__Group_1__0 )? ) ;
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1935:1: rule__Properties__Group__1__Impl : ( ( rule__Properties__Group_1__0 )? ) ;
     public final void rule__Properties__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2391:1: ( ( ( rule__Properties__Group_1__0 )? ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2392:1: ( ( rule__Properties__Group_1__0 )? )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1939:1: ( ( ( rule__Properties__Group_1__0 )? ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1940:1: ( ( rule__Properties__Group_1__0 )? )
             {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2392:1: ( ( rule__Properties__Group_1__0 )? )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2393:1: ( rule__Properties__Group_1__0 )?
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1940:1: ( ( rule__Properties__Group_1__0 )? )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1941:1: ( rule__Properties__Group_1__0 )?
             {
              before(grammarAccess.getPropertiesAccess().getGroup_1()); 
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2394:1: ( rule__Properties__Group_1__0 )?
-            int alt19=2;
-            int LA19_0 = input.LA(1);
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1942:1: ( rule__Properties__Group_1__0 )?
+            int alt16=2;
+            int LA16_0 = input.LA(1);
 
-            if ( (LA19_0==32) ) {
-                alt19=1;
+            if ( (LA16_0==25) ) {
+                alt16=1;
             }
-            switch (alt19) {
+            switch (alt16) {
                 case 1 :
-                    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2394:2: rule__Properties__Group_1__0
+                    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1942:2: rule__Properties__Group_1__0
                     {
-                    pushFollow(FOLLOW_rule__Properties__Group_1__0_in_rule__Properties__Group__1__Impl4800);
+                    pushFollow(FOLLOW_rule__Properties__Group_1__0_in_rule__Properties__Group__1__Impl3902);
                     rule__Properties__Group_1__0();
 
                     state._fsp--;
@@ -6490,21 +5307,21 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Properties__Group__2"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2404:1: rule__Properties__Group__2 : rule__Properties__Group__2__Impl rule__Properties__Group__3 ;
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1952:1: rule__Properties__Group__2 : rule__Properties__Group__2__Impl rule__Properties__Group__3 ;
     public final void rule__Properties__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2408:1: ( rule__Properties__Group__2__Impl rule__Properties__Group__3 )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2409:2: rule__Properties__Group__2__Impl rule__Properties__Group__3
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1956:1: ( rule__Properties__Group__2__Impl rule__Properties__Group__3 )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1957:2: rule__Properties__Group__2__Impl rule__Properties__Group__3
             {
-            pushFollow(FOLLOW_rule__Properties__Group__2__Impl_in_rule__Properties__Group__24831);
+            pushFollow(FOLLOW_rule__Properties__Group__2__Impl_in_rule__Properties__Group__23933);
             rule__Properties__Group__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Properties__Group__3_in_rule__Properties__Group__24834);
+            pushFollow(FOLLOW_rule__Properties__Group__3_in_rule__Properties__Group__23936);
             rule__Properties__Group__3();
 
             state._fsp--;
@@ -6528,31 +5345,31 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Properties__Group__2__Impl"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2416:1: rule__Properties__Group__2__Impl : ( ( rule__Properties__Group_2__0 )? ) ;
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1964:1: rule__Properties__Group__2__Impl : ( ( rule__Properties__Group_2__0 )? ) ;
     public final void rule__Properties__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2420:1: ( ( ( rule__Properties__Group_2__0 )? ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2421:1: ( ( rule__Properties__Group_2__0 )? )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1968:1: ( ( ( rule__Properties__Group_2__0 )? ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1969:1: ( ( rule__Properties__Group_2__0 )? )
             {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2421:1: ( ( rule__Properties__Group_2__0 )? )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2422:1: ( rule__Properties__Group_2__0 )?
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1969:1: ( ( rule__Properties__Group_2__0 )? )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1970:1: ( rule__Properties__Group_2__0 )?
             {
              before(grammarAccess.getPropertiesAccess().getGroup_2()); 
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2423:1: ( rule__Properties__Group_2__0 )?
-            int alt20=2;
-            int LA20_0 = input.LA(1);
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1971:1: ( rule__Properties__Group_2__0 )?
+            int alt17=2;
+            int LA17_0 = input.LA(1);
 
-            if ( (LA20_0==33) ) {
-                alt20=1;
+            if ( (LA17_0==26) ) {
+                alt17=1;
             }
-            switch (alt20) {
+            switch (alt17) {
                 case 1 :
-                    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2423:2: rule__Properties__Group_2__0
+                    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1971:2: rule__Properties__Group_2__0
                     {
-                    pushFollow(FOLLOW_rule__Properties__Group_2__0_in_rule__Properties__Group__2__Impl4861);
+                    pushFollow(FOLLOW_rule__Properties__Group_2__0_in_rule__Properties__Group__2__Impl3963);
                     rule__Properties__Group_2__0();
 
                     state._fsp--;
@@ -6586,16 +5403,16 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Properties__Group__3"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2433:1: rule__Properties__Group__3 : rule__Properties__Group__3__Impl ;
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1981:1: rule__Properties__Group__3 : rule__Properties__Group__3__Impl ;
     public final void rule__Properties__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2437:1: ( rule__Properties__Group__3__Impl )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2438:2: rule__Properties__Group__3__Impl
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1985:1: ( rule__Properties__Group__3__Impl )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1986:2: rule__Properties__Group__3__Impl
             {
-            pushFollow(FOLLOW_rule__Properties__Group__3__Impl_in_rule__Properties__Group__34892);
+            pushFollow(FOLLOW_rule__Properties__Group__3__Impl_in_rule__Properties__Group__33994);
             rule__Properties__Group__3__Impl();
 
             state._fsp--;
@@ -6619,31 +5436,31 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Properties__Group__3__Impl"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2444:1: rule__Properties__Group__3__Impl : ( ( rule__Properties__Group_3__0 )? ) ;
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1992:1: rule__Properties__Group__3__Impl : ( ( rule__Properties__Group_3__0 )? ) ;
     public final void rule__Properties__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2448:1: ( ( ( rule__Properties__Group_3__0 )? ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2449:1: ( ( rule__Properties__Group_3__0 )? )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1996:1: ( ( ( rule__Properties__Group_3__0 )? ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1997:1: ( ( rule__Properties__Group_3__0 )? )
             {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2449:1: ( ( rule__Properties__Group_3__0 )? )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2450:1: ( rule__Properties__Group_3__0 )?
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1997:1: ( ( rule__Properties__Group_3__0 )? )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1998:1: ( rule__Properties__Group_3__0 )?
             {
              before(grammarAccess.getPropertiesAccess().getGroup_3()); 
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2451:1: ( rule__Properties__Group_3__0 )?
-            int alt21=2;
-            int LA21_0 = input.LA(1);
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1999:1: ( rule__Properties__Group_3__0 )?
+            int alt18=2;
+            int LA18_0 = input.LA(1);
 
-            if ( (LA21_0==34) ) {
-                alt21=1;
+            if ( (LA18_0==27) ) {
+                alt18=1;
             }
-            switch (alt21) {
+            switch (alt18) {
                 case 1 :
-                    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2451:2: rule__Properties__Group_3__0
+                    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1999:2: rule__Properties__Group_3__0
                     {
-                    pushFollow(FOLLOW_rule__Properties__Group_3__0_in_rule__Properties__Group__3__Impl4919);
+                    pushFollow(FOLLOW_rule__Properties__Group_3__0_in_rule__Properties__Group__3__Impl4021);
                     rule__Properties__Group_3__0();
 
                     state._fsp--;
@@ -6677,21 +5494,21 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Properties__Group_1__0"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2469:1: rule__Properties__Group_1__0 : rule__Properties__Group_1__0__Impl rule__Properties__Group_1__1 ;
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2017:1: rule__Properties__Group_1__0 : rule__Properties__Group_1__0__Impl rule__Properties__Group_1__1 ;
     public final void rule__Properties__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2473:1: ( rule__Properties__Group_1__0__Impl rule__Properties__Group_1__1 )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2474:2: rule__Properties__Group_1__0__Impl rule__Properties__Group_1__1
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2021:1: ( rule__Properties__Group_1__0__Impl rule__Properties__Group_1__1 )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2022:2: rule__Properties__Group_1__0__Impl rule__Properties__Group_1__1
             {
-            pushFollow(FOLLOW_rule__Properties__Group_1__0__Impl_in_rule__Properties__Group_1__04958);
+            pushFollow(FOLLOW_rule__Properties__Group_1__0__Impl_in_rule__Properties__Group_1__04060);
             rule__Properties__Group_1__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Properties__Group_1__1_in_rule__Properties__Group_1__04961);
+            pushFollow(FOLLOW_rule__Properties__Group_1__1_in_rule__Properties__Group_1__04063);
             rule__Properties__Group_1__1();
 
             state._fsp--;
@@ -6715,20 +5532,20 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Properties__Group_1__0__Impl"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2481:1: rule__Properties__Group_1__0__Impl : ( 'propertyKey=' ) ;
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2029:1: rule__Properties__Group_1__0__Impl : ( 'propertyKey=' ) ;
     public final void rule__Properties__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2485:1: ( ( 'propertyKey=' ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2486:1: ( 'propertyKey=' )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2033:1: ( ( 'propertyKey=' ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2034:1: ( 'propertyKey=' )
             {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2486:1: ( 'propertyKey=' )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2487:1: 'propertyKey='
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2034:1: ( 'propertyKey=' )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2035:1: 'propertyKey='
             {
              before(grammarAccess.getPropertiesAccess().getPropertyKeyKeyword_1_0()); 
-            match(input,32,FOLLOW_32_in_rule__Properties__Group_1__0__Impl4989); 
+            match(input,25,FOLLOW_25_in_rule__Properties__Group_1__0__Impl4091); 
              after(grammarAccess.getPropertiesAccess().getPropertyKeyKeyword_1_0()); 
 
             }
@@ -6752,16 +5569,16 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Properties__Group_1__1"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2500:1: rule__Properties__Group_1__1 : rule__Properties__Group_1__1__Impl ;
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2048:1: rule__Properties__Group_1__1 : rule__Properties__Group_1__1__Impl ;
     public final void rule__Properties__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2504:1: ( rule__Properties__Group_1__1__Impl )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2505:2: rule__Properties__Group_1__1__Impl
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2052:1: ( rule__Properties__Group_1__1__Impl )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2053:2: rule__Properties__Group_1__1__Impl
             {
-            pushFollow(FOLLOW_rule__Properties__Group_1__1__Impl_in_rule__Properties__Group_1__15020);
+            pushFollow(FOLLOW_rule__Properties__Group_1__1__Impl_in_rule__Properties__Group_1__14122);
             rule__Properties__Group_1__1__Impl();
 
             state._fsp--;
@@ -6785,23 +5602,23 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Properties__Group_1__1__Impl"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2511:1: rule__Properties__Group_1__1__Impl : ( ( rule__Properties__PropertyKeyAssignment_1_1 ) ) ;
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2059:1: rule__Properties__Group_1__1__Impl : ( ( rule__Properties__PropertyKeyAssignment_1_1 ) ) ;
     public final void rule__Properties__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2515:1: ( ( ( rule__Properties__PropertyKeyAssignment_1_1 ) ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2516:1: ( ( rule__Properties__PropertyKeyAssignment_1_1 ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2063:1: ( ( ( rule__Properties__PropertyKeyAssignment_1_1 ) ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2064:1: ( ( rule__Properties__PropertyKeyAssignment_1_1 ) )
             {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2516:1: ( ( rule__Properties__PropertyKeyAssignment_1_1 ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2517:1: ( rule__Properties__PropertyKeyAssignment_1_1 )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2064:1: ( ( rule__Properties__PropertyKeyAssignment_1_1 ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2065:1: ( rule__Properties__PropertyKeyAssignment_1_1 )
             {
              before(grammarAccess.getPropertiesAccess().getPropertyKeyAssignment_1_1()); 
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2518:1: ( rule__Properties__PropertyKeyAssignment_1_1 )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2518:2: rule__Properties__PropertyKeyAssignment_1_1
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2066:1: ( rule__Properties__PropertyKeyAssignment_1_1 )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2066:2: rule__Properties__PropertyKeyAssignment_1_1
             {
-            pushFollow(FOLLOW_rule__Properties__PropertyKeyAssignment_1_1_in_rule__Properties__Group_1__1__Impl5047);
+            pushFollow(FOLLOW_rule__Properties__PropertyKeyAssignment_1_1_in_rule__Properties__Group_1__1__Impl4149);
             rule__Properties__PropertyKeyAssignment_1_1();
 
             state._fsp--;
@@ -6832,21 +5649,21 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Properties__Group_2__0"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2532:1: rule__Properties__Group_2__0 : rule__Properties__Group_2__0__Impl rule__Properties__Group_2__1 ;
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2080:1: rule__Properties__Group_2__0 : rule__Properties__Group_2__0__Impl rule__Properties__Group_2__1 ;
     public final void rule__Properties__Group_2__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2536:1: ( rule__Properties__Group_2__0__Impl rule__Properties__Group_2__1 )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2537:2: rule__Properties__Group_2__0__Impl rule__Properties__Group_2__1
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2084:1: ( rule__Properties__Group_2__0__Impl rule__Properties__Group_2__1 )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2085:2: rule__Properties__Group_2__0__Impl rule__Properties__Group_2__1
             {
-            pushFollow(FOLLOW_rule__Properties__Group_2__0__Impl_in_rule__Properties__Group_2__05081);
+            pushFollow(FOLLOW_rule__Properties__Group_2__0__Impl_in_rule__Properties__Group_2__04183);
             rule__Properties__Group_2__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Properties__Group_2__1_in_rule__Properties__Group_2__05084);
+            pushFollow(FOLLOW_rule__Properties__Group_2__1_in_rule__Properties__Group_2__04186);
             rule__Properties__Group_2__1();
 
             state._fsp--;
@@ -6870,20 +5687,20 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Properties__Group_2__0__Impl"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2544:1: rule__Properties__Group_2__0__Impl : ( 'text=' ) ;
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2092:1: rule__Properties__Group_2__0__Impl : ( 'text=' ) ;
     public final void rule__Properties__Group_2__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2548:1: ( ( 'text=' ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2549:1: ( 'text=' )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2096:1: ( ( 'text=' ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2097:1: ( 'text=' )
             {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2549:1: ( 'text=' )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2550:1: 'text='
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2097:1: ( 'text=' )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2098:1: 'text='
             {
              before(grammarAccess.getPropertiesAccess().getTextKeyword_2_0()); 
-            match(input,33,FOLLOW_33_in_rule__Properties__Group_2__0__Impl5112); 
+            match(input,26,FOLLOW_26_in_rule__Properties__Group_2__0__Impl4214); 
              after(grammarAccess.getPropertiesAccess().getTextKeyword_2_0()); 
 
             }
@@ -6907,16 +5724,16 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Properties__Group_2__1"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2563:1: rule__Properties__Group_2__1 : rule__Properties__Group_2__1__Impl ;
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2111:1: rule__Properties__Group_2__1 : rule__Properties__Group_2__1__Impl ;
     public final void rule__Properties__Group_2__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2567:1: ( rule__Properties__Group_2__1__Impl )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2568:2: rule__Properties__Group_2__1__Impl
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2115:1: ( rule__Properties__Group_2__1__Impl )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2116:2: rule__Properties__Group_2__1__Impl
             {
-            pushFollow(FOLLOW_rule__Properties__Group_2__1__Impl_in_rule__Properties__Group_2__15143);
+            pushFollow(FOLLOW_rule__Properties__Group_2__1__Impl_in_rule__Properties__Group_2__14245);
             rule__Properties__Group_2__1__Impl();
 
             state._fsp--;
@@ -6940,23 +5757,23 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Properties__Group_2__1__Impl"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2574:1: rule__Properties__Group_2__1__Impl : ( ( rule__Properties__TextAssignment_2_1 ) ) ;
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2122:1: rule__Properties__Group_2__1__Impl : ( ( rule__Properties__TextAssignment_2_1 ) ) ;
     public final void rule__Properties__Group_2__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2578:1: ( ( ( rule__Properties__TextAssignment_2_1 ) ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2579:1: ( ( rule__Properties__TextAssignment_2_1 ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2126:1: ( ( ( rule__Properties__TextAssignment_2_1 ) ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2127:1: ( ( rule__Properties__TextAssignment_2_1 ) )
             {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2579:1: ( ( rule__Properties__TextAssignment_2_1 ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2580:1: ( rule__Properties__TextAssignment_2_1 )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2127:1: ( ( rule__Properties__TextAssignment_2_1 ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2128:1: ( rule__Properties__TextAssignment_2_1 )
             {
              before(grammarAccess.getPropertiesAccess().getTextAssignment_2_1()); 
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2581:1: ( rule__Properties__TextAssignment_2_1 )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2581:2: rule__Properties__TextAssignment_2_1
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2129:1: ( rule__Properties__TextAssignment_2_1 )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2129:2: rule__Properties__TextAssignment_2_1
             {
-            pushFollow(FOLLOW_rule__Properties__TextAssignment_2_1_in_rule__Properties__Group_2__1__Impl5170);
+            pushFollow(FOLLOW_rule__Properties__TextAssignment_2_1_in_rule__Properties__Group_2__1__Impl4272);
             rule__Properties__TextAssignment_2_1();
 
             state._fsp--;
@@ -6987,21 +5804,21 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Properties__Group_3__0"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2595:1: rule__Properties__Group_3__0 : rule__Properties__Group_3__0__Impl rule__Properties__Group_3__1 ;
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2143:1: rule__Properties__Group_3__0 : rule__Properties__Group_3__0__Impl rule__Properties__Group_3__1 ;
     public final void rule__Properties__Group_3__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2599:1: ( rule__Properties__Group_3__0__Impl rule__Properties__Group_3__1 )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2600:2: rule__Properties__Group_3__0__Impl rule__Properties__Group_3__1
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2147:1: ( rule__Properties__Group_3__0__Impl rule__Properties__Group_3__1 )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2148:2: rule__Properties__Group_3__0__Impl rule__Properties__Group_3__1
             {
-            pushFollow(FOLLOW_rule__Properties__Group_3__0__Impl_in_rule__Properties__Group_3__05204);
+            pushFollow(FOLLOW_rule__Properties__Group_3__0__Impl_in_rule__Properties__Group_3__04306);
             rule__Properties__Group_3__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Properties__Group_3__1_in_rule__Properties__Group_3__05207);
+            pushFollow(FOLLOW_rule__Properties__Group_3__1_in_rule__Properties__Group_3__04309);
             rule__Properties__Group_3__1();
 
             state._fsp--;
@@ -7025,20 +5842,20 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Properties__Group_3__0__Impl"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2607:1: rule__Properties__Group_3__0__Impl : ( 'interactiontype=' ) ;
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2155:1: rule__Properties__Group_3__0__Impl : ( 'interactiontype=' ) ;
     public final void rule__Properties__Group_3__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2611:1: ( ( 'interactiontype=' ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2612:1: ( 'interactiontype=' )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2159:1: ( ( 'interactiontype=' ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2160:1: ( 'interactiontype=' )
             {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2612:1: ( 'interactiontype=' )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2613:1: 'interactiontype='
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2160:1: ( 'interactiontype=' )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2161:1: 'interactiontype='
             {
              before(grammarAccess.getPropertiesAccess().getInteractiontypeKeyword_3_0()); 
-            match(input,34,FOLLOW_34_in_rule__Properties__Group_3__0__Impl5235); 
+            match(input,27,FOLLOW_27_in_rule__Properties__Group_3__0__Impl4337); 
              after(grammarAccess.getPropertiesAccess().getInteractiontypeKeyword_3_0()); 
 
             }
@@ -7062,16 +5879,16 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Properties__Group_3__1"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2626:1: rule__Properties__Group_3__1 : rule__Properties__Group_3__1__Impl ;
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2174:1: rule__Properties__Group_3__1 : rule__Properties__Group_3__1__Impl ;
     public final void rule__Properties__Group_3__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2630:1: ( rule__Properties__Group_3__1__Impl )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2631:2: rule__Properties__Group_3__1__Impl
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2178:1: ( rule__Properties__Group_3__1__Impl )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2179:2: rule__Properties__Group_3__1__Impl
             {
-            pushFollow(FOLLOW_rule__Properties__Group_3__1__Impl_in_rule__Properties__Group_3__15266);
+            pushFollow(FOLLOW_rule__Properties__Group_3__1__Impl_in_rule__Properties__Group_3__14368);
             rule__Properties__Group_3__1__Impl();
 
             state._fsp--;
@@ -7095,26 +5912,26 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Properties__Group_3__1__Impl"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2637:1: rule__Properties__Group_3__1__Impl : ( ( ( rule__Properties__InteractiontypeAssignment_3_1 ) ) ( ( rule__Properties__InteractiontypeAssignment_3_1 )* ) ) ;
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2185:1: rule__Properties__Group_3__1__Impl : ( ( ( rule__Properties__InteractiontypeAssignment_3_1 ) ) ( ( rule__Properties__InteractiontypeAssignment_3_1 )* ) ) ;
     public final void rule__Properties__Group_3__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2641:1: ( ( ( ( rule__Properties__InteractiontypeAssignment_3_1 ) ) ( ( rule__Properties__InteractiontypeAssignment_3_1 )* ) ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2642:1: ( ( ( rule__Properties__InteractiontypeAssignment_3_1 ) ) ( ( rule__Properties__InteractiontypeAssignment_3_1 )* ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2189:1: ( ( ( ( rule__Properties__InteractiontypeAssignment_3_1 ) ) ( ( rule__Properties__InteractiontypeAssignment_3_1 )* ) ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2190:1: ( ( ( rule__Properties__InteractiontypeAssignment_3_1 ) ) ( ( rule__Properties__InteractiontypeAssignment_3_1 )* ) )
             {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2642:1: ( ( ( rule__Properties__InteractiontypeAssignment_3_1 ) ) ( ( rule__Properties__InteractiontypeAssignment_3_1 )* ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2643:1: ( ( rule__Properties__InteractiontypeAssignment_3_1 ) ) ( ( rule__Properties__InteractiontypeAssignment_3_1 )* )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2190:1: ( ( ( rule__Properties__InteractiontypeAssignment_3_1 ) ) ( ( rule__Properties__InteractiontypeAssignment_3_1 )* ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2191:1: ( ( rule__Properties__InteractiontypeAssignment_3_1 ) ) ( ( rule__Properties__InteractiontypeAssignment_3_1 )* )
             {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2643:1: ( ( rule__Properties__InteractiontypeAssignment_3_1 ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2644:1: ( rule__Properties__InteractiontypeAssignment_3_1 )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2191:1: ( ( rule__Properties__InteractiontypeAssignment_3_1 ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2192:1: ( rule__Properties__InteractiontypeAssignment_3_1 )
             {
              before(grammarAccess.getPropertiesAccess().getInteractiontypeAssignment_3_1()); 
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2645:1: ( rule__Properties__InteractiontypeAssignment_3_1 )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2645:2: rule__Properties__InteractiontypeAssignment_3_1
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2193:1: ( rule__Properties__InteractiontypeAssignment_3_1 )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2193:2: rule__Properties__InteractiontypeAssignment_3_1
             {
-            pushFollow(FOLLOW_rule__Properties__InteractiontypeAssignment_3_1_in_rule__Properties__Group_3__1__Impl5295);
+            pushFollow(FOLLOW_rule__Properties__InteractiontypeAssignment_3_1_in_rule__Properties__Group_3__1__Impl4397);
             rule__Properties__InteractiontypeAssignment_3_1();
 
             state._fsp--;
@@ -7126,26 +5943,26 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
 
             }
 
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2648:1: ( ( rule__Properties__InteractiontypeAssignment_3_1 )* )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2649:1: ( rule__Properties__InteractiontypeAssignment_3_1 )*
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2196:1: ( ( rule__Properties__InteractiontypeAssignment_3_1 )* )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2197:1: ( rule__Properties__InteractiontypeAssignment_3_1 )*
             {
              before(grammarAccess.getPropertiesAccess().getInteractiontypeAssignment_3_1()); 
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2650:1: ( rule__Properties__InteractiontypeAssignment_3_1 )*
-            loop22:
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2198:1: ( rule__Properties__InteractiontypeAssignment_3_1 )*
+            loop19:
             do {
-                int alt22=2;
-                int LA22_0 = input.LA(1);
+                int alt19=2;
+                int LA19_0 = input.LA(1);
 
-                if ( ((LA22_0>=13 && LA22_0<=14)) ) {
-                    alt22=1;
+                if ( ((LA19_0>=14 && LA19_0<=15)) ) {
+                    alt19=1;
                 }
 
 
-                switch (alt22) {
+                switch (alt19) {
             	case 1 :
-            	    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2650:2: rule__Properties__InteractiontypeAssignment_3_1
+            	    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2198:2: rule__Properties__InteractiontypeAssignment_3_1
             	    {
-            	    pushFollow(FOLLOW_rule__Properties__InteractiontypeAssignment_3_1_in_rule__Properties__Group_3__1__Impl5307);
+            	    pushFollow(FOLLOW_rule__Properties__InteractiontypeAssignment_3_1_in_rule__Properties__Group_3__1__Impl4409);
             	    rule__Properties__InteractiontypeAssignment_3_1();
 
             	    state._fsp--;
@@ -7155,7 +5972,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             	    break;
 
             	default :
-            	    break loop22;
+            	    break loop19;
                 }
             } while (true);
 
@@ -7185,21 +6002,21 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__LabelDefinition__Group__0"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2665:1: rule__LabelDefinition__Group__0 : rule__LabelDefinition__Group__0__Impl rule__LabelDefinition__Group__1 ;
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2213:1: rule__LabelDefinition__Group__0 : rule__LabelDefinition__Group__0__Impl rule__LabelDefinition__Group__1 ;
     public final void rule__LabelDefinition__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2669:1: ( rule__LabelDefinition__Group__0__Impl rule__LabelDefinition__Group__1 )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2670:2: rule__LabelDefinition__Group__0__Impl rule__LabelDefinition__Group__1
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2217:1: ( rule__LabelDefinition__Group__0__Impl rule__LabelDefinition__Group__1 )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2218:2: rule__LabelDefinition__Group__0__Impl rule__LabelDefinition__Group__1
             {
-            pushFollow(FOLLOW_rule__LabelDefinition__Group__0__Impl_in_rule__LabelDefinition__Group__05344);
+            pushFollow(FOLLOW_rule__LabelDefinition__Group__0__Impl_in_rule__LabelDefinition__Group__04446);
             rule__LabelDefinition__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__LabelDefinition__Group__1_in_rule__LabelDefinition__Group__05347);
+            pushFollow(FOLLOW_rule__LabelDefinition__Group__1_in_rule__LabelDefinition__Group__04449);
             rule__LabelDefinition__Group__1();
 
             state._fsp--;
@@ -7223,31 +6040,31 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__LabelDefinition__Group__0__Impl"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2677:1: rule__LabelDefinition__Group__0__Impl : ( ( rule__LabelDefinition__TypeAssignment_0 ) ) ;
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2225:1: rule__LabelDefinition__Group__0__Impl : ( ( rule__LabelDefinition__NameAssignment_0 ) ) ;
     public final void rule__LabelDefinition__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2681:1: ( ( ( rule__LabelDefinition__TypeAssignment_0 ) ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2682:1: ( ( rule__LabelDefinition__TypeAssignment_0 ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2229:1: ( ( ( rule__LabelDefinition__NameAssignment_0 ) ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2230:1: ( ( rule__LabelDefinition__NameAssignment_0 ) )
             {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2682:1: ( ( rule__LabelDefinition__TypeAssignment_0 ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2683:1: ( rule__LabelDefinition__TypeAssignment_0 )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2230:1: ( ( rule__LabelDefinition__NameAssignment_0 ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2231:1: ( rule__LabelDefinition__NameAssignment_0 )
             {
-             before(grammarAccess.getLabelDefinitionAccess().getTypeAssignment_0()); 
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2684:1: ( rule__LabelDefinition__TypeAssignment_0 )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2684:2: rule__LabelDefinition__TypeAssignment_0
+             before(grammarAccess.getLabelDefinitionAccess().getNameAssignment_0()); 
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2232:1: ( rule__LabelDefinition__NameAssignment_0 )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2232:2: rule__LabelDefinition__NameAssignment_0
             {
-            pushFollow(FOLLOW_rule__LabelDefinition__TypeAssignment_0_in_rule__LabelDefinition__Group__0__Impl5374);
-            rule__LabelDefinition__TypeAssignment_0();
+            pushFollow(FOLLOW_rule__LabelDefinition__NameAssignment_0_in_rule__LabelDefinition__Group__0__Impl4476);
+            rule__LabelDefinition__NameAssignment_0();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getLabelDefinitionAccess().getTypeAssignment_0()); 
+             after(grammarAccess.getLabelDefinitionAccess().getNameAssignment_0()); 
 
             }
 
@@ -7270,21 +6087,21 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__LabelDefinition__Group__1"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2694:1: rule__LabelDefinition__Group__1 : rule__LabelDefinition__Group__1__Impl rule__LabelDefinition__Group__2 ;
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2242:1: rule__LabelDefinition__Group__1 : rule__LabelDefinition__Group__1__Impl rule__LabelDefinition__Group__2 ;
     public final void rule__LabelDefinition__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2698:1: ( rule__LabelDefinition__Group__1__Impl rule__LabelDefinition__Group__2 )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2699:2: rule__LabelDefinition__Group__1__Impl rule__LabelDefinition__Group__2
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2246:1: ( rule__LabelDefinition__Group__1__Impl rule__LabelDefinition__Group__2 )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2247:2: rule__LabelDefinition__Group__1__Impl rule__LabelDefinition__Group__2
             {
-            pushFollow(FOLLOW_rule__LabelDefinition__Group__1__Impl_in_rule__LabelDefinition__Group__15404);
+            pushFollow(FOLLOW_rule__LabelDefinition__Group__1__Impl_in_rule__LabelDefinition__Group__14506);
             rule__LabelDefinition__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__LabelDefinition__Group__2_in_rule__LabelDefinition__Group__15407);
+            pushFollow(FOLLOW_rule__LabelDefinition__Group__2_in_rule__LabelDefinition__Group__14509);
             rule__LabelDefinition__Group__2();
 
             state._fsp--;
@@ -7308,20 +6125,20 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__LabelDefinition__Group__1__Impl"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2706:1: rule__LabelDefinition__Group__1__Impl : ( ' as ' ) ;
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2254:1: rule__LabelDefinition__Group__1__Impl : ( 'as' ) ;
     public final void rule__LabelDefinition__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2710:1: ( ( ' as ' ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2711:1: ( ' as ' )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2258:1: ( ( 'as' ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2259:1: ( 'as' )
             {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2711:1: ( ' as ' )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2712:1: ' as '
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2259:1: ( 'as' )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2260:1: 'as'
             {
              before(grammarAccess.getLabelDefinitionAccess().getAsKeyword_1()); 
-            match(input,30,FOLLOW_30_in_rule__LabelDefinition__Group__1__Impl5435); 
+            match(input,28,FOLLOW_28_in_rule__LabelDefinition__Group__1__Impl4537); 
              after(grammarAccess.getLabelDefinitionAccess().getAsKeyword_1()); 
 
             }
@@ -7345,21 +6162,21 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__LabelDefinition__Group__2"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2725:1: rule__LabelDefinition__Group__2 : rule__LabelDefinition__Group__2__Impl rule__LabelDefinition__Group__3 ;
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2273:1: rule__LabelDefinition__Group__2 : rule__LabelDefinition__Group__2__Impl rule__LabelDefinition__Group__3 ;
     public final void rule__LabelDefinition__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2729:1: ( rule__LabelDefinition__Group__2__Impl rule__LabelDefinition__Group__3 )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2730:2: rule__LabelDefinition__Group__2__Impl rule__LabelDefinition__Group__3
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2277:1: ( rule__LabelDefinition__Group__2__Impl rule__LabelDefinition__Group__3 )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2278:2: rule__LabelDefinition__Group__2__Impl rule__LabelDefinition__Group__3
             {
-            pushFollow(FOLLOW_rule__LabelDefinition__Group__2__Impl_in_rule__LabelDefinition__Group__25466);
+            pushFollow(FOLLOW_rule__LabelDefinition__Group__2__Impl_in_rule__LabelDefinition__Group__24568);
             rule__LabelDefinition__Group__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__LabelDefinition__Group__3_in_rule__LabelDefinition__Group__25469);
+            pushFollow(FOLLOW_rule__LabelDefinition__Group__3_in_rule__LabelDefinition__Group__24571);
             rule__LabelDefinition__Group__3();
 
             state._fsp--;
@@ -7383,31 +6200,31 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__LabelDefinition__Group__2__Impl"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2737:1: rule__LabelDefinition__Group__2__Impl : ( ( rule__LabelDefinition__NameAssignment_2 ) ) ;
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2285:1: rule__LabelDefinition__Group__2__Impl : ( ( rule__LabelDefinition__IdAssignment_2 ) ) ;
     public final void rule__LabelDefinition__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2741:1: ( ( ( rule__LabelDefinition__NameAssignment_2 ) ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2742:1: ( ( rule__LabelDefinition__NameAssignment_2 ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2289:1: ( ( ( rule__LabelDefinition__IdAssignment_2 ) ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2290:1: ( ( rule__LabelDefinition__IdAssignment_2 ) )
             {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2742:1: ( ( rule__LabelDefinition__NameAssignment_2 ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2743:1: ( rule__LabelDefinition__NameAssignment_2 )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2290:1: ( ( rule__LabelDefinition__IdAssignment_2 ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2291:1: ( rule__LabelDefinition__IdAssignment_2 )
             {
-             before(grammarAccess.getLabelDefinitionAccess().getNameAssignment_2()); 
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2744:1: ( rule__LabelDefinition__NameAssignment_2 )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2744:2: rule__LabelDefinition__NameAssignment_2
+             before(grammarAccess.getLabelDefinitionAccess().getIdAssignment_2()); 
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2292:1: ( rule__LabelDefinition__IdAssignment_2 )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2292:2: rule__LabelDefinition__IdAssignment_2
             {
-            pushFollow(FOLLOW_rule__LabelDefinition__NameAssignment_2_in_rule__LabelDefinition__Group__2__Impl5496);
-            rule__LabelDefinition__NameAssignment_2();
+            pushFollow(FOLLOW_rule__LabelDefinition__IdAssignment_2_in_rule__LabelDefinition__Group__2__Impl4598);
+            rule__LabelDefinition__IdAssignment_2();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getLabelDefinitionAccess().getNameAssignment_2()); 
+             after(grammarAccess.getLabelDefinitionAccess().getIdAssignment_2()); 
 
             }
 
@@ -7430,16 +6247,16 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__LabelDefinition__Group__3"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2754:1: rule__LabelDefinition__Group__3 : rule__LabelDefinition__Group__3__Impl ;
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2302:1: rule__LabelDefinition__Group__3 : rule__LabelDefinition__Group__3__Impl ;
     public final void rule__LabelDefinition__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2758:1: ( rule__LabelDefinition__Group__3__Impl )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2759:2: rule__LabelDefinition__Group__3__Impl
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2306:1: ( rule__LabelDefinition__Group__3__Impl )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2307:2: rule__LabelDefinition__Group__3__Impl
             {
-            pushFollow(FOLLOW_rule__LabelDefinition__Group__3__Impl_in_rule__LabelDefinition__Group__35526);
+            pushFollow(FOLLOW_rule__LabelDefinition__Group__3__Impl_in_rule__LabelDefinition__Group__34628);
             rule__LabelDefinition__Group__3__Impl();
 
             state._fsp--;
@@ -7463,31 +6280,31 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__LabelDefinition__Group__3__Impl"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2765:1: rule__LabelDefinition__Group__3__Impl : ( ( rule__LabelDefinition__PropertiesAssignment_3 )? ) ;
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2313:1: rule__LabelDefinition__Group__3__Impl : ( ( rule__LabelDefinition__PropertiesAssignment_3 )? ) ;
     public final void rule__LabelDefinition__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2769:1: ( ( ( rule__LabelDefinition__PropertiesAssignment_3 )? ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2770:1: ( ( rule__LabelDefinition__PropertiesAssignment_3 )? )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2317:1: ( ( ( rule__LabelDefinition__PropertiesAssignment_3 )? ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2318:1: ( ( rule__LabelDefinition__PropertiesAssignment_3 )? )
             {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2770:1: ( ( rule__LabelDefinition__PropertiesAssignment_3 )? )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2771:1: ( rule__LabelDefinition__PropertiesAssignment_3 )?
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2318:1: ( ( rule__LabelDefinition__PropertiesAssignment_3 )? )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2319:1: ( rule__LabelDefinition__PropertiesAssignment_3 )?
             {
              before(grammarAccess.getLabelDefinitionAccess().getPropertiesAssignment_3()); 
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2772:1: ( rule__LabelDefinition__PropertiesAssignment_3 )?
-            int alt23=2;
-            int LA23_0 = input.LA(1);
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2320:1: ( rule__LabelDefinition__PropertiesAssignment_3 )?
+            int alt20=2;
+            int LA20_0 = input.LA(1);
 
-            if ( (LA23_0==31) ) {
-                alt23=1;
+            if ( (LA20_0==24) ) {
+                alt20=1;
             }
-            switch (alt23) {
+            switch (alt20) {
                 case 1 :
-                    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2772:2: rule__LabelDefinition__PropertiesAssignment_3
+                    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2320:2: rule__LabelDefinition__PropertiesAssignment_3
                     {
-                    pushFollow(FOLLOW_rule__LabelDefinition__PropertiesAssignment_3_in_rule__LabelDefinition__Group__3__Impl5553);
+                    pushFollow(FOLLOW_rule__LabelDefinition__PropertiesAssignment_3_in_rule__LabelDefinition__Group__3__Impl4655);
                     rule__LabelDefinition__PropertiesAssignment_3();
 
                     state._fsp--;
@@ -7520,67 +6337,26 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__LabelDefinition__Group__3__Impl"
 
 
-    // $ANTLR start "rule__UIDescription__AreaCountAssignment_0"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2791:1: rule__UIDescription__AreaCountAssignment_0 : ( ruleAreaCount ) ;
-    public final void rule__UIDescription__AreaCountAssignment_0() throws RecognitionException {
+    // $ANTLR start "rule__UIDescription__TypeDefinitionAssignment_0"
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2339:1: rule__UIDescription__TypeDefinitionAssignment_0 : ( ruleTypeDefinition ) ;
+    public final void rule__UIDescription__TypeDefinitionAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2795:1: ( ( ruleAreaCount ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2796:1: ( ruleAreaCount )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2343:1: ( ( ruleTypeDefinition ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2344:1: ( ruleTypeDefinition )
             {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2796:1: ( ruleAreaCount )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2797:1: ruleAreaCount
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2344:1: ( ruleTypeDefinition )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2345:1: ruleTypeDefinition
             {
-             before(grammarAccess.getUIDescriptionAccess().getAreaCountAreaCountParserRuleCall_0_0()); 
-            pushFollow(FOLLOW_ruleAreaCount_in_rule__UIDescription__AreaCountAssignment_05597);
-            ruleAreaCount();
-
-            state._fsp--;
-
-             after(grammarAccess.getUIDescriptionAccess().getAreaCountAreaCountParserRuleCall_0_0()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__UIDescription__AreaCountAssignment_0"
-
-
-    // $ANTLR start "rule__UIDescription__TypeDefinitionAssignment_1"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2806:1: rule__UIDescription__TypeDefinitionAssignment_1 : ( ruleTypeDefinition ) ;
-    public final void rule__UIDescription__TypeDefinitionAssignment_1() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2810:1: ( ( ruleTypeDefinition ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2811:1: ( ruleTypeDefinition )
-            {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2811:1: ( ruleTypeDefinition )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2812:1: ruleTypeDefinition
-            {
-             before(grammarAccess.getUIDescriptionAccess().getTypeDefinitionTypeDefinitionParserRuleCall_1_0()); 
-            pushFollow(FOLLOW_ruleTypeDefinition_in_rule__UIDescription__TypeDefinitionAssignment_15628);
+             before(grammarAccess.getUIDescriptionAccess().getTypeDefinitionTypeDefinitionParserRuleCall_0_0()); 
+            pushFollow(FOLLOW_ruleTypeDefinition_in_rule__UIDescription__TypeDefinitionAssignment_04699);
             ruleTypeDefinition();
 
             state._fsp--;
 
-             after(grammarAccess.getUIDescriptionAccess().getTypeDefinitionTypeDefinitionParserRuleCall_1_0()); 
+             after(grammarAccess.getUIDescriptionAccess().getTypeDefinitionTypeDefinitionParserRuleCall_0_0()); 
 
             }
 
@@ -7599,29 +6375,29 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__UIDescription__TypeDefinitionAssignment_1"
+    // $ANTLR end "rule__UIDescription__TypeDefinitionAssignment_0"
 
 
-    // $ANTLR start "rule__UIDescription__PropertyAssignment_2"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2821:1: rule__UIDescription__PropertyAssignment_2 : ( ruleProperty ) ;
-    public final void rule__UIDescription__PropertyAssignment_2() throws RecognitionException {
+    // $ANTLR start "rule__UIDescription__PropertyAssignment_1"
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2354:1: rule__UIDescription__PropertyAssignment_1 : ( ruleProperty ) ;
+    public final void rule__UIDescription__PropertyAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2825:1: ( ( ruleProperty ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2826:1: ( ruleProperty )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2358:1: ( ( ruleProperty ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2359:1: ( ruleProperty )
             {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2826:1: ( ruleProperty )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2827:1: ruleProperty
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2359:1: ( ruleProperty )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2360:1: ruleProperty
             {
-             before(grammarAccess.getUIDescriptionAccess().getPropertyPropertyParserRuleCall_2_0()); 
-            pushFollow(FOLLOW_ruleProperty_in_rule__UIDescription__PropertyAssignment_25659);
+             before(grammarAccess.getUIDescriptionAccess().getPropertyPropertyParserRuleCall_1_0()); 
+            pushFollow(FOLLOW_ruleProperty_in_rule__UIDescription__PropertyAssignment_14730);
             ruleProperty();
 
             state._fsp--;
 
-             after(grammarAccess.getUIDescriptionAccess().getPropertyPropertyParserRuleCall_2_0()); 
+             after(grammarAccess.getUIDescriptionAccess().getPropertyPropertyParserRuleCall_1_0()); 
 
             }
 
@@ -7640,29 +6416,29 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__UIDescription__PropertyAssignment_2"
+    // $ANTLR end "rule__UIDescription__PropertyAssignment_1"
 
 
-    // $ANTLR start "rule__UIDescription__UsedDescriptionsAssignment_3"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2836:1: rule__UIDescription__UsedDescriptionsAssignment_3 : ( ruleUsedDescriptions ) ;
-    public final void rule__UIDescription__UsedDescriptionsAssignment_3() throws RecognitionException {
+    // $ANTLR start "rule__UIDescription__UsedDescriptionsAssignment_2"
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2369:1: rule__UIDescription__UsedDescriptionsAssignment_2 : ( ruleUsedDescriptions ) ;
+    public final void rule__UIDescription__UsedDescriptionsAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2840:1: ( ( ruleUsedDescriptions ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2841:1: ( ruleUsedDescriptions )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2373:1: ( ( ruleUsedDescriptions ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2374:1: ( ruleUsedDescriptions )
             {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2841:1: ( ruleUsedDescriptions )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2842:1: ruleUsedDescriptions
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2374:1: ( ruleUsedDescriptions )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2375:1: ruleUsedDescriptions
             {
-             before(grammarAccess.getUIDescriptionAccess().getUsedDescriptionsUsedDescriptionsParserRuleCall_3_0()); 
-            pushFollow(FOLLOW_ruleUsedDescriptions_in_rule__UIDescription__UsedDescriptionsAssignment_35690);
+             before(grammarAccess.getUIDescriptionAccess().getUsedDescriptionsUsedDescriptionsParserRuleCall_2_0()); 
+            pushFollow(FOLLOW_ruleUsedDescriptions_in_rule__UIDescription__UsedDescriptionsAssignment_24761);
             ruleUsedDescriptions();
 
             state._fsp--;
 
-             after(grammarAccess.getUIDescriptionAccess().getUsedDescriptionsUsedDescriptionsParserRuleCall_3_0()); 
+             after(grammarAccess.getUIDescriptionAccess().getUsedDescriptionsUsedDescriptionsParserRuleCall_2_0()); 
 
             }
 
@@ -7681,29 +6457,29 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__UIDescription__UsedDescriptionsAssignment_3"
+    // $ANTLR end "rule__UIDescription__UsedDescriptionsAssignment_2"
 
 
-    // $ANTLR start "rule__UIDescription__RefinementsAssignment_4"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2851:1: rule__UIDescription__RefinementsAssignment_4 : ( ruleRefinement ) ;
-    public final void rule__UIDescription__RefinementsAssignment_4() throws RecognitionException {
+    // $ANTLR start "rule__UIDescription__RefinementsAssignment_3"
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2384:1: rule__UIDescription__RefinementsAssignment_3 : ( ruleRefinement ) ;
+    public final void rule__UIDescription__RefinementsAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2855:1: ( ( ruleRefinement ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2856:1: ( ruleRefinement )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2388:1: ( ( ruleRefinement ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2389:1: ( ruleRefinement )
             {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2856:1: ( ruleRefinement )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2857:1: ruleRefinement
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2389:1: ( ruleRefinement )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2390:1: ruleRefinement
             {
-             before(grammarAccess.getUIDescriptionAccess().getRefinementsRefinementParserRuleCall_4_0()); 
-            pushFollow(FOLLOW_ruleRefinement_in_rule__UIDescription__RefinementsAssignment_45721);
+             before(grammarAccess.getUIDescriptionAccess().getRefinementsRefinementParserRuleCall_3_0()); 
+            pushFollow(FOLLOW_ruleRefinement_in_rule__UIDescription__RefinementsAssignment_34792);
             ruleRefinement();
 
             state._fsp--;
 
-             after(grammarAccess.getUIDescriptionAccess().getRefinementsRefinementParserRuleCall_4_0()); 
+             after(grammarAccess.getUIDescriptionAccess().getRefinementsRefinementParserRuleCall_3_0()); 
 
             }
 
@@ -7722,29 +6498,29 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__UIDescription__RefinementsAssignment_4"
+    // $ANTLR end "rule__UIDescription__RefinementsAssignment_3"
 
 
-    // $ANTLR start "rule__UIDescription__DefinitionsAssignment_5"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2866:1: rule__UIDescription__DefinitionsAssignment_5 : ( ruleDefinition ) ;
-    public final void rule__UIDescription__DefinitionsAssignment_5() throws RecognitionException {
+    // $ANTLR start "rule__UIDescription__DefinitionsAssignment_4"
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2399:1: rule__UIDescription__DefinitionsAssignment_4 : ( ruleDefinition ) ;
+    public final void rule__UIDescription__DefinitionsAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2870:1: ( ( ruleDefinition ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2871:1: ( ruleDefinition )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2403:1: ( ( ruleDefinition ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2404:1: ( ruleDefinition )
             {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2871:1: ( ruleDefinition )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2872:1: ruleDefinition
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2404:1: ( ruleDefinition )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2405:1: ruleDefinition
             {
-             before(grammarAccess.getUIDescriptionAccess().getDefinitionsDefinitionParserRuleCall_5_0()); 
-            pushFollow(FOLLOW_ruleDefinition_in_rule__UIDescription__DefinitionsAssignment_55752);
+             before(grammarAccess.getUIDescriptionAccess().getDefinitionsDefinitionParserRuleCall_4_0()); 
+            pushFollow(FOLLOW_ruleDefinition_in_rule__UIDescription__DefinitionsAssignment_44823);
             ruleDefinition();
 
             state._fsp--;
 
-             after(grammarAccess.getUIDescriptionAccess().getDefinitionsDefinitionParserRuleCall_5_0()); 
+             after(grammarAccess.getUIDescriptionAccess().getDefinitionsDefinitionParserRuleCall_4_0()); 
 
             }
 
@@ -7763,29 +6539,29 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__UIDescription__DefinitionsAssignment_5"
+    // $ANTLR end "rule__UIDescription__DefinitionsAssignment_4"
 
 
-    // $ANTLR start "rule__UIDescription__AreasAssignment_6"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2881:1: rule__UIDescription__AreasAssignment_6 : ( ruleAreaAssignment ) ;
-    public final void rule__UIDescription__AreasAssignment_6() throws RecognitionException {
+    // $ANTLR start "rule__UIDescription__StructureAssignment_5"
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2414:1: rule__UIDescription__StructureAssignment_5 : ( ruleStructure ) ;
+    public final void rule__UIDescription__StructureAssignment_5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2885:1: ( ( ruleAreaAssignment ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2886:1: ( ruleAreaAssignment )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2418:1: ( ( ruleStructure ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2419:1: ( ruleStructure )
             {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2886:1: ( ruleAreaAssignment )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2887:1: ruleAreaAssignment
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2419:1: ( ruleStructure )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2420:1: ruleStructure
             {
-             before(grammarAccess.getUIDescriptionAccess().getAreasAreaAssignmentParserRuleCall_6_0()); 
-            pushFollow(FOLLOW_ruleAreaAssignment_in_rule__UIDescription__AreasAssignment_65783);
-            ruleAreaAssignment();
+             before(grammarAccess.getUIDescriptionAccess().getStructureStructureParserRuleCall_5_0()); 
+            pushFollow(FOLLOW_ruleStructure_in_rule__UIDescription__StructureAssignment_54854);
+            ruleStructure();
 
             state._fsp--;
 
-             after(grammarAccess.getUIDescriptionAccess().getAreasAreaAssignmentParserRuleCall_6_0()); 
+             after(grammarAccess.getUIDescriptionAccess().getStructureStructureParserRuleCall_5_0()); 
 
             }
 
@@ -7804,29 +6580,152 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__UIDescription__AreasAssignment_6"
+    // $ANTLR end "rule__UIDescription__StructureAssignment_5"
 
 
-    // $ANTLR start "rule__Refinement__ConcreteRefinementAssignment_1"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2896:1: rule__Refinement__ConcreteRefinementAssignment_1 : ( ruleComponentRefinement ) ;
-    public final void rule__Refinement__ConcreteRefinementAssignment_1() throws RecognitionException {
+    // $ANTLR start "rule__Structure__NameAssignment_0"
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2429:1: rule__Structure__NameAssignment_0 : ( ( 'Structure' ) ) ;
+    public final void rule__Structure__NameAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2900:1: ( ( ruleComponentRefinement ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2901:1: ( ruleComponentRefinement )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2433:1: ( ( ( 'Structure' ) ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2434:1: ( ( 'Structure' ) )
             {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2901:1: ( ruleComponentRefinement )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2902:1: ruleComponentRefinement
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2434:1: ( ( 'Structure' ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2435:1: ( 'Structure' )
             {
-             before(grammarAccess.getRefinementAccess().getConcreteRefinementComponentRefinementParserRuleCall_1_0()); 
-            pushFollow(FOLLOW_ruleComponentRefinement_in_rule__Refinement__ConcreteRefinementAssignment_15814);
+             before(grammarAccess.getStructureAccess().getNameStructureKeyword_0_0()); 
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2436:1: ( 'Structure' )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2437:1: 'Structure'
+            {
+             before(grammarAccess.getStructureAccess().getNameStructureKeyword_0_0()); 
+            match(input,29,FOLLOW_29_in_rule__Structure__NameAssignment_04890); 
+             after(grammarAccess.getStructureAccess().getNameStructureKeyword_0_0()); 
+
+            }
+
+             after(grammarAccess.getStructureAccess().getNameStructureKeyword_0_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Structure__NameAssignment_0"
+
+
+    // $ANTLR start "rule__Structure__OrderedElementsAssignment_2"
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2452:1: rule__Structure__OrderedElementsAssignment_2 : ( ruleElement ) ;
+    public final void rule__Structure__OrderedElementsAssignment_2() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2456:1: ( ( ruleElement ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2457:1: ( ruleElement )
+            {
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2457:1: ( ruleElement )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2458:1: ruleElement
+            {
+             before(grammarAccess.getStructureAccess().getOrderedElementsElementParserRuleCall_2_0()); 
+            pushFollow(FOLLOW_ruleElement_in_rule__Structure__OrderedElementsAssignment_24929);
+            ruleElement();
+
+            state._fsp--;
+
+             after(grammarAccess.getStructureAccess().getOrderedElementsElementParserRuleCall_2_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Structure__OrderedElementsAssignment_2"
+
+
+    // $ANTLR start "rule__Element__IdAssignment"
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2467:1: rule__Element__IdAssignment : ( RULE_STRING ) ;
+    public final void rule__Element__IdAssignment() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2471:1: ( ( RULE_STRING ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2472:1: ( RULE_STRING )
+            {
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2472:1: ( RULE_STRING )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2473:1: RULE_STRING
+            {
+             before(grammarAccess.getElementAccess().getIdSTRINGTerminalRuleCall_0()); 
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__Element__IdAssignment4960); 
+             after(grammarAccess.getElementAccess().getIdSTRINGTerminalRuleCall_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Element__IdAssignment"
+
+
+    // $ANTLR start "rule__Refinement__ConcreteRefinementAssignment_0"
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2482:1: rule__Refinement__ConcreteRefinementAssignment_0 : ( ruleComponentRefinement ) ;
+    public final void rule__Refinement__ConcreteRefinementAssignment_0() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2486:1: ( ( ruleComponentRefinement ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2487:1: ( ruleComponentRefinement )
+            {
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2487:1: ( ruleComponentRefinement )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2488:1: ruleComponentRefinement
+            {
+             before(grammarAccess.getRefinementAccess().getConcreteRefinementComponentRefinementParserRuleCall_0_0()); 
+            pushFollow(FOLLOW_ruleComponentRefinement_in_rule__Refinement__ConcreteRefinementAssignment_04991);
             ruleComponentRefinement();
 
             state._fsp--;
 
-             after(grammarAccess.getRefinementAccess().getConcreteRefinementComponentRefinementParserRuleCall_1_0()); 
+             after(grammarAccess.getRefinementAccess().getConcreteRefinementComponentRefinementParserRuleCall_0_0()); 
 
             }
 
@@ -7845,33 +6744,33 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Refinement__ConcreteRefinementAssignment_1"
+    // $ANTLR end "rule__Refinement__ConcreteRefinementAssignment_0"
 
 
-    // $ANTLR start "rule__ButtonRefinement__TypeAssignment_0"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2911:1: rule__ButtonRefinement__TypeAssignment_0 : ( ( 'Button' ) ) ;
-    public final void rule__ButtonRefinement__TypeAssignment_0() throws RecognitionException {
+    // $ANTLR start "rule__ButtonRefinement__NameAssignment_0"
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2497:1: rule__ButtonRefinement__NameAssignment_0 : ( ( 'Button' ) ) ;
+    public final void rule__ButtonRefinement__NameAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2915:1: ( ( ( 'Button' ) ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2916:1: ( ( 'Button' ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2501:1: ( ( ( 'Button' ) ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2502:1: ( ( 'Button' ) )
             {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2916:1: ( ( 'Button' ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2917:1: ( 'Button' )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2502:1: ( ( 'Button' ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2503:1: ( 'Button' )
             {
-             before(grammarAccess.getButtonRefinementAccess().getTypeButtonKeyword_0_0()); 
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2918:1: ( 'Button' )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2919:1: 'Button'
+             before(grammarAccess.getButtonRefinementAccess().getNameButtonKeyword_0_0()); 
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2504:1: ( 'Button' )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2505:1: 'Button'
             {
-             before(grammarAccess.getButtonRefinementAccess().getTypeButtonKeyword_0_0()); 
-            match(input,35,FOLLOW_35_in_rule__ButtonRefinement__TypeAssignment_05850); 
-             after(grammarAccess.getButtonRefinementAccess().getTypeButtonKeyword_0_0()); 
+             before(grammarAccess.getButtonRefinementAccess().getNameButtonKeyword_0_0()); 
+            match(input,30,FOLLOW_30_in_rule__ButtonRefinement__NameAssignment_05027); 
+             after(grammarAccess.getButtonRefinementAccess().getNameButtonKeyword_0_0()); 
 
             }
 
-             after(grammarAccess.getButtonRefinementAccess().getTypeButtonKeyword_0_0()); 
+             after(grammarAccess.getButtonRefinementAccess().getNameButtonKeyword_0_0()); 
 
             }
 
@@ -7890,25 +6789,25 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__ButtonRefinement__TypeAssignment_0"
+    // $ANTLR end "rule__ButtonRefinement__NameAssignment_0"
 
 
-    // $ANTLR start "rule__ButtonRefinement__NameAssignment_2"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2934:1: rule__ButtonRefinement__NameAssignment_2 : ( RULE_STRING ) ;
-    public final void rule__ButtonRefinement__NameAssignment_2() throws RecognitionException {
+    // $ANTLR start "rule__ButtonRefinement__IdAssignment_2"
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2520:1: rule__ButtonRefinement__IdAssignment_2 : ( RULE_STRING ) ;
+    public final void rule__ButtonRefinement__IdAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2938:1: ( ( RULE_STRING ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2939:1: ( RULE_STRING )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2524:1: ( ( RULE_STRING ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2525:1: ( RULE_STRING )
             {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2939:1: ( RULE_STRING )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2940:1: RULE_STRING
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2525:1: ( RULE_STRING )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2526:1: RULE_STRING
             {
-             before(grammarAccess.getButtonRefinementAccess().getNameSTRINGTerminalRuleCall_2_0()); 
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__ButtonRefinement__NameAssignment_25889); 
-             after(grammarAccess.getButtonRefinementAccess().getNameSTRINGTerminalRuleCall_2_0()); 
+             before(grammarAccess.getButtonRefinementAccess().getIdSTRINGTerminalRuleCall_2_0()); 
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__ButtonRefinement__IdAssignment_25066); 
+             after(grammarAccess.getButtonRefinementAccess().getIdSTRINGTerminalRuleCall_2_0()); 
 
             }
 
@@ -7927,24 +6826,24 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__ButtonRefinement__NameAssignment_2"
+    // $ANTLR end "rule__ButtonRefinement__IdAssignment_2"
 
 
     // $ANTLR start "rule__ButtonRefinement__PropertiesAssignment_3"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2949:1: rule__ButtonRefinement__PropertiesAssignment_3 : ( ruleProperties ) ;
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2535:1: rule__ButtonRefinement__PropertiesAssignment_3 : ( ruleProperties ) ;
     public final void rule__ButtonRefinement__PropertiesAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2953:1: ( ( ruleProperties ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2954:1: ( ruleProperties )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2539:1: ( ( ruleProperties ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2540:1: ( ruleProperties )
             {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2954:1: ( ruleProperties )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2955:1: ruleProperties
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2540:1: ( ruleProperties )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2541:1: ruleProperties
             {
              before(grammarAccess.getButtonRefinementAccess().getPropertiesPropertiesParserRuleCall_3_0()); 
-            pushFollow(FOLLOW_ruleProperties_in_rule__ButtonRefinement__PropertiesAssignment_35920);
+            pushFollow(FOLLOW_ruleProperties_in_rule__ButtonRefinement__PropertiesAssignment_35097);
             ruleProperties();
 
             state._fsp--;
@@ -7971,30 +6870,30 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__ButtonRefinement__PropertiesAssignment_3"
 
 
-    // $ANTLR start "rule__LabelRefinement__TypeAssignment_0"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2964:1: rule__LabelRefinement__TypeAssignment_0 : ( ( 'Label' ) ) ;
-    public final void rule__LabelRefinement__TypeAssignment_0() throws RecognitionException {
+    // $ANTLR start "rule__LabelRefinement__NameAssignment_0"
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2550:1: rule__LabelRefinement__NameAssignment_0 : ( ( 'Label' ) ) ;
+    public final void rule__LabelRefinement__NameAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2968:1: ( ( ( 'Label' ) ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2969:1: ( ( 'Label' ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2554:1: ( ( ( 'Label' ) ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2555:1: ( ( 'Label' ) )
             {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2969:1: ( ( 'Label' ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2970:1: ( 'Label' )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2555:1: ( ( 'Label' ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2556:1: ( 'Label' )
             {
-             before(grammarAccess.getLabelRefinementAccess().getTypeLabelKeyword_0_0()); 
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2971:1: ( 'Label' )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2972:1: 'Label'
+             before(grammarAccess.getLabelRefinementAccess().getNameLabelKeyword_0_0()); 
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2557:1: ( 'Label' )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2558:1: 'Label'
             {
-             before(grammarAccess.getLabelRefinementAccess().getTypeLabelKeyword_0_0()); 
-            match(input,36,FOLLOW_36_in_rule__LabelRefinement__TypeAssignment_05956); 
-             after(grammarAccess.getLabelRefinementAccess().getTypeLabelKeyword_0_0()); 
+             before(grammarAccess.getLabelRefinementAccess().getNameLabelKeyword_0_0()); 
+            match(input,31,FOLLOW_31_in_rule__LabelRefinement__NameAssignment_05133); 
+             after(grammarAccess.getLabelRefinementAccess().getNameLabelKeyword_0_0()); 
 
             }
 
-             after(grammarAccess.getLabelRefinementAccess().getTypeLabelKeyword_0_0()); 
+             after(grammarAccess.getLabelRefinementAccess().getNameLabelKeyword_0_0()); 
 
             }
 
@@ -8013,25 +6912,25 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__LabelRefinement__TypeAssignment_0"
+    // $ANTLR end "rule__LabelRefinement__NameAssignment_0"
 
 
-    // $ANTLR start "rule__LabelRefinement__NameAssignment_2"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2987:1: rule__LabelRefinement__NameAssignment_2 : ( RULE_STRING ) ;
-    public final void rule__LabelRefinement__NameAssignment_2() throws RecognitionException {
+    // $ANTLR start "rule__LabelRefinement__IdAssignment_2"
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2573:1: rule__LabelRefinement__IdAssignment_2 : ( RULE_STRING ) ;
+    public final void rule__LabelRefinement__IdAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2991:1: ( ( RULE_STRING ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2992:1: ( RULE_STRING )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2577:1: ( ( RULE_STRING ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2578:1: ( RULE_STRING )
             {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2992:1: ( RULE_STRING )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2993:1: RULE_STRING
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2578:1: ( RULE_STRING )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2579:1: RULE_STRING
             {
-             before(grammarAccess.getLabelRefinementAccess().getNameSTRINGTerminalRuleCall_2_0()); 
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__LabelRefinement__NameAssignment_25995); 
-             after(grammarAccess.getLabelRefinementAccess().getNameSTRINGTerminalRuleCall_2_0()); 
+             before(grammarAccess.getLabelRefinementAccess().getIdSTRINGTerminalRuleCall_2_0()); 
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__LabelRefinement__IdAssignment_25172); 
+             after(grammarAccess.getLabelRefinementAccess().getIdSTRINGTerminalRuleCall_2_0()); 
 
             }
 
@@ -8050,24 +6949,24 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__LabelRefinement__NameAssignment_2"
+    // $ANTLR end "rule__LabelRefinement__IdAssignment_2"
 
 
     // $ANTLR start "rule__LabelRefinement__PropertiesAssignment_3"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:3002:1: rule__LabelRefinement__PropertiesAssignment_3 : ( ruleProperties ) ;
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2588:1: rule__LabelRefinement__PropertiesAssignment_3 : ( ruleProperties ) ;
     public final void rule__LabelRefinement__PropertiesAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:3006:1: ( ( ruleProperties ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:3007:1: ( ruleProperties )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2592:1: ( ( ruleProperties ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2593:1: ( ruleProperties )
             {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:3007:1: ( ruleProperties )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:3008:1: ruleProperties
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2593:1: ( ruleProperties )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2594:1: ruleProperties
             {
              before(grammarAccess.getLabelRefinementAccess().getPropertiesPropertiesParserRuleCall_3_0()); 
-            pushFollow(FOLLOW_ruleProperties_in_rule__LabelRefinement__PropertiesAssignment_36026);
+            pushFollow(FOLLOW_ruleProperties_in_rule__LabelRefinement__PropertiesAssignment_35203);
             ruleProperties();
 
             state._fsp--;
@@ -8095,20 +6994,20 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Property__PropertiesFileAssignment_1"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:3017:1: rule__Property__PropertiesFileAssignment_1 : ( RULE_STRING ) ;
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2603:1: rule__Property__PropertiesFileAssignment_1 : ( RULE_STRING ) ;
     public final void rule__Property__PropertiesFileAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:3021:1: ( ( RULE_STRING ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:3022:1: ( RULE_STRING )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2607:1: ( ( RULE_STRING ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2608:1: ( RULE_STRING )
             {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:3022:1: ( RULE_STRING )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:3023:1: RULE_STRING
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2608:1: ( RULE_STRING )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2609:1: RULE_STRING
             {
              before(grammarAccess.getPropertyAccess().getPropertiesFileSTRINGTerminalRuleCall_1_0()); 
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__Property__PropertiesFileAssignment_16057); 
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__Property__PropertiesFileAssignment_15234); 
              after(grammarAccess.getPropertyAccess().getPropertiesFileSTRINGTerminalRuleCall_1_0()); 
 
             }
@@ -8132,20 +7031,20 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__UsedDescriptions__DescriptionAssignment_1"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:3032:1: rule__UsedDescriptions__DescriptionAssignment_1 : ( ruleDescriptionType ) ;
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2618:1: rule__UsedDescriptions__DescriptionAssignment_1 : ( ruleDescriptionType ) ;
     public final void rule__UsedDescriptions__DescriptionAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:3036:1: ( ( ruleDescriptionType ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:3037:1: ( ruleDescriptionType )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2622:1: ( ( ruleDescriptionType ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2623:1: ( ruleDescriptionType )
             {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:3037:1: ( ruleDescriptionType )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:3038:1: ruleDescriptionType
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2623:1: ( ruleDescriptionType )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2624:1: ruleDescriptionType
             {
              before(grammarAccess.getUsedDescriptionsAccess().getDescriptionDescriptionTypeParserRuleCall_1_0()); 
-            pushFollow(FOLLOW_ruleDescriptionType_in_rule__UsedDescriptions__DescriptionAssignment_16088);
+            pushFollow(FOLLOW_ruleDescriptionType_in_rule__UsedDescriptions__DescriptionAssignment_15265);
             ruleDescriptionType();
 
             state._fsp--;
@@ -8172,22 +7071,22 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__UsedDescriptions__DescriptionAssignment_1"
 
 
-    // $ANTLR start "rule__UsedDescriptions__LocalNameAssignment_2_1"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:3047:1: rule__UsedDescriptions__LocalNameAssignment_2_1 : ( RULE_STRING ) ;
-    public final void rule__UsedDescriptions__LocalNameAssignment_2_1() throws RecognitionException {
+    // $ANTLR start "rule__UsedDescriptions__IdAssignment_2_1"
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2633:1: rule__UsedDescriptions__IdAssignment_2_1 : ( RULE_STRING ) ;
+    public final void rule__UsedDescriptions__IdAssignment_2_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:3051:1: ( ( RULE_STRING ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:3052:1: ( RULE_STRING )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2637:1: ( ( RULE_STRING ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2638:1: ( RULE_STRING )
             {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:3052:1: ( RULE_STRING )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:3053:1: RULE_STRING
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2638:1: ( RULE_STRING )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2639:1: RULE_STRING
             {
-             before(grammarAccess.getUsedDescriptionsAccess().getLocalNameSTRINGTerminalRuleCall_2_1_0()); 
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__UsedDescriptions__LocalNameAssignment_2_16119); 
-             after(grammarAccess.getUsedDescriptionsAccess().getLocalNameSTRINGTerminalRuleCall_2_1_0()); 
+             before(grammarAccess.getUsedDescriptionsAccess().getIdSTRINGTerminalRuleCall_2_1_0()); 
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__UsedDescriptions__IdAssignment_2_15296); 
+             after(grammarAccess.getUsedDescriptionsAccess().getIdSTRINGTerminalRuleCall_2_1_0()); 
 
             }
 
@@ -8206,66 +7105,29 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__UsedDescriptions__LocalNameAssignment_2_1"
+    // $ANTLR end "rule__UsedDescriptions__IdAssignment_2_1"
 
 
-    // $ANTLR start "rule__AreaCount__AreaCountAssignment_1"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:3062:1: rule__AreaCount__AreaCountAssignment_1 : ( RULE_INT ) ;
-    public final void rule__AreaCount__AreaCountAssignment_1() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:3066:1: ( ( RULE_INT ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:3067:1: ( RULE_INT )
-            {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:3067:1: ( RULE_INT )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:3068:1: RULE_INT
-            {
-             before(grammarAccess.getAreaCountAccess().getAreaCountINTTerminalRuleCall_1_0()); 
-            match(input,RULE_INT,FOLLOW_RULE_INT_in_rule__AreaCount__AreaCountAssignment_16150); 
-             after(grammarAccess.getAreaCountAccess().getAreaCountINTTerminalRuleCall_1_0()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__AreaCount__AreaCountAssignment_1"
-
-
-    // $ANTLR start "rule__Definition__ConcreteDefitionAssignment_1"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:3077:1: rule__Definition__ConcreteDefitionAssignment_1 : ( ruleComponentDefinition ) ;
-    public final void rule__Definition__ConcreteDefitionAssignment_1() throws RecognitionException {
+    // $ANTLR start "rule__Definition__ConcreteDefitionAssignment_0"
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2648:1: rule__Definition__ConcreteDefitionAssignment_0 : ( ruleComponentDefinition ) ;
+    public final void rule__Definition__ConcreteDefitionAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:3081:1: ( ( ruleComponentDefinition ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:3082:1: ( ruleComponentDefinition )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2652:1: ( ( ruleComponentDefinition ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2653:1: ( ruleComponentDefinition )
             {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:3082:1: ( ruleComponentDefinition )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:3083:1: ruleComponentDefinition
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2653:1: ( ruleComponentDefinition )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2654:1: ruleComponentDefinition
             {
-             before(grammarAccess.getDefinitionAccess().getConcreteDefitionComponentDefinitionParserRuleCall_1_0()); 
-            pushFollow(FOLLOW_ruleComponentDefinition_in_rule__Definition__ConcreteDefitionAssignment_16181);
+             before(grammarAccess.getDefinitionAccess().getConcreteDefitionComponentDefinitionParserRuleCall_0_0()); 
+            pushFollow(FOLLOW_ruleComponentDefinition_in_rule__Definition__ConcreteDefitionAssignment_05327);
             ruleComponentDefinition();
 
             state._fsp--;
 
-             after(grammarAccess.getDefinitionAccess().getConcreteDefitionComponentDefinitionParserRuleCall_1_0()); 
+             after(grammarAccess.getDefinitionAccess().getConcreteDefitionComponentDefinitionParserRuleCall_0_0()); 
 
             }
 
@@ -8284,24 +7146,24 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Definition__ConcreteDefitionAssignment_1"
+    // $ANTLR end "rule__Definition__ConcreteDefitionAssignment_0"
 
 
     // $ANTLR start "rule__TypeDefinition__TypeAssignment_1"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:3092:1: rule__TypeDefinition__TypeAssignment_1 : ( ruleType ) ;
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2663:1: rule__TypeDefinition__TypeAssignment_1 : ( ruleType ) ;
     public final void rule__TypeDefinition__TypeAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:3096:1: ( ( ruleType ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:3097:1: ( ruleType )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2667:1: ( ( ruleType ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2668:1: ( ruleType )
             {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:3097:1: ( ruleType )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:3098:1: ruleType
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2668:1: ( ruleType )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2669:1: ruleType
             {
              before(grammarAccess.getTypeDefinitionAccess().getTypeTypeParserRuleCall_1_0()); 
-            pushFollow(FOLLOW_ruleType_in_rule__TypeDefinition__TypeAssignment_16212);
+            pushFollow(FOLLOW_ruleType_in_rule__TypeDefinition__TypeAssignment_15358);
             ruleType();
 
             state._fsp--;
@@ -8329,20 +7191,20 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__UIDescriptionImport__DescriptionNameAssignment"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:3107:1: rule__UIDescriptionImport__DescriptionNameAssignment : ( RULE_STRING ) ;
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2678:1: rule__UIDescriptionImport__DescriptionNameAssignment : ( RULE_STRING ) ;
     public final void rule__UIDescriptionImport__DescriptionNameAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:3111:1: ( ( RULE_STRING ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:3112:1: ( RULE_STRING )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2682:1: ( ( RULE_STRING ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2683:1: ( RULE_STRING )
             {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:3112:1: ( RULE_STRING )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:3113:1: RULE_STRING
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2683:1: ( RULE_STRING )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2684:1: RULE_STRING
             {
              before(grammarAccess.getUIDescriptionImportAccess().getDescriptionNameSTRINGTerminalRuleCall_0()); 
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__UIDescriptionImport__DescriptionNameAssignment6243); 
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__UIDescriptionImport__DescriptionNameAssignment5389); 
              after(grammarAccess.getUIDescriptionImportAccess().getDescriptionNameSTRINGTerminalRuleCall_0()); 
 
             }
@@ -8366,24 +7228,24 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Multiselection__DescriptionNameAssignment_0"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:3122:1: rule__Multiselection__DescriptionNameAssignment_0 : ( ( 'Multiselection' ) ) ;
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2693:1: rule__Multiselection__DescriptionNameAssignment_0 : ( ( 'Multiselection' ) ) ;
     public final void rule__Multiselection__DescriptionNameAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:3126:1: ( ( ( 'Multiselection' ) ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:3127:1: ( ( 'Multiselection' ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2697:1: ( ( ( 'Multiselection' ) ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2698:1: ( ( 'Multiselection' ) )
             {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:3127:1: ( ( 'Multiselection' ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:3128:1: ( 'Multiselection' )
-            {
-             before(grammarAccess.getMultiselectionAccess().getDescriptionNameMultiselectionKeyword_0_0()); 
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:3129:1: ( 'Multiselection' )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:3130:1: 'Multiselection'
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2698:1: ( ( 'Multiselection' ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2699:1: ( 'Multiselection' )
             {
              before(grammarAccess.getMultiselectionAccess().getDescriptionNameMultiselectionKeyword_0_0()); 
-            match(input,37,FOLLOW_37_in_rule__Multiselection__DescriptionNameAssignment_06279); 
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2700:1: ( 'Multiselection' )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2701:1: 'Multiselection'
+            {
+             before(grammarAccess.getMultiselectionAccess().getDescriptionNameMultiselectionKeyword_0_0()); 
+            match(input,32,FOLLOW_32_in_rule__Multiselection__DescriptionNameAssignment_05425); 
              after(grammarAccess.getMultiselectionAccess().getDescriptionNameMultiselectionKeyword_0_0()); 
 
             }
@@ -8410,22 +7272,22 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__Multiselection__DescriptionNameAssignment_0"
 
 
-    // $ANTLR start "rule__Multiselection__InputTypeAssignment_1_1"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:3145:1: rule__Multiselection__InputTypeAssignment_1_1 : ( RULE_STRING ) ;
-    public final void rule__Multiselection__InputTypeAssignment_1_1() throws RecognitionException {
+    // $ANTLR start "rule__Multiselection__InputTypeAssignment_1"
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2716:1: rule__Multiselection__InputTypeAssignment_1 : ( RULE_INPUT_DESCRIPTION ) ;
+    public final void rule__Multiselection__InputTypeAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:3149:1: ( ( RULE_STRING ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:3150:1: ( RULE_STRING )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2720:1: ( ( RULE_INPUT_DESCRIPTION ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2721:1: ( RULE_INPUT_DESCRIPTION )
             {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:3150:1: ( RULE_STRING )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:3151:1: RULE_STRING
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2721:1: ( RULE_INPUT_DESCRIPTION )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2722:1: RULE_INPUT_DESCRIPTION
             {
-             before(grammarAccess.getMultiselectionAccess().getInputTypeSTRINGTerminalRuleCall_1_1_0()); 
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__Multiselection__InputTypeAssignment_1_16318); 
-             after(grammarAccess.getMultiselectionAccess().getInputTypeSTRINGTerminalRuleCall_1_1_0()); 
+             before(grammarAccess.getMultiselectionAccess().getInputTypeINPUT_DESCRIPTIONTerminalRuleCall_1_0()); 
+            match(input,RULE_INPUT_DESCRIPTION,FOLLOW_RULE_INPUT_DESCRIPTION_in_rule__Multiselection__InputTypeAssignment_15464); 
+             after(grammarAccess.getMultiselectionAccess().getInputTypeINPUT_DESCRIPTIONTerminalRuleCall_1_0()); 
 
             }
 
@@ -8444,25 +7306,33 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Multiselection__InputTypeAssignment_1_1"
+    // $ANTLR end "rule__Multiselection__InputTypeAssignment_1"
 
 
-    // $ANTLR start "rule__AreaAssignment__AreaAssignment_0_1"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:3160:1: rule__AreaAssignment__AreaAssignment_0_1 : ( RULE_INT ) ;
-    public final void rule__AreaAssignment__AreaAssignment_0_1() throws RecognitionException {
+    // $ANTLR start "rule__ButtonDefinition__NameAssignment_0"
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2731:1: rule__ButtonDefinition__NameAssignment_0 : ( ( 'Button' ) ) ;
+    public final void rule__ButtonDefinition__NameAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:3164:1: ( ( RULE_INT ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:3165:1: ( RULE_INT )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2735:1: ( ( ( 'Button' ) ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2736:1: ( ( 'Button' ) )
             {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:3165:1: ( RULE_INT )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:3166:1: RULE_INT
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2736:1: ( ( 'Button' ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2737:1: ( 'Button' )
             {
-             before(grammarAccess.getAreaAssignmentAccess().getAreaINTTerminalRuleCall_0_1_0()); 
-            match(input,RULE_INT,FOLLOW_RULE_INT_in_rule__AreaAssignment__AreaAssignment_0_16349); 
-             after(grammarAccess.getAreaAssignmentAccess().getAreaINTTerminalRuleCall_0_1_0()); 
+             before(grammarAccess.getButtonDefinitionAccess().getNameButtonKeyword_0_0()); 
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2738:1: ( 'Button' )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2739:1: 'Button'
+            {
+             before(grammarAccess.getButtonDefinitionAccess().getNameButtonKeyword_0_0()); 
+            match(input,30,FOLLOW_30_in_rule__ButtonDefinition__NameAssignment_05500); 
+             after(grammarAccess.getButtonDefinitionAccess().getNameButtonKeyword_0_0()); 
+
+            }
+
+             after(grammarAccess.getButtonDefinitionAccess().getNameButtonKeyword_0_0()); 
 
             }
 
@@ -8481,25 +7351,25 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__AreaAssignment__AreaAssignment_0_1"
+    // $ANTLR end "rule__ButtonDefinition__NameAssignment_0"
 
 
-    // $ANTLR start "rule__AreaAssignment__ElementsAssignment_0_3"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:3175:1: rule__AreaAssignment__ElementsAssignment_0_3 : ( RULE_STRING ) ;
-    public final void rule__AreaAssignment__ElementsAssignment_0_3() throws RecognitionException {
+    // $ANTLR start "rule__ButtonDefinition__IdAssignment_2"
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2754:1: rule__ButtonDefinition__IdAssignment_2 : ( RULE_STRING ) ;
+    public final void rule__ButtonDefinition__IdAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:3179:1: ( ( RULE_STRING ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:3180:1: ( RULE_STRING )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2758:1: ( ( RULE_STRING ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2759:1: ( RULE_STRING )
             {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:3180:1: ( RULE_STRING )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:3181:1: RULE_STRING
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2759:1: ( RULE_STRING )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2760:1: RULE_STRING
             {
-             before(grammarAccess.getAreaAssignmentAccess().getElementsSTRINGTerminalRuleCall_0_3_0()); 
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__AreaAssignment__ElementsAssignment_0_36380); 
-             after(grammarAccess.getAreaAssignmentAccess().getElementsSTRINGTerminalRuleCall_0_3_0()); 
+             before(grammarAccess.getButtonDefinitionAccess().getIdSTRINGTerminalRuleCall_2_0()); 
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__ButtonDefinition__IdAssignment_25539); 
+             after(grammarAccess.getButtonDefinitionAccess().getIdSTRINGTerminalRuleCall_2_0()); 
 
             }
 
@@ -8518,180 +7388,24 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__AreaAssignment__ElementsAssignment_0_3"
-
-
-    // $ANTLR start "rule__AreaAssignment__ElementsAssignment_1_0"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:3190:1: rule__AreaAssignment__ElementsAssignment_1_0 : ( RULE_STRING ) ;
-    public final void rule__AreaAssignment__ElementsAssignment_1_0() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:3194:1: ( ( RULE_STRING ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:3195:1: ( RULE_STRING )
-            {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:3195:1: ( RULE_STRING )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:3196:1: RULE_STRING
-            {
-             before(grammarAccess.getAreaAssignmentAccess().getElementsSTRINGTerminalRuleCall_1_0_0()); 
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__AreaAssignment__ElementsAssignment_1_06411); 
-             after(grammarAccess.getAreaAssignmentAccess().getElementsSTRINGTerminalRuleCall_1_0_0()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__AreaAssignment__ElementsAssignment_1_0"
-
-
-    // $ANTLR start "rule__AreaAssignment__AreaAssignment_1_3"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:3205:1: rule__AreaAssignment__AreaAssignment_1_3 : ( RULE_INT ) ;
-    public final void rule__AreaAssignment__AreaAssignment_1_3() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:3209:1: ( ( RULE_INT ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:3210:1: ( RULE_INT )
-            {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:3210:1: ( RULE_INT )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:3211:1: RULE_INT
-            {
-             before(grammarAccess.getAreaAssignmentAccess().getAreaINTTerminalRuleCall_1_3_0()); 
-            match(input,RULE_INT,FOLLOW_RULE_INT_in_rule__AreaAssignment__AreaAssignment_1_36442); 
-             after(grammarAccess.getAreaAssignmentAccess().getAreaINTTerminalRuleCall_1_3_0()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__AreaAssignment__AreaAssignment_1_3"
-
-
-    // $ANTLR start "rule__ButtonDefinition__TypeAssignment_0"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:3220:1: rule__ButtonDefinition__TypeAssignment_0 : ( ( 'Button' ) ) ;
-    public final void rule__ButtonDefinition__TypeAssignment_0() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:3224:1: ( ( ( 'Button' ) ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:3225:1: ( ( 'Button' ) )
-            {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:3225:1: ( ( 'Button' ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:3226:1: ( 'Button' )
-            {
-             before(grammarAccess.getButtonDefinitionAccess().getTypeButtonKeyword_0_0()); 
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:3227:1: ( 'Button' )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:3228:1: 'Button'
-            {
-             before(grammarAccess.getButtonDefinitionAccess().getTypeButtonKeyword_0_0()); 
-            match(input,35,FOLLOW_35_in_rule__ButtonDefinition__TypeAssignment_06478); 
-             after(grammarAccess.getButtonDefinitionAccess().getTypeButtonKeyword_0_0()); 
-
-            }
-
-             after(grammarAccess.getButtonDefinitionAccess().getTypeButtonKeyword_0_0()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__ButtonDefinition__TypeAssignment_0"
-
-
-    // $ANTLR start "rule__ButtonDefinition__NameAssignment_2"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:3243:1: rule__ButtonDefinition__NameAssignment_2 : ( RULE_STRING ) ;
-    public final void rule__ButtonDefinition__NameAssignment_2() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:3247:1: ( ( RULE_STRING ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:3248:1: ( RULE_STRING )
-            {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:3248:1: ( RULE_STRING )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:3249:1: RULE_STRING
-            {
-             before(grammarAccess.getButtonDefinitionAccess().getNameSTRINGTerminalRuleCall_2_0()); 
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__ButtonDefinition__NameAssignment_26517); 
-             after(grammarAccess.getButtonDefinitionAccess().getNameSTRINGTerminalRuleCall_2_0()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__ButtonDefinition__NameAssignment_2"
+    // $ANTLR end "rule__ButtonDefinition__IdAssignment_2"
 
 
     // $ANTLR start "rule__ButtonDefinition__PropertiesAssignment_3"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:3258:1: rule__ButtonDefinition__PropertiesAssignment_3 : ( ruleProperties ) ;
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2769:1: rule__ButtonDefinition__PropertiesAssignment_3 : ( ruleProperties ) ;
     public final void rule__ButtonDefinition__PropertiesAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:3262:1: ( ( ruleProperties ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:3263:1: ( ruleProperties )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2773:1: ( ( ruleProperties ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2774:1: ( ruleProperties )
             {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:3263:1: ( ruleProperties )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:3264:1: ruleProperties
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2774:1: ( ruleProperties )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2775:1: ruleProperties
             {
              before(grammarAccess.getButtonDefinitionAccess().getPropertiesPropertiesParserRuleCall_3_0()); 
-            pushFollow(FOLLOW_ruleProperties_in_rule__ButtonDefinition__PropertiesAssignment_36548);
+            pushFollow(FOLLOW_ruleProperties_in_rule__ButtonDefinition__PropertiesAssignment_35570);
             ruleProperties();
 
             state._fsp--;
@@ -8719,20 +7433,20 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Properties__PropertyKeyAssignment_1_1"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:3273:1: rule__Properties__PropertyKeyAssignment_1_1 : ( RULE_STRING ) ;
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2784:1: rule__Properties__PropertyKeyAssignment_1_1 : ( RULE_STRING ) ;
     public final void rule__Properties__PropertyKeyAssignment_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:3277:1: ( ( RULE_STRING ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:3278:1: ( RULE_STRING )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2788:1: ( ( RULE_STRING ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2789:1: ( RULE_STRING )
             {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:3278:1: ( RULE_STRING )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:3279:1: RULE_STRING
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2789:1: ( RULE_STRING )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2790:1: RULE_STRING
             {
              before(grammarAccess.getPropertiesAccess().getPropertyKeySTRINGTerminalRuleCall_1_1_0()); 
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__Properties__PropertyKeyAssignment_1_16579); 
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__Properties__PropertyKeyAssignment_1_15601); 
              after(grammarAccess.getPropertiesAccess().getPropertyKeySTRINGTerminalRuleCall_1_1_0()); 
 
             }
@@ -8756,20 +7470,20 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Properties__TextAssignment_2_1"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:3288:1: rule__Properties__TextAssignment_2_1 : ( RULE_STRING ) ;
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2799:1: rule__Properties__TextAssignment_2_1 : ( RULE_STRING ) ;
     public final void rule__Properties__TextAssignment_2_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:3292:1: ( ( RULE_STRING ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:3293:1: ( RULE_STRING )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2803:1: ( ( RULE_STRING ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2804:1: ( RULE_STRING )
             {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:3293:1: ( RULE_STRING )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:3294:1: RULE_STRING
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2804:1: ( RULE_STRING )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2805:1: RULE_STRING
             {
              before(grammarAccess.getPropertiesAccess().getTextSTRINGTerminalRuleCall_2_1_0()); 
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__Properties__TextAssignment_2_16610); 
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__Properties__TextAssignment_2_15632); 
              after(grammarAccess.getPropertiesAccess().getTextSTRINGTerminalRuleCall_2_1_0()); 
 
             }
@@ -8793,20 +7507,20 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Properties__InteractiontypeAssignment_3_1"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:3303:1: rule__Properties__InteractiontypeAssignment_3_1 : ( ruleInteractiontype ) ;
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2814:1: rule__Properties__InteractiontypeAssignment_3_1 : ( ruleInteractiontype ) ;
     public final void rule__Properties__InteractiontypeAssignment_3_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:3307:1: ( ( ruleInteractiontype ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:3308:1: ( ruleInteractiontype )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2818:1: ( ( ruleInteractiontype ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2819:1: ( ruleInteractiontype )
             {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:3308:1: ( ruleInteractiontype )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:3309:1: ruleInteractiontype
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2819:1: ( ruleInteractiontype )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2820:1: ruleInteractiontype
             {
              before(grammarAccess.getPropertiesAccess().getInteractiontypeInteractiontypeParserRuleCall_3_1_0()); 
-            pushFollow(FOLLOW_ruleInteractiontype_in_rule__Properties__InteractiontypeAssignment_3_16641);
+            pushFollow(FOLLOW_ruleInteractiontype_in_rule__Properties__InteractiontypeAssignment_3_15663);
             ruleInteractiontype();
 
             state._fsp--;
@@ -8833,30 +7547,30 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__Properties__InteractiontypeAssignment_3_1"
 
 
-    // $ANTLR start "rule__LabelDefinition__TypeAssignment_0"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:3318:1: rule__LabelDefinition__TypeAssignment_0 : ( ( 'Label' ) ) ;
-    public final void rule__LabelDefinition__TypeAssignment_0() throws RecognitionException {
+    // $ANTLR start "rule__LabelDefinition__NameAssignment_0"
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2829:1: rule__LabelDefinition__NameAssignment_0 : ( ( 'Label' ) ) ;
+    public final void rule__LabelDefinition__NameAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:3322:1: ( ( ( 'Label' ) ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:3323:1: ( ( 'Label' ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2833:1: ( ( ( 'Label' ) ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2834:1: ( ( 'Label' ) )
             {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:3323:1: ( ( 'Label' ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:3324:1: ( 'Label' )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2834:1: ( ( 'Label' ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2835:1: ( 'Label' )
             {
-             before(grammarAccess.getLabelDefinitionAccess().getTypeLabelKeyword_0_0()); 
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:3325:1: ( 'Label' )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:3326:1: 'Label'
+             before(grammarAccess.getLabelDefinitionAccess().getNameLabelKeyword_0_0()); 
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2836:1: ( 'Label' )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2837:1: 'Label'
             {
-             before(grammarAccess.getLabelDefinitionAccess().getTypeLabelKeyword_0_0()); 
-            match(input,36,FOLLOW_36_in_rule__LabelDefinition__TypeAssignment_06677); 
-             after(grammarAccess.getLabelDefinitionAccess().getTypeLabelKeyword_0_0()); 
+             before(grammarAccess.getLabelDefinitionAccess().getNameLabelKeyword_0_0()); 
+            match(input,31,FOLLOW_31_in_rule__LabelDefinition__NameAssignment_05699); 
+             after(grammarAccess.getLabelDefinitionAccess().getNameLabelKeyword_0_0()); 
 
             }
 
-             after(grammarAccess.getLabelDefinitionAccess().getTypeLabelKeyword_0_0()); 
+             after(grammarAccess.getLabelDefinitionAccess().getNameLabelKeyword_0_0()); 
 
             }
 
@@ -8875,25 +7589,25 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__LabelDefinition__TypeAssignment_0"
+    // $ANTLR end "rule__LabelDefinition__NameAssignment_0"
 
 
-    // $ANTLR start "rule__LabelDefinition__NameAssignment_2"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:3341:1: rule__LabelDefinition__NameAssignment_2 : ( RULE_STRING ) ;
-    public final void rule__LabelDefinition__NameAssignment_2() throws RecognitionException {
+    // $ANTLR start "rule__LabelDefinition__IdAssignment_2"
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2852:1: rule__LabelDefinition__IdAssignment_2 : ( RULE_STRING ) ;
+    public final void rule__LabelDefinition__IdAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:3345:1: ( ( RULE_STRING ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:3346:1: ( RULE_STRING )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2856:1: ( ( RULE_STRING ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2857:1: ( RULE_STRING )
             {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:3346:1: ( RULE_STRING )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:3347:1: RULE_STRING
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2857:1: ( RULE_STRING )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2858:1: RULE_STRING
             {
-             before(grammarAccess.getLabelDefinitionAccess().getNameSTRINGTerminalRuleCall_2_0()); 
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__LabelDefinition__NameAssignment_26716); 
-             after(grammarAccess.getLabelDefinitionAccess().getNameSTRINGTerminalRuleCall_2_0()); 
+             before(grammarAccess.getLabelDefinitionAccess().getIdSTRINGTerminalRuleCall_2_0()); 
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__LabelDefinition__IdAssignment_25738); 
+             after(grammarAccess.getLabelDefinitionAccess().getIdSTRINGTerminalRuleCall_2_0()); 
 
             }
 
@@ -8912,24 +7626,24 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__LabelDefinition__NameAssignment_2"
+    // $ANTLR end "rule__LabelDefinition__IdAssignment_2"
 
 
     // $ANTLR start "rule__LabelDefinition__PropertiesAssignment_3"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:3356:1: rule__LabelDefinition__PropertiesAssignment_3 : ( ruleProperties ) ;
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2867:1: rule__LabelDefinition__PropertiesAssignment_3 : ( ruleProperties ) ;
     public final void rule__LabelDefinition__PropertiesAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:3360:1: ( ( ruleProperties ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:3361:1: ( ruleProperties )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2871:1: ( ( ruleProperties ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2872:1: ( ruleProperties )
             {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:3361:1: ( ruleProperties )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:3362:1: ruleProperties
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2872:1: ( ruleProperties )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:2873:1: ruleProperties
             {
              before(grammarAccess.getLabelDefinitionAccess().getPropertiesPropertiesParserRuleCall_3_0()); 
-            pushFollow(FOLLOW_ruleProperties_in_rule__LabelDefinition__PropertiesAssignment_36747);
+            pushFollow(FOLLOW_ruleProperties_in_rule__LabelDefinition__PropertiesAssignment_35769);
             ruleProperties();
 
             state._fsp--;
@@ -8963,51 +7677,51 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
     public static final BitSet FOLLOW_ruleUIDescription_in_entryRuleUIDescription61 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleUIDescription68 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__UIDescription__Group__0_in_ruleUIDescription94 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleRefinement_in_entryRuleRefinement121 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleRefinement128 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Refinement__Group__0_in_ruleRefinement154 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleComponentRefinement_in_entryRuleComponentRefinement181 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleComponentRefinement188 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ComponentRefinement__Alternatives_in_ruleComponentRefinement214 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleButtonRefinement_in_entryRuleButtonRefinement241 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleButtonRefinement248 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ButtonRefinement__Group__0_in_ruleButtonRefinement274 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleLabelRefinement_in_entryRuleLabelRefinement301 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleLabelRefinement308 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__LabelRefinement__Group__0_in_ruleLabelRefinement334 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleProperty_in_entryRuleProperty361 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleProperty368 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Property__Group__0_in_ruleProperty394 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleUsedDescriptions_in_entryRuleUsedDescriptions421 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleUsedDescriptions428 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__UsedDescriptions__Group__0_in_ruleUsedDescriptions454 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleDescriptionType_in_entryRuleDescriptionType481 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleDescriptionType488 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__DescriptionType__Alternatives_in_ruleDescriptionType514 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAreaCount_in_entryRuleAreaCount541 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleAreaCount548 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__AreaCount__Group__0_in_ruleAreaCount574 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleDefinition_in_entryRuleDefinition601 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleDefinition608 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Definition__Group__0_in_ruleDefinition634 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleTypeDefinition_in_entryRuleTypeDefinition661 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleTypeDefinition668 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__TypeDefinition__Group__0_in_ruleTypeDefinition694 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleType_in_entryRuleType721 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleType728 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Type__Alternatives_in_ruleType754 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleUIDescriptionImport_in_entryRuleUIDescriptionImport781 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleUIDescriptionImport788 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__UIDescriptionImport__DescriptionNameAssignment_in_ruleUIDescriptionImport814 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleComplexComponent_in_entryRuleComplexComponent841 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleComplexComponent848 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleMultiselection_in_ruleComplexComponent874 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleMultiselection_in_entryRuleMultiselection900 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleMultiselection907 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Multiselection__Group__0_in_ruleMultiselection933 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAreaAssignment_in_entryRuleAreaAssignment960 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleAreaAssignment967 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__AreaAssignment__Alternatives_in_ruleAreaAssignment993 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleStructure_in_entryRuleStructure121 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleStructure128 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Structure__Group__0_in_ruleStructure154 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleElement_in_entryRuleElement181 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleElement188 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Element__IdAssignment_in_ruleElement214 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleRefinement_in_entryRuleRefinement241 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleRefinement248 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Refinement__Group__0_in_ruleRefinement274 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleComponentRefinement_in_entryRuleComponentRefinement301 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleComponentRefinement308 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ComponentRefinement__Alternatives_in_ruleComponentRefinement334 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleButtonRefinement_in_entryRuleButtonRefinement361 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleButtonRefinement368 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ButtonRefinement__Group__0_in_ruleButtonRefinement394 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleLabelRefinement_in_entryRuleLabelRefinement421 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleLabelRefinement428 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__LabelRefinement__Group__0_in_ruleLabelRefinement454 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleProperty_in_entryRuleProperty481 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleProperty488 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Property__Group__0_in_ruleProperty514 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleUsedDescriptions_in_entryRuleUsedDescriptions541 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleUsedDescriptions548 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__UsedDescriptions__Group__0_in_ruleUsedDescriptions574 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleDescriptionType_in_entryRuleDescriptionType601 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleDescriptionType608 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__DescriptionType__Alternatives_in_ruleDescriptionType634 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleDefinition_in_entryRuleDefinition661 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleDefinition668 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Definition__Group__0_in_ruleDefinition694 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleTypeDefinition_in_entryRuleTypeDefinition721 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleTypeDefinition728 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__TypeDefinition__Group__0_in_ruleTypeDefinition754 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleType_in_entryRuleType781 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleType788 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Type__Alternatives_in_ruleType814 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleUIDescriptionImport_in_entryRuleUIDescriptionImport841 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleUIDescriptionImport848 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__UIDescriptionImport__DescriptionNameAssignment_in_ruleUIDescriptionImport874 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleComplexComponent_in_entryRuleComplexComponent901 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleComplexComponent908 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleMultiselection_in_ruleComplexComponent934 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleMultiselection_in_entryRuleMultiselection960 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleMultiselection967 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Multiselection__Group__0_in_ruleMultiselection993 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleComponentDefinition_in_entryRuleComponentDefinition1020 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleComponentDefinition1027 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__ComponentDefinition__Alternatives_in_ruleComponentDefinition1053 = new BitSet(new long[]{0x0000000000000002L});
@@ -9027,221 +7741,178 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
     public static final BitSet FOLLOW_ruleButtonRefinement_in_rule__ComponentRefinement__Alternatives1346 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleUIDescriptionImport_in_rule__DescriptionType__Alternatives1378 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleComplexComponent_in_rule__DescriptionType__Alternatives1395 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_11_in_rule__Type__Alternatives1428 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_12_in_rule__Type__Alternatives1448 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__AreaAssignment__Group_0__0_in_rule__AreaAssignment__Alternatives1482 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__AreaAssignment__Group_1__0_in_rule__AreaAssignment__Alternatives1500 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleLabelDefinition_in_rule__ComponentDefinition__Alternatives1533 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleButtonDefinition_in_rule__ComponentDefinition__Alternatives1550 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_13_in_rule__Interactiontype__Alternatives1583 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_14_in_rule__Interactiontype__Alternatives1603 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__UIDescription__Group__0__Impl_in_rule__UIDescription__Group__01635 = new BitSet(new long[]{0x0000000001000000L});
-    public static final BitSet FOLLOW_rule__UIDescription__Group__1_in_rule__UIDescription__Group__01638 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__UIDescription__AreaCountAssignment_0_in_rule__UIDescription__Group__0__Impl1665 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__UIDescription__Group__1__Impl_in_rule__UIDescription__Group__11695 = new BitSet(new long[]{0x00000000084C8010L});
-    public static final BitSet FOLLOW_rule__UIDescription__Group__2_in_rule__UIDescription__Group__11698 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__UIDescription__TypeDefinitionAssignment_1_in_rule__UIDescription__Group__1__Impl1725 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__UIDescription__Group__2__Impl_in_rule__UIDescription__Group__21755 = new BitSet(new long[]{0x00000000084C8010L});
-    public static final BitSet FOLLOW_rule__UIDescription__Group__3_in_rule__UIDescription__Group__21758 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__UIDescription__PropertyAssignment_2_in_rule__UIDescription__Group__2__Impl1785 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__UIDescription__Group__3__Impl_in_rule__UIDescription__Group__31816 = new BitSet(new long[]{0x00000000084C8010L});
-    public static final BitSet FOLLOW_rule__UIDescription__Group__4_in_rule__UIDescription__Group__31819 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__UIDescription__UsedDescriptionsAssignment_3_in_rule__UIDescription__Group__3__Impl1846 = new BitSet(new long[]{0x0000000000080002L});
-    public static final BitSet FOLLOW_rule__UIDescription__Group__4__Impl_in_rule__UIDescription__Group__41877 = new BitSet(new long[]{0x00000000084C8010L});
-    public static final BitSet FOLLOW_rule__UIDescription__Group__5_in_rule__UIDescription__Group__41880 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__UIDescription__RefinementsAssignment_4_in_rule__UIDescription__Group__4__Impl1907 = new BitSet(new long[]{0x0000000000008002L});
-    public static final BitSet FOLLOW_rule__UIDescription__Group__5__Impl_in_rule__UIDescription__Group__51938 = new BitSet(new long[]{0x00000000084C8010L});
-    public static final BitSet FOLLOW_rule__UIDescription__Group__6_in_rule__UIDescription__Group__51941 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__UIDescription__DefinitionsAssignment_5_in_rule__UIDescription__Group__5__Impl1968 = new BitSet(new long[]{0x0000000000400002L});
-    public static final BitSet FOLLOW_rule__UIDescription__Group__6__Impl_in_rule__UIDescription__Group__61999 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__UIDescription__AreasAssignment_6_in_rule__UIDescription__Group__6__Impl2026 = new BitSet(new long[]{0x0000000008000012L});
-    public static final BitSet FOLLOW_rule__Refinement__Group__0__Impl_in_rule__Refinement__Group__02071 = new BitSet(new long[]{0x0000001800000000L});
-    public static final BitSet FOLLOW_rule__Refinement__Group__1_in_rule__Refinement__Group__02074 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_15_in_rule__Refinement__Group__0__Impl2102 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Refinement__Group__1__Impl_in_rule__Refinement__Group__12133 = new BitSet(new long[]{0x0000000000010000L});
-    public static final BitSet FOLLOW_rule__Refinement__Group__2_in_rule__Refinement__Group__12136 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Refinement__ConcreteRefinementAssignment_1_in_rule__Refinement__Group__1__Impl2163 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Refinement__Group__2__Impl_in_rule__Refinement__Group__22193 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_16_in_rule__Refinement__Group__2__Impl2221 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ButtonRefinement__Group__0__Impl_in_rule__ButtonRefinement__Group__02258 = new BitSet(new long[]{0x0000000000020000L});
-    public static final BitSet FOLLOW_rule__ButtonRefinement__Group__1_in_rule__ButtonRefinement__Group__02261 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ButtonRefinement__TypeAssignment_0_in_rule__ButtonRefinement__Group__0__Impl2288 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ButtonRefinement__Group__1__Impl_in_rule__ButtonRefinement__Group__12318 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__ButtonRefinement__Group__2_in_rule__ButtonRefinement__Group__12321 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_17_in_rule__ButtonRefinement__Group__1__Impl2349 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ButtonRefinement__Group__2__Impl_in_rule__ButtonRefinement__Group__22380 = new BitSet(new long[]{0x0000000080000000L});
-    public static final BitSet FOLLOW_rule__ButtonRefinement__Group__3_in_rule__ButtonRefinement__Group__22383 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ButtonRefinement__NameAssignment_2_in_rule__ButtonRefinement__Group__2__Impl2410 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ButtonRefinement__Group__3__Impl_in_rule__ButtonRefinement__Group__32440 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ButtonRefinement__PropertiesAssignment_3_in_rule__ButtonRefinement__Group__3__Impl2467 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__LabelRefinement__Group__0__Impl_in_rule__LabelRefinement__Group__02506 = new BitSet(new long[]{0x0000000000020000L});
-    public static final BitSet FOLLOW_rule__LabelRefinement__Group__1_in_rule__LabelRefinement__Group__02509 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__LabelRefinement__TypeAssignment_0_in_rule__LabelRefinement__Group__0__Impl2536 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__LabelRefinement__Group__1__Impl_in_rule__LabelRefinement__Group__12566 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__LabelRefinement__Group__2_in_rule__LabelRefinement__Group__12569 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_17_in_rule__LabelRefinement__Group__1__Impl2597 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__LabelRefinement__Group__2__Impl_in_rule__LabelRefinement__Group__22628 = new BitSet(new long[]{0x0000000080000000L});
-    public static final BitSet FOLLOW_rule__LabelRefinement__Group__3_in_rule__LabelRefinement__Group__22631 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__LabelRefinement__NameAssignment_2_in_rule__LabelRefinement__Group__2__Impl2658 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__LabelRefinement__Group__3__Impl_in_rule__LabelRefinement__Group__32688 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__LabelRefinement__PropertiesAssignment_3_in_rule__LabelRefinement__Group__3__Impl2715 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Property__Group__0__Impl_in_rule__Property__Group__02754 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__Property__Group__1_in_rule__Property__Group__02757 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_18_in_rule__Property__Group__0__Impl2785 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Property__Group__1__Impl_in_rule__Property__Group__12816 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Property__PropertiesFileAssignment_1_in_rule__Property__Group__1__Impl2843 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__UsedDescriptions__Group__0__Impl_in_rule__UsedDescriptions__Group__02877 = new BitSet(new long[]{0x0000002000000010L});
-    public static final BitSet FOLLOW_rule__UsedDescriptions__Group__1_in_rule__UsedDescriptions__Group__02880 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_19_in_rule__UsedDescriptions__Group__0__Impl2908 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__UsedDescriptions__Group__1__Impl_in_rule__UsedDescriptions__Group__12939 = new BitSet(new long[]{0x0000000000100000L});
-    public static final BitSet FOLLOW_rule__UsedDescriptions__Group__2_in_rule__UsedDescriptions__Group__12942 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__UsedDescriptions__DescriptionAssignment_1_in_rule__UsedDescriptions__Group__1__Impl2969 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__UsedDescriptions__Group__2__Impl_in_rule__UsedDescriptions__Group__22999 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__UsedDescriptions__Group_2__0_in_rule__UsedDescriptions__Group__2__Impl3026 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__UsedDescriptions__Group_2__0__Impl_in_rule__UsedDescriptions__Group_2__03063 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__UsedDescriptions__Group_2__1_in_rule__UsedDescriptions__Group_2__03066 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_20_in_rule__UsedDescriptions__Group_2__0__Impl3094 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__UsedDescriptions__Group_2__1__Impl_in_rule__UsedDescriptions__Group_2__13125 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__UsedDescriptions__LocalNameAssignment_2_1_in_rule__UsedDescriptions__Group_2__1__Impl3152 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__AreaCount__Group__0__Impl_in_rule__AreaCount__Group__03186 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_rule__AreaCount__Group__1_in_rule__AreaCount__Group__03189 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_21_in_rule__AreaCount__Group__0__Impl3217 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__AreaCount__Group__1__Impl_in_rule__AreaCount__Group__13248 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__AreaCount__AreaCountAssignment_1_in_rule__AreaCount__Group__1__Impl3275 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Definition__Group__0__Impl_in_rule__Definition__Group__03309 = new BitSet(new long[]{0x0000001800000000L});
-    public static final BitSet FOLLOW_rule__Definition__Group__1_in_rule__Definition__Group__03312 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_22_in_rule__Definition__Group__0__Impl3340 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Definition__Group__1__Impl_in_rule__Definition__Group__13371 = new BitSet(new long[]{0x0000000000800000L});
-    public static final BitSet FOLLOW_rule__Definition__Group__2_in_rule__Definition__Group__13374 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Definition__ConcreteDefitionAssignment_1_in_rule__Definition__Group__1__Impl3401 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Definition__Group__2__Impl_in_rule__Definition__Group__23431 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_23_in_rule__Definition__Group__2__Impl3459 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__TypeDefinition__Group__0__Impl_in_rule__TypeDefinition__Group__03496 = new BitSet(new long[]{0x0000000000001800L});
-    public static final BitSet FOLLOW_rule__TypeDefinition__Group__1_in_rule__TypeDefinition__Group__03499 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_24_in_rule__TypeDefinition__Group__0__Impl3527 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__TypeDefinition__Group__1__Impl_in_rule__TypeDefinition__Group__13558 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__TypeDefinition__TypeAssignment_1_in_rule__TypeDefinition__Group__1__Impl3585 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Multiselection__Group__0__Impl_in_rule__Multiselection__Group__03619 = new BitSet(new long[]{0x0000000002000000L});
-    public static final BitSet FOLLOW_rule__Multiselection__Group__1_in_rule__Multiselection__Group__03622 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Multiselection__DescriptionNameAssignment_0_in_rule__Multiselection__Group__0__Impl3649 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Multiselection__Group__1__Impl_in_rule__Multiselection__Group__13679 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Multiselection__Group_1__0_in_rule__Multiselection__Group__1__Impl3706 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Multiselection__Group_1__0__Impl_in_rule__Multiselection__Group_1__03741 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__Multiselection__Group_1__1_in_rule__Multiselection__Group_1__03744 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_25_in_rule__Multiselection__Group_1__0__Impl3772 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Multiselection__Group_1__1__Impl_in_rule__Multiselection__Group_1__13803 = new BitSet(new long[]{0x0000000004000000L});
-    public static final BitSet FOLLOW_rule__Multiselection__Group_1__2_in_rule__Multiselection__Group_1__13806 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Multiselection__InputTypeAssignment_1_1_in_rule__Multiselection__Group_1__1__Impl3833 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Multiselection__Group_1__2__Impl_in_rule__Multiselection__Group_1__23863 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_26_in_rule__Multiselection__Group_1__2__Impl3891 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__AreaAssignment__Group_0__0__Impl_in_rule__AreaAssignment__Group_0__03928 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_rule__AreaAssignment__Group_0__1_in_rule__AreaAssignment__Group_0__03931 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_27_in_rule__AreaAssignment__Group_0__0__Impl3959 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__AreaAssignment__Group_0__1__Impl_in_rule__AreaAssignment__Group_0__13990 = new BitSet(new long[]{0x0000000010000000L});
-    public static final BitSet FOLLOW_rule__AreaAssignment__Group_0__2_in_rule__AreaAssignment__Group_0__13993 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__AreaAssignment__AreaAssignment_0_1_in_rule__AreaAssignment__Group_0__1__Impl4020 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__AreaAssignment__Group_0__2__Impl_in_rule__AreaAssignment__Group_0__24050 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__AreaAssignment__Group_0__3_in_rule__AreaAssignment__Group_0__24053 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_28_in_rule__AreaAssignment__Group_0__2__Impl4081 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__AreaAssignment__Group_0__3__Impl_in_rule__AreaAssignment__Group_0__34112 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__AreaAssignment__ElementsAssignment_0_3_in_rule__AreaAssignment__Group_0__3__Impl4141 = new BitSet(new long[]{0x0000000000000012L});
-    public static final BitSet FOLLOW_rule__AreaAssignment__ElementsAssignment_0_3_in_rule__AreaAssignment__Group_0__3__Impl4153 = new BitSet(new long[]{0x0000000000000012L});
-    public static final BitSet FOLLOW_rule__AreaAssignment__Group_1__0__Impl_in_rule__AreaAssignment__Group_1__04194 = new BitSet(new long[]{0x0000000020000000L});
-    public static final BitSet FOLLOW_rule__AreaAssignment__Group_1__1_in_rule__AreaAssignment__Group_1__04197 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__AreaAssignment__ElementsAssignment_1_0_in_rule__AreaAssignment__Group_1__0__Impl4226 = new BitSet(new long[]{0x0000000008000012L});
-    public static final BitSet FOLLOW_rule__AreaAssignment__ElementsAssignment_1_0_in_rule__AreaAssignment__Group_1__0__Impl4238 = new BitSet(new long[]{0x0000000008000012L});
-    public static final BitSet FOLLOW_rule__AreaAssignment__Group_1__1__Impl_in_rule__AreaAssignment__Group_1__14271 = new BitSet(new long[]{0x0000000008000000L});
-    public static final BitSet FOLLOW_rule__AreaAssignment__Group_1__2_in_rule__AreaAssignment__Group_1__14274 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_29_in_rule__AreaAssignment__Group_1__1__Impl4302 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__AreaAssignment__Group_1__2__Impl_in_rule__AreaAssignment__Group_1__24333 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_rule__AreaAssignment__Group_1__3_in_rule__AreaAssignment__Group_1__24336 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_27_in_rule__AreaAssignment__Group_1__2__Impl4364 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__AreaAssignment__Group_1__3__Impl_in_rule__AreaAssignment__Group_1__34395 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__AreaAssignment__AreaAssignment_1_3_in_rule__AreaAssignment__Group_1__3__Impl4422 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ButtonDefinition__Group__0__Impl_in_rule__ButtonDefinition__Group__04460 = new BitSet(new long[]{0x0000000040000000L});
-    public static final BitSet FOLLOW_rule__ButtonDefinition__Group__1_in_rule__ButtonDefinition__Group__04463 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ButtonDefinition__TypeAssignment_0_in_rule__ButtonDefinition__Group__0__Impl4490 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ButtonDefinition__Group__1__Impl_in_rule__ButtonDefinition__Group__14520 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__ButtonDefinition__Group__2_in_rule__ButtonDefinition__Group__14523 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_30_in_rule__ButtonDefinition__Group__1__Impl4551 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ButtonDefinition__Group__2__Impl_in_rule__ButtonDefinition__Group__24582 = new BitSet(new long[]{0x0000000080000000L});
-    public static final BitSet FOLLOW_rule__ButtonDefinition__Group__3_in_rule__ButtonDefinition__Group__24585 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ButtonDefinition__NameAssignment_2_in_rule__ButtonDefinition__Group__2__Impl4612 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ButtonDefinition__Group__3__Impl_in_rule__ButtonDefinition__Group__34642 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ButtonDefinition__PropertiesAssignment_3_in_rule__ButtonDefinition__Group__3__Impl4669 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Properties__Group__0__Impl_in_rule__Properties__Group__04708 = new BitSet(new long[]{0x0000000700000000L});
-    public static final BitSet FOLLOW_rule__Properties__Group__1_in_rule__Properties__Group__04711 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_31_in_rule__Properties__Group__0__Impl4739 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Properties__Group__1__Impl_in_rule__Properties__Group__14770 = new BitSet(new long[]{0x0000000700000000L});
-    public static final BitSet FOLLOW_rule__Properties__Group__2_in_rule__Properties__Group__14773 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Properties__Group_1__0_in_rule__Properties__Group__1__Impl4800 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Properties__Group__2__Impl_in_rule__Properties__Group__24831 = new BitSet(new long[]{0x0000000700000000L});
-    public static final BitSet FOLLOW_rule__Properties__Group__3_in_rule__Properties__Group__24834 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Properties__Group_2__0_in_rule__Properties__Group__2__Impl4861 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Properties__Group__3__Impl_in_rule__Properties__Group__34892 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Properties__Group_3__0_in_rule__Properties__Group__3__Impl4919 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Properties__Group_1__0__Impl_in_rule__Properties__Group_1__04958 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__Properties__Group_1__1_in_rule__Properties__Group_1__04961 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_32_in_rule__Properties__Group_1__0__Impl4989 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Properties__Group_1__1__Impl_in_rule__Properties__Group_1__15020 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Properties__PropertyKeyAssignment_1_1_in_rule__Properties__Group_1__1__Impl5047 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Properties__Group_2__0__Impl_in_rule__Properties__Group_2__05081 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__Properties__Group_2__1_in_rule__Properties__Group_2__05084 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_33_in_rule__Properties__Group_2__0__Impl5112 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Properties__Group_2__1__Impl_in_rule__Properties__Group_2__15143 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Properties__TextAssignment_2_1_in_rule__Properties__Group_2__1__Impl5170 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Properties__Group_3__0__Impl_in_rule__Properties__Group_3__05204 = new BitSet(new long[]{0x0000000000006000L});
-    public static final BitSet FOLLOW_rule__Properties__Group_3__1_in_rule__Properties__Group_3__05207 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_34_in_rule__Properties__Group_3__0__Impl5235 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Properties__Group_3__1__Impl_in_rule__Properties__Group_3__15266 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Properties__InteractiontypeAssignment_3_1_in_rule__Properties__Group_3__1__Impl5295 = new BitSet(new long[]{0x0000000000006002L});
-    public static final BitSet FOLLOW_rule__Properties__InteractiontypeAssignment_3_1_in_rule__Properties__Group_3__1__Impl5307 = new BitSet(new long[]{0x0000000000006002L});
-    public static final BitSet FOLLOW_rule__LabelDefinition__Group__0__Impl_in_rule__LabelDefinition__Group__05344 = new BitSet(new long[]{0x0000000040000000L});
-    public static final BitSet FOLLOW_rule__LabelDefinition__Group__1_in_rule__LabelDefinition__Group__05347 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__LabelDefinition__TypeAssignment_0_in_rule__LabelDefinition__Group__0__Impl5374 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__LabelDefinition__Group__1__Impl_in_rule__LabelDefinition__Group__15404 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__LabelDefinition__Group__2_in_rule__LabelDefinition__Group__15407 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_30_in_rule__LabelDefinition__Group__1__Impl5435 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__LabelDefinition__Group__2__Impl_in_rule__LabelDefinition__Group__25466 = new BitSet(new long[]{0x0000000080000000L});
-    public static final BitSet FOLLOW_rule__LabelDefinition__Group__3_in_rule__LabelDefinition__Group__25469 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__LabelDefinition__NameAssignment_2_in_rule__LabelDefinition__Group__2__Impl5496 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__LabelDefinition__Group__3__Impl_in_rule__LabelDefinition__Group__35526 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__LabelDefinition__PropertiesAssignment_3_in_rule__LabelDefinition__Group__3__Impl5553 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAreaCount_in_rule__UIDescription__AreaCountAssignment_05597 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleTypeDefinition_in_rule__UIDescription__TypeDefinitionAssignment_15628 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleProperty_in_rule__UIDescription__PropertyAssignment_25659 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleUsedDescriptions_in_rule__UIDescription__UsedDescriptionsAssignment_35690 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleRefinement_in_rule__UIDescription__RefinementsAssignment_45721 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleDefinition_in_rule__UIDescription__DefinitionsAssignment_55752 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAreaAssignment_in_rule__UIDescription__AreasAssignment_65783 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleComponentRefinement_in_rule__Refinement__ConcreteRefinementAssignment_15814 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_35_in_rule__ButtonRefinement__TypeAssignment_05850 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__ButtonRefinement__NameAssignment_25889 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleProperties_in_rule__ButtonRefinement__PropertiesAssignment_35920 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_36_in_rule__LabelRefinement__TypeAssignment_05956 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__LabelRefinement__NameAssignment_25995 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleProperties_in_rule__LabelRefinement__PropertiesAssignment_36026 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__Property__PropertiesFileAssignment_16057 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleDescriptionType_in_rule__UsedDescriptions__DescriptionAssignment_16088 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__UsedDescriptions__LocalNameAssignment_2_16119 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_INT_in_rule__AreaCount__AreaCountAssignment_16150 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleComponentDefinition_in_rule__Definition__ConcreteDefitionAssignment_16181 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleType_in_rule__TypeDefinition__TypeAssignment_16212 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__UIDescriptionImport__DescriptionNameAssignment6243 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_37_in_rule__Multiselection__DescriptionNameAssignment_06279 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__Multiselection__InputTypeAssignment_1_16318 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_INT_in_rule__AreaAssignment__AreaAssignment_0_16349 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__AreaAssignment__ElementsAssignment_0_36380 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__AreaAssignment__ElementsAssignment_1_06411 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_INT_in_rule__AreaAssignment__AreaAssignment_1_36442 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_35_in_rule__ButtonDefinition__TypeAssignment_06478 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__ButtonDefinition__NameAssignment_26517 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleProperties_in_rule__ButtonDefinition__PropertiesAssignment_36548 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__Properties__PropertyKeyAssignment_1_16579 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__Properties__TextAssignment_2_16610 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleInteractiontype_in_rule__Properties__InteractiontypeAssignment_3_16641 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_36_in_rule__LabelDefinition__TypeAssignment_06677 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__LabelDefinition__NameAssignment_26716 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleProperties_in_rule__LabelDefinition__PropertiesAssignment_36747 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_12_in_rule__Type__Alternatives1428 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_13_in_rule__Type__Alternatives1448 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleLabelDefinition_in_rule__ComponentDefinition__Alternatives1482 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleButtonDefinition_in_rule__ComponentDefinition__Alternatives1499 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_14_in_rule__Interactiontype__Alternatives1532 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_15_in_rule__Interactiontype__Alternatives1552 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__UIDescription__Group__0__Impl_in_rule__UIDescription__Group__01584 = new BitSet(new long[]{0x00000000E0300000L});
+    public static final BitSet FOLLOW_rule__UIDescription__Group__1_in_rule__UIDescription__Group__01587 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__UIDescription__TypeDefinitionAssignment_0_in_rule__UIDescription__Group__0__Impl1614 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__UIDescription__Group__1__Impl_in_rule__UIDescription__Group__11644 = new BitSet(new long[]{0x00000000E0300000L});
+    public static final BitSet FOLLOW_rule__UIDescription__Group__2_in_rule__UIDescription__Group__11647 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__UIDescription__PropertyAssignment_1_in_rule__UIDescription__Group__1__Impl1674 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__UIDescription__Group__2__Impl_in_rule__UIDescription__Group__21705 = new BitSet(new long[]{0x00000000E0300000L});
+    public static final BitSet FOLLOW_rule__UIDescription__Group__3_in_rule__UIDescription__Group__21708 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__UIDescription__UsedDescriptionsAssignment_2_in_rule__UIDescription__Group__2__Impl1735 = new BitSet(new long[]{0x0000000000200002L});
+    public static final BitSet FOLLOW_rule__UIDescription__Group__3__Impl_in_rule__UIDescription__Group__31766 = new BitSet(new long[]{0x00000000E0300000L});
+    public static final BitSet FOLLOW_rule__UIDescription__Group__4_in_rule__UIDescription__Group__31769 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__UIDescription__RefinementsAssignment_3_in_rule__UIDescription__Group__3__Impl1796 = new BitSet(new long[]{0x00000000C0000002L});
+    public static final BitSet FOLLOW_rule__UIDescription__Group__4__Impl_in_rule__UIDescription__Group__41827 = new BitSet(new long[]{0x00000000E0300000L});
+    public static final BitSet FOLLOW_rule__UIDescription__Group__5_in_rule__UIDescription__Group__41830 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__UIDescription__DefinitionsAssignment_4_in_rule__UIDescription__Group__4__Impl1857 = new BitSet(new long[]{0x00000000C0000002L});
+    public static final BitSet FOLLOW_rule__UIDescription__Group__5__Impl_in_rule__UIDescription__Group__51888 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__UIDescription__StructureAssignment_5_in_rule__UIDescription__Group__5__Impl1915 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Structure__Group__0__Impl_in_rule__Structure__Group__01957 = new BitSet(new long[]{0x0000000000010000L});
+    public static final BitSet FOLLOW_rule__Structure__Group__1_in_rule__Structure__Group__01960 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Structure__NameAssignment_0_in_rule__Structure__Group__0__Impl1987 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Structure__Group__1__Impl_in_rule__Structure__Group__12017 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__Structure__Group__2_in_rule__Structure__Group__12020 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_16_in_rule__Structure__Group__1__Impl2048 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Structure__Group__2__Impl_in_rule__Structure__Group__22079 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Structure__OrderedElementsAssignment_2_in_rule__Structure__Group__2__Impl2106 = new BitSet(new long[]{0x0000000000000012L});
+    public static final BitSet FOLLOW_rule__Refinement__Group__0__Impl_in_rule__Refinement__Group__02143 = new BitSet(new long[]{0x0000000000020000L});
+    public static final BitSet FOLLOW_rule__Refinement__Group__1_in_rule__Refinement__Group__02146 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Refinement__ConcreteRefinementAssignment_0_in_rule__Refinement__Group__0__Impl2173 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Refinement__Group__1__Impl_in_rule__Refinement__Group__12203 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_17_in_rule__Refinement__Group__1__Impl2231 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ButtonRefinement__Group__0__Impl_in_rule__ButtonRefinement__Group__02266 = new BitSet(new long[]{0x0000000000040000L});
+    public static final BitSet FOLLOW_rule__ButtonRefinement__Group__1_in_rule__ButtonRefinement__Group__02269 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ButtonRefinement__NameAssignment_0_in_rule__ButtonRefinement__Group__0__Impl2296 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ButtonRefinement__Group__1__Impl_in_rule__ButtonRefinement__Group__12326 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__ButtonRefinement__Group__2_in_rule__ButtonRefinement__Group__12329 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_18_in_rule__ButtonRefinement__Group__1__Impl2357 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ButtonRefinement__Group__2__Impl_in_rule__ButtonRefinement__Group__22388 = new BitSet(new long[]{0x0000000001000000L});
+    public static final BitSet FOLLOW_rule__ButtonRefinement__Group__3_in_rule__ButtonRefinement__Group__22391 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ButtonRefinement__IdAssignment_2_in_rule__ButtonRefinement__Group__2__Impl2418 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ButtonRefinement__Group__3__Impl_in_rule__ButtonRefinement__Group__32448 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ButtonRefinement__PropertiesAssignment_3_in_rule__ButtonRefinement__Group__3__Impl2475 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__LabelRefinement__Group__0__Impl_in_rule__LabelRefinement__Group__02514 = new BitSet(new long[]{0x0000000000080000L});
+    public static final BitSet FOLLOW_rule__LabelRefinement__Group__1_in_rule__LabelRefinement__Group__02517 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__LabelRefinement__NameAssignment_0_in_rule__LabelRefinement__Group__0__Impl2544 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__LabelRefinement__Group__1__Impl_in_rule__LabelRefinement__Group__12574 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__LabelRefinement__Group__2_in_rule__LabelRefinement__Group__12577 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_19_in_rule__LabelRefinement__Group__1__Impl2605 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__LabelRefinement__Group__2__Impl_in_rule__LabelRefinement__Group__22636 = new BitSet(new long[]{0x0000000001000000L});
+    public static final BitSet FOLLOW_rule__LabelRefinement__Group__3_in_rule__LabelRefinement__Group__22639 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__LabelRefinement__IdAssignment_2_in_rule__LabelRefinement__Group__2__Impl2666 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__LabelRefinement__Group__3__Impl_in_rule__LabelRefinement__Group__32696 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__LabelRefinement__PropertiesAssignment_3_in_rule__LabelRefinement__Group__3__Impl2723 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Property__Group__0__Impl_in_rule__Property__Group__02762 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__Property__Group__1_in_rule__Property__Group__02765 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_20_in_rule__Property__Group__0__Impl2793 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Property__Group__1__Impl_in_rule__Property__Group__12824 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Property__PropertiesFileAssignment_1_in_rule__Property__Group__1__Impl2851 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__UsedDescriptions__Group__0__Impl_in_rule__UsedDescriptions__Group__02885 = new BitSet(new long[]{0x0000000100000010L});
+    public static final BitSet FOLLOW_rule__UsedDescriptions__Group__1_in_rule__UsedDescriptions__Group__02888 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_21_in_rule__UsedDescriptions__Group__0__Impl2916 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__UsedDescriptions__Group__1__Impl_in_rule__UsedDescriptions__Group__12947 = new BitSet(new long[]{0x0000000000400000L});
+    public static final BitSet FOLLOW_rule__UsedDescriptions__Group__2_in_rule__UsedDescriptions__Group__12950 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__UsedDescriptions__DescriptionAssignment_1_in_rule__UsedDescriptions__Group__1__Impl2977 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__UsedDescriptions__Group__2__Impl_in_rule__UsedDescriptions__Group__23007 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__UsedDescriptions__Group_2__0_in_rule__UsedDescriptions__Group__2__Impl3034 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__UsedDescriptions__Group_2__0__Impl_in_rule__UsedDescriptions__Group_2__03071 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__UsedDescriptions__Group_2__1_in_rule__UsedDescriptions__Group_2__03074 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_22_in_rule__UsedDescriptions__Group_2__0__Impl3102 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__UsedDescriptions__Group_2__1__Impl_in_rule__UsedDescriptions__Group_2__13133 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__UsedDescriptions__IdAssignment_2_1_in_rule__UsedDescriptions__Group_2__1__Impl3160 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Definition__Group__0__Impl_in_rule__Definition__Group__03194 = new BitSet(new long[]{0x0000000000020000L});
+    public static final BitSet FOLLOW_rule__Definition__Group__1_in_rule__Definition__Group__03197 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Definition__ConcreteDefitionAssignment_0_in_rule__Definition__Group__0__Impl3224 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Definition__Group__1__Impl_in_rule__Definition__Group__13254 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_17_in_rule__Definition__Group__1__Impl3282 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__TypeDefinition__Group__0__Impl_in_rule__TypeDefinition__Group__03317 = new BitSet(new long[]{0x0000000000003000L});
+    public static final BitSet FOLLOW_rule__TypeDefinition__Group__1_in_rule__TypeDefinition__Group__03320 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_23_in_rule__TypeDefinition__Group__0__Impl3348 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__TypeDefinition__Group__1__Impl_in_rule__TypeDefinition__Group__13379 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__TypeDefinition__TypeAssignment_1_in_rule__TypeDefinition__Group__1__Impl3406 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Multiselection__Group__0__Impl_in_rule__Multiselection__Group__03440 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_rule__Multiselection__Group__1_in_rule__Multiselection__Group__03443 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Multiselection__DescriptionNameAssignment_0_in_rule__Multiselection__Group__0__Impl3470 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Multiselection__Group__1__Impl_in_rule__Multiselection__Group__13500 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Multiselection__InputTypeAssignment_1_in_rule__Multiselection__Group__1__Impl3527 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ButtonDefinition__Group__0__Impl_in_rule__ButtonDefinition__Group__03562 = new BitSet(new long[]{0x0000000000400000L});
+    public static final BitSet FOLLOW_rule__ButtonDefinition__Group__1_in_rule__ButtonDefinition__Group__03565 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ButtonDefinition__NameAssignment_0_in_rule__ButtonDefinition__Group__0__Impl3592 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ButtonDefinition__Group__1__Impl_in_rule__ButtonDefinition__Group__13622 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__ButtonDefinition__Group__2_in_rule__ButtonDefinition__Group__13625 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_22_in_rule__ButtonDefinition__Group__1__Impl3653 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ButtonDefinition__Group__2__Impl_in_rule__ButtonDefinition__Group__23684 = new BitSet(new long[]{0x0000000001000000L});
+    public static final BitSet FOLLOW_rule__ButtonDefinition__Group__3_in_rule__ButtonDefinition__Group__23687 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ButtonDefinition__IdAssignment_2_in_rule__ButtonDefinition__Group__2__Impl3714 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ButtonDefinition__Group__3__Impl_in_rule__ButtonDefinition__Group__33744 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ButtonDefinition__PropertiesAssignment_3_in_rule__ButtonDefinition__Group__3__Impl3771 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Properties__Group__0__Impl_in_rule__Properties__Group__03810 = new BitSet(new long[]{0x000000000E000000L});
+    public static final BitSet FOLLOW_rule__Properties__Group__1_in_rule__Properties__Group__03813 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_24_in_rule__Properties__Group__0__Impl3841 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Properties__Group__1__Impl_in_rule__Properties__Group__13872 = new BitSet(new long[]{0x000000000E000000L});
+    public static final BitSet FOLLOW_rule__Properties__Group__2_in_rule__Properties__Group__13875 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Properties__Group_1__0_in_rule__Properties__Group__1__Impl3902 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Properties__Group__2__Impl_in_rule__Properties__Group__23933 = new BitSet(new long[]{0x000000000E000000L});
+    public static final BitSet FOLLOW_rule__Properties__Group__3_in_rule__Properties__Group__23936 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Properties__Group_2__0_in_rule__Properties__Group__2__Impl3963 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Properties__Group__3__Impl_in_rule__Properties__Group__33994 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Properties__Group_3__0_in_rule__Properties__Group__3__Impl4021 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Properties__Group_1__0__Impl_in_rule__Properties__Group_1__04060 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__Properties__Group_1__1_in_rule__Properties__Group_1__04063 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_25_in_rule__Properties__Group_1__0__Impl4091 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Properties__Group_1__1__Impl_in_rule__Properties__Group_1__14122 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Properties__PropertyKeyAssignment_1_1_in_rule__Properties__Group_1__1__Impl4149 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Properties__Group_2__0__Impl_in_rule__Properties__Group_2__04183 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__Properties__Group_2__1_in_rule__Properties__Group_2__04186 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_26_in_rule__Properties__Group_2__0__Impl4214 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Properties__Group_2__1__Impl_in_rule__Properties__Group_2__14245 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Properties__TextAssignment_2_1_in_rule__Properties__Group_2__1__Impl4272 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Properties__Group_3__0__Impl_in_rule__Properties__Group_3__04306 = new BitSet(new long[]{0x000000000000C000L});
+    public static final BitSet FOLLOW_rule__Properties__Group_3__1_in_rule__Properties__Group_3__04309 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_27_in_rule__Properties__Group_3__0__Impl4337 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Properties__Group_3__1__Impl_in_rule__Properties__Group_3__14368 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Properties__InteractiontypeAssignment_3_1_in_rule__Properties__Group_3__1__Impl4397 = new BitSet(new long[]{0x000000000000C002L});
+    public static final BitSet FOLLOW_rule__Properties__InteractiontypeAssignment_3_1_in_rule__Properties__Group_3__1__Impl4409 = new BitSet(new long[]{0x000000000000C002L});
+    public static final BitSet FOLLOW_rule__LabelDefinition__Group__0__Impl_in_rule__LabelDefinition__Group__04446 = new BitSet(new long[]{0x0000000010000000L});
+    public static final BitSet FOLLOW_rule__LabelDefinition__Group__1_in_rule__LabelDefinition__Group__04449 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__LabelDefinition__NameAssignment_0_in_rule__LabelDefinition__Group__0__Impl4476 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__LabelDefinition__Group__1__Impl_in_rule__LabelDefinition__Group__14506 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__LabelDefinition__Group__2_in_rule__LabelDefinition__Group__14509 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_28_in_rule__LabelDefinition__Group__1__Impl4537 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__LabelDefinition__Group__2__Impl_in_rule__LabelDefinition__Group__24568 = new BitSet(new long[]{0x0000000001000000L});
+    public static final BitSet FOLLOW_rule__LabelDefinition__Group__3_in_rule__LabelDefinition__Group__24571 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__LabelDefinition__IdAssignment_2_in_rule__LabelDefinition__Group__2__Impl4598 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__LabelDefinition__Group__3__Impl_in_rule__LabelDefinition__Group__34628 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__LabelDefinition__PropertiesAssignment_3_in_rule__LabelDefinition__Group__3__Impl4655 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleTypeDefinition_in_rule__UIDescription__TypeDefinitionAssignment_04699 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleProperty_in_rule__UIDescription__PropertyAssignment_14730 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleUsedDescriptions_in_rule__UIDescription__UsedDescriptionsAssignment_24761 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleRefinement_in_rule__UIDescription__RefinementsAssignment_34792 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleDefinition_in_rule__UIDescription__DefinitionsAssignment_44823 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleStructure_in_rule__UIDescription__StructureAssignment_54854 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_29_in_rule__Structure__NameAssignment_04890 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleElement_in_rule__Structure__OrderedElementsAssignment_24929 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__Element__IdAssignment4960 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleComponentRefinement_in_rule__Refinement__ConcreteRefinementAssignment_04991 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_30_in_rule__ButtonRefinement__NameAssignment_05027 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__ButtonRefinement__IdAssignment_25066 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleProperties_in_rule__ButtonRefinement__PropertiesAssignment_35097 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_31_in_rule__LabelRefinement__NameAssignment_05133 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__LabelRefinement__IdAssignment_25172 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleProperties_in_rule__LabelRefinement__PropertiesAssignment_35203 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__Property__PropertiesFileAssignment_15234 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleDescriptionType_in_rule__UsedDescriptions__DescriptionAssignment_15265 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__UsedDescriptions__IdAssignment_2_15296 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleComponentDefinition_in_rule__Definition__ConcreteDefitionAssignment_05327 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleType_in_rule__TypeDefinition__TypeAssignment_15358 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__UIDescriptionImport__DescriptionNameAssignment5389 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_32_in_rule__Multiselection__DescriptionNameAssignment_05425 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_INPUT_DESCRIPTION_in_rule__Multiselection__InputTypeAssignment_15464 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_30_in_rule__ButtonDefinition__NameAssignment_05500 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__ButtonDefinition__IdAssignment_25539 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleProperties_in_rule__ButtonDefinition__PropertiesAssignment_35570 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__Properties__PropertyKeyAssignment_1_15601 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__Properties__TextAssignment_2_15632 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleInteractiontype_in_rule__Properties__InteractiontypeAssignment_3_15663 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_31_in_rule__LabelDefinition__NameAssignment_05699 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__LabelDefinition__IdAssignment_25738 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleProperties_in_rule__LabelDefinition__PropertiesAssignment_35769 = new BitSet(new long[]{0x0000000000000002L});
 
 }

@@ -22,8 +22,8 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.deg.xtext.gui.guiDSL.impl.ComponentRefinementImpl#getType <em>Type</em>}</li>
  *   <li>{@link org.deg.xtext.gui.guiDSL.impl.ComponentRefinementImpl#getName <em>Name</em>}</li>
+ *   <li>{@link org.deg.xtext.gui.guiDSL.impl.ComponentRefinementImpl#getId <em>Id</em>}</li>
  *   <li>{@link org.deg.xtext.gui.guiDSL.impl.ComponentRefinementImpl#getProperties <em>Properties</em>}</li>
  * </ul>
  * </p>
@@ -32,26 +32,6 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  */
 public class ComponentRefinementImpl extends MinimalEObjectImpl.Container implements ComponentRefinement
 {
-  /**
-   * The default value of the '{@link #getType() <em>Type</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getType()
-   * @generated
-   * @ordered
-   */
-  protected static final String TYPE_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getType() <em>Type</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getType()
-   * @generated
-   * @ordered
-   */
-  protected String type = TYPE_EDEFAULT;
-
   /**
    * The default value of the '{@link #getName() <em>Name</em>}' attribute.
    * <!-- begin-user-doc -->
@@ -71,6 +51,26 @@ public class ComponentRefinementImpl extends MinimalEObjectImpl.Container implem
    * @ordered
    */
   protected String name = NAME_EDEFAULT;
+
+  /**
+   * The default value of the '{@link #getId() <em>Id</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getId()
+   * @generated
+   * @ordered
+   */
+  protected static final String ID_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getId() <em>Id</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getId()
+   * @generated
+   * @ordered
+   */
+  protected String id = ID_EDEFAULT;
 
   /**
    * The cached value of the '{@link #getProperties() <em>Properties</em>}' containment reference.
@@ -108,29 +108,6 @@ public class ComponentRefinementImpl extends MinimalEObjectImpl.Container implem
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getType()
-  {
-    return type;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setType(String newType)
-  {
-    String oldType = type;
-    type = newType;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, GuiDSLPackage.COMPONENT_REFINEMENT__TYPE, oldType, type));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public String getName()
   {
     return name;
@@ -147,6 +124,29 @@ public class ComponentRefinementImpl extends MinimalEObjectImpl.Container implem
     name = newName;
     if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, GuiDSLPackage.COMPONENT_REFINEMENT__NAME, oldName, name));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String getId()
+  {
+    return id;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setId(String newId)
+  {
+    String oldId = id;
+    id = newId;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, GuiDSLPackage.COMPONENT_REFINEMENT__ID, oldId, id));
   }
 
   /**
@@ -223,10 +223,10 @@ public class ComponentRefinementImpl extends MinimalEObjectImpl.Container implem
   {
     switch (featureID)
     {
-      case GuiDSLPackage.COMPONENT_REFINEMENT__TYPE:
-        return getType();
       case GuiDSLPackage.COMPONENT_REFINEMENT__NAME:
         return getName();
+      case GuiDSLPackage.COMPONENT_REFINEMENT__ID:
+        return getId();
       case GuiDSLPackage.COMPONENT_REFINEMENT__PROPERTIES:
         return getProperties();
     }
@@ -243,11 +243,11 @@ public class ComponentRefinementImpl extends MinimalEObjectImpl.Container implem
   {
     switch (featureID)
     {
-      case GuiDSLPackage.COMPONENT_REFINEMENT__TYPE:
-        setType((String)newValue);
-        return;
       case GuiDSLPackage.COMPONENT_REFINEMENT__NAME:
         setName((String)newValue);
+        return;
+      case GuiDSLPackage.COMPONENT_REFINEMENT__ID:
+        setId((String)newValue);
         return;
       case GuiDSLPackage.COMPONENT_REFINEMENT__PROPERTIES:
         setProperties((Properties)newValue);
@@ -266,11 +266,11 @@ public class ComponentRefinementImpl extends MinimalEObjectImpl.Container implem
   {
     switch (featureID)
     {
-      case GuiDSLPackage.COMPONENT_REFINEMENT__TYPE:
-        setType(TYPE_EDEFAULT);
-        return;
       case GuiDSLPackage.COMPONENT_REFINEMENT__NAME:
         setName(NAME_EDEFAULT);
+        return;
+      case GuiDSLPackage.COMPONENT_REFINEMENT__ID:
+        setId(ID_EDEFAULT);
         return;
       case GuiDSLPackage.COMPONENT_REFINEMENT__PROPERTIES:
         setProperties((Properties)null);
@@ -289,10 +289,10 @@ public class ComponentRefinementImpl extends MinimalEObjectImpl.Container implem
   {
     switch (featureID)
     {
-      case GuiDSLPackage.COMPONENT_REFINEMENT__TYPE:
-        return TYPE_EDEFAULT == null ? type != null : !TYPE_EDEFAULT.equals(type);
       case GuiDSLPackage.COMPONENT_REFINEMENT__NAME:
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+      case GuiDSLPackage.COMPONENT_REFINEMENT__ID:
+        return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
       case GuiDSLPackage.COMPONENT_REFINEMENT__PROPERTIES:
         return properties != null;
     }
@@ -310,10 +310,10 @@ public class ComponentRefinementImpl extends MinimalEObjectImpl.Container implem
     if (eIsProxy()) return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (type: ");
-    result.append(type);
-    result.append(", name: ");
+    result.append(" (name: ");
     result.append(name);
+    result.append(", id: ");
+    result.append(id);
     result.append(')');
     return result.toString();
   }

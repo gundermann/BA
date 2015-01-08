@@ -65,6 +65,8 @@ public class GuiDSLFactoryImpl extends EFactoryImpl implements GuiDSLFactory
     switch (eClass.getClassifierID())
     {
       case GuiDSLPackage.UI_DESCRIPTION: return createUIDescription();
+      case GuiDSLPackage.STRUCTURE: return createStructure();
+      case GuiDSLPackage.ELEMENT: return createElement();
       case GuiDSLPackage.REFINEMENT: return createRefinement();
       case GuiDSLPackage.COMPONENT_REFINEMENT: return createComponentRefinement();
       case GuiDSLPackage.BUTTON_REFINEMENT: return createButtonRefinement();
@@ -72,13 +74,11 @@ public class GuiDSLFactoryImpl extends EFactoryImpl implements GuiDSLFactory
       case GuiDSLPackage.PROPERTY: return createProperty();
       case GuiDSLPackage.USED_DESCRIPTIONS: return createUsedDescriptions();
       case GuiDSLPackage.DESCRIPTION_TYPE: return createDescriptionType();
-      case GuiDSLPackage.AREA_COUNT: return createAreaCount();
       case GuiDSLPackage.DEFINITION: return createDefinition();
       case GuiDSLPackage.TYPE_DEFINITION: return createTypeDefinition();
       case GuiDSLPackage.UI_DESCRIPTION_IMPORT: return createUIDescriptionImport();
       case GuiDSLPackage.COMPLEX_COMPONENT: return createComplexComponent();
       case GuiDSLPackage.MULTISELECTION: return createMultiselection();
-      case GuiDSLPackage.AREA_ASSIGNMENT: return createAreaAssignment();
       case GuiDSLPackage.COMPONENT_DEFINITION: return createComponentDefinition();
       case GuiDSLPackage.BUTTON_DEFINITION: return createButtonDefinition();
       case GuiDSLPackage.PROPERTIES: return createProperties();
@@ -97,6 +97,28 @@ public class GuiDSLFactoryImpl extends EFactoryImpl implements GuiDSLFactory
   {
     UIDescriptionImpl uiDescription = new UIDescriptionImpl();
     return uiDescription;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Structure createStructure()
+  {
+    StructureImpl structure = new StructureImpl();
+    return structure;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Element createElement()
+  {
+    ElementImpl element = new ElementImpl();
+    return element;
   }
 
   /**
@@ -181,17 +203,6 @@ public class GuiDSLFactoryImpl extends EFactoryImpl implements GuiDSLFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public AreaCount createAreaCount()
-  {
-    AreaCountImpl areaCount = new AreaCountImpl();
-    return areaCount;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public Definition createDefinition()
   {
     DefinitionImpl definition = new DefinitionImpl();
@@ -240,17 +251,6 @@ public class GuiDSLFactoryImpl extends EFactoryImpl implements GuiDSLFactory
   {
     MultiselectionImpl multiselection = new MultiselectionImpl();
     return multiselection;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public AreaAssignment createAreaAssignment()
-  {
-    AreaAssignmentImpl areaAssignment = new AreaAssignmentImpl();
-    return areaAssignment;
   }
 
   /**

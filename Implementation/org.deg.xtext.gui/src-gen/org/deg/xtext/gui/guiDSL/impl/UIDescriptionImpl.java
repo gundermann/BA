@@ -4,12 +4,11 @@ package org.deg.xtext.gui.guiDSL.impl;
 
 import java.util.Collection;
 
-import org.deg.xtext.gui.guiDSL.AreaAssignment;
-import org.deg.xtext.gui.guiDSL.AreaCount;
 import org.deg.xtext.gui.guiDSL.Definition;
 import org.deg.xtext.gui.guiDSL.GuiDSLPackage;
 import org.deg.xtext.gui.guiDSL.Property;
 import org.deg.xtext.gui.guiDSL.Refinement;
+import org.deg.xtext.gui.guiDSL.Structure;
 import org.deg.xtext.gui.guiDSL.TypeDefinition;
 import org.deg.xtext.gui.guiDSL.UIDescription;
 import org.deg.xtext.gui.guiDSL.UsedDescriptions;
@@ -35,13 +34,12 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.deg.xtext.gui.guiDSL.impl.UIDescriptionImpl#getAreaCount <em>Area Count</em>}</li>
  *   <li>{@link org.deg.xtext.gui.guiDSL.impl.UIDescriptionImpl#getTypeDefinition <em>Type Definition</em>}</li>
  *   <li>{@link org.deg.xtext.gui.guiDSL.impl.UIDescriptionImpl#getProperty <em>Property</em>}</li>
  *   <li>{@link org.deg.xtext.gui.guiDSL.impl.UIDescriptionImpl#getUsedDescriptions <em>Used Descriptions</em>}</li>
  *   <li>{@link org.deg.xtext.gui.guiDSL.impl.UIDescriptionImpl#getRefinements <em>Refinements</em>}</li>
  *   <li>{@link org.deg.xtext.gui.guiDSL.impl.UIDescriptionImpl#getDefinitions <em>Definitions</em>}</li>
- *   <li>{@link org.deg.xtext.gui.guiDSL.impl.UIDescriptionImpl#getAreas <em>Areas</em>}</li>
+ *   <li>{@link org.deg.xtext.gui.guiDSL.impl.UIDescriptionImpl#getStructure <em>Structure</em>}</li>
  * </ul>
  * </p>
  *
@@ -49,16 +47,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  */
 public class UIDescriptionImpl extends MinimalEObjectImpl.Container implements UIDescription
 {
-  /**
-   * The cached value of the '{@link #getAreaCount() <em>Area Count</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getAreaCount()
-   * @generated
-   * @ordered
-   */
-  protected AreaCount areaCount;
-
   /**
    * The cached value of the '{@link #getTypeDefinition() <em>Type Definition</em>}' containment reference.
    * <!-- begin-user-doc -->
@@ -110,14 +98,14 @@ public class UIDescriptionImpl extends MinimalEObjectImpl.Container implements U
   protected EList<Definition> definitions;
 
   /**
-   * The cached value of the '{@link #getAreas() <em>Areas</em>}' containment reference list.
+   * The cached value of the '{@link #getStructure() <em>Structure</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getAreas()
+   * @see #getStructure()
    * @generated
    * @ordered
    */
-  protected EList<AreaAssignment> areas;
+  protected Structure structure;
 
   /**
    * <!-- begin-user-doc -->
@@ -138,54 +126,6 @@ public class UIDescriptionImpl extends MinimalEObjectImpl.Container implements U
   protected EClass eStaticClass()
   {
     return GuiDSLPackage.Literals.UI_DESCRIPTION;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public AreaCount getAreaCount()
-  {
-    return areaCount;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public NotificationChain basicSetAreaCount(AreaCount newAreaCount, NotificationChain msgs)
-  {
-    AreaCount oldAreaCount = areaCount;
-    areaCount = newAreaCount;
-    if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GuiDSLPackage.UI_DESCRIPTION__AREA_COUNT, oldAreaCount, newAreaCount);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setAreaCount(AreaCount newAreaCount)
-  {
-    if (newAreaCount != areaCount)
-    {
-      NotificationChain msgs = null;
-      if (areaCount != null)
-        msgs = ((InternalEObject)areaCount).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GuiDSLPackage.UI_DESCRIPTION__AREA_COUNT, null, msgs);
-      if (newAreaCount != null)
-        msgs = ((InternalEObject)newAreaCount).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GuiDSLPackage.UI_DESCRIPTION__AREA_COUNT, null, msgs);
-      msgs = basicSetAreaCount(newAreaCount, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, GuiDSLPackage.UI_DESCRIPTION__AREA_COUNT, newAreaCount, newAreaCount));
   }
 
   /**
@@ -331,13 +271,47 @@ public class UIDescriptionImpl extends MinimalEObjectImpl.Container implements U
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<AreaAssignment> getAreas()
+  public Structure getStructure()
   {
-    if (areas == null)
+    return structure;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetStructure(Structure newStructure, NotificationChain msgs)
+  {
+    Structure oldStructure = structure;
+    structure = newStructure;
+    if (eNotificationRequired())
     {
-      areas = new EObjectContainmentEList<AreaAssignment>(AreaAssignment.class, this, GuiDSLPackage.UI_DESCRIPTION__AREAS);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GuiDSLPackage.UI_DESCRIPTION__STRUCTURE, oldStructure, newStructure);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
     }
-    return areas;
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setStructure(Structure newStructure)
+  {
+    if (newStructure != structure)
+    {
+      NotificationChain msgs = null;
+      if (structure != null)
+        msgs = ((InternalEObject)structure).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GuiDSLPackage.UI_DESCRIPTION__STRUCTURE, null, msgs);
+      if (newStructure != null)
+        msgs = ((InternalEObject)newStructure).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GuiDSLPackage.UI_DESCRIPTION__STRUCTURE, null, msgs);
+      msgs = basicSetStructure(newStructure, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, GuiDSLPackage.UI_DESCRIPTION__STRUCTURE, newStructure, newStructure));
   }
 
   /**
@@ -350,8 +324,6 @@ public class UIDescriptionImpl extends MinimalEObjectImpl.Container implements U
   {
     switch (featureID)
     {
-      case GuiDSLPackage.UI_DESCRIPTION__AREA_COUNT:
-        return basicSetAreaCount(null, msgs);
       case GuiDSLPackage.UI_DESCRIPTION__TYPE_DEFINITION:
         return basicSetTypeDefinition(null, msgs);
       case GuiDSLPackage.UI_DESCRIPTION__PROPERTY:
@@ -362,8 +334,8 @@ public class UIDescriptionImpl extends MinimalEObjectImpl.Container implements U
         return ((InternalEList<?>)getRefinements()).basicRemove(otherEnd, msgs);
       case GuiDSLPackage.UI_DESCRIPTION__DEFINITIONS:
         return ((InternalEList<?>)getDefinitions()).basicRemove(otherEnd, msgs);
-      case GuiDSLPackage.UI_DESCRIPTION__AREAS:
-        return ((InternalEList<?>)getAreas()).basicRemove(otherEnd, msgs);
+      case GuiDSLPackage.UI_DESCRIPTION__STRUCTURE:
+        return basicSetStructure(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -378,8 +350,6 @@ public class UIDescriptionImpl extends MinimalEObjectImpl.Container implements U
   {
     switch (featureID)
     {
-      case GuiDSLPackage.UI_DESCRIPTION__AREA_COUNT:
-        return getAreaCount();
       case GuiDSLPackage.UI_DESCRIPTION__TYPE_DEFINITION:
         return getTypeDefinition();
       case GuiDSLPackage.UI_DESCRIPTION__PROPERTY:
@@ -390,8 +360,8 @@ public class UIDescriptionImpl extends MinimalEObjectImpl.Container implements U
         return getRefinements();
       case GuiDSLPackage.UI_DESCRIPTION__DEFINITIONS:
         return getDefinitions();
-      case GuiDSLPackage.UI_DESCRIPTION__AREAS:
-        return getAreas();
+      case GuiDSLPackage.UI_DESCRIPTION__STRUCTURE:
+        return getStructure();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -407,9 +377,6 @@ public class UIDescriptionImpl extends MinimalEObjectImpl.Container implements U
   {
     switch (featureID)
     {
-      case GuiDSLPackage.UI_DESCRIPTION__AREA_COUNT:
-        setAreaCount((AreaCount)newValue);
-        return;
       case GuiDSLPackage.UI_DESCRIPTION__TYPE_DEFINITION:
         setTypeDefinition((TypeDefinition)newValue);
         return;
@@ -428,9 +395,8 @@ public class UIDescriptionImpl extends MinimalEObjectImpl.Container implements U
         getDefinitions().clear();
         getDefinitions().addAll((Collection<? extends Definition>)newValue);
         return;
-      case GuiDSLPackage.UI_DESCRIPTION__AREAS:
-        getAreas().clear();
-        getAreas().addAll((Collection<? extends AreaAssignment>)newValue);
+      case GuiDSLPackage.UI_DESCRIPTION__STRUCTURE:
+        setStructure((Structure)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -446,9 +412,6 @@ public class UIDescriptionImpl extends MinimalEObjectImpl.Container implements U
   {
     switch (featureID)
     {
-      case GuiDSLPackage.UI_DESCRIPTION__AREA_COUNT:
-        setAreaCount((AreaCount)null);
-        return;
       case GuiDSLPackage.UI_DESCRIPTION__TYPE_DEFINITION:
         setTypeDefinition((TypeDefinition)null);
         return;
@@ -464,8 +427,8 @@ public class UIDescriptionImpl extends MinimalEObjectImpl.Container implements U
       case GuiDSLPackage.UI_DESCRIPTION__DEFINITIONS:
         getDefinitions().clear();
         return;
-      case GuiDSLPackage.UI_DESCRIPTION__AREAS:
-        getAreas().clear();
+      case GuiDSLPackage.UI_DESCRIPTION__STRUCTURE:
+        setStructure((Structure)null);
         return;
     }
     super.eUnset(featureID);
@@ -481,8 +444,6 @@ public class UIDescriptionImpl extends MinimalEObjectImpl.Container implements U
   {
     switch (featureID)
     {
-      case GuiDSLPackage.UI_DESCRIPTION__AREA_COUNT:
-        return areaCount != null;
       case GuiDSLPackage.UI_DESCRIPTION__TYPE_DEFINITION:
         return typeDefinition != null;
       case GuiDSLPackage.UI_DESCRIPTION__PROPERTY:
@@ -493,8 +454,8 @@ public class UIDescriptionImpl extends MinimalEObjectImpl.Container implements U
         return refinements != null && !refinements.isEmpty();
       case GuiDSLPackage.UI_DESCRIPTION__DEFINITIONS:
         return definitions != null && !definitions.isEmpty();
-      case GuiDSLPackage.UI_DESCRIPTION__AREAS:
-        return areas != null && !areas.isEmpty();
+      case GuiDSLPackage.UI_DESCRIPTION__STRUCTURE:
+        return structure != null;
     }
     return super.eIsSet(featureID);
   }

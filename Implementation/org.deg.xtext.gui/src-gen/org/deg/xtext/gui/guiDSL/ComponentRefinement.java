@@ -12,8 +12,8 @@ import org.eclipse.emf.ecore.EObject;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.deg.xtext.gui.guiDSL.ComponentRefinement#getType <em>Type</em>}</li>
  *   <li>{@link org.deg.xtext.gui.guiDSL.ComponentRefinement#getName <em>Name</em>}</li>
+ *   <li>{@link org.deg.xtext.gui.guiDSL.ComponentRefinement#getId <em>Id</em>}</li>
  *   <li>{@link org.deg.xtext.gui.guiDSL.ComponentRefinement#getProperties <em>Properties</em>}</li>
  * </ul>
  * </p>
@@ -24,32 +24,6 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface ComponentRefinement extends EObject
 {
-  /**
-   * Returns the value of the '<em><b>Type</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Type</em>' attribute isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Type</em>' attribute.
-   * @see #setType(String)
-   * @see org.deg.xtext.gui.guiDSL.GuiDSLPackage#getComponentRefinement_Type()
-   * @model
-   * @generated
-   */
-  String getType();
-
-  /**
-   * Sets the value of the '{@link org.deg.xtext.gui.guiDSL.ComponentRefinement#getType <em>Type</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Type</em>' attribute.
-   * @see #getType()
-   * @generated
-   */
-  void setType(String value);
-
   /**
    * Returns the value of the '<em><b>Name</b></em>' attribute.
    * <!-- begin-user-doc -->
@@ -75,6 +49,32 @@ public interface ComponentRefinement extends EObject
    * @generated
    */
   void setName(String value);
+
+  /**
+   * Returns the value of the '<em><b>Id</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Id</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Id</em>' attribute.
+   * @see #setId(String)
+   * @see org.deg.xtext.gui.guiDSL.GuiDSLPackage#getComponentRefinement_Id()
+   * @model
+   * @generated
+   */
+  String getId();
+
+  /**
+   * Sets the value of the '{@link org.deg.xtext.gui.guiDSL.ComponentRefinement#getId <em>Id</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Id</em>' attribute.
+   * @see #getId()
+   * @generated
+   */
+  void setId(String value);
 
   /**
    * Returns the value of the '<em><b>Properties</b></em>' containment reference.

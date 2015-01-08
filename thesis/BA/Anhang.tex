@@ -129,8 +129,8 @@ Multiselection:
 	descriptionName='Multiselection' ('<' inputType=STRING '>')?;
 
 AreaAssignment:
-	'Area:' area=INT '<-' elements+=(STRING)+
-	| elements+=(STRING)+ '->' 'Area:' area=INT;
+	'Area:' area=INT '<-' element=STRING
+	| element=STRING '->' 'Area:' area=INT;
 
 ComponentDefinition:
 	LabelDefinition | ButtonDefinition;

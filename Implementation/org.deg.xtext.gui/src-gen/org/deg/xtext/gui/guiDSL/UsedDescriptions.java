@@ -13,7 +13,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * <ul>
  *   <li>{@link org.deg.xtext.gui.guiDSL.UsedDescriptions#getDescription <em>Description</em>}</li>
- *   <li>{@link org.deg.xtext.gui.guiDSL.UsedDescriptions#getLocalName <em>Local Name</em>}</li>
+ *   <li>{@link org.deg.xtext.gui.guiDSL.UsedDescriptions#getId <em>Id</em>}</li>
  * </ul>
  * </p>
  *
@@ -50,29 +50,29 @@ public interface UsedDescriptions extends EObject
   void setDescription(DescriptionType value);
 
   /**
-   * Returns the value of the '<em><b>Local Name</b></em>' attribute.
+   * Returns the value of the '<em><b>Id</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Local Name</em>' attribute isn't clear,
+   * If the meaning of the '<em>Id</em>' attribute isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Local Name</em>' attribute.
-   * @see #setLocalName(String)
-   * @see org.deg.xtext.gui.guiDSL.GuiDSLPackage#getUsedDescriptions_LocalName()
+   * @return the value of the '<em>Id</em>' attribute.
+   * @see #setId(String)
+   * @see org.deg.xtext.gui.guiDSL.GuiDSLPackage#getUsedDescriptions_Id()
    * @model
    * @generated
    */
-  String getLocalName();
+  String getId();
 
   /**
-   * Sets the value of the '{@link org.deg.xtext.gui.guiDSL.UsedDescriptions#getLocalName <em>Local Name</em>}' attribute.
+   * Sets the value of the '{@link org.deg.xtext.gui.guiDSL.UsedDescriptions#getId <em>Id</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Local Name</em>' attribute.
-   * @see #getLocalName()
+   * @param value the new value of the '<em>Id</em>' attribute.
+   * @see #getId()
    * @generated
    */
-  void setLocalName(String value);
+  void setId(String value);
 
 } // UsedDescriptions

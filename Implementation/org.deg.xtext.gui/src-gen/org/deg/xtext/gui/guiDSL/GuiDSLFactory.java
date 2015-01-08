@@ -32,6 +32,24 @@ public interface GuiDSLFactory extends EFactory
   UIDescription createUIDescription();
 
   /**
+   * Returns a new object of class '<em>Structure</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Structure</em>'.
+   * @generated
+   */
+  Structure createStructure();
+
+  /**
+   * Returns a new object of class '<em>Element</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Element</em>'.
+   * @generated
+   */
+  Element createElement();
+
+  /**
    * Returns a new object of class '<em>Refinement</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -95,15 +113,6 @@ public interface GuiDSLFactory extends EFactory
   DescriptionType createDescriptionType();
 
   /**
-   * Returns a new object of class '<em>Area Count</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Area Count</em>'.
-   * @generated
-   */
-  AreaCount createAreaCount();
-
-  /**
    * Returns a new object of class '<em>Definition</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -147,15 +156,6 @@ public interface GuiDSLFactory extends EFactory
    * @generated
    */
   Multiselection createMultiselection();
-
-  /**
-   * Returns a new object of class '<em>Area Assignment</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Area Assignment</em>'.
-   * @generated
-   */
-  AreaAssignment createAreaAssignment();
 
   /**
    * Returns a new object of class '<em>Component Definition</em>'.

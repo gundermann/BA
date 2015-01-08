@@ -3,42 +3,44 @@ grammar org.deg.xtext.gui.GuiDSL with org.eclipse.xtext.common.Terminals
 generate guiDSL "http://www.deg.org/xtext/gui/GuiDSL"
 
 UIDescription:
-	areaCount=AreaCount
 	typeDefinition=(TypeDefinition)
 	(property=(Property))?
 	usedDescriptions+=(UsedDescriptions)*
 	refinements+=(Refinement)*
 	definitions+=(Definition)*
-	areas+=(AreaAssignment)*;
+	structure=Structure;
+
+Structure:
+	name="Structure" ":" orderedElements+=(Element)*;
+
+Element:
+	id=STRING;
 
 Refinement:
-	'REFINE' concreteRefinement=ComponentRefinement 'END REFINE';
+	concreteRefinement=ComponentRefinement ';';
 
 ComponentRefinement:
 	LabelRefinement | ButtonRefinement;
 
 ButtonRefinement:
-	type='Button' ' with name: ' name=STRING
+	name='Button' 'from:' id=STRING
 	properties=(Properties)?;
 
 LabelRefinement:
-	type='Label' ' with name: ' name=STRING
+	name='Label' 'from: ' id=STRING
 	properties=(Properties)?;
 
 Property:
 	'get properties from:' propertiesFile=STRING;
 
 UsedDescriptions:
-	'use: ' description=DescriptionType (' as: ' localName=STRING)?;
+	'use: ' description=DescriptionType ('as:' id=STRING)?;
 
 DescriptionType:
 	UIDescriptionImport | ComplexComponent;
 
-AreaCount:
-	'Area count: ' areaCount=INT;
-
 Definition:
-	'DEF ' concreteDefition=ComponentDefinition 'END DEF';
+	concreteDefition=ComponentDefinition ';';
 
 TypeDefinition:
 	'type: ' type=Type;
@@ -53,26 +55,25 @@ ComplexComponent:
 	(Multiselection);
 
 Multiselection:
-	descriptionName='Multiselection' ('<' inputType=STRING '>')?;
+	descriptionName='Multiselection' (inputType=INPUT_DESCRIPTION)?;
 
-AreaAssignment:
-	'Area:' area=INT '<-' elements+=(STRING)+
-	| elements+=(STRING)+ '->' 'Area:' area=INT;
+terminal INPUT_DESCRIPTION:
+	'<' ('\\' . /* 'b'|'t'|'n'|'f'|'r'|'u'|'"'|"'"|'\\' */ | !('<' | '>'))* '>';
 
 ComponentDefinition:
 	LabelDefinition | ButtonDefinition;
 
 ButtonDefinition:
-	type='Button' ' as ' name=STRING
+	name='Button' 'as:' id=STRING
 	properties=(Properties)?;
 
 Properties:
-	':' ('propertyKey=' propertyKey=STRING)?
+	'->' ('propertyKey=' propertyKey=STRING)?
 	('text=' text=STRING)?
 	('interactiontype=' interactiontype+=(Interactiontype)+)?;
 
 LabelDefinition:
-	type='Label' ' as ' name=STRING
+	name='Label' 'as' id=STRING
 	properties=(Properties)?;
 
 Interactiontype:

@@ -14,13 +14,12 @@ import org.eclipse.emf.ecore.EObject;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.deg.xtext.gui.guiDSL.UIDescription#getAreaCount <em>Area Count</em>}</li>
  *   <li>{@link org.deg.xtext.gui.guiDSL.UIDescription#getTypeDefinition <em>Type Definition</em>}</li>
  *   <li>{@link org.deg.xtext.gui.guiDSL.UIDescription#getProperty <em>Property</em>}</li>
  *   <li>{@link org.deg.xtext.gui.guiDSL.UIDescription#getUsedDescriptions <em>Used Descriptions</em>}</li>
  *   <li>{@link org.deg.xtext.gui.guiDSL.UIDescription#getRefinements <em>Refinements</em>}</li>
  *   <li>{@link org.deg.xtext.gui.guiDSL.UIDescription#getDefinitions <em>Definitions</em>}</li>
- *   <li>{@link org.deg.xtext.gui.guiDSL.UIDescription#getAreas <em>Areas</em>}</li>
+ *   <li>{@link org.deg.xtext.gui.guiDSL.UIDescription#getStructure <em>Structure</em>}</li>
  * </ul>
  * </p>
  *
@@ -30,32 +29,6 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface UIDescription extends EObject
 {
-  /**
-   * Returns the value of the '<em><b>Area Count</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Area Count</em>' containment reference isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Area Count</em>' containment reference.
-   * @see #setAreaCount(AreaCount)
-   * @see org.deg.xtext.gui.guiDSL.GuiDSLPackage#getUIDescription_AreaCount()
-   * @model containment="true"
-   * @generated
-   */
-  AreaCount getAreaCount();
-
-  /**
-   * Sets the value of the '{@link org.deg.xtext.gui.guiDSL.UIDescription#getAreaCount <em>Area Count</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Area Count</em>' containment reference.
-   * @see #getAreaCount()
-   * @generated
-   */
-  void setAreaCount(AreaCount value);
-
   /**
    * Returns the value of the '<em><b>Type Definition</b></em>' containment reference.
    * <!-- begin-user-doc -->
@@ -157,19 +130,29 @@ public interface UIDescription extends EObject
   EList<Definition> getDefinitions();
 
   /**
-   * Returns the value of the '<em><b>Areas</b></em>' containment reference list.
-   * The list contents are of type {@link org.deg.xtext.gui.guiDSL.AreaAssignment}.
+   * Returns the value of the '<em><b>Structure</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Areas</em>' containment reference list isn't clear,
+   * If the meaning of the '<em>Structure</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Areas</em>' containment reference list.
-   * @see org.deg.xtext.gui.guiDSL.GuiDSLPackage#getUIDescription_Areas()
+   * @return the value of the '<em>Structure</em>' containment reference.
+   * @see #setStructure(Structure)
+   * @see org.deg.xtext.gui.guiDSL.GuiDSLPackage#getUIDescription_Structure()
    * @model containment="true"
    * @generated
    */
-  EList<AreaAssignment> getAreas();
+  Structure getStructure();
+
+  /**
+   * Sets the value of the '{@link org.deg.xtext.gui.guiDSL.UIDescription#getStructure <em>Structure</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Structure</em>' containment reference.
+   * @see #getStructure()
+   * @generated
+   */
+  void setStructure(Structure value);
 
 } // UIDescription
