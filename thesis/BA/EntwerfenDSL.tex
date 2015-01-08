@@ -1,15 +1,39 @@
 \chapter{Entwicklung einer DSL zur Beschreibung der GUI in profil c/s}\label{Entwicklung einer DSL zur Beschreibung der GUI in profil c/s}
-Die Entwicklung der DSL und die Entwicklung des Generators (siehe Kapitel
-\ref{Entwicklung des Generators für das Generieren von Klassen für das
-Multichannel-Framework}) gliedern sich in mehrere Versionen. In jeder Version
-sind Ideen umgesetzt, die nach der Fertigstellung einer Version in der deg
-begutachtet wurden und wenn nötig abgewandelt oder verändert.
+\section{1. Iteration}
+\subsection*{Analyse der Metadaten der GUI}
+\subsection*{Semantisches Modell}
+\myBigFigure{v1-1.jpg}{Teil 1: GUI-Beschreibungs-Model Version 1}{Teil1-1}
+Das Artefakt, welches beim dieserm Model im Mittelpunkt steht ist die
+\emph{UIDescription} (siehe \ref{Abb_Teil1-1}). Die aggregierten Artefakte sind
+aus dem Diagrammm gut zu entnehmen. Die Klasse
+\emph{DefinitionImpl} aggregiert weitere Artefakte des Modells. Diese sind um
+die Übersicht zu wahren Abbildung \ref{Abb_Teil2-1} zu entnehmen.\\
+\myBigFigure{v1-2.jpg}{Teil 2:
+GUI-Beschreibungs-Model Version 1}{Teil2-1} 
+Dort sind die drei umgesetzten Ausprägungen einer \emph{Definition} zu erkennen.
+Dabei handelt es sich um \emph{Label}, \emph{Button} und \emph{MultiSelection}.
+Weiterhin ist zu erkennen, dass nur der Button eine \emph{Interaction}
+aggregieren kann. Das bedeutet, dass nur an dieser Komponente eine Interaktion
+beschrieben werden kann. Der letzte interessante Teil wäre wohl die
+\emph{Property}. Dieses Interface wird benötigt um bestimmte Werte an
+Komponenten zu setze, ohne das Wissen zu müssen um welchen Komponententyp es
+sich handelt.
+Dazu wurden die allgemein gültigen Einstellungsmöglichkeiten von trivialen
+Komponenten in \emph{CommonProperty} zusammengefasst. Die Klasse
+\emph{PropertyImpl} ist ein Artefakt, welches zur Vollständigkeit des
+Modells erzeugt wurde. Es erfüllt für diese Version jedoch keinen weiteren
+Zweck.
+\subsection*{Grammatik}
+
+
 \section{Analyse der Metadaten der GUI}
 \subsection*{Version 1}
 Überlegungen bzgl. des Aufbaus der UIs gingen dahin, dass sich die DSL an dem
 Komponentenmodel von RCP4 orientieren soll. Das bedeutet, dass es Meta-Ebene
 gibt, die den groben Aufbau der GUI beschreibt und eine Implementierungs-Ebene,
-welche spezifische Komponenten innerhalb der GUI umsetzen soll. Beim Aufbau
+welche spezifische Komponenten innerhalb der GUI umsetzen soll. 
+
+Beim Aufbau
 der GUI wurde zwischen zwei Typen unterschieden (siehe semantisches
 Model \emph{TypeDefinition}). Für die Beschreibung des Aufbaus enthält jede
 beschriebene GUI eine bestimmte Anzahl von Bereichen (\emph{Area}), denen genau
@@ -74,10 +98,6 @@ selektiert werden können, werden über das Schlüsselwort \emph{selectableValues}
 gesetzt und die Werte, die selektiert sind am Schlüsselwort \emph{selectedValues}.
 
 \subsection*{Version 2}
-Aus der Begutachtung der ersten Version kam heraus, dass die
-Aktionen, die bei Interaktionen ausgeführt werden, nicht in der DSL beschrieben
-werden müssen. Grund dafür ist, dass diese Aktionen teilweise sehr komplex sind
-und kaum abstrahiert werden können. Daher fällt der gesamte Teil zur
 Beschreibung von Aktionen bei Interaktionen weg.\\
 Bezogen auf die komplexen Komponenten hat sich ergeben, dass lediglich nur
 den Input-Typ angegeben werden muss. Die Festlegung über selektierbare und
@@ -133,32 +153,11 @@ nicht zwingend nach dem richtigen Schlüssel durchsucht werden.
 \subsection*{Version 3}
 
 
-\section{GUI-Beschreibungs-Model zur Verarbeitung im Generator}
+\section{Semantisches Modell}
 
 \subsection*{Version 1}
 
-\myBigFigure{v1-1.jpg}{Teil 1: GUI-Beschreibungs-Model Version 1}{Teil1-1}
-Das Artefakt, welches beim dieserm Model im Mittelpunkt steht ist die
-\emph{UIDescription} (siehe \ref{Abb_Teil1-1}). Die aggregierten Artefakte sind
-aus dem Diagrammm gut zu entnehmen. Die wichtigen Methoden umfassen nur die Getter- und Setter-Methoden
-der Attributer einer Klasse. Die anderen Methoden
-werden von Xtext ebenfalls generiert. Diese sind für
-diese Arbeit jedoch nicht von Belang. Die Klasse
-\emph{DefinitionImpl} aggregiert weitere Artefakte des Models. Diese sind um
-die Übersicht zu wahren Abbildung \ref{Abb_Teil2-1} zu entnehmen.\\
-\myBigFigure{v1-2.jpg}{Teil 2:
-GUI-Beschreibungs-Model Version 1}{Teil2-1} 
-Dort sind die drei umgesetzten Ausprägungen einer \emph{Definition} zu erkennen.
-Dabei handelt es sich um \emph{Label}, \emph{Button} und \emph{MultiSelection}.
-Weiterhin ist zu erkennen, dass nur der Button eine \emph{Interaction}
-aggregieren kann. Das bedeutet, dass nur an dieser Komponente eine Interaktion
-beschrieben werden kann. Der letzte Interessante Teil wäre wohl die
-\emph{Property}. Dieses Interface wird benötigt um bestimmte Werte an
-Komponenten zu setze, ohne das Wissen um welchen Komponentetyp es sich handelt.
-Dazu wurden die allgemein gültigen Einstellungsmöglichkeiten von trivialen
-Komponenten in \emph{CommonProperty} zusammengefasst. die Klasse
-\emph{PropertyImpl} ist ein Artefakt, welches von Xtext zu Vollstänigkeit
-erzeugt wurde. Es wird in dieser Version jedoch nicht benötigt.
+
 
 \subsection*{Version 2}
 In dieser Version wurden an den Artefakten \emph{AreaCount},

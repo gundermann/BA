@@ -2,31 +2,82 @@
 
 
 \section{Allgemeine Anforderungen an Benutzeroberflächen von profil
-c/s}\label{AllgAnforderungen} Die wichtigste (primäre) Anforderung für diese
-Arbeit bezieht sich auf den Client von profil c/s. Dieser soll sowohl in Web-Browsern (Web-Client) als auch standalone
-auf einem PC (Standalone-Client) ausgeführt werden können.\\
-Um eine effiziente Arbeitsweise zu ermöglichen, kamen (sekundäre) Anforderungen
-wie \emph{Erweiterbarkeit der Frameworks}, \emph{Abstraktion} und die
-\emph{\gloss{Ausdruckskraft}} der Sprachkonstrukte, die zur Entwicklung
-verwendet werden.\\
-In Abbildung \ref{Abb_Web-Client} und Abbildung \ref{Abb_Standalone-Client} ist
-das GUI eines \gloss{Zuwendungsblatt} eines \gloss{Förderantrag} zu sehen.
-\myHugeFigure{web.jpg}{Web-Client: Zuewndungsblatt\cite{DegDKElerIAntragsmappe}}{Web-Client}
-\myBigFigure{standalone.jpg}{Standalone-Client:
-Zuewndungsblatt\cite{DegDKElerIAntragsmappe}}{Standalone-Client} Für den Aufbau sind nur die Tabelle und
-die darunter stehenden Buttons, sowies das Bemerkungsfeld (im Web-Client auf der rechten Seite und im
-Standalone-Client in der Mitte) von Bedeutung. Dass der Aufbau der GUI in beiden
-Clients ähnlich ist, liegt an der Umsetzung der GUI.\\
+c/s}\label{AllgAnforderungen} Die erste Anforderung bezieht sich auf die GUI des Clients von profil c/s. Dieser soll sowohl
+in Web-Browsern (Web-Client) als auch standalone auf einem PC
+(Standalone-Client) ausgeführt werden können.\\
+Da die Nutzer an einen bestimmten Aufbau der GUI
+gewöhnt sind, ist es von Vorteil, wenn beide Clients ein ähnliches UI bieten. 
+Von daher ist die Ähnlichkeit der UIs auf
+unterschieldichen Platformen eine weitere Anforderung.\\
+Um eine effiziente
+Arbeitsweise zu ermöglichen, ist es wichtig, dass die
+verwendeten Frameworks um wiederverwendbare Komponenten
+erweiterbar sind. So ist er möglich redundarte
+Implementierungen zu verallgemeinern und letztendlich zu
+reduzieren.\\
+Darauf aufbauend, ist weiterhin von großer Bedeutung, wie stark von den
+verwendeten Frameworks abstrahiert werden kann. Grund dafür ist, dass durch
+einen hohen Abstraktionsgrad ein hoher Komplexitätsgrad beherrscht werden kann.
+(vgl. \cite{brauer2003grundkurs})\\
+Abschließend ist die Ausdruckskraft der Syntax, in der die UIs entwickelt
+werden, als Kriterium zu nennen. Dies fördert die Lesbarkeit des Quell-Codes und
+damit letzendlich das Verständnis dessen (vgl. \cite[S.70]{voelter}), sowie die
+Effiziens mit der die GUIs entwickelt werden.\\
+Diese Anforderungen an das UI haben in der deg unterschiedliche Prioritäten (1 =
+höchste Priorität, 3 = niedrigste Priorität), die in folgender Tabelle beschrieben
+werden.
+\begin{table}[H]
+\centering
+\small
+			\begin{tabular}[c]{|l|l|l|}
+			\hline
+			\hline
+				\textbf{Nr.} & \textbf{Anforderung} & \textbf{Priorität}\\
+				\hline\hline
+				1. & Bereitstellung für Standalone und Web & 1\\
+				\hline
+				2. & 	Ähnlicher Aufbau auf unterschiedlichen Platformen & 2 \\
+				\hline
+				3. & Erweiterbarkeit der verwendeten Frameworks & 1\\
+				\hline
+				4.  & Verwendung abstrahierbarer Frameworks & 2\\
+				\hline
+				5. & Ausdrucksstarke Syntax & 3\\
+				\hline
+				\hline
+			\end{tabular}
+		\caption{Prioritäten der Anforderungen an die GUI}
+\label{Tab_PrioAnfGUI}
+\end{table}
+
 \section{Umsetzung der
 Benutzerschnittstellen für mehreren Plattformen in der deg (Ist-Zustand)}
-Für die Umsetzung der primären Anforderung wäre es möglich gewesen für den
-Web-Client und dem Standalone-Client separate GUIs mit unterschiedlichen
-Frameworks zu entwickeln. Die deg hat jedoch eine Lösung erarbeitet mit der es möglich ist, ein einmal
-beschriebenes GUI auf mehrere Plattformen zu protieren. Das reduziert den
-Aufwand zur Entwicklung neuer GUIs, durch eine höhere Abstraktion. Zugleich
-fördert die einmalige Beschreibung auch eine ähnlichen Aufbau der GUI im Web-
-und Standalone-Client. Die Lösung der deg ist das \emph{Multichannel-Framework}
-(MCF).\\
+Die Clients werden in der Programmiersprache Java entwickelt. Für die
+Realsierung des Standalone-Clients wird in der deg das \gloss{Swing}-Framework
+verwendet. Für den Web-Client wird auf \gloss{wingS} zurückgegriffen. Um eine
+Vorstellung des Ist-Zustandes zu vermitteln sind in Abbildung \ref{Abb_Web-Client} und in Abbildung \ref{Abb_Standalone-Client} die GUIs eines \gloss{Zuwendungsblatt} eines \gloss{Förderantrag} für den Web-Client und
+den Standalone-Client abgebildet.\\
+In diesen UIs ist nur ein bestimmter Teil für fachlichen Informationen relevant.
+Dies ist lediglich die Tabelle und die darunter stehenden Buttons, sowies das Bemerkungsfeld (im Web-Client auf der rechten Seite und im
+Standalone-Client in der Mitte). Dieser Bereich des GUI ist in beiden
+Clientsgleich aufgebaut. Andere Teile des GUIs haben derzeit einen
+unterschiedlichen Aufbau, was den unterschiedlichen Frameworks für die
+Umsetzung von Web- und Standalone-Client geschuldet ist.
+\myHugeFigure{web.jpg}{Web-Client: Zuewndungsblatt\cite{DegDKElerIAntragsmappe}}{Web-Client}
+\myBigFigure{standalone.jpg}{Standalone-Client:
+Zuewndungsblatt\cite{DegDKElerIAntragsmappe}}{Standalone-Client}
+Dass der Aufbau der GUI in beiden Clients ähnlich ist, liegt an der
+Umsetzung der GUI, die im folgenden erläutert wird.\\
+Aufgrund von Anforderung Nr. 1 wurden in der
+Vergangenheit zwei GUIs mit unterschiedlichen Frameworks von der deg entiwckelt.
+Dieses Verfahren erwies sich mit komplexer werdenden GUIs als sehr
+ineffizient. Daher hat die deg
+eine Lösung erarbeitet mit der es möglich ist, ein einmal beschriebenes GUI auf mehrere
+Plattformen zu protieren. Durch diese Form der Abstraktion wird der Aufwand der
+Entwicklung neuer GUIs stark reduziert. Somit entstand die Anforderung Nr. 4,
+die damit ebenso erfüllt wurde. Zugleich fördert die einmalige Beschreibung auch eine ähnlichen Aufbau der GUI im Web- und
+Standalone-Client, was der Anfroderung Nr. 2 nachkommt.
+Die Lösung der deg ist das \emph{Multichannel-Framework} (MCF).\\
 Die Architektur des
 Multichannel-Frameworks ist Abbildung \ref{Abb_MC-Framework} zu entnehmen.
 Innerhalb dieses Frameworks werden die GUIs mittels so genannter
@@ -43,9 +94,14 @@ in der Lage ihre GUIs für das \emph{\gloss{Swing}}-Framework und für das \emph{\
 mit nur einer GUI-Beschreibung zu erzeugen.
 
 \section{Probleme des Multichannel-Frameworks}\label{Probleme}
-Beim Einsatz des MCF treten jedoch Probleme auf.
-Das erste Problem bezieht sich auf die integrierten Framworks (Swing und
-wingS). Beide Frameworks sind verwaltet und werden nicht mehr gewartet.
+Beim Einsatz des MCF treten jedoch Probleme auf. Bezogen auf die Anforderungen
+wurden Anforderungen Nr. 3 und 5 nicht umgesetzt. (Fakt ist, dass jede Sprache
+eine gewisse Ausdruckskraft hat. Da in dieser Arbeit versucht wird die
+UI-Entwicklgung mittels einer ausdrucksstarken DSL, die sich auf die Domäne von profil c/s
+bezieht umzusetzen, ist die Ausdrucksstärke herkömmlichen
+Programmiersprachen als unzureichend anzusehen).\\
+Ein weiteres Problem bezieht sich
+auf die integrierten Framworks (Swing und wingS). Beide Frameworks sind veraltet und werden nicht mehr gewartet.
 Um auch in der Zukunft den Anforderungen der Kunden nachkommen zu können müssten
 beide Frameworks von den Entwicklern der deg selbst weiterentwickelt werden.
 Eine andere Möglichkeit wäre es, wenn die deg andere und modernere Frameworks 
@@ -64,23 +120,34 @@ Zusammenfassen sind folgende Probleme des MCF zu nennen:
 \begin{itemize}
   \item verwendeten Frameworks sind inaktuell
   \item Starke Orientierung an Swing
+  \item o.g. Anforderungen werden nicht komplett umgesetzt
 \end{itemize}
 
-Routinearbeiten
+Dazu kommen lästige Routinearbeiten, die in der deg bei der Entwicklung von UIs
+getätigt werden müssen. 
 \begin{itemize}
-  \item 
+  \item Vergebene Bezeichnungen für UI-Komponenten müssen in unterschiedlichen
+  Klassen gepflegt werden. 
+  \item Beim Erstellen von Tabellen müssen viele Methoden überschrieben werden.
+  \item Die Werte für Aufschriften, Größeneinstellungen u.ä. für UI-Komponenten
+  wird bei der deg in Properties-Dateien festgehalten. Das Erstellen und Pflegen
+  wird als Fehleranfällig betrachtet.
 \end{itemize}
+Diese Routinearbeiten werden in Kapitel \ref{Entwicklung des
+Generators für das Generieren von Klassen für das Multichannel-Framework}
+nochmals aufgegriffen und in Verbindung mit der GUI-Architektur von
+profil c/s genauer erläutert.
 
 \section{Zielsetzung}\label{Ziel}
 Das langfristige Ziel der deg bzgl. des MCF ist es, eine Lösung zu entwickeln,
-welche das MCF ablösen kann. Anzustreben ist eine Lösung, die neben den primären
-Anforderungen die sekundären Anforderung besser umsetzt als das MCF.\\
+welche das MCF ablösen kann. Anzustreben ist eine Lösung, die neben der
+Umsetzung der o.g.
+Anforderungen auch die genannten Routinearbeiten eindemmt.\\
 In dieser Arbeit wird ein Ansatz unterschucht, bei dem es möglich ist, die oben
-genannten sekundären Anforderungen besser umzusetzen. Kern des Ansatzen ist eine
-DSL, mit deren Hilfe die UIs beschrieben werden sollen. Eine DSLs kann so
-konzipiert werden, dass sie ausreichend abstrakt, erweiterbar und
-ausdruckstärker ist als das MCF. Die primären Anforderungen dürfen dabei nicht
-außer Acht gelassen werden.\\
+genannten Anforderungen vollständig umzusetzen. Kern des Ansatzen ist eine
+DSL, mit deren Hilfe die UIs beschrieben werden sollen. Eine DSLs könnte so
+konzipiert werden, dass sie ausreichend abstrakt und erweiterbar ist und bzgl.
+der Ausdrucksstäkre das MCF übertrifft.\\
 Die genaue Lösungsidee mittels DSL, welche in dieser Arbeit verfolgt wird, ist
 in Kapitel \ref{Entwicklung einer Lösungsidee} beschrieben.
 

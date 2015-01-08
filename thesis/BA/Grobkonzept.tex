@@ -1,12 +1,143 @@
-\chapter{Aufteilung der Anforderungen auf Sprache und
-Generator}\label{Aufteilung der Anforderungen auf Sprache und
-Generator}
-Die Aufteilung der Anforderung in diesem Kapitel ist nach einigen
-Umsetzungsversuchen entstanden. Grund dafür ist, dass es in der deg keine
-Vorstellungen darüber gab, wie die konkrete Syntax der Sprache letztendlich
-aussehen sollte. Die Überlegungen, Irrtümer und Versuche, die zu dieser
-Aufteilung geführt haben, sind in Kapitel \ref{Entwicklung einer DSL zur
-Beschreibung der GUI in profil c/s} und Kapitel \ref{Entwicklung des Generators
-für das Generieren von Klassen für das Multichannel-Framework} festgehalten.
-\section{Anforderung an die neue DSL}
-\section{Anforderung an den Generators}
+\chapter{Festlegungen für die Entwicklung des Prototyps}\label{Aufteilung der
+Anforderungen auf Sprache und Generator}
+\section{Vorgehensmodell}
+Das Vorgehensmodel für die Entwickler des DSL-Prototypen ist ein inkrementelles
+Model. Das bedeutet, dass mehrere Iterationen durchlaufen werden (inkrementell),
+in denen unterschiedliche Versionen des Prototyps entwickelt werden.
+(vgl. \cite[S.5]{Sauer}) 
+Inkrementellen Modelle können wie in Abbildung
+\ref{Abb_inkrement} dargestellt werden.\\
+Nach der Analyse der Anforderungen wird der
+Prototyp für die aktuelle Iteration entworfen und entwickelt. Im folgenden
+Verlauf werden diese beiden Phasen nicht separiert. An die
+Implementierung und der Vorstellung des Prototypen der aktuellen Version
+schließt sich ein Review an. Innerhalb des Reviews werden weitere Anforderungen
+festgelegt, bestehende Anforderungen geändert oder das gar Änderungen am
+gesamten Konzept gemacht. 
+Das führt wiederum zu einem neuen Entwurf, woran sich eine weitere
+Implementierung anschließt. Dieser Zyklus wird somit mehrmals durchlaufen
+(Iteration). (vgl. \cite[S.5]{Sauer})\\
+\myBigFigure{inkrement.jpg}{Inkrementelles Modell (vgl.
+\cite{SauerVor})}{inkrement}
+\noindent
+Grund für dieses Vorgehen ist, dass in der
+deg bzgl.
+DSL-Entwicklung wenig Know-How existiert. Aus den Iterationen soll so viel Erfahrung uns Wissen wie möglich geschöpft
+werden. Außerdem ist werden somit auch Irrwege aufgezeigt, die bei Entwicklung
+anderer DSLs Beachtung finden können. Weiterhin können Anforderungen flexibel
+angepasst und Missverständnisse reduziert werden, da der Entwicklungsprozess
+transparent ist. (vgl. \cite[S.67]{Sauer})\\
+Der weitere Verlauf (Kapitel \ref{Grobkonzept}, \ref{Entwicklung einer DSL zur
+Beschreibung der GUI in profil c/s} und \ref{Entwicklung des Generators für das
+Generieren von Klassen für das Multichannel-Framework}) werden die
+durchgeführten Iterationen beschrieben. Dabei werden folgende Aspekte
+beleuchtet.
+\begin{itemize}
+  \item \textbf{Vision} (siehe Kapitel \ref{Grobkonzept})\\
+  Dabei wird das Konzpt der DSL beschrieben. Bezogen auf die schematische
+  Darstellung eines inkrementellen Modells (siehe Abbildung \ref{Abb_inkrement})
+  ist die Vision als \emph{vollständige Anforderung} zu betrachten.
+  \item \textbf{Entwicklung}\\
+  Die Entwicklung beschreibt die Phasen \emph{Entwerfen} und
+  \emph{Implementieren}. Sie teilt sich in zwei weitere Bereiche.
+  \begin{itemize}
+  	\item \textbf{Entwicklung der DSL} (siehe Kapitel \ref{Entwicklung einer DSL zur Beschreibung der GUI in profil c/s})
+  	\item \textbf{Entwicklung eines Generators} (siehe Kapitel \ref{Entwicklung des Generators für das Generieren von Klassen für das Multichannel-Framework})
+  \end{itemize}
+\end{itemize}
+
+
+\section{Grobkonzept der DSL-Umgebung (Vision)}\label{Grobkonzept}
+\subsection{1. Iteration}
+Die gesamte DSL-Umgebung soll sich in zwei Bereiche unterteilen. 
+\begin{itemize}
+  \item DSL zur Beschreibung des GUI
+  \item Generator zur Generierung von Code
+\end{itemize}
+In Abbildung \ref{Abb_Konzept_1} sind die Artefakte mit den Aspekten,
+die von ihnen umgesetzt werden sollen dargestellt.
+\myBigFigure{konzept_1.jpg}{Konzeption der DSL-Umgebung (1.
+Iteration)}{Konzept_1}
+\noindent
+Die elementare Aufgabe der GUI-Beschreibung ist es, die UI-Komponenten, die in
+der GUI verwendet werden sollen, zu definieren. Dazu gehören auch
+Beschreibungen bzgl. der Form der Interaktion und den Aktionen, die bei der
+Interaktion ausgeführt werden sollen. Weiterhin sind hierbei die allgemeinen
+Anforderungen aus Kapitel \ref{AllgAnforderungen} zu beachten.\\
+Darüber hinaus sollen die Skripte für die Beschreibung der UIs so
+konzipiert werden, dass es möglich ist, andere GUI-Beschreibungen dort einzubinden.
+Ziel dessen ist es, dass die Entwickler aus mehreren einfachen UIs eine komplexe UI erstellen. Die
+Gefahr die dabei besteht ist, dass mit der Zeit viel einfache Komponenten mit
+ähnlicher Strukturiert entwickelt werden. Da die deg bei den UI-Komponenten von
+profil c/s ein bestimmtes Schema verfolgt (Cooperate Design), sollte dieses
+Problem ausreichend eingedemmt sein. Wichtig ist hierbei zu betonen, dass die DSL keine Sprache sein
+soll, mit der jede GUI beschrieben werden kann. Sie soll lediglich UIs für
+profil c/s beschreiben können. der Vorteil der aus dieser starken
+Modularisierung ergibt, ist dass viele GUI-Beschreibungen wiederverwendet werden
+können. So ist es meiner Meinung nach möglich komplexe UI-Beschreibungen zu
+entwickeln, die in Fachabteilungen fachlichen Konzepten assoziiert werden
+können.\\\\
+Beispielsweise können Suchmasken nach diesem Konzept gestaltet und beliebig
+wiederverwendet und kombiniert werden. Hierzu werden unterschiedliche
+Suchfelder definiert, die aus einem Label und einem Textfeld bestehen
+(Beispiel siehe Abbildung \ref{Abb_suchfeld}).
+\myBigFigure{suchfeld.jpg}{Beispiel: Suchfeld für Name}{suchfeld}
+\noindent
+In eine Suchmaske können mehrere dieser Suchfelder beliebig komponiert werden.
+Der Button für das Starten der Suche darf dabei nicht vergessen werden
+(Beispiel siehe Abbildung \ref{Abb_suchmaske}).
+\myBigFigure{suchmaske.jpg}{Beispiel: Suchmaske}{suchmaske}
+\noindent
+Durch diese Möglichkeit der Komposition können auch komplexere fachliche
+Konzepte auf das UI zu beziehen.\\\\
+Um die miteinander komponierten GUI-Beschreibungen und UI-Komponenten zu
+strukturieren ist es notwendig, dass die GUI-Beschreibung eine Strukturierung vornimmt. Diese soll
+ausreichd abstrakt sein, damit sich diese Struktur auf unterschiedliche
+UI-Frameworks beziehen lässt. Dazu wird die Struktur innerhalb eines GUIs als
+Anordnung von Bereichen betrachtet. In der GUI-Beschreibung werden diesen
+Bereichen die Komponenten zugeordnet. Genauere Informationen über die Anordnung
+dieser Bereiche dürfen nicht enthalten sein, da eine Orientierung an bestimmte
+Layouts bedingt (das ist per Anforderung ausgeschlossen - siehe Kapitel
+\ref{AllgAnforderungen}). Dazu ist weiterhin wichtig, dass den Bereichen
+jeweils nur eine Komponente zugeordnet werden kann. Dadruch wird der Zwang zur
+vorher beschriebenen Komposition von eingebundenen GUI-Beschreibungen und
+definierten UI-Komponenten verstärkt werden.\\
+Der Generator übernimmt die konkrete Anordnung der beschriebenen Bereich. Grund
+dafür ist, dass die Anordung der Komponenten frameworkspezifisch ist
+(teilweise werden unterschiedliche Layoutmanager in unterschiedlichen
+Frameworks unterstützt). Da für jedes eingesetzte Framework ein eigener
+Generator implementiert werden muss (siehe Kapitel \ref{Entwicklung einer
+Lösungsidee}), ist es theoretisch möglich diese Aufgabe weitgehend unabhängig
+von der Beschreibung der verwendeten Komponenten zu erfüllen.\\
+Weiterhin ist der Generator für die Generierung des frameworkspezifischen
+Quell-Codes verantwortlich.
+
+\subsection{2. Iteration}
+Nach dem Review der ersten Version des Prototypen wurde das grundsätzliche
+Konzept um ein Artefakt erweitert (siehe Abbildung \ref{Abb_konzept_2}).
+\myBigFigure{konzept_2.jpg}{Konzeption der DSL-Umgebung (2.
+Iteration)}{konzept_2}
+\noindent
+Eine Änderung, die in dieser Grafik nicht dargestellt wird, ist, dass die
+Aktionen, die bei Interaktionen mit UI-Komponenten ausgeführt werden sollen,
+nicht in der GUI-Beschreibung definiert werden sollen. Grund dafür ist, dass
+diese Aktionen sehr unterschiedliche in der deg sind und somit kaum abstrahiert
+werden können.\\
+Eine weitere Änderung ist, dass die UI-Komponenten, die einer
+GUI-Beschreibungen direkt definiert werden, in einer anderen Beschreibung, wo
+die jene GUI-Beschreibung eingebunden ist, verändert werden können. Dadruch
+werden die wiederverwendeten Beschreibungen anpassbar, was die Flexibilität
+enorm steigert.\\
+Darüber hinaus soll die Möglichkeit bestehen, die bestimmte Werte, welche die
+Attribute von UI-Komponenten annehmen können, in Properties-Dateien auszulagern.
+Dadruch wird die GUI-Beschreibung weitgehend entlastet. Allerdings muss für die
+Zuweisung von UI-Komponenten zu Wert-Beschreibung in der Properties-Datei ein
+Schlüssel definiert werden.\\
+Der Generator muss die festgelegten Properties-Dateien in die Generierung mit
+einbeziehen und ihnen entsprechende Werte entnehmen. Dabei gilt die Festlegung,
+dass wenn in der GUI-Beschreibung ein Wert einem bestimmen Attribut zugewiesen
+ist, wird in der Properties-Datei (wenn eine festgelegt wurde) nicht mehr nach
+diesem Attribut der Komponente gesucht.
+
+\subsection{3. Iteration}
+

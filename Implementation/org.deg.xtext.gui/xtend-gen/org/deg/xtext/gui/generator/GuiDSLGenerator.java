@@ -337,38 +337,27 @@ public class GuiDSLGenerator implements IGenerator {
   }
   
   public CharSequence compileDefinition(final Definition definition) {
-    throw new Error("Unresolved compilation problems:"
-      + "\nCheckboxDefinition cannot be resolved to a type."
-      + "\nRadioboxDefinition cannot be resolved to a type."
-      + "\ncompileCheckbox cannot be resolved"
-      + "\ncompileRadiobox cannot be resolved");
-  }
-  
-  public CharSequence compileCheckbox(final /* CheckboxDefinition */Object definition) {
-    throw new Error("Unresolved compilation problems:"
-      + "\nname cannot be resolved"
-      + "\nname cannot be resolved"
-      + "\nname cannot be resolved"
-      + "\ntext cannot be resolved"
-      + "\nname cannot be resolved");
-  }
-  
-  public CharSequence compileRadiobox(final /* RadioboxDefinition */Object definition) {
-    throw new Error("Unresolved compilation problems:"
-      + "\nname cannot be resolved"
-      + "\nname cannot be resolved"
-      + "\nname cannot be resolved"
-      + "\ntext cannot be resolved"
-      + "\nname cannot be resolved");
-  }
-  
-  public CharSequence compileTextfield(final /* TextfieldDefinition */Object definition) {
-    throw new Error("Unresolved compilation problems:"
-      + "\nname cannot be resolved"
-      + "\nname cannot be resolved"
-      + "\nname cannot be resolved"
-      + "\ntext cannot be resolved"
-      + "\nname cannot be resolved");
+    StringConcatenation _builder = new StringConcatenation();
+    {
+      ComponentDefinition _concreteDefition = definition.getConcreteDefition();
+      String _type = _concreteDefition.getType();
+      boolean _equals = _type.equals("Button");
+      if (_equals) {
+        ComponentDefinition _concreteDefition_1 = definition.getConcreteDefition();
+        CharSequence _compileButton = this.compileButton(((ButtonDefinition) _concreteDefition_1));
+        _builder.append(_compileButton, "");
+        _builder.newLineIfNotEmpty();
+      } else {
+        ComponentDefinition _concreteDefition_2 = definition.getConcreteDefition();
+        CharSequence _compileLabel = this.compileLabel(((LabelDefinition) _concreteDefition_2));
+        _builder.append(_compileLabel, "");
+        _builder.newLineIfNotEmpty();
+      }
+    }
+    String _switchCompiled = this.switchCompiled();
+    _builder.append(_switchCompiled, "");
+    _builder.newLineIfNotEmpty();
+    return _builder;
   }
   
   public CharSequence compileLabel(final LabelDefinition definition) {

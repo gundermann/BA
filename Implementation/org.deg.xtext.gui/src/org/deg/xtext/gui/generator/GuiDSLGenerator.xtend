@@ -8,11 +8,10 @@ import java.util.HashMap
 import java.util.List
 import java.util.Map
 import org.deg.xtext.gui.guiDSL.ButtonDefinition
-import org.deg.xtext.gui.guiDSL.CheckboxDefinition
+
 import org.deg.xtext.gui.guiDSL.Definition
 import org.deg.xtext.gui.guiDSL.LabelDefinition
-import org.deg.xtext.gui.guiDSL.RadioboxDefinition
-import org.deg.xtext.gui.guiDSL.TextfieldDefinition
+
 import org.deg.xtext.gui.guiDSL.UIDescription
 import org.eclipse.emf.ecore.resource.Resource
 import org.eclipse.xtext.generator.IFileSystemAccess
@@ -212,10 +211,10 @@ class GuiDSLGenerator implements IGenerator {
 	def compileDefinition(Definition definition) '''
 		«IF definition.concreteDefition.type.equals("Button")»
 			«(definition.concreteDefition as ButtonDefinition).compileButton»
-		«ELSEIF definition.concreteDefition.type.equals("Checkbox")»
-			«(definition.concreteDefition as CheckboxDefinition).compileCheckbox»
-		«ELSEIF definition.concreteDefition.type.equals("Radiobox")»
-			«(definition.concreteDefition as RadioboxDefinition).compileRadiobox»
+«««		«ELSEIF definition.concreteDefition.type.equals("Checkbox")»
+«««			«(definition.concreteDefition as CheckboxDefinition).compileCheckbox»
+«««		«ELSEIF definition.concreteDefition.type.equals("Radiobox")»
+«««			«(definition.concreteDefition as RadioboxDefinition).compileRadiobox»
 		«ELSE»
 			«(definition.concreteDefition as LabelDefinition).compileLabel»
 		«ENDIF»
@@ -242,29 +241,29 @@ class GuiDSLGenerator implements IGenerator {
 //	'''
 	
 
-	def compileCheckbox(CheckboxDefinition definition) '''
-		«addImport("import javafx.scene.control.CheckBox;")»
-		«addGlobalVar( "CheckBox " + definition.name + ";")»
-			«definition.name» = new CheckBox();
-			«definition.name».setText("«definition.text»");
-			return «definition.name»;
-	'''
+//	def compileCheckbox(CheckboxDefinition definition) '''
+//		«addImport("import javafx.scene.control.CheckBox;")»
+//		«addGlobalVar( "CheckBox " + definition.name + ";")»
+//			«definition.name» = new CheckBox();
+//			«definition.name».setText("«definition.text»");
+//			return «definition.name»;
+//	'''
 	
-	def compileRadiobox(RadioboxDefinition definition) '''
-		«addImport("import javafx.scene.control.RadioButton;")»
-		«addGlobalVar( "RadioButton " + definition.name + ";")»
-			«definition.name» = new RadioButton();
-			«definition.name».setText("«definition.text»");
-			return «definition.name»;
-	'''
+//	def compileRadiobox(RadioboxDefinition definition) '''
+//		«addImport("import javafx.scene.control.RadioButton;")»
+//		«addGlobalVar( "RadioButton " + definition.name + ";")»
+//			«definition.name» = new RadioButton();
+//			«definition.name».setText("«definition.text»");
+//			return «definition.name»;
+//	'''
 	
-	def compileTextfield(TextfieldDefinition definition) '''
-		«addImport("import javafx.scene.control.TextField;")»
-		«addGlobalVar( "TextField " + definition.name + ";")»
-			«definition.name» = new TextField();
-			«definition.name».setText("«definition.text»");
-			return «definition.name»;
-	'''
+//	def compileTextfield(TextfieldDefinition definition) '''
+//		«addImport("import javafx.scene.control.TextField;")»
+//		«addGlobalVar( "TextField " + definition.name + ";")»
+//			«definition.name» = new TextField();
+//			«definition.name».setText("«definition.text»");
+//			return «definition.name»;
+//	'''
 
 	def compileLabel(LabelDefinition definition) '''
 		«addImport("import javafx.scene.control.Label;")»
