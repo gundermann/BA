@@ -102,6 +102,42 @@
 
 
 %----------------------------------------------------------------------------------
+% \dcite	{ Text }
+%				{ source }
+%				{ page }
+%
+%Direktes Zitat
+\newcommand{\dcite}[3]
+{
+\emph{\glqq#1\grqq}\cite[S.#3]{#2}
+}
+
+
+
+%----------------------------------------------------------------------------------
+% \vcite	
+%				{ source }
+%				{ page }
+%
+%Direktes Zitat
+\newcommand{\vcite}[2]
+{
+(vgl. \cite[S.#2]{#1})
+}
+
+
+%----------------------------------------------------------------------------------
+% \vcite	
+%				{ source }
+%				{ page }
+%
+%Direktes Zitat
+\newcommand{\simplevcite}[1]
+{
+(vgl. \cite{#1})
+}
+
+%----------------------------------------------------------------------------------
 % \myHUGEFigure	[ LABEL_PREFIX (optional) ]
 %				{ FILENAME (without extension) }
 %				{ CAPTION TEXT }
