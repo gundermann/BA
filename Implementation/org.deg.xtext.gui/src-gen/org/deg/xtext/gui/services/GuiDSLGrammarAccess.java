@@ -386,22 +386,26 @@ public class GuiDSLGrammarAccess extends AbstractGrammarElementFinder {
 
 	public class TypeElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Type");
-		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final Keyword cWINDOWKeyword_0 = (Keyword)cAlternatives.eContents().get(0);
-		private final Keyword cINNERCOMPLEXKeyword_1 = (Keyword)cAlternatives.eContents().get(1);
+		private final Assignment cIdAssignment = (Assignment)rule.eContents().get(1);
+		private final Alternatives cIdAlternatives_0 = (Alternatives)cIdAssignment.eContents().get(0);
+		private final Keyword cIdWINDOWKeyword_0_0 = (Keyword)cIdAlternatives_0.eContents().get(0);
+		private final Keyword cIdINNERCOMPLEXKeyword_0_1 = (Keyword)cIdAlternatives_0.eContents().get(1);
 		
 		//Type:
-		//	"WINDOW" | "INNERCOMPLEX";
+		//	id=("WINDOW" | "INNERCOMPLEX");
 		public ParserRule getRule() { return rule; }
 
+		//id=("WINDOW" | "INNERCOMPLEX")
+		public Assignment getIdAssignment() { return cIdAssignment; }
+
 		//"WINDOW" | "INNERCOMPLEX"
-		public Alternatives getAlternatives() { return cAlternatives; }
+		public Alternatives getIdAlternatives_0() { return cIdAlternatives_0; }
 
 		//"WINDOW"
-		public Keyword getWINDOWKeyword_0() { return cWINDOWKeyword_0; }
+		public Keyword getIdWINDOWKeyword_0_0() { return cIdWINDOWKeyword_0_0; }
 
 		//"INNERCOMPLEX"
-		public Keyword getINNERCOMPLEXKeyword_1() { return cINNERCOMPLEXKeyword_1; }
+		public Keyword getIdINNERCOMPLEXKeyword_0_1() { return cIdINNERCOMPLEXKeyword_0_1; }
 	}
 
 	public class UIDescriptionImportElements extends AbstractParserRuleElementFinder {
@@ -524,65 +528,84 @@ public class GuiDSLGrammarAccess extends AbstractGrammarElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Properties");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cHyphenMinusGreaterThanSignKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
-		private final Keyword cPropertyKeyKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
-		private final Assignment cPropertyKeyAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
-		private final RuleCall cPropertyKeySTRINGTerminalRuleCall_1_1_0 = (RuleCall)cPropertyKeyAssignment_1_1.eContents().get(0);
-		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
-		private final Keyword cTextKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
-		private final Assignment cTextAssignment_2_1 = (Assignment)cGroup_2.eContents().get(1);
-		private final RuleCall cTextSTRINGTerminalRuleCall_2_1_0 = (RuleCall)cTextAssignment_2_1.eContents().get(0);
-		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
-		private final Keyword cInteractiontypeKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
-		private final Assignment cInteractiontypeAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
-		private final RuleCall cInteractiontypeInteractiontypeParserRuleCall_3_1_0 = (RuleCall)cInteractiontypeAssignment_3_1.eContents().get(0);
+		private final Assignment cPropertiesDefinitionsAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cPropertiesDefinitionsPropertiesDefinitionParserRuleCall_1_0 = (RuleCall)cPropertiesDefinitionsAssignment_1.eContents().get(0);
 		
 		//Properties:
-		//	"->" ("propertyKey=" propertyKey=STRING)? ("text=" text=STRING)? ("interactiontype="
-		//	interactiontype+=Interactiontype+)?;
+		//	"->" propertiesDefinitions+=PropertiesDefinition+;
 		public ParserRule getRule() { return rule; }
 
-		//"->" ("propertyKey=" propertyKey=STRING)? ("text=" text=STRING)? ("interactiontype=" interactiontype+=Interactiontype+)?
+		//"->" propertiesDefinitions+=PropertiesDefinition+
 		public Group getGroup() { return cGroup; }
 
 		//"->"
 		public Keyword getHyphenMinusGreaterThanSignKeyword_0() { return cHyphenMinusGreaterThanSignKeyword_0; }
 
-		//("propertyKey=" propertyKey=STRING)?
-		public Group getGroup_1() { return cGroup_1; }
+		//propertiesDefinitions+=PropertiesDefinition+
+		public Assignment getPropertiesDefinitionsAssignment_1() { return cPropertiesDefinitionsAssignment_1; }
+
+		//PropertiesDefinition
+		public RuleCall getPropertiesDefinitionsPropertiesDefinitionParserRuleCall_1_0() { return cPropertiesDefinitionsPropertiesDefinitionParserRuleCall_1_0; }
+	}
+
+	public class PropertiesDefinitionElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "PropertiesDefinition");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final Group cGroup_0 = (Group)cAlternatives.eContents().get(0);
+		private final Keyword cPropertyKeyKeyword_0_0 = (Keyword)cGroup_0.eContents().get(0);
+		private final Assignment cPropertyKeyAssignment_0_1 = (Assignment)cGroup_0.eContents().get(1);
+		private final RuleCall cPropertyKeySTRINGTerminalRuleCall_0_1_0 = (RuleCall)cPropertyKeyAssignment_0_1.eContents().get(0);
+		private final Group cGroup_1 = (Group)cAlternatives.eContents().get(1);
+		private final Keyword cTextKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
+		private final Assignment cTextAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
+		private final RuleCall cTextSTRINGTerminalRuleCall_1_1_0 = (RuleCall)cTextAssignment_1_1.eContents().get(0);
+		private final Group cGroup_2 = (Group)cAlternatives.eContents().get(2);
+		private final Keyword cInteractiontypeKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
+		private final Assignment cInteractiontypeAssignment_2_1 = (Assignment)cGroup_2.eContents().get(1);
+		private final RuleCall cInteractiontypeInteractiontypeParserRuleCall_2_1_0 = (RuleCall)cInteractiontypeAssignment_2_1.eContents().get(0);
+		
+		//PropertiesDefinition:
+		//	"propertyKey=" propertyKey=STRING | "text=" text=STRING | "interactiontype=" interactiontype+=Interactiontype+;
+		public ParserRule getRule() { return rule; }
+
+		//"propertyKey=" propertyKey=STRING | "text=" text=STRING | "interactiontype=" interactiontype+=Interactiontype+
+		public Alternatives getAlternatives() { return cAlternatives; }
+
+		//"propertyKey=" propertyKey=STRING
+		public Group getGroup_0() { return cGroup_0; }
 
 		//"propertyKey="
-		public Keyword getPropertyKeyKeyword_1_0() { return cPropertyKeyKeyword_1_0; }
+		public Keyword getPropertyKeyKeyword_0_0() { return cPropertyKeyKeyword_0_0; }
 
 		//propertyKey=STRING
-		public Assignment getPropertyKeyAssignment_1_1() { return cPropertyKeyAssignment_1_1; }
+		public Assignment getPropertyKeyAssignment_0_1() { return cPropertyKeyAssignment_0_1; }
 
 		//STRING
-		public RuleCall getPropertyKeySTRINGTerminalRuleCall_1_1_0() { return cPropertyKeySTRINGTerminalRuleCall_1_1_0; }
+		public RuleCall getPropertyKeySTRINGTerminalRuleCall_0_1_0() { return cPropertyKeySTRINGTerminalRuleCall_0_1_0; }
 
-		//("text=" text=STRING)?
-		public Group getGroup_2() { return cGroup_2; }
+		//"text=" text=STRING
+		public Group getGroup_1() { return cGroup_1; }
 
 		//"text="
-		public Keyword getTextKeyword_2_0() { return cTextKeyword_2_0; }
+		public Keyword getTextKeyword_1_0() { return cTextKeyword_1_0; }
 
 		//text=STRING
-		public Assignment getTextAssignment_2_1() { return cTextAssignment_2_1; }
+		public Assignment getTextAssignment_1_1() { return cTextAssignment_1_1; }
 
 		//STRING
-		public RuleCall getTextSTRINGTerminalRuleCall_2_1_0() { return cTextSTRINGTerminalRuleCall_2_1_0; }
+		public RuleCall getTextSTRINGTerminalRuleCall_1_1_0() { return cTextSTRINGTerminalRuleCall_1_1_0; }
 
-		//("interactiontype=" interactiontype+=Interactiontype+)?
-		public Group getGroup_3() { return cGroup_3; }
+		//"interactiontype=" interactiontype+=Interactiontype+
+		public Group getGroup_2() { return cGroup_2; }
 
 		//"interactiontype="
-		public Keyword getInteractiontypeKeyword_3_0() { return cInteractiontypeKeyword_3_0; }
+		public Keyword getInteractiontypeKeyword_2_0() { return cInteractiontypeKeyword_2_0; }
 
 		//interactiontype+=Interactiontype+
-		public Assignment getInteractiontypeAssignment_3_1() { return cInteractiontypeAssignment_3_1; }
+		public Assignment getInteractiontypeAssignment_2_1() { return cInteractiontypeAssignment_2_1; }
 
 		//Interactiontype
-		public RuleCall getInteractiontypeInteractiontypeParserRuleCall_3_1_0() { return cInteractiontypeInteractiontypeParserRuleCall_3_1_0; }
+		public RuleCall getInteractiontypeInteractiontypeParserRuleCall_2_1_0() { return cInteractiontypeInteractiontypeParserRuleCall_2_1_0; }
 	}
 
 	public class LabelDefinitionElements extends AbstractParserRuleElementFinder {
@@ -627,22 +650,26 @@ public class GuiDSLGrammarAccess extends AbstractGrammarElementFinder {
 
 	public class InteractiontypeElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Interactiontype");
-		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final Keyword cClickKeyword_0 = (Keyword)cAlternatives.eContents().get(0);
-		private final Keyword cChangeTextKeyword_1 = (Keyword)cAlternatives.eContents().get(1);
+		private final Assignment cIdAssignment = (Assignment)rule.eContents().get(1);
+		private final Alternatives cIdAlternatives_0 = (Alternatives)cIdAssignment.eContents().get(0);
+		private final Keyword cIdClickKeyword_0_0 = (Keyword)cIdAlternatives_0.eContents().get(0);
+		private final Keyword cIdChangeTextKeyword_0_1 = (Keyword)cIdAlternatives_0.eContents().get(1);
 		
 		//Interactiontype:
-		//	"Click" | "ChangeText";
+		//	id=("Click" | "ChangeText");
 		public ParserRule getRule() { return rule; }
 
+		//id=("Click" | "ChangeText")
+		public Assignment getIdAssignment() { return cIdAssignment; }
+
 		//"Click" | "ChangeText"
-		public Alternatives getAlternatives() { return cAlternatives; }
+		public Alternatives getIdAlternatives_0() { return cIdAlternatives_0; }
 
 		//"Click"
-		public Keyword getClickKeyword_0() { return cClickKeyword_0; }
+		public Keyword getIdClickKeyword_0_0() { return cIdClickKeyword_0_0; }
 
 		//"ChangeText"
-		public Keyword getChangeTextKeyword_1() { return cChangeTextKeyword_1; }
+		public Keyword getIdChangeTextKeyword_0_1() { return cIdChangeTextKeyword_0_1; }
 	}
 	
 	
@@ -666,6 +693,7 @@ public class GuiDSLGrammarAccess extends AbstractGrammarElementFinder {
 	private final ComponentDefinitionElements pComponentDefinition;
 	private final ButtonDefinitionElements pButtonDefinition;
 	private final PropertiesElements pProperties;
+	private final PropertiesDefinitionElements pPropertiesDefinition;
 	private final LabelDefinitionElements pLabelDefinition;
 	private final InteractiontypeElements pInteractiontype;
 	private final TerminalRule tWS;
@@ -699,6 +727,7 @@ public class GuiDSLGrammarAccess extends AbstractGrammarElementFinder {
 		this.pComponentDefinition = new ComponentDefinitionElements();
 		this.pButtonDefinition = new ButtonDefinitionElements();
 		this.pProperties = new PropertiesElements();
+		this.pPropertiesDefinition = new PropertiesDefinitionElements();
 		this.pLabelDefinition = new LabelDefinitionElements();
 		this.pInteractiontype = new InteractiontypeElements();
 		this.tWS = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "WS");
@@ -853,7 +882,7 @@ public class GuiDSLGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Type:
-	//	"WINDOW" | "INNERCOMPLEX";
+	//	id=("WINDOW" | "INNERCOMPLEX");
 	public TypeElements getTypeAccess() {
 		return pType;
 	}
@@ -919,14 +948,23 @@ public class GuiDSLGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Properties:
-	//	"->" ("propertyKey=" propertyKey=STRING)? ("text=" text=STRING)? ("interactiontype="
-	//	interactiontype+=Interactiontype+)?;
+	//	"->" propertiesDefinitions+=PropertiesDefinition+;
 	public PropertiesElements getPropertiesAccess() {
 		return pProperties;
 	}
 	
 	public ParserRule getPropertiesRule() {
 		return getPropertiesAccess().getRule();
+	}
+
+	//PropertiesDefinition:
+	//	"propertyKey=" propertyKey=STRING | "text=" text=STRING | "interactiontype=" interactiontype+=Interactiontype+;
+	public PropertiesDefinitionElements getPropertiesDefinitionAccess() {
+		return pPropertiesDefinition;
+	}
+	
+	public ParserRule getPropertiesDefinitionRule() {
+		return getPropertiesDefinitionAccess().getRule();
 	}
 
 	//LabelDefinition:
@@ -940,7 +978,7 @@ public class GuiDSLGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Interactiontype:
-	//	"Click" | "ChangeText";
+	//	id=("Click" | "ChangeText");
 	public InteractiontypeElements getInteractiontypeAccess() {
 		return pInteractiontype;
 	}

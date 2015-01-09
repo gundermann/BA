@@ -44,7 +44,10 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GuiDSL.ecore#//Definition/concreteDefition"/>
     </genClasses>
     <genClasses ecoreClass="GuiDSL.ecore#//TypeDefinition">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GuiDSL.ecore#//TypeDefinition/type"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GuiDSL.ecore#//TypeDefinition/type"/>
+    </genClasses>
+    <genClasses ecoreClass="GuiDSL.ecore#//Type">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GuiDSL.ecore#//Type/id"/>
     </genClasses>
     <genClasses ecoreClass="GuiDSL.ecore#//UIDescriptionImport">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GuiDSL.ecore#//UIDescriptionImport/descriptionName"/>
@@ -61,10 +64,16 @@
     </genClasses>
     <genClasses ecoreClass="GuiDSL.ecore#//ButtonDefinition"/>
     <genClasses ecoreClass="GuiDSL.ecore#//Properties">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GuiDSL.ecore#//Properties/propertyKey"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GuiDSL.ecore#//Properties/text"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GuiDSL.ecore#//Properties/interactiontype"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GuiDSL.ecore#//Properties/propertiesDefinitions"/>
+    </genClasses>
+    <genClasses ecoreClass="GuiDSL.ecore#//PropertiesDefinition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GuiDSL.ecore#//PropertiesDefinition/propertyKey"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GuiDSL.ecore#//PropertiesDefinition/text"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GuiDSL.ecore#//PropertiesDefinition/interactiontype"/>
     </genClasses>
     <genClasses ecoreClass="GuiDSL.ecore#//LabelDefinition"/>
+    <genClasses ecoreClass="GuiDSL.ecore#//Interactiontype">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GuiDSL.ecore#//Interactiontype/id"/>
+    </genClasses>
   </genPackages>
 </genmodel:GenModel>

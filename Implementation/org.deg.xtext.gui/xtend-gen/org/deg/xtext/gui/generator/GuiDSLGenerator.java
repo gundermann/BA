@@ -12,6 +12,7 @@ import org.deg.xtext.gui.guiDSL.ButtonDefinition;
 import org.deg.xtext.gui.guiDSL.ComponentDefinition;
 import org.deg.xtext.gui.guiDSL.Definition;
 import org.deg.xtext.gui.guiDSL.LabelDefinition;
+import org.deg.xtext.gui.guiDSL.Type;
 import org.deg.xtext.gui.guiDSL.TypeDefinition;
 import org.deg.xtext.gui.guiDSL.UIDescription;
 import org.eclipse.emf.common.util.TreeIterator;
@@ -59,7 +60,7 @@ public class GuiDSLGenerator implements IGenerator {
     for (final UIDescription d : _filter_1) {
       {
         TypeDefinition _typeDefinition = d.getTypeDefinition();
-        String _type = _typeDefinition.getType();
+        Type _type = _typeDefinition.getType();
         boolean _equals = _type.equals("WINDOW");
         if (_equals) {
           CharSequence source = this.compileWindow(d);

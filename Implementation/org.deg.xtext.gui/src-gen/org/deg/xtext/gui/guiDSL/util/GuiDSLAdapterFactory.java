@@ -135,6 +135,11 @@ public class GuiDSLAdapterFactory extends AdapterFactoryImpl
         return createTypeDefinitionAdapter();
       }
       @Override
+      public Adapter caseType(Type object)
+      {
+        return createTypeAdapter();
+      }
+      @Override
       public Adapter caseUIDescriptionImport(UIDescriptionImport object)
       {
         return createUIDescriptionImportAdapter();
@@ -165,9 +170,19 @@ public class GuiDSLAdapterFactory extends AdapterFactoryImpl
         return createPropertiesAdapter();
       }
       @Override
+      public Adapter casePropertiesDefinition(PropertiesDefinition object)
+      {
+        return createPropertiesDefinitionAdapter();
+      }
+      @Override
       public Adapter caseLabelDefinition(LabelDefinition object)
       {
         return createLabelDefinitionAdapter();
+      }
+      @Override
+      public Adapter caseInteractiontype(Interactiontype object)
+      {
+        return createInteractiontypeAdapter();
       }
       @Override
       public Adapter defaultCase(EObject object)
@@ -372,6 +387,21 @@ public class GuiDSLAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
+   * Creates a new adapter for an object of class '{@link org.deg.xtext.gui.guiDSL.Type <em>Type</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.deg.xtext.gui.guiDSL.Type
+   * @generated
+   */
+  public Adapter createTypeAdapter()
+  {
+    return null;
+  }
+
+  /**
    * Creates a new adapter for an object of class '{@link org.deg.xtext.gui.guiDSL.UIDescriptionImport <em>UI Description Import</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -462,6 +492,21 @@ public class GuiDSLAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
+   * Creates a new adapter for an object of class '{@link org.deg.xtext.gui.guiDSL.PropertiesDefinition <em>Properties Definition</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.deg.xtext.gui.guiDSL.PropertiesDefinition
+   * @generated
+   */
+  public Adapter createPropertiesDefinitionAdapter()
+  {
+    return null;
+  }
+
+  /**
    * Creates a new adapter for an object of class '{@link org.deg.xtext.gui.guiDSL.LabelDefinition <em>Label Definition</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -472,6 +517,21 @@ public class GuiDSLAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createLabelDefinitionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.deg.xtext.gui.guiDSL.Interactiontype <em>Interactiontype</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.deg.xtext.gui.guiDSL.Interactiontype
+   * @generated
+   */
+  public Adapter createInteractiontypeAdapter()
   {
     return null;
   }

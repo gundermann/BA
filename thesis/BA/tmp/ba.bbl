@@ -68,6 +68,14 @@
   \btxvolumelong{}\ 5. Auflage.
 \newblock Oldenbourg Verlag, 2012.
 
+\bibitem[Hof06]{hofer}
+{\sc Hofer, Stefan~Michael}: {\em Refactoring-Muster der
+  WAM-Modellarchitektur}.
+\newblock \btxmastthesis{}, FH Ober{\"o}sterreich, 2006.
+\newblock Online verfügbar
+  URL:http://swt-www.informatik.uni-hamburg.de/uploads/media/DA\_StefanHofer.pdf
+  . Zuletzt eingesehen am 09.01.2015.
+
 \bibitem[KB11]{10}
 {\sc Krishnaswami, {Neelakantan R.}} \btxandlong{}\ {\sc Nick Benton}: {\em A
   Semantic Model for Graphical User Interfaces}.
@@ -123,7 +131,7 @@
   Problems and Selling Ideas with Pictures}.
 \newblock Penguin, New York, Expanded \btxeditionlong{}, 2009.
 
-\bibitem[Sau10]{Sauer}
+\bibitem[Sau10]{sauer}
 {\sc Sauer, Joachim}: {\em Architekturzentrierte agile Anwendungsentwicklung in
   global verteilten Projekten}.
 \newblock \btxphdthesis{}, Universität Hamburg, 2010.
@@ -135,6 +143,24 @@
 {\sc Sauer, {Dr. Joachim}}: {\em Vorlesung Softwaretechnik Teil 1 (4. Quartal
   2013) Abschitt 2}.
 \newblock Nordakademie, 2013.
+
+\bibitem[Sch05]{schmelzer}
+{\sc Schmelzer, Robert~Franz}: {\em Realisierung teilautomatisierter Prozesse
+  durch die Kombination von Ablaufsteuerung und unterst{\"u}tzter Kooperation}.
+\newblock \btxmastthesis{}, FH Ober{\"o}sterreich, 2005.
+\newblock Online verfügbar
+  URL:http://www.schmelzer.cc/Downloads/Files/Diplomarbeit\_Schmelzer.pdf .
+  Zuletzt eingesehen am 09.01.2015.
+
+\bibitem[SdS03]{sauerDip}
+{\sc Sauer, Joachim} \btxandlong{}\ {\sc Ausgew{\"a}hlte~Themen der
+  Softwaretechnik}: {\em Gestaltung von Anwendungssoftware nach dem WAM-Ansatz
+  auf mobilen Ger{\"a}ten}.
+\newblock \btxmastthesis{}, Fachbereich Informatik, Universit{\"a}t Hamburg,
+  2003.
+\newblock Online verfügbar
+  URL:http://swt-www.informatik.uni-hamburg.de/uploads/media/Diplomarbeit\_Joachim\_Sauer.pdf
+  . Zuletzt eingesehen am 09.01.2015.
 
 \bibitem[SKNH05]{3}
 {\sc Sukaviriya, Noi}, {\sc Santhosh Kumaran}, {\sc Prabir Nandi}

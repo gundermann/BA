@@ -12,13 +12,16 @@ import org.deg.xtext.gui.guiDSL.DescriptionType;
 import org.deg.xtext.gui.guiDSL.Element;
 import org.deg.xtext.gui.guiDSL.GuiDSLFactory;
 import org.deg.xtext.gui.guiDSL.GuiDSLPackage;
+import org.deg.xtext.gui.guiDSL.Interactiontype;
 import org.deg.xtext.gui.guiDSL.LabelDefinition;
 import org.deg.xtext.gui.guiDSL.LabelRefinement;
 import org.deg.xtext.gui.guiDSL.Multiselection;
 import org.deg.xtext.gui.guiDSL.Properties;
+import org.deg.xtext.gui.guiDSL.PropertiesDefinition;
 import org.deg.xtext.gui.guiDSL.Property;
 import org.deg.xtext.gui.guiDSL.Refinement;
 import org.deg.xtext.gui.guiDSL.Structure;
+import org.deg.xtext.gui.guiDSL.Type;
 import org.deg.xtext.gui.guiDSL.TypeDefinition;
 import org.deg.xtext.gui.guiDSL.UIDescription;
 import org.deg.xtext.gui.guiDSL.UIDescriptionImport;
@@ -128,6 +131,13 @@ public class GuiDSLPackageImpl extends EPackageImpl implements GuiDSLPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  private EClass typeEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   private EClass uiDescriptionImportEClass = null;
 
   /**
@@ -170,7 +180,21 @@ public class GuiDSLPackageImpl extends EPackageImpl implements GuiDSLPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  private EClass propertiesDefinitionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   private EClass labelDefinitionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass interactiontypeEClass = null;
 
   /**
    * Creates an instance of the model <b>Package</b>, registered with
@@ -530,9 +554,29 @@ public class GuiDSLPackageImpl extends EPackageImpl implements GuiDSLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getTypeDefinition_Type()
+  public EReference getTypeDefinition_Type()
   {
-    return (EAttribute)typeDefinitionEClass.getEStructuralFeatures().get(0);
+    return (EReference)typeDefinitionEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getType()
+  {
+    return typeEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getType_Id()
+  {
+    return (EAttribute)typeEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -660,9 +704,9 @@ public class GuiDSLPackageImpl extends EPackageImpl implements GuiDSLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getProperties_PropertyKey()
+  public EReference getProperties_PropertiesDefinitions()
   {
-    return (EAttribute)propertiesEClass.getEStructuralFeatures().get(0);
+    return (EReference)propertiesEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -670,9 +714,9 @@ public class GuiDSLPackageImpl extends EPackageImpl implements GuiDSLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getProperties_Text()
+  public EClass getPropertiesDefinition()
   {
-    return (EAttribute)propertiesEClass.getEStructuralFeatures().get(1);
+    return propertiesDefinitionEClass;
   }
 
   /**
@@ -680,9 +724,29 @@ public class GuiDSLPackageImpl extends EPackageImpl implements GuiDSLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getProperties_Interactiontype()
+  public EAttribute getPropertiesDefinition_PropertyKey()
   {
-    return (EAttribute)propertiesEClass.getEStructuralFeatures().get(2);
+    return (EAttribute)propertiesDefinitionEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getPropertiesDefinition_Text()
+  {
+    return (EAttribute)propertiesDefinitionEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getPropertiesDefinition_Interactiontype()
+  {
+    return (EReference)propertiesDefinitionEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -693,6 +757,26 @@ public class GuiDSLPackageImpl extends EPackageImpl implements GuiDSLPackage
   public EClass getLabelDefinition()
   {
     return labelDefinitionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getInteractiontype()
+  {
+    return interactiontypeEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getInteractiontype_Id()
+  {
+    return (EAttribute)interactiontypeEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -765,7 +849,10 @@ public class GuiDSLPackageImpl extends EPackageImpl implements GuiDSLPackage
     createEReference(definitionEClass, DEFINITION__CONCRETE_DEFITION);
 
     typeDefinitionEClass = createEClass(TYPE_DEFINITION);
-    createEAttribute(typeDefinitionEClass, TYPE_DEFINITION__TYPE);
+    createEReference(typeDefinitionEClass, TYPE_DEFINITION__TYPE);
+
+    typeEClass = createEClass(TYPE);
+    createEAttribute(typeEClass, TYPE__ID);
 
     uiDescriptionImportEClass = createEClass(UI_DESCRIPTION_IMPORT);
     createEAttribute(uiDescriptionImportEClass, UI_DESCRIPTION_IMPORT__DESCRIPTION_NAME);
@@ -784,11 +871,17 @@ public class GuiDSLPackageImpl extends EPackageImpl implements GuiDSLPackage
     buttonDefinitionEClass = createEClass(BUTTON_DEFINITION);
 
     propertiesEClass = createEClass(PROPERTIES);
-    createEAttribute(propertiesEClass, PROPERTIES__PROPERTY_KEY);
-    createEAttribute(propertiesEClass, PROPERTIES__TEXT);
-    createEAttribute(propertiesEClass, PROPERTIES__INTERACTIONTYPE);
+    createEReference(propertiesEClass, PROPERTIES__PROPERTIES_DEFINITIONS);
+
+    propertiesDefinitionEClass = createEClass(PROPERTIES_DEFINITION);
+    createEAttribute(propertiesDefinitionEClass, PROPERTIES_DEFINITION__PROPERTY_KEY);
+    createEAttribute(propertiesDefinitionEClass, PROPERTIES_DEFINITION__TEXT);
+    createEReference(propertiesDefinitionEClass, PROPERTIES_DEFINITION__INTERACTIONTYPE);
 
     labelDefinitionEClass = createEClass(LABEL_DEFINITION);
+
+    interactiontypeEClass = createEClass(INTERACTIONTYPE);
+    createEAttribute(interactiontypeEClass, INTERACTIONTYPE__ID);
   }
 
   /**
@@ -869,7 +962,10 @@ public class GuiDSLPackageImpl extends EPackageImpl implements GuiDSLPackage
     initEReference(getDefinition_ConcreteDefition(), this.getComponentDefinition(), null, "concreteDefition", null, 0, 1, Definition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(typeDefinitionEClass, TypeDefinition.class, "TypeDefinition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getTypeDefinition_Type(), ecorePackage.getEString(), "type", null, 0, 1, TypeDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getTypeDefinition_Type(), this.getType(), null, "type", null, 0, 1, TypeDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(typeEClass, Type.class, "Type", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getType_Id(), ecorePackage.getEString(), "id", null, 0, 1, Type.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(uiDescriptionImportEClass, UIDescriptionImport.class, "UIDescriptionImport", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getUIDescriptionImport_DescriptionName(), ecorePackage.getEString(), "descriptionName", null, 0, 1, UIDescriptionImport.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -888,11 +984,17 @@ public class GuiDSLPackageImpl extends EPackageImpl implements GuiDSLPackage
     initEClass(buttonDefinitionEClass, ButtonDefinition.class, "ButtonDefinition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
     initEClass(propertiesEClass, Properties.class, "Properties", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getProperties_PropertyKey(), ecorePackage.getEString(), "propertyKey", null, 0, 1, Properties.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getProperties_Text(), ecorePackage.getEString(), "text", null, 0, 1, Properties.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getProperties_Interactiontype(), ecorePackage.getEString(), "interactiontype", null, 0, -1, Properties.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getProperties_PropertiesDefinitions(), this.getPropertiesDefinition(), null, "propertiesDefinitions", null, 0, -1, Properties.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(propertiesDefinitionEClass, PropertiesDefinition.class, "PropertiesDefinition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getPropertiesDefinition_PropertyKey(), ecorePackage.getEString(), "propertyKey", null, 0, 1, PropertiesDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getPropertiesDefinition_Text(), ecorePackage.getEString(), "text", null, 0, 1, PropertiesDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getPropertiesDefinition_Interactiontype(), this.getInteractiontype(), null, "interactiontype", null, 0, -1, PropertiesDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(labelDefinitionEClass, LabelDefinition.class, "LabelDefinition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(interactiontypeEClass, Interactiontype.class, "Interactiontype", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getInteractiontype_Id(), ecorePackage.getEString(), "id", null, 0, 1, Interactiontype.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     // Create resource
     createResource(eNS_URI);

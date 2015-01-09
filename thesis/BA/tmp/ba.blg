@@ -8,6 +8,21 @@ A level-1 auxiliary file: Loesungsidee.aux
 A level-1 auxiliary file: GUIDSL.aux
 A level-1 auxiliary file: Framework.aux
 A level-1 auxiliary file: Grobkonzept.aux
+Case mismatch error between cite keys Sauer and sauer
+---line 3 of file Grobkonzept.aux
+ : \citation{Sauer
+ :                }
+I'm skipping whatever remains of this command
+Case mismatch error between cite keys Sauer and sauer
+---line 4 of file Grobkonzept.aux
+ : \citation{Sauer
+ :                }
+I'm skipping whatever remains of this command
+Case mismatch error between cite keys Sauer and sauer
+---line 11 of file Grobkonzept.aux
+ : \citation{Sauer
+ :                }
+I'm skipping whatever remains of this command
 A level-1 auxiliary file: EntwerfenDSL.aux
 A level-1 auxiliary file: EntwicklungGen.aux
 A level-1 auxiliary file: Fazit.aux
@@ -21,4 +36,4 @@ Warning--empty author and editor in brauer2010dsl
 Warning--empty author and editor in ghosh
 Warning--empty year in 1
 Warning--empty author and editor in mdsdvoelter
-(There were 8 warnings)
+(There were 3 error messages)

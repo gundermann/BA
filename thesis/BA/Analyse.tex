@@ -52,6 +52,7 @@ werden.
 
 \section{Umsetzung der
 Benutzerschnittstellen für mehreren Plattformen in der deg (Ist-Zustand)}
+\subsection{Multichannel-Framework}
 Die Clients werden in der Programmiersprache Java entwickelt. Für die
 Realsierung des Standalone-Clients wird in der deg das \gloss{Swing}-Framework
 verwendet. Für den Web-Client wird auf \gloss{wingS} zurückgegriffen. Um eine
@@ -86,12 +87,68 @@ Innerhalb dieses Frameworks werden die GUIs mittels so genannter
 Multichannel-Frameworks\cite{jwammc}}{MC-Framework}
 Aus Präsentationsformen mithilfe der
 \emph{Component-Factories} GUIs erzeugt werden, die auf unterschiedlichen
-Frameworks basieren\footnote{Hier: Swing, ULC und WingS. Wobei ULC bei der deg
+Frameworks basieren\footnote{Hier: Swing, ULC und wingS. Wobei ULC bei der deg
 nicht mehr im Einsatz ist.} und das \emph{Component-Interface} implementieren.
 Das \emph{Component-Interface} wird für die Interaktion mit den
 Komponenten der unterschiedlichen Frameworks benötigt. Mit dem MCF ist die deg
 in der Lage ihre GUIs für das \emph{\gloss{Swing}}-Framework und für das \emph{\gloss{wingS}}-Framework 
-mit nur einer GUI-Beschreibung zu erzeugen.
+mit nur einer GUI-Beschreibung zu erzeugen.\\
+Wie bereits erwähnt werden die Clients mit Java entwickelt. Für die Architektur
+der Clients wird der WAM-Ansatz verwendet, welcher im folgenden Kapitel kurz
+erläutert wird.
+\subsection{JWAM}
+\emph{JWAM ist eine Realisierung des WAM-Ansatzes in der Programmiersprache
+Java} \cite[S.30]{sauerDip}\\\\
+\emph{WAM} steht für Werkzeug und Material-Ansatz. Es handelt sich dabei um
+einen Ansatz zur Softwarearchitektur, welcher die Anwendungsorientierung der
+Softwareentwicklung fördert und fordert. Der Benutzer der Software steht im
+Mittelpunkt, wodurch die Gestaltung der Funktionalitäten, Benutzerschnittstellen
+und die des Entwicklungs- und Implementierungsprozesses beeinflusst wird. (vgl.
+\cite[S.13]{schmelzer}) Weiterhin werden Entwurfsmethaphern verwendet, die den
+Entwicklern und Anwendern das Entwicklen und Verstehen der Software vereinfachen
+sollen. (vgl. \cite[S.30]{sauerDip}) Diese Entwurfsmethapher beschreiben
+\emph{[\ldots] Elemente und Konzepte der Anwendung durch bildhafte
+Vorstellungen von realen Gegenständen [\ldots]} \cite[S.30]{sauerDip}.
+Die grundlegendes Methaphern werden hier kurz erläutert. Ein \emph{Material}
+können nicht direkt vom Nutzer bearbeitet werden. Sie besitzen jedoch eine
+Schnittstelle, die fachliche Operationen erlaubt. Diese Operationen können
+bspw. von einem \emph{Werkzeug} aufgerufen werden, um den Zustand des Materials
+zu verändern. Dabei verfügen Werkzeuge über eine Präsentation und geben somit
+eine Handhabung vor. \emph{Automaten} können selbstständig Routinearbeiten
+erledigen. (vgl. \cite[S.30]{sauerDip}) Sie können ebenfalls Materialien
+bearbeiten. (vgl. \cite[S.14]{schmelzer}) Gegenstände, die mit diesen Methaphern
+assoziiert werden, können in \emph{Arbeitsumgebungen} abgelegt werden. Dabei werden zwei Arbeitsumgebungen
+unterschieden. Erstens die persönlichen Arbeitsplätze der Benutzer und Räume der
+Arbeitsumgebung, die für alle zugänglich sind und über die somit die
+Zusammenarbeit statt findet. (vgl. \cite[S.31]{sauerDip},
+\cite[S.15]{schmelzer}) Darüber hinaus gibt des \emph{fachliche Services}, die
+als Dienstleistern Funktionalität zur Verfügung stellen. Diese können
+Materialien verwalten, verfügen jedoch über keine eigene Präsentation.
+(vgl. \cite[S.30f]{sauerDip})\\
+Durch fachliche Services ist mit dem WAM-Ansatz Multi-Channeling möglich.
+(vgl. \cite[S.42]{sauerDip}) Das Multi-Channeling des WAM-Ansatzes setzt
+dabei auf einer anderen Ebene an als das MCF. Das Multi-Channeling des
+WAM-Ansatzes basiert darauf, dass \emph{[\ldots] Funktionalität
+unabhängig von der konkreten Handhabung, Präsentation und Technik
+bereitgestellt wird.} \cite[S.42]{sauer} Das MCF hingegen basiert darauf, dass
+eine Präsentation und abhängig von der Technik bereitgestellt werden kann. Es
+setzt demnach ein einer höheren Ebene an, als das Multi-Channeling des
+WAM-Ansatzes. Die Mechanismen, die das Multi-Channeling im WAM-Ansatz
+werden jedoch auch im MCF verwendet.\\
+Da ein Werkzeug eine Präsentation darstellt, sind sie für den weiteren Verlauf
+der Arbeit (insbesondere Kapitel \ref{Entwicklung des Generators für das
+Generieren von Klassen für das Multichannel-Framework}) relevant. Es werden zwei
+Arten von Werkzeugen unterschieden - \emph{monolithische-} und \emph{komplexe
+Werkzeuge}. (vgl. \cite[S.5]{hofer}) Da in der deg hauptsächlich komplexe
+Werkzeuge Anwendung finden, werden die monolithischen Werkzeuge nicht hier
+weiter erläutert. Komplexe Werkzeuge gleidern sich in Oberfläche, Interaktion
+und Fachlogik auf. Dabei muss die Funktionskomponente (FunctionPart - FP)
+vollständig von der GUI abstrahiert und sich somit auf die Fachlogik beschränkt.
+Zwischen diesen Komponenten steht eine Interaktionskomponente (InteractionPart -
+IP), die für die Abstraktion Sorge trägt. Eine Werkzeugklasse umschließt diese
+drei Komponenten (siehe Abbildung \ref{Abb_WAM_GUI}). (vgl. \cite[S.5f]{hofer})
+\myBigFigure{wamgui.jpg}{Architektur eines komplexen Werkzeugs mit
+Benutzt-Beziehung}{WAM_GUI}
 
 \section{Probleme des Multichannel-Frameworks}\label{Probleme}
 Beim Einsatz des MCF treten jedoch Probleme auf. Bezogen auf die Anforderungen

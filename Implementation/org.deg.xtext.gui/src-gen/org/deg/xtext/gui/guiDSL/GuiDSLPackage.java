@@ -483,7 +483,7 @@ public interface GuiDSLPackage extends EPackage
   int TYPE_DEFINITION = 11;
 
   /**
-   * The feature id for the '<em><b>Type</b></em>' attribute.
+   * The feature id for the '<em><b>Type</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -501,6 +501,34 @@ public interface GuiDSLPackage extends EPackage
   int TYPE_DEFINITION_FEATURE_COUNT = 1;
 
   /**
+   * The meta object id for the '{@link org.deg.xtext.gui.guiDSL.impl.TypeImpl <em>Type</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.deg.xtext.gui.guiDSL.impl.TypeImpl
+   * @see org.deg.xtext.gui.guiDSL.impl.GuiDSLPackageImpl#getType()
+   * @generated
+   */
+  int TYPE = 12;
+
+  /**
+   * The feature id for the '<em><b>Id</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TYPE__ID = 0;
+
+  /**
+   * The number of structural features of the '<em>Type</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TYPE_FEATURE_COUNT = 1;
+
+  /**
    * The meta object id for the '{@link org.deg.xtext.gui.guiDSL.impl.UIDescriptionImportImpl <em>UI Description Import</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -508,7 +536,7 @@ public interface GuiDSLPackage extends EPackage
    * @see org.deg.xtext.gui.guiDSL.impl.GuiDSLPackageImpl#getUIDescriptionImport()
    * @generated
    */
-  int UI_DESCRIPTION_IMPORT = 12;
+  int UI_DESCRIPTION_IMPORT = 13;
 
   /**
    * The feature id for the '<em><b>Description Name</b></em>' attribute.
@@ -536,7 +564,7 @@ public interface GuiDSLPackage extends EPackage
    * @see org.deg.xtext.gui.guiDSL.impl.GuiDSLPackageImpl#getComplexComponent()
    * @generated
    */
-  int COMPLEX_COMPONENT = 13;
+  int COMPLEX_COMPONENT = 14;
 
   /**
    * The number of structural features of the '<em>Complex Component</em>' class.
@@ -555,7 +583,7 @@ public interface GuiDSLPackage extends EPackage
    * @see org.deg.xtext.gui.guiDSL.impl.GuiDSLPackageImpl#getMultiselection()
    * @generated
    */
-  int MULTISELECTION = 14;
+  int MULTISELECTION = 15;
 
   /**
    * The feature id for the '<em><b>Description Name</b></em>' attribute.
@@ -592,7 +620,7 @@ public interface GuiDSLPackage extends EPackage
    * @see org.deg.xtext.gui.guiDSL.impl.GuiDSLPackageImpl#getComponentDefinition()
    * @generated
    */
-  int COMPONENT_DEFINITION = 15;
+  int COMPONENT_DEFINITION = 16;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -638,7 +666,7 @@ public interface GuiDSLPackage extends EPackage
    * @see org.deg.xtext.gui.guiDSL.impl.GuiDSLPackageImpl#getButtonDefinition()
    * @generated
    */
-  int BUTTON_DEFINITION = 16;
+  int BUTTON_DEFINITION = 17;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -684,34 +712,16 @@ public interface GuiDSLPackage extends EPackage
    * @see org.deg.xtext.gui.guiDSL.impl.GuiDSLPackageImpl#getProperties()
    * @generated
    */
-  int PROPERTIES = 17;
+  int PROPERTIES = 18;
 
   /**
-   * The feature id for the '<em><b>Property Key</b></em>' attribute.
+   * The feature id for the '<em><b>Properties Definitions</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int PROPERTIES__PROPERTY_KEY = 0;
-
-  /**
-   * The feature id for the '<em><b>Text</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int PROPERTIES__TEXT = 1;
-
-  /**
-   * The feature id for the '<em><b>Interactiontype</b></em>' attribute list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int PROPERTIES__INTERACTIONTYPE = 2;
+  int PROPERTIES__PROPERTIES_DEFINITIONS = 0;
 
   /**
    * The number of structural features of the '<em>Properties</em>' class.
@@ -720,7 +730,53 @@ public interface GuiDSLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int PROPERTIES_FEATURE_COUNT = 3;
+  int PROPERTIES_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link org.deg.xtext.gui.guiDSL.impl.PropertiesDefinitionImpl <em>Properties Definition</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.deg.xtext.gui.guiDSL.impl.PropertiesDefinitionImpl
+   * @see org.deg.xtext.gui.guiDSL.impl.GuiDSLPackageImpl#getPropertiesDefinition()
+   * @generated
+   */
+  int PROPERTIES_DEFINITION = 19;
+
+  /**
+   * The feature id for the '<em><b>Property Key</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PROPERTIES_DEFINITION__PROPERTY_KEY = 0;
+
+  /**
+   * The feature id for the '<em><b>Text</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PROPERTIES_DEFINITION__TEXT = 1;
+
+  /**
+   * The feature id for the '<em><b>Interactiontype</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PROPERTIES_DEFINITION__INTERACTIONTYPE = 2;
+
+  /**
+   * The number of structural features of the '<em>Properties Definition</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PROPERTIES_DEFINITION_FEATURE_COUNT = 3;
 
   /**
    * The meta object id for the '{@link org.deg.xtext.gui.guiDSL.impl.LabelDefinitionImpl <em>Label Definition</em>}' class.
@@ -730,7 +786,7 @@ public interface GuiDSLPackage extends EPackage
    * @see org.deg.xtext.gui.guiDSL.impl.GuiDSLPackageImpl#getLabelDefinition()
    * @generated
    */
-  int LABEL_DEFINITION = 18;
+  int LABEL_DEFINITION = 20;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -767,6 +823,34 @@ public interface GuiDSLPackage extends EPackage
    * @ordered
    */
   int LABEL_DEFINITION_FEATURE_COUNT = COMPONENT_DEFINITION_FEATURE_COUNT + 0;
+
+  /**
+   * The meta object id for the '{@link org.deg.xtext.gui.guiDSL.impl.InteractiontypeImpl <em>Interactiontype</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.deg.xtext.gui.guiDSL.impl.InteractiontypeImpl
+   * @see org.deg.xtext.gui.guiDSL.impl.GuiDSLPackageImpl#getInteractiontype()
+   * @generated
+   */
+  int INTERACTIONTYPE = 21;
+
+  /**
+   * The feature id for the '<em><b>Id</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INTERACTIONTYPE__ID = 0;
+
+  /**
+   * The number of structural features of the '<em>Interactiontype</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INTERACTIONTYPE_FEATURE_COUNT = 1;
 
 
   /**
@@ -1077,15 +1161,36 @@ public interface GuiDSLPackage extends EPackage
   EClass getTypeDefinition();
 
   /**
-   * Returns the meta object for the attribute '{@link org.deg.xtext.gui.guiDSL.TypeDefinition#getType <em>Type</em>}'.
+   * Returns the meta object for the containment reference '{@link org.deg.xtext.gui.guiDSL.TypeDefinition#getType <em>Type</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Type</em>'.
+   * @return the meta object for the containment reference '<em>Type</em>'.
    * @see org.deg.xtext.gui.guiDSL.TypeDefinition#getType()
    * @see #getTypeDefinition()
    * @generated
    */
-  EAttribute getTypeDefinition_Type();
+  EReference getTypeDefinition_Type();
+
+  /**
+   * Returns the meta object for class '{@link org.deg.xtext.gui.guiDSL.Type <em>Type</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Type</em>'.
+   * @see org.deg.xtext.gui.guiDSL.Type
+   * @generated
+   */
+  EClass getType();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.deg.xtext.gui.guiDSL.Type#getId <em>Id</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Id</em>'.
+   * @see org.deg.xtext.gui.guiDSL.Type#getId()
+   * @see #getType()
+   * @generated
+   */
+  EAttribute getType_Id();
 
   /**
    * Returns the meta object for class '{@link org.deg.xtext.gui.guiDSL.UIDescriptionImport <em>UI Description Import</em>}'.
@@ -1214,37 +1319,58 @@ public interface GuiDSLPackage extends EPackage
   EClass getProperties();
 
   /**
-   * Returns the meta object for the attribute '{@link org.deg.xtext.gui.guiDSL.Properties#getPropertyKey <em>Property Key</em>}'.
+   * Returns the meta object for the containment reference list '{@link org.deg.xtext.gui.guiDSL.Properties#getPropertiesDefinitions <em>Properties Definitions</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Properties Definitions</em>'.
+   * @see org.deg.xtext.gui.guiDSL.Properties#getPropertiesDefinitions()
+   * @see #getProperties()
+   * @generated
+   */
+  EReference getProperties_PropertiesDefinitions();
+
+  /**
+   * Returns the meta object for class '{@link org.deg.xtext.gui.guiDSL.PropertiesDefinition <em>Properties Definition</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Properties Definition</em>'.
+   * @see org.deg.xtext.gui.guiDSL.PropertiesDefinition
+   * @generated
+   */
+  EClass getPropertiesDefinition();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.deg.xtext.gui.guiDSL.PropertiesDefinition#getPropertyKey <em>Property Key</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Property Key</em>'.
-   * @see org.deg.xtext.gui.guiDSL.Properties#getPropertyKey()
-   * @see #getProperties()
+   * @see org.deg.xtext.gui.guiDSL.PropertiesDefinition#getPropertyKey()
+   * @see #getPropertiesDefinition()
    * @generated
    */
-  EAttribute getProperties_PropertyKey();
+  EAttribute getPropertiesDefinition_PropertyKey();
 
   /**
-   * Returns the meta object for the attribute '{@link org.deg.xtext.gui.guiDSL.Properties#getText <em>Text</em>}'.
+   * Returns the meta object for the attribute '{@link org.deg.xtext.gui.guiDSL.PropertiesDefinition#getText <em>Text</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Text</em>'.
-   * @see org.deg.xtext.gui.guiDSL.Properties#getText()
-   * @see #getProperties()
+   * @see org.deg.xtext.gui.guiDSL.PropertiesDefinition#getText()
+   * @see #getPropertiesDefinition()
    * @generated
    */
-  EAttribute getProperties_Text();
+  EAttribute getPropertiesDefinition_Text();
 
   /**
-   * Returns the meta object for the attribute list '{@link org.deg.xtext.gui.guiDSL.Properties#getInteractiontype <em>Interactiontype</em>}'.
+   * Returns the meta object for the containment reference list '{@link org.deg.xtext.gui.guiDSL.PropertiesDefinition#getInteractiontype <em>Interactiontype</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute list '<em>Interactiontype</em>'.
-   * @see org.deg.xtext.gui.guiDSL.Properties#getInteractiontype()
-   * @see #getProperties()
+   * @return the meta object for the containment reference list '<em>Interactiontype</em>'.
+   * @see org.deg.xtext.gui.guiDSL.PropertiesDefinition#getInteractiontype()
+   * @see #getPropertiesDefinition()
    * @generated
    */
-  EAttribute getProperties_Interactiontype();
+  EReference getPropertiesDefinition_Interactiontype();
 
   /**
    * Returns the meta object for class '{@link org.deg.xtext.gui.guiDSL.LabelDefinition <em>Label Definition</em>}'.
@@ -1255,6 +1381,27 @@ public interface GuiDSLPackage extends EPackage
    * @generated
    */
   EClass getLabelDefinition();
+
+  /**
+   * Returns the meta object for class '{@link org.deg.xtext.gui.guiDSL.Interactiontype <em>Interactiontype</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Interactiontype</em>'.
+   * @see org.deg.xtext.gui.guiDSL.Interactiontype
+   * @generated
+   */
+  EClass getInteractiontype();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.deg.xtext.gui.guiDSL.Interactiontype#getId <em>Id</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Id</em>'.
+   * @see org.deg.xtext.gui.guiDSL.Interactiontype#getId()
+   * @see #getInteractiontype()
+   * @generated
+   */
+  EAttribute getInteractiontype_Id();
 
   /**
    * Returns the factory that creates the instances of the model.
@@ -1536,12 +1683,30 @@ public interface GuiDSLPackage extends EPackage
     EClass TYPE_DEFINITION = eINSTANCE.getTypeDefinition();
 
     /**
-     * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Type</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute TYPE_DEFINITION__TYPE = eINSTANCE.getTypeDefinition_Type();
+    EReference TYPE_DEFINITION__TYPE = eINSTANCE.getTypeDefinition_Type();
+
+    /**
+     * The meta object literal for the '{@link org.deg.xtext.gui.guiDSL.impl.TypeImpl <em>Type</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.deg.xtext.gui.guiDSL.impl.TypeImpl
+     * @see org.deg.xtext.gui.guiDSL.impl.GuiDSLPackageImpl#getType()
+     * @generated
+     */
+    EClass TYPE = eINSTANCE.getType();
+
+    /**
+     * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute TYPE__ID = eINSTANCE.getType_Id();
 
     /**
      * The meta object literal for the '{@link org.deg.xtext.gui.guiDSL.impl.UIDescriptionImportImpl <em>UI Description Import</em>}' class.
@@ -1652,12 +1817,30 @@ public interface GuiDSLPackage extends EPackage
     EClass PROPERTIES = eINSTANCE.getProperties();
 
     /**
+     * The meta object literal for the '<em><b>Properties Definitions</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference PROPERTIES__PROPERTIES_DEFINITIONS = eINSTANCE.getProperties_PropertiesDefinitions();
+
+    /**
+     * The meta object literal for the '{@link org.deg.xtext.gui.guiDSL.impl.PropertiesDefinitionImpl <em>Properties Definition</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.deg.xtext.gui.guiDSL.impl.PropertiesDefinitionImpl
+     * @see org.deg.xtext.gui.guiDSL.impl.GuiDSLPackageImpl#getPropertiesDefinition()
+     * @generated
+     */
+    EClass PROPERTIES_DEFINITION = eINSTANCE.getPropertiesDefinition();
+
+    /**
      * The meta object literal for the '<em><b>Property Key</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute PROPERTIES__PROPERTY_KEY = eINSTANCE.getProperties_PropertyKey();
+    EAttribute PROPERTIES_DEFINITION__PROPERTY_KEY = eINSTANCE.getPropertiesDefinition_PropertyKey();
 
     /**
      * The meta object literal for the '<em><b>Text</b></em>' attribute feature.
@@ -1665,15 +1848,15 @@ public interface GuiDSLPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute PROPERTIES__TEXT = eINSTANCE.getProperties_Text();
+    EAttribute PROPERTIES_DEFINITION__TEXT = eINSTANCE.getPropertiesDefinition_Text();
 
     /**
-     * The meta object literal for the '<em><b>Interactiontype</b></em>' attribute list feature.
+     * The meta object literal for the '<em><b>Interactiontype</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute PROPERTIES__INTERACTIONTYPE = eINSTANCE.getProperties_Interactiontype();
+    EReference PROPERTIES_DEFINITION__INTERACTIONTYPE = eINSTANCE.getPropertiesDefinition_Interactiontype();
 
     /**
      * The meta object literal for the '{@link org.deg.xtext.gui.guiDSL.impl.LabelDefinitionImpl <em>Label Definition</em>}' class.
@@ -1684,6 +1867,24 @@ public interface GuiDSLPackage extends EPackage
      * @generated
      */
     EClass LABEL_DEFINITION = eINSTANCE.getLabelDefinition();
+
+    /**
+     * The meta object literal for the '{@link org.deg.xtext.gui.guiDSL.impl.InteractiontypeImpl <em>Interactiontype</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.deg.xtext.gui.guiDSL.impl.InteractiontypeImpl
+     * @see org.deg.xtext.gui.guiDSL.impl.GuiDSLPackageImpl#getInteractiontype()
+     * @generated
+     */
+    EClass INTERACTIONTYPE = eINSTANCE.getInteractiontype();
+
+    /**
+     * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute INTERACTIONTYPE__ID = eINSTANCE.getInteractiontype_Id();
 
   }
 

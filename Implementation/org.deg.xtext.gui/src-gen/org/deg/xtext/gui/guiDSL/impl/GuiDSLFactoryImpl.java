@@ -76,13 +76,16 @@ public class GuiDSLFactoryImpl extends EFactoryImpl implements GuiDSLFactory
       case GuiDSLPackage.DESCRIPTION_TYPE: return createDescriptionType();
       case GuiDSLPackage.DEFINITION: return createDefinition();
       case GuiDSLPackage.TYPE_DEFINITION: return createTypeDefinition();
+      case GuiDSLPackage.TYPE: return createType();
       case GuiDSLPackage.UI_DESCRIPTION_IMPORT: return createUIDescriptionImport();
       case GuiDSLPackage.COMPLEX_COMPONENT: return createComplexComponent();
       case GuiDSLPackage.MULTISELECTION: return createMultiselection();
       case GuiDSLPackage.COMPONENT_DEFINITION: return createComponentDefinition();
       case GuiDSLPackage.BUTTON_DEFINITION: return createButtonDefinition();
       case GuiDSLPackage.PROPERTIES: return createProperties();
+      case GuiDSLPackage.PROPERTIES_DEFINITION: return createPropertiesDefinition();
       case GuiDSLPackage.LABEL_DEFINITION: return createLabelDefinition();
+      case GuiDSLPackage.INTERACTIONTYPE: return createInteractiontype();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
     }
@@ -225,6 +228,17 @@ public class GuiDSLFactoryImpl extends EFactoryImpl implements GuiDSLFactory
    * <!-- end-user-doc -->
    * @generated
    */
+  public Type createType()
+  {
+    TypeImpl type = new TypeImpl();
+    return type;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public UIDescriptionImport createUIDescriptionImport()
   {
     UIDescriptionImportImpl uiDescriptionImport = new UIDescriptionImportImpl();
@@ -291,10 +305,32 @@ public class GuiDSLFactoryImpl extends EFactoryImpl implements GuiDSLFactory
    * <!-- end-user-doc -->
    * @generated
    */
+  public PropertiesDefinition createPropertiesDefinition()
+  {
+    PropertiesDefinitionImpl propertiesDefinition = new PropertiesDefinitionImpl();
+    return propertiesDefinition;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public LabelDefinition createLabelDefinition()
   {
     LabelDefinitionImpl labelDefinition = new LabelDefinitionImpl();
     return labelDefinition;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Interactiontype createInteractiontype()
+  {
+    InteractiontypeImpl interactiontype = new InteractiontypeImpl();
+    return interactiontype;
   }
 
   /**

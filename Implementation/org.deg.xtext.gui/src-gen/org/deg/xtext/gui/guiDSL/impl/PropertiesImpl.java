@@ -6,17 +6,19 @@ import java.util.Collection;
 
 import org.deg.xtext.gui.guiDSL.GuiDSLPackage;
 import org.deg.xtext.gui.guiDSL.Properties;
+import org.deg.xtext.gui.guiDSL.PropertiesDefinition;
 
-import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import org.eclipse.emf.ecore.util.EDataTypeEList;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -25,9 +27,7 @@ import org.eclipse.emf.ecore.util.EDataTypeEList;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.deg.xtext.gui.guiDSL.impl.PropertiesImpl#getPropertyKey <em>Property Key</em>}</li>
- *   <li>{@link org.deg.xtext.gui.guiDSL.impl.PropertiesImpl#getText <em>Text</em>}</li>
- *   <li>{@link org.deg.xtext.gui.guiDSL.impl.PropertiesImpl#getInteractiontype <em>Interactiontype</em>}</li>
+ *   <li>{@link org.deg.xtext.gui.guiDSL.impl.PropertiesImpl#getPropertiesDefinitions <em>Properties Definitions</em>}</li>
  * </ul>
  * </p>
  *
@@ -36,54 +36,14 @@ import org.eclipse.emf.ecore.util.EDataTypeEList;
 public class PropertiesImpl extends MinimalEObjectImpl.Container implements Properties
 {
   /**
-   * The default value of the '{@link #getPropertyKey() <em>Property Key</em>}' attribute.
+   * The cached value of the '{@link #getPropertiesDefinitions() <em>Properties Definitions</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getPropertyKey()
+   * @see #getPropertiesDefinitions()
    * @generated
    * @ordered
    */
-  protected static final String PROPERTY_KEY_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getPropertyKey() <em>Property Key</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getPropertyKey()
-   * @generated
-   * @ordered
-   */
-  protected String propertyKey = PROPERTY_KEY_EDEFAULT;
-
-  /**
-   * The default value of the '{@link #getText() <em>Text</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getText()
-   * @generated
-   * @ordered
-   */
-  protected static final String TEXT_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getText() <em>Text</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getText()
-   * @generated
-   * @ordered
-   */
-  protected String text = TEXT_EDEFAULT;
-
-  /**
-   * The cached value of the '{@link #getInteractiontype() <em>Interactiontype</em>}' attribute list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getInteractiontype()
-   * @generated
-   * @ordered
-   */
-  protected EList<String> interactiontype;
+  protected EList<PropertiesDefinition> propertiesDefinitions;
 
   /**
    * <!-- begin-user-doc -->
@@ -111,59 +71,29 @@ public class PropertiesImpl extends MinimalEObjectImpl.Container implements Prop
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getPropertyKey()
+  public EList<PropertiesDefinition> getPropertiesDefinitions()
   {
-    return propertyKey;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setPropertyKey(String newPropertyKey)
-  {
-    String oldPropertyKey = propertyKey;
-    propertyKey = newPropertyKey;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, GuiDSLPackage.PROPERTIES__PROPERTY_KEY, oldPropertyKey, propertyKey));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public String getText()
-  {
-    return text;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setText(String newText)
-  {
-    String oldText = text;
-    text = newText;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, GuiDSLPackage.PROPERTIES__TEXT, oldText, text));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EList<String> getInteractiontype()
-  {
-    if (interactiontype == null)
+    if (propertiesDefinitions == null)
     {
-      interactiontype = new EDataTypeEList<String>(String.class, this, GuiDSLPackage.PROPERTIES__INTERACTIONTYPE);
+      propertiesDefinitions = new EObjectContainmentEList<PropertiesDefinition>(PropertiesDefinition.class, this, GuiDSLPackage.PROPERTIES__PROPERTIES_DEFINITIONS);
     }
-    return interactiontype;
+    return propertiesDefinitions;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+  {
+    switch (featureID)
+    {
+      case GuiDSLPackage.PROPERTIES__PROPERTIES_DEFINITIONS:
+        return ((InternalEList<?>)getPropertiesDefinitions()).basicRemove(otherEnd, msgs);
+    }
+    return super.eInverseRemove(otherEnd, featureID, msgs);
   }
 
   /**
@@ -176,12 +106,8 @@ public class PropertiesImpl extends MinimalEObjectImpl.Container implements Prop
   {
     switch (featureID)
     {
-      case GuiDSLPackage.PROPERTIES__PROPERTY_KEY:
-        return getPropertyKey();
-      case GuiDSLPackage.PROPERTIES__TEXT:
-        return getText();
-      case GuiDSLPackage.PROPERTIES__INTERACTIONTYPE:
-        return getInteractiontype();
+      case GuiDSLPackage.PROPERTIES__PROPERTIES_DEFINITIONS:
+        return getPropertiesDefinitions();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -197,15 +123,9 @@ public class PropertiesImpl extends MinimalEObjectImpl.Container implements Prop
   {
     switch (featureID)
     {
-      case GuiDSLPackage.PROPERTIES__PROPERTY_KEY:
-        setPropertyKey((String)newValue);
-        return;
-      case GuiDSLPackage.PROPERTIES__TEXT:
-        setText((String)newValue);
-        return;
-      case GuiDSLPackage.PROPERTIES__INTERACTIONTYPE:
-        getInteractiontype().clear();
-        getInteractiontype().addAll((Collection<? extends String>)newValue);
+      case GuiDSLPackage.PROPERTIES__PROPERTIES_DEFINITIONS:
+        getPropertiesDefinitions().clear();
+        getPropertiesDefinitions().addAll((Collection<? extends PropertiesDefinition>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -221,14 +141,8 @@ public class PropertiesImpl extends MinimalEObjectImpl.Container implements Prop
   {
     switch (featureID)
     {
-      case GuiDSLPackage.PROPERTIES__PROPERTY_KEY:
-        setPropertyKey(PROPERTY_KEY_EDEFAULT);
-        return;
-      case GuiDSLPackage.PROPERTIES__TEXT:
-        setText(TEXT_EDEFAULT);
-        return;
-      case GuiDSLPackage.PROPERTIES__INTERACTIONTYPE:
-        getInteractiontype().clear();
+      case GuiDSLPackage.PROPERTIES__PROPERTIES_DEFINITIONS:
+        getPropertiesDefinitions().clear();
         return;
     }
     super.eUnset(featureID);
@@ -244,35 +158,10 @@ public class PropertiesImpl extends MinimalEObjectImpl.Container implements Prop
   {
     switch (featureID)
     {
-      case GuiDSLPackage.PROPERTIES__PROPERTY_KEY:
-        return PROPERTY_KEY_EDEFAULT == null ? propertyKey != null : !PROPERTY_KEY_EDEFAULT.equals(propertyKey);
-      case GuiDSLPackage.PROPERTIES__TEXT:
-        return TEXT_EDEFAULT == null ? text != null : !TEXT_EDEFAULT.equals(text);
-      case GuiDSLPackage.PROPERTIES__INTERACTIONTYPE:
-        return interactiontype != null && !interactiontype.isEmpty();
+      case GuiDSLPackage.PROPERTIES__PROPERTIES_DEFINITIONS:
+        return propertiesDefinitions != null && !propertiesDefinitions.isEmpty();
     }
     return super.eIsSet(featureID);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public String toString()
-  {
-    if (eIsProxy()) return super.toString();
-
-    StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (propertyKey: ");
-    result.append(propertyKey);
-    result.append(", text: ");
-    result.append(text);
-    result.append(", interactiontype: ");
-    result.append(interactiontype);
-    result.append(')');
-    return result.toString();
   }
 
 } //PropertiesImpl

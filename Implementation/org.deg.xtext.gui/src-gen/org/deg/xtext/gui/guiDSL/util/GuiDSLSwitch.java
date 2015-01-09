@@ -158,6 +158,13 @@ public class GuiDSLSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case GuiDSLPackage.TYPE:
+      {
+        Type type = (Type)theEObject;
+        T result = caseType(type);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case GuiDSLPackage.UI_DESCRIPTION_IMPORT:
       {
         UIDescriptionImport uiDescriptionImport = (UIDescriptionImport)theEObject;
@@ -205,11 +212,25 @@ public class GuiDSLSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case GuiDSLPackage.PROPERTIES_DEFINITION:
+      {
+        PropertiesDefinition propertiesDefinition = (PropertiesDefinition)theEObject;
+        T result = casePropertiesDefinition(propertiesDefinition);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case GuiDSLPackage.LABEL_DEFINITION:
       {
         LabelDefinition labelDefinition = (LabelDefinition)theEObject;
         T result = caseLabelDefinition(labelDefinition);
         if (result == null) result = caseComponentDefinition(labelDefinition);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case GuiDSLPackage.INTERACTIONTYPE:
+      {
+        Interactiontype interactiontype = (Interactiontype)theEObject;
+        T result = caseInteractiontype(interactiontype);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -410,6 +431,22 @@ public class GuiDSLSwitch<T> extends Switch<T>
   }
 
   /**
+   * Returns the result of interpreting the object as an instance of '<em>Type</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Type</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseType(Type object)
+  {
+    return null;
+  }
+
+  /**
    * Returns the result of interpreting the object as an instance of '<em>UI Description Import</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -506,6 +543,22 @@ public class GuiDSLSwitch<T> extends Switch<T>
   }
 
   /**
+   * Returns the result of interpreting the object as an instance of '<em>Properties Definition</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Properties Definition</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T casePropertiesDefinition(PropertiesDefinition object)
+  {
+    return null;
+  }
+
+  /**
    * Returns the result of interpreting the object as an instance of '<em>Label Definition</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -517,6 +570,22 @@ public class GuiDSLSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseLabelDefinition(LabelDefinition object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Interactiontype</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Interactiontype</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseInteractiontype(Interactiontype object)
   {
     return null;
   }

@@ -131,6 +131,15 @@ public interface GuiDSLFactory extends EFactory
   TypeDefinition createTypeDefinition();
 
   /**
+   * Returns a new object of class '<em>Type</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Type</em>'.
+   * @generated
+   */
+  Type createType();
+
+  /**
    * Returns a new object of class '<em>UI Description Import</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -185,6 +194,15 @@ public interface GuiDSLFactory extends EFactory
   Properties createProperties();
 
   /**
+   * Returns a new object of class '<em>Properties Definition</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Properties Definition</em>'.
+   * @generated
+   */
+  PropertiesDefinition createPropertiesDefinition();
+
+  /**
    * Returns a new object of class '<em>Label Definition</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -192,6 +210,15 @@ public interface GuiDSLFactory extends EFactory
    * @generated
    */
   LabelDefinition createLabelDefinition();
+
+  /**
+   * Returns a new object of class '<em>Interactiontype</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Interactiontype</em>'.
+   * @generated
+   */
+  Interactiontype createInteractiontype();
 
   /**
    * Returns the package supported by this factory.

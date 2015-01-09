@@ -46,7 +46,7 @@ TypeDefinition:
 	'type: ' type=Type;
 
 Type:
-	('WINDOW' | 'INNERCOMPLEX');
+	id=('WINDOW' | 'INNERCOMPLEX');
 
 UIDescriptionImport:
 	descriptionName=(STRING);
@@ -68,16 +68,19 @@ ButtonDefinition:
 	properties=(Properties)?;
 
 Properties:
-	'->' ('propertyKey=' propertyKey=STRING)?
-	('text=' text=STRING)?
-	('interactiontype=' interactiontype+=(Interactiontype)+)?;
+	'->' propertiesDefinitions+=(PropertiesDefinition)+;
+
+PropertiesDefinition:
+	('propertyKey=' propertyKey=STRING) |
+	('text=' text=STRING) |
+	('interactiontype=' interactiontype+=(Interactiontype)+);
 
 LabelDefinition:
 	name='Label' 'as' id=STRING
 	properties=(Properties)?;
 
 Interactiontype:
-	'Click' | 'ChangeText';
+	id=('Click' | 'ChangeText');
 
 terminal WS:
 	(' ' | '\t' | '\r' | '\n' | ',')+;

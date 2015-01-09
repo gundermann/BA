@@ -39,9 +39,10 @@ public class GuiDSLParser extends AbstractContentAssistParser {
 				{
 					put(grammarAccess.getComponentRefinementAccess().getAlternatives(), "rule__ComponentRefinement__Alternatives");
 					put(grammarAccess.getDescriptionTypeAccess().getAlternatives(), "rule__DescriptionType__Alternatives");
-					put(grammarAccess.getTypeAccess().getAlternatives(), "rule__Type__Alternatives");
+					put(grammarAccess.getTypeAccess().getIdAlternatives_0(), "rule__Type__IdAlternatives_0");
 					put(grammarAccess.getComponentDefinitionAccess().getAlternatives(), "rule__ComponentDefinition__Alternatives");
-					put(grammarAccess.getInteractiontypeAccess().getAlternatives(), "rule__Interactiontype__Alternatives");
+					put(grammarAccess.getPropertiesDefinitionAccess().getAlternatives(), "rule__PropertiesDefinition__Alternatives");
+					put(grammarAccess.getInteractiontypeAccess().getIdAlternatives_0(), "rule__Interactiontype__IdAlternatives_0");
 					put(grammarAccess.getUIDescriptionAccess().getGroup(), "rule__UIDescription__Group__0");
 					put(grammarAccess.getStructureAccess().getGroup(), "rule__Structure__Group__0");
 					put(grammarAccess.getRefinementAccess().getGroup(), "rule__Refinement__Group__0");
@@ -55,9 +56,9 @@ public class GuiDSLParser extends AbstractContentAssistParser {
 					put(grammarAccess.getMultiselectionAccess().getGroup(), "rule__Multiselection__Group__0");
 					put(grammarAccess.getButtonDefinitionAccess().getGroup(), "rule__ButtonDefinition__Group__0");
 					put(grammarAccess.getPropertiesAccess().getGroup(), "rule__Properties__Group__0");
-					put(grammarAccess.getPropertiesAccess().getGroup_1(), "rule__Properties__Group_1__0");
-					put(grammarAccess.getPropertiesAccess().getGroup_2(), "rule__Properties__Group_2__0");
-					put(grammarAccess.getPropertiesAccess().getGroup_3(), "rule__Properties__Group_3__0");
+					put(grammarAccess.getPropertiesDefinitionAccess().getGroup_0(), "rule__PropertiesDefinition__Group_0__0");
+					put(grammarAccess.getPropertiesDefinitionAccess().getGroup_1(), "rule__PropertiesDefinition__Group_1__0");
+					put(grammarAccess.getPropertiesDefinitionAccess().getGroup_2(), "rule__PropertiesDefinition__Group_2__0");
 					put(grammarAccess.getLabelDefinitionAccess().getGroup(), "rule__LabelDefinition__Group__0");
 					put(grammarAccess.getUIDescriptionAccess().getTypeDefinitionAssignment_0(), "rule__UIDescription__TypeDefinitionAssignment_0");
 					put(grammarAccess.getUIDescriptionAccess().getPropertyAssignment_1(), "rule__UIDescription__PropertyAssignment_1");
@@ -80,18 +81,21 @@ public class GuiDSLParser extends AbstractContentAssistParser {
 					put(grammarAccess.getUsedDescriptionsAccess().getIdAssignment_2_1(), "rule__UsedDescriptions__IdAssignment_2_1");
 					put(grammarAccess.getDefinitionAccess().getConcreteDefitionAssignment_0(), "rule__Definition__ConcreteDefitionAssignment_0");
 					put(grammarAccess.getTypeDefinitionAccess().getTypeAssignment_1(), "rule__TypeDefinition__TypeAssignment_1");
+					put(grammarAccess.getTypeAccess().getIdAssignment(), "rule__Type__IdAssignment");
 					put(grammarAccess.getUIDescriptionImportAccess().getDescriptionNameAssignment(), "rule__UIDescriptionImport__DescriptionNameAssignment");
 					put(grammarAccess.getMultiselectionAccess().getDescriptionNameAssignment_0(), "rule__Multiselection__DescriptionNameAssignment_0");
 					put(grammarAccess.getMultiselectionAccess().getInputTypeAssignment_1(), "rule__Multiselection__InputTypeAssignment_1");
 					put(grammarAccess.getButtonDefinitionAccess().getNameAssignment_0(), "rule__ButtonDefinition__NameAssignment_0");
 					put(grammarAccess.getButtonDefinitionAccess().getIdAssignment_2(), "rule__ButtonDefinition__IdAssignment_2");
 					put(grammarAccess.getButtonDefinitionAccess().getPropertiesAssignment_3(), "rule__ButtonDefinition__PropertiesAssignment_3");
-					put(grammarAccess.getPropertiesAccess().getPropertyKeyAssignment_1_1(), "rule__Properties__PropertyKeyAssignment_1_1");
-					put(grammarAccess.getPropertiesAccess().getTextAssignment_2_1(), "rule__Properties__TextAssignment_2_1");
-					put(grammarAccess.getPropertiesAccess().getInteractiontypeAssignment_3_1(), "rule__Properties__InteractiontypeAssignment_3_1");
+					put(grammarAccess.getPropertiesAccess().getPropertiesDefinitionsAssignment_1(), "rule__Properties__PropertiesDefinitionsAssignment_1");
+					put(grammarAccess.getPropertiesDefinitionAccess().getPropertyKeyAssignment_0_1(), "rule__PropertiesDefinition__PropertyKeyAssignment_0_1");
+					put(grammarAccess.getPropertiesDefinitionAccess().getTextAssignment_1_1(), "rule__PropertiesDefinition__TextAssignment_1_1");
+					put(grammarAccess.getPropertiesDefinitionAccess().getInteractiontypeAssignment_2_1(), "rule__PropertiesDefinition__InteractiontypeAssignment_2_1");
 					put(grammarAccess.getLabelDefinitionAccess().getNameAssignment_0(), "rule__LabelDefinition__NameAssignment_0");
 					put(grammarAccess.getLabelDefinitionAccess().getIdAssignment_2(), "rule__LabelDefinition__IdAssignment_2");
 					put(grammarAccess.getLabelDefinitionAccess().getPropertiesAssignment_3(), "rule__LabelDefinition__PropertiesAssignment_3");
+					put(grammarAccess.getInteractiontypeAccess().getIdAssignment(), "rule__Interactiontype__IdAssignment");
 				}
 			};
 		}
