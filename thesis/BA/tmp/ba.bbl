@@ -116,6 +116,20 @@
   https://docs.oracle.com/javase/jp/8/\\technotes/guides/swing/index.html.
 \newblock Zuletzt eingesehen am 02.12.2014.
 
+\bibitem[Pec14]{pechforum}
+{\sc Pech, Vaclav}: {\em Can MPS be integrated in Eclipse as Eclipse Plugin
+  similar to Xtext?}
+\newblock URL:http://forum.jetbrains.com/thread/Meta-Programming-System-1033,
+  Oktober 2014.
+\newblock Zuletzt eingesehen am 12.01.2015.
+
+\bibitem[PSV13]{pech}
+{\sc Pech, Vaclav}, {\sc Alex Shatalin} \btxandlong{}\ {\sc Markus Voelter}:
+  {\em JetBrains MPS as a tool for extending Java}.
+\newblock \Btxinlong{}\ {\em Proceedings of the 2013 International Conference
+  on Principles and Practices of Programming on the Java Platform: Virtual
+  Machines, Languages, and Tools}, \btxpageslong{}\ 165--168. ACM, 2013.
+
 \bibitem[RDGN10]{Renggli}
 {\sc Renggli, Lukas}, {\sc Stephane Ducasse}, {\sc Tudor Gîbra} \btxandlong{}\
   {\sc Oscar Nierstrasz}: {\em Practical Dynamic Grammars for Dynamic
@@ -186,5 +200,9 @@
   Helander}, {\sc Eelco Visser} \btxandlong{}\ {\sc Guido Wachsmuth}: {\em DSL
   Engineering}.
 \newblock CreateSpace Independent Publishing Platform, 2013.
+
+\bibitem[Vol11]{volter2011programming}
+{\sc Volter, Markus}: {\em From programming to modeling-and back again}.
+\newblock Software, IEEE, 28(6):20--25, 2011.
 
 \end{thebibliography}
