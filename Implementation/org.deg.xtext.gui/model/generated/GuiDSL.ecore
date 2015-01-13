@@ -57,9 +57,17 @@
   <eClassifiers xsi:type="ecore:EClass" name="UIDescriptionImport" eSuperTypes="#//DescriptionType">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="descriptionName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ComplexComponent" eSuperTypes="#//DescriptionType"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ComplexComponent" eSuperTypes="#//DescriptionType">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TabView" eSuperTypes="#//ComplexComponent">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="tabs" upperBound="-1" eType="#//TabDefinition"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TabDefinition">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Multiselection" eSuperTypes="#//ComplexComponent">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="descriptionName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="inputType" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ComponentDefinition">

@@ -181,6 +181,22 @@ public class GuiDSLSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case GuiDSLPackage.TAB_VIEW:
+      {
+        TabView tabView = (TabView)theEObject;
+        T result = caseTabView(tabView);
+        if (result == null) result = caseComplexComponent(tabView);
+        if (result == null) result = caseDescriptionType(tabView);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case GuiDSLPackage.TAB_DEFINITION:
+      {
+        TabDefinition tabDefinition = (TabDefinition)theEObject;
+        T result = caseTabDefinition(tabDefinition);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case GuiDSLPackage.MULTISELECTION:
       {
         Multiselection multiselection = (Multiselection)theEObject;
@@ -474,6 +490,38 @@ public class GuiDSLSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseComplexComponent(ComplexComponent object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Tab View</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Tab View</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseTabView(TabView object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Tab Definition</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Tab Definition</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseTabDefinition(TabDefinition object)
   {
     return null;
   }

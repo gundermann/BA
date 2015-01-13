@@ -18,7 +18,6 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.deg.xtext.gui.guiDSL.impl.MultiselectionImpl#getDescriptionName <em>Description Name</em>}</li>
  *   <li>{@link org.deg.xtext.gui.guiDSL.impl.MultiselectionImpl#getInputType <em>Input Type</em>}</li>
  * </ul>
  * </p>
@@ -27,26 +26,6 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  */
 public class MultiselectionImpl extends ComplexComponentImpl implements Multiselection
 {
-  /**
-   * The default value of the '{@link #getDescriptionName() <em>Description Name</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getDescriptionName()
-   * @generated
-   * @ordered
-   */
-  protected static final String DESCRIPTION_NAME_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getDescriptionName() <em>Description Name</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getDescriptionName()
-   * @generated
-   * @ordered
-   */
-  protected String descriptionName = DESCRIPTION_NAME_EDEFAULT;
-
   /**
    * The default value of the '{@link #getInputType() <em>Input Type</em>}' attribute.
    * <!-- begin-user-doc -->
@@ -93,29 +72,6 @@ public class MultiselectionImpl extends ComplexComponentImpl implements Multisel
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getDescriptionName()
-  {
-    return descriptionName;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setDescriptionName(String newDescriptionName)
-  {
-    String oldDescriptionName = descriptionName;
-    descriptionName = newDescriptionName;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, GuiDSLPackage.MULTISELECTION__DESCRIPTION_NAME, oldDescriptionName, descriptionName));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public String getInputType()
   {
     return inputType;
@@ -144,8 +100,6 @@ public class MultiselectionImpl extends ComplexComponentImpl implements Multisel
   {
     switch (featureID)
     {
-      case GuiDSLPackage.MULTISELECTION__DESCRIPTION_NAME:
-        return getDescriptionName();
       case GuiDSLPackage.MULTISELECTION__INPUT_TYPE:
         return getInputType();
     }
@@ -162,9 +116,6 @@ public class MultiselectionImpl extends ComplexComponentImpl implements Multisel
   {
     switch (featureID)
     {
-      case GuiDSLPackage.MULTISELECTION__DESCRIPTION_NAME:
-        setDescriptionName((String)newValue);
-        return;
       case GuiDSLPackage.MULTISELECTION__INPUT_TYPE:
         setInputType((String)newValue);
         return;
@@ -182,9 +133,6 @@ public class MultiselectionImpl extends ComplexComponentImpl implements Multisel
   {
     switch (featureID)
     {
-      case GuiDSLPackage.MULTISELECTION__DESCRIPTION_NAME:
-        setDescriptionName(DESCRIPTION_NAME_EDEFAULT);
-        return;
       case GuiDSLPackage.MULTISELECTION__INPUT_TYPE:
         setInputType(INPUT_TYPE_EDEFAULT);
         return;
@@ -202,8 +150,6 @@ public class MultiselectionImpl extends ComplexComponentImpl implements Multisel
   {
     switch (featureID)
     {
-      case GuiDSLPackage.MULTISELECTION__DESCRIPTION_NAME:
-        return DESCRIPTION_NAME_EDEFAULT == null ? descriptionName != null : !DESCRIPTION_NAME_EDEFAULT.equals(descriptionName);
       case GuiDSLPackage.MULTISELECTION__INPUT_TYPE:
         return INPUT_TYPE_EDEFAULT == null ? inputType != null : !INPUT_TYPE_EDEFAULT.equals(inputType);
     }
@@ -221,9 +167,7 @@ public class MultiselectionImpl extends ComplexComponentImpl implements Multisel
     if (eIsProxy()) return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (descriptionName: ");
-    result.append(descriptionName);
-    result.append(", inputType: ");
+    result.append(" (inputType: ");
     result.append(inputType);
     result.append(')');
     return result.toString();

@@ -150,6 +150,16 @@ public class GuiDSLAdapterFactory extends AdapterFactoryImpl
         return createComplexComponentAdapter();
       }
       @Override
+      public Adapter caseTabView(TabView object)
+      {
+        return createTabViewAdapter();
+      }
+      @Override
+      public Adapter caseTabDefinition(TabDefinition object)
+      {
+        return createTabDefinitionAdapter();
+      }
+      @Override
       public Adapter caseMultiselection(Multiselection object)
       {
         return createMultiselectionAdapter();
@@ -427,6 +437,36 @@ public class GuiDSLAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createComplexComponentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.deg.xtext.gui.guiDSL.TabView <em>Tab View</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.deg.xtext.gui.guiDSL.TabView
+   * @generated
+   */
+  public Adapter createTabViewAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.deg.xtext.gui.guiDSL.TabDefinition <em>Tab Definition</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.deg.xtext.gui.guiDSL.TabDefinition
+   * @generated
+   */
+  public Adapter createTabDefinitionAdapter()
   {
     return null;
   }

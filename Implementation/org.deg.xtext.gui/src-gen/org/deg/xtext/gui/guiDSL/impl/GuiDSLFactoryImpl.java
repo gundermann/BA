@@ -79,6 +79,8 @@ public class GuiDSLFactoryImpl extends EFactoryImpl implements GuiDSLFactory
       case GuiDSLPackage.TYPE: return createType();
       case GuiDSLPackage.UI_DESCRIPTION_IMPORT: return createUIDescriptionImport();
       case GuiDSLPackage.COMPLEX_COMPONENT: return createComplexComponent();
+      case GuiDSLPackage.TAB_VIEW: return createTabView();
+      case GuiDSLPackage.TAB_DEFINITION: return createTabDefinition();
       case GuiDSLPackage.MULTISELECTION: return createMultiselection();
       case GuiDSLPackage.COMPONENT_DEFINITION: return createComponentDefinition();
       case GuiDSLPackage.BUTTON_DEFINITION: return createButtonDefinition();
@@ -254,6 +256,28 @@ public class GuiDSLFactoryImpl extends EFactoryImpl implements GuiDSLFactory
   {
     ComplexComponentImpl complexComponent = new ComplexComponentImpl();
     return complexComponent;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public TabView createTabView()
+  {
+    TabViewImpl tabView = new TabViewImpl();
+    return tabView;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public TabDefinition createTabDefinition()
+  {
+    TabDefinitionImpl tabDefinition = new TabDefinitionImpl();
+    return tabDefinition;
   }
 
   /**

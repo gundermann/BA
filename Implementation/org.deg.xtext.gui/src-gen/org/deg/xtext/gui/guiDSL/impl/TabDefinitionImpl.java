@@ -2,29 +2,30 @@
  */
 package org.deg.xtext.gui.guiDSL.impl;
 
-import org.deg.xtext.gui.guiDSL.ComplexComponent;
 import org.deg.xtext.gui.guiDSL.GuiDSLPackage;
+import org.deg.xtext.gui.guiDSL.TabDefinition;
 
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Complex Component</b></em>'.
+ * An implementation of the model object '<em><b>Tab Definition</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.deg.xtext.gui.guiDSL.impl.ComplexComponentImpl#getName <em>Name</em>}</li>
+ *   <li>{@link org.deg.xtext.gui.guiDSL.impl.TabDefinitionImpl#getName <em>Name</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class ComplexComponentImpl extends DescriptionTypeImpl implements ComplexComponent
+public class TabDefinitionImpl extends MinimalEObjectImpl.Container implements TabDefinition
 {
   /**
    * The default value of the '{@link #getName() <em>Name</em>}' attribute.
@@ -51,7 +52,7 @@ public class ComplexComponentImpl extends DescriptionTypeImpl implements Complex
    * <!-- end-user-doc -->
    * @generated
    */
-  protected ComplexComponentImpl()
+  protected TabDefinitionImpl()
   {
     super();
   }
@@ -64,7 +65,7 @@ public class ComplexComponentImpl extends DescriptionTypeImpl implements Complex
   @Override
   protected EClass eStaticClass()
   {
-    return GuiDSLPackage.Literals.COMPLEX_COMPONENT;
+    return GuiDSLPackage.Literals.TAB_DEFINITION;
   }
 
   /**
@@ -87,7 +88,7 @@ public class ComplexComponentImpl extends DescriptionTypeImpl implements Complex
     String oldName = name;
     name = newName;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, GuiDSLPackage.COMPLEX_COMPONENT__NAME, oldName, name));
+      eNotify(new ENotificationImpl(this, Notification.SET, GuiDSLPackage.TAB_DEFINITION__NAME, oldName, name));
   }
 
   /**
@@ -100,7 +101,7 @@ public class ComplexComponentImpl extends DescriptionTypeImpl implements Complex
   {
     switch (featureID)
     {
-      case GuiDSLPackage.COMPLEX_COMPONENT__NAME:
+      case GuiDSLPackage.TAB_DEFINITION__NAME:
         return getName();
     }
     return super.eGet(featureID, resolve, coreType);
@@ -116,7 +117,7 @@ public class ComplexComponentImpl extends DescriptionTypeImpl implements Complex
   {
     switch (featureID)
     {
-      case GuiDSLPackage.COMPLEX_COMPONENT__NAME:
+      case GuiDSLPackage.TAB_DEFINITION__NAME:
         setName((String)newValue);
         return;
     }
@@ -133,7 +134,7 @@ public class ComplexComponentImpl extends DescriptionTypeImpl implements Complex
   {
     switch (featureID)
     {
-      case GuiDSLPackage.COMPLEX_COMPONENT__NAME:
+      case GuiDSLPackage.TAB_DEFINITION__NAME:
         setName(NAME_EDEFAULT);
         return;
     }
@@ -150,7 +151,7 @@ public class ComplexComponentImpl extends DescriptionTypeImpl implements Complex
   {
     switch (featureID)
     {
-      case GuiDSLPackage.COMPLEX_COMPONENT__NAME:
+      case GuiDSLPackage.TAB_DEFINITION__NAME:
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
     }
     return super.eIsSet(featureID);
@@ -173,4 +174,4 @@ public class ComplexComponentImpl extends DescriptionTypeImpl implements Complex
     return result.toString();
   }
 
-} //ComplexComponentImpl
+} //TabDefinitionImpl

@@ -11,7 +11,7 @@ UIDescription:
 	structure=Structure;
 
 Structure:
-	name="Structure" ":" orderedElements+=(Element)*;
+	name="Structure" ":" orderedElements+=(Element)* ';';
 
 Element:
 	id=STRING;
@@ -27,14 +27,14 @@ ButtonRefinement:
 	properties=(Properties)?;
 
 LabelRefinement:
-	name='Label' 'from: ' id=STRING
+	name='Label' 'from:' id=STRING
 	properties=(Properties)?;
 
 Property:
-	'get properties from:' propertiesFile=STRING;
+	'get properties from:' propertiesFile=STRING ';';
 
 UsedDescriptions:
-	'use: ' description=DescriptionType ('as:' id=STRING)?;
+	'use:' description=DescriptionType ('as:' id=STRING)? ';';
 
 DescriptionType:
 	UIDescriptionImport | ComplexComponent;
@@ -43,7 +43,7 @@ Definition:
 	concreteDefition=ComponentDefinition ';';
 
 TypeDefinition:
-	'type: ' type=Type;
+	'type: ' type=Type ';';
 
 Type:
 	id=('WINDOW' | 'INNERCOMPLEX');
@@ -52,10 +52,19 @@ UIDescriptionImport:
 	descriptionName=(STRING);
 
 ComplexComponent:
-	(Multiselection);
+	Multiselection | TabView;
+
+TabView:
+	name='TabView' tabs+=(TabDefinition)*;
+
+TabDefinition:
+	name=TABNAME;
+
+terminal TABNAME:
+	'[' ('\\' . /* 'b'|'t'|'n'|'f'|'r'|'u'|'"'|"'"|'\\' */ | !('[' | ']'))* ']';
 
 Multiselection:
-	descriptionName='Multiselection' (inputType=INPUT_DESCRIPTION)?;
+	name='Multiselection' (inputType=INPUT_DESCRIPTION)?;
 
 terminal INPUT_DESCRIPTION:
 	'<' ('\\' . /* 'b'|'t'|'n'|'f'|'r'|'u'|'"'|"'"|'\\' */ | !('<' | '>'))* '>';

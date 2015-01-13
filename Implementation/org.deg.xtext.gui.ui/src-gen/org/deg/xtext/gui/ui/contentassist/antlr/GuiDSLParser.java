@@ -40,6 +40,7 @@ public class GuiDSLParser extends AbstractContentAssistParser {
 					put(grammarAccess.getComponentRefinementAccess().getAlternatives(), "rule__ComponentRefinement__Alternatives");
 					put(grammarAccess.getDescriptionTypeAccess().getAlternatives(), "rule__DescriptionType__Alternatives");
 					put(grammarAccess.getTypeAccess().getIdAlternatives_0(), "rule__Type__IdAlternatives_0");
+					put(grammarAccess.getComplexComponentAccess().getAlternatives(), "rule__ComplexComponent__Alternatives");
 					put(grammarAccess.getComponentDefinitionAccess().getAlternatives(), "rule__ComponentDefinition__Alternatives");
 					put(grammarAccess.getPropertiesDefinitionAccess().getAlternatives(), "rule__PropertiesDefinition__Alternatives");
 					put(grammarAccess.getInteractiontypeAccess().getIdAlternatives_0(), "rule__Interactiontype__IdAlternatives_0");
@@ -53,6 +54,7 @@ public class GuiDSLParser extends AbstractContentAssistParser {
 					put(grammarAccess.getUsedDescriptionsAccess().getGroup_2(), "rule__UsedDescriptions__Group_2__0");
 					put(grammarAccess.getDefinitionAccess().getGroup(), "rule__Definition__Group__0");
 					put(grammarAccess.getTypeDefinitionAccess().getGroup(), "rule__TypeDefinition__Group__0");
+					put(grammarAccess.getTabViewAccess().getGroup(), "rule__TabView__Group__0");
 					put(grammarAccess.getMultiselectionAccess().getGroup(), "rule__Multiselection__Group__0");
 					put(grammarAccess.getButtonDefinitionAccess().getGroup(), "rule__ButtonDefinition__Group__0");
 					put(grammarAccess.getPropertiesAccess().getGroup(), "rule__Properties__Group__0");
@@ -83,7 +85,10 @@ public class GuiDSLParser extends AbstractContentAssistParser {
 					put(grammarAccess.getTypeDefinitionAccess().getTypeAssignment_1(), "rule__TypeDefinition__TypeAssignment_1");
 					put(grammarAccess.getTypeAccess().getIdAssignment(), "rule__Type__IdAssignment");
 					put(grammarAccess.getUIDescriptionImportAccess().getDescriptionNameAssignment(), "rule__UIDescriptionImport__DescriptionNameAssignment");
-					put(grammarAccess.getMultiselectionAccess().getDescriptionNameAssignment_0(), "rule__Multiselection__DescriptionNameAssignment_0");
+					put(grammarAccess.getTabViewAccess().getNameAssignment_0(), "rule__TabView__NameAssignment_0");
+					put(grammarAccess.getTabViewAccess().getTabsAssignment_1(), "rule__TabView__TabsAssignment_1");
+					put(grammarAccess.getTabDefinitionAccess().getNameAssignment(), "rule__TabDefinition__NameAssignment");
+					put(grammarAccess.getMultiselectionAccess().getNameAssignment_0(), "rule__Multiselection__NameAssignment_0");
 					put(grammarAccess.getMultiselectionAccess().getInputTypeAssignment_1(), "rule__Multiselection__InputTypeAssignment_1");
 					put(grammarAccess.getButtonDefinitionAccess().getNameAssignment_0(), "rule__ButtonDefinition__NameAssignment_0");
 					put(grammarAccess.getButtonDefinitionAccess().getIdAssignment_2(), "rule__ButtonDefinition__IdAssignment_2");

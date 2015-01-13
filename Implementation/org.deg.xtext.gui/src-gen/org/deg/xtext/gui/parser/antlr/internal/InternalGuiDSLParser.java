@@ -21,9 +21,9 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalGuiDSLParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_INPUT_DESCRIPTION", "RULE_WS", "RULE_ID", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_ANY_OTHER", "'Structure'", "':'", "';'", "'Button'", "'from:'", "'Label'", "'from: '", "'get properties from:'", "'use: '", "'as:'", "'type: '", "'WINDOW'", "'INNERCOMPLEX'", "'Multiselection'", "'->'", "'propertyKey='", "'text='", "'interactiontype='", "'as'", "'Click'", "'ChangeText'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_TABNAME", "RULE_INPUT_DESCRIPTION", "RULE_WS", "RULE_ID", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_ANY_OTHER", "'Structure'", "':'", "';'", "'Button'", "'from:'", "'Label'", "'get properties from:'", "'use:'", "'as:'", "'type: '", "'WINDOW'", "'INNERCOMPLEX'", "'TabView'", "'Multiselection'", "'->'", "'propertyKey='", "'text='", "'interactiontype='", "'as'", "'Click'", "'ChangeText'"
     };
-    public static final int RULE_ID=7;
+    public static final int RULE_ID=8;
     public static final int T__29=29;
     public static final int T__28=28;
     public static final int T__27=27;
@@ -31,28 +31,29 @@ public class InternalGuiDSLParser extends AbstractInternalAntlrParser {
     public static final int T__25=25;
     public static final int T__24=24;
     public static final int T__23=23;
-    public static final int RULE_INPUT_DESCRIPTION=5;
+    public static final int RULE_INPUT_DESCRIPTION=6;
     public static final int T__22=22;
-    public static final int RULE_ANY_OTHER=11;
+    public static final int RULE_ANY_OTHER=12;
     public static final int T__21=21;
     public static final int T__20=20;
-    public static final int RULE_SL_COMMENT=10;
+    public static final int RULE_SL_COMMENT=11;
     public static final int EOF=-1;
-    public static final int RULE_ML_COMMENT=9;
+    public static final int RULE_ML_COMMENT=10;
     public static final int T__30=30;
     public static final int T__19=19;
     public static final int T__31=31;
     public static final int RULE_STRING=4;
     public static final int T__32=32;
+    public static final int T__33=33;
     public static final int T__16=16;
     public static final int T__15=15;
     public static final int T__18=18;
     public static final int T__17=17;
-    public static final int T__12=12;
     public static final int T__14=14;
     public static final int T__13=13;
-    public static final int RULE_INT=8;
-    public static final int RULE_WS=6;
+    public static final int RULE_INT=9;
+    public static final int RULE_WS=7;
+    public static final int RULE_TABNAME=5;
 
     // delegates
     // delegators
@@ -283,19 +284,19 @@ public class InternalGuiDSLParser extends AbstractInternalAntlrParser {
                 int alt3=2;
                 int LA3_0 = input.LA(1);
 
-                if ( (LA3_0==17) ) {
+                if ( (LA3_0==18) ) {
                     int LA3_1 = input.LA(2);
 
-                    if ( (LA3_1==18) ) {
+                    if ( (LA3_1==17) ) {
                         alt3=1;
                     }
 
 
                 }
-                else if ( (LA3_0==15) ) {
+                else if ( (LA3_0==16) ) {
                     int LA3_2 = input.LA(2);
 
-                    if ( (LA3_2==16) ) {
+                    if ( (LA3_2==17) ) {
                         alt3=1;
                     }
 
@@ -347,7 +348,7 @@ public class InternalGuiDSLParser extends AbstractInternalAntlrParser {
                 int alt4=2;
                 int LA4_0 = input.LA(1);
 
-                if ( (LA4_0==15||LA4_0==17) ) {
+                if ( (LA4_0==16||LA4_0==18) ) {
                     alt4=1;
                 }
 
@@ -478,23 +479,24 @@ public class InternalGuiDSLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleStructure"
-    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:205:1: ruleStructure returns [EObject current=null] : ( ( (lv_name_0_0= 'Structure' ) ) otherlv_1= ':' ( (lv_orderedElements_2_0= ruleElement ) )* ) ;
+    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:205:1: ruleStructure returns [EObject current=null] : ( ( (lv_name_0_0= 'Structure' ) ) otherlv_1= ':' ( (lv_orderedElements_2_0= ruleElement ) )* otherlv_3= ';' ) ;
     public final EObject ruleStructure() throws RecognitionException {
         EObject current = null;
 
         Token lv_name_0_0=null;
         Token otherlv_1=null;
+        Token otherlv_3=null;
         EObject lv_orderedElements_2_0 = null;
 
 
          enterRule(); 
             
         try {
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:208:28: ( ( ( (lv_name_0_0= 'Structure' ) ) otherlv_1= ':' ( (lv_orderedElements_2_0= ruleElement ) )* ) )
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:209:1: ( ( (lv_name_0_0= 'Structure' ) ) otherlv_1= ':' ( (lv_orderedElements_2_0= ruleElement ) )* )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:208:28: ( ( ( (lv_name_0_0= 'Structure' ) ) otherlv_1= ':' ( (lv_orderedElements_2_0= ruleElement ) )* otherlv_3= ';' ) )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:209:1: ( ( (lv_name_0_0= 'Structure' ) ) otherlv_1= ':' ( (lv_orderedElements_2_0= ruleElement ) )* otherlv_3= ';' )
             {
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:209:1: ( ( (lv_name_0_0= 'Structure' ) ) otherlv_1= ':' ( (lv_orderedElements_2_0= ruleElement ) )* )
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:209:2: ( (lv_name_0_0= 'Structure' ) ) otherlv_1= ':' ( (lv_orderedElements_2_0= ruleElement ) )*
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:209:1: ( ( (lv_name_0_0= 'Structure' ) ) otherlv_1= ':' ( (lv_orderedElements_2_0= ruleElement ) )* otherlv_3= ';' )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:209:2: ( (lv_name_0_0= 'Structure' ) ) otherlv_1= ':' ( (lv_orderedElements_2_0= ruleElement ) )* otherlv_3= ';'
             {
             // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:209:2: ( (lv_name_0_0= 'Structure' ) )
             // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:210:1: (lv_name_0_0= 'Structure' )
@@ -502,7 +504,7 @@ public class InternalGuiDSLParser extends AbstractInternalAntlrParser {
             // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:210:1: (lv_name_0_0= 'Structure' )
             // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:211:3: lv_name_0_0= 'Structure'
             {
-            lv_name_0_0=(Token)match(input,12,FOLLOW_12_in_ruleStructure329); 
+            lv_name_0_0=(Token)match(input,13,FOLLOW_13_in_ruleStructure329); 
 
                     newLeafNode(lv_name_0_0, grammarAccess.getStructureAccess().getNameStructureKeyword_0_0());
                 
@@ -518,7 +520,7 @@ public class InternalGuiDSLParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,13,FOLLOW_13_in_ruleStructure354); 
+            otherlv_1=(Token)match(input,14,FOLLOW_14_in_ruleStructure354); 
 
                 	newLeafNode(otherlv_1, grammarAccess.getStructureAccess().getColonKeyword_1());
                 
@@ -571,6 +573,10 @@ public class InternalGuiDSLParser extends AbstractInternalAntlrParser {
                 }
             } while (true);
 
+            otherlv_3=(Token)match(input,15,FOLLOW_15_in_ruleStructure388); 
+
+                	newLeafNode(otherlv_3, grammarAccess.getStructureAccess().getSemicolonKeyword_3());
+                
 
             }
 
@@ -592,7 +598,7 @@ public class InternalGuiDSLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleElement"
-    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:254:1: entryRuleElement returns [EObject current=null] : iv_ruleElement= ruleElement EOF ;
+    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:258:1: entryRuleElement returns [EObject current=null] : iv_ruleElement= ruleElement EOF ;
     public final EObject entryRuleElement() throws RecognitionException {
         EObject current = null;
 
@@ -600,17 +606,17 @@ public class InternalGuiDSLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:255:2: (iv_ruleElement= ruleElement EOF )
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:256:2: iv_ruleElement= ruleElement EOF
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:259:2: (iv_ruleElement= ruleElement EOF )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:260:2: iv_ruleElement= ruleElement EOF
             {
              newCompositeNode(grammarAccess.getElementRule()); 
-            pushFollow(FOLLOW_ruleElement_in_entryRuleElement412);
+            pushFollow(FOLLOW_ruleElement_in_entryRuleElement424);
             iv_ruleElement=ruleElement();
 
             state._fsp--;
 
              current =iv_ruleElement; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleElement422); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleElement434); 
 
             }
 
@@ -628,7 +634,7 @@ public class InternalGuiDSLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleElement"
-    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:263:1: ruleElement returns [EObject current=null] : ( (lv_id_0_0= RULE_STRING ) ) ;
+    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:267:1: ruleElement returns [EObject current=null] : ( (lv_id_0_0= RULE_STRING ) ) ;
     public final EObject ruleElement() throws RecognitionException {
         EObject current = null;
 
@@ -637,16 +643,16 @@ public class InternalGuiDSLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:266:28: ( ( (lv_id_0_0= RULE_STRING ) ) )
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:267:1: ( (lv_id_0_0= RULE_STRING ) )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:270:28: ( ( (lv_id_0_0= RULE_STRING ) ) )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:271:1: ( (lv_id_0_0= RULE_STRING ) )
             {
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:267:1: ( (lv_id_0_0= RULE_STRING ) )
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:268:1: (lv_id_0_0= RULE_STRING )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:271:1: ( (lv_id_0_0= RULE_STRING ) )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:272:1: (lv_id_0_0= RULE_STRING )
             {
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:268:1: (lv_id_0_0= RULE_STRING )
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:269:3: lv_id_0_0= RULE_STRING
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:272:1: (lv_id_0_0= RULE_STRING )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:273:3: lv_id_0_0= RULE_STRING
             {
-            lv_id_0_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleElement463); 
+            lv_id_0_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleElement475); 
 
             			newLeafNode(lv_id_0_0, grammarAccess.getElementAccess().getIdSTRINGTerminalRuleCall_0()); 
             		
@@ -684,7 +690,7 @@ public class InternalGuiDSLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleRefinement"
-    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:293:1: entryRuleRefinement returns [EObject current=null] : iv_ruleRefinement= ruleRefinement EOF ;
+    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:297:1: entryRuleRefinement returns [EObject current=null] : iv_ruleRefinement= ruleRefinement EOF ;
     public final EObject entryRuleRefinement() throws RecognitionException {
         EObject current = null;
 
@@ -692,17 +698,17 @@ public class InternalGuiDSLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:294:2: (iv_ruleRefinement= ruleRefinement EOF )
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:295:2: iv_ruleRefinement= ruleRefinement EOF
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:298:2: (iv_ruleRefinement= ruleRefinement EOF )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:299:2: iv_ruleRefinement= ruleRefinement EOF
             {
              newCompositeNode(grammarAccess.getRefinementRule()); 
-            pushFollow(FOLLOW_ruleRefinement_in_entryRuleRefinement503);
+            pushFollow(FOLLOW_ruleRefinement_in_entryRuleRefinement515);
             iv_ruleRefinement=ruleRefinement();
 
             state._fsp--;
 
              current =iv_ruleRefinement; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleRefinement513); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleRefinement525); 
 
             }
 
@@ -720,7 +726,7 @@ public class InternalGuiDSLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleRefinement"
-    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:302:1: ruleRefinement returns [EObject current=null] : ( ( (lv_concreteRefinement_0_0= ruleComponentRefinement ) ) otherlv_1= ';' ) ;
+    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:306:1: ruleRefinement returns [EObject current=null] : ( ( (lv_concreteRefinement_0_0= ruleComponentRefinement ) ) otherlv_1= ';' ) ;
     public final EObject ruleRefinement() throws RecognitionException {
         EObject current = null;
 
@@ -731,22 +737,22 @@ public class InternalGuiDSLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:305:28: ( ( ( (lv_concreteRefinement_0_0= ruleComponentRefinement ) ) otherlv_1= ';' ) )
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:306:1: ( ( (lv_concreteRefinement_0_0= ruleComponentRefinement ) ) otherlv_1= ';' )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:309:28: ( ( ( (lv_concreteRefinement_0_0= ruleComponentRefinement ) ) otherlv_1= ';' ) )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:310:1: ( ( (lv_concreteRefinement_0_0= ruleComponentRefinement ) ) otherlv_1= ';' )
             {
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:306:1: ( ( (lv_concreteRefinement_0_0= ruleComponentRefinement ) ) otherlv_1= ';' )
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:306:2: ( (lv_concreteRefinement_0_0= ruleComponentRefinement ) ) otherlv_1= ';'
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:310:1: ( ( (lv_concreteRefinement_0_0= ruleComponentRefinement ) ) otherlv_1= ';' )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:310:2: ( (lv_concreteRefinement_0_0= ruleComponentRefinement ) ) otherlv_1= ';'
             {
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:306:2: ( (lv_concreteRefinement_0_0= ruleComponentRefinement ) )
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:307:1: (lv_concreteRefinement_0_0= ruleComponentRefinement )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:310:2: ( (lv_concreteRefinement_0_0= ruleComponentRefinement ) )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:311:1: (lv_concreteRefinement_0_0= ruleComponentRefinement )
             {
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:307:1: (lv_concreteRefinement_0_0= ruleComponentRefinement )
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:308:3: lv_concreteRefinement_0_0= ruleComponentRefinement
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:311:1: (lv_concreteRefinement_0_0= ruleComponentRefinement )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:312:3: lv_concreteRefinement_0_0= ruleComponentRefinement
             {
              
             	        newCompositeNode(grammarAccess.getRefinementAccess().getConcreteRefinementComponentRefinementParserRuleCall_0_0()); 
             	    
-            pushFollow(FOLLOW_ruleComponentRefinement_in_ruleRefinement559);
+            pushFollow(FOLLOW_ruleComponentRefinement_in_ruleRefinement571);
             lv_concreteRefinement_0_0=ruleComponentRefinement();
 
             state._fsp--;
@@ -768,7 +774,7 @@ public class InternalGuiDSLParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,14,FOLLOW_14_in_ruleRefinement571); 
+            otherlv_1=(Token)match(input,15,FOLLOW_15_in_ruleRefinement583); 
 
                 	newLeafNode(otherlv_1, grammarAccess.getRefinementAccess().getSemicolonKeyword_1());
                 
@@ -793,7 +799,7 @@ public class InternalGuiDSLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleComponentRefinement"
-    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:336:1: entryRuleComponentRefinement returns [EObject current=null] : iv_ruleComponentRefinement= ruleComponentRefinement EOF ;
+    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:340:1: entryRuleComponentRefinement returns [EObject current=null] : iv_ruleComponentRefinement= ruleComponentRefinement EOF ;
     public final EObject entryRuleComponentRefinement() throws RecognitionException {
         EObject current = null;
 
@@ -801,17 +807,17 @@ public class InternalGuiDSLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:337:2: (iv_ruleComponentRefinement= ruleComponentRefinement EOF )
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:338:2: iv_ruleComponentRefinement= ruleComponentRefinement EOF
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:341:2: (iv_ruleComponentRefinement= ruleComponentRefinement EOF )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:342:2: iv_ruleComponentRefinement= ruleComponentRefinement EOF
             {
              newCompositeNode(grammarAccess.getComponentRefinementRule()); 
-            pushFollow(FOLLOW_ruleComponentRefinement_in_entryRuleComponentRefinement607);
+            pushFollow(FOLLOW_ruleComponentRefinement_in_entryRuleComponentRefinement619);
             iv_ruleComponentRefinement=ruleComponentRefinement();
 
             state._fsp--;
 
              current =iv_ruleComponentRefinement; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleComponentRefinement617); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleComponentRefinement629); 
 
             }
 
@@ -829,7 +835,7 @@ public class InternalGuiDSLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleComponentRefinement"
-    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:345:1: ruleComponentRefinement returns [EObject current=null] : (this_LabelRefinement_0= ruleLabelRefinement | this_ButtonRefinement_1= ruleButtonRefinement ) ;
+    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:349:1: ruleComponentRefinement returns [EObject current=null] : (this_LabelRefinement_0= ruleLabelRefinement | this_ButtonRefinement_1= ruleButtonRefinement ) ;
     public final EObject ruleComponentRefinement() throws RecognitionException {
         EObject current = null;
 
@@ -841,17 +847,17 @@ public class InternalGuiDSLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:348:28: ( (this_LabelRefinement_0= ruleLabelRefinement | this_ButtonRefinement_1= ruleButtonRefinement ) )
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:349:1: (this_LabelRefinement_0= ruleLabelRefinement | this_ButtonRefinement_1= ruleButtonRefinement )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:352:28: ( (this_LabelRefinement_0= ruleLabelRefinement | this_ButtonRefinement_1= ruleButtonRefinement ) )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:353:1: (this_LabelRefinement_0= ruleLabelRefinement | this_ButtonRefinement_1= ruleButtonRefinement )
             {
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:349:1: (this_LabelRefinement_0= ruleLabelRefinement | this_ButtonRefinement_1= ruleButtonRefinement )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:353:1: (this_LabelRefinement_0= ruleLabelRefinement | this_ButtonRefinement_1= ruleButtonRefinement )
             int alt6=2;
             int LA6_0 = input.LA(1);
 
-            if ( (LA6_0==17) ) {
+            if ( (LA6_0==18) ) {
                 alt6=1;
             }
-            else if ( (LA6_0==15) ) {
+            else if ( (LA6_0==16) ) {
                 alt6=2;
             }
             else {
@@ -862,12 +868,12 @@ public class InternalGuiDSLParser extends AbstractInternalAntlrParser {
             }
             switch (alt6) {
                 case 1 :
-                    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:350:5: this_LabelRefinement_0= ruleLabelRefinement
+                    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:354:5: this_LabelRefinement_0= ruleLabelRefinement
                     {
                      
                             newCompositeNode(grammarAccess.getComponentRefinementAccess().getLabelRefinementParserRuleCall_0()); 
                         
-                    pushFollow(FOLLOW_ruleLabelRefinement_in_ruleComponentRefinement664);
+                    pushFollow(FOLLOW_ruleLabelRefinement_in_ruleComponentRefinement676);
                     this_LabelRefinement_0=ruleLabelRefinement();
 
                     state._fsp--;
@@ -880,12 +886,12 @@ public class InternalGuiDSLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:360:5: this_ButtonRefinement_1= ruleButtonRefinement
+                    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:364:5: this_ButtonRefinement_1= ruleButtonRefinement
                     {
                      
                             newCompositeNode(grammarAccess.getComponentRefinementAccess().getButtonRefinementParserRuleCall_1()); 
                         
-                    pushFollow(FOLLOW_ruleButtonRefinement_in_ruleComponentRefinement691);
+                    pushFollow(FOLLOW_ruleButtonRefinement_in_ruleComponentRefinement703);
                     this_ButtonRefinement_1=ruleButtonRefinement();
 
                     state._fsp--;
@@ -918,7 +924,7 @@ public class InternalGuiDSLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleButtonRefinement"
-    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:376:1: entryRuleButtonRefinement returns [EObject current=null] : iv_ruleButtonRefinement= ruleButtonRefinement EOF ;
+    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:380:1: entryRuleButtonRefinement returns [EObject current=null] : iv_ruleButtonRefinement= ruleButtonRefinement EOF ;
     public final EObject entryRuleButtonRefinement() throws RecognitionException {
         EObject current = null;
 
@@ -926,17 +932,17 @@ public class InternalGuiDSLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:377:2: (iv_ruleButtonRefinement= ruleButtonRefinement EOF )
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:378:2: iv_ruleButtonRefinement= ruleButtonRefinement EOF
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:381:2: (iv_ruleButtonRefinement= ruleButtonRefinement EOF )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:382:2: iv_ruleButtonRefinement= ruleButtonRefinement EOF
             {
              newCompositeNode(grammarAccess.getButtonRefinementRule()); 
-            pushFollow(FOLLOW_ruleButtonRefinement_in_entryRuleButtonRefinement726);
+            pushFollow(FOLLOW_ruleButtonRefinement_in_entryRuleButtonRefinement738);
             iv_ruleButtonRefinement=ruleButtonRefinement();
 
             state._fsp--;
 
              current =iv_ruleButtonRefinement; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleButtonRefinement736); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleButtonRefinement748); 
 
             }
 
@@ -954,7 +960,7 @@ public class InternalGuiDSLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleButtonRefinement"
-    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:385:1: ruleButtonRefinement returns [EObject current=null] : ( ( (lv_name_0_0= 'Button' ) ) otherlv_1= 'from:' ( (lv_id_2_0= RULE_STRING ) ) ( (lv_properties_3_0= ruleProperties ) )? ) ;
+    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:389:1: ruleButtonRefinement returns [EObject current=null] : ( ( (lv_name_0_0= 'Button' ) ) otherlv_1= 'from:' ( (lv_id_2_0= RULE_STRING ) ) ( (lv_properties_3_0= ruleProperties ) )? ) ;
     public final EObject ruleButtonRefinement() throws RecognitionException {
         EObject current = null;
 
@@ -967,19 +973,19 @@ public class InternalGuiDSLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:388:28: ( ( ( (lv_name_0_0= 'Button' ) ) otherlv_1= 'from:' ( (lv_id_2_0= RULE_STRING ) ) ( (lv_properties_3_0= ruleProperties ) )? ) )
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:389:1: ( ( (lv_name_0_0= 'Button' ) ) otherlv_1= 'from:' ( (lv_id_2_0= RULE_STRING ) ) ( (lv_properties_3_0= ruleProperties ) )? )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:392:28: ( ( ( (lv_name_0_0= 'Button' ) ) otherlv_1= 'from:' ( (lv_id_2_0= RULE_STRING ) ) ( (lv_properties_3_0= ruleProperties ) )? ) )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:393:1: ( ( (lv_name_0_0= 'Button' ) ) otherlv_1= 'from:' ( (lv_id_2_0= RULE_STRING ) ) ( (lv_properties_3_0= ruleProperties ) )? )
             {
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:389:1: ( ( (lv_name_0_0= 'Button' ) ) otherlv_1= 'from:' ( (lv_id_2_0= RULE_STRING ) ) ( (lv_properties_3_0= ruleProperties ) )? )
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:389:2: ( (lv_name_0_0= 'Button' ) ) otherlv_1= 'from:' ( (lv_id_2_0= RULE_STRING ) ) ( (lv_properties_3_0= ruleProperties ) )?
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:393:1: ( ( (lv_name_0_0= 'Button' ) ) otherlv_1= 'from:' ( (lv_id_2_0= RULE_STRING ) ) ( (lv_properties_3_0= ruleProperties ) )? )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:393:2: ( (lv_name_0_0= 'Button' ) ) otherlv_1= 'from:' ( (lv_id_2_0= RULE_STRING ) ) ( (lv_properties_3_0= ruleProperties ) )?
             {
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:389:2: ( (lv_name_0_0= 'Button' ) )
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:390:1: (lv_name_0_0= 'Button' )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:393:2: ( (lv_name_0_0= 'Button' ) )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:394:1: (lv_name_0_0= 'Button' )
             {
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:390:1: (lv_name_0_0= 'Button' )
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:391:3: lv_name_0_0= 'Button'
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:394:1: (lv_name_0_0= 'Button' )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:395:3: lv_name_0_0= 'Button'
             {
-            lv_name_0_0=(Token)match(input,15,FOLLOW_15_in_ruleButtonRefinement779); 
+            lv_name_0_0=(Token)match(input,16,FOLLOW_16_in_ruleButtonRefinement791); 
 
                     newLeafNode(lv_name_0_0, grammarAccess.getButtonRefinementAccess().getNameButtonKeyword_0_0());
                 
@@ -995,17 +1001,17 @@ public class InternalGuiDSLParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,16,FOLLOW_16_in_ruleButtonRefinement804); 
+            otherlv_1=(Token)match(input,17,FOLLOW_17_in_ruleButtonRefinement816); 
 
                 	newLeafNode(otherlv_1, grammarAccess.getButtonRefinementAccess().getFromKeyword_1());
                 
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:408:1: ( (lv_id_2_0= RULE_STRING ) )
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:409:1: (lv_id_2_0= RULE_STRING )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:412:1: ( (lv_id_2_0= RULE_STRING ) )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:413:1: (lv_id_2_0= RULE_STRING )
             {
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:409:1: (lv_id_2_0= RULE_STRING )
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:410:3: lv_id_2_0= RULE_STRING
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:413:1: (lv_id_2_0= RULE_STRING )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:414:3: lv_id_2_0= RULE_STRING
             {
-            lv_id_2_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleButtonRefinement821); 
+            lv_id_2_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleButtonRefinement833); 
 
             			newLeafNode(lv_id_2_0, grammarAccess.getButtonRefinementAccess().getIdSTRINGTerminalRuleCall_2_0()); 
             		
@@ -1025,24 +1031,24 @@ public class InternalGuiDSLParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:426:2: ( (lv_properties_3_0= ruleProperties ) )?
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:430:2: ( (lv_properties_3_0= ruleProperties ) )?
             int alt7=2;
             int LA7_0 = input.LA(1);
 
-            if ( (LA7_0==26) ) {
+            if ( (LA7_0==27) ) {
                 alt7=1;
             }
             switch (alt7) {
                 case 1 :
-                    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:427:1: (lv_properties_3_0= ruleProperties )
+                    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:431:1: (lv_properties_3_0= ruleProperties )
                     {
-                    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:427:1: (lv_properties_3_0= ruleProperties )
-                    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:428:3: lv_properties_3_0= ruleProperties
+                    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:431:1: (lv_properties_3_0= ruleProperties )
+                    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:432:3: lv_properties_3_0= ruleProperties
                     {
                      
                     	        newCompositeNode(grammarAccess.getButtonRefinementAccess().getPropertiesPropertiesParserRuleCall_3_0()); 
                     	    
-                    pushFollow(FOLLOW_ruleProperties_in_ruleButtonRefinement847);
+                    pushFollow(FOLLOW_ruleProperties_in_ruleButtonRefinement859);
                     lv_properties_3_0=ruleProperties();
 
                     state._fsp--;
@@ -1088,7 +1094,7 @@ public class InternalGuiDSLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleLabelRefinement"
-    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:452:1: entryRuleLabelRefinement returns [EObject current=null] : iv_ruleLabelRefinement= ruleLabelRefinement EOF ;
+    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:456:1: entryRuleLabelRefinement returns [EObject current=null] : iv_ruleLabelRefinement= ruleLabelRefinement EOF ;
     public final EObject entryRuleLabelRefinement() throws RecognitionException {
         EObject current = null;
 
@@ -1096,17 +1102,17 @@ public class InternalGuiDSLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:453:2: (iv_ruleLabelRefinement= ruleLabelRefinement EOF )
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:454:2: iv_ruleLabelRefinement= ruleLabelRefinement EOF
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:457:2: (iv_ruleLabelRefinement= ruleLabelRefinement EOF )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:458:2: iv_ruleLabelRefinement= ruleLabelRefinement EOF
             {
              newCompositeNode(grammarAccess.getLabelRefinementRule()); 
-            pushFollow(FOLLOW_ruleLabelRefinement_in_entryRuleLabelRefinement884);
+            pushFollow(FOLLOW_ruleLabelRefinement_in_entryRuleLabelRefinement896);
             iv_ruleLabelRefinement=ruleLabelRefinement();
 
             state._fsp--;
 
              current =iv_ruleLabelRefinement; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleLabelRefinement894); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleLabelRefinement906); 
 
             }
 
@@ -1124,7 +1130,7 @@ public class InternalGuiDSLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleLabelRefinement"
-    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:461:1: ruleLabelRefinement returns [EObject current=null] : ( ( (lv_name_0_0= 'Label' ) ) otherlv_1= 'from: ' ( (lv_id_2_0= RULE_STRING ) ) ( (lv_properties_3_0= ruleProperties ) )? ) ;
+    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:465:1: ruleLabelRefinement returns [EObject current=null] : ( ( (lv_name_0_0= 'Label' ) ) otherlv_1= 'from:' ( (lv_id_2_0= RULE_STRING ) ) ( (lv_properties_3_0= ruleProperties ) )? ) ;
     public final EObject ruleLabelRefinement() throws RecognitionException {
         EObject current = null;
 
@@ -1137,19 +1143,19 @@ public class InternalGuiDSLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:464:28: ( ( ( (lv_name_0_0= 'Label' ) ) otherlv_1= 'from: ' ( (lv_id_2_0= RULE_STRING ) ) ( (lv_properties_3_0= ruleProperties ) )? ) )
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:465:1: ( ( (lv_name_0_0= 'Label' ) ) otherlv_1= 'from: ' ( (lv_id_2_0= RULE_STRING ) ) ( (lv_properties_3_0= ruleProperties ) )? )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:468:28: ( ( ( (lv_name_0_0= 'Label' ) ) otherlv_1= 'from:' ( (lv_id_2_0= RULE_STRING ) ) ( (lv_properties_3_0= ruleProperties ) )? ) )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:469:1: ( ( (lv_name_0_0= 'Label' ) ) otherlv_1= 'from:' ( (lv_id_2_0= RULE_STRING ) ) ( (lv_properties_3_0= ruleProperties ) )? )
             {
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:465:1: ( ( (lv_name_0_0= 'Label' ) ) otherlv_1= 'from: ' ( (lv_id_2_0= RULE_STRING ) ) ( (lv_properties_3_0= ruleProperties ) )? )
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:465:2: ( (lv_name_0_0= 'Label' ) ) otherlv_1= 'from: ' ( (lv_id_2_0= RULE_STRING ) ) ( (lv_properties_3_0= ruleProperties ) )?
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:469:1: ( ( (lv_name_0_0= 'Label' ) ) otherlv_1= 'from:' ( (lv_id_2_0= RULE_STRING ) ) ( (lv_properties_3_0= ruleProperties ) )? )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:469:2: ( (lv_name_0_0= 'Label' ) ) otherlv_1= 'from:' ( (lv_id_2_0= RULE_STRING ) ) ( (lv_properties_3_0= ruleProperties ) )?
             {
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:465:2: ( (lv_name_0_0= 'Label' ) )
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:466:1: (lv_name_0_0= 'Label' )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:469:2: ( (lv_name_0_0= 'Label' ) )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:470:1: (lv_name_0_0= 'Label' )
             {
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:466:1: (lv_name_0_0= 'Label' )
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:467:3: lv_name_0_0= 'Label'
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:470:1: (lv_name_0_0= 'Label' )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:471:3: lv_name_0_0= 'Label'
             {
-            lv_name_0_0=(Token)match(input,17,FOLLOW_17_in_ruleLabelRefinement937); 
+            lv_name_0_0=(Token)match(input,18,FOLLOW_18_in_ruleLabelRefinement949); 
 
                     newLeafNode(lv_name_0_0, grammarAccess.getLabelRefinementAccess().getNameLabelKeyword_0_0());
                 
@@ -1165,17 +1171,17 @@ public class InternalGuiDSLParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,18,FOLLOW_18_in_ruleLabelRefinement962); 
+            otherlv_1=(Token)match(input,17,FOLLOW_17_in_ruleLabelRefinement974); 
 
                 	newLeafNode(otherlv_1, grammarAccess.getLabelRefinementAccess().getFromKeyword_1());
                 
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:484:1: ( (lv_id_2_0= RULE_STRING ) )
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:485:1: (lv_id_2_0= RULE_STRING )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:488:1: ( (lv_id_2_0= RULE_STRING ) )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:489:1: (lv_id_2_0= RULE_STRING )
             {
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:485:1: (lv_id_2_0= RULE_STRING )
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:486:3: lv_id_2_0= RULE_STRING
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:489:1: (lv_id_2_0= RULE_STRING )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:490:3: lv_id_2_0= RULE_STRING
             {
-            lv_id_2_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleLabelRefinement979); 
+            lv_id_2_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleLabelRefinement991); 
 
             			newLeafNode(lv_id_2_0, grammarAccess.getLabelRefinementAccess().getIdSTRINGTerminalRuleCall_2_0()); 
             		
@@ -1195,24 +1201,24 @@ public class InternalGuiDSLParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:502:2: ( (lv_properties_3_0= ruleProperties ) )?
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:506:2: ( (lv_properties_3_0= ruleProperties ) )?
             int alt8=2;
             int LA8_0 = input.LA(1);
 
-            if ( (LA8_0==26) ) {
+            if ( (LA8_0==27) ) {
                 alt8=1;
             }
             switch (alt8) {
                 case 1 :
-                    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:503:1: (lv_properties_3_0= ruleProperties )
+                    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:507:1: (lv_properties_3_0= ruleProperties )
                     {
-                    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:503:1: (lv_properties_3_0= ruleProperties )
-                    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:504:3: lv_properties_3_0= ruleProperties
+                    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:507:1: (lv_properties_3_0= ruleProperties )
+                    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:508:3: lv_properties_3_0= ruleProperties
                     {
                      
                     	        newCompositeNode(grammarAccess.getLabelRefinementAccess().getPropertiesPropertiesParserRuleCall_3_0()); 
                     	    
-                    pushFollow(FOLLOW_ruleProperties_in_ruleLabelRefinement1005);
+                    pushFollow(FOLLOW_ruleProperties_in_ruleLabelRefinement1017);
                     lv_properties_3_0=ruleProperties();
 
                     state._fsp--;
@@ -1258,7 +1264,7 @@ public class InternalGuiDSLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleProperty"
-    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:528:1: entryRuleProperty returns [EObject current=null] : iv_ruleProperty= ruleProperty EOF ;
+    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:532:1: entryRuleProperty returns [EObject current=null] : iv_ruleProperty= ruleProperty EOF ;
     public final EObject entryRuleProperty() throws RecognitionException {
         EObject current = null;
 
@@ -1266,17 +1272,17 @@ public class InternalGuiDSLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:529:2: (iv_ruleProperty= ruleProperty EOF )
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:530:2: iv_ruleProperty= ruleProperty EOF
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:533:2: (iv_ruleProperty= ruleProperty EOF )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:534:2: iv_ruleProperty= ruleProperty EOF
             {
              newCompositeNode(grammarAccess.getPropertyRule()); 
-            pushFollow(FOLLOW_ruleProperty_in_entryRuleProperty1042);
+            pushFollow(FOLLOW_ruleProperty_in_entryRuleProperty1054);
             iv_ruleProperty=ruleProperty();
 
             state._fsp--;
 
              current =iv_ruleProperty; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleProperty1052); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleProperty1064); 
 
             }
 
@@ -1294,33 +1300,34 @@ public class InternalGuiDSLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleProperty"
-    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:537:1: ruleProperty returns [EObject current=null] : (otherlv_0= 'get properties from:' ( (lv_propertiesFile_1_0= RULE_STRING ) ) ) ;
+    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:541:1: ruleProperty returns [EObject current=null] : (otherlv_0= 'get properties from:' ( (lv_propertiesFile_1_0= RULE_STRING ) ) otherlv_2= ';' ) ;
     public final EObject ruleProperty() throws RecognitionException {
         EObject current = null;
 
         Token otherlv_0=null;
         Token lv_propertiesFile_1_0=null;
+        Token otherlv_2=null;
 
          enterRule(); 
             
         try {
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:540:28: ( (otherlv_0= 'get properties from:' ( (lv_propertiesFile_1_0= RULE_STRING ) ) ) )
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:541:1: (otherlv_0= 'get properties from:' ( (lv_propertiesFile_1_0= RULE_STRING ) ) )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:544:28: ( (otherlv_0= 'get properties from:' ( (lv_propertiesFile_1_0= RULE_STRING ) ) otherlv_2= ';' ) )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:545:1: (otherlv_0= 'get properties from:' ( (lv_propertiesFile_1_0= RULE_STRING ) ) otherlv_2= ';' )
             {
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:541:1: (otherlv_0= 'get properties from:' ( (lv_propertiesFile_1_0= RULE_STRING ) ) )
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:541:3: otherlv_0= 'get properties from:' ( (lv_propertiesFile_1_0= RULE_STRING ) )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:545:1: (otherlv_0= 'get properties from:' ( (lv_propertiesFile_1_0= RULE_STRING ) ) otherlv_2= ';' )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:545:3: otherlv_0= 'get properties from:' ( (lv_propertiesFile_1_0= RULE_STRING ) ) otherlv_2= ';'
             {
-            otherlv_0=(Token)match(input,19,FOLLOW_19_in_ruleProperty1089); 
+            otherlv_0=(Token)match(input,19,FOLLOW_19_in_ruleProperty1101); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getPropertyAccess().getGetPropertiesFromKeyword_0());
                 
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:545:1: ( (lv_propertiesFile_1_0= RULE_STRING ) )
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:546:1: (lv_propertiesFile_1_0= RULE_STRING )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:549:1: ( (lv_propertiesFile_1_0= RULE_STRING ) )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:550:1: (lv_propertiesFile_1_0= RULE_STRING )
             {
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:546:1: (lv_propertiesFile_1_0= RULE_STRING )
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:547:3: lv_propertiesFile_1_0= RULE_STRING
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:550:1: (lv_propertiesFile_1_0= RULE_STRING )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:551:3: lv_propertiesFile_1_0= RULE_STRING
             {
-            lv_propertiesFile_1_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleProperty1106); 
+            lv_propertiesFile_1_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleProperty1118); 
 
             			newLeafNode(lv_propertiesFile_1_0, grammarAccess.getPropertyAccess().getPropertiesFileSTRINGTerminalRuleCall_1_0()); 
             		
@@ -1340,6 +1347,10 @@ public class InternalGuiDSLParser extends AbstractInternalAntlrParser {
 
             }
 
+            otherlv_2=(Token)match(input,15,FOLLOW_15_in_ruleProperty1135); 
+
+                	newLeafNode(otherlv_2, grammarAccess.getPropertyAccess().getSemicolonKeyword_2());
+                
 
             }
 
@@ -1361,7 +1372,7 @@ public class InternalGuiDSLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleUsedDescriptions"
-    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:571:1: entryRuleUsedDescriptions returns [EObject current=null] : iv_ruleUsedDescriptions= ruleUsedDescriptions EOF ;
+    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:579:1: entryRuleUsedDescriptions returns [EObject current=null] : iv_ruleUsedDescriptions= ruleUsedDescriptions EOF ;
     public final EObject entryRuleUsedDescriptions() throws RecognitionException {
         EObject current = null;
 
@@ -1369,17 +1380,17 @@ public class InternalGuiDSLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:572:2: (iv_ruleUsedDescriptions= ruleUsedDescriptions EOF )
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:573:2: iv_ruleUsedDescriptions= ruleUsedDescriptions EOF
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:580:2: (iv_ruleUsedDescriptions= ruleUsedDescriptions EOF )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:581:2: iv_ruleUsedDescriptions= ruleUsedDescriptions EOF
             {
              newCompositeNode(grammarAccess.getUsedDescriptionsRule()); 
-            pushFollow(FOLLOW_ruleUsedDescriptions_in_entryRuleUsedDescriptions1147);
+            pushFollow(FOLLOW_ruleUsedDescriptions_in_entryRuleUsedDescriptions1171);
             iv_ruleUsedDescriptions=ruleUsedDescriptions();
 
             state._fsp--;
 
              current =iv_ruleUsedDescriptions; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleUsedDescriptions1157); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleUsedDescriptions1181); 
 
             }
 
@@ -1397,39 +1408,40 @@ public class InternalGuiDSLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleUsedDescriptions"
-    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:580:1: ruleUsedDescriptions returns [EObject current=null] : (otherlv_0= 'use: ' ( (lv_description_1_0= ruleDescriptionType ) ) (otherlv_2= 'as:' ( (lv_id_3_0= RULE_STRING ) ) )? ) ;
+    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:588:1: ruleUsedDescriptions returns [EObject current=null] : (otherlv_0= 'use:' ( (lv_description_1_0= ruleDescriptionType ) ) (otherlv_2= 'as:' ( (lv_id_3_0= RULE_STRING ) ) )? otherlv_4= ';' ) ;
     public final EObject ruleUsedDescriptions() throws RecognitionException {
         EObject current = null;
 
         Token otherlv_0=null;
         Token otherlv_2=null;
         Token lv_id_3_0=null;
+        Token otherlv_4=null;
         EObject lv_description_1_0 = null;
 
 
          enterRule(); 
             
         try {
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:583:28: ( (otherlv_0= 'use: ' ( (lv_description_1_0= ruleDescriptionType ) ) (otherlv_2= 'as:' ( (lv_id_3_0= RULE_STRING ) ) )? ) )
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:584:1: (otherlv_0= 'use: ' ( (lv_description_1_0= ruleDescriptionType ) ) (otherlv_2= 'as:' ( (lv_id_3_0= RULE_STRING ) ) )? )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:591:28: ( (otherlv_0= 'use:' ( (lv_description_1_0= ruleDescriptionType ) ) (otherlv_2= 'as:' ( (lv_id_3_0= RULE_STRING ) ) )? otherlv_4= ';' ) )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:592:1: (otherlv_0= 'use:' ( (lv_description_1_0= ruleDescriptionType ) ) (otherlv_2= 'as:' ( (lv_id_3_0= RULE_STRING ) ) )? otherlv_4= ';' )
             {
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:584:1: (otherlv_0= 'use: ' ( (lv_description_1_0= ruleDescriptionType ) ) (otherlv_2= 'as:' ( (lv_id_3_0= RULE_STRING ) ) )? )
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:584:3: otherlv_0= 'use: ' ( (lv_description_1_0= ruleDescriptionType ) ) (otherlv_2= 'as:' ( (lv_id_3_0= RULE_STRING ) ) )?
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:592:1: (otherlv_0= 'use:' ( (lv_description_1_0= ruleDescriptionType ) ) (otherlv_2= 'as:' ( (lv_id_3_0= RULE_STRING ) ) )? otherlv_4= ';' )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:592:3: otherlv_0= 'use:' ( (lv_description_1_0= ruleDescriptionType ) ) (otherlv_2= 'as:' ( (lv_id_3_0= RULE_STRING ) ) )? otherlv_4= ';'
             {
-            otherlv_0=(Token)match(input,20,FOLLOW_20_in_ruleUsedDescriptions1194); 
+            otherlv_0=(Token)match(input,20,FOLLOW_20_in_ruleUsedDescriptions1218); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getUsedDescriptionsAccess().getUseKeyword_0());
                 
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:588:1: ( (lv_description_1_0= ruleDescriptionType ) )
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:589:1: (lv_description_1_0= ruleDescriptionType )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:596:1: ( (lv_description_1_0= ruleDescriptionType ) )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:597:1: (lv_description_1_0= ruleDescriptionType )
             {
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:589:1: (lv_description_1_0= ruleDescriptionType )
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:590:3: lv_description_1_0= ruleDescriptionType
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:597:1: (lv_description_1_0= ruleDescriptionType )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:598:3: lv_description_1_0= ruleDescriptionType
             {
              
             	        newCompositeNode(grammarAccess.getUsedDescriptionsAccess().getDescriptionDescriptionTypeParserRuleCall_1_0()); 
             	    
-            pushFollow(FOLLOW_ruleDescriptionType_in_ruleUsedDescriptions1215);
+            pushFollow(FOLLOW_ruleDescriptionType_in_ruleUsedDescriptions1239);
             lv_description_1_0=ruleDescriptionType();
 
             state._fsp--;
@@ -1451,7 +1463,7 @@ public class InternalGuiDSLParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:606:2: (otherlv_2= 'as:' ( (lv_id_3_0= RULE_STRING ) ) )?
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:614:2: (otherlv_2= 'as:' ( (lv_id_3_0= RULE_STRING ) ) )?
             int alt9=2;
             int LA9_0 = input.LA(1);
 
@@ -1460,19 +1472,19 @@ public class InternalGuiDSLParser extends AbstractInternalAntlrParser {
             }
             switch (alt9) {
                 case 1 :
-                    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:606:4: otherlv_2= 'as:' ( (lv_id_3_0= RULE_STRING ) )
+                    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:614:4: otherlv_2= 'as:' ( (lv_id_3_0= RULE_STRING ) )
                     {
-                    otherlv_2=(Token)match(input,21,FOLLOW_21_in_ruleUsedDescriptions1228); 
+                    otherlv_2=(Token)match(input,21,FOLLOW_21_in_ruleUsedDescriptions1252); 
 
                         	newLeafNode(otherlv_2, grammarAccess.getUsedDescriptionsAccess().getAsKeyword_2_0());
                         
-                    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:610:1: ( (lv_id_3_0= RULE_STRING ) )
-                    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:611:1: (lv_id_3_0= RULE_STRING )
+                    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:618:1: ( (lv_id_3_0= RULE_STRING ) )
+                    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:619:1: (lv_id_3_0= RULE_STRING )
                     {
-                    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:611:1: (lv_id_3_0= RULE_STRING )
-                    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:612:3: lv_id_3_0= RULE_STRING
+                    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:619:1: (lv_id_3_0= RULE_STRING )
+                    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:620:3: lv_id_3_0= RULE_STRING
                     {
-                    lv_id_3_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleUsedDescriptions1245); 
+                    lv_id_3_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleUsedDescriptions1269); 
 
                     			newLeafNode(lv_id_3_0, grammarAccess.getUsedDescriptionsAccess().getIdSTRINGTerminalRuleCall_2_1_0()); 
                     		
@@ -1498,6 +1510,10 @@ public class InternalGuiDSLParser extends AbstractInternalAntlrParser {
 
             }
 
+            otherlv_4=(Token)match(input,15,FOLLOW_15_in_ruleUsedDescriptions1288); 
+
+                	newLeafNode(otherlv_4, grammarAccess.getUsedDescriptionsAccess().getSemicolonKeyword_3());
+                
 
             }
 
@@ -1519,7 +1535,7 @@ public class InternalGuiDSLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleDescriptionType"
-    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:636:1: entryRuleDescriptionType returns [EObject current=null] : iv_ruleDescriptionType= ruleDescriptionType EOF ;
+    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:648:1: entryRuleDescriptionType returns [EObject current=null] : iv_ruleDescriptionType= ruleDescriptionType EOF ;
     public final EObject entryRuleDescriptionType() throws RecognitionException {
         EObject current = null;
 
@@ -1527,17 +1543,17 @@ public class InternalGuiDSLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:637:2: (iv_ruleDescriptionType= ruleDescriptionType EOF )
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:638:2: iv_ruleDescriptionType= ruleDescriptionType EOF
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:649:2: (iv_ruleDescriptionType= ruleDescriptionType EOF )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:650:2: iv_ruleDescriptionType= ruleDescriptionType EOF
             {
              newCompositeNode(grammarAccess.getDescriptionTypeRule()); 
-            pushFollow(FOLLOW_ruleDescriptionType_in_entryRuleDescriptionType1288);
+            pushFollow(FOLLOW_ruleDescriptionType_in_entryRuleDescriptionType1324);
             iv_ruleDescriptionType=ruleDescriptionType();
 
             state._fsp--;
 
              current =iv_ruleDescriptionType; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleDescriptionType1298); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleDescriptionType1334); 
 
             }
 
@@ -1555,7 +1571,7 @@ public class InternalGuiDSLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleDescriptionType"
-    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:645:1: ruleDescriptionType returns [EObject current=null] : (this_UIDescriptionImport_0= ruleUIDescriptionImport | this_ComplexComponent_1= ruleComplexComponent ) ;
+    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:657:1: ruleDescriptionType returns [EObject current=null] : (this_UIDescriptionImport_0= ruleUIDescriptionImport | this_ComplexComponent_1= ruleComplexComponent ) ;
     public final EObject ruleDescriptionType() throws RecognitionException {
         EObject current = null;
 
@@ -1567,17 +1583,17 @@ public class InternalGuiDSLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:648:28: ( (this_UIDescriptionImport_0= ruleUIDescriptionImport | this_ComplexComponent_1= ruleComplexComponent ) )
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:649:1: (this_UIDescriptionImport_0= ruleUIDescriptionImport | this_ComplexComponent_1= ruleComplexComponent )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:660:28: ( (this_UIDescriptionImport_0= ruleUIDescriptionImport | this_ComplexComponent_1= ruleComplexComponent ) )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:661:1: (this_UIDescriptionImport_0= ruleUIDescriptionImport | this_ComplexComponent_1= ruleComplexComponent )
             {
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:649:1: (this_UIDescriptionImport_0= ruleUIDescriptionImport | this_ComplexComponent_1= ruleComplexComponent )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:661:1: (this_UIDescriptionImport_0= ruleUIDescriptionImport | this_ComplexComponent_1= ruleComplexComponent )
             int alt10=2;
             int LA10_0 = input.LA(1);
 
             if ( (LA10_0==RULE_STRING) ) {
                 alt10=1;
             }
-            else if ( (LA10_0==25) ) {
+            else if ( ((LA10_0>=25 && LA10_0<=26)) ) {
                 alt10=2;
             }
             else {
@@ -1588,12 +1604,12 @@ public class InternalGuiDSLParser extends AbstractInternalAntlrParser {
             }
             switch (alt10) {
                 case 1 :
-                    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:650:5: this_UIDescriptionImport_0= ruleUIDescriptionImport
+                    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:662:5: this_UIDescriptionImport_0= ruleUIDescriptionImport
                     {
                      
                             newCompositeNode(grammarAccess.getDescriptionTypeAccess().getUIDescriptionImportParserRuleCall_0()); 
                         
-                    pushFollow(FOLLOW_ruleUIDescriptionImport_in_ruleDescriptionType1345);
+                    pushFollow(FOLLOW_ruleUIDescriptionImport_in_ruleDescriptionType1381);
                     this_UIDescriptionImport_0=ruleUIDescriptionImport();
 
                     state._fsp--;
@@ -1606,12 +1622,12 @@ public class InternalGuiDSLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:660:5: this_ComplexComponent_1= ruleComplexComponent
+                    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:672:5: this_ComplexComponent_1= ruleComplexComponent
                     {
                      
                             newCompositeNode(grammarAccess.getDescriptionTypeAccess().getComplexComponentParserRuleCall_1()); 
                         
-                    pushFollow(FOLLOW_ruleComplexComponent_in_ruleDescriptionType1372);
+                    pushFollow(FOLLOW_ruleComplexComponent_in_ruleDescriptionType1408);
                     this_ComplexComponent_1=ruleComplexComponent();
 
                     state._fsp--;
@@ -1644,7 +1660,7 @@ public class InternalGuiDSLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleDefinition"
-    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:676:1: entryRuleDefinition returns [EObject current=null] : iv_ruleDefinition= ruleDefinition EOF ;
+    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:688:1: entryRuleDefinition returns [EObject current=null] : iv_ruleDefinition= ruleDefinition EOF ;
     public final EObject entryRuleDefinition() throws RecognitionException {
         EObject current = null;
 
@@ -1652,17 +1668,17 @@ public class InternalGuiDSLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:677:2: (iv_ruleDefinition= ruleDefinition EOF )
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:678:2: iv_ruleDefinition= ruleDefinition EOF
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:689:2: (iv_ruleDefinition= ruleDefinition EOF )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:690:2: iv_ruleDefinition= ruleDefinition EOF
             {
              newCompositeNode(grammarAccess.getDefinitionRule()); 
-            pushFollow(FOLLOW_ruleDefinition_in_entryRuleDefinition1407);
+            pushFollow(FOLLOW_ruleDefinition_in_entryRuleDefinition1443);
             iv_ruleDefinition=ruleDefinition();
 
             state._fsp--;
 
              current =iv_ruleDefinition; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleDefinition1417); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleDefinition1453); 
 
             }
 
@@ -1680,7 +1696,7 @@ public class InternalGuiDSLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleDefinition"
-    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:685:1: ruleDefinition returns [EObject current=null] : ( ( (lv_concreteDefition_0_0= ruleComponentDefinition ) ) otherlv_1= ';' ) ;
+    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:697:1: ruleDefinition returns [EObject current=null] : ( ( (lv_concreteDefition_0_0= ruleComponentDefinition ) ) otherlv_1= ';' ) ;
     public final EObject ruleDefinition() throws RecognitionException {
         EObject current = null;
 
@@ -1691,22 +1707,22 @@ public class InternalGuiDSLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:688:28: ( ( ( (lv_concreteDefition_0_0= ruleComponentDefinition ) ) otherlv_1= ';' ) )
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:689:1: ( ( (lv_concreteDefition_0_0= ruleComponentDefinition ) ) otherlv_1= ';' )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:700:28: ( ( ( (lv_concreteDefition_0_0= ruleComponentDefinition ) ) otherlv_1= ';' ) )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:701:1: ( ( (lv_concreteDefition_0_0= ruleComponentDefinition ) ) otherlv_1= ';' )
             {
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:689:1: ( ( (lv_concreteDefition_0_0= ruleComponentDefinition ) ) otherlv_1= ';' )
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:689:2: ( (lv_concreteDefition_0_0= ruleComponentDefinition ) ) otherlv_1= ';'
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:701:1: ( ( (lv_concreteDefition_0_0= ruleComponentDefinition ) ) otherlv_1= ';' )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:701:2: ( (lv_concreteDefition_0_0= ruleComponentDefinition ) ) otherlv_1= ';'
             {
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:689:2: ( (lv_concreteDefition_0_0= ruleComponentDefinition ) )
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:690:1: (lv_concreteDefition_0_0= ruleComponentDefinition )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:701:2: ( (lv_concreteDefition_0_0= ruleComponentDefinition ) )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:702:1: (lv_concreteDefition_0_0= ruleComponentDefinition )
             {
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:690:1: (lv_concreteDefition_0_0= ruleComponentDefinition )
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:691:3: lv_concreteDefition_0_0= ruleComponentDefinition
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:702:1: (lv_concreteDefition_0_0= ruleComponentDefinition )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:703:3: lv_concreteDefition_0_0= ruleComponentDefinition
             {
              
             	        newCompositeNode(grammarAccess.getDefinitionAccess().getConcreteDefitionComponentDefinitionParserRuleCall_0_0()); 
             	    
-            pushFollow(FOLLOW_ruleComponentDefinition_in_ruleDefinition1463);
+            pushFollow(FOLLOW_ruleComponentDefinition_in_ruleDefinition1499);
             lv_concreteDefition_0_0=ruleComponentDefinition();
 
             state._fsp--;
@@ -1728,7 +1744,7 @@ public class InternalGuiDSLParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,14,FOLLOW_14_in_ruleDefinition1475); 
+            otherlv_1=(Token)match(input,15,FOLLOW_15_in_ruleDefinition1511); 
 
                 	newLeafNode(otherlv_1, grammarAccess.getDefinitionAccess().getSemicolonKeyword_1());
                 
@@ -1753,7 +1769,7 @@ public class InternalGuiDSLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleTypeDefinition"
-    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:719:1: entryRuleTypeDefinition returns [EObject current=null] : iv_ruleTypeDefinition= ruleTypeDefinition EOF ;
+    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:731:1: entryRuleTypeDefinition returns [EObject current=null] : iv_ruleTypeDefinition= ruleTypeDefinition EOF ;
     public final EObject entryRuleTypeDefinition() throws RecognitionException {
         EObject current = null;
 
@@ -1761,17 +1777,17 @@ public class InternalGuiDSLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:720:2: (iv_ruleTypeDefinition= ruleTypeDefinition EOF )
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:721:2: iv_ruleTypeDefinition= ruleTypeDefinition EOF
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:732:2: (iv_ruleTypeDefinition= ruleTypeDefinition EOF )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:733:2: iv_ruleTypeDefinition= ruleTypeDefinition EOF
             {
              newCompositeNode(grammarAccess.getTypeDefinitionRule()); 
-            pushFollow(FOLLOW_ruleTypeDefinition_in_entryRuleTypeDefinition1511);
+            pushFollow(FOLLOW_ruleTypeDefinition_in_entryRuleTypeDefinition1547);
             iv_ruleTypeDefinition=ruleTypeDefinition();
 
             state._fsp--;
 
              current =iv_ruleTypeDefinition; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleTypeDefinition1521); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleTypeDefinition1557); 
 
             }
 
@@ -1789,37 +1805,38 @@ public class InternalGuiDSLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleTypeDefinition"
-    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:728:1: ruleTypeDefinition returns [EObject current=null] : (otherlv_0= 'type: ' ( (lv_type_1_0= ruleType ) ) ) ;
+    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:740:1: ruleTypeDefinition returns [EObject current=null] : (otherlv_0= 'type: ' ( (lv_type_1_0= ruleType ) ) otherlv_2= ';' ) ;
     public final EObject ruleTypeDefinition() throws RecognitionException {
         EObject current = null;
 
         Token otherlv_0=null;
+        Token otherlv_2=null;
         EObject lv_type_1_0 = null;
 
 
          enterRule(); 
             
         try {
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:731:28: ( (otherlv_0= 'type: ' ( (lv_type_1_0= ruleType ) ) ) )
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:732:1: (otherlv_0= 'type: ' ( (lv_type_1_0= ruleType ) ) )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:743:28: ( (otherlv_0= 'type: ' ( (lv_type_1_0= ruleType ) ) otherlv_2= ';' ) )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:744:1: (otherlv_0= 'type: ' ( (lv_type_1_0= ruleType ) ) otherlv_2= ';' )
             {
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:732:1: (otherlv_0= 'type: ' ( (lv_type_1_0= ruleType ) ) )
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:732:3: otherlv_0= 'type: ' ( (lv_type_1_0= ruleType ) )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:744:1: (otherlv_0= 'type: ' ( (lv_type_1_0= ruleType ) ) otherlv_2= ';' )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:744:3: otherlv_0= 'type: ' ( (lv_type_1_0= ruleType ) ) otherlv_2= ';'
             {
-            otherlv_0=(Token)match(input,22,FOLLOW_22_in_ruleTypeDefinition1558); 
+            otherlv_0=(Token)match(input,22,FOLLOW_22_in_ruleTypeDefinition1594); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getTypeDefinitionAccess().getTypeKeyword_0());
                 
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:736:1: ( (lv_type_1_0= ruleType ) )
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:737:1: (lv_type_1_0= ruleType )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:748:1: ( (lv_type_1_0= ruleType ) )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:749:1: (lv_type_1_0= ruleType )
             {
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:737:1: (lv_type_1_0= ruleType )
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:738:3: lv_type_1_0= ruleType
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:749:1: (lv_type_1_0= ruleType )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:750:3: lv_type_1_0= ruleType
             {
              
             	        newCompositeNode(grammarAccess.getTypeDefinitionAccess().getTypeTypeParserRuleCall_1_0()); 
             	    
-            pushFollow(FOLLOW_ruleType_in_ruleTypeDefinition1579);
+            pushFollow(FOLLOW_ruleType_in_ruleTypeDefinition1615);
             lv_type_1_0=ruleType();
 
             state._fsp--;
@@ -1841,6 +1858,10 @@ public class InternalGuiDSLParser extends AbstractInternalAntlrParser {
 
             }
 
+            otherlv_2=(Token)match(input,15,FOLLOW_15_in_ruleTypeDefinition1627); 
+
+                	newLeafNode(otherlv_2, grammarAccess.getTypeDefinitionAccess().getSemicolonKeyword_2());
+                
 
             }
 
@@ -1862,7 +1883,7 @@ public class InternalGuiDSLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleType"
-    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:762:1: entryRuleType returns [EObject current=null] : iv_ruleType= ruleType EOF ;
+    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:778:1: entryRuleType returns [EObject current=null] : iv_ruleType= ruleType EOF ;
     public final EObject entryRuleType() throws RecognitionException {
         EObject current = null;
 
@@ -1870,17 +1891,17 @@ public class InternalGuiDSLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:763:2: (iv_ruleType= ruleType EOF )
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:764:2: iv_ruleType= ruleType EOF
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:779:2: (iv_ruleType= ruleType EOF )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:780:2: iv_ruleType= ruleType EOF
             {
              newCompositeNode(grammarAccess.getTypeRule()); 
-            pushFollow(FOLLOW_ruleType_in_entryRuleType1615);
+            pushFollow(FOLLOW_ruleType_in_entryRuleType1663);
             iv_ruleType=ruleType();
 
             state._fsp--;
 
              current =iv_ruleType; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleType1625); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleType1673); 
 
             }
 
@@ -1898,7 +1919,7 @@ public class InternalGuiDSLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleType"
-    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:771:1: ruleType returns [EObject current=null] : ( ( (lv_id_0_1= 'WINDOW' | lv_id_0_2= 'INNERCOMPLEX' ) ) ) ;
+    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:787:1: ruleType returns [EObject current=null] : ( ( (lv_id_0_1= 'WINDOW' | lv_id_0_2= 'INNERCOMPLEX' ) ) ) ;
     public final EObject ruleType() throws RecognitionException {
         EObject current = null;
 
@@ -1908,16 +1929,16 @@ public class InternalGuiDSLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:774:28: ( ( ( (lv_id_0_1= 'WINDOW' | lv_id_0_2= 'INNERCOMPLEX' ) ) ) )
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:775:1: ( ( (lv_id_0_1= 'WINDOW' | lv_id_0_2= 'INNERCOMPLEX' ) ) )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:790:28: ( ( ( (lv_id_0_1= 'WINDOW' | lv_id_0_2= 'INNERCOMPLEX' ) ) ) )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:791:1: ( ( (lv_id_0_1= 'WINDOW' | lv_id_0_2= 'INNERCOMPLEX' ) ) )
             {
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:775:1: ( ( (lv_id_0_1= 'WINDOW' | lv_id_0_2= 'INNERCOMPLEX' ) ) )
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:776:1: ( (lv_id_0_1= 'WINDOW' | lv_id_0_2= 'INNERCOMPLEX' ) )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:791:1: ( ( (lv_id_0_1= 'WINDOW' | lv_id_0_2= 'INNERCOMPLEX' ) ) )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:792:1: ( (lv_id_0_1= 'WINDOW' | lv_id_0_2= 'INNERCOMPLEX' ) )
             {
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:776:1: ( (lv_id_0_1= 'WINDOW' | lv_id_0_2= 'INNERCOMPLEX' ) )
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:777:1: (lv_id_0_1= 'WINDOW' | lv_id_0_2= 'INNERCOMPLEX' )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:792:1: ( (lv_id_0_1= 'WINDOW' | lv_id_0_2= 'INNERCOMPLEX' ) )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:793:1: (lv_id_0_1= 'WINDOW' | lv_id_0_2= 'INNERCOMPLEX' )
             {
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:777:1: (lv_id_0_1= 'WINDOW' | lv_id_0_2= 'INNERCOMPLEX' )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:793:1: (lv_id_0_1= 'WINDOW' | lv_id_0_2= 'INNERCOMPLEX' )
             int alt11=2;
             int LA11_0 = input.LA(1);
 
@@ -1935,9 +1956,9 @@ public class InternalGuiDSLParser extends AbstractInternalAntlrParser {
             }
             switch (alt11) {
                 case 1 :
-                    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:778:3: lv_id_0_1= 'WINDOW'
+                    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:794:3: lv_id_0_1= 'WINDOW'
                     {
-                    lv_id_0_1=(Token)match(input,23,FOLLOW_23_in_ruleType1669); 
+                    lv_id_0_1=(Token)match(input,23,FOLLOW_23_in_ruleType1717); 
 
                             newLeafNode(lv_id_0_1, grammarAccess.getTypeAccess().getIdWINDOWKeyword_0_0());
                         
@@ -1951,9 +1972,9 @@ public class InternalGuiDSLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:790:8: lv_id_0_2= 'INNERCOMPLEX'
+                    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:806:8: lv_id_0_2= 'INNERCOMPLEX'
                     {
-                    lv_id_0_2=(Token)match(input,24,FOLLOW_24_in_ruleType1698); 
+                    lv_id_0_2=(Token)match(input,24,FOLLOW_24_in_ruleType1746); 
 
                             newLeafNode(lv_id_0_2, grammarAccess.getTypeAccess().getIdINNERCOMPLEXKeyword_0_1());
                         
@@ -1993,7 +2014,7 @@ public class InternalGuiDSLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleUIDescriptionImport"
-    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:813:1: entryRuleUIDescriptionImport returns [EObject current=null] : iv_ruleUIDescriptionImport= ruleUIDescriptionImport EOF ;
+    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:829:1: entryRuleUIDescriptionImport returns [EObject current=null] : iv_ruleUIDescriptionImport= ruleUIDescriptionImport EOF ;
     public final EObject entryRuleUIDescriptionImport() throws RecognitionException {
         EObject current = null;
 
@@ -2001,17 +2022,17 @@ public class InternalGuiDSLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:814:2: (iv_ruleUIDescriptionImport= ruleUIDescriptionImport EOF )
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:815:2: iv_ruleUIDescriptionImport= ruleUIDescriptionImport EOF
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:830:2: (iv_ruleUIDescriptionImport= ruleUIDescriptionImport EOF )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:831:2: iv_ruleUIDescriptionImport= ruleUIDescriptionImport EOF
             {
              newCompositeNode(grammarAccess.getUIDescriptionImportRule()); 
-            pushFollow(FOLLOW_ruleUIDescriptionImport_in_entryRuleUIDescriptionImport1749);
+            pushFollow(FOLLOW_ruleUIDescriptionImport_in_entryRuleUIDescriptionImport1797);
             iv_ruleUIDescriptionImport=ruleUIDescriptionImport();
 
             state._fsp--;
 
              current =iv_ruleUIDescriptionImport; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleUIDescriptionImport1759); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleUIDescriptionImport1807); 
 
             }
 
@@ -2029,7 +2050,7 @@ public class InternalGuiDSLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleUIDescriptionImport"
-    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:822:1: ruleUIDescriptionImport returns [EObject current=null] : ( (lv_descriptionName_0_0= RULE_STRING ) ) ;
+    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:838:1: ruleUIDescriptionImport returns [EObject current=null] : ( (lv_descriptionName_0_0= RULE_STRING ) ) ;
     public final EObject ruleUIDescriptionImport() throws RecognitionException {
         EObject current = null;
 
@@ -2038,16 +2059,16 @@ public class InternalGuiDSLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:825:28: ( ( (lv_descriptionName_0_0= RULE_STRING ) ) )
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:826:1: ( (lv_descriptionName_0_0= RULE_STRING ) )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:841:28: ( ( (lv_descriptionName_0_0= RULE_STRING ) ) )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:842:1: ( (lv_descriptionName_0_0= RULE_STRING ) )
             {
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:826:1: ( (lv_descriptionName_0_0= RULE_STRING ) )
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:827:1: (lv_descriptionName_0_0= RULE_STRING )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:842:1: ( (lv_descriptionName_0_0= RULE_STRING ) )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:843:1: (lv_descriptionName_0_0= RULE_STRING )
             {
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:827:1: (lv_descriptionName_0_0= RULE_STRING )
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:828:3: lv_descriptionName_0_0= RULE_STRING
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:843:1: (lv_descriptionName_0_0= RULE_STRING )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:844:3: lv_descriptionName_0_0= RULE_STRING
             {
-            lv_descriptionName_0_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleUIDescriptionImport1800); 
+            lv_descriptionName_0_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleUIDescriptionImport1848); 
 
             			newLeafNode(lv_descriptionName_0_0, grammarAccess.getUIDescriptionImportAccess().getDescriptionNameSTRINGTerminalRuleCall_0()); 
             		
@@ -2085,7 +2106,7 @@ public class InternalGuiDSLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleComplexComponent"
-    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:852:1: entryRuleComplexComponent returns [EObject current=null] : iv_ruleComplexComponent= ruleComplexComponent EOF ;
+    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:868:1: entryRuleComplexComponent returns [EObject current=null] : iv_ruleComplexComponent= ruleComplexComponent EOF ;
     public final EObject entryRuleComplexComponent() throws RecognitionException {
         EObject current = null;
 
@@ -2093,17 +2114,17 @@ public class InternalGuiDSLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:853:2: (iv_ruleComplexComponent= ruleComplexComponent EOF )
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:854:2: iv_ruleComplexComponent= ruleComplexComponent EOF
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:869:2: (iv_ruleComplexComponent= ruleComplexComponent EOF )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:870:2: iv_ruleComplexComponent= ruleComplexComponent EOF
             {
              newCompositeNode(grammarAccess.getComplexComponentRule()); 
-            pushFollow(FOLLOW_ruleComplexComponent_in_entryRuleComplexComponent1840);
+            pushFollow(FOLLOW_ruleComplexComponent_in_entryRuleComplexComponent1888);
             iv_ruleComplexComponent=ruleComplexComponent();
 
             state._fsp--;
 
              current =iv_ruleComplexComponent; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleComplexComponent1850); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleComplexComponent1898); 
 
             }
 
@@ -2121,31 +2142,77 @@ public class InternalGuiDSLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleComplexComponent"
-    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:861:1: ruleComplexComponent returns [EObject current=null] : this_Multiselection_0= ruleMultiselection ;
+    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:877:1: ruleComplexComponent returns [EObject current=null] : (this_Multiselection_0= ruleMultiselection | this_TabView_1= ruleTabView ) ;
     public final EObject ruleComplexComponent() throws RecognitionException {
         EObject current = null;
 
         EObject this_Multiselection_0 = null;
 
+        EObject this_TabView_1 = null;
+
 
          enterRule(); 
             
         try {
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:864:28: (this_Multiselection_0= ruleMultiselection )
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:866:5: this_Multiselection_0= ruleMultiselection
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:880:28: ( (this_Multiselection_0= ruleMultiselection | this_TabView_1= ruleTabView ) )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:881:1: (this_Multiselection_0= ruleMultiselection | this_TabView_1= ruleTabView )
             {
-             
-                    newCompositeNode(grammarAccess.getComplexComponentAccess().getMultiselectionParserRuleCall()); 
-                
-            pushFollow(FOLLOW_ruleMultiselection_in_ruleComplexComponent1896);
-            this_Multiselection_0=ruleMultiselection();
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:881:1: (this_Multiselection_0= ruleMultiselection | this_TabView_1= ruleTabView )
+            int alt12=2;
+            int LA12_0 = input.LA(1);
 
-            state._fsp--;
+            if ( (LA12_0==26) ) {
+                alt12=1;
+            }
+            else if ( (LA12_0==25) ) {
+                alt12=2;
+            }
+            else {
+                NoViableAltException nvae =
+                    new NoViableAltException("", 12, 0, input);
 
-             
-                    current = this_Multiselection_0; 
-                    afterParserOrEnumRuleCall();
-                
+                throw nvae;
+            }
+            switch (alt12) {
+                case 1 :
+                    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:882:5: this_Multiselection_0= ruleMultiselection
+                    {
+                     
+                            newCompositeNode(grammarAccess.getComplexComponentAccess().getMultiselectionParserRuleCall_0()); 
+                        
+                    pushFollow(FOLLOW_ruleMultiselection_in_ruleComplexComponent1945);
+                    this_Multiselection_0=ruleMultiselection();
+
+                    state._fsp--;
+
+                     
+                            current = this_Multiselection_0; 
+                            afterParserOrEnumRuleCall();
+                        
+
+                    }
+                    break;
+                case 2 :
+                    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:892:5: this_TabView_1= ruleTabView
+                    {
+                     
+                            newCompositeNode(grammarAccess.getComplexComponentAccess().getTabViewParserRuleCall_1()); 
+                        
+                    pushFollow(FOLLOW_ruleTabView_in_ruleComplexComponent1972);
+                    this_TabView_1=ruleTabView();
+
+                    state._fsp--;
+
+                     
+                            current = this_TabView_1; 
+                            afterParserOrEnumRuleCall();
+                        
+
+                    }
+                    break;
+
+            }
+
 
             }
 
@@ -2163,8 +2230,245 @@ public class InternalGuiDSLParser extends AbstractInternalAntlrParser {
     // $ANTLR end "ruleComplexComponent"
 
 
+    // $ANTLR start "entryRuleTabView"
+    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:908:1: entryRuleTabView returns [EObject current=null] : iv_ruleTabView= ruleTabView EOF ;
+    public final EObject entryRuleTabView() throws RecognitionException {
+        EObject current = null;
+
+        EObject iv_ruleTabView = null;
+
+
+        try {
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:909:2: (iv_ruleTabView= ruleTabView EOF )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:910:2: iv_ruleTabView= ruleTabView EOF
+            {
+             newCompositeNode(grammarAccess.getTabViewRule()); 
+            pushFollow(FOLLOW_ruleTabView_in_entryRuleTabView2007);
+            iv_ruleTabView=ruleTabView();
+
+            state._fsp--;
+
+             current =iv_ruleTabView; 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleTabView2017); 
+
+            }
+
+        }
+         
+            catch (RecognitionException re) { 
+                recover(input,re); 
+                appendSkippedTokens();
+            } 
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "entryRuleTabView"
+
+
+    // $ANTLR start "ruleTabView"
+    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:917:1: ruleTabView returns [EObject current=null] : ( ( (lv_name_0_0= 'TabView' ) ) ( (lv_tabs_1_0= ruleTabDefinition ) )* ) ;
+    public final EObject ruleTabView() throws RecognitionException {
+        EObject current = null;
+
+        Token lv_name_0_0=null;
+        EObject lv_tabs_1_0 = null;
+
+
+         enterRule(); 
+            
+        try {
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:920:28: ( ( ( (lv_name_0_0= 'TabView' ) ) ( (lv_tabs_1_0= ruleTabDefinition ) )* ) )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:921:1: ( ( (lv_name_0_0= 'TabView' ) ) ( (lv_tabs_1_0= ruleTabDefinition ) )* )
+            {
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:921:1: ( ( (lv_name_0_0= 'TabView' ) ) ( (lv_tabs_1_0= ruleTabDefinition ) )* )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:921:2: ( (lv_name_0_0= 'TabView' ) ) ( (lv_tabs_1_0= ruleTabDefinition ) )*
+            {
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:921:2: ( (lv_name_0_0= 'TabView' ) )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:922:1: (lv_name_0_0= 'TabView' )
+            {
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:922:1: (lv_name_0_0= 'TabView' )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:923:3: lv_name_0_0= 'TabView'
+            {
+            lv_name_0_0=(Token)match(input,25,FOLLOW_25_in_ruleTabView2060); 
+
+                    newLeafNode(lv_name_0_0, grammarAccess.getTabViewAccess().getNameTabViewKeyword_0_0());
+                
+
+            	        if (current==null) {
+            	            current = createModelElement(grammarAccess.getTabViewRule());
+            	        }
+                   		setWithLastConsumed(current, "name", lv_name_0_0, "TabView");
+            	    
+
+            }
+
+
+            }
+
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:936:2: ( (lv_tabs_1_0= ruleTabDefinition ) )*
+            loop13:
+            do {
+                int alt13=2;
+                int LA13_0 = input.LA(1);
+
+                if ( (LA13_0==RULE_TABNAME) ) {
+                    alt13=1;
+                }
+
+
+                switch (alt13) {
+            	case 1 :
+            	    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:937:1: (lv_tabs_1_0= ruleTabDefinition )
+            	    {
+            	    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:937:1: (lv_tabs_1_0= ruleTabDefinition )
+            	    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:938:3: lv_tabs_1_0= ruleTabDefinition
+            	    {
+            	     
+            	    	        newCompositeNode(grammarAccess.getTabViewAccess().getTabsTabDefinitionParserRuleCall_1_0()); 
+            	    	    
+            	    pushFollow(FOLLOW_ruleTabDefinition_in_ruleTabView2094);
+            	    lv_tabs_1_0=ruleTabDefinition();
+
+            	    state._fsp--;
+
+
+            	    	        if (current==null) {
+            	    	            current = createModelElementForParent(grammarAccess.getTabViewRule());
+            	    	        }
+            	           		add(
+            	           			current, 
+            	           			"tabs",
+            	            		lv_tabs_1_0, 
+            	            		"TabDefinition");
+            	    	        afterParserOrEnumRuleCall();
+            	    	    
+
+            	    }
+
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop13;
+                }
+            } while (true);
+
+
+            }
+
+
+            }
+
+             leaveRule(); 
+        }
+         
+            catch (RecognitionException re) { 
+                recover(input,re); 
+                appendSkippedTokens();
+            } 
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "ruleTabView"
+
+
+    // $ANTLR start "entryRuleTabDefinition"
+    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:962:1: entryRuleTabDefinition returns [EObject current=null] : iv_ruleTabDefinition= ruleTabDefinition EOF ;
+    public final EObject entryRuleTabDefinition() throws RecognitionException {
+        EObject current = null;
+
+        EObject iv_ruleTabDefinition = null;
+
+
+        try {
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:963:2: (iv_ruleTabDefinition= ruleTabDefinition EOF )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:964:2: iv_ruleTabDefinition= ruleTabDefinition EOF
+            {
+             newCompositeNode(grammarAccess.getTabDefinitionRule()); 
+            pushFollow(FOLLOW_ruleTabDefinition_in_entryRuleTabDefinition2131);
+            iv_ruleTabDefinition=ruleTabDefinition();
+
+            state._fsp--;
+
+             current =iv_ruleTabDefinition; 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleTabDefinition2141); 
+
+            }
+
+        }
+         
+            catch (RecognitionException re) { 
+                recover(input,re); 
+                appendSkippedTokens();
+            } 
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "entryRuleTabDefinition"
+
+
+    // $ANTLR start "ruleTabDefinition"
+    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:971:1: ruleTabDefinition returns [EObject current=null] : ( (lv_name_0_0= RULE_TABNAME ) ) ;
+    public final EObject ruleTabDefinition() throws RecognitionException {
+        EObject current = null;
+
+        Token lv_name_0_0=null;
+
+         enterRule(); 
+            
+        try {
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:974:28: ( ( (lv_name_0_0= RULE_TABNAME ) ) )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:975:1: ( (lv_name_0_0= RULE_TABNAME ) )
+            {
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:975:1: ( (lv_name_0_0= RULE_TABNAME ) )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:976:1: (lv_name_0_0= RULE_TABNAME )
+            {
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:976:1: (lv_name_0_0= RULE_TABNAME )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:977:3: lv_name_0_0= RULE_TABNAME
+            {
+            lv_name_0_0=(Token)match(input,RULE_TABNAME,FOLLOW_RULE_TABNAME_in_ruleTabDefinition2182); 
+
+            			newLeafNode(lv_name_0_0, grammarAccess.getTabDefinitionAccess().getNameTABNAMETerminalRuleCall_0()); 
+            		
+
+            	        if (current==null) {
+            	            current = createModelElement(grammarAccess.getTabDefinitionRule());
+            	        }
+                   		setWithLastConsumed(
+                   			current, 
+                   			"name",
+                    		lv_name_0_0, 
+                    		"TABNAME");
+            	    
+
+            }
+
+
+            }
+
+
+            }
+
+             leaveRule(); 
+        }
+         
+            catch (RecognitionException re) { 
+                recover(input,re); 
+                appendSkippedTokens();
+            } 
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "ruleTabDefinition"
+
+
     // $ANTLR start "entryRuleMultiselection"
-    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:882:1: entryRuleMultiselection returns [EObject current=null] : iv_ruleMultiselection= ruleMultiselection EOF ;
+    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1001:1: entryRuleMultiselection returns [EObject current=null] : iv_ruleMultiselection= ruleMultiselection EOF ;
     public final EObject entryRuleMultiselection() throws RecognitionException {
         EObject current = null;
 
@@ -2172,17 +2476,17 @@ public class InternalGuiDSLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:883:2: (iv_ruleMultiselection= ruleMultiselection EOF )
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:884:2: iv_ruleMultiselection= ruleMultiselection EOF
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1002:2: (iv_ruleMultiselection= ruleMultiselection EOF )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1003:2: iv_ruleMultiselection= ruleMultiselection EOF
             {
              newCompositeNode(grammarAccess.getMultiselectionRule()); 
-            pushFollow(FOLLOW_ruleMultiselection_in_entryRuleMultiselection1930);
+            pushFollow(FOLLOW_ruleMultiselection_in_entryRuleMultiselection2222);
             iv_ruleMultiselection=ruleMultiselection();
 
             state._fsp--;
 
              current =iv_ruleMultiselection; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleMultiselection1940); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleMultiselection2232); 
 
             }
 
@@ -2200,37 +2504,37 @@ public class InternalGuiDSLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleMultiselection"
-    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:891:1: ruleMultiselection returns [EObject current=null] : ( ( (lv_descriptionName_0_0= 'Multiselection' ) ) ( (lv_inputType_1_0= RULE_INPUT_DESCRIPTION ) )? ) ;
+    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1010:1: ruleMultiselection returns [EObject current=null] : ( ( (lv_name_0_0= 'Multiselection' ) ) ( (lv_inputType_1_0= RULE_INPUT_DESCRIPTION ) )? ) ;
     public final EObject ruleMultiselection() throws RecognitionException {
         EObject current = null;
 
-        Token lv_descriptionName_0_0=null;
+        Token lv_name_0_0=null;
         Token lv_inputType_1_0=null;
 
          enterRule(); 
             
         try {
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:894:28: ( ( ( (lv_descriptionName_0_0= 'Multiselection' ) ) ( (lv_inputType_1_0= RULE_INPUT_DESCRIPTION ) )? ) )
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:895:1: ( ( (lv_descriptionName_0_0= 'Multiselection' ) ) ( (lv_inputType_1_0= RULE_INPUT_DESCRIPTION ) )? )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1013:28: ( ( ( (lv_name_0_0= 'Multiselection' ) ) ( (lv_inputType_1_0= RULE_INPUT_DESCRIPTION ) )? ) )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1014:1: ( ( (lv_name_0_0= 'Multiselection' ) ) ( (lv_inputType_1_0= RULE_INPUT_DESCRIPTION ) )? )
             {
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:895:1: ( ( (lv_descriptionName_0_0= 'Multiselection' ) ) ( (lv_inputType_1_0= RULE_INPUT_DESCRIPTION ) )? )
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:895:2: ( (lv_descriptionName_0_0= 'Multiselection' ) ) ( (lv_inputType_1_0= RULE_INPUT_DESCRIPTION ) )?
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1014:1: ( ( (lv_name_0_0= 'Multiselection' ) ) ( (lv_inputType_1_0= RULE_INPUT_DESCRIPTION ) )? )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1014:2: ( (lv_name_0_0= 'Multiselection' ) ) ( (lv_inputType_1_0= RULE_INPUT_DESCRIPTION ) )?
             {
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:895:2: ( (lv_descriptionName_0_0= 'Multiselection' ) )
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:896:1: (lv_descriptionName_0_0= 'Multiselection' )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1014:2: ( (lv_name_0_0= 'Multiselection' ) )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1015:1: (lv_name_0_0= 'Multiselection' )
             {
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:896:1: (lv_descriptionName_0_0= 'Multiselection' )
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:897:3: lv_descriptionName_0_0= 'Multiselection'
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1015:1: (lv_name_0_0= 'Multiselection' )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1016:3: lv_name_0_0= 'Multiselection'
             {
-            lv_descriptionName_0_0=(Token)match(input,25,FOLLOW_25_in_ruleMultiselection1983); 
+            lv_name_0_0=(Token)match(input,26,FOLLOW_26_in_ruleMultiselection2275); 
 
-                    newLeafNode(lv_descriptionName_0_0, grammarAccess.getMultiselectionAccess().getDescriptionNameMultiselectionKeyword_0_0());
+                    newLeafNode(lv_name_0_0, grammarAccess.getMultiselectionAccess().getNameMultiselectionKeyword_0_0());
                 
 
             	        if (current==null) {
             	            current = createModelElement(grammarAccess.getMultiselectionRule());
             	        }
-                   		setWithLastConsumed(current, "descriptionName", lv_descriptionName_0_0, "Multiselection");
+                   		setWithLastConsumed(current, "name", lv_name_0_0, "Multiselection");
             	    
 
             }
@@ -2238,21 +2542,21 @@ public class InternalGuiDSLParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:910:2: ( (lv_inputType_1_0= RULE_INPUT_DESCRIPTION ) )?
-            int alt12=2;
-            int LA12_0 = input.LA(1);
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1029:2: ( (lv_inputType_1_0= RULE_INPUT_DESCRIPTION ) )?
+            int alt14=2;
+            int LA14_0 = input.LA(1);
 
-            if ( (LA12_0==RULE_INPUT_DESCRIPTION) ) {
-                alt12=1;
+            if ( (LA14_0==RULE_INPUT_DESCRIPTION) ) {
+                alt14=1;
             }
-            switch (alt12) {
+            switch (alt14) {
                 case 1 :
-                    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:911:1: (lv_inputType_1_0= RULE_INPUT_DESCRIPTION )
+                    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1030:1: (lv_inputType_1_0= RULE_INPUT_DESCRIPTION )
                     {
-                    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:911:1: (lv_inputType_1_0= RULE_INPUT_DESCRIPTION )
-                    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:912:3: lv_inputType_1_0= RULE_INPUT_DESCRIPTION
+                    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1030:1: (lv_inputType_1_0= RULE_INPUT_DESCRIPTION )
+                    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1031:3: lv_inputType_1_0= RULE_INPUT_DESCRIPTION
                     {
-                    lv_inputType_1_0=(Token)match(input,RULE_INPUT_DESCRIPTION,FOLLOW_RULE_INPUT_DESCRIPTION_in_ruleMultiselection2013); 
+                    lv_inputType_1_0=(Token)match(input,RULE_INPUT_DESCRIPTION,FOLLOW_RULE_INPUT_DESCRIPTION_in_ruleMultiselection2305); 
 
                     			newLeafNode(lv_inputType_1_0, grammarAccess.getMultiselectionAccess().getInputTypeINPUT_DESCRIPTIONTerminalRuleCall_1_0()); 
                     		
@@ -2296,7 +2600,7 @@ public class InternalGuiDSLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleComponentDefinition"
-    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:936:1: entryRuleComponentDefinition returns [EObject current=null] : iv_ruleComponentDefinition= ruleComponentDefinition EOF ;
+    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1055:1: entryRuleComponentDefinition returns [EObject current=null] : iv_ruleComponentDefinition= ruleComponentDefinition EOF ;
     public final EObject entryRuleComponentDefinition() throws RecognitionException {
         EObject current = null;
 
@@ -2304,17 +2608,17 @@ public class InternalGuiDSLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:937:2: (iv_ruleComponentDefinition= ruleComponentDefinition EOF )
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:938:2: iv_ruleComponentDefinition= ruleComponentDefinition EOF
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1056:2: (iv_ruleComponentDefinition= ruleComponentDefinition EOF )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1057:2: iv_ruleComponentDefinition= ruleComponentDefinition EOF
             {
              newCompositeNode(grammarAccess.getComponentDefinitionRule()); 
-            pushFollow(FOLLOW_ruleComponentDefinition_in_entryRuleComponentDefinition2055);
+            pushFollow(FOLLOW_ruleComponentDefinition_in_entryRuleComponentDefinition2347);
             iv_ruleComponentDefinition=ruleComponentDefinition();
 
             state._fsp--;
 
              current =iv_ruleComponentDefinition; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleComponentDefinition2065); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleComponentDefinition2357); 
 
             }
 
@@ -2332,7 +2636,7 @@ public class InternalGuiDSLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleComponentDefinition"
-    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:945:1: ruleComponentDefinition returns [EObject current=null] : (this_LabelDefinition_0= ruleLabelDefinition | this_ButtonDefinition_1= ruleButtonDefinition ) ;
+    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1064:1: ruleComponentDefinition returns [EObject current=null] : (this_LabelDefinition_0= ruleLabelDefinition | this_ButtonDefinition_1= ruleButtonDefinition ) ;
     public final EObject ruleComponentDefinition() throws RecognitionException {
         EObject current = null;
 
@@ -2344,33 +2648,33 @@ public class InternalGuiDSLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:948:28: ( (this_LabelDefinition_0= ruleLabelDefinition | this_ButtonDefinition_1= ruleButtonDefinition ) )
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:949:1: (this_LabelDefinition_0= ruleLabelDefinition | this_ButtonDefinition_1= ruleButtonDefinition )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1067:28: ( (this_LabelDefinition_0= ruleLabelDefinition | this_ButtonDefinition_1= ruleButtonDefinition ) )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1068:1: (this_LabelDefinition_0= ruleLabelDefinition | this_ButtonDefinition_1= ruleButtonDefinition )
             {
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:949:1: (this_LabelDefinition_0= ruleLabelDefinition | this_ButtonDefinition_1= ruleButtonDefinition )
-            int alt13=2;
-            int LA13_0 = input.LA(1);
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1068:1: (this_LabelDefinition_0= ruleLabelDefinition | this_ButtonDefinition_1= ruleButtonDefinition )
+            int alt15=2;
+            int LA15_0 = input.LA(1);
 
-            if ( (LA13_0==17) ) {
-                alt13=1;
+            if ( (LA15_0==18) ) {
+                alt15=1;
             }
-            else if ( (LA13_0==15) ) {
-                alt13=2;
+            else if ( (LA15_0==16) ) {
+                alt15=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 13, 0, input);
+                    new NoViableAltException("", 15, 0, input);
 
                 throw nvae;
             }
-            switch (alt13) {
+            switch (alt15) {
                 case 1 :
-                    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:950:5: this_LabelDefinition_0= ruleLabelDefinition
+                    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1069:5: this_LabelDefinition_0= ruleLabelDefinition
                     {
                      
                             newCompositeNode(grammarAccess.getComponentDefinitionAccess().getLabelDefinitionParserRuleCall_0()); 
                         
-                    pushFollow(FOLLOW_ruleLabelDefinition_in_ruleComponentDefinition2112);
+                    pushFollow(FOLLOW_ruleLabelDefinition_in_ruleComponentDefinition2404);
                     this_LabelDefinition_0=ruleLabelDefinition();
 
                     state._fsp--;
@@ -2383,12 +2687,12 @@ public class InternalGuiDSLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:960:5: this_ButtonDefinition_1= ruleButtonDefinition
+                    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1079:5: this_ButtonDefinition_1= ruleButtonDefinition
                     {
                      
                             newCompositeNode(grammarAccess.getComponentDefinitionAccess().getButtonDefinitionParserRuleCall_1()); 
                         
-                    pushFollow(FOLLOW_ruleButtonDefinition_in_ruleComponentDefinition2139);
+                    pushFollow(FOLLOW_ruleButtonDefinition_in_ruleComponentDefinition2431);
                     this_ButtonDefinition_1=ruleButtonDefinition();
 
                     state._fsp--;
@@ -2421,7 +2725,7 @@ public class InternalGuiDSLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleButtonDefinition"
-    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:976:1: entryRuleButtonDefinition returns [EObject current=null] : iv_ruleButtonDefinition= ruleButtonDefinition EOF ;
+    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1095:1: entryRuleButtonDefinition returns [EObject current=null] : iv_ruleButtonDefinition= ruleButtonDefinition EOF ;
     public final EObject entryRuleButtonDefinition() throws RecognitionException {
         EObject current = null;
 
@@ -2429,17 +2733,17 @@ public class InternalGuiDSLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:977:2: (iv_ruleButtonDefinition= ruleButtonDefinition EOF )
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:978:2: iv_ruleButtonDefinition= ruleButtonDefinition EOF
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1096:2: (iv_ruleButtonDefinition= ruleButtonDefinition EOF )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1097:2: iv_ruleButtonDefinition= ruleButtonDefinition EOF
             {
              newCompositeNode(grammarAccess.getButtonDefinitionRule()); 
-            pushFollow(FOLLOW_ruleButtonDefinition_in_entryRuleButtonDefinition2174);
+            pushFollow(FOLLOW_ruleButtonDefinition_in_entryRuleButtonDefinition2466);
             iv_ruleButtonDefinition=ruleButtonDefinition();
 
             state._fsp--;
 
              current =iv_ruleButtonDefinition; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleButtonDefinition2184); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleButtonDefinition2476); 
 
             }
 
@@ -2457,7 +2761,7 @@ public class InternalGuiDSLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleButtonDefinition"
-    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:985:1: ruleButtonDefinition returns [EObject current=null] : ( ( (lv_name_0_0= 'Button' ) ) otherlv_1= 'as:' ( (lv_id_2_0= RULE_STRING ) ) ( (lv_properties_3_0= ruleProperties ) )? ) ;
+    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1104:1: ruleButtonDefinition returns [EObject current=null] : ( ( (lv_name_0_0= 'Button' ) ) otherlv_1= 'as:' ( (lv_id_2_0= RULE_STRING ) ) ( (lv_properties_3_0= ruleProperties ) )? ) ;
     public final EObject ruleButtonDefinition() throws RecognitionException {
         EObject current = null;
 
@@ -2470,19 +2774,19 @@ public class InternalGuiDSLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:988:28: ( ( ( (lv_name_0_0= 'Button' ) ) otherlv_1= 'as:' ( (lv_id_2_0= RULE_STRING ) ) ( (lv_properties_3_0= ruleProperties ) )? ) )
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:989:1: ( ( (lv_name_0_0= 'Button' ) ) otherlv_1= 'as:' ( (lv_id_2_0= RULE_STRING ) ) ( (lv_properties_3_0= ruleProperties ) )? )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1107:28: ( ( ( (lv_name_0_0= 'Button' ) ) otherlv_1= 'as:' ( (lv_id_2_0= RULE_STRING ) ) ( (lv_properties_3_0= ruleProperties ) )? ) )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1108:1: ( ( (lv_name_0_0= 'Button' ) ) otherlv_1= 'as:' ( (lv_id_2_0= RULE_STRING ) ) ( (lv_properties_3_0= ruleProperties ) )? )
             {
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:989:1: ( ( (lv_name_0_0= 'Button' ) ) otherlv_1= 'as:' ( (lv_id_2_0= RULE_STRING ) ) ( (lv_properties_3_0= ruleProperties ) )? )
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:989:2: ( (lv_name_0_0= 'Button' ) ) otherlv_1= 'as:' ( (lv_id_2_0= RULE_STRING ) ) ( (lv_properties_3_0= ruleProperties ) )?
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1108:1: ( ( (lv_name_0_0= 'Button' ) ) otherlv_1= 'as:' ( (lv_id_2_0= RULE_STRING ) ) ( (lv_properties_3_0= ruleProperties ) )? )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1108:2: ( (lv_name_0_0= 'Button' ) ) otherlv_1= 'as:' ( (lv_id_2_0= RULE_STRING ) ) ( (lv_properties_3_0= ruleProperties ) )?
             {
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:989:2: ( (lv_name_0_0= 'Button' ) )
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:990:1: (lv_name_0_0= 'Button' )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1108:2: ( (lv_name_0_0= 'Button' ) )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1109:1: (lv_name_0_0= 'Button' )
             {
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:990:1: (lv_name_0_0= 'Button' )
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:991:3: lv_name_0_0= 'Button'
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1109:1: (lv_name_0_0= 'Button' )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1110:3: lv_name_0_0= 'Button'
             {
-            lv_name_0_0=(Token)match(input,15,FOLLOW_15_in_ruleButtonDefinition2227); 
+            lv_name_0_0=(Token)match(input,16,FOLLOW_16_in_ruleButtonDefinition2519); 
 
                     newLeafNode(lv_name_0_0, grammarAccess.getButtonDefinitionAccess().getNameButtonKeyword_0_0());
                 
@@ -2498,17 +2802,17 @@ public class InternalGuiDSLParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,21,FOLLOW_21_in_ruleButtonDefinition2252); 
+            otherlv_1=(Token)match(input,21,FOLLOW_21_in_ruleButtonDefinition2544); 
 
                 	newLeafNode(otherlv_1, grammarAccess.getButtonDefinitionAccess().getAsKeyword_1());
                 
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1008:1: ( (lv_id_2_0= RULE_STRING ) )
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1009:1: (lv_id_2_0= RULE_STRING )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1127:1: ( (lv_id_2_0= RULE_STRING ) )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1128:1: (lv_id_2_0= RULE_STRING )
             {
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1009:1: (lv_id_2_0= RULE_STRING )
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1010:3: lv_id_2_0= RULE_STRING
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1128:1: (lv_id_2_0= RULE_STRING )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1129:3: lv_id_2_0= RULE_STRING
             {
-            lv_id_2_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleButtonDefinition2269); 
+            lv_id_2_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleButtonDefinition2561); 
 
             			newLeafNode(lv_id_2_0, grammarAccess.getButtonDefinitionAccess().getIdSTRINGTerminalRuleCall_2_0()); 
             		
@@ -2528,24 +2832,24 @@ public class InternalGuiDSLParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1026:2: ( (lv_properties_3_0= ruleProperties ) )?
-            int alt14=2;
-            int LA14_0 = input.LA(1);
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1145:2: ( (lv_properties_3_0= ruleProperties ) )?
+            int alt16=2;
+            int LA16_0 = input.LA(1);
 
-            if ( (LA14_0==26) ) {
-                alt14=1;
+            if ( (LA16_0==27) ) {
+                alt16=1;
             }
-            switch (alt14) {
+            switch (alt16) {
                 case 1 :
-                    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1027:1: (lv_properties_3_0= ruleProperties )
+                    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1146:1: (lv_properties_3_0= ruleProperties )
                     {
-                    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1027:1: (lv_properties_3_0= ruleProperties )
-                    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1028:3: lv_properties_3_0= ruleProperties
+                    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1146:1: (lv_properties_3_0= ruleProperties )
+                    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1147:3: lv_properties_3_0= ruleProperties
                     {
                      
                     	        newCompositeNode(grammarAccess.getButtonDefinitionAccess().getPropertiesPropertiesParserRuleCall_3_0()); 
                     	    
-                    pushFollow(FOLLOW_ruleProperties_in_ruleButtonDefinition2295);
+                    pushFollow(FOLLOW_ruleProperties_in_ruleButtonDefinition2587);
                     lv_properties_3_0=ruleProperties();
 
                     state._fsp--;
@@ -2591,7 +2895,7 @@ public class InternalGuiDSLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleProperties"
-    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1052:1: entryRuleProperties returns [EObject current=null] : iv_ruleProperties= ruleProperties EOF ;
+    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1171:1: entryRuleProperties returns [EObject current=null] : iv_ruleProperties= ruleProperties EOF ;
     public final EObject entryRuleProperties() throws RecognitionException {
         EObject current = null;
 
@@ -2599,17 +2903,17 @@ public class InternalGuiDSLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1053:2: (iv_ruleProperties= ruleProperties EOF )
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1054:2: iv_ruleProperties= ruleProperties EOF
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1172:2: (iv_ruleProperties= ruleProperties EOF )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1173:2: iv_ruleProperties= ruleProperties EOF
             {
              newCompositeNode(grammarAccess.getPropertiesRule()); 
-            pushFollow(FOLLOW_ruleProperties_in_entryRuleProperties2332);
+            pushFollow(FOLLOW_ruleProperties_in_entryRuleProperties2624);
             iv_ruleProperties=ruleProperties();
 
             state._fsp--;
 
              current =iv_ruleProperties; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleProperties2342); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleProperties2634); 
 
             }
 
@@ -2627,7 +2931,7 @@ public class InternalGuiDSLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleProperties"
-    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1061:1: ruleProperties returns [EObject current=null] : (otherlv_0= '->' ( (lv_propertiesDefinitions_1_0= rulePropertiesDefinition ) )+ ) ;
+    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1180:1: ruleProperties returns [EObject current=null] : (otherlv_0= '->' ( (lv_propertiesDefinitions_1_0= rulePropertiesDefinition ) )+ ) ;
     public final EObject ruleProperties() throws RecognitionException {
         EObject current = null;
 
@@ -2638,39 +2942,39 @@ public class InternalGuiDSLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1064:28: ( (otherlv_0= '->' ( (lv_propertiesDefinitions_1_0= rulePropertiesDefinition ) )+ ) )
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1065:1: (otherlv_0= '->' ( (lv_propertiesDefinitions_1_0= rulePropertiesDefinition ) )+ )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1183:28: ( (otherlv_0= '->' ( (lv_propertiesDefinitions_1_0= rulePropertiesDefinition ) )+ ) )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1184:1: (otherlv_0= '->' ( (lv_propertiesDefinitions_1_0= rulePropertiesDefinition ) )+ )
             {
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1065:1: (otherlv_0= '->' ( (lv_propertiesDefinitions_1_0= rulePropertiesDefinition ) )+ )
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1065:3: otherlv_0= '->' ( (lv_propertiesDefinitions_1_0= rulePropertiesDefinition ) )+
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1184:1: (otherlv_0= '->' ( (lv_propertiesDefinitions_1_0= rulePropertiesDefinition ) )+ )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1184:3: otherlv_0= '->' ( (lv_propertiesDefinitions_1_0= rulePropertiesDefinition ) )+
             {
-            otherlv_0=(Token)match(input,26,FOLLOW_26_in_ruleProperties2379); 
+            otherlv_0=(Token)match(input,27,FOLLOW_27_in_ruleProperties2671); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getPropertiesAccess().getHyphenMinusGreaterThanSignKeyword_0());
                 
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1069:1: ( (lv_propertiesDefinitions_1_0= rulePropertiesDefinition ) )+
-            int cnt15=0;
-            loop15:
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1188:1: ( (lv_propertiesDefinitions_1_0= rulePropertiesDefinition ) )+
+            int cnt17=0;
+            loop17:
             do {
-                int alt15=2;
-                int LA15_0 = input.LA(1);
+                int alt17=2;
+                int LA17_0 = input.LA(1);
 
-                if ( ((LA15_0>=27 && LA15_0<=29)) ) {
-                    alt15=1;
+                if ( ((LA17_0>=28 && LA17_0<=30)) ) {
+                    alt17=1;
                 }
 
 
-                switch (alt15) {
+                switch (alt17) {
             	case 1 :
-            	    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1070:1: (lv_propertiesDefinitions_1_0= rulePropertiesDefinition )
+            	    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1189:1: (lv_propertiesDefinitions_1_0= rulePropertiesDefinition )
             	    {
-            	    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1070:1: (lv_propertiesDefinitions_1_0= rulePropertiesDefinition )
-            	    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1071:3: lv_propertiesDefinitions_1_0= rulePropertiesDefinition
+            	    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1189:1: (lv_propertiesDefinitions_1_0= rulePropertiesDefinition )
+            	    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1190:3: lv_propertiesDefinitions_1_0= rulePropertiesDefinition
             	    {
             	     
             	    	        newCompositeNode(grammarAccess.getPropertiesAccess().getPropertiesDefinitionsPropertiesDefinitionParserRuleCall_1_0()); 
             	    	    
-            	    pushFollow(FOLLOW_rulePropertiesDefinition_in_ruleProperties2400);
+            	    pushFollow(FOLLOW_rulePropertiesDefinition_in_ruleProperties2692);
             	    lv_propertiesDefinitions_1_0=rulePropertiesDefinition();
 
             	    state._fsp--;
@@ -2694,12 +2998,12 @@ public class InternalGuiDSLParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    if ( cnt15 >= 1 ) break loop15;
+            	    if ( cnt17 >= 1 ) break loop17;
                         EarlyExitException eee =
-                            new EarlyExitException(15, input);
+                            new EarlyExitException(17, input);
                         throw eee;
                 }
-                cnt15++;
+                cnt17++;
             } while (true);
 
 
@@ -2723,7 +3027,7 @@ public class InternalGuiDSLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRulePropertiesDefinition"
-    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1095:1: entryRulePropertiesDefinition returns [EObject current=null] : iv_rulePropertiesDefinition= rulePropertiesDefinition EOF ;
+    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1214:1: entryRulePropertiesDefinition returns [EObject current=null] : iv_rulePropertiesDefinition= rulePropertiesDefinition EOF ;
     public final EObject entryRulePropertiesDefinition() throws RecognitionException {
         EObject current = null;
 
@@ -2731,17 +3035,17 @@ public class InternalGuiDSLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1096:2: (iv_rulePropertiesDefinition= rulePropertiesDefinition EOF )
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1097:2: iv_rulePropertiesDefinition= rulePropertiesDefinition EOF
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1215:2: (iv_rulePropertiesDefinition= rulePropertiesDefinition EOF )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1216:2: iv_rulePropertiesDefinition= rulePropertiesDefinition EOF
             {
              newCompositeNode(grammarAccess.getPropertiesDefinitionRule()); 
-            pushFollow(FOLLOW_rulePropertiesDefinition_in_entryRulePropertiesDefinition2437);
+            pushFollow(FOLLOW_rulePropertiesDefinition_in_entryRulePropertiesDefinition2729);
             iv_rulePropertiesDefinition=rulePropertiesDefinition();
 
             state._fsp--;
 
              current =iv_rulePropertiesDefinition; 
-            match(input,EOF,FOLLOW_EOF_in_entryRulePropertiesDefinition2447); 
+            match(input,EOF,FOLLOW_EOF_in_entryRulePropertiesDefinition2739); 
 
             }
 
@@ -2759,7 +3063,7 @@ public class InternalGuiDSLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulePropertiesDefinition"
-    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1104:1: rulePropertiesDefinition returns [EObject current=null] : ( (otherlv_0= 'propertyKey=' ( (lv_propertyKey_1_0= RULE_STRING ) ) ) | (otherlv_2= 'text=' ( (lv_text_3_0= RULE_STRING ) ) ) | (otherlv_4= 'interactiontype=' ( (lv_interactiontype_5_0= ruleInteractiontype ) )+ ) ) ;
+    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1223:1: rulePropertiesDefinition returns [EObject current=null] : ( (otherlv_0= 'propertyKey=' ( (lv_propertyKey_1_0= RULE_STRING ) ) ) | (otherlv_2= 'text=' ( (lv_text_3_0= RULE_STRING ) ) ) | (otherlv_4= 'interactiontype=' ( (lv_interactiontype_5_0= ruleInteractiontype ) )+ ) ) ;
     public final EObject rulePropertiesDefinition() throws RecognitionException {
         EObject current = null;
 
@@ -2774,52 +3078,52 @@ public class InternalGuiDSLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1107:28: ( ( (otherlv_0= 'propertyKey=' ( (lv_propertyKey_1_0= RULE_STRING ) ) ) | (otherlv_2= 'text=' ( (lv_text_3_0= RULE_STRING ) ) ) | (otherlv_4= 'interactiontype=' ( (lv_interactiontype_5_0= ruleInteractiontype ) )+ ) ) )
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1108:1: ( (otherlv_0= 'propertyKey=' ( (lv_propertyKey_1_0= RULE_STRING ) ) ) | (otherlv_2= 'text=' ( (lv_text_3_0= RULE_STRING ) ) ) | (otherlv_4= 'interactiontype=' ( (lv_interactiontype_5_0= ruleInteractiontype ) )+ ) )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1226:28: ( ( (otherlv_0= 'propertyKey=' ( (lv_propertyKey_1_0= RULE_STRING ) ) ) | (otherlv_2= 'text=' ( (lv_text_3_0= RULE_STRING ) ) ) | (otherlv_4= 'interactiontype=' ( (lv_interactiontype_5_0= ruleInteractiontype ) )+ ) ) )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1227:1: ( (otherlv_0= 'propertyKey=' ( (lv_propertyKey_1_0= RULE_STRING ) ) ) | (otherlv_2= 'text=' ( (lv_text_3_0= RULE_STRING ) ) ) | (otherlv_4= 'interactiontype=' ( (lv_interactiontype_5_0= ruleInteractiontype ) )+ ) )
             {
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1108:1: ( (otherlv_0= 'propertyKey=' ( (lv_propertyKey_1_0= RULE_STRING ) ) ) | (otherlv_2= 'text=' ( (lv_text_3_0= RULE_STRING ) ) ) | (otherlv_4= 'interactiontype=' ( (lv_interactiontype_5_0= ruleInteractiontype ) )+ ) )
-            int alt17=3;
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1227:1: ( (otherlv_0= 'propertyKey=' ( (lv_propertyKey_1_0= RULE_STRING ) ) ) | (otherlv_2= 'text=' ( (lv_text_3_0= RULE_STRING ) ) ) | (otherlv_4= 'interactiontype=' ( (lv_interactiontype_5_0= ruleInteractiontype ) )+ ) )
+            int alt19=3;
             switch ( input.LA(1) ) {
-            case 27:
-                {
-                alt17=1;
-                }
-                break;
             case 28:
                 {
-                alt17=2;
+                alt19=1;
                 }
                 break;
             case 29:
                 {
-                alt17=3;
+                alt19=2;
+                }
+                break;
+            case 30:
+                {
+                alt19=3;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 17, 0, input);
+                    new NoViableAltException("", 19, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt17) {
+            switch (alt19) {
                 case 1 :
-                    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1108:2: (otherlv_0= 'propertyKey=' ( (lv_propertyKey_1_0= RULE_STRING ) ) )
+                    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1227:2: (otherlv_0= 'propertyKey=' ( (lv_propertyKey_1_0= RULE_STRING ) ) )
                     {
-                    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1108:2: (otherlv_0= 'propertyKey=' ( (lv_propertyKey_1_0= RULE_STRING ) ) )
-                    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1108:4: otherlv_0= 'propertyKey=' ( (lv_propertyKey_1_0= RULE_STRING ) )
+                    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1227:2: (otherlv_0= 'propertyKey=' ( (lv_propertyKey_1_0= RULE_STRING ) ) )
+                    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1227:4: otherlv_0= 'propertyKey=' ( (lv_propertyKey_1_0= RULE_STRING ) )
                     {
-                    otherlv_0=(Token)match(input,27,FOLLOW_27_in_rulePropertiesDefinition2485); 
+                    otherlv_0=(Token)match(input,28,FOLLOW_28_in_rulePropertiesDefinition2777); 
 
                         	newLeafNode(otherlv_0, grammarAccess.getPropertiesDefinitionAccess().getPropertyKeyKeyword_0_0());
                         
-                    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1112:1: ( (lv_propertyKey_1_0= RULE_STRING ) )
-                    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1113:1: (lv_propertyKey_1_0= RULE_STRING )
+                    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1231:1: ( (lv_propertyKey_1_0= RULE_STRING ) )
+                    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1232:1: (lv_propertyKey_1_0= RULE_STRING )
                     {
-                    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1113:1: (lv_propertyKey_1_0= RULE_STRING )
-                    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1114:3: lv_propertyKey_1_0= RULE_STRING
+                    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1232:1: (lv_propertyKey_1_0= RULE_STRING )
+                    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1233:3: lv_propertyKey_1_0= RULE_STRING
                     {
-                    lv_propertyKey_1_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rulePropertiesDefinition2502); 
+                    lv_propertyKey_1_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rulePropertiesDefinition2794); 
 
                     			newLeafNode(lv_propertyKey_1_0, grammarAccess.getPropertiesDefinitionAccess().getPropertyKeySTRINGTerminalRuleCall_0_1_0()); 
                     		
@@ -2846,22 +3150,22 @@ public class InternalGuiDSLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1131:6: (otherlv_2= 'text=' ( (lv_text_3_0= RULE_STRING ) ) )
+                    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1250:6: (otherlv_2= 'text=' ( (lv_text_3_0= RULE_STRING ) ) )
                     {
-                    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1131:6: (otherlv_2= 'text=' ( (lv_text_3_0= RULE_STRING ) ) )
-                    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1131:8: otherlv_2= 'text=' ( (lv_text_3_0= RULE_STRING ) )
+                    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1250:6: (otherlv_2= 'text=' ( (lv_text_3_0= RULE_STRING ) ) )
+                    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1250:8: otherlv_2= 'text=' ( (lv_text_3_0= RULE_STRING ) )
                     {
-                    otherlv_2=(Token)match(input,28,FOLLOW_28_in_rulePropertiesDefinition2527); 
+                    otherlv_2=(Token)match(input,29,FOLLOW_29_in_rulePropertiesDefinition2819); 
 
                         	newLeafNode(otherlv_2, grammarAccess.getPropertiesDefinitionAccess().getTextKeyword_1_0());
                         
-                    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1135:1: ( (lv_text_3_0= RULE_STRING ) )
-                    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1136:1: (lv_text_3_0= RULE_STRING )
+                    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1254:1: ( (lv_text_3_0= RULE_STRING ) )
+                    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1255:1: (lv_text_3_0= RULE_STRING )
                     {
-                    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1136:1: (lv_text_3_0= RULE_STRING )
-                    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1137:3: lv_text_3_0= RULE_STRING
+                    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1255:1: (lv_text_3_0= RULE_STRING )
+                    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1256:3: lv_text_3_0= RULE_STRING
                     {
-                    lv_text_3_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rulePropertiesDefinition2544); 
+                    lv_text_3_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rulePropertiesDefinition2836); 
 
                     			newLeafNode(lv_text_3_0, grammarAccess.getPropertiesDefinitionAccess().getTextSTRINGTerminalRuleCall_1_1_0()); 
                     		
@@ -2888,38 +3192,38 @@ public class InternalGuiDSLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1154:6: (otherlv_4= 'interactiontype=' ( (lv_interactiontype_5_0= ruleInteractiontype ) )+ )
+                    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1273:6: (otherlv_4= 'interactiontype=' ( (lv_interactiontype_5_0= ruleInteractiontype ) )+ )
                     {
-                    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1154:6: (otherlv_4= 'interactiontype=' ( (lv_interactiontype_5_0= ruleInteractiontype ) )+ )
-                    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1154:8: otherlv_4= 'interactiontype=' ( (lv_interactiontype_5_0= ruleInteractiontype ) )+
+                    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1273:6: (otherlv_4= 'interactiontype=' ( (lv_interactiontype_5_0= ruleInteractiontype ) )+ )
+                    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1273:8: otherlv_4= 'interactiontype=' ( (lv_interactiontype_5_0= ruleInteractiontype ) )+
                     {
-                    otherlv_4=(Token)match(input,29,FOLLOW_29_in_rulePropertiesDefinition2569); 
+                    otherlv_4=(Token)match(input,30,FOLLOW_30_in_rulePropertiesDefinition2861); 
 
                         	newLeafNode(otherlv_4, grammarAccess.getPropertiesDefinitionAccess().getInteractiontypeKeyword_2_0());
                         
-                    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1158:1: ( (lv_interactiontype_5_0= ruleInteractiontype ) )+
-                    int cnt16=0;
-                    loop16:
+                    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1277:1: ( (lv_interactiontype_5_0= ruleInteractiontype ) )+
+                    int cnt18=0;
+                    loop18:
                     do {
-                        int alt16=2;
-                        int LA16_0 = input.LA(1);
+                        int alt18=2;
+                        int LA18_0 = input.LA(1);
 
-                        if ( ((LA16_0>=31 && LA16_0<=32)) ) {
-                            alt16=1;
+                        if ( ((LA18_0>=32 && LA18_0<=33)) ) {
+                            alt18=1;
                         }
 
 
-                        switch (alt16) {
+                        switch (alt18) {
                     	case 1 :
-                    	    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1159:1: (lv_interactiontype_5_0= ruleInteractiontype )
+                    	    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1278:1: (lv_interactiontype_5_0= ruleInteractiontype )
                     	    {
-                    	    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1159:1: (lv_interactiontype_5_0= ruleInteractiontype )
-                    	    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1160:3: lv_interactiontype_5_0= ruleInteractiontype
+                    	    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1278:1: (lv_interactiontype_5_0= ruleInteractiontype )
+                    	    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1279:3: lv_interactiontype_5_0= ruleInteractiontype
                     	    {
                     	     
                     	    	        newCompositeNode(grammarAccess.getPropertiesDefinitionAccess().getInteractiontypeInteractiontypeParserRuleCall_2_1_0()); 
                     	    	    
-                    	    pushFollow(FOLLOW_ruleInteractiontype_in_rulePropertiesDefinition2590);
+                    	    pushFollow(FOLLOW_ruleInteractiontype_in_rulePropertiesDefinition2882);
                     	    lv_interactiontype_5_0=ruleInteractiontype();
 
                     	    state._fsp--;
@@ -2943,12 +3247,12 @@ public class InternalGuiDSLParser extends AbstractInternalAntlrParser {
                     	    break;
 
                     	default :
-                    	    if ( cnt16 >= 1 ) break loop16;
+                    	    if ( cnt18 >= 1 ) break loop18;
                                 EarlyExitException eee =
-                                    new EarlyExitException(16, input);
+                                    new EarlyExitException(18, input);
                                 throw eee;
                         }
-                        cnt16++;
+                        cnt18++;
                     } while (true);
 
 
@@ -2978,7 +3282,7 @@ public class InternalGuiDSLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleLabelDefinition"
-    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1184:1: entryRuleLabelDefinition returns [EObject current=null] : iv_ruleLabelDefinition= ruleLabelDefinition EOF ;
+    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1303:1: entryRuleLabelDefinition returns [EObject current=null] : iv_ruleLabelDefinition= ruleLabelDefinition EOF ;
     public final EObject entryRuleLabelDefinition() throws RecognitionException {
         EObject current = null;
 
@@ -2986,17 +3290,17 @@ public class InternalGuiDSLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1185:2: (iv_ruleLabelDefinition= ruleLabelDefinition EOF )
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1186:2: iv_ruleLabelDefinition= ruleLabelDefinition EOF
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1304:2: (iv_ruleLabelDefinition= ruleLabelDefinition EOF )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1305:2: iv_ruleLabelDefinition= ruleLabelDefinition EOF
             {
              newCompositeNode(grammarAccess.getLabelDefinitionRule()); 
-            pushFollow(FOLLOW_ruleLabelDefinition_in_entryRuleLabelDefinition2628);
+            pushFollow(FOLLOW_ruleLabelDefinition_in_entryRuleLabelDefinition2920);
             iv_ruleLabelDefinition=ruleLabelDefinition();
 
             state._fsp--;
 
              current =iv_ruleLabelDefinition; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleLabelDefinition2638); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleLabelDefinition2930); 
 
             }
 
@@ -3014,7 +3318,7 @@ public class InternalGuiDSLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleLabelDefinition"
-    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1193:1: ruleLabelDefinition returns [EObject current=null] : ( ( (lv_name_0_0= 'Label' ) ) otherlv_1= 'as' ( (lv_id_2_0= RULE_STRING ) ) ( (lv_properties_3_0= ruleProperties ) )? ) ;
+    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1312:1: ruleLabelDefinition returns [EObject current=null] : ( ( (lv_name_0_0= 'Label' ) ) otherlv_1= 'as' ( (lv_id_2_0= RULE_STRING ) ) ( (lv_properties_3_0= ruleProperties ) )? ) ;
     public final EObject ruleLabelDefinition() throws RecognitionException {
         EObject current = null;
 
@@ -3027,19 +3331,19 @@ public class InternalGuiDSLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1196:28: ( ( ( (lv_name_0_0= 'Label' ) ) otherlv_1= 'as' ( (lv_id_2_0= RULE_STRING ) ) ( (lv_properties_3_0= ruleProperties ) )? ) )
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1197:1: ( ( (lv_name_0_0= 'Label' ) ) otherlv_1= 'as' ( (lv_id_2_0= RULE_STRING ) ) ( (lv_properties_3_0= ruleProperties ) )? )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1315:28: ( ( ( (lv_name_0_0= 'Label' ) ) otherlv_1= 'as' ( (lv_id_2_0= RULE_STRING ) ) ( (lv_properties_3_0= ruleProperties ) )? ) )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1316:1: ( ( (lv_name_0_0= 'Label' ) ) otherlv_1= 'as' ( (lv_id_2_0= RULE_STRING ) ) ( (lv_properties_3_0= ruleProperties ) )? )
             {
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1197:1: ( ( (lv_name_0_0= 'Label' ) ) otherlv_1= 'as' ( (lv_id_2_0= RULE_STRING ) ) ( (lv_properties_3_0= ruleProperties ) )? )
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1197:2: ( (lv_name_0_0= 'Label' ) ) otherlv_1= 'as' ( (lv_id_2_0= RULE_STRING ) ) ( (lv_properties_3_0= ruleProperties ) )?
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1316:1: ( ( (lv_name_0_0= 'Label' ) ) otherlv_1= 'as' ( (lv_id_2_0= RULE_STRING ) ) ( (lv_properties_3_0= ruleProperties ) )? )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1316:2: ( (lv_name_0_0= 'Label' ) ) otherlv_1= 'as' ( (lv_id_2_0= RULE_STRING ) ) ( (lv_properties_3_0= ruleProperties ) )?
             {
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1197:2: ( (lv_name_0_0= 'Label' ) )
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1198:1: (lv_name_0_0= 'Label' )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1316:2: ( (lv_name_0_0= 'Label' ) )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1317:1: (lv_name_0_0= 'Label' )
             {
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1198:1: (lv_name_0_0= 'Label' )
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1199:3: lv_name_0_0= 'Label'
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1317:1: (lv_name_0_0= 'Label' )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1318:3: lv_name_0_0= 'Label'
             {
-            lv_name_0_0=(Token)match(input,17,FOLLOW_17_in_ruleLabelDefinition2681); 
+            lv_name_0_0=(Token)match(input,18,FOLLOW_18_in_ruleLabelDefinition2973); 
 
                     newLeafNode(lv_name_0_0, grammarAccess.getLabelDefinitionAccess().getNameLabelKeyword_0_0());
                 
@@ -3055,17 +3359,17 @@ public class InternalGuiDSLParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,30,FOLLOW_30_in_ruleLabelDefinition2706); 
+            otherlv_1=(Token)match(input,31,FOLLOW_31_in_ruleLabelDefinition2998); 
 
                 	newLeafNode(otherlv_1, grammarAccess.getLabelDefinitionAccess().getAsKeyword_1());
                 
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1216:1: ( (lv_id_2_0= RULE_STRING ) )
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1217:1: (lv_id_2_0= RULE_STRING )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1335:1: ( (lv_id_2_0= RULE_STRING ) )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1336:1: (lv_id_2_0= RULE_STRING )
             {
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1217:1: (lv_id_2_0= RULE_STRING )
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1218:3: lv_id_2_0= RULE_STRING
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1336:1: (lv_id_2_0= RULE_STRING )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1337:3: lv_id_2_0= RULE_STRING
             {
-            lv_id_2_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleLabelDefinition2723); 
+            lv_id_2_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleLabelDefinition3015); 
 
             			newLeafNode(lv_id_2_0, grammarAccess.getLabelDefinitionAccess().getIdSTRINGTerminalRuleCall_2_0()); 
             		
@@ -3085,24 +3389,24 @@ public class InternalGuiDSLParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1234:2: ( (lv_properties_3_0= ruleProperties ) )?
-            int alt18=2;
-            int LA18_0 = input.LA(1);
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1353:2: ( (lv_properties_3_0= ruleProperties ) )?
+            int alt20=2;
+            int LA20_0 = input.LA(1);
 
-            if ( (LA18_0==26) ) {
-                alt18=1;
+            if ( (LA20_0==27) ) {
+                alt20=1;
             }
-            switch (alt18) {
+            switch (alt20) {
                 case 1 :
-                    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1235:1: (lv_properties_3_0= ruleProperties )
+                    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1354:1: (lv_properties_3_0= ruleProperties )
                     {
-                    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1235:1: (lv_properties_3_0= ruleProperties )
-                    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1236:3: lv_properties_3_0= ruleProperties
+                    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1354:1: (lv_properties_3_0= ruleProperties )
+                    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1355:3: lv_properties_3_0= ruleProperties
                     {
                      
                     	        newCompositeNode(grammarAccess.getLabelDefinitionAccess().getPropertiesPropertiesParserRuleCall_3_0()); 
                     	    
-                    pushFollow(FOLLOW_ruleProperties_in_ruleLabelDefinition2749);
+                    pushFollow(FOLLOW_ruleProperties_in_ruleLabelDefinition3041);
                     lv_properties_3_0=ruleProperties();
 
                     state._fsp--;
@@ -3148,7 +3452,7 @@ public class InternalGuiDSLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleInteractiontype"
-    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1260:1: entryRuleInteractiontype returns [EObject current=null] : iv_ruleInteractiontype= ruleInteractiontype EOF ;
+    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1379:1: entryRuleInteractiontype returns [EObject current=null] : iv_ruleInteractiontype= ruleInteractiontype EOF ;
     public final EObject entryRuleInteractiontype() throws RecognitionException {
         EObject current = null;
 
@@ -3156,17 +3460,17 @@ public class InternalGuiDSLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1261:2: (iv_ruleInteractiontype= ruleInteractiontype EOF )
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1262:2: iv_ruleInteractiontype= ruleInteractiontype EOF
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1380:2: (iv_ruleInteractiontype= ruleInteractiontype EOF )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1381:2: iv_ruleInteractiontype= ruleInteractiontype EOF
             {
              newCompositeNode(grammarAccess.getInteractiontypeRule()); 
-            pushFollow(FOLLOW_ruleInteractiontype_in_entryRuleInteractiontype2786);
+            pushFollow(FOLLOW_ruleInteractiontype_in_entryRuleInteractiontype3078);
             iv_ruleInteractiontype=ruleInteractiontype();
 
             state._fsp--;
 
              current =iv_ruleInteractiontype; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleInteractiontype2796); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleInteractiontype3088); 
 
             }
 
@@ -3184,7 +3488,7 @@ public class InternalGuiDSLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleInteractiontype"
-    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1269:1: ruleInteractiontype returns [EObject current=null] : ( ( (lv_id_0_1= 'Click' | lv_id_0_2= 'ChangeText' ) ) ) ;
+    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1388:1: ruleInteractiontype returns [EObject current=null] : ( ( (lv_id_0_1= 'Click' | lv_id_0_2= 'ChangeText' ) ) ) ;
     public final EObject ruleInteractiontype() throws RecognitionException {
         EObject current = null;
 
@@ -3194,36 +3498,36 @@ public class InternalGuiDSLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1272:28: ( ( ( (lv_id_0_1= 'Click' | lv_id_0_2= 'ChangeText' ) ) ) )
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1273:1: ( ( (lv_id_0_1= 'Click' | lv_id_0_2= 'ChangeText' ) ) )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1391:28: ( ( ( (lv_id_0_1= 'Click' | lv_id_0_2= 'ChangeText' ) ) ) )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1392:1: ( ( (lv_id_0_1= 'Click' | lv_id_0_2= 'ChangeText' ) ) )
             {
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1273:1: ( ( (lv_id_0_1= 'Click' | lv_id_0_2= 'ChangeText' ) ) )
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1274:1: ( (lv_id_0_1= 'Click' | lv_id_0_2= 'ChangeText' ) )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1392:1: ( ( (lv_id_0_1= 'Click' | lv_id_0_2= 'ChangeText' ) ) )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1393:1: ( (lv_id_0_1= 'Click' | lv_id_0_2= 'ChangeText' ) )
             {
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1274:1: ( (lv_id_0_1= 'Click' | lv_id_0_2= 'ChangeText' ) )
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1275:1: (lv_id_0_1= 'Click' | lv_id_0_2= 'ChangeText' )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1393:1: ( (lv_id_0_1= 'Click' | lv_id_0_2= 'ChangeText' ) )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1394:1: (lv_id_0_1= 'Click' | lv_id_0_2= 'ChangeText' )
             {
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1275:1: (lv_id_0_1= 'Click' | lv_id_0_2= 'ChangeText' )
-            int alt19=2;
-            int LA19_0 = input.LA(1);
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1394:1: (lv_id_0_1= 'Click' | lv_id_0_2= 'ChangeText' )
+            int alt21=2;
+            int LA21_0 = input.LA(1);
 
-            if ( (LA19_0==31) ) {
-                alt19=1;
+            if ( (LA21_0==32) ) {
+                alt21=1;
             }
-            else if ( (LA19_0==32) ) {
-                alt19=2;
+            else if ( (LA21_0==33) ) {
+                alt21=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 19, 0, input);
+                    new NoViableAltException("", 21, 0, input);
 
                 throw nvae;
             }
-            switch (alt19) {
+            switch (alt21) {
                 case 1 :
-                    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1276:3: lv_id_0_1= 'Click'
+                    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1395:3: lv_id_0_1= 'Click'
                     {
-                    lv_id_0_1=(Token)match(input,31,FOLLOW_31_in_ruleInteractiontype2840); 
+                    lv_id_0_1=(Token)match(input,32,FOLLOW_32_in_ruleInteractiontype3132); 
 
                             newLeafNode(lv_id_0_1, grammarAccess.getInteractiontypeAccess().getIdClickKeyword_0_0());
                         
@@ -3237,9 +3541,9 @@ public class InternalGuiDSLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1288:8: lv_id_0_2= 'ChangeText'
+                    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:1407:8: lv_id_0_2= 'ChangeText'
                     {
-                    lv_id_0_2=(Token)match(input,32,FOLLOW_32_in_ruleInteractiontype2869); 
+                    lv_id_0_2=(Token)match(input,33,FOLLOW_33_in_ruleInteractiontype3161); 
 
                             newLeafNode(lv_id_0_2, grammarAccess.getInteractiontypeAccess().getIdChangeTextKeyword_0_1());
                         
@@ -3284,107 +3588,119 @@ public class InternalGuiDSLParser extends AbstractInternalAntlrParser {
 
     public static final BitSet FOLLOW_ruleUIDescription_in_entryRuleUIDescription75 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleUIDescription85 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleTypeDefinition_in_ruleUIDescription131 = new BitSet(new long[]{0x00000000001A9000L});
-    public static final BitSet FOLLOW_ruleProperty_in_ruleUIDescription152 = new BitSet(new long[]{0x00000000001A9000L});
-    public static final BitSet FOLLOW_ruleUsedDescriptions_in_ruleUIDescription174 = new BitSet(new long[]{0x00000000001A9000L});
-    public static final BitSet FOLLOW_ruleRefinement_in_ruleUIDescription196 = new BitSet(new long[]{0x00000000001A9000L});
-    public static final BitSet FOLLOW_ruleDefinition_in_ruleUIDescription218 = new BitSet(new long[]{0x00000000001A9000L});
+    public static final BitSet FOLLOW_ruleTypeDefinition_in_ruleUIDescription131 = new BitSet(new long[]{0x00000000001D2000L});
+    public static final BitSet FOLLOW_ruleProperty_in_ruleUIDescription152 = new BitSet(new long[]{0x00000000001D2000L});
+    public static final BitSet FOLLOW_ruleUsedDescriptions_in_ruleUIDescription174 = new BitSet(new long[]{0x00000000001D2000L});
+    public static final BitSet FOLLOW_ruleRefinement_in_ruleUIDescription196 = new BitSet(new long[]{0x00000000001D2000L});
+    public static final BitSet FOLLOW_ruleDefinition_in_ruleUIDescription218 = new BitSet(new long[]{0x00000000001D2000L});
     public static final BitSet FOLLOW_ruleStructure_in_ruleUIDescription240 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleStructure_in_entryRuleStructure276 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleStructure286 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_12_in_ruleStructure329 = new BitSet(new long[]{0x0000000000002000L});
-    public static final BitSet FOLLOW_13_in_ruleStructure354 = new BitSet(new long[]{0x0000000000000012L});
-    public static final BitSet FOLLOW_ruleElement_in_ruleStructure375 = new BitSet(new long[]{0x0000000000000012L});
-    public static final BitSet FOLLOW_ruleElement_in_entryRuleElement412 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleElement422 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleElement463 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleRefinement_in_entryRuleRefinement503 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleRefinement513 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleComponentRefinement_in_ruleRefinement559 = new BitSet(new long[]{0x0000000000004000L});
-    public static final BitSet FOLLOW_14_in_ruleRefinement571 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleComponentRefinement_in_entryRuleComponentRefinement607 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleComponentRefinement617 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleLabelRefinement_in_ruleComponentRefinement664 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleButtonRefinement_in_ruleComponentRefinement691 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleButtonRefinement_in_entryRuleButtonRefinement726 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleButtonRefinement736 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_15_in_ruleButtonRefinement779 = new BitSet(new long[]{0x0000000000010000L});
-    public static final BitSet FOLLOW_16_in_ruleButtonRefinement804 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleButtonRefinement821 = new BitSet(new long[]{0x0000000004000002L});
-    public static final BitSet FOLLOW_ruleProperties_in_ruleButtonRefinement847 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleLabelRefinement_in_entryRuleLabelRefinement884 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleLabelRefinement894 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_17_in_ruleLabelRefinement937 = new BitSet(new long[]{0x0000000000040000L});
-    public static final BitSet FOLLOW_18_in_ruleLabelRefinement962 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleLabelRefinement979 = new BitSet(new long[]{0x0000000004000002L});
-    public static final BitSet FOLLOW_ruleProperties_in_ruleLabelRefinement1005 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleProperty_in_entryRuleProperty1042 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleProperty1052 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_19_in_ruleProperty1089 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleProperty1106 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleUsedDescriptions_in_entryRuleUsedDescriptions1147 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleUsedDescriptions1157 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_20_in_ruleUsedDescriptions1194 = new BitSet(new long[]{0x0000000002000010L});
-    public static final BitSet FOLLOW_ruleDescriptionType_in_ruleUsedDescriptions1215 = new BitSet(new long[]{0x0000000000200002L});
-    public static final BitSet FOLLOW_21_in_ruleUsedDescriptions1228 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleUsedDescriptions1245 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleDescriptionType_in_entryRuleDescriptionType1288 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleDescriptionType1298 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleUIDescriptionImport_in_ruleDescriptionType1345 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleComplexComponent_in_ruleDescriptionType1372 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleDefinition_in_entryRuleDefinition1407 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleDefinition1417 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleComponentDefinition_in_ruleDefinition1463 = new BitSet(new long[]{0x0000000000004000L});
-    public static final BitSet FOLLOW_14_in_ruleDefinition1475 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleTypeDefinition_in_entryRuleTypeDefinition1511 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleTypeDefinition1521 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_22_in_ruleTypeDefinition1558 = new BitSet(new long[]{0x0000000001800000L});
-    public static final BitSet FOLLOW_ruleType_in_ruleTypeDefinition1579 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleType_in_entryRuleType1615 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleType1625 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_23_in_ruleType1669 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_24_in_ruleType1698 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleUIDescriptionImport_in_entryRuleUIDescriptionImport1749 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleUIDescriptionImport1759 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleUIDescriptionImport1800 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleComplexComponent_in_entryRuleComplexComponent1840 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleComplexComponent1850 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleMultiselection_in_ruleComplexComponent1896 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleMultiselection_in_entryRuleMultiselection1930 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleMultiselection1940 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_25_in_ruleMultiselection1983 = new BitSet(new long[]{0x0000000000000022L});
-    public static final BitSet FOLLOW_RULE_INPUT_DESCRIPTION_in_ruleMultiselection2013 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleComponentDefinition_in_entryRuleComponentDefinition2055 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleComponentDefinition2065 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleLabelDefinition_in_ruleComponentDefinition2112 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleButtonDefinition_in_ruleComponentDefinition2139 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleButtonDefinition_in_entryRuleButtonDefinition2174 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleButtonDefinition2184 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_15_in_ruleButtonDefinition2227 = new BitSet(new long[]{0x0000000000200000L});
-    public static final BitSet FOLLOW_21_in_ruleButtonDefinition2252 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleButtonDefinition2269 = new BitSet(new long[]{0x0000000004000002L});
-    public static final BitSet FOLLOW_ruleProperties_in_ruleButtonDefinition2295 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleProperties_in_entryRuleProperties2332 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleProperties2342 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_26_in_ruleProperties2379 = new BitSet(new long[]{0x0000000038000000L});
-    public static final BitSet FOLLOW_rulePropertiesDefinition_in_ruleProperties2400 = new BitSet(new long[]{0x0000000038000002L});
-    public static final BitSet FOLLOW_rulePropertiesDefinition_in_entryRulePropertiesDefinition2437 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRulePropertiesDefinition2447 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_27_in_rulePropertiesDefinition2485 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rulePropertiesDefinition2502 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_28_in_rulePropertiesDefinition2527 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rulePropertiesDefinition2544 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_29_in_rulePropertiesDefinition2569 = new BitSet(new long[]{0x0000000180000000L});
-    public static final BitSet FOLLOW_ruleInteractiontype_in_rulePropertiesDefinition2590 = new BitSet(new long[]{0x0000000180000002L});
-    public static final BitSet FOLLOW_ruleLabelDefinition_in_entryRuleLabelDefinition2628 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleLabelDefinition2638 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_17_in_ruleLabelDefinition2681 = new BitSet(new long[]{0x0000000040000000L});
-    public static final BitSet FOLLOW_30_in_ruleLabelDefinition2706 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleLabelDefinition2723 = new BitSet(new long[]{0x0000000004000002L});
-    public static final BitSet FOLLOW_ruleProperties_in_ruleLabelDefinition2749 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleInteractiontype_in_entryRuleInteractiontype2786 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleInteractiontype2796 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_31_in_ruleInteractiontype2840 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_32_in_ruleInteractiontype2869 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_13_in_ruleStructure329 = new BitSet(new long[]{0x0000000000004000L});
+    public static final BitSet FOLLOW_14_in_ruleStructure354 = new BitSet(new long[]{0x0000000000008010L});
+    public static final BitSet FOLLOW_ruleElement_in_ruleStructure375 = new BitSet(new long[]{0x0000000000008010L});
+    public static final BitSet FOLLOW_15_in_ruleStructure388 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleElement_in_entryRuleElement424 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleElement434 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleElement475 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleRefinement_in_entryRuleRefinement515 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleRefinement525 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleComponentRefinement_in_ruleRefinement571 = new BitSet(new long[]{0x0000000000008000L});
+    public static final BitSet FOLLOW_15_in_ruleRefinement583 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleComponentRefinement_in_entryRuleComponentRefinement619 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleComponentRefinement629 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleLabelRefinement_in_ruleComponentRefinement676 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleButtonRefinement_in_ruleComponentRefinement703 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleButtonRefinement_in_entryRuleButtonRefinement738 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleButtonRefinement748 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_16_in_ruleButtonRefinement791 = new BitSet(new long[]{0x0000000000020000L});
+    public static final BitSet FOLLOW_17_in_ruleButtonRefinement816 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleButtonRefinement833 = new BitSet(new long[]{0x0000000008000002L});
+    public static final BitSet FOLLOW_ruleProperties_in_ruleButtonRefinement859 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleLabelRefinement_in_entryRuleLabelRefinement896 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleLabelRefinement906 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_18_in_ruleLabelRefinement949 = new BitSet(new long[]{0x0000000000020000L});
+    public static final BitSet FOLLOW_17_in_ruleLabelRefinement974 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleLabelRefinement991 = new BitSet(new long[]{0x0000000008000002L});
+    public static final BitSet FOLLOW_ruleProperties_in_ruleLabelRefinement1017 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleProperty_in_entryRuleProperty1054 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleProperty1064 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_19_in_ruleProperty1101 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleProperty1118 = new BitSet(new long[]{0x0000000000008000L});
+    public static final BitSet FOLLOW_15_in_ruleProperty1135 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleUsedDescriptions_in_entryRuleUsedDescriptions1171 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleUsedDescriptions1181 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_20_in_ruleUsedDescriptions1218 = new BitSet(new long[]{0x0000000006000010L});
+    public static final BitSet FOLLOW_ruleDescriptionType_in_ruleUsedDescriptions1239 = new BitSet(new long[]{0x0000000000208000L});
+    public static final BitSet FOLLOW_21_in_ruleUsedDescriptions1252 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleUsedDescriptions1269 = new BitSet(new long[]{0x0000000000008000L});
+    public static final BitSet FOLLOW_15_in_ruleUsedDescriptions1288 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleDescriptionType_in_entryRuleDescriptionType1324 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleDescriptionType1334 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleUIDescriptionImport_in_ruleDescriptionType1381 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleComplexComponent_in_ruleDescriptionType1408 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleDefinition_in_entryRuleDefinition1443 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleDefinition1453 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleComponentDefinition_in_ruleDefinition1499 = new BitSet(new long[]{0x0000000000008000L});
+    public static final BitSet FOLLOW_15_in_ruleDefinition1511 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleTypeDefinition_in_entryRuleTypeDefinition1547 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleTypeDefinition1557 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_22_in_ruleTypeDefinition1594 = new BitSet(new long[]{0x0000000001800000L});
+    public static final BitSet FOLLOW_ruleType_in_ruleTypeDefinition1615 = new BitSet(new long[]{0x0000000000008000L});
+    public static final BitSet FOLLOW_15_in_ruleTypeDefinition1627 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleType_in_entryRuleType1663 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleType1673 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_23_in_ruleType1717 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_24_in_ruleType1746 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleUIDescriptionImport_in_entryRuleUIDescriptionImport1797 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleUIDescriptionImport1807 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleUIDescriptionImport1848 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleComplexComponent_in_entryRuleComplexComponent1888 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleComplexComponent1898 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleMultiselection_in_ruleComplexComponent1945 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleTabView_in_ruleComplexComponent1972 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleTabView_in_entryRuleTabView2007 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleTabView2017 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_25_in_ruleTabView2060 = new BitSet(new long[]{0x0000000000000022L});
+    public static final BitSet FOLLOW_ruleTabDefinition_in_ruleTabView2094 = new BitSet(new long[]{0x0000000000000022L});
+    public static final BitSet FOLLOW_ruleTabDefinition_in_entryRuleTabDefinition2131 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleTabDefinition2141 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_TABNAME_in_ruleTabDefinition2182 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleMultiselection_in_entryRuleMultiselection2222 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleMultiselection2232 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_26_in_ruleMultiselection2275 = new BitSet(new long[]{0x0000000000000042L});
+    public static final BitSet FOLLOW_RULE_INPUT_DESCRIPTION_in_ruleMultiselection2305 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleComponentDefinition_in_entryRuleComponentDefinition2347 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleComponentDefinition2357 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleLabelDefinition_in_ruleComponentDefinition2404 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleButtonDefinition_in_ruleComponentDefinition2431 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleButtonDefinition_in_entryRuleButtonDefinition2466 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleButtonDefinition2476 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_16_in_ruleButtonDefinition2519 = new BitSet(new long[]{0x0000000000200000L});
+    public static final BitSet FOLLOW_21_in_ruleButtonDefinition2544 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleButtonDefinition2561 = new BitSet(new long[]{0x0000000008000002L});
+    public static final BitSet FOLLOW_ruleProperties_in_ruleButtonDefinition2587 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleProperties_in_entryRuleProperties2624 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleProperties2634 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_27_in_ruleProperties2671 = new BitSet(new long[]{0x0000000070000000L});
+    public static final BitSet FOLLOW_rulePropertiesDefinition_in_ruleProperties2692 = new BitSet(new long[]{0x0000000070000002L});
+    public static final BitSet FOLLOW_rulePropertiesDefinition_in_entryRulePropertiesDefinition2729 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRulePropertiesDefinition2739 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_28_in_rulePropertiesDefinition2777 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rulePropertiesDefinition2794 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_29_in_rulePropertiesDefinition2819 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rulePropertiesDefinition2836 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_30_in_rulePropertiesDefinition2861 = new BitSet(new long[]{0x0000000300000000L});
+    public static final BitSet FOLLOW_ruleInteractiontype_in_rulePropertiesDefinition2882 = new BitSet(new long[]{0x0000000300000002L});
+    public static final BitSet FOLLOW_ruleLabelDefinition_in_entryRuleLabelDefinition2920 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleLabelDefinition2930 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_18_in_ruleLabelDefinition2973 = new BitSet(new long[]{0x0000000080000000L});
+    public static final BitSet FOLLOW_31_in_ruleLabelDefinition2998 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleLabelDefinition3015 = new BitSet(new long[]{0x0000000008000002L});
+    public static final BitSet FOLLOW_ruleProperties_in_ruleLabelDefinition3041 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleInteractiontype_in_entryRuleInteractiontype3078 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleInteractiontype3088 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_32_in_ruleInteractiontype3132 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_33_in_ruleInteractiontype3161 = new BitSet(new long[]{0x0000000000000002L});
 
 }

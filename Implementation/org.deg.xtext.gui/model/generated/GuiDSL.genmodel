@@ -52,9 +52,16 @@
     <genClasses ecoreClass="GuiDSL.ecore#//UIDescriptionImport">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GuiDSL.ecore#//UIDescriptionImport/descriptionName"/>
     </genClasses>
-    <genClasses ecoreClass="GuiDSL.ecore#//ComplexComponent"/>
+    <genClasses ecoreClass="GuiDSL.ecore#//ComplexComponent">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GuiDSL.ecore#//ComplexComponent/name"/>
+    </genClasses>
+    <genClasses ecoreClass="GuiDSL.ecore#//TabView">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GuiDSL.ecore#//TabView/tabs"/>
+    </genClasses>
+    <genClasses ecoreClass="GuiDSL.ecore#//TabDefinition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GuiDSL.ecore#//TabDefinition/name"/>
+    </genClasses>
     <genClasses ecoreClass="GuiDSL.ecore#//Multiselection">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GuiDSL.ecore#//Multiselection/descriptionName"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GuiDSL.ecore#//Multiselection/inputType"/>
     </genClasses>
     <genClasses ecoreClass="GuiDSL.ecore#//ComponentDefinition">

@@ -21,6 +21,8 @@ import org.deg.xtext.gui.guiDSL.PropertiesDefinition;
 import org.deg.xtext.gui.guiDSL.Property;
 import org.deg.xtext.gui.guiDSL.Refinement;
 import org.deg.xtext.gui.guiDSL.Structure;
+import org.deg.xtext.gui.guiDSL.TabDefinition;
+import org.deg.xtext.gui.guiDSL.TabView;
 import org.deg.xtext.gui.guiDSL.Type;
 import org.deg.xtext.gui.guiDSL.TypeDefinition;
 import org.deg.xtext.gui.guiDSL.UIDescription;
@@ -146,6 +148,20 @@ public class GuiDSLPackageImpl extends EPackageImpl implements GuiDSLPackage
    * @generated
    */
   private EClass complexComponentEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass tabViewEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass tabDefinitionEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -614,6 +630,56 @@ public class GuiDSLPackageImpl extends EPackageImpl implements GuiDSLPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EAttribute getComplexComponent_Name()
+  {
+    return (EAttribute)complexComponentEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getTabView()
+  {
+    return tabViewEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getTabView_Tabs()
+  {
+    return (EReference)tabViewEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getTabDefinition()
+  {
+    return tabDefinitionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getTabDefinition_Name()
+  {
+    return (EAttribute)tabDefinitionEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getMultiselection()
   {
     return multiselectionEClass;
@@ -624,19 +690,9 @@ public class GuiDSLPackageImpl extends EPackageImpl implements GuiDSLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getMultiselection_DescriptionName()
-  {
-    return (EAttribute)multiselectionEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public EAttribute getMultiselection_InputType()
   {
-    return (EAttribute)multiselectionEClass.getEStructuralFeatures().get(1);
+    return (EAttribute)multiselectionEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -858,9 +914,15 @@ public class GuiDSLPackageImpl extends EPackageImpl implements GuiDSLPackage
     createEAttribute(uiDescriptionImportEClass, UI_DESCRIPTION_IMPORT__DESCRIPTION_NAME);
 
     complexComponentEClass = createEClass(COMPLEX_COMPONENT);
+    createEAttribute(complexComponentEClass, COMPLEX_COMPONENT__NAME);
+
+    tabViewEClass = createEClass(TAB_VIEW);
+    createEReference(tabViewEClass, TAB_VIEW__TABS);
+
+    tabDefinitionEClass = createEClass(TAB_DEFINITION);
+    createEAttribute(tabDefinitionEClass, TAB_DEFINITION__NAME);
 
     multiselectionEClass = createEClass(MULTISELECTION);
-    createEAttribute(multiselectionEClass, MULTISELECTION__DESCRIPTION_NAME);
     createEAttribute(multiselectionEClass, MULTISELECTION__INPUT_TYPE);
 
     componentDefinitionEClass = createEClass(COMPONENT_DEFINITION);
@@ -917,6 +979,7 @@ public class GuiDSLPackageImpl extends EPackageImpl implements GuiDSLPackage
     labelRefinementEClass.getESuperTypes().add(this.getComponentRefinement());
     uiDescriptionImportEClass.getESuperTypes().add(this.getDescriptionType());
     complexComponentEClass.getESuperTypes().add(this.getDescriptionType());
+    tabViewEClass.getESuperTypes().add(this.getComplexComponent());
     multiselectionEClass.getESuperTypes().add(this.getComplexComponent());
     buttonDefinitionEClass.getESuperTypes().add(this.getComponentDefinition());
     labelDefinitionEClass.getESuperTypes().add(this.getComponentDefinition());
@@ -971,9 +1034,15 @@ public class GuiDSLPackageImpl extends EPackageImpl implements GuiDSLPackage
     initEAttribute(getUIDescriptionImport_DescriptionName(), ecorePackage.getEString(), "descriptionName", null, 0, 1, UIDescriptionImport.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(complexComponentEClass, ComplexComponent.class, "ComplexComponent", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getComplexComponent_Name(), ecorePackage.getEString(), "name", null, 0, 1, ComplexComponent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(tabViewEClass, TabView.class, "TabView", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getTabView_Tabs(), this.getTabDefinition(), null, "tabs", null, 0, -1, TabView.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(tabDefinitionEClass, TabDefinition.class, "TabDefinition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getTabDefinition_Name(), ecorePackage.getEString(), "name", null, 0, 1, TabDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(multiselectionEClass, Multiselection.class, "Multiselection", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getMultiselection_DescriptionName(), ecorePackage.getEString(), "descriptionName", null, 0, 1, Multiselection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getMultiselection_InputType(), ecorePackage.getEString(), "inputType", null, 0, 1, Multiselection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(componentDefinitionEClass, ComponentDefinition.class, "ComponentDefinition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

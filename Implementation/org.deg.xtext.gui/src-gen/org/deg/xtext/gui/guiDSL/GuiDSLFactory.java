@@ -158,6 +158,24 @@ public interface GuiDSLFactory extends EFactory
   ComplexComponent createComplexComponent();
 
   /**
+   * Returns a new object of class '<em>Tab View</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Tab View</em>'.
+   * @generated
+   */
+  TabView createTabView();
+
+  /**
+   * Returns a new object of class '<em>Tab Definition</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Tab Definition</em>'.
+   * @generated
+   */
+  TabDefinition createTabDefinition();
+
+  /**
    * Returns a new object of class '<em>Multiselection</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

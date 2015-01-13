@@ -567,13 +567,87 @@ public interface GuiDSLPackage extends EPackage
   int COMPLEX_COMPONENT = 14;
 
   /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int COMPLEX_COMPONENT__NAME = DESCRIPTION_TYPE_FEATURE_COUNT + 0;
+
+  /**
    * The number of structural features of the '<em>Complex Component</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int COMPLEX_COMPONENT_FEATURE_COUNT = DESCRIPTION_TYPE_FEATURE_COUNT + 0;
+  int COMPLEX_COMPONENT_FEATURE_COUNT = DESCRIPTION_TYPE_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link org.deg.xtext.gui.guiDSL.impl.TabViewImpl <em>Tab View</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.deg.xtext.gui.guiDSL.impl.TabViewImpl
+   * @see org.deg.xtext.gui.guiDSL.impl.GuiDSLPackageImpl#getTabView()
+   * @generated
+   */
+  int TAB_VIEW = 15;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TAB_VIEW__NAME = COMPLEX_COMPONENT__NAME;
+
+  /**
+   * The feature id for the '<em><b>Tabs</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TAB_VIEW__TABS = COMPLEX_COMPONENT_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>Tab View</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TAB_VIEW_FEATURE_COUNT = COMPLEX_COMPONENT_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link org.deg.xtext.gui.guiDSL.impl.TabDefinitionImpl <em>Tab Definition</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.deg.xtext.gui.guiDSL.impl.TabDefinitionImpl
+   * @see org.deg.xtext.gui.guiDSL.impl.GuiDSLPackageImpl#getTabDefinition()
+   * @generated
+   */
+  int TAB_DEFINITION = 16;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TAB_DEFINITION__NAME = 0;
+
+  /**
+   * The number of structural features of the '<em>Tab Definition</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TAB_DEFINITION_FEATURE_COUNT = 1;
 
   /**
    * The meta object id for the '{@link org.deg.xtext.gui.guiDSL.impl.MultiselectionImpl <em>Multiselection</em>}' class.
@@ -583,16 +657,16 @@ public interface GuiDSLPackage extends EPackage
    * @see org.deg.xtext.gui.guiDSL.impl.GuiDSLPackageImpl#getMultiselection()
    * @generated
    */
-  int MULTISELECTION = 15;
+  int MULTISELECTION = 17;
 
   /**
-   * The feature id for the '<em><b>Description Name</b></em>' attribute.
+   * The feature id for the '<em><b>Name</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int MULTISELECTION__DESCRIPTION_NAME = COMPLEX_COMPONENT_FEATURE_COUNT + 0;
+  int MULTISELECTION__NAME = COMPLEX_COMPONENT__NAME;
 
   /**
    * The feature id for the '<em><b>Input Type</b></em>' attribute.
@@ -601,7 +675,7 @@ public interface GuiDSLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MULTISELECTION__INPUT_TYPE = COMPLEX_COMPONENT_FEATURE_COUNT + 1;
+  int MULTISELECTION__INPUT_TYPE = COMPLEX_COMPONENT_FEATURE_COUNT + 0;
 
   /**
    * The number of structural features of the '<em>Multiselection</em>' class.
@@ -610,7 +684,7 @@ public interface GuiDSLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MULTISELECTION_FEATURE_COUNT = COMPLEX_COMPONENT_FEATURE_COUNT + 2;
+  int MULTISELECTION_FEATURE_COUNT = COMPLEX_COMPONENT_FEATURE_COUNT + 1;
 
   /**
    * The meta object id for the '{@link org.deg.xtext.gui.guiDSL.impl.ComponentDefinitionImpl <em>Component Definition</em>}' class.
@@ -620,7 +694,7 @@ public interface GuiDSLPackage extends EPackage
    * @see org.deg.xtext.gui.guiDSL.impl.GuiDSLPackageImpl#getComponentDefinition()
    * @generated
    */
-  int COMPONENT_DEFINITION = 16;
+  int COMPONENT_DEFINITION = 18;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -666,7 +740,7 @@ public interface GuiDSLPackage extends EPackage
    * @see org.deg.xtext.gui.guiDSL.impl.GuiDSLPackageImpl#getButtonDefinition()
    * @generated
    */
-  int BUTTON_DEFINITION = 17;
+  int BUTTON_DEFINITION = 19;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -712,7 +786,7 @@ public interface GuiDSLPackage extends EPackage
    * @see org.deg.xtext.gui.guiDSL.impl.GuiDSLPackageImpl#getProperties()
    * @generated
    */
-  int PROPERTIES = 18;
+  int PROPERTIES = 20;
 
   /**
    * The feature id for the '<em><b>Properties Definitions</b></em>' containment reference list.
@@ -740,7 +814,7 @@ public interface GuiDSLPackage extends EPackage
    * @see org.deg.xtext.gui.guiDSL.impl.GuiDSLPackageImpl#getPropertiesDefinition()
    * @generated
    */
-  int PROPERTIES_DEFINITION = 19;
+  int PROPERTIES_DEFINITION = 21;
 
   /**
    * The feature id for the '<em><b>Property Key</b></em>' attribute.
@@ -786,7 +860,7 @@ public interface GuiDSLPackage extends EPackage
    * @see org.deg.xtext.gui.guiDSL.impl.GuiDSLPackageImpl#getLabelDefinition()
    * @generated
    */
-  int LABEL_DEFINITION = 20;
+  int LABEL_DEFINITION = 22;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -832,7 +906,7 @@ public interface GuiDSLPackage extends EPackage
    * @see org.deg.xtext.gui.guiDSL.impl.GuiDSLPackageImpl#getInteractiontype()
    * @generated
    */
-  int INTERACTIONTYPE = 21;
+  int INTERACTIONTYPE = 23;
 
   /**
    * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -1224,6 +1298,59 @@ public interface GuiDSLPackage extends EPackage
   EClass getComplexComponent();
 
   /**
+   * Returns the meta object for the attribute '{@link org.deg.xtext.gui.guiDSL.ComplexComponent#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see org.deg.xtext.gui.guiDSL.ComplexComponent#getName()
+   * @see #getComplexComponent()
+   * @generated
+   */
+  EAttribute getComplexComponent_Name();
+
+  /**
+   * Returns the meta object for class '{@link org.deg.xtext.gui.guiDSL.TabView <em>Tab View</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Tab View</em>'.
+   * @see org.deg.xtext.gui.guiDSL.TabView
+   * @generated
+   */
+  EClass getTabView();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.deg.xtext.gui.guiDSL.TabView#getTabs <em>Tabs</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Tabs</em>'.
+   * @see org.deg.xtext.gui.guiDSL.TabView#getTabs()
+   * @see #getTabView()
+   * @generated
+   */
+  EReference getTabView_Tabs();
+
+  /**
+   * Returns the meta object for class '{@link org.deg.xtext.gui.guiDSL.TabDefinition <em>Tab Definition</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Tab Definition</em>'.
+   * @see org.deg.xtext.gui.guiDSL.TabDefinition
+   * @generated
+   */
+  EClass getTabDefinition();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.deg.xtext.gui.guiDSL.TabDefinition#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see org.deg.xtext.gui.guiDSL.TabDefinition#getName()
+   * @see #getTabDefinition()
+   * @generated
+   */
+  EAttribute getTabDefinition_Name();
+
+  /**
    * Returns the meta object for class '{@link org.deg.xtext.gui.guiDSL.Multiselection <em>Multiselection</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1232,17 +1359,6 @@ public interface GuiDSLPackage extends EPackage
    * @generated
    */
   EClass getMultiselection();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.deg.xtext.gui.guiDSL.Multiselection#getDescriptionName <em>Description Name</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Description Name</em>'.
-   * @see org.deg.xtext.gui.guiDSL.Multiselection#getDescriptionName()
-   * @see #getMultiselection()
-   * @generated
-   */
-  EAttribute getMultiselection_DescriptionName();
 
   /**
    * Returns the meta object for the attribute '{@link org.deg.xtext.gui.guiDSL.Multiselection#getInputType <em>Input Type</em>}'.
@@ -1737,6 +1853,50 @@ public interface GuiDSLPackage extends EPackage
     EClass COMPLEX_COMPONENT = eINSTANCE.getComplexComponent();
 
     /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute COMPLEX_COMPONENT__NAME = eINSTANCE.getComplexComponent_Name();
+
+    /**
+     * The meta object literal for the '{@link org.deg.xtext.gui.guiDSL.impl.TabViewImpl <em>Tab View</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.deg.xtext.gui.guiDSL.impl.TabViewImpl
+     * @see org.deg.xtext.gui.guiDSL.impl.GuiDSLPackageImpl#getTabView()
+     * @generated
+     */
+    EClass TAB_VIEW = eINSTANCE.getTabView();
+
+    /**
+     * The meta object literal for the '<em><b>Tabs</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference TAB_VIEW__TABS = eINSTANCE.getTabView_Tabs();
+
+    /**
+     * The meta object literal for the '{@link org.deg.xtext.gui.guiDSL.impl.TabDefinitionImpl <em>Tab Definition</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.deg.xtext.gui.guiDSL.impl.TabDefinitionImpl
+     * @see org.deg.xtext.gui.guiDSL.impl.GuiDSLPackageImpl#getTabDefinition()
+     * @generated
+     */
+    EClass TAB_DEFINITION = eINSTANCE.getTabDefinition();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute TAB_DEFINITION__NAME = eINSTANCE.getTabDefinition_Name();
+
+    /**
      * The meta object literal for the '{@link org.deg.xtext.gui.guiDSL.impl.MultiselectionImpl <em>Multiselection</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -1745,14 +1905,6 @@ public interface GuiDSLPackage extends EPackage
      * @generated
      */
     EClass MULTISELECTION = eINSTANCE.getMultiselection();
-
-    /**
-     * The meta object literal for the '<em><b>Description Name</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute MULTISELECTION__DESCRIPTION_NAME = eINSTANCE.getMultiselection_DescriptionName();
 
     /**
      * The meta object literal for the '<em><b>Input Type</b></em>' attribute feature.

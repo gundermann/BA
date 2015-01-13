@@ -167,7 +167,7 @@ ein Teil der Software. \vcite{mdsdvoelter}{14f} Dabei sind sie auf
 ein bestimmtes Domänenproblem angepasst. Die Beschreibung dieser Modelle kann
 bspw. über eine DSL erfolgen. \vcite{mdsdvoelter}{15} In
 Abbildung \ref{mdsd} ist die Idee des MDSD schematisch dargestellt.
-\myBigFigure{mdsd.jpg}{Die grundlegenden Ideen hinter dem MDSD
+\myBigFigureCited{mdsd.jpg}{Die grundlegenden Ideen hinter dem MDSD}{
 \vcite{mdsdvoelter}{15}}{mdsd}
 
 \section{Abgrenzung zu GPL}
@@ -600,7 +600,8 @@ if(A())
 				\hline
 				\hline
 			\end{tabular}
-		\caption{Implementierung einfacher Grammatikregeln mit einem RD-Parser
+		\caption[Implementierung einfacher Grammatikregeln mit einem
+		RD-Parser]{Implementierung einfacher Grammatikregeln mit einem RD-Parser
 		\vcite{fowler}{248}}
 \label{tab_RD_Implementierung}
 	\end{table}\\
@@ -620,8 +621,8 @@ Input-Streams an einen anderen Parser übergeben werden. Somit ist es möglich
 Parser beliebig zu verketten. \vcite{ghosh}{242} Die Elemente, die
 verkettet werden können werden \emph{Parser-Kombinatoren} genannt. Abbildung
 \ref{Abb_parsercombinator} stellt schematisch diese Funktionsweise dar. 
-\myBigFigure{parsercombinator.jpg}{Funktionsweise von Parser-Kombinatoren (in
-Anlehnung an \cite[S.243]{ghosh})}{parsercombinator} 
+\myBigFigureCited{parsercombinator.jpg}{Funktionsweise von Parser-Kombinatoren}{
+(in Anlehnung an \cite[S.243]{ghosh}) }{parsercombinator} 
 \noindent
 Bezogen darauf, dass ein Parser aus Funktionen besteht, sind diese
 Parser-Kombinatoren Funktionen erster Ordnung, die unterschiedlich kombiniert werden können.

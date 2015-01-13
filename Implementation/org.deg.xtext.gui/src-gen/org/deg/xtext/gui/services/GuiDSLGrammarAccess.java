@@ -88,12 +88,13 @@ public class GuiDSLGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cColonKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Assignment cOrderedElementsAssignment_2 = (Assignment)cGroup.eContents().get(2);
 		private final RuleCall cOrderedElementsElementParserRuleCall_2_0 = (RuleCall)cOrderedElementsAssignment_2.eContents().get(0);
+		private final Keyword cSemicolonKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		
 		//Structure:
-		//	name="Structure" ":" orderedElements+=Element*;
+		//	name="Structure" ":" orderedElements+=Element* ";";
 		public ParserRule getRule() { return rule; }
 
-		//name="Structure" ":" orderedElements+=Element*
+		//name="Structure" ":" orderedElements+=Element* ";"
 		public Group getGroup() { return cGroup; }
 
 		//name="Structure"
@@ -110,6 +111,9 @@ public class GuiDSLGrammarAccess extends AbstractGrammarElementFinder {
 
 		//Element
 		public RuleCall getOrderedElementsElementParserRuleCall_2_0() { return cOrderedElementsElementParserRuleCall_2_0; }
+
+		//";"
+		public Keyword getSemicolonKeyword_3() { return cSemicolonKeyword_3; }
 	}
 
 	public class ElementElements extends AbstractParserRuleElementFinder {
@@ -224,10 +228,10 @@ public class GuiDSLGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cPropertiesPropertiesParserRuleCall_3_0 = (RuleCall)cPropertiesAssignment_3.eContents().get(0);
 		
 		//LabelRefinement:
-		//	name="Label" "from: " id=STRING properties=Properties?;
+		//	name="Label" "from:" id=STRING properties=Properties?;
 		public ParserRule getRule() { return rule; }
 
-		//name="Label" "from: " id=STRING properties=Properties?
+		//name="Label" "from:" id=STRING properties=Properties?
 		public Group getGroup() { return cGroup; }
 
 		//name="Label"
@@ -236,7 +240,7 @@ public class GuiDSLGrammarAccess extends AbstractGrammarElementFinder {
 		//"Label"
 		public Keyword getNameLabelKeyword_0_0() { return cNameLabelKeyword_0_0; }
 
-		//"from: "
+		//"from:"
 		public Keyword getFromKeyword_1() { return cFromKeyword_1; }
 
 		//id=STRING
@@ -258,12 +262,13 @@ public class GuiDSLGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cGetPropertiesFromKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cPropertiesFileAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cPropertiesFileSTRINGTerminalRuleCall_1_0 = (RuleCall)cPropertiesFileAssignment_1.eContents().get(0);
+		private final Keyword cSemicolonKeyword_2 = (Keyword)cGroup.eContents().get(2);
 		
 		//Property:
-		//	"get properties from:" propertiesFile=STRING;
+		//	"get properties from:" propertiesFile=STRING ";";
 		public ParserRule getRule() { return rule; }
 
-		//"get properties from:" propertiesFile=STRING
+		//"get properties from:" propertiesFile=STRING ";"
 		public Group getGroup() { return cGroup; }
 
 		//"get properties from:"
@@ -274,6 +279,9 @@ public class GuiDSLGrammarAccess extends AbstractGrammarElementFinder {
 
 		//STRING
 		public RuleCall getPropertiesFileSTRINGTerminalRuleCall_1_0() { return cPropertiesFileSTRINGTerminalRuleCall_1_0; }
+
+		//";"
+		public Keyword getSemicolonKeyword_2() { return cSemicolonKeyword_2; }
 	}
 
 	public class UsedDescriptionsElements extends AbstractParserRuleElementFinder {
@@ -286,15 +294,16 @@ public class GuiDSLGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cAsKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
 		private final Assignment cIdAssignment_2_1 = (Assignment)cGroup_2.eContents().get(1);
 		private final RuleCall cIdSTRINGTerminalRuleCall_2_1_0 = (RuleCall)cIdAssignment_2_1.eContents().get(0);
+		private final Keyword cSemicolonKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		
 		//UsedDescriptions:
-		//	"use: " description=DescriptionType ("as:" id=STRING)?;
+		//	"use:" description=DescriptionType ("as:" id=STRING)? ";";
 		public ParserRule getRule() { return rule; }
 
-		//"use: " description=DescriptionType ("as:" id=STRING)?
+		//"use:" description=DescriptionType ("as:" id=STRING)? ";"
 		public Group getGroup() { return cGroup; }
 
-		//"use: "
+		//"use:"
 		public Keyword getUseKeyword_0() { return cUseKeyword_0; }
 
 		//description=DescriptionType
@@ -314,6 +323,9 @@ public class GuiDSLGrammarAccess extends AbstractGrammarElementFinder {
 
 		//STRING
 		public RuleCall getIdSTRINGTerminalRuleCall_2_1_0() { return cIdSTRINGTerminalRuleCall_2_1_0; }
+
+		//";"
+		public Keyword getSemicolonKeyword_3() { return cSemicolonKeyword_3; }
 	}
 
 	public class DescriptionTypeElements extends AbstractParserRuleElementFinder {
@@ -366,12 +378,13 @@ public class GuiDSLGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cTypeKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cTypeAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cTypeTypeParserRuleCall_1_0 = (RuleCall)cTypeAssignment_1.eContents().get(0);
+		private final Keyword cSemicolonKeyword_2 = (Keyword)cGroup.eContents().get(2);
 		
 		//TypeDefinition:
-		//	"type: " type=Type;
+		//	"type: " type=Type ";";
 		public ParserRule getRule() { return rule; }
 
-		//"type: " type=Type
+		//"type: " type=Type ";"
 		public Group getGroup() { return cGroup; }
 
 		//"type: "
@@ -382,6 +395,9 @@ public class GuiDSLGrammarAccess extends AbstractGrammarElementFinder {
 
 		//Type
 		public RuleCall getTypeTypeParserRuleCall_1_0() { return cTypeTypeParserRuleCall_1_0; }
+
+		//";"
+		public Keyword getSemicolonKeyword_2() { return cSemicolonKeyword_2; }
 	}
 
 	public class TypeElements extends AbstractParserRuleElementFinder {
@@ -426,36 +442,88 @@ public class GuiDSLGrammarAccess extends AbstractGrammarElementFinder {
 
 	public class ComplexComponentElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "ComplexComponent");
-		private final RuleCall cMultiselectionParserRuleCall = (RuleCall)rule.eContents().get(1);
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final RuleCall cMultiselectionParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
+		private final RuleCall cTabViewParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
 		
 		//ComplexComponent:
-		//	Multiselection;
+		//	Multiselection | TabView;
 		public ParserRule getRule() { return rule; }
 
+		//Multiselection | TabView
+		public Alternatives getAlternatives() { return cAlternatives; }
+
 		//Multiselection
-		public RuleCall getMultiselectionParserRuleCall() { return cMultiselectionParserRuleCall; }
+		public RuleCall getMultiselectionParserRuleCall_0() { return cMultiselectionParserRuleCall_0; }
+
+		//TabView
+		public RuleCall getTabViewParserRuleCall_1() { return cTabViewParserRuleCall_1; }
+	}
+
+	public class TabViewElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "TabView");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cNameTabViewKeyword_0_0 = (Keyword)cNameAssignment_0.eContents().get(0);
+		private final Assignment cTabsAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cTabsTabDefinitionParserRuleCall_1_0 = (RuleCall)cTabsAssignment_1.eContents().get(0);
+		
+		//TabView:
+		//	name="TabView" tabs+=TabDefinition*;
+		public ParserRule getRule() { return rule; }
+
+		//name="TabView" tabs+=TabDefinition*
+		public Group getGroup() { return cGroup; }
+
+		//name="TabView"
+		public Assignment getNameAssignment_0() { return cNameAssignment_0; }
+
+		//"TabView"
+		public Keyword getNameTabViewKeyword_0_0() { return cNameTabViewKeyword_0_0; }
+
+		//tabs+=TabDefinition*
+		public Assignment getTabsAssignment_1() { return cTabsAssignment_1; }
+
+		//TabDefinition
+		public RuleCall getTabsTabDefinitionParserRuleCall_1_0() { return cTabsTabDefinitionParserRuleCall_1_0; }
+	}
+
+	public class TabDefinitionElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "TabDefinition");
+		private final Assignment cNameAssignment = (Assignment)rule.eContents().get(1);
+		private final RuleCall cNameTABNAMETerminalRuleCall_0 = (RuleCall)cNameAssignment.eContents().get(0);
+		
+		//TabDefinition:
+		//	name=TABNAME;
+		public ParserRule getRule() { return rule; }
+
+		//name=TABNAME
+		public Assignment getNameAssignment() { return cNameAssignment; }
+
+		//TABNAME
+		public RuleCall getNameTABNAMETerminalRuleCall_0() { return cNameTABNAMETerminalRuleCall_0; }
 	}
 
 	public class MultiselectionElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Multiselection");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Assignment cDescriptionNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final Keyword cDescriptionNameMultiselectionKeyword_0_0 = (Keyword)cDescriptionNameAssignment_0.eContents().get(0);
+		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cNameMultiselectionKeyword_0_0 = (Keyword)cNameAssignment_0.eContents().get(0);
 		private final Assignment cInputTypeAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cInputTypeINPUT_DESCRIPTIONTerminalRuleCall_1_0 = (RuleCall)cInputTypeAssignment_1.eContents().get(0);
 		
 		//Multiselection:
-		//	descriptionName="Multiselection" inputType=INPUT_DESCRIPTION?;
+		//	name="Multiselection" inputType=INPUT_DESCRIPTION?;
 		public ParserRule getRule() { return rule; }
 
-		//descriptionName="Multiselection" inputType=INPUT_DESCRIPTION?
+		//name="Multiselection" inputType=INPUT_DESCRIPTION?
 		public Group getGroup() { return cGroup; }
 
-		//descriptionName="Multiselection"
-		public Assignment getDescriptionNameAssignment_0() { return cDescriptionNameAssignment_0; }
+		//name="Multiselection"
+		public Assignment getNameAssignment_0() { return cNameAssignment_0; }
 
 		//"Multiselection"
-		public Keyword getDescriptionNameMultiselectionKeyword_0_0() { return cDescriptionNameMultiselectionKeyword_0_0; }
+		public Keyword getNameMultiselectionKeyword_0_0() { return cNameMultiselectionKeyword_0_0; }
 
 		//inputType=INPUT_DESCRIPTION?
 		public Assignment getInputTypeAssignment_1() { return cInputTypeAssignment_1; }
@@ -688,6 +756,9 @@ public class GuiDSLGrammarAccess extends AbstractGrammarElementFinder {
 	private final TypeElements pType;
 	private final UIDescriptionImportElements pUIDescriptionImport;
 	private final ComplexComponentElements pComplexComponent;
+	private final TabViewElements pTabView;
+	private final TabDefinitionElements pTabDefinition;
+	private final TerminalRule tTABNAME;
 	private final MultiselectionElements pMultiselection;
 	private final TerminalRule tINPUT_DESCRIPTION;
 	private final ComponentDefinitionElements pComponentDefinition;
@@ -722,6 +793,9 @@ public class GuiDSLGrammarAccess extends AbstractGrammarElementFinder {
 		this.pType = new TypeElements();
 		this.pUIDescriptionImport = new UIDescriptionImportElements();
 		this.pComplexComponent = new ComplexComponentElements();
+		this.pTabView = new TabViewElements();
+		this.pTabDefinition = new TabDefinitionElements();
+		this.tTABNAME = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "TABNAME");
 		this.pMultiselection = new MultiselectionElements();
 		this.tINPUT_DESCRIPTION = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "INPUT_DESCRIPTION");
 		this.pComponentDefinition = new ComponentDefinitionElements();
@@ -772,7 +846,7 @@ public class GuiDSLGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Structure:
-	//	name="Structure" ":" orderedElements+=Element*;
+	//	name="Structure" ":" orderedElements+=Element* ";";
 	public StructureElements getStructureAccess() {
 		return pStructure;
 	}
@@ -822,7 +896,7 @@ public class GuiDSLGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//LabelRefinement:
-	//	name="Label" "from: " id=STRING properties=Properties?;
+	//	name="Label" "from:" id=STRING properties=Properties?;
 	public LabelRefinementElements getLabelRefinementAccess() {
 		return pLabelRefinement;
 	}
@@ -832,7 +906,7 @@ public class GuiDSLGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Property:
-	//	"get properties from:" propertiesFile=STRING;
+	//	"get properties from:" propertiesFile=STRING ";";
 	public PropertyElements getPropertyAccess() {
 		return pProperty;
 	}
@@ -842,7 +916,7 @@ public class GuiDSLGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//UsedDescriptions:
-	//	"use: " description=DescriptionType ("as:" id=STRING)?;
+	//	"use:" description=DescriptionType ("as:" id=STRING)? ";";
 	public UsedDescriptionsElements getUsedDescriptionsAccess() {
 		return pUsedDescriptions;
 	}
@@ -872,7 +946,7 @@ public class GuiDSLGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//TypeDefinition:
-	//	"type: " type=Type;
+	//	"type: " type=Type ";";
 	public TypeDefinitionElements getTypeDefinitionAccess() {
 		return pTypeDefinition;
 	}
@@ -902,7 +976,7 @@ public class GuiDSLGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//ComplexComponent:
-	//	Multiselection;
+	//	Multiselection | TabView;
 	public ComplexComponentElements getComplexComponentAccess() {
 		return pComplexComponent;
 	}
@@ -911,8 +985,34 @@ public class GuiDSLGrammarAccess extends AbstractGrammarElementFinder {
 		return getComplexComponentAccess().getRule();
 	}
 
+	//TabView:
+	//	name="TabView" tabs+=TabDefinition*;
+	public TabViewElements getTabViewAccess() {
+		return pTabView;
+	}
+	
+	public ParserRule getTabViewRule() {
+		return getTabViewAccess().getRule();
+	}
+
+	//TabDefinition:
+	//	name=TABNAME;
+	public TabDefinitionElements getTabDefinitionAccess() {
+		return pTabDefinition;
+	}
+	
+	public ParserRule getTabDefinitionRule() {
+		return getTabDefinitionAccess().getRule();
+	}
+
+	//terminal TABNAME:
+	//	"[" ("\\" . / * 'b'|'t'|'n'|'f'|'r'|'u'|'"'|"'"|'\\' * / | !("[" | "]"))* "]";
+	public TerminalRule getTABNAMERule() {
+		return tTABNAME;
+	} 
+
 	//Multiselection:
-	//	descriptionName="Multiselection" inputType=INPUT_DESCRIPTION?;
+	//	name="Multiselection" inputType=INPUT_DESCRIPTION?;
 	public MultiselectionElements getMultiselectionAccess() {
 		return pMultiselection;
 	}

@@ -2,24 +2,25 @@
  */
 package org.deg.xtext.gui.guiDSL;
 
+import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Complex Component</b></em>'.
+ * A representation of the model object '<em><b>Tab Definition</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.deg.xtext.gui.guiDSL.ComplexComponent#getName <em>Name</em>}</li>
+ *   <li>{@link org.deg.xtext.gui.guiDSL.TabDefinition#getName <em>Name</em>}</li>
  * </ul>
  * </p>
  *
- * @see org.deg.xtext.gui.guiDSL.GuiDSLPackage#getComplexComponent()
+ * @see org.deg.xtext.gui.guiDSL.GuiDSLPackage#getTabDefinition()
  * @model
  * @generated
  */
-public interface ComplexComponent extends DescriptionType
+public interface TabDefinition extends EObject
 {
   /**
    * Returns the value of the '<em><b>Name</b></em>' attribute.
@@ -31,14 +32,14 @@ public interface ComplexComponent extends DescriptionType
    * <!-- end-user-doc -->
    * @return the value of the '<em>Name</em>' attribute.
    * @see #setName(String)
-   * @see org.deg.xtext.gui.guiDSL.GuiDSLPackage#getComplexComponent_Name()
+   * @see org.deg.xtext.gui.guiDSL.GuiDSLPackage#getTabDefinition_Name()
    * @model
    * @generated
    */
   String getName();
 
   /**
-   * Sets the value of the '{@link org.deg.xtext.gui.guiDSL.ComplexComponent#getName <em>Name</em>}' attribute.
+   * Sets the value of the '{@link org.deg.xtext.gui.guiDSL.TabDefinition#getName <em>Name</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Name</em>' attribute.
@@ -47,4 +48,4 @@ public interface ComplexComponent extends DescriptionType
    */
   void setName(String value);
 
-} // ComplexComponent
+} // TabDefinition

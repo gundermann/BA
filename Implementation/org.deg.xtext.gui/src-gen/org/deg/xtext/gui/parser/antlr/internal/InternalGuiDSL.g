@@ -243,7 +243,11 @@ ruleStructure returns [EObject current=null]
 	    }
 
 )
-)*)
+)*	otherlv_3=';' 
+    {
+    	newLeafNode(otherlv_3, grammarAccess.getStructureAccess().getSemicolonKeyword_3());
+    }
+)
 ;
 
 
@@ -477,7 +481,7 @@ ruleLabelRefinement returns [EObject current=null]
 	    }
 
 )
-)	otherlv_1='from: ' 
+)	otherlv_1='from:' 
     {
     	newLeafNode(otherlv_1, grammarAccess.getLabelRefinementAccess().getFromKeyword_1());
     }
@@ -560,7 +564,11 @@ ruleProperty returns [EObject current=null]
 	    }
 
 )
-))
+)	otherlv_2=';' 
+    {
+    	newLeafNode(otherlv_2, grammarAccess.getPropertyAccess().getSemicolonKeyword_2());
+    }
+)
 ;
 
 
@@ -581,7 +589,7 @@ ruleUsedDescriptions returns [EObject current=null]
     @init { enterRule(); 
     }
     @after { leaveRule(); }:
-(	otherlv_0='use: ' 
+(	otherlv_0='use:' 
     {
     	newLeafNode(otherlv_0, grammarAccess.getUsedDescriptionsAccess().getUseKeyword_0());
     }
@@ -625,7 +633,11 @@ ruleUsedDescriptions returns [EObject current=null]
 	    }
 
 )
-))?)
+))?	otherlv_4=';' 
+    {
+    	newLeafNode(otherlv_4, grammarAccess.getUsedDescriptionsAccess().getSemicolonKeyword_3());
+    }
+)
 ;
 
 
@@ -751,7 +763,11 @@ ruleTypeDefinition returns [EObject current=null]
 	    }
 
 )
-))
+)	otherlv_2=';' 
+    {
+    	newLeafNode(otherlv_2, grammarAccess.getTypeDefinitionAccess().getSemicolonKeyword_2());
+    }
+)
 ;
 
 
@@ -862,9 +878,9 @@ ruleComplexComponent returns [EObject current=null]
     @init { enterRule(); 
     }
     @after { leaveRule(); }:
-
+(
     { 
-        newCompositeNode(grammarAccess.getComplexComponentAccess().getMultiselectionParserRuleCall()); 
+        newCompositeNode(grammarAccess.getComplexComponentAccess().getMultiselectionParserRuleCall_0()); 
     }
     this_Multiselection_0=ruleMultiselection
     { 
@@ -872,6 +888,109 @@ ruleComplexComponent returns [EObject current=null]
         afterParserOrEnumRuleCall();
     }
 
+    |
+    { 
+        newCompositeNode(grammarAccess.getComplexComponentAccess().getTabViewParserRuleCall_1()); 
+    }
+    this_TabView_1=ruleTabView
+    { 
+        $current = $this_TabView_1.current; 
+        afterParserOrEnumRuleCall();
+    }
+)
+;
+
+
+
+
+
+// Entry rule entryRuleTabView
+entryRuleTabView returns [EObject current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getTabViewRule()); }
+	 iv_ruleTabView=ruleTabView 
+	 { $current=$iv_ruleTabView.current; } 
+	 EOF 
+;
+
+// Rule TabView
+ruleTabView returns [EObject current=null] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
+((
+(
+		lv_name_0_0=	'TabView' 
+    {
+        newLeafNode(lv_name_0_0, grammarAccess.getTabViewAccess().getNameTabViewKeyword_0_0());
+    }
+ 
+	    {
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getTabViewRule());
+	        }
+       		setWithLastConsumed($current, "name", lv_name_0_0, "TabView");
+	    }
+
+)
+)(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getTabViewAccess().getTabsTabDefinitionParserRuleCall_1_0()); 
+	    }
+		lv_tabs_1_0=ruleTabDefinition		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getTabViewRule());
+	        }
+       		add(
+       			$current, 
+       			"tabs",
+        		lv_tabs_1_0, 
+        		"TabDefinition");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+)*)
+;
+
+
+
+
+
+// Entry rule entryRuleTabDefinition
+entryRuleTabDefinition returns [EObject current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getTabDefinitionRule()); }
+	 iv_ruleTabDefinition=ruleTabDefinition 
+	 { $current=$iv_ruleTabDefinition.current; } 
+	 EOF 
+;
+
+// Rule TabDefinition
+ruleTabDefinition returns [EObject current=null] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
+(
+(
+		lv_name_0_0=RULE_TABNAME
+		{
+			newLeafNode(lv_name_0_0, grammarAccess.getTabDefinitionAccess().getNameTABNAMETerminalRuleCall_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getTabDefinitionRule());
+	        }
+       		setWithLastConsumed(
+       			$current, 
+       			"name",
+        		lv_name_0_0, 
+        		"TABNAME");
+	    }
+
+)
+)
 ;
 
 
@@ -894,16 +1013,16 @@ ruleMultiselection returns [EObject current=null]
     @after { leaveRule(); }:
 ((
 (
-		lv_descriptionName_0_0=	'Multiselection' 
+		lv_name_0_0=	'Multiselection' 
     {
-        newLeafNode(lv_descriptionName_0_0, grammarAccess.getMultiselectionAccess().getDescriptionNameMultiselectionKeyword_0_0());
+        newLeafNode(lv_name_0_0, grammarAccess.getMultiselectionAccess().getNameMultiselectionKeyword_0_0());
     }
  
 	    {
 	        if ($current==null) {
 	            $current = createModelElement(grammarAccess.getMultiselectionRule());
 	        }
-       		setWithLastConsumed($current, "descriptionName", lv_descriptionName_0_0, "Multiselection");
+       		setWithLastConsumed($current, "name", lv_name_0_0, "Multiselection");
 	    }
 
 )
@@ -1306,6 +1425,8 @@ ruleInteractiontype returns [EObject current=null]
 
 
 
+
+RULE_TABNAME : '[' ('\\' .|~(('['|']')))* ']';
 
 RULE_INPUT_DESCRIPTION : '<' ('\\' .|~(('<'|'>')))* '>';
 

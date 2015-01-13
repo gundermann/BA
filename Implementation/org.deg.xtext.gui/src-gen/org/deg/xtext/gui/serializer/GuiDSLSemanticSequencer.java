@@ -16,6 +16,8 @@ import org.deg.xtext.gui.guiDSL.PropertiesDefinition;
 import org.deg.xtext.gui.guiDSL.Property;
 import org.deg.xtext.gui.guiDSL.Refinement;
 import org.deg.xtext.gui.guiDSL.Structure;
+import org.deg.xtext.gui.guiDSL.TabDefinition;
+import org.deg.xtext.gui.guiDSL.TabView;
 import org.deg.xtext.gui.guiDSL.Type;
 import org.deg.xtext.gui.guiDSL.TypeDefinition;
 import org.deg.xtext.gui.guiDSL.UIDescription;
@@ -123,6 +125,20 @@ public class GuiDSLSemanticSequencer extends AbstractDelegatingSemanticSequencer
 			case GuiDSLPackage.STRUCTURE:
 				if(context == grammarAccess.getStructureRule()) {
 					sequence_Structure(context, (Structure) semanticObject); 
+					return; 
+				}
+				else break;
+			case GuiDSLPackage.TAB_DEFINITION:
+				if(context == grammarAccess.getTabDefinitionRule()) {
+					sequence_TabDefinition(context, (TabDefinition) semanticObject); 
+					return; 
+				}
+				else break;
+			case GuiDSLPackage.TAB_VIEW:
+				if(context == grammarAccess.getComplexComponentRule() ||
+				   context == grammarAccess.getDescriptionTypeRule() ||
+				   context == grammarAccess.getTabViewRule()) {
+					sequence_TabView(context, (TabView) semanticObject); 
 					return; 
 				}
 				else break;
@@ -240,7 +256,7 @@ public class GuiDSLSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	
 	/**
 	 * Constraint:
-	 *     (descriptionName='Multiselection' inputType=INPUT_DESCRIPTION?)
+	 *     (name='Multiselection' inputType=INPUT_DESCRIPTION?)
 	 */
 	protected void sequence_Multiselection(EObject context, Multiselection semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -302,6 +318,31 @@ public class GuiDSLSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	 *     (name='Structure' orderedElements+=Element*)
 	 */
 	protected void sequence_Structure(EObject context, Structure semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     name=TABNAME
+	 */
+	protected void sequence_TabDefinition(EObject context, TabDefinition semanticObject) {
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, GuiDSLPackage.Literals.TAB_DEFINITION__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, GuiDSLPackage.Literals.TAB_DEFINITION__NAME));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getTabDefinitionAccess().getNameTABNAMETerminalRuleCall_0(), semanticObject.getName());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (name='TabView' tabs+=TabDefinition*)
+	 */
+	protected void sequence_TabView(EObject context, TabView semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	

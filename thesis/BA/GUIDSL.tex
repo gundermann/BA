@@ -26,16 +26,24 @@ Außerdem sollte er dadurch die Möglichkeit haben bestimmte Konzepte einfach
 wieder zu verwenden.
 Für die GUI-DSL wird bzgl. der Anfroderungen an die Komponenten zwischen drei
 Kategorien unterschieden.\\
-Die erste Kategorie sind umfasst \emph{triviale UI-Komponenten}. Dabei handelt
+Die erste Kategorie sind umfasst \emph{\Ks}. Dabei handelt
 es sich um UI-Komponenten, deren Funktionen in unterschiedlichen UI-Frameworks 
 ähnlich sind und in unterschiedlichen Anwendungen eingesetzt werden
 könne. Das bedeutet, dass sie nicht als domänenspezifisch angesehen werden
 können. Beispiele hierfür sind UI-Komponenten wie der \emph{Button} oder das
 \emph{Label}.\\
-Die zweite Kategorie umfasst \emph{komplexe UI-Komponenten}. Diese zeichnen sich
+Die zweite Kategorie umfasst \emph{\kks}. Diese zeichnen sich
 dadurch aus, dass sie domänenspezifisch sind und speziell für profil c/s
 entwickelt wurden. Ein Beispiel für eine komplexe Komponenten ist die
-\gloss{Multiselection-Komponente}. \\
+\gloss{Multiselection-Komponente}. 
+Die \knks müssen für jedes verwendete UI-Framework
+implementiert werden. Damit wird verhindert, dass die
+Entwickler, die bzgl. der GUI nur mit der DSL arbeiten, eigene komplexe
+Komponenten entwerfen, deren Wiederverwendungsgrad nierdirger ist, als wenn
+diese Komponenten nach ausreichender Evaluation an einer zentralen Stelle
+implementiert und bereitgestellt werden. Die Notwendigkeit dessen, dass die
+Quellen für diese \knks sowohl zur Entwicklungszeit, als auch zur Laufzeit
+vorhanden sein müssen, ist ein Nachteil dieses Konzeptes.\\
 Die dritte Kategorie umfasst \emph{Layout Komponenten}. Dabei handelt es sich
 um strukturgebende Komponenten. In anderen UI-Frameworks sind dies bspw.
 \emph{Panel}, \emph{Div} oder \emph{Pane}. In der GUI-DSL müssen auch solche

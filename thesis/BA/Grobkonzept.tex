@@ -4,7 +4,7 @@ Anforderungen auf Sprache und Generator}
 Das Vorgehensmodel für die Entwickler des DSL-Prototypen ist ein inkrementelles
 Model. Das bedeutet, dass mehrere Iterationen durchlaufen werden (inkrementell),
 in denen unterschiedliche Versionen des Prototyps entwickelt werden.
-(vgl. \cite[S.5]{Sauer}) 
+\vcite{SauerDiss}{5} 
 Inkrementellen Modelle können wie in Abbildung
 \ref{Abb_inkrement} dargestellt werden.\\
 Nach der Analyse der Anforderungen wird der
@@ -16,9 +16,9 @@ festgelegt, bestehende Anforderungen geändert oder das gar Änderungen am
 gesamten Konzept gemacht. 
 Das führt wiederum zu einem neuen Entwurf, woran sich eine weitere
 Implementierung anschließt. Dieser Zyklus wird somit mehrmals durchlaufen
-(Iteration). (vgl. \cite[S.5]{Sauer})\\
-\myBigFigure{inkrement.jpg}{Inkrementelles Modell (vgl.
-\cite{SauerVor})}{inkrement}
+(Iteration). \vcite{SauerDiss}{5} \\
+\myBigFigureCited{inkrement.jpg}{Inkrementelles Modell}{
+\simplevcite{SauerVor}}{inkrement}
 \noindent
 Grund für dieses Vorgehen ist, dass in der
 deg bzgl.
@@ -26,7 +26,7 @@ DSL-Entwicklung wenig Know-How existiert. Aus den Iterationen soll so viel Erfah
 werden. Außerdem ist werden somit auch Irrwege aufgezeigt, die bei Entwicklung
 anderer DSLs Beachtung finden können. Weiterhin können Anforderungen flexibel
 angepasst und Missverständnisse reduziert werden, da der Entwicklungsprozess
-transparent ist. (vgl. \cite[S.67]{Sauer})\\
+transparent ist. \vcite{SauerDiss}{67}\\
 Der weitere Verlauf (Kapitel \ref{Grobkonzept}, \ref{Entwicklung einer DSL zur
 Beschreibung der GUI in profil c/s} und \ref{Entwicklung des Generators für das
 Generieren von Klassen für das Multichannel-Framework}) werden die
@@ -140,4 +140,52 @@ ist, wird in der Properties-Datei (wenn eine festgelegt wurde) nicht mehr nach
 diesem Attribut der Komponente gesucht.
 
 \subsection{3. Iteration}
-
+In dem Review, welches vor der 3. Iteration durchführt wurde, entstanden die
+letzten Änderungen, die bzgl. der Sprache innerhalb dieser Arbeit Beachtung
+finden. Das grundsätzliche Konzept wurde nochmals erweitert. Neben den bekannten
+Artefakten der DSL-Umgebung kommt ein weiteres Artefakt hinzu. Dabei handelt es
+sich um eine Layout-Beschreibung. Somit findet die Beschreibung des Layout nicht
+mehr im Generator statt, sondern muss nur noch frameworkspezifisch generiert
+werden. In Abbildung \ref{Abb_konzept_3} ist das neue Konzept schematisch dargestellt.
+\myBigFigure{konzept_3.jpg}{Konzeption der DSL-Umgebung (3.
+Iteration)}{konzept_3}
+\noindent
+Da die Layout-Beschreibung in eine separate Datei augegliedert wurde, muss die
+Referenzierung von UI-Komponenten und Bereichen aus der GUI-Beschreibung mit den
+Festlegungen in der Layout-Datei referenziert werden können.\\
+Bezogen auf die in der GUI-Beschreibung definierten Bereiche ist aufgefallen,
+dass die Angabe der Anzahl der Bereiche nicht notwendig ist. Grund dafür ist,
+dass dieser Wert doppelt definiert weden würde. Einerseits direkt in der Angabe
+der Anzahl und andererseits indirekt durch die Zuweisung der UI-Komponenten und
+eingebundenen GUI-Beschreibungen zu den Bereichen. Ursprünglich war die Idee,
+dass aufgrund dieser doppelten Angabe Validierungen ausgeführt werden können.
+Die doppelte Deklaration wiederspricht jedoch der Anforderung, dass so wenig
+LOCs wie möglich geschrieben werden sollen, um eine GUI zu beschreiben (siehe
+Kapitel \ref{AllgAnforderungen}).\\
+Weiterhin ist aufgefallen, dass in einer GUI-Beschreibung nur eine
+Propertiesdatei angegeben werden kann. In den GUI-Klassen der deg können jedoch
+mehrere Propertiesdateien angegeben werden. Dies ist auch in der
+GUI-Beschreibung per DSL zu beachten.\\
+Neben den \Ks \emph{Button} und \emph{Label} müssen folgende weitere
+\Ks definiert werden können.
+\begin{itemize}
+  \item Textfield
+  \item Textarea
+  \item Tree
+  \item Table
+  \item TabPane
+  \item CardPanel\\
+  Ein Bereich, in dem während der Laufzeit unterschiedliche UIs hineingehängt
+  werden können.
+\end{itemize}
+Weiterhin müssen die Bezeichnungen der
+Interaktionstypen den Bezeichnungen der Interaktionsformen (IAF) der deg angeglichen werden. Darüberhinaus sollen
+folgende Standard-Interaktionstypen verwendet werden. (Zuerst wird die
+Komponente genannt und anschließend die Standard-Interaktionstypen)
+\begin{itemize}
+  \item Button: Klick
+  \item CardPanel: Änderung des GUIs
+  \item Tree: Doppelklick
+\end{itemize}
+Diese Standard-Interaktionstypen müssen nicht in den jeweiligen Komponenten
+definiert werden.

@@ -95,13 +95,33 @@
 	\center{
 	\begin{minipage}{\fullwidth}
 		\includegraphics[width= \fullwidth]{#2}
-		\caption[#4]{#3}
+		\caption{#3}
 		\label{#1_#4}
 	\end{minipage}
 	}
 \end{figure}
 }
 
+%----------------------------------------------------------------------------------
+% \myBigFigure	[ LABEL_PREFIX (optional) ]
+%				{ FILENAME (without extension) }
+%				{ CAPTION TEXT }
+%				{ SHORT VERSION OF CAPTION TEXT }
+%
+%Bild wird in kompletter Breite gesetzt
+%picture using full width of the page
+\newcommand{\myBigFigureCited}[5][Abb]
+{
+\begin{figure}[H]
+	\center{
+	\begin{minipage}{\fullwidth}
+		\includegraphics[width= \fullwidth]{#2}
+		\caption[#3]{#3#4}
+		\label{#1_#5}
+	\end{minipage}
+	}
+\end{figure}
+}
 
 
 %----------------------------------------------------------------------------------
@@ -153,12 +173,45 @@
 \begin{sidewaysfigure}[t!bp]
 	
 		\includegraphics[width= \textheight]{#2}
-		\caption[#4]{#3}
+		\caption{#3}
 		\label{#1_#4}
 	
 \end{sidewaysfigure}
 }
 
-\newcommand{\gloss}[1]{
-#1\footnote{Siehe Glossar: \gls{#1}}
+
+%----------------------------------------------------------------------------------
+% \myHUGEFigure	[ LABEL_PREFIX (optional) ]
+%				{ FILENAME (without extension) }
+%				{ CAPTION TEXT }
+%				{ SHORT VERSION OF CAPTION TEXT }
+%
+%Bild wird rotiert und quer in kompletter Breite gesetzt
+%landscape picture using the full width of the rotated page
+\newcommand{\myHugeFigureCited}[5][Abb]
+{
+\begin{sidewaysfigure}[t!bp]
+	
+		\includegraphics[width= \textheight]{#2}
+		\caption[#3]{#3#4}
+		\label{#1_#5}
+	
+\end{sidewaysfigure}
 }
+
+\newcommand{\gloss}[1]{
+%#1\footnote{Siehe Glossar: 
+\gls{#1}
+%}
+}
+
+
+\newcommand{\Ks}{
+Basiskomponenten
+}
+
+\newcommand{\knks}{
+komplexen Komponenten}
+
+\newcommand{\kks}{
+komplexe Komponenten}
