@@ -1,6 +1,12 @@
 \newcommand{\etalchar}[1]{$^{#1}$}
 \begin{thebibliography}{RDGN10}
 
+\bibitem[114]{xtextdoc}
+{\em Xtext Documentation}.
+\newblock URL: http://www.eclipse.org/Xtext/ \\ cumentation/2.6.0/Xtext
+  Documentation.pdf, September 2014.
+\newblock Zuletzt eingesehen am 24.11.2014.
+
 \bibitem[Aho08]{alfred}
 {\sc Aho, Alfred~V}: {\em Compiler: Prinzipien, Techniken und Werkzeuge}.
 \newblock Pearson Studium, 2008.
@@ -152,11 +158,6 @@
 \newblock Online verfügbar
   URL:http://ediss.sub.uni-hamburg.de/volltexte/2011/4959/pdf/Dissertation\_Sauer.pdf
   Zuletzt eingesehen am 08.01.2015.
-
-\bibitem[Sau13]{SauerVor}
-{\sc Sauer, Joachim}: {\em Vorlesung Softwaretechnik Teil 1 (4. Quartal 2013)
-  Abschitt 2}.
-\newblock Nordakademie, 2013.
 
 \bibitem[Sch05]{schmelzer}
 {\sc Schmelzer, Robert~Franz}: {\em Realisierung teilautomatisierter Prozesse

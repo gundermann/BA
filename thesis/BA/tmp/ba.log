@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.10.14)  15 JAN 2015 10:17
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.10.14)  15 JAN 2015 10:52
 entering extended mode
 **ba.tex
 (C:\Users\ngundermann\git\BA\thesis\BA\ba.tex
@@ -650,7 +650,7 @@ See the babel package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.61 \select@language{English}
+l.60 \select@language{English}
                               
 Your command will be ignored, type <return> to proceed
 
@@ -1270,27 +1270,27 @@ ah-run-gen mit Xtext
 
 [41] [42] (C:\Users\ngundermann\git\BA\thesis\BA\Grobkonzept.tex
 Kapitel 7.
-<Bilder/inkrement.jpg, id=867, 629.35126pt x 553.31718pt>
+<Bilder/inkrement.jpg, id=869, 526.96875pt x 418.56375pt>
 File: Bilder/inkrement.jpg Graphic file (type jpg)
 
 <use Bilder/inkrement.jpg>
-Package pdftex.def Info: Bilder/inkrement.jpg used on input line 21.
-(pdftex.def)             Requested size: 398.3386pt x 350.2127pt.
+Package pdftex.def Info: Bilder/inkrement.jpg used on input line 20.
+(pdftex.def)             Requested size: 398.3386pt x 316.40648pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 4--21
+Underfull \hbox (badness 10000) in paragraph at lines 4--20
 
  []
 
 
 Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
-less on input line 22.
+less on input line 21.
 
 [43
 
 
 
 ]
-Overfull \hbox (3.2416pt too wide) in paragraph at lines 22--35
+Overfull \hbox (3.2416pt too wide) in paragraph at lines 21--34
 \T1/ppl/m/n/12 nen. Wei-ter-hin kön-nen An-for-de-run-gen fle-xi-bel an-ge-pass
 t und Missver-ständ-
  []
@@ -1300,28 +1300,28 @@ t und Missver-ständ-
 File: Bilder/konzept_1.jpg Graphic file (type jpg)
 
 <use Bilder/konzept_1.jpg>
-Package pdftex.def Info: Bilder/konzept_1.jpg used on input line 60.
+Package pdftex.def Info: Bilder/konzept_1.jpg used on input line 59.
 (pdftex.def)             Requested size: 398.3386pt x 271.72272pt.
 
 <Bilder/suchfeld.jpg, id=891, 583.42969pt x 56.46094pt>
 File: Bilder/suchfeld.jpg Graphic file (type jpg)
 
 <use Bilder/suchfeld.jpg>
-Package pdftex.def Info: Bilder/suchfeld.jpg used on input line 85.
+Package pdftex.def Info: Bilder/suchfeld.jpg used on input line 84.
 (pdftex.def)             Requested size: 398.3386pt x 38.54971pt.
 
-Overfull \hbox (49.12514pt too wide) in paragraph at lines 61--85
+Overfull \hbox (49.12514pt too wide) in paragraph at lines 60--84
 \T1/ppl/m/n/12 der sich aus die-ser star-ken Mo-du-la-ri-sie-rung er-gibt, ist 
 dass vie-le GUI-Beschreibungen
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 61--85
+Underfull \hbox (badness 10000) in paragraph at lines 60--84
 
  []
 
 
-Overfull \hbox (9.07297pt too wide) in paragraph at lines 61--85
+Overfull \hbox (9.07297pt too wide) in paragraph at lines 60--84
 \T1/ppl/m/n/12 lie-big wie-der-ver-wen-det und kom-bi-niert wer-den. Hier-zu we
 r-den un-ter-schied-
  []
@@ -1331,21 +1331,21 @@ r-den un-ter-schied-
 File: Bilder/suchmaske.jpg Graphic file (type jpg)
 
 <use Bilder/suchmaske.jpg>
-Package pdftex.def Info: Bilder/suchmaske.jpg used on input line 89.
+Package pdftex.def Info: Bilder/suchmaske.jpg used on input line 88.
 (pdftex.def)             Requested size: 398.3386pt x 119.96602pt.
  [46 <C:/Users/ngundermann/git/BA/thesis/BA/Bilder/suchfeld.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 90--114
+Underfull \hbox (badness 10000) in paragraph at lines 89--113
 
  []
 
 
-Overfull \hbox (0.51363pt too wide) in paragraph at lines 90--114
+Overfull \hbox (0.51363pt too wide) in paragraph at lines 89--113
 \T1/ppl/m/n/12 ab-strakt sein, da-mit sich die-se Struk-tur auf un-ter-schied-l
 i-che UI-Frameworks
  []
 
 
-Overfull \hbox (6.98083pt too wide) in paragraph at lines 90--114
+Overfull \hbox (6.98083pt too wide) in paragraph at lines 89--113
 \T1/ppl/m/n/12 theo-re-tisch mög-lich die-se Auf-ga-be weit-ge-hend un-ab-hän-g
 ig von der Be-schrei-
  []
@@ -1354,34 +1354,34 @@ ig von der Be-schrei-
 File: Bilder/konzept_2.jpg Graphic file (type jpg)
 
 <use Bilder/konzept_2.jpg>
-Package pdftex.def Info: Bilder/konzept_2.jpg used on input line 119.
+Package pdftex.def Info: Bilder/konzept_2.jpg used on input line 118.
 (pdftex.def)             Requested size: 398.3386pt x 250.55067pt.
  [47 <C:/Users/ngundermann/git/BA/thesis/BA/Bilder/suchmaske.jpg>]
-Overfull \hbox (46.102pt too wide) in paragraph at lines 120--140
+Overfull \hbox (46.102pt too wide) in paragraph at lines 119--139
 \T1/ppl/m/n/12 Eine wei-te-re Än-de-rung ist, dass die UI-Komponenten, die ei-n
 er GUI-Beschreibungen
  []
 
 
-Overfull \hbox (33.85031pt too wide) in paragraph at lines 120--140
+Overfull \hbox (33.85031pt too wide) in paragraph at lines 119--139
 \T1/ppl/m/n/12 di-rekt de-fi-niert wer-den, in ei-ner an-de-ren Be-schrei-bung,
  wo je-ne GUI-Beschreibung
  []
 
 
-Overfull \hbox (0.11372pt too wide) in paragraph at lines 120--140
+Overfull \hbox (0.11372pt too wide) in paragraph at lines 119--139
 \T1/ppl/m/n/12 aus-zu-la-gern. Da-druch wird die GUI-Beschreibung weit-ge-hend 
 ent-la-stet. Al-
  []
 
 
-Overfull \hbox (12.22505pt too wide) in paragraph at lines 120--140
+Overfull \hbox (12.22505pt too wide) in paragraph at lines 119--139
 \T1/ppl/m/n/12 ler-dings muss für die Zu-wei-sung von UI-Komponenten zu Wert-Be
 schreibung
  []
 
 
-Overfull \hbox (5.26535pt too wide) in paragraph at lines 120--140
+Overfull \hbox (5.26535pt too wide) in paragraph at lines 119--139
 \T1/ppl/m/n/12 Fest-le-gung, dass wenn in der GUI-Beschreibung ei-nem At-tri-bu
 t ein be-stimm-
  []
@@ -1391,22 +1391,22 @@ t ein be-stimm-
 File: Bilder/konzept_3.jpg Graphic file (type jpg)
 
 <use Bilder/konzept_3.jpg>
-Package pdftex.def Info: Bilder/konzept_3.jpg used on input line 150.
+Package pdftex.def Info: Bilder/konzept_3.jpg used on input line 149.
 (pdftex.def)             Requested size: 398.3386pt x 212.6424pt.
 
-Overfull \hbox (5.49387pt too wide) in paragraph at lines 151--170
+Overfull \hbox (5.49387pt too wide) in paragraph at lines 150--169
 []\T1/ppl/m/n/12 Da die Layout-Beschreibung in ei-ne se-pa-ra-te Da-tei au-ge-g
 lie-dert wur-de, muss
  []
 
 
-Overfull \hbox (39.57272pt too wide) in paragraph at lines 151--170
+Overfull \hbox (39.57272pt too wide) in paragraph at lines 150--169
 \T1/ppl/m/n/12 die Re-fe-ren-zie-rung von UI-Komponenten und Be-rei-chen aus de
 r GUI-Beschreibung
  []
 
 [49 <C:/Users/ngundermann/git/BA/thesis/BA/Bilder/konzept_3.jpg>]
-Overfull \hbox (52.60461pt too wide) in paragraph at lines 180--184
+Overfull \hbox (52.60461pt too wide) in paragraph at lines 179--183
 \T1/ppl/m/n/12 erst wird die Kom-po-nen-te ge-nannt und an-schlie-ÿend die Stan
 dard-Interaktionstypen) 
  []
@@ -1610,12 +1610,19 @@ See the babel package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.39 \selectlanguage{\English}
+l.45 \selectlanguage{\English}
                               
 Your command will be ignored, type <return> to proceed
 
+
+Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
+less on input line 52.
+
+[16
+
+]
 ! Misplaced alignment tab character &.
-l.54 \newblock John Wiley &
+l.60 \newblock John Wiley &
                             Sons, New York, 2007.
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -1625,35 +1632,29 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 
-Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
-less on input line 55.
-
-[16
-
-]
-Underfull \hbox (badness 6445) in paragraph at lines 72--78
+Underfull \hbox (badness 6445) in paragraph at lines 78--84
 [][]\T1/ppl/m/sc/12 Hofer, Ste-fan Mi-cha-el\T1/ppl/m/n/12 : \T1/ppl/m/it/12 Re
 factoring-Muster der WAM-
  []
 
 
-Underfull \hbox (badness 2556) in paragraph at lines 72--78
+Underfull \hbox (badness 2556) in paragraph at lines 78--84
 \T1/ppl/m/it/12 Modellarchitektur\T1/ppl/m/n/12 .  Di-plom-ar-beit, FH Ober-öst
 er-reich, 2006.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 72--78
+Underfull \hbox (badness 10000) in paragraph at lines 78--84
 \T1/ppl/m/n/12 On-li-ne ver-füg-bar URL:http://swt-www.informatik.uni-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 72--78
+Underfull \hbox (badness 10000) in paragraph at lines 78--84
 \T1/ppl/m/n/12 hamburg.de/uploads/media/DA_StefanHofer.pdf . Zu-letzt
  []
 
 ! Misplaced alignment tab character &.
-l.93 \newblock John Wiley &
+l.99 \newblock John Wiley &
                             Sons Ltd, Februar 2006.
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -1662,148 +1663,148 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 108--112
+[17]
+Underfull \hbox (badness 10000) in paragraph at lines 114--118
 [][]\T1/ppl/m/sc/12 Oracle\T1/ppl/m/n/12 : \T1/ppl/m/it/12 Class Grid-BagLay-ou
 t\T1/ppl/m/n/12 .  URL: htt-
  []
 
-[17]
-Underfull \hbox (badness 10000) in paragraph at lines 120--125
+
+Underfull \hbox (badness 10000) in paragraph at lines 126--131
 [][]\T1/ppl/m/sc/12 Pech, Vaclav\T1/ppl/m/n/12 : \T1/ppl/m/it/12 Can MPS be in-
 te-gra-ted in
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 120--125
+Underfull \hbox (badness 10000) in paragraph at lines 126--131
 \T1/ppl/m/it/12 Eclip-se as Eclip-se Plu-gin si-mi-lar to Xtext?
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 120--125
+Underfull \hbox (badness 10000) in paragraph at lines 126--131
 \T1/ppl/m/n/12 URL:http://forum.jetbrains.com/thread/Meta-Programming-
  []
 
 
-Underfull \hbox (badness 1173) in paragraph at lines 134--142
+Underfull \hbox (badness 1173) in paragraph at lines 140--148
 \T1/ppl/m/sc/12 Os-car Nier-strasz\T1/ppl/m/n/12 : \T1/ppl/m/it/12 Prac-ti-cal 
 Dy-na-mic Gram-mars for Dy-na-
  []
 
 
-Overfull \hbox (13.13264pt too wide) in paragraph at lines 134--142
+Overfull \hbox (13.13264pt too wide) in paragraph at lines 140--148
 \T1/ppl/m/n/12 http://bergel.eu/download/Dyla2010/dyla10_submission_4.pdf
  []
 
 
-Underfull \hbox (badness 2126) in paragraph at lines 149--155
+Underfull \hbox (badness 2126) in paragraph at lines 155--161
 [][]\T1/ppl/m/sc/12 Sauer, Joa-chim\T1/ppl/m/n/12 : \T1/ppl/m/it/12 Ar-chi-tek-
 tur-zen-trier-te agi-le An-wen-dungs-ent-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 149--155
+Underfull \hbox (badness 10000) in paragraph at lines 155--161
 \T1/ppl/m/n/12 hamburg.de/volltexte/2011/4959/pdf/Dissertation_Sauer.pdf
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 162--167
+[18]
+Underfull \hbox (badness 10000) in paragraph at lines 163--168
 [][]\T1/ppl/m/sc/12 Schmelzer, Ro-bert Franz\T1/ppl/m/n/12 : \T1/ppl/m/it/12 Re
 a-li-sie-rung teil-au-to-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 162--167
+Underfull \hbox (badness 10000) in paragraph at lines 163--168
 \T1/ppl/m/it/12 ma-ti-sier-ter Pro-zes-se durch die Kom-bi-na-ti-on von Ab-lauf
 -
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 162--167
+Underfull \hbox (badness 10000) in paragraph at lines 163--168
 \T1/ppl/m/it/12 steue-rung und un-ter-stütz-ter Ko-ope-ra-ti-on\T1/ppl/m/n/12 .
   Di-plom-ar-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 162--167
+Underfull \hbox (badness 10000) in paragraph at lines 163--168
 \T1/ppl/m/n/12 beit, FH Ober-öster-reich, 2005.  On-li-ne ver-füg-bar
  []
 
 
-Underfull \hbox (badness 1694) in paragraph at lines 162--167
+Underfull \hbox (badness 1694) in paragraph at lines 163--168
 \T1/ppl/m/n/12 URL:http://www.schmelzer.cc/Downloads/Files/ Di-plom-ar-
  []
 
-[18]
-Underfull \hbox (badness 10000) in paragraph at lines 169--177
+
+Underfull \hbox (badness 10000) in paragraph at lines 170--178
 [][]\T1/ppl/m/sc/12 Sauer, Joa-chim \T1/ppl/m/n/12 und \T1/ppl/m/sc/12 Aus-ge-w
 ähl-te The-men der
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 169--177
+Underfull \hbox (badness 10000) in paragraph at lines 170--178
 \T1/ppl/m/sc/12 Soft-wa-re-tech-nik\T1/ppl/m/n/12 : \T1/ppl/m/it/12 Ge-stal-tun
 g von An-wen-dungs-soft-wa-re
  []
 
 
-Underfull \hbox (badness 5050) in paragraph at lines 169--177
+Underfull \hbox (badness 5050) in paragraph at lines 170--178
 \T1/ppl/m/it/12 nach dem WAM-Ansatz auf mo-bi-len Ge-rä-ten\T1/ppl/m/n/12 .  Di
 -plom-ar-
  []
 
 
-Underfull \hbox (badness 5231) in paragraph at lines 169--177
+Underfull \hbox (badness 5231) in paragraph at lines 170--178
 \T1/ppl/m/n/12 beit, Fach-be-reich In-for-ma-tik, Uni-ver-si-tät Ham-burg, 2003
 .
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 169--177
+Underfull \hbox (badness 10000) in paragraph at lines 170--178
 \T1/ppl/m/n/12 On-li-ne ver-füg-bar URL:http://swt-www.informatik.uni-
  []
 
 
-Overfull \hbox (3.36446pt too wide) in paragraph at lines 169--177
+Overfull \hbox (3.36446pt too wide) in paragraph at lines 170--178
 \T1/ppl/m/n/12 hamburg.de/uploads/media/Diplomarbeit_Joachim_Sauer.pdf
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 179--185
+Underfull \hbox (badness 10000) in paragraph at lines 180--186
 [][]\T1/ppl/m/sc/12 Sukaviriya, Noi\T1/ppl/m/n/12 , \T1/ppl/m/sc/12 San-thosh K
 u-ma-ran\T1/ppl/m/n/12 , \T1/ppl/m/sc/12 Pra-b-ir
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 179--185
+Underfull \hbox (badness 10000) in paragraph at lines 180--186
 \T1/ppl/m/sc/12 Nan-di \T1/ppl/m/n/12 und \T1/ppl/m/sc/12 Ter-ry Heath\T1/ppl/m
 /n/12 : \T1/ppl/m/it/12 In-te-gra-te Model-driven UI
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 179--185
+Underfull \hbox (badness 10000) in paragraph at lines 180--186
 \T1/ppl/m/it/12 with Busi-ness Trans-for-ma-ti-ons: Shif-ting Fo-cus of Model-
  []
 
 
-Underfull \hbox (badness 6445) in paragraph at lines 179--185
+Underfull \hbox (badness 6445) in paragraph at lines 180--186
 \T1/ppl/m/it/12 driven UI\T1/ppl/m/n/12 .  Tech-ni-scher Be-richt, IBM T.J. Wat
 -son Re-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 179--185
+Underfull \hbox (badness 10000) in paragraph at lines 180--186
 \T1/ppl/m/n/12 se-arch Cen-ter, Ok-to-ber 2005.  Ver-fü-gar un-ter URL:
  []
 
 
-Overfull \hbox (10.85233pt too wide) in paragraph at lines 179--185
+Overfull \hbox (10.85233pt too wide) in paragraph at lines 180--186
 \T1/ppl/m/n/12 http://www.research.ibm.com/people/p/prabir/MDDAUI.pdf. 
  []
 
-)
+[19])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 49.
- [19]
+ [20]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 49.
  (C:\Users\ngundermann\git\BA\thesis\BA\ba.aux
 (C:\Users\ngundermann\git\BA\thesis\BA\titlepage.aux)
@@ -1825,7 +1826,7 @@ See the babel package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.61 \select@language{English}
+l.60 \select@language{English}
                               
 Your command will be ignored, type <return> to proceed
 
@@ -1841,9 +1842,9 @@ LaTeX Warning: There were undefined references.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 49.
  ) 
 Here is how much of TeX's memory you used:
- 14417 strings out of 493921
- 213422 string characters out of 3150471
- 423303 words of memory out of 3000000
+ 14418 strings out of 493921
+ 213429 string characters out of 3150471
+ 423301 words of memory out of 3000000
  16792 multiletter control sequences out of 15000+200000
  61518 words of font info for 77 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
@@ -1902,9 +1903,9 @@ lm/lmsy10.pfb><D:/Program Files/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><D:/Prog
 ram Files/MiKTeX/fonts/type1/urw/palatino/uplb8a.pfb><D:/Program Files/MiKTeX/f
 onts/type1/urw/palatino/uplr8a.pfb><D:/Program Files/MiKTeX/fonts/type1/urw/pal
 atino/uplr8a.pfb><D:/Program Files/MiKTeX/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on ba.pdf (83 pages, 3138256 bytes).
+Output written on ba.pdf (84 pages, 3091719 bytes).
 PDF statistics:
- 1465 PDF objects out of 1728 (max. 8388607)
- 498 named destinations out of 1000 (max. 500000)
+ 1470 PDF objects out of 1728 (max. 8388607)
+ 499 named destinations out of 1000 (max. 500000)
  503 words of extra memory for PDF output out of 10000 (max. 10000000)
 
