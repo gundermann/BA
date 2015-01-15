@@ -42,12 +42,13 @@
 \contentsline {chapter}{\numberline {8}Entwicklung einer DSL zur Beschreibung der GUI in profil c/s}{51}{chapter.8}
 \contentsline {section}{\numberline {8.1}1. Iteration}{51}{section.8.1}
 \contentsline {section}{\numberline {8.2}2. Iteration}{56}{section.8.2}
-\contentsline {chapter}{\numberline {9}Entwicklung des Generators f\"ur das Generieren von Klassen f\"ur das Multichannel-Framework}{66}{chapter.9}
-\contentsline {section}{\numberline {9.1}Syntax und Semantik f\"ur die Beschreibung der GUIs im Multichannel-Framework }{66}{section.9.1}
-\contentsline {section}{\numberline {9.2}Umsetzung des frameworkspezifischen Generators}{66}{section.9.2}
-\contentsline {chapter}{\numberline {10}Zusammenfassung und Ausblick}{67}{chapter.10}
-\contentsline {chapter}{Anhang}{xi}{appendix*.19}
+\contentsline {section}{\numberline {8.3}3. Iteration}{65}{section.8.3}
+\contentsline {chapter}{\numberline {9}Entwicklung des Generators f\"ur das Generieren von Klassen f\"ur das Multichannel-Framework}{68}{chapter.9}
+\contentsline {section}{\numberline {9.1}Syntax und Semantik f\"ur die Beschreibung der GUIs im Multichannel-Framework }{68}{section.9.1}
+\contentsline {section}{\numberline {9.2}Umsetzung des frameworkspezifischen Generators}{68}{section.9.2}
+\contentsline {chapter}{\numberline {10}Zusammenfassung und Ausblick}{69}{chapter.10}
+\contentsline {chapter}{Anhang}{xi}{appendix*.22}
 \contentsline {chapter}{Glossar}{xv}{lstnumber.-7.79}
-\contentsline {chapter}{Literaturverzeichnis}{xv}{appendix*.24}
+\contentsline {chapter}{Literaturverzeichnis}{xv}{appendix*.27}
 \select@language {English}
 \select@language {german}
