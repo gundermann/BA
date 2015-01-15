@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.10.14)  15 JAN 2015 09:56
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.10.14)  15 JAN 2015 10:17
 entering extended mode
 **ba.tex
 (C:\Users\ngundermann\git\BA\thesis\BA\ba.tex
@@ -1289,27 +1289,39 @@ less on input line 22.
 
 
 
-] [44 <C:/Users/ngundermann/git/BA/thesis/BA/Bilder/inkrement.jpg>]
-<Bilder/konzept_1.jpg, id=888, 459.21562pt x 221.32687pt>
+]
+Overfull \hbox (3.2416pt too wide) in paragraph at lines 22--35
+\T1/ppl/m/n/12 nen. Wei-ter-hin kön-nen An-for-de-run-gen fle-xi-bel an-ge-pass
+t und Missver-ständ-
+ []
+
+[44 <C:/Users/ngundermann/git/BA/thesis/BA/Bilder/inkrement.jpg>]
+<Bilder/konzept_1.jpg, id=888, 438.13687pt x 298.86656pt>
 File: Bilder/konzept_1.jpg Graphic file (type jpg)
 
 <use Bilder/konzept_1.jpg>
 Package pdftex.def Info: Bilder/konzept_1.jpg used on input line 60.
-(pdftex.def)             Requested size: 398.3386pt x 191.99557pt.
+(pdftex.def)             Requested size: 398.3386pt x 271.72272pt.
 
 <Bilder/suchfeld.jpg, id=891, 583.42969pt x 56.46094pt>
 File: Bilder/suchfeld.jpg Graphic file (type jpg)
 
 <use Bilder/suchfeld.jpg>
-Package pdftex.def Info: Bilder/suchfeld.jpg used on input line 84.
+Package pdftex.def Info: Bilder/suchfeld.jpg used on input line 85.
 (pdftex.def)             Requested size: 398.3386pt x 38.54971pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 61--84
+Overfull \hbox (49.12514pt too wide) in paragraph at lines 61--85
+\T1/ppl/m/n/12 der sich aus die-ser star-ken Mo-du-la-ri-sie-rung er-gibt, ist 
+dass vie-le GUI-Beschreibungen
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 61--85
 
  []
 
 
-Overfull \hbox (9.07297pt too wide) in paragraph at lines 61--84
+Overfull \hbox (9.07297pt too wide) in paragraph at lines 61--85
 \T1/ppl/m/n/12 lie-big wie-der-ver-wen-det und kom-bi-niert wer-den. Hier-zu we
 r-den un-ter-schied-
  []
@@ -1321,15 +1333,15 @@ File: Bilder/suchmaske.jpg Graphic file (type jpg)
 <use Bilder/suchmaske.jpg>
 Package pdftex.def Info: Bilder/suchmaske.jpg used on input line 89.
 (pdftex.def)             Requested size: 398.3386pt x 119.96602pt.
-
+ [46 <C:/Users/ngundermann/git/BA/thesis/BA/Bilder/suchfeld.jpg>]
 Underfull \hbox (badness 10000) in paragraph at lines 90--114
 
  []
 
 
-Overfull \hbox (18.00865pt too wide) in paragraph at lines 90--114
-\T1/ppl/m/n/12 Um die mit-ein-an-der kom-po-nier-ten GUI-Beschreibungen und UI-
-Komponenten
+Overfull \hbox (0.51363pt too wide) in paragraph at lines 90--114
+\T1/ppl/m/n/12 ab-strakt sein, da-mit sich die-se Struk-tur auf un-ter-schied-l
+i-che UI-Frameworks
  []
 
 
@@ -1338,41 +1350,63 @@ Overfull \hbox (6.98083pt too wide) in paragraph at lines 90--114
 ig von der Be-schrei-
  []
 
-[46 <C:/Users/ngundermann/git/BA/thesis/BA/Bilder/suchfeld.jpg> <C:/Users/ngund
-ermann/git/BA/thesis/BA/Bilder/suchmaske.jpg>]
-<Bilder/konzept_2.jpg, id=905, 603.75563pt x 421.575pt>
+<Bilder/konzept_2.jpg, id=905, 612.78937pt x 385.44pt>
 File: Bilder/konzept_2.jpg Graphic file (type jpg)
 
 <use Bilder/konzept_2.jpg>
 Package pdftex.def Info: Bilder/konzept_2.jpg used on input line 119.
-(pdftex.def)             Requested size: 398.3386pt x 278.13742pt.
- [47]
-Overfull \hbox (46.102pt too wide) in paragraph at lines 120--141
+(pdftex.def)             Requested size: 398.3386pt x 250.55067pt.
+ [47 <C:/Users/ngundermann/git/BA/thesis/BA/Bilder/suchmaske.jpg>]
+Overfull \hbox (46.102pt too wide) in paragraph at lines 120--140
 \T1/ppl/m/n/12 Eine wei-te-re Än-de-rung ist, dass die UI-Komponenten, die ei-n
 er GUI-Beschreibungen
  []
 
+
+Overfull \hbox (33.85031pt too wide) in paragraph at lines 120--140
+\T1/ppl/m/n/12 di-rekt de-fi-niert wer-den, in ei-ner an-de-ren Be-schrei-bung,
+ wo je-ne GUI-Beschreibung
+ []
+
+
+Overfull \hbox (0.11372pt too wide) in paragraph at lines 120--140
+\T1/ppl/m/n/12 aus-zu-la-gern. Da-druch wird die GUI-Beschreibung weit-ge-hend 
+ent-la-stet. Al-
+ []
+
+
+Overfull \hbox (12.22505pt too wide) in paragraph at lines 120--140
+\T1/ppl/m/n/12 ler-dings muss für die Zu-wei-sung von UI-Komponenten zu Wert-Be
+schreibung
+ []
+
+
+Overfull \hbox (5.26535pt too wide) in paragraph at lines 120--140
+\T1/ppl/m/n/12 Fest-le-gung, dass wenn in der GUI-Beschreibung ei-nem At-tri-bu
+t ein be-stimm-
+ []
+
 [48 <C:/Users/ngundermann/git/BA/thesis/BA/Bilder/konzept_2.jpg>]
-<Bilder/konzept_3.jpg, id=916, 720.44156pt x 386.94562pt>
+<Bilder/konzept_3.jpg, id=916, 723.45282pt x 386.19281pt>
 File: Bilder/konzept_3.jpg Graphic file (type jpg)
 
 <use Bilder/konzept_3.jpg>
-Package pdftex.def Info: Bilder/konzept_3.jpg used on input line 151.
-(pdftex.def)             Requested size: 398.3386pt x 213.94257pt.
+Package pdftex.def Info: Bilder/konzept_3.jpg used on input line 150.
+(pdftex.def)             Requested size: 398.3386pt x 212.6424pt.
 
-Overfull \hbox (5.49387pt too wide) in paragraph at lines 152--171
+Overfull \hbox (5.49387pt too wide) in paragraph at lines 151--170
 []\T1/ppl/m/n/12 Da die Layout-Beschreibung in ei-ne se-pa-ra-te Da-tei au-ge-g
 lie-dert wur-de, muss
  []
 
 
-Overfull \hbox (39.57272pt too wide) in paragraph at lines 152--171
+Overfull \hbox (39.57272pt too wide) in paragraph at lines 151--170
 \T1/ppl/m/n/12 die Re-fe-ren-zie-rung von UI-Komponenten und Be-rei-chen aus de
 r GUI-Beschreibung
  []
 
 [49 <C:/Users/ngundermann/git/BA/thesis/BA/Bilder/konzept_3.jpg>]
-Overfull \hbox (52.60461pt too wide) in paragraph at lines 181--185
+Overfull \hbox (52.60461pt too wide) in paragraph at lines 180--184
 \T1/ppl/m/n/12 erst wird die Kom-po-nen-te ge-nannt und an-schlie-ÿend die Stan
 dard-Interaktionstypen) 
  []
@@ -1799,7 +1833,7 @@ Your command will be ignored, type <return> to proceed
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 49.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 49.
 Package rerunfilecheck Info: File `ba.out' has not changed.
-(rerunfilecheck)             Checksum: F2C4A68E91FF444CB00DE0D216A87DD6;3679.
+(rerunfilecheck)             Checksum: C89A3EDCBB602726930C2AF94D39D1CD;3680.
 
 
 LaTeX Warning: There were undefined references.
@@ -1809,7 +1843,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 49.
 Here is how much of TeX's memory you used:
  14417 strings out of 493921
  213422 string characters out of 3150471
- 423302 words of memory out of 3000000
+ 423303 words of memory out of 3000000
  16792 multiletter control sequences out of 15000+200000
  61518 words of font info for 77 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
@@ -1868,7 +1902,7 @@ lm/lmsy10.pfb><D:/Program Files/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><D:/Prog
 ram Files/MiKTeX/fonts/type1/urw/palatino/uplb8a.pfb><D:/Program Files/MiKTeX/f
 onts/type1/urw/palatino/uplr8a.pfb><D:/Program Files/MiKTeX/fonts/type1/urw/pal
 atino/uplr8a.pfb><D:/Program Files/MiKTeX/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on ba.pdf (83 pages, 3124829 bytes).
+Output written on ba.pdf (83 pages, 3138256 bytes).
 PDF statistics:
  1465 PDF objects out of 1728 (max. 8388607)
  498 named destinations out of 1000 (max. 500000)
