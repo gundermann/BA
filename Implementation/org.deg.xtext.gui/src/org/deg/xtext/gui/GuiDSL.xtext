@@ -52,10 +52,10 @@ UIDescriptionImport:
 	descriptionName=(STRING);
 
 ComplexComponent:
-	Multiselection | TabView;
+	Multiselection;
 
-TabView:
-	name='TabView' tabs+=(TabDefinition)*;
+TabViewDefinition:
+	name='TabView' tabs+=(TabDefinition)* 'as:' id=STRING;
 
 TabDefinition:
 	name=TABNAME;
@@ -70,7 +70,32 @@ terminal INPUT_DESCRIPTION:
 	'<' ('\\' . /* 'b'|'t'|'n'|'f'|'r'|'u'|'"'|"'"|'\\' */ | !('<' | '>'))* '>';
 
 ComponentDefinition:
-	LabelDefinition | ButtonDefinition;
+	LabelDefinition | ButtonDefinition | TextfieldDefinition | TextareaDefinition | TreeDefinition | TableDefinition | TabViewDefinition | InterchangeableDefinition;
+
+TextfieldDefinition:
+	name='Textfield' 'as:' id=STRING
+	properties=(Properties)?
+;
+
+TextareaDefinition:
+	name='Textarea' 'as:' id=STRING
+	properties=(Properties)?
+;
+
+TreeDefinition:
+	name='Tree' 'as:' id=STRING
+	properties=(Properties)?
+;
+
+TableDefinition:
+	name='Table' 'as:' id=STRING
+	properties=(Properties)?
+;
+
+InterchangeableDefinition:
+	name='Interchangeable Area' 'as:' id=STRING
+	properties=(Properties)?
+;
 
 ButtonDefinition:
 	name='Button' 'as:' id=STRING
@@ -89,7 +114,7 @@ LabelDefinition:
 	properties=(Properties)?;
 
 Interactiontype:
-	id=('Click' | 'ChangeText');
+	id=('IfActivator' | 'IfTextDisplay');
 
 terminal WS:
 	(' ' | '\t' | '\r' | '\n' | ',')+;

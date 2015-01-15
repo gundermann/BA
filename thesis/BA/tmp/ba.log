@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.10.14)  13 JAN 2015 14:05
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.10.14)  15 JAN 2015 09:56
 entering extended mode
 **ba.tex
 (C:\Users\ngundermann\git\BA\thesis\BA\ba.tex
@@ -1226,43 +1226,49 @@ e-xen UI-Komponenten
 [36]) [37] (C:\Users\ngundermann\git\BA\thesis\BA\Framework.tex
 Kapitel 6.
 
-Overfull \hbox (8.70186pt too wide) in paragraph at lines 8--30
-\T1/ppl/m/n/12 ma-tik auf-zu-decken. Dar-über-hin-aus wird die Ef-fi-zi-ens ei-
-ner Gram-ma-tik durch
- []
-
-
 Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
-less on input line 30.
+less on input line 31.
 
 [38
 
 
 
 ]
-Overfull \hbox (4.71686pt too wide) in paragraph at lines 31--46
+Overfull \hbox (4.71686pt too wide) in paragraph at lines 32--47
 \T1/ppl/m/n/12 den in der EB-NF de-fi-niert. Durch die In-ter-gra-ti-on in Ecli
 p-se kann der Eclipse-
  []
 
 
-Overfull \hbox (4.40086pt too wide) in paragraph at lines 47--67
-[]\T1/ppl/m/n/12 Im Me-ta Pro-gram-ming Sy-stem (MPS) ist eben-falls ei-ne Open
--Source-Lösung,
+Overfull \hbox (0.8491pt too wide) in paragraph at lines 32--47
+\T1/ppl/m/n/12 Validierungs-Reglen und den Ge-ne-ra-tor wer-den eben-falls vom 
+Tool er-zeugt.
+ []
+
+
+Overfull \hbox (10.13689pt too wide) in paragraph at lines 48--68
+[]\T1/ppl/m/n/12 Das Me-ta Pro-gram-ming Sy-stem (MPS) ist eben-falls ei-ne Ope
+n-Source-Lösung,
  []
 
 [39]
-Overfull \hbox (9.25923pt too wide) in paragraph at lines 69--69
+Overfull \hbox (9.25923pt too wide) in paragraph at lines 70--70
 []\T1/ppl/b/n/17.28 Vergleich und Be-wer-tung der vor-ge-stell-ten Fra-
  []
 
 
-Overfull \hbox (2.74963pt too wide) in paragraph at lines 80--84
+Overfull \hbox (2.74963pt too wide) in paragraph at lines 81--85
 \T1/ppl/m/n/12 ab-ge-schlos-se-nes Kon-zept ist. Es ist da-von aus-zu-ge-hen, d
 ass neue Kom-
  []
 
-[40]) [41] [42] (C:\Users\ngundermann\git\BA\thesis\BA\Grobkonzept.tex
+[40])
+Overfull \hbox (2.06895pt too wide) in paragraph at lines 134--25
+\T1/ppl/m/n/12 hat bzgl. Pe-tit-Par-ser und MPS kei-ne Er-fah-run-gen. Die Er-f
+ah-run-gen mit Xtext
+ []
+
+[41] [42] (C:\Users\ngundermann\git\BA\thesis\BA\Grobkonzept.tex
 Kapitel 7.
 <Bilder/inkrement.jpg, id=867, 629.35126pt x 553.31718pt>
 File: Bilder/inkrement.jpg Graphic file (type jpg)
@@ -1366,9 +1372,9 @@ r GUI-Beschreibung
  []
 
 [49 <C:/Users/ngundermann/git/BA/thesis/BA/Bilder/konzept_3.jpg>]
-Overfull \hbox (71.84035pt too wide) in paragraph at lines 181--185
-\T1/ppl/m/n/12 (Zu-erst wird die Kom-po-nen-te ge-nannt und an-schlie-ÿend die 
-Standard-Interaktionstypen) 
+Overfull \hbox (52.60461pt too wide) in paragraph at lines 181--185
+\T1/ppl/m/n/12 erst wird die Kom-po-nen-te ge-nannt und an-schlie-ÿend die Stan
+dard-Interaktionstypen) 
  []
 
 ) [50] (C:\Users\ngundermann\git\BA\thesis\BA\EntwerfenDSL.tex
@@ -1862,7 +1868,7 @@ lm/lmsy10.pfb><D:/Program Files/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><D:/Prog
 ram Files/MiKTeX/fonts/type1/urw/palatino/uplb8a.pfb><D:/Program Files/MiKTeX/f
 onts/type1/urw/palatino/uplr8a.pfb><D:/Program Files/MiKTeX/fonts/type1/urw/pal
 atino/uplr8a.pfb><D:/Program Files/MiKTeX/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on ba.pdf (83 pages, 3124758 bytes).
+Output written on ba.pdf (83 pages, 3124829 bytes).
 PDF statistics:
  1465 PDF objects out of 1728 (max. 8388607)
  498 named destinations out of 1000 (max. 500000)
