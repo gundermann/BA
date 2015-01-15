@@ -5,10 +5,14 @@ generate guiDSL "http://www.deg.org/xtext/gui/GuiDSL"
 UIDescription:
 	typeDefinition=(TypeDefinition)
 	(property=(Property))?
+	(layout=(Layout))?
 	usedDescriptions+=(UsedDescriptions)*
 	refinements+=(Refinement)*
 	definitions+=(Definition)*
 	structure=Structure;
+
+Layout:
+	'get layout from:' layoutFiles+=(STRING)+ ';';
 
 Structure:
 	name="Structure" ":" orderedElements+=(Element)* ';';
@@ -20,18 +24,42 @@ Refinement:
 	concreteRefinement=ComponentRefinement ';';
 
 ComponentRefinement:
-	LabelRefinement | ButtonRefinement;
+	LabelRefinement | ButtonRefinement | TextfieldRefinement | TextareaRefinement | TableRefinement | TabViewRefinement |
+	TreeRefinement | InterchangeableRefinement;
+
+TableRefinement:
+name='Table' (inputType=INPUT_DESCRIPTION)? 'from:' id=STRING
+	(properties=(CommonProperties))?;
+TabViewRefinement:
+	name='TabView' (tabs+=(TabDefinition)+)? 'from:' id=STRING
+	(properties=(CommonProperties))?;
+
+TreeRefinement:
+	name='Tree' (inputType=INPUT_DESCRIPTION)? 'from:' id=STRING
+	(properties=(CommonProperties))?;
+
+InterchangeableRefinement:
+	name='Interchangeable' 'from:' id=STRING
+	(properties=(CommonProperties))?;
+
+TextareaRefinement:
+	name='Textarea' 'from:' id=STRING
+	(properties=(TextareaProperties))?;
+
+TextfieldRefinement:
+	name='Textfield' 'from:' id=STRING
+	(properties=(TextfieldProperties))?;
 
 ButtonRefinement:
 	name='Button' 'from:' id=STRING
-	properties=(Properties)?;
+	(properties=(ButtonProperties))?;
 
 LabelRefinement:
 	name='Label' 'from:' id=STRING
-	properties=(Properties)?;
+	(properties=(LabelProperties))?;
 
 Property:
-	'get properties from:' propertiesFile=STRING ';';
+	'get properties from:' propertiesFiles+=(STRING)+ ';';
 
 UsedDescriptions:
 	'use:' description=DescriptionType ('as:' id=STRING)? ';';
@@ -55,66 +83,82 @@ ComplexComponent:
 	Multiselection;
 
 TabViewDefinition:
-	name='TabView' tabs+=(TabDefinition)* 'as:' id=STRING;
+	name='TabView' tabs+=(TabDefinition)* 'as:' id=STRING
+	('->' properties=(CommonProperties))?;
 
 TabDefinition:
 	name=TABNAME;
 
-terminal TABNAME:
-	'[' ('\\' . /* 'b'|'t'|'n'|'f'|'r'|'u'|'"'|"'"|'\\' */ | !('[' | ']'))* ']';
-
 Multiselection:
 	name='Multiselection' (inputType=INPUT_DESCRIPTION)?;
 
-terminal INPUT_DESCRIPTION:
-	'<' ('\\' . /* 'b'|'t'|'n'|'f'|'r'|'u'|'"'|"'"|'\\' */ | !('<' | '>'))* '>';
-
 ComponentDefinition:
-	LabelDefinition | ButtonDefinition | TextfieldDefinition | TextareaDefinition | TreeDefinition | TableDefinition | TabViewDefinition | InterchangeableDefinition;
+	LabelDefinition | ButtonDefinition | TextfieldDefinition | TextareaDefinition | TreeDefinition | TableDefinition |
+	TabViewDefinition | InterchangeableDefinition;
 
 TextfieldDefinition:
 	name='Textfield' 'as:' id=STRING
-	properties=(Properties)?
-;
+	(properties=(TextfieldProperties))?;
+
+TextfieldProperties:
+	commonProperties=CommonProperties
+	('text=' text=STRING)?
+	('editable=' editable=BOOLEAN)?;
 
 TextareaDefinition:
 	name='Textarea' 'as:' id=STRING
-	properties=(Properties)?
-;
+	(properties=(TextareaProperties))?;
+
+TextareaProperties:
+	commonProperties=CommonProperties
+	('text=' text=STRING)?
+	('editable=' editable=BOOLEAN)?;
 
 TreeDefinition:
-	name='Tree' 'as:' id=STRING
-	properties=(Properties)?
-;
+	name='Tree' inputType=INPUT_DESCRIPTION 'as:' id=STRING
+	(properties=(CommonProperties))?;
 
 TableDefinition:
-	name='Table' 'as:' id=STRING
-	properties=(Properties)?
-;
+	name='Table' inputType=INPUT_DESCRIPTION 'as:' id=STRING
+	(properties=(CommonProperties))?;
 
 InterchangeableDefinition:
 	name='Interchangeable Area' 'as:' id=STRING
-	properties=(Properties)?
-;
+	(properties=(CommonProperties))?;
 
 ButtonDefinition:
 	name='Button' 'as:' id=STRING
-	properties=(Properties)?;
+	(properties=ButtonProperties)?;
 
-Properties:
-	'->' propertiesDefinitions+=(PropertiesDefinition)+;
+ButtonProperties:
+	commonProperties=CommonProperties
+	('text=' text=STRING)?;
 
-PropertiesDefinition:
-	('propertyKey=' propertyKey=STRING) |
-	('text=' text=STRING) |
-	('interactiontype=' interactiontype+=(Interactiontype)+);
+CommonProperties:
+	'->'
+	('propertyKey' '=' propertyKey=STRING)?
+	('layoutKey' '=' layoutKey=STRING)?
+	('interactiontype' '=' interactiontype+=(Interactiontype)+)?;
 
 LabelDefinition:
 	name='Label' 'as' id=STRING
-	properties=(Properties)?;
+	(properties=(LabelProperties))?;
+
+LabelProperties:
+	commonProperties=CommonProperties
+	('text=' text=STRING name='LabelProperty')?;
 
 Interactiontype:
 	id=('IfActivator' | 'IfTextDisplay');
 
 terminal WS:
 	(' ' | '\t' | '\r' | '\n' | ',')+;
+
+terminal TABNAME:
+	'[' ('\\' . /* 'b'|'t'|'n'|'f'|'r'|'u'|'"'|"'"|'\\' */ | !('[' | ']'))* ']';
+
+terminal INPUT_DESCRIPTION:
+	'<' ('\\' . /* 'b'|'t'|'n'|'f'|'r'|'u'|'"'|"'"|'\\' */ | !('<' | '>'))* '>';
+
+terminal BOOLEAN:
+	'TRUE' | 'FALSE';

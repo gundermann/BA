@@ -2,9 +2,9 @@
  */
 package org.deg.xtext.gui.guiDSL.impl;
 
-import org.deg.xtext.gui.guiDSL.ButtonProperties;
-import org.deg.xtext.gui.guiDSL.ButtonRefinement;
+import org.deg.xtext.gui.guiDSL.CommonProperties;
 import org.deg.xtext.gui.guiDSL.GuiDSLPackage;
+import org.deg.xtext.gui.guiDSL.InterchangeableDefinition;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -16,18 +16,18 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Button Refinement</b></em>'.
+ * An implementation of the model object '<em><b>Interchangeable Definition</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.deg.xtext.gui.guiDSL.impl.ButtonRefinementImpl#getProperties <em>Properties</em>}</li>
+ *   <li>{@link org.deg.xtext.gui.guiDSL.impl.InterchangeableDefinitionImpl#getProperties <em>Properties</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class ButtonRefinementImpl extends ComponentRefinementImpl implements ButtonRefinement
+public class InterchangeableDefinitionImpl extends ComponentDefinitionImpl implements InterchangeableDefinition
 {
   /**
    * The cached value of the '{@link #getProperties() <em>Properties</em>}' containment reference.
@@ -37,14 +37,14 @@ public class ButtonRefinementImpl extends ComponentRefinementImpl implements But
    * @generated
    * @ordered
    */
-  protected ButtonProperties properties;
+  protected CommonProperties properties;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected ButtonRefinementImpl()
+  protected InterchangeableDefinitionImpl()
   {
     super();
   }
@@ -57,7 +57,7 @@ public class ButtonRefinementImpl extends ComponentRefinementImpl implements But
   @Override
   protected EClass eStaticClass()
   {
-    return GuiDSLPackage.Literals.BUTTON_REFINEMENT;
+    return GuiDSLPackage.Literals.INTERCHANGEABLE_DEFINITION;
   }
 
   /**
@@ -65,7 +65,7 @@ public class ButtonRefinementImpl extends ComponentRefinementImpl implements But
    * <!-- end-user-doc -->
    * @generated
    */
-  public ButtonProperties getProperties()
+  public CommonProperties getProperties()
   {
     return properties;
   }
@@ -75,13 +75,13 @@ public class ButtonRefinementImpl extends ComponentRefinementImpl implements But
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetProperties(ButtonProperties newProperties, NotificationChain msgs)
+  public NotificationChain basicSetProperties(CommonProperties newProperties, NotificationChain msgs)
   {
-    ButtonProperties oldProperties = properties;
+    CommonProperties oldProperties = properties;
     properties = newProperties;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GuiDSLPackage.BUTTON_REFINEMENT__PROPERTIES, oldProperties, newProperties);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GuiDSLPackage.INTERCHANGEABLE_DEFINITION__PROPERTIES, oldProperties, newProperties);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -92,20 +92,20 @@ public class ButtonRefinementImpl extends ComponentRefinementImpl implements But
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setProperties(ButtonProperties newProperties)
+  public void setProperties(CommonProperties newProperties)
   {
     if (newProperties != properties)
     {
       NotificationChain msgs = null;
       if (properties != null)
-        msgs = ((InternalEObject)properties).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GuiDSLPackage.BUTTON_REFINEMENT__PROPERTIES, null, msgs);
+        msgs = ((InternalEObject)properties).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GuiDSLPackage.INTERCHANGEABLE_DEFINITION__PROPERTIES, null, msgs);
       if (newProperties != null)
-        msgs = ((InternalEObject)newProperties).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GuiDSLPackage.BUTTON_REFINEMENT__PROPERTIES, null, msgs);
+        msgs = ((InternalEObject)newProperties).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GuiDSLPackage.INTERCHANGEABLE_DEFINITION__PROPERTIES, null, msgs);
       msgs = basicSetProperties(newProperties, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, GuiDSLPackage.BUTTON_REFINEMENT__PROPERTIES, newProperties, newProperties));
+      eNotify(new ENotificationImpl(this, Notification.SET, GuiDSLPackage.INTERCHANGEABLE_DEFINITION__PROPERTIES, newProperties, newProperties));
   }
 
   /**
@@ -118,7 +118,7 @@ public class ButtonRefinementImpl extends ComponentRefinementImpl implements But
   {
     switch (featureID)
     {
-      case GuiDSLPackage.BUTTON_REFINEMENT__PROPERTIES:
+      case GuiDSLPackage.INTERCHANGEABLE_DEFINITION__PROPERTIES:
         return basicSetProperties(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -134,7 +134,7 @@ public class ButtonRefinementImpl extends ComponentRefinementImpl implements But
   {
     switch (featureID)
     {
-      case GuiDSLPackage.BUTTON_REFINEMENT__PROPERTIES:
+      case GuiDSLPackage.INTERCHANGEABLE_DEFINITION__PROPERTIES:
         return getProperties();
     }
     return super.eGet(featureID, resolve, coreType);
@@ -150,8 +150,8 @@ public class ButtonRefinementImpl extends ComponentRefinementImpl implements But
   {
     switch (featureID)
     {
-      case GuiDSLPackage.BUTTON_REFINEMENT__PROPERTIES:
-        setProperties((ButtonProperties)newValue);
+      case GuiDSLPackage.INTERCHANGEABLE_DEFINITION__PROPERTIES:
+        setProperties((CommonProperties)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -167,8 +167,8 @@ public class ButtonRefinementImpl extends ComponentRefinementImpl implements But
   {
     switch (featureID)
     {
-      case GuiDSLPackage.BUTTON_REFINEMENT__PROPERTIES:
-        setProperties((ButtonProperties)null);
+      case GuiDSLPackage.INTERCHANGEABLE_DEFINITION__PROPERTIES:
+        setProperties((CommonProperties)null);
         return;
     }
     super.eUnset(featureID);
@@ -184,10 +184,10 @@ public class ButtonRefinementImpl extends ComponentRefinementImpl implements But
   {
     switch (featureID)
     {
-      case GuiDSLPackage.BUTTON_REFINEMENT__PROPERTIES:
+      case GuiDSLPackage.INTERCHANGEABLE_DEFINITION__PROPERTIES:
         return properties != null;
     }
     return super.eIsSet(featureID);
   }
 
-} //ButtonRefinementImpl
+} //InterchangeableDefinitionImpl

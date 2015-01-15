@@ -5,21 +5,21 @@ package org.deg.xtext.gui.guiDSL;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Button Refinement</b></em>'.
+ * A representation of the model object '<em><b>Textfield Definition</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.deg.xtext.gui.guiDSL.ButtonRefinement#getProperties <em>Properties</em>}</li>
+ *   <li>{@link org.deg.xtext.gui.guiDSL.TextfieldDefinition#getProperties <em>Properties</em>}</li>
  * </ul>
  * </p>
  *
- * @see org.deg.xtext.gui.guiDSL.GuiDSLPackage#getButtonRefinement()
+ * @see org.deg.xtext.gui.guiDSL.GuiDSLPackage#getTextfieldDefinition()
  * @model
  * @generated
  */
-public interface ButtonRefinement extends ComponentRefinement
+public interface TextfieldDefinition extends ComponentDefinition
 {
   /**
    * Returns the value of the '<em><b>Properties</b></em>' containment reference.
@@ -30,21 +30,21 @@ public interface ButtonRefinement extends ComponentRefinement
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Properties</em>' containment reference.
-   * @see #setProperties(ButtonProperties)
-   * @see org.deg.xtext.gui.guiDSL.GuiDSLPackage#getButtonRefinement_Properties()
+   * @see #setProperties(TextfieldProperties)
+   * @see org.deg.xtext.gui.guiDSL.GuiDSLPackage#getTextfieldDefinition_Properties()
    * @model containment="true"
    * @generated
    */
-  ButtonProperties getProperties();
+  TextfieldProperties getProperties();
 
   /**
-   * Sets the value of the '{@link org.deg.xtext.gui.guiDSL.ButtonRefinement#getProperties <em>Properties</em>}' containment reference.
+   * Sets the value of the '{@link org.deg.xtext.gui.guiDSL.TextfieldDefinition#getProperties <em>Properties</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Properties</em>' containment reference.
    * @see #getProperties()
    * @generated
    */
-  void setProperties(ButtonProperties value);
+  void setProperties(TextfieldProperties value);
 
-} // ButtonRefinement
+} // TextfieldDefinition

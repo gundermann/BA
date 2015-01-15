@@ -25,22 +25,24 @@ public class GuiDSLGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cTypeDefinitionTypeDefinitionParserRuleCall_0_0 = (RuleCall)cTypeDefinitionAssignment_0.eContents().get(0);
 		private final Assignment cPropertyAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cPropertyPropertyParserRuleCall_1_0 = (RuleCall)cPropertyAssignment_1.eContents().get(0);
-		private final Assignment cUsedDescriptionsAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cUsedDescriptionsUsedDescriptionsParserRuleCall_2_0 = (RuleCall)cUsedDescriptionsAssignment_2.eContents().get(0);
-		private final Assignment cRefinementsAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final RuleCall cRefinementsRefinementParserRuleCall_3_0 = (RuleCall)cRefinementsAssignment_3.eContents().get(0);
-		private final Assignment cDefinitionsAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cDefinitionsDefinitionParserRuleCall_4_0 = (RuleCall)cDefinitionsAssignment_4.eContents().get(0);
-		private final Assignment cStructureAssignment_5 = (Assignment)cGroup.eContents().get(5);
-		private final RuleCall cStructureStructureParserRuleCall_5_0 = (RuleCall)cStructureAssignment_5.eContents().get(0);
+		private final Assignment cLayoutAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cLayoutLayoutParserRuleCall_2_0 = (RuleCall)cLayoutAssignment_2.eContents().get(0);
+		private final Assignment cUsedDescriptionsAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cUsedDescriptionsUsedDescriptionsParserRuleCall_3_0 = (RuleCall)cUsedDescriptionsAssignment_3.eContents().get(0);
+		private final Assignment cRefinementsAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cRefinementsRefinementParserRuleCall_4_0 = (RuleCall)cRefinementsAssignment_4.eContents().get(0);
+		private final Assignment cDefinitionsAssignment_5 = (Assignment)cGroup.eContents().get(5);
+		private final RuleCall cDefinitionsDefinitionParserRuleCall_5_0 = (RuleCall)cDefinitionsAssignment_5.eContents().get(0);
+		private final Assignment cStructureAssignment_6 = (Assignment)cGroup.eContents().get(6);
+		private final RuleCall cStructureStructureParserRuleCall_6_0 = (RuleCall)cStructureAssignment_6.eContents().get(0);
 		
 		//UIDescription:
-		//	typeDefinition=TypeDefinition property=Property? usedDescriptions+=UsedDescriptions* refinements+=Refinement*
-		//	definitions+=Definition* structure=Structure;
+		//	typeDefinition=TypeDefinition property=Property? layout=Layout? usedDescriptions+=UsedDescriptions*
+		//	refinements+=Refinement* definitions+=Definition* structure=Structure;
 		public ParserRule getRule() { return rule; }
 
-		//typeDefinition=TypeDefinition property=Property? usedDescriptions+=UsedDescriptions* refinements+=Refinement*
-		//definitions+=Definition* structure=Structure
+		//typeDefinition=TypeDefinition property=Property? layout=Layout? usedDescriptions+=UsedDescriptions*
+		//refinements+=Refinement* definitions+=Definition* structure=Structure
 		public Group getGroup() { return cGroup; }
 
 		//typeDefinition=TypeDefinition
@@ -55,29 +57,63 @@ public class GuiDSLGrammarAccess extends AbstractGrammarElementFinder {
 		//Property
 		public RuleCall getPropertyPropertyParserRuleCall_1_0() { return cPropertyPropertyParserRuleCall_1_0; }
 
+		//layout=Layout?
+		public Assignment getLayoutAssignment_2() { return cLayoutAssignment_2; }
+
+		//Layout
+		public RuleCall getLayoutLayoutParserRuleCall_2_0() { return cLayoutLayoutParserRuleCall_2_0; }
+
 		//usedDescriptions+=UsedDescriptions*
-		public Assignment getUsedDescriptionsAssignment_2() { return cUsedDescriptionsAssignment_2; }
+		public Assignment getUsedDescriptionsAssignment_3() { return cUsedDescriptionsAssignment_3; }
 
 		//UsedDescriptions
-		public RuleCall getUsedDescriptionsUsedDescriptionsParserRuleCall_2_0() { return cUsedDescriptionsUsedDescriptionsParserRuleCall_2_0; }
+		public RuleCall getUsedDescriptionsUsedDescriptionsParserRuleCall_3_0() { return cUsedDescriptionsUsedDescriptionsParserRuleCall_3_0; }
 
 		//refinements+=Refinement*
-		public Assignment getRefinementsAssignment_3() { return cRefinementsAssignment_3; }
+		public Assignment getRefinementsAssignment_4() { return cRefinementsAssignment_4; }
 
 		//Refinement
-		public RuleCall getRefinementsRefinementParserRuleCall_3_0() { return cRefinementsRefinementParserRuleCall_3_0; }
+		public RuleCall getRefinementsRefinementParserRuleCall_4_0() { return cRefinementsRefinementParserRuleCall_4_0; }
 
 		//definitions+=Definition*
-		public Assignment getDefinitionsAssignment_4() { return cDefinitionsAssignment_4; }
+		public Assignment getDefinitionsAssignment_5() { return cDefinitionsAssignment_5; }
 
 		//Definition
-		public RuleCall getDefinitionsDefinitionParserRuleCall_4_0() { return cDefinitionsDefinitionParserRuleCall_4_0; }
+		public RuleCall getDefinitionsDefinitionParserRuleCall_5_0() { return cDefinitionsDefinitionParserRuleCall_5_0; }
 
 		//structure=Structure
-		public Assignment getStructureAssignment_5() { return cStructureAssignment_5; }
+		public Assignment getStructureAssignment_6() { return cStructureAssignment_6; }
 
 		//Structure
-		public RuleCall getStructureStructureParserRuleCall_5_0() { return cStructureStructureParserRuleCall_5_0; }
+		public RuleCall getStructureStructureParserRuleCall_6_0() { return cStructureStructureParserRuleCall_6_0; }
+	}
+
+	public class LayoutElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Layout");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cGetLayoutFromKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cLayoutFilesAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cLayoutFilesSTRINGTerminalRuleCall_1_0 = (RuleCall)cLayoutFilesAssignment_1.eContents().get(0);
+		private final Keyword cSemicolonKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		
+		//Layout:
+		//	"get layout from:" layoutFiles+=STRING+ ";";
+		public ParserRule getRule() { return rule; }
+
+		//"get layout from:" layoutFiles+=STRING+ ";"
+		public Group getGroup() { return cGroup; }
+
+		//"get layout from:"
+		public Keyword getGetLayoutFromKeyword_0() { return cGetLayoutFromKeyword_0; }
+
+		//layoutFiles+=STRING+
+		public Assignment getLayoutFilesAssignment_1() { return cLayoutFilesAssignment_1; }
+
+		//STRING
+		public RuleCall getLayoutFilesSTRINGTerminalRuleCall_1_0() { return cLayoutFilesSTRINGTerminalRuleCall_1_0; }
+
+		//";"
+		public Keyword getSemicolonKeyword_2() { return cSemicolonKeyword_2; }
 	}
 
 	public class StructureElements extends AbstractParserRuleElementFinder {
@@ -184,14 +220,16 @@ public class GuiDSLGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cFromKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Assignment cIdAssignment_2 = (Assignment)cGroup.eContents().get(2);
 		private final RuleCall cIdSTRINGTerminalRuleCall_2_0 = (RuleCall)cIdAssignment_2.eContents().get(0);
-		private final Assignment cPropertiesAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final RuleCall cPropertiesPropertiesParserRuleCall_3_0 = (RuleCall)cPropertiesAssignment_3.eContents().get(0);
+		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
+		private final Keyword cHyphenMinusGreaterThanSignKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
+		private final Assignment cPropertiesAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
+		private final RuleCall cPropertiesButtonPropertiesParserRuleCall_3_1_0 = (RuleCall)cPropertiesAssignment_3_1.eContents().get(0);
 		
 		//ButtonRefinement:
-		//	name="Button" "from:" id=STRING properties=Properties?;
+		//	name="Button" "from:" id=STRING ("->" properties=ButtonProperties)?;
 		public ParserRule getRule() { return rule; }
 
-		//name="Button" "from:" id=STRING properties=Properties?
+		//name="Button" "from:" id=STRING ("->" properties=ButtonProperties)?
 		public Group getGroup() { return cGroup; }
 
 		//name="Button"
@@ -209,11 +247,17 @@ public class GuiDSLGrammarAccess extends AbstractGrammarElementFinder {
 		//STRING
 		public RuleCall getIdSTRINGTerminalRuleCall_2_0() { return cIdSTRINGTerminalRuleCall_2_0; }
 
-		//properties=Properties?
-		public Assignment getPropertiesAssignment_3() { return cPropertiesAssignment_3; }
+		//("->" properties=ButtonProperties)?
+		public Group getGroup_3() { return cGroup_3; }
 
-		//Properties
-		public RuleCall getPropertiesPropertiesParserRuleCall_3_0() { return cPropertiesPropertiesParserRuleCall_3_0; }
+		//"->"
+		public Keyword getHyphenMinusGreaterThanSignKeyword_3_0() { return cHyphenMinusGreaterThanSignKeyword_3_0; }
+
+		//properties=ButtonProperties
+		public Assignment getPropertiesAssignment_3_1() { return cPropertiesAssignment_3_1; }
+
+		//ButtonProperties
+		public RuleCall getPropertiesButtonPropertiesParserRuleCall_3_1_0() { return cPropertiesButtonPropertiesParserRuleCall_3_1_0; }
 	}
 
 	public class LabelRefinementElements extends AbstractParserRuleElementFinder {
@@ -224,14 +268,16 @@ public class GuiDSLGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cFromKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Assignment cIdAssignment_2 = (Assignment)cGroup.eContents().get(2);
 		private final RuleCall cIdSTRINGTerminalRuleCall_2_0 = (RuleCall)cIdAssignment_2.eContents().get(0);
-		private final Assignment cPropertiesAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final RuleCall cPropertiesPropertiesParserRuleCall_3_0 = (RuleCall)cPropertiesAssignment_3.eContents().get(0);
+		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
+		private final Keyword cHyphenMinusGreaterThanSignKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
+		private final Assignment cPropertiesAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
+		private final RuleCall cPropertiesLabelPropertiesParserRuleCall_3_1_0 = (RuleCall)cPropertiesAssignment_3_1.eContents().get(0);
 		
 		//LabelRefinement:
-		//	name="Label" "from:" id=STRING properties=Properties?;
+		//	name="Label" "from:" id=STRING ("->" properties=LabelProperties)?;
 		public ParserRule getRule() { return rule; }
 
-		//name="Label" "from:" id=STRING properties=Properties?
+		//name="Label" "from:" id=STRING ("->" properties=LabelProperties)?
 		public Group getGroup() { return cGroup; }
 
 		//name="Label"
@@ -249,36 +295,42 @@ public class GuiDSLGrammarAccess extends AbstractGrammarElementFinder {
 		//STRING
 		public RuleCall getIdSTRINGTerminalRuleCall_2_0() { return cIdSTRINGTerminalRuleCall_2_0; }
 
-		//properties=Properties?
-		public Assignment getPropertiesAssignment_3() { return cPropertiesAssignment_3; }
+		//("->" properties=LabelProperties)?
+		public Group getGroup_3() { return cGroup_3; }
 
-		//Properties
-		public RuleCall getPropertiesPropertiesParserRuleCall_3_0() { return cPropertiesPropertiesParserRuleCall_3_0; }
+		//"->"
+		public Keyword getHyphenMinusGreaterThanSignKeyword_3_0() { return cHyphenMinusGreaterThanSignKeyword_3_0; }
+
+		//properties=LabelProperties
+		public Assignment getPropertiesAssignment_3_1() { return cPropertiesAssignment_3_1; }
+
+		//LabelProperties
+		public RuleCall getPropertiesLabelPropertiesParserRuleCall_3_1_0() { return cPropertiesLabelPropertiesParserRuleCall_3_1_0; }
 	}
 
 	public class PropertyElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Property");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cGetPropertiesFromKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Assignment cPropertiesFileAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cPropertiesFileSTRINGTerminalRuleCall_1_0 = (RuleCall)cPropertiesFileAssignment_1.eContents().get(0);
+		private final Assignment cPropertiesFilesAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cPropertiesFilesSTRINGTerminalRuleCall_1_0 = (RuleCall)cPropertiesFilesAssignment_1.eContents().get(0);
 		private final Keyword cSemicolonKeyword_2 = (Keyword)cGroup.eContents().get(2);
 		
 		//Property:
-		//	"get properties from:" propertiesFile=STRING ";";
+		//	"get properties from:" propertiesFiles+=STRING+ ";";
 		public ParserRule getRule() { return rule; }
 
-		//"get properties from:" propertiesFile=STRING ";"
+		//"get properties from:" propertiesFiles+=STRING+ ";"
 		public Group getGroup() { return cGroup; }
 
 		//"get properties from:"
 		public Keyword getGetPropertiesFromKeyword_0() { return cGetPropertiesFromKeyword_0; }
 
-		//propertiesFile=STRING
-		public Assignment getPropertiesFileAssignment_1() { return cPropertiesFileAssignment_1; }
+		//propertiesFiles+=STRING+
+		public Assignment getPropertiesFilesAssignment_1() { return cPropertiesFilesAssignment_1; }
 
 		//STRING
-		public RuleCall getPropertiesFileSTRINGTerminalRuleCall_1_0() { return cPropertiesFileSTRINGTerminalRuleCall_1_0; }
+		public RuleCall getPropertiesFilesSTRINGTerminalRuleCall_1_0() { return cPropertiesFilesSTRINGTerminalRuleCall_1_0; }
 
 		//";"
 		public Keyword getSemicolonKeyword_2() { return cSemicolonKeyword_2; }
@@ -442,37 +494,36 @@ public class GuiDSLGrammarAccess extends AbstractGrammarElementFinder {
 
 	public class ComplexComponentElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "ComplexComponent");
-		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final RuleCall cMultiselectionParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
-		private final RuleCall cTabViewParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
+		private final RuleCall cMultiselectionParserRuleCall = (RuleCall)rule.eContents().get(1);
 		
 		//ComplexComponent:
-		//	Multiselection | TabView;
+		//	Multiselection;
 		public ParserRule getRule() { return rule; }
 
-		//Multiselection | TabView
-		public Alternatives getAlternatives() { return cAlternatives; }
-
 		//Multiselection
-		public RuleCall getMultiselectionParserRuleCall_0() { return cMultiselectionParserRuleCall_0; }
-
-		//TabView
-		public RuleCall getTabViewParserRuleCall_1() { return cTabViewParserRuleCall_1; }
+		public RuleCall getMultiselectionParserRuleCall() { return cMultiselectionParserRuleCall; }
 	}
 
-	public class TabViewElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "TabView");
+	public class TabViewDefinitionElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "TabViewDefinition");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
 		private final Keyword cNameTabViewKeyword_0_0 = (Keyword)cNameAssignment_0.eContents().get(0);
 		private final Assignment cTabsAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cTabsTabDefinitionParserRuleCall_1_0 = (RuleCall)cTabsAssignment_1.eContents().get(0);
+		private final Keyword cAsKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Assignment cIdAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cIdSTRINGTerminalRuleCall_3_0 = (RuleCall)cIdAssignment_3.eContents().get(0);
+		private final Group cGroup_4 = (Group)cGroup.eContents().get(4);
+		private final Keyword cHyphenMinusGreaterThanSignKeyword_4_0 = (Keyword)cGroup_4.eContents().get(0);
+		private final Assignment cPropertiesAssignment_4_1 = (Assignment)cGroup_4.eContents().get(1);
+		private final RuleCall cPropertiesCommonPropertiesParserRuleCall_4_1_0 = (RuleCall)cPropertiesAssignment_4_1.eContents().get(0);
 		
-		//TabView:
-		//	name="TabView" tabs+=TabDefinition*;
+		//TabViewDefinition:
+		//	name="TabView" tabs+=TabDefinition* "as:" id=STRING ("->" properties=CommonProperties)?;
 		public ParserRule getRule() { return rule; }
 
-		//name="TabView" tabs+=TabDefinition*
+		//name="TabView" tabs+=TabDefinition* "as:" id=STRING ("->" properties=CommonProperties)?
 		public Group getGroup() { return cGroup; }
 
 		//name="TabView"
@@ -486,6 +537,27 @@ public class GuiDSLGrammarAccess extends AbstractGrammarElementFinder {
 
 		//TabDefinition
 		public RuleCall getTabsTabDefinitionParserRuleCall_1_0() { return cTabsTabDefinitionParserRuleCall_1_0; }
+
+		//"as:"
+		public Keyword getAsKeyword_2() { return cAsKeyword_2; }
+
+		//id=STRING
+		public Assignment getIdAssignment_3() { return cIdAssignment_3; }
+
+		//STRING
+		public RuleCall getIdSTRINGTerminalRuleCall_3_0() { return cIdSTRINGTerminalRuleCall_3_0; }
+
+		//("->" properties=CommonProperties)?
+		public Group getGroup_4() { return cGroup_4; }
+
+		//"->"
+		public Keyword getHyphenMinusGreaterThanSignKeyword_4_0() { return cHyphenMinusGreaterThanSignKeyword_4_0; }
+
+		//properties=CommonProperties
+		public Assignment getPropertiesAssignment_4_1() { return cPropertiesAssignment_4_1; }
+
+		//CommonProperties
+		public RuleCall getPropertiesCommonPropertiesParserRuleCall_4_1_0() { return cPropertiesCommonPropertiesParserRuleCall_4_1_0; }
 	}
 
 	public class TabDefinitionElements extends AbstractParserRuleElementFinder {
@@ -537,12 +609,20 @@ public class GuiDSLGrammarAccess extends AbstractGrammarElementFinder {
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final RuleCall cLabelDefinitionParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
 		private final RuleCall cButtonDefinitionParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
+		private final RuleCall cTextfieldDefinitionParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
+		private final RuleCall cTextareaDefinitionParserRuleCall_3 = (RuleCall)cAlternatives.eContents().get(3);
+		private final RuleCall cTreeDefinitionParserRuleCall_4 = (RuleCall)cAlternatives.eContents().get(4);
+		private final RuleCall cTableDefinitionParserRuleCall_5 = (RuleCall)cAlternatives.eContents().get(5);
+		private final RuleCall cTabViewDefinitionParserRuleCall_6 = (RuleCall)cAlternatives.eContents().get(6);
+		private final RuleCall cInterchangeableDefinitionParserRuleCall_7 = (RuleCall)cAlternatives.eContents().get(7);
 		
 		//ComponentDefinition:
-		//	LabelDefinition | ButtonDefinition;
+		//	LabelDefinition | ButtonDefinition | TextfieldDefinition | TextareaDefinition | TreeDefinition | TableDefinition |
+		//	TabViewDefinition | InterchangeableDefinition;
 		public ParserRule getRule() { return rule; }
 
-		//LabelDefinition | ButtonDefinition
+		//LabelDefinition | ButtonDefinition | TextfieldDefinition | TextareaDefinition | TreeDefinition | TableDefinition |
+		//TabViewDefinition | InterchangeableDefinition
 		public Alternatives getAlternatives() { return cAlternatives; }
 
 		//LabelDefinition
@@ -550,6 +630,384 @@ public class GuiDSLGrammarAccess extends AbstractGrammarElementFinder {
 
 		//ButtonDefinition
 		public RuleCall getButtonDefinitionParserRuleCall_1() { return cButtonDefinitionParserRuleCall_1; }
+
+		//TextfieldDefinition
+		public RuleCall getTextfieldDefinitionParserRuleCall_2() { return cTextfieldDefinitionParserRuleCall_2; }
+
+		//TextareaDefinition
+		public RuleCall getTextareaDefinitionParserRuleCall_3() { return cTextareaDefinitionParserRuleCall_3; }
+
+		//TreeDefinition
+		public RuleCall getTreeDefinitionParserRuleCall_4() { return cTreeDefinitionParserRuleCall_4; }
+
+		//TableDefinition
+		public RuleCall getTableDefinitionParserRuleCall_5() { return cTableDefinitionParserRuleCall_5; }
+
+		//TabViewDefinition
+		public RuleCall getTabViewDefinitionParserRuleCall_6() { return cTabViewDefinitionParserRuleCall_6; }
+
+		//InterchangeableDefinition
+		public RuleCall getInterchangeableDefinitionParserRuleCall_7() { return cInterchangeableDefinitionParserRuleCall_7; }
+	}
+
+	public class TextfieldDefinitionElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "TextfieldDefinition");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cNameTextfieldKeyword_0_0 = (Keyword)cNameAssignment_0.eContents().get(0);
+		private final Keyword cAsKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cIdAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cIdSTRINGTerminalRuleCall_2_0 = (RuleCall)cIdAssignment_2.eContents().get(0);
+		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
+		private final Keyword cHyphenMinusGreaterThanSignKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
+		private final Assignment cPropertiesAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
+		private final RuleCall cPropertiesTextfieldPropertiesParserRuleCall_3_1_0 = (RuleCall)cPropertiesAssignment_3_1.eContents().get(0);
+		
+		//TextfieldDefinition:
+		//	name="Textfield" "as:" id=STRING ("->" properties=TextfieldProperties)?;
+		public ParserRule getRule() { return rule; }
+
+		//name="Textfield" "as:" id=STRING ("->" properties=TextfieldProperties)?
+		public Group getGroup() { return cGroup; }
+
+		//name="Textfield"
+		public Assignment getNameAssignment_0() { return cNameAssignment_0; }
+
+		//"Textfield"
+		public Keyword getNameTextfieldKeyword_0_0() { return cNameTextfieldKeyword_0_0; }
+
+		//"as:"
+		public Keyword getAsKeyword_1() { return cAsKeyword_1; }
+
+		//id=STRING
+		public Assignment getIdAssignment_2() { return cIdAssignment_2; }
+
+		//STRING
+		public RuleCall getIdSTRINGTerminalRuleCall_2_0() { return cIdSTRINGTerminalRuleCall_2_0; }
+
+		//("->" properties=TextfieldProperties)?
+		public Group getGroup_3() { return cGroup_3; }
+
+		//"->"
+		public Keyword getHyphenMinusGreaterThanSignKeyword_3_0() { return cHyphenMinusGreaterThanSignKeyword_3_0; }
+
+		//properties=TextfieldProperties
+		public Assignment getPropertiesAssignment_3_1() { return cPropertiesAssignment_3_1; }
+
+		//TextfieldProperties
+		public RuleCall getPropertiesTextfieldPropertiesParserRuleCall_3_1_0() { return cPropertiesTextfieldPropertiesParserRuleCall_3_1_0; }
+	}
+
+	public class TextfieldPropertiesElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "TextfieldProperties");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cCommonPropertiesAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cCommonPropertiesCommonPropertiesParserRuleCall_0_0 = (RuleCall)cCommonPropertiesAssignment_0.eContents().get(0);
+		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
+		private final Keyword cTextKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
+		private final Assignment cTextAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
+		private final RuleCall cTextSTRINGTerminalRuleCall_1_1_0 = (RuleCall)cTextAssignment_1_1.eContents().get(0);
+		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
+		private final Keyword cEditableKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
+		private final Assignment cEditableAssignment_2_1 = (Assignment)cGroup_2.eContents().get(1);
+		private final RuleCall cEditableBOOLEANTerminalRuleCall_2_1_0 = (RuleCall)cEditableAssignment_2_1.eContents().get(0);
+		
+		//TextfieldProperties:
+		//	commonProperties=CommonProperties ("text=" text=STRING)? ("editable=" editable=BOOLEAN)?;
+		public ParserRule getRule() { return rule; }
+
+		//commonProperties=CommonProperties ("text=" text=STRING)? ("editable=" editable=BOOLEAN)?
+		public Group getGroup() { return cGroup; }
+
+		//commonProperties=CommonProperties
+		public Assignment getCommonPropertiesAssignment_0() { return cCommonPropertiesAssignment_0; }
+
+		//CommonProperties
+		public RuleCall getCommonPropertiesCommonPropertiesParserRuleCall_0_0() { return cCommonPropertiesCommonPropertiesParserRuleCall_0_0; }
+
+		//("text=" text=STRING)?
+		public Group getGroup_1() { return cGroup_1; }
+
+		//"text="
+		public Keyword getTextKeyword_1_0() { return cTextKeyword_1_0; }
+
+		//text=STRING
+		public Assignment getTextAssignment_1_1() { return cTextAssignment_1_1; }
+
+		//STRING
+		public RuleCall getTextSTRINGTerminalRuleCall_1_1_0() { return cTextSTRINGTerminalRuleCall_1_1_0; }
+
+		//("editable=" editable=BOOLEAN)?
+		public Group getGroup_2() { return cGroup_2; }
+
+		//"editable="
+		public Keyword getEditableKeyword_2_0() { return cEditableKeyword_2_0; }
+
+		//editable=BOOLEAN
+		public Assignment getEditableAssignment_2_1() { return cEditableAssignment_2_1; }
+
+		//BOOLEAN
+		public RuleCall getEditableBOOLEANTerminalRuleCall_2_1_0() { return cEditableBOOLEANTerminalRuleCall_2_1_0; }
+	}
+
+	public class TextareaDefinitionElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "TextareaDefinition");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cNameTextareaKeyword_0_0 = (Keyword)cNameAssignment_0.eContents().get(0);
+		private final Keyword cAsKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cIdAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cIdSTRINGTerminalRuleCall_2_0 = (RuleCall)cIdAssignment_2.eContents().get(0);
+		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
+		private final Keyword cHyphenMinusGreaterThanSignKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
+		private final Assignment cPropertiesAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
+		private final RuleCall cPropertiesTextareaPropertiesParserRuleCall_3_1_0 = (RuleCall)cPropertiesAssignment_3_1.eContents().get(0);
+		
+		//TextareaDefinition:
+		//	name="Textarea" "as:" id=STRING ("->" properties=TextareaProperties)?;
+		public ParserRule getRule() { return rule; }
+
+		//name="Textarea" "as:" id=STRING ("->" properties=TextareaProperties)?
+		public Group getGroup() { return cGroup; }
+
+		//name="Textarea"
+		public Assignment getNameAssignment_0() { return cNameAssignment_0; }
+
+		//"Textarea"
+		public Keyword getNameTextareaKeyword_0_0() { return cNameTextareaKeyword_0_0; }
+
+		//"as:"
+		public Keyword getAsKeyword_1() { return cAsKeyword_1; }
+
+		//id=STRING
+		public Assignment getIdAssignment_2() { return cIdAssignment_2; }
+
+		//STRING
+		public RuleCall getIdSTRINGTerminalRuleCall_2_0() { return cIdSTRINGTerminalRuleCall_2_0; }
+
+		//("->" properties=TextareaProperties)?
+		public Group getGroup_3() { return cGroup_3; }
+
+		//"->"
+		public Keyword getHyphenMinusGreaterThanSignKeyword_3_0() { return cHyphenMinusGreaterThanSignKeyword_3_0; }
+
+		//properties=TextareaProperties
+		public Assignment getPropertiesAssignment_3_1() { return cPropertiesAssignment_3_1; }
+
+		//TextareaProperties
+		public RuleCall getPropertiesTextareaPropertiesParserRuleCall_3_1_0() { return cPropertiesTextareaPropertiesParserRuleCall_3_1_0; }
+	}
+
+	public class TextareaPropertiesElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "TextareaProperties");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cCommonPropertiesAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cCommonPropertiesCommonPropertiesParserRuleCall_0_0 = (RuleCall)cCommonPropertiesAssignment_0.eContents().get(0);
+		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
+		private final Keyword cTextKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
+		private final Assignment cTextAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
+		private final RuleCall cTextSTRINGTerminalRuleCall_1_1_0 = (RuleCall)cTextAssignment_1_1.eContents().get(0);
+		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
+		private final Keyword cEditableKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
+		private final Assignment cEditableAssignment_2_1 = (Assignment)cGroup_2.eContents().get(1);
+		private final RuleCall cEditableBOOLEANTerminalRuleCall_2_1_0 = (RuleCall)cEditableAssignment_2_1.eContents().get(0);
+		
+		//TextareaProperties:
+		//	commonProperties=CommonProperties ("text=" text=STRING)? ("editable=" editable=BOOLEAN)?;
+		public ParserRule getRule() { return rule; }
+
+		//commonProperties=CommonProperties ("text=" text=STRING)? ("editable=" editable=BOOLEAN)?
+		public Group getGroup() { return cGroup; }
+
+		//commonProperties=CommonProperties
+		public Assignment getCommonPropertiesAssignment_0() { return cCommonPropertiesAssignment_0; }
+
+		//CommonProperties
+		public RuleCall getCommonPropertiesCommonPropertiesParserRuleCall_0_0() { return cCommonPropertiesCommonPropertiesParserRuleCall_0_0; }
+
+		//("text=" text=STRING)?
+		public Group getGroup_1() { return cGroup_1; }
+
+		//"text="
+		public Keyword getTextKeyword_1_0() { return cTextKeyword_1_0; }
+
+		//text=STRING
+		public Assignment getTextAssignment_1_1() { return cTextAssignment_1_1; }
+
+		//STRING
+		public RuleCall getTextSTRINGTerminalRuleCall_1_1_0() { return cTextSTRINGTerminalRuleCall_1_1_0; }
+
+		//("editable=" editable=BOOLEAN)?
+		public Group getGroup_2() { return cGroup_2; }
+
+		//"editable="
+		public Keyword getEditableKeyword_2_0() { return cEditableKeyword_2_0; }
+
+		//editable=BOOLEAN
+		public Assignment getEditableAssignment_2_1() { return cEditableAssignment_2_1; }
+
+		//BOOLEAN
+		public RuleCall getEditableBOOLEANTerminalRuleCall_2_1_0() { return cEditableBOOLEANTerminalRuleCall_2_1_0; }
+	}
+
+	public class TreeDefinitionElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "TreeDefinition");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cNameTreeKeyword_0_0 = (Keyword)cNameAssignment_0.eContents().get(0);
+		private final Assignment cInputTypeAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cInputTypeINPUT_DESCRIPTIONTerminalRuleCall_1_0 = (RuleCall)cInputTypeAssignment_1.eContents().get(0);
+		private final Keyword cAsKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Assignment cIdAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cIdSTRINGTerminalRuleCall_3_0 = (RuleCall)cIdAssignment_3.eContents().get(0);
+		private final Group cGroup_4 = (Group)cGroup.eContents().get(4);
+		private final Keyword cHyphenMinusGreaterThanSignKeyword_4_0 = (Keyword)cGroup_4.eContents().get(0);
+		private final Assignment cPropertiesAssignment_4_1 = (Assignment)cGroup_4.eContents().get(1);
+		private final RuleCall cPropertiesCommonPropertiesParserRuleCall_4_1_0 = (RuleCall)cPropertiesAssignment_4_1.eContents().get(0);
+		
+		//TreeDefinition:
+		//	name="Tree" inputType=INPUT_DESCRIPTION "as:" id=STRING ("->" properties=CommonProperties)?;
+		public ParserRule getRule() { return rule; }
+
+		//name="Tree" inputType=INPUT_DESCRIPTION "as:" id=STRING ("->" properties=CommonProperties)?
+		public Group getGroup() { return cGroup; }
+
+		//name="Tree"
+		public Assignment getNameAssignment_0() { return cNameAssignment_0; }
+
+		//"Tree"
+		public Keyword getNameTreeKeyword_0_0() { return cNameTreeKeyword_0_0; }
+
+		//inputType=INPUT_DESCRIPTION
+		public Assignment getInputTypeAssignment_1() { return cInputTypeAssignment_1; }
+
+		//INPUT_DESCRIPTION
+		public RuleCall getInputTypeINPUT_DESCRIPTIONTerminalRuleCall_1_0() { return cInputTypeINPUT_DESCRIPTIONTerminalRuleCall_1_0; }
+
+		//"as:"
+		public Keyword getAsKeyword_2() { return cAsKeyword_2; }
+
+		//id=STRING
+		public Assignment getIdAssignment_3() { return cIdAssignment_3; }
+
+		//STRING
+		public RuleCall getIdSTRINGTerminalRuleCall_3_0() { return cIdSTRINGTerminalRuleCall_3_0; }
+
+		//("->" properties=CommonProperties)?
+		public Group getGroup_4() { return cGroup_4; }
+
+		//"->"
+		public Keyword getHyphenMinusGreaterThanSignKeyword_4_0() { return cHyphenMinusGreaterThanSignKeyword_4_0; }
+
+		//properties=CommonProperties
+		public Assignment getPropertiesAssignment_4_1() { return cPropertiesAssignment_4_1; }
+
+		//CommonProperties
+		public RuleCall getPropertiesCommonPropertiesParserRuleCall_4_1_0() { return cPropertiesCommonPropertiesParserRuleCall_4_1_0; }
+	}
+
+	public class TableDefinitionElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "TableDefinition");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cNameTableKeyword_0_0 = (Keyword)cNameAssignment_0.eContents().get(0);
+		private final Assignment cInputTypeAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cInputTypeINPUT_DESCRIPTIONTerminalRuleCall_1_0 = (RuleCall)cInputTypeAssignment_1.eContents().get(0);
+		private final Keyword cAsKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Assignment cIdAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cIdSTRINGTerminalRuleCall_3_0 = (RuleCall)cIdAssignment_3.eContents().get(0);
+		private final Group cGroup_4 = (Group)cGroup.eContents().get(4);
+		private final Keyword cHyphenMinusGreaterThanSignKeyword_4_0 = (Keyword)cGroup_4.eContents().get(0);
+		private final Assignment cPropertiesAssignment_4_1 = (Assignment)cGroup_4.eContents().get(1);
+		private final RuleCall cPropertiesCommonPropertiesParserRuleCall_4_1_0 = (RuleCall)cPropertiesAssignment_4_1.eContents().get(0);
+		
+		//TableDefinition:
+		//	name="Table" inputType=INPUT_DESCRIPTION "as:" id=STRING ("->" properties=CommonProperties)?;
+		public ParserRule getRule() { return rule; }
+
+		//name="Table" inputType=INPUT_DESCRIPTION "as:" id=STRING ("->" properties=CommonProperties)?
+		public Group getGroup() { return cGroup; }
+
+		//name="Table"
+		public Assignment getNameAssignment_0() { return cNameAssignment_0; }
+
+		//"Table"
+		public Keyword getNameTableKeyword_0_0() { return cNameTableKeyword_0_0; }
+
+		//inputType=INPUT_DESCRIPTION
+		public Assignment getInputTypeAssignment_1() { return cInputTypeAssignment_1; }
+
+		//INPUT_DESCRIPTION
+		public RuleCall getInputTypeINPUT_DESCRIPTIONTerminalRuleCall_1_0() { return cInputTypeINPUT_DESCRIPTIONTerminalRuleCall_1_0; }
+
+		//"as:"
+		public Keyword getAsKeyword_2() { return cAsKeyword_2; }
+
+		//id=STRING
+		public Assignment getIdAssignment_3() { return cIdAssignment_3; }
+
+		//STRING
+		public RuleCall getIdSTRINGTerminalRuleCall_3_0() { return cIdSTRINGTerminalRuleCall_3_0; }
+
+		//("->" properties=CommonProperties)?
+		public Group getGroup_4() { return cGroup_4; }
+
+		//"->"
+		public Keyword getHyphenMinusGreaterThanSignKeyword_4_0() { return cHyphenMinusGreaterThanSignKeyword_4_0; }
+
+		//properties=CommonProperties
+		public Assignment getPropertiesAssignment_4_1() { return cPropertiesAssignment_4_1; }
+
+		//CommonProperties
+		public RuleCall getPropertiesCommonPropertiesParserRuleCall_4_1_0() { return cPropertiesCommonPropertiesParserRuleCall_4_1_0; }
+	}
+
+	public class InterchangeableDefinitionElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "InterchangeableDefinition");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cNameInterchangeableAreaKeyword_0_0 = (Keyword)cNameAssignment_0.eContents().get(0);
+		private final Keyword cAsKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cIdAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cIdSTRINGTerminalRuleCall_2_0 = (RuleCall)cIdAssignment_2.eContents().get(0);
+		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
+		private final Keyword cHyphenMinusGreaterThanSignKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
+		private final Assignment cPropertiesAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
+		private final RuleCall cPropertiesCommonPropertiesParserRuleCall_3_1_0 = (RuleCall)cPropertiesAssignment_3_1.eContents().get(0);
+		
+		//InterchangeableDefinition:
+		//	name="Interchangeable Area" "as:" id=STRING ("->" properties=CommonProperties)?;
+		public ParserRule getRule() { return rule; }
+
+		//name="Interchangeable Area" "as:" id=STRING ("->" properties=CommonProperties)?
+		public Group getGroup() { return cGroup; }
+
+		//name="Interchangeable Area"
+		public Assignment getNameAssignment_0() { return cNameAssignment_0; }
+
+		//"Interchangeable Area"
+		public Keyword getNameInterchangeableAreaKeyword_0_0() { return cNameInterchangeableAreaKeyword_0_0; }
+
+		//"as:"
+		public Keyword getAsKeyword_1() { return cAsKeyword_1; }
+
+		//id=STRING
+		public Assignment getIdAssignment_2() { return cIdAssignment_2; }
+
+		//STRING
+		public RuleCall getIdSTRINGTerminalRuleCall_2_0() { return cIdSTRINGTerminalRuleCall_2_0; }
+
+		//("->" properties=CommonProperties)?
+		public Group getGroup_3() { return cGroup_3; }
+
+		//"->"
+		public Keyword getHyphenMinusGreaterThanSignKeyword_3_0() { return cHyphenMinusGreaterThanSignKeyword_3_0; }
+
+		//properties=CommonProperties
+		public Assignment getPropertiesAssignment_3_1() { return cPropertiesAssignment_3_1; }
+
+		//CommonProperties
+		public RuleCall getPropertiesCommonPropertiesParserRuleCall_3_1_0() { return cPropertiesCommonPropertiesParserRuleCall_3_1_0; }
 	}
 
 	public class ButtonDefinitionElements extends AbstractParserRuleElementFinder {
@@ -561,13 +1019,13 @@ public class GuiDSLGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cIdAssignment_2 = (Assignment)cGroup.eContents().get(2);
 		private final RuleCall cIdSTRINGTerminalRuleCall_2_0 = (RuleCall)cIdAssignment_2.eContents().get(0);
 		private final Assignment cPropertiesAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final RuleCall cPropertiesPropertiesParserRuleCall_3_0 = (RuleCall)cPropertiesAssignment_3.eContents().get(0);
+		private final RuleCall cPropertiesButtonPropertiesParserRuleCall_3_0 = (RuleCall)cPropertiesAssignment_3.eContents().get(0);
 		
 		//ButtonDefinition:
-		//	name="Button" "as:" id=STRING properties=Properties?;
+		//	name="Button" "as:" id=STRING properties=ButtonProperties?;
 		public ParserRule getRule() { return rule; }
 
-		//name="Button" "as:" id=STRING properties=Properties?
+		//name="Button" "as:" id=STRING properties=ButtonProperties?
 		public Group getGroup() { return cGroup; }
 
 		//name="Button"
@@ -585,73 +1043,37 @@ public class GuiDSLGrammarAccess extends AbstractGrammarElementFinder {
 		//STRING
 		public RuleCall getIdSTRINGTerminalRuleCall_2_0() { return cIdSTRINGTerminalRuleCall_2_0; }
 
-		//properties=Properties?
+		//properties=ButtonProperties?
 		public Assignment getPropertiesAssignment_3() { return cPropertiesAssignment_3; }
 
-		//Properties
-		public RuleCall getPropertiesPropertiesParserRuleCall_3_0() { return cPropertiesPropertiesParserRuleCall_3_0; }
+		//ButtonProperties
+		public RuleCall getPropertiesButtonPropertiesParserRuleCall_3_0() { return cPropertiesButtonPropertiesParserRuleCall_3_0; }
 	}
 
-	public class PropertiesElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Properties");
+	public class ButtonPropertiesElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "ButtonProperties");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cHyphenMinusGreaterThanSignKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Assignment cPropertiesDefinitionsAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cPropertiesDefinitionsPropertiesDefinitionParserRuleCall_1_0 = (RuleCall)cPropertiesDefinitionsAssignment_1.eContents().get(0);
-		
-		//Properties:
-		//	"->" propertiesDefinitions+=PropertiesDefinition+;
-		public ParserRule getRule() { return rule; }
-
-		//"->" propertiesDefinitions+=PropertiesDefinition+
-		public Group getGroup() { return cGroup; }
-
-		//"->"
-		public Keyword getHyphenMinusGreaterThanSignKeyword_0() { return cHyphenMinusGreaterThanSignKeyword_0; }
-
-		//propertiesDefinitions+=PropertiesDefinition+
-		public Assignment getPropertiesDefinitionsAssignment_1() { return cPropertiesDefinitionsAssignment_1; }
-
-		//PropertiesDefinition
-		public RuleCall getPropertiesDefinitionsPropertiesDefinitionParserRuleCall_1_0() { return cPropertiesDefinitionsPropertiesDefinitionParserRuleCall_1_0; }
-	}
-
-	public class PropertiesDefinitionElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "PropertiesDefinition");
-		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final Group cGroup_0 = (Group)cAlternatives.eContents().get(0);
-		private final Keyword cPropertyKeyKeyword_0_0 = (Keyword)cGroup_0.eContents().get(0);
-		private final Assignment cPropertyKeyAssignment_0_1 = (Assignment)cGroup_0.eContents().get(1);
-		private final RuleCall cPropertyKeySTRINGTerminalRuleCall_0_1_0 = (RuleCall)cPropertyKeyAssignment_0_1.eContents().get(0);
-		private final Group cGroup_1 = (Group)cAlternatives.eContents().get(1);
+		private final Assignment cCommonPropertiesAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cCommonPropertiesCommonPropertiesParserRuleCall_0_0 = (RuleCall)cCommonPropertiesAssignment_0.eContents().get(0);
+		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
 		private final Keyword cTextKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
 		private final Assignment cTextAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
 		private final RuleCall cTextSTRINGTerminalRuleCall_1_1_0 = (RuleCall)cTextAssignment_1_1.eContents().get(0);
-		private final Group cGroup_2 = (Group)cAlternatives.eContents().get(2);
-		private final Keyword cInteractiontypeKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
-		private final Assignment cInteractiontypeAssignment_2_1 = (Assignment)cGroup_2.eContents().get(1);
-		private final RuleCall cInteractiontypeInteractiontypeParserRuleCall_2_1_0 = (RuleCall)cInteractiontypeAssignment_2_1.eContents().get(0);
 		
-		//PropertiesDefinition:
-		//	"propertyKey=" propertyKey=STRING | "text=" text=STRING | "interactiontype=" interactiontype+=Interactiontype+;
+		//ButtonProperties:
+		//	commonProperties=CommonProperties ("text=" text=STRING)?;
 		public ParserRule getRule() { return rule; }
 
-		//"propertyKey=" propertyKey=STRING | "text=" text=STRING | "interactiontype=" interactiontype+=Interactiontype+
-		public Alternatives getAlternatives() { return cAlternatives; }
+		//commonProperties=CommonProperties ("text=" text=STRING)?
+		public Group getGroup() { return cGroup; }
 
-		//"propertyKey=" propertyKey=STRING
-		public Group getGroup_0() { return cGroup_0; }
+		//commonProperties=CommonProperties
+		public Assignment getCommonPropertiesAssignment_0() { return cCommonPropertiesAssignment_0; }
 
-		//"propertyKey="
-		public Keyword getPropertyKeyKeyword_0_0() { return cPropertyKeyKeyword_0_0; }
+		//CommonProperties
+		public RuleCall getCommonPropertiesCommonPropertiesParserRuleCall_0_0() { return cCommonPropertiesCommonPropertiesParserRuleCall_0_0; }
 
-		//propertyKey=STRING
-		public Assignment getPropertyKeyAssignment_0_1() { return cPropertyKeyAssignment_0_1; }
-
-		//STRING
-		public RuleCall getPropertyKeySTRINGTerminalRuleCall_0_1_0() { return cPropertyKeySTRINGTerminalRuleCall_0_1_0; }
-
-		//"text=" text=STRING
+		//("text=" text=STRING)?
 		public Group getGroup_1() { return cGroup_1; }
 
 		//"text="
@@ -662,18 +1084,96 @@ public class GuiDSLGrammarAccess extends AbstractGrammarElementFinder {
 
 		//STRING
 		public RuleCall getTextSTRINGTerminalRuleCall_1_1_0() { return cTextSTRINGTerminalRuleCall_1_1_0; }
+	}
 
-		//"interactiontype=" interactiontype+=Interactiontype+
+	public class CommonPropertiesElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "CommonProperties");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cHyphenMinusGreaterThanSignKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
+		private final Assignment cNameAssignment_1_0 = (Assignment)cGroup_1.eContents().get(0);
+		private final Keyword cNamePropertyKeyKeyword_1_0_0 = (Keyword)cNameAssignment_1_0.eContents().get(0);
+		private final Keyword cEqualsSignKeyword_1_1 = (Keyword)cGroup_1.eContents().get(1);
+		private final Assignment cPropertyKeyAssignment_1_2 = (Assignment)cGroup_1.eContents().get(2);
+		private final RuleCall cPropertyKeySTRINGTerminalRuleCall_1_2_0 = (RuleCall)cPropertyKeyAssignment_1_2.eContents().get(0);
+		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
+		private final Assignment cNameAssignment_2_0 = (Assignment)cGroup_2.eContents().get(0);
+		private final Keyword cNameLayoutKeyKeyword_2_0_0 = (Keyword)cNameAssignment_2_0.eContents().get(0);
+		private final Keyword cEqualsSignKeyword_2_1 = (Keyword)cGroup_2.eContents().get(1);
+		private final Assignment cLayoutKeyAssignment_2_2 = (Assignment)cGroup_2.eContents().get(2);
+		private final RuleCall cLayoutKeySTRINGTerminalRuleCall_2_2_0 = (RuleCall)cLayoutKeyAssignment_2_2.eContents().get(0);
+		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
+		private final Assignment cNameAssignment_3_0 = (Assignment)cGroup_3.eContents().get(0);
+		private final Keyword cNameInteractiontypeKeyword_3_0_0 = (Keyword)cNameAssignment_3_0.eContents().get(0);
+		private final Keyword cEqualsSignKeyword_3_1 = (Keyword)cGroup_3.eContents().get(1);
+		private final Assignment cInteractiontypeAssignment_3_2 = (Assignment)cGroup_3.eContents().get(2);
+		private final RuleCall cInteractiontypeInteractiontypeParserRuleCall_3_2_0 = (RuleCall)cInteractiontypeAssignment_3_2.eContents().get(0);
+		
+		//CommonProperties:
+		//	"->" (name="propertyKey" "=" propertyKey=STRING)? (name="layoutKey" "=" layoutKey=STRING)? (name="interactiontype"
+		//	"=" interactiontype+=Interactiontype+)?;
+		public ParserRule getRule() { return rule; }
+
+		//"->" (name="propertyKey" "=" propertyKey=STRING)? (name="layoutKey" "=" layoutKey=STRING)? (name="interactiontype" "="
+		//interactiontype+=Interactiontype+)?
+		public Group getGroup() { return cGroup; }
+
+		//"->"
+		public Keyword getHyphenMinusGreaterThanSignKeyword_0() { return cHyphenMinusGreaterThanSignKeyword_0; }
+
+		//(name="propertyKey" "=" propertyKey=STRING)?
+		public Group getGroup_1() { return cGroup_1; }
+
+		//name="propertyKey"
+		public Assignment getNameAssignment_1_0() { return cNameAssignment_1_0; }
+
+		//"propertyKey"
+		public Keyword getNamePropertyKeyKeyword_1_0_0() { return cNamePropertyKeyKeyword_1_0_0; }
+
+		//"="
+		public Keyword getEqualsSignKeyword_1_1() { return cEqualsSignKeyword_1_1; }
+
+		//propertyKey=STRING
+		public Assignment getPropertyKeyAssignment_1_2() { return cPropertyKeyAssignment_1_2; }
+
+		//STRING
+		public RuleCall getPropertyKeySTRINGTerminalRuleCall_1_2_0() { return cPropertyKeySTRINGTerminalRuleCall_1_2_0; }
+
+		//(name="layoutKey" "=" layoutKey=STRING)?
 		public Group getGroup_2() { return cGroup_2; }
 
-		//"interactiontype="
-		public Keyword getInteractiontypeKeyword_2_0() { return cInteractiontypeKeyword_2_0; }
+		//name="layoutKey"
+		public Assignment getNameAssignment_2_0() { return cNameAssignment_2_0; }
+
+		//"layoutKey"
+		public Keyword getNameLayoutKeyKeyword_2_0_0() { return cNameLayoutKeyKeyword_2_0_0; }
+
+		//"="
+		public Keyword getEqualsSignKeyword_2_1() { return cEqualsSignKeyword_2_1; }
+
+		//layoutKey=STRING
+		public Assignment getLayoutKeyAssignment_2_2() { return cLayoutKeyAssignment_2_2; }
+
+		//STRING
+		public RuleCall getLayoutKeySTRINGTerminalRuleCall_2_2_0() { return cLayoutKeySTRINGTerminalRuleCall_2_2_0; }
+
+		//(name="interactiontype" "=" interactiontype+=Interactiontype+)?
+		public Group getGroup_3() { return cGroup_3; }
+
+		//name="interactiontype"
+		public Assignment getNameAssignment_3_0() { return cNameAssignment_3_0; }
+
+		//"interactiontype"
+		public Keyword getNameInteractiontypeKeyword_3_0_0() { return cNameInteractiontypeKeyword_3_0_0; }
+
+		//"="
+		public Keyword getEqualsSignKeyword_3_1() { return cEqualsSignKeyword_3_1; }
 
 		//interactiontype+=Interactiontype+
-		public Assignment getInteractiontypeAssignment_2_1() { return cInteractiontypeAssignment_2_1; }
+		public Assignment getInteractiontypeAssignment_3_2() { return cInteractiontypeAssignment_3_2; }
 
 		//Interactiontype
-		public RuleCall getInteractiontypeInteractiontypeParserRuleCall_2_1_0() { return cInteractiontypeInteractiontypeParserRuleCall_2_1_0; }
+		public RuleCall getInteractiontypeInteractiontypeParserRuleCall_3_2_0() { return cInteractiontypeInteractiontypeParserRuleCall_3_2_0; }
 	}
 
 	public class LabelDefinitionElements extends AbstractParserRuleElementFinder {
@@ -684,14 +1184,16 @@ public class GuiDSLGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cAsKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Assignment cIdAssignment_2 = (Assignment)cGroup.eContents().get(2);
 		private final RuleCall cIdSTRINGTerminalRuleCall_2_0 = (RuleCall)cIdAssignment_2.eContents().get(0);
-		private final Assignment cPropertiesAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final RuleCall cPropertiesPropertiesParserRuleCall_3_0 = (RuleCall)cPropertiesAssignment_3.eContents().get(0);
+		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
+		private final Keyword cHyphenMinusGreaterThanSignKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
+		private final Assignment cPropertiesAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
+		private final RuleCall cPropertiesLabelPropertiesParserRuleCall_3_1_0 = (RuleCall)cPropertiesAssignment_3_1.eContents().get(0);
 		
 		//LabelDefinition:
-		//	name="Label" "as" id=STRING properties=Properties?;
+		//	name="Label" "as" id=STRING ("->" properties=LabelProperties)?;
 		public ParserRule getRule() { return rule; }
 
-		//name="Label" "as" id=STRING properties=Properties?
+		//name="Label" "as" id=STRING ("->" properties=LabelProperties)?
 		public Group getGroup() { return cGroup; }
 
 		//name="Label"
@@ -709,39 +1211,90 @@ public class GuiDSLGrammarAccess extends AbstractGrammarElementFinder {
 		//STRING
 		public RuleCall getIdSTRINGTerminalRuleCall_2_0() { return cIdSTRINGTerminalRuleCall_2_0; }
 
-		//properties=Properties?
-		public Assignment getPropertiesAssignment_3() { return cPropertiesAssignment_3; }
+		//("->" properties=LabelProperties)?
+		public Group getGroup_3() { return cGroup_3; }
 
-		//Properties
-		public RuleCall getPropertiesPropertiesParserRuleCall_3_0() { return cPropertiesPropertiesParserRuleCall_3_0; }
+		//"->"
+		public Keyword getHyphenMinusGreaterThanSignKeyword_3_0() { return cHyphenMinusGreaterThanSignKeyword_3_0; }
+
+		//properties=LabelProperties
+		public Assignment getPropertiesAssignment_3_1() { return cPropertiesAssignment_3_1; }
+
+		//LabelProperties
+		public RuleCall getPropertiesLabelPropertiesParserRuleCall_3_1_0() { return cPropertiesLabelPropertiesParserRuleCall_3_1_0; }
+	}
+
+	public class LabelPropertiesElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "LabelProperties");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cCommonPropertiesAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cCommonPropertiesCommonPropertiesParserRuleCall_0_0 = (RuleCall)cCommonPropertiesAssignment_0.eContents().get(0);
+		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
+		private final Keyword cTextKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
+		private final Assignment cTextAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
+		private final RuleCall cTextSTRINGTerminalRuleCall_1_1_0 = (RuleCall)cTextAssignment_1_1.eContents().get(0);
+		private final Assignment cNameAssignment_1_2 = (Assignment)cGroup_1.eContents().get(2);
+		private final Keyword cNameLabelPropertyKeyword_1_2_0 = (Keyword)cNameAssignment_1_2.eContents().get(0);
+		
+		//LabelProperties:
+		//	commonProperties=CommonProperties ("text=" text=STRING name="LabelProperty")?;
+		public ParserRule getRule() { return rule; }
+
+		//commonProperties=CommonProperties ("text=" text=STRING name="LabelProperty")?
+		public Group getGroup() { return cGroup; }
+
+		//commonProperties=CommonProperties
+		public Assignment getCommonPropertiesAssignment_0() { return cCommonPropertiesAssignment_0; }
+
+		//CommonProperties
+		public RuleCall getCommonPropertiesCommonPropertiesParserRuleCall_0_0() { return cCommonPropertiesCommonPropertiesParserRuleCall_0_0; }
+
+		//("text=" text=STRING name="LabelProperty")?
+		public Group getGroup_1() { return cGroup_1; }
+
+		//"text="
+		public Keyword getTextKeyword_1_0() { return cTextKeyword_1_0; }
+
+		//text=STRING
+		public Assignment getTextAssignment_1_1() { return cTextAssignment_1_1; }
+
+		//STRING
+		public RuleCall getTextSTRINGTerminalRuleCall_1_1_0() { return cTextSTRINGTerminalRuleCall_1_1_0; }
+
+		//name="LabelProperty"
+		public Assignment getNameAssignment_1_2() { return cNameAssignment_1_2; }
+
+		//"LabelProperty"
+		public Keyword getNameLabelPropertyKeyword_1_2_0() { return cNameLabelPropertyKeyword_1_2_0; }
 	}
 
 	public class InteractiontypeElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Interactiontype");
 		private final Assignment cIdAssignment = (Assignment)rule.eContents().get(1);
 		private final Alternatives cIdAlternatives_0 = (Alternatives)cIdAssignment.eContents().get(0);
-		private final Keyword cIdClickKeyword_0_0 = (Keyword)cIdAlternatives_0.eContents().get(0);
-		private final Keyword cIdChangeTextKeyword_0_1 = (Keyword)cIdAlternatives_0.eContents().get(1);
+		private final Keyword cIdIfActivatorKeyword_0_0 = (Keyword)cIdAlternatives_0.eContents().get(0);
+		private final Keyword cIdIfTextDisplayKeyword_0_1 = (Keyword)cIdAlternatives_0.eContents().get(1);
 		
 		//Interactiontype:
-		//	id=("Click" | "ChangeText");
+		//	id=("IfActivator" | "IfTextDisplay");
 		public ParserRule getRule() { return rule; }
 
-		//id=("Click" | "ChangeText")
+		//id=("IfActivator" | "IfTextDisplay")
 		public Assignment getIdAssignment() { return cIdAssignment; }
 
-		//"Click" | "ChangeText"
+		//"IfActivator" | "IfTextDisplay"
 		public Alternatives getIdAlternatives_0() { return cIdAlternatives_0; }
 
-		//"Click"
-		public Keyword getIdClickKeyword_0_0() { return cIdClickKeyword_0_0; }
+		//"IfActivator"
+		public Keyword getIdIfActivatorKeyword_0_0() { return cIdIfActivatorKeyword_0_0; }
 
-		//"ChangeText"
-		public Keyword getIdChangeTextKeyword_0_1() { return cIdChangeTextKeyword_0_1; }
+		//"IfTextDisplay"
+		public Keyword getIdIfTextDisplayKeyword_0_1() { return cIdIfTextDisplayKeyword_0_1; }
 	}
 	
 	
 	private final UIDescriptionElements pUIDescription;
+	private final LayoutElements pLayout;
 	private final StructureElements pStructure;
 	private final ElementElements pElement;
 	private final RefinementElements pRefinement;
@@ -756,18 +1309,27 @@ public class GuiDSLGrammarAccess extends AbstractGrammarElementFinder {
 	private final TypeElements pType;
 	private final UIDescriptionImportElements pUIDescriptionImport;
 	private final ComplexComponentElements pComplexComponent;
-	private final TabViewElements pTabView;
+	private final TabViewDefinitionElements pTabViewDefinition;
 	private final TabDefinitionElements pTabDefinition;
-	private final TerminalRule tTABNAME;
 	private final MultiselectionElements pMultiselection;
-	private final TerminalRule tINPUT_DESCRIPTION;
 	private final ComponentDefinitionElements pComponentDefinition;
+	private final TextfieldDefinitionElements pTextfieldDefinition;
+	private final TextfieldPropertiesElements pTextfieldProperties;
+	private final TextareaDefinitionElements pTextareaDefinition;
+	private final TextareaPropertiesElements pTextareaProperties;
+	private final TreeDefinitionElements pTreeDefinition;
+	private final TableDefinitionElements pTableDefinition;
+	private final InterchangeableDefinitionElements pInterchangeableDefinition;
 	private final ButtonDefinitionElements pButtonDefinition;
-	private final PropertiesElements pProperties;
-	private final PropertiesDefinitionElements pPropertiesDefinition;
+	private final ButtonPropertiesElements pButtonProperties;
+	private final CommonPropertiesElements pCommonProperties;
 	private final LabelDefinitionElements pLabelDefinition;
+	private final LabelPropertiesElements pLabelProperties;
 	private final InteractiontypeElements pInteractiontype;
 	private final TerminalRule tWS;
+	private final TerminalRule tTABNAME;
+	private final TerminalRule tINPUT_DESCRIPTION;
+	private final TerminalRule tBOOLEAN;
 	
 	private final Grammar grammar;
 
@@ -779,6 +1341,7 @@ public class GuiDSLGrammarAccess extends AbstractGrammarElementFinder {
 		this.grammar = internalFindGrammar(grammarProvider);
 		this.gaTerminals = gaTerminals;
 		this.pUIDescription = new UIDescriptionElements();
+		this.pLayout = new LayoutElements();
 		this.pStructure = new StructureElements();
 		this.pElement = new ElementElements();
 		this.pRefinement = new RefinementElements();
@@ -793,18 +1356,27 @@ public class GuiDSLGrammarAccess extends AbstractGrammarElementFinder {
 		this.pType = new TypeElements();
 		this.pUIDescriptionImport = new UIDescriptionImportElements();
 		this.pComplexComponent = new ComplexComponentElements();
-		this.pTabView = new TabViewElements();
+		this.pTabViewDefinition = new TabViewDefinitionElements();
 		this.pTabDefinition = new TabDefinitionElements();
-		this.tTABNAME = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "TABNAME");
 		this.pMultiselection = new MultiselectionElements();
-		this.tINPUT_DESCRIPTION = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "INPUT_DESCRIPTION");
 		this.pComponentDefinition = new ComponentDefinitionElements();
+		this.pTextfieldDefinition = new TextfieldDefinitionElements();
+		this.pTextfieldProperties = new TextfieldPropertiesElements();
+		this.pTextareaDefinition = new TextareaDefinitionElements();
+		this.pTextareaProperties = new TextareaPropertiesElements();
+		this.pTreeDefinition = new TreeDefinitionElements();
+		this.pTableDefinition = new TableDefinitionElements();
+		this.pInterchangeableDefinition = new InterchangeableDefinitionElements();
 		this.pButtonDefinition = new ButtonDefinitionElements();
-		this.pProperties = new PropertiesElements();
-		this.pPropertiesDefinition = new PropertiesDefinitionElements();
+		this.pButtonProperties = new ButtonPropertiesElements();
+		this.pCommonProperties = new CommonPropertiesElements();
 		this.pLabelDefinition = new LabelDefinitionElements();
+		this.pLabelProperties = new LabelPropertiesElements();
 		this.pInteractiontype = new InteractiontypeElements();
 		this.tWS = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "WS");
+		this.tTABNAME = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "TABNAME");
+		this.tINPUT_DESCRIPTION = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "INPUT_DESCRIPTION");
+		this.tBOOLEAN = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "BOOLEAN");
 	}
 	
 	protected Grammar internalFindGrammar(GrammarProvider grammarProvider) {
@@ -835,14 +1407,24 @@ public class GuiDSLGrammarAccess extends AbstractGrammarElementFinder {
 
 	
 	//UIDescription:
-	//	typeDefinition=TypeDefinition property=Property? usedDescriptions+=UsedDescriptions* refinements+=Refinement*
-	//	definitions+=Definition* structure=Structure;
+	//	typeDefinition=TypeDefinition property=Property? layout=Layout? usedDescriptions+=UsedDescriptions*
+	//	refinements+=Refinement* definitions+=Definition* structure=Structure;
 	public UIDescriptionElements getUIDescriptionAccess() {
 		return pUIDescription;
 	}
 	
 	public ParserRule getUIDescriptionRule() {
 		return getUIDescriptionAccess().getRule();
+	}
+
+	//Layout:
+	//	"get layout from:" layoutFiles+=STRING+ ";";
+	public LayoutElements getLayoutAccess() {
+		return pLayout;
+	}
+	
+	public ParserRule getLayoutRule() {
+		return getLayoutAccess().getRule();
 	}
 
 	//Structure:
@@ -886,7 +1468,7 @@ public class GuiDSLGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//ButtonRefinement:
-	//	name="Button" "from:" id=STRING properties=Properties?;
+	//	name="Button" "from:" id=STRING ("->" properties=ButtonProperties)?;
 	public ButtonRefinementElements getButtonRefinementAccess() {
 		return pButtonRefinement;
 	}
@@ -896,7 +1478,7 @@ public class GuiDSLGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//LabelRefinement:
-	//	name="Label" "from:" id=STRING properties=Properties?;
+	//	name="Label" "from:" id=STRING ("->" properties=LabelProperties)?;
 	public LabelRefinementElements getLabelRefinementAccess() {
 		return pLabelRefinement;
 	}
@@ -906,7 +1488,7 @@ public class GuiDSLGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Property:
-	//	"get properties from:" propertiesFile=STRING ";";
+	//	"get properties from:" propertiesFiles+=STRING+ ";";
 	public PropertyElements getPropertyAccess() {
 		return pProperty;
 	}
@@ -976,7 +1558,7 @@ public class GuiDSLGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//ComplexComponent:
-	//	Multiselection | TabView;
+	//	Multiselection;
 	public ComplexComponentElements getComplexComponentAccess() {
 		return pComplexComponent;
 	}
@@ -985,14 +1567,14 @@ public class GuiDSLGrammarAccess extends AbstractGrammarElementFinder {
 		return getComplexComponentAccess().getRule();
 	}
 
-	//TabView:
-	//	name="TabView" tabs+=TabDefinition*;
-	public TabViewElements getTabViewAccess() {
-		return pTabView;
+	//TabViewDefinition:
+	//	name="TabView" tabs+=TabDefinition* "as:" id=STRING ("->" properties=CommonProperties)?;
+	public TabViewDefinitionElements getTabViewDefinitionAccess() {
+		return pTabViewDefinition;
 	}
 	
-	public ParserRule getTabViewRule() {
-		return getTabViewAccess().getRule();
+	public ParserRule getTabViewDefinitionRule() {
+		return getTabViewDefinitionAccess().getRule();
 	}
 
 	//TabDefinition:
@@ -1005,12 +1587,6 @@ public class GuiDSLGrammarAccess extends AbstractGrammarElementFinder {
 		return getTabDefinitionAccess().getRule();
 	}
 
-	//terminal TABNAME:
-	//	"[" ("\\" . / * 'b'|'t'|'n'|'f'|'r'|'u'|'"'|"'"|'\\' * / | !("[" | "]"))* "]";
-	public TerminalRule getTABNAMERule() {
-		return tTABNAME;
-	} 
-
 	//Multiselection:
 	//	name="Multiselection" inputType=INPUT_DESCRIPTION?;
 	public MultiselectionElements getMultiselectionAccess() {
@@ -1021,14 +1597,9 @@ public class GuiDSLGrammarAccess extends AbstractGrammarElementFinder {
 		return getMultiselectionAccess().getRule();
 	}
 
-	//terminal INPUT_DESCRIPTION:
-	//	"<" ("\\" . / * 'b'|'t'|'n'|'f'|'r'|'u'|'"'|"'"|'\\' * / | !("<" | ">"))* ">";
-	public TerminalRule getINPUT_DESCRIPTIONRule() {
-		return tINPUT_DESCRIPTION;
-	} 
-
 	//ComponentDefinition:
-	//	LabelDefinition | ButtonDefinition;
+	//	LabelDefinition | ButtonDefinition | TextfieldDefinition | TextareaDefinition | TreeDefinition | TableDefinition |
+	//	TabViewDefinition | InterchangeableDefinition;
 	public ComponentDefinitionElements getComponentDefinitionAccess() {
 		return pComponentDefinition;
 	}
@@ -1037,8 +1608,78 @@ public class GuiDSLGrammarAccess extends AbstractGrammarElementFinder {
 		return getComponentDefinitionAccess().getRule();
 	}
 
+	//TextfieldDefinition:
+	//	name="Textfield" "as:" id=STRING ("->" properties=TextfieldProperties)?;
+	public TextfieldDefinitionElements getTextfieldDefinitionAccess() {
+		return pTextfieldDefinition;
+	}
+	
+	public ParserRule getTextfieldDefinitionRule() {
+		return getTextfieldDefinitionAccess().getRule();
+	}
+
+	//TextfieldProperties:
+	//	commonProperties=CommonProperties ("text=" text=STRING)? ("editable=" editable=BOOLEAN)?;
+	public TextfieldPropertiesElements getTextfieldPropertiesAccess() {
+		return pTextfieldProperties;
+	}
+	
+	public ParserRule getTextfieldPropertiesRule() {
+		return getTextfieldPropertiesAccess().getRule();
+	}
+
+	//TextareaDefinition:
+	//	name="Textarea" "as:" id=STRING ("->" properties=TextareaProperties)?;
+	public TextareaDefinitionElements getTextareaDefinitionAccess() {
+		return pTextareaDefinition;
+	}
+	
+	public ParserRule getTextareaDefinitionRule() {
+		return getTextareaDefinitionAccess().getRule();
+	}
+
+	//TextareaProperties:
+	//	commonProperties=CommonProperties ("text=" text=STRING)? ("editable=" editable=BOOLEAN)?;
+	public TextareaPropertiesElements getTextareaPropertiesAccess() {
+		return pTextareaProperties;
+	}
+	
+	public ParserRule getTextareaPropertiesRule() {
+		return getTextareaPropertiesAccess().getRule();
+	}
+
+	//TreeDefinition:
+	//	name="Tree" inputType=INPUT_DESCRIPTION "as:" id=STRING ("->" properties=CommonProperties)?;
+	public TreeDefinitionElements getTreeDefinitionAccess() {
+		return pTreeDefinition;
+	}
+	
+	public ParserRule getTreeDefinitionRule() {
+		return getTreeDefinitionAccess().getRule();
+	}
+
+	//TableDefinition:
+	//	name="Table" inputType=INPUT_DESCRIPTION "as:" id=STRING ("->" properties=CommonProperties)?;
+	public TableDefinitionElements getTableDefinitionAccess() {
+		return pTableDefinition;
+	}
+	
+	public ParserRule getTableDefinitionRule() {
+		return getTableDefinitionAccess().getRule();
+	}
+
+	//InterchangeableDefinition:
+	//	name="Interchangeable Area" "as:" id=STRING ("->" properties=CommonProperties)?;
+	public InterchangeableDefinitionElements getInterchangeableDefinitionAccess() {
+		return pInterchangeableDefinition;
+	}
+	
+	public ParserRule getInterchangeableDefinitionRule() {
+		return getInterchangeableDefinitionAccess().getRule();
+	}
+
 	//ButtonDefinition:
-	//	name="Button" "as:" id=STRING properties=Properties?;
+	//	name="Button" "as:" id=STRING properties=ButtonProperties?;
 	public ButtonDefinitionElements getButtonDefinitionAccess() {
 		return pButtonDefinition;
 	}
@@ -1047,28 +1688,29 @@ public class GuiDSLGrammarAccess extends AbstractGrammarElementFinder {
 		return getButtonDefinitionAccess().getRule();
 	}
 
-	//Properties:
-	//	"->" propertiesDefinitions+=PropertiesDefinition+;
-	public PropertiesElements getPropertiesAccess() {
-		return pProperties;
+	//ButtonProperties:
+	//	commonProperties=CommonProperties ("text=" text=STRING)?;
+	public ButtonPropertiesElements getButtonPropertiesAccess() {
+		return pButtonProperties;
 	}
 	
-	public ParserRule getPropertiesRule() {
-		return getPropertiesAccess().getRule();
+	public ParserRule getButtonPropertiesRule() {
+		return getButtonPropertiesAccess().getRule();
 	}
 
-	//PropertiesDefinition:
-	//	"propertyKey=" propertyKey=STRING | "text=" text=STRING | "interactiontype=" interactiontype+=Interactiontype+;
-	public PropertiesDefinitionElements getPropertiesDefinitionAccess() {
-		return pPropertiesDefinition;
+	//CommonProperties:
+	//	"->" (name="propertyKey" "=" propertyKey=STRING)? (name="layoutKey" "=" layoutKey=STRING)? (name="interactiontype"
+	//	"=" interactiontype+=Interactiontype+)?;
+	public CommonPropertiesElements getCommonPropertiesAccess() {
+		return pCommonProperties;
 	}
 	
-	public ParserRule getPropertiesDefinitionRule() {
-		return getPropertiesDefinitionAccess().getRule();
+	public ParserRule getCommonPropertiesRule() {
+		return getCommonPropertiesAccess().getRule();
 	}
 
 	//LabelDefinition:
-	//	name="Label" "as" id=STRING properties=Properties?;
+	//	name="Label" "as" id=STRING ("->" properties=LabelProperties)?;
 	public LabelDefinitionElements getLabelDefinitionAccess() {
 		return pLabelDefinition;
 	}
@@ -1077,8 +1719,18 @@ public class GuiDSLGrammarAccess extends AbstractGrammarElementFinder {
 		return getLabelDefinitionAccess().getRule();
 	}
 
+	//LabelProperties:
+	//	commonProperties=CommonProperties ("text=" text=STRING name="LabelProperty")?;
+	public LabelPropertiesElements getLabelPropertiesAccess() {
+		return pLabelProperties;
+	}
+	
+	public ParserRule getLabelPropertiesRule() {
+		return getLabelPropertiesAccess().getRule();
+	}
+
 	//Interactiontype:
-	//	id=("Click" | "ChangeText");
+	//	id=("IfActivator" | "IfTextDisplay");
 	public InteractiontypeElements getInteractiontypeAccess() {
 		return pInteractiontype;
 	}
@@ -1091,6 +1743,24 @@ public class GuiDSLGrammarAccess extends AbstractGrammarElementFinder {
 	//	(" " | "\t" | "\r" | "\n" | ",")+;
 	public TerminalRule getWSRule() {
 		return tWS;
+	} 
+
+	//terminal TABNAME:
+	//	"[" ("\\" . / * 'b'|'t'|'n'|'f'|'r'|'u'|'"'|"'"|'\\' * / | !("[" | "]"))* "]";
+	public TerminalRule getTABNAMERule() {
+		return tTABNAME;
+	} 
+
+	//terminal INPUT_DESCRIPTION:
+	//	"<" ("\\" . / * 'b'|'t'|'n'|'f'|'r'|'u'|'"'|"'"|'\\' * / | !("<" | ">"))* ">";
+	public TerminalRule getINPUT_DESCRIPTIONRule() {
+		return tINPUT_DESCRIPTION;
+	} 
+
+	//terminal BOOLEAN:
+	//	"TRUE" | "FALSE";
+	public TerminalRule getBOOLEANRule() {
+		return tBOOLEAN;
 	} 
 
 	//terminal ID:

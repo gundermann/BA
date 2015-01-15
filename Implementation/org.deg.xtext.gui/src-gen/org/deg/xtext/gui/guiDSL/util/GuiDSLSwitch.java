@@ -79,6 +79,13 @@ public class GuiDSLSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case GuiDSLPackage.LAYOUT:
+      {
+        Layout layout = (Layout)theEObject;
+        T result = caseLayout(layout);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case GuiDSLPackage.STRUCTURE:
       {
         Structure structure = (Structure)theEObject;
@@ -181,12 +188,11 @@ public class GuiDSLSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case GuiDSLPackage.TAB_VIEW:
+      case GuiDSLPackage.TAB_VIEW_DEFINITION:
       {
-        TabView tabView = (TabView)theEObject;
-        T result = caseTabView(tabView);
-        if (result == null) result = caseComplexComponent(tabView);
-        if (result == null) result = caseDescriptionType(tabView);
+        TabViewDefinition tabViewDefinition = (TabViewDefinition)theEObject;
+        T result = caseTabViewDefinition(tabViewDefinition);
+        if (result == null) result = caseComponentDefinition(tabViewDefinition);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -213,6 +219,60 @@ public class GuiDSLSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case GuiDSLPackage.TEXTFIELD_DEFINITION:
+      {
+        TextfieldDefinition textfieldDefinition = (TextfieldDefinition)theEObject;
+        T result = caseTextfieldDefinition(textfieldDefinition);
+        if (result == null) result = caseComponentDefinition(textfieldDefinition);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case GuiDSLPackage.TEXTFIELD_PROPERTIES:
+      {
+        TextfieldProperties textfieldProperties = (TextfieldProperties)theEObject;
+        T result = caseTextfieldProperties(textfieldProperties);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case GuiDSLPackage.TEXTAREA_DEFINITION:
+      {
+        TextareaDefinition textareaDefinition = (TextareaDefinition)theEObject;
+        T result = caseTextareaDefinition(textareaDefinition);
+        if (result == null) result = caseComponentDefinition(textareaDefinition);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case GuiDSLPackage.TEXTAREA_PROPERTIES:
+      {
+        TextareaProperties textareaProperties = (TextareaProperties)theEObject;
+        T result = caseTextareaProperties(textareaProperties);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case GuiDSLPackage.TREE_DEFINITION:
+      {
+        TreeDefinition treeDefinition = (TreeDefinition)theEObject;
+        T result = caseTreeDefinition(treeDefinition);
+        if (result == null) result = caseComponentDefinition(treeDefinition);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case GuiDSLPackage.TABLE_DEFINITION:
+      {
+        TableDefinition tableDefinition = (TableDefinition)theEObject;
+        T result = caseTableDefinition(tableDefinition);
+        if (result == null) result = caseComponentDefinition(tableDefinition);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case GuiDSLPackage.INTERCHANGEABLE_DEFINITION:
+      {
+        InterchangeableDefinition interchangeableDefinition = (InterchangeableDefinition)theEObject;
+        T result = caseInterchangeableDefinition(interchangeableDefinition);
+        if (result == null) result = caseComponentDefinition(interchangeableDefinition);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case GuiDSLPackage.BUTTON_DEFINITION:
       {
         ButtonDefinition buttonDefinition = (ButtonDefinition)theEObject;
@@ -221,17 +281,17 @@ public class GuiDSLSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case GuiDSLPackage.PROPERTIES:
+      case GuiDSLPackage.BUTTON_PROPERTIES:
       {
-        Properties properties = (Properties)theEObject;
-        T result = caseProperties(properties);
+        ButtonProperties buttonProperties = (ButtonProperties)theEObject;
+        T result = caseButtonProperties(buttonProperties);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case GuiDSLPackage.PROPERTIES_DEFINITION:
+      case GuiDSLPackage.COMMON_PROPERTIES:
       {
-        PropertiesDefinition propertiesDefinition = (PropertiesDefinition)theEObject;
-        T result = casePropertiesDefinition(propertiesDefinition);
+        CommonProperties commonProperties = (CommonProperties)theEObject;
+        T result = caseCommonProperties(commonProperties);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -240,6 +300,13 @@ public class GuiDSLSwitch<T> extends Switch<T>
         LabelDefinition labelDefinition = (LabelDefinition)theEObject;
         T result = caseLabelDefinition(labelDefinition);
         if (result == null) result = caseComponentDefinition(labelDefinition);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case GuiDSLPackage.LABEL_PROPERTIES:
+      {
+        LabelProperties labelProperties = (LabelProperties)theEObject;
+        T result = caseLabelProperties(labelProperties);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -266,6 +333,22 @@ public class GuiDSLSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseUIDescription(UIDescription object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Layout</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Layout</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseLayout(Layout object)
   {
     return null;
   }
@@ -495,17 +578,17 @@ public class GuiDSLSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Tab View</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Tab View Definition</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Tab View</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Tab View Definition</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseTabView(TabView object)
+  public T caseTabViewDefinition(TabViewDefinition object)
   {
     return null;
   }
@@ -559,6 +642,118 @@ public class GuiDSLSwitch<T> extends Switch<T>
   }
 
   /**
+   * Returns the result of interpreting the object as an instance of '<em>Textfield Definition</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Textfield Definition</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseTextfieldDefinition(TextfieldDefinition object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Textfield Properties</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Textfield Properties</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseTextfieldProperties(TextfieldProperties object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Textarea Definition</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Textarea Definition</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseTextareaDefinition(TextareaDefinition object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Textarea Properties</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Textarea Properties</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseTextareaProperties(TextareaProperties object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Tree Definition</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Tree Definition</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseTreeDefinition(TreeDefinition object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Table Definition</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Table Definition</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseTableDefinition(TableDefinition object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Interchangeable Definition</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Interchangeable Definition</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseInterchangeableDefinition(InterchangeableDefinition object)
+  {
+    return null;
+  }
+
+  /**
    * Returns the result of interpreting the object as an instance of '<em>Button Definition</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -575,33 +770,33 @@ public class GuiDSLSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Properties</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Button Properties</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Properties</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Button Properties</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseProperties(Properties object)
+  public T caseButtonProperties(ButtonProperties object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Properties Definition</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Common Properties</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Properties Definition</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Common Properties</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T casePropertiesDefinition(PropertiesDefinition object)
+  public T caseCommonProperties(CommonProperties object)
   {
     return null;
   }
@@ -618,6 +813,22 @@ public class GuiDSLSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseLabelDefinition(LabelDefinition object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Label Properties</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Label Properties</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseLabelProperties(LabelProperties object)
   {
     return null;
   }

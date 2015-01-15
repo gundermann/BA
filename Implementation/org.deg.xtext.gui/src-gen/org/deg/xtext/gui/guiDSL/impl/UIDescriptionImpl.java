@@ -6,6 +6,7 @@ import java.util.Collection;
 
 import org.deg.xtext.gui.guiDSL.Definition;
 import org.deg.xtext.gui.guiDSL.GuiDSLPackage;
+import org.deg.xtext.gui.guiDSL.Layout;
 import org.deg.xtext.gui.guiDSL.Property;
 import org.deg.xtext.gui.guiDSL.Refinement;
 import org.deg.xtext.gui.guiDSL.Structure;
@@ -36,6 +37,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <ul>
  *   <li>{@link org.deg.xtext.gui.guiDSL.impl.UIDescriptionImpl#getTypeDefinition <em>Type Definition</em>}</li>
  *   <li>{@link org.deg.xtext.gui.guiDSL.impl.UIDescriptionImpl#getProperty <em>Property</em>}</li>
+ *   <li>{@link org.deg.xtext.gui.guiDSL.impl.UIDescriptionImpl#getLayout <em>Layout</em>}</li>
  *   <li>{@link org.deg.xtext.gui.guiDSL.impl.UIDescriptionImpl#getUsedDescriptions <em>Used Descriptions</em>}</li>
  *   <li>{@link org.deg.xtext.gui.guiDSL.impl.UIDescriptionImpl#getRefinements <em>Refinements</em>}</li>
  *   <li>{@link org.deg.xtext.gui.guiDSL.impl.UIDescriptionImpl#getDefinitions <em>Definitions</em>}</li>
@@ -66,6 +68,16 @@ public class UIDescriptionImpl extends MinimalEObjectImpl.Container implements U
    * @ordered
    */
   protected Property property;
+
+  /**
+   * The cached value of the '{@link #getLayout() <em>Layout</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getLayout()
+   * @generated
+   * @ordered
+   */
+  protected Layout layout;
 
   /**
    * The cached value of the '{@link #getUsedDescriptions() <em>Used Descriptions</em>}' containment reference list.
@@ -229,6 +241,54 @@ public class UIDescriptionImpl extends MinimalEObjectImpl.Container implements U
    * <!-- end-user-doc -->
    * @generated
    */
+  public Layout getLayout()
+  {
+    return layout;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetLayout(Layout newLayout, NotificationChain msgs)
+  {
+    Layout oldLayout = layout;
+    layout = newLayout;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GuiDSLPackage.UI_DESCRIPTION__LAYOUT, oldLayout, newLayout);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setLayout(Layout newLayout)
+  {
+    if (newLayout != layout)
+    {
+      NotificationChain msgs = null;
+      if (layout != null)
+        msgs = ((InternalEObject)layout).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GuiDSLPackage.UI_DESCRIPTION__LAYOUT, null, msgs);
+      if (newLayout != null)
+        msgs = ((InternalEObject)newLayout).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GuiDSLPackage.UI_DESCRIPTION__LAYOUT, null, msgs);
+      msgs = basicSetLayout(newLayout, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, GuiDSLPackage.UI_DESCRIPTION__LAYOUT, newLayout, newLayout));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EList<UsedDescriptions> getUsedDescriptions()
   {
     if (usedDescriptions == null)
@@ -328,6 +388,8 @@ public class UIDescriptionImpl extends MinimalEObjectImpl.Container implements U
         return basicSetTypeDefinition(null, msgs);
       case GuiDSLPackage.UI_DESCRIPTION__PROPERTY:
         return basicSetProperty(null, msgs);
+      case GuiDSLPackage.UI_DESCRIPTION__LAYOUT:
+        return basicSetLayout(null, msgs);
       case GuiDSLPackage.UI_DESCRIPTION__USED_DESCRIPTIONS:
         return ((InternalEList<?>)getUsedDescriptions()).basicRemove(otherEnd, msgs);
       case GuiDSLPackage.UI_DESCRIPTION__REFINEMENTS:
@@ -354,6 +416,8 @@ public class UIDescriptionImpl extends MinimalEObjectImpl.Container implements U
         return getTypeDefinition();
       case GuiDSLPackage.UI_DESCRIPTION__PROPERTY:
         return getProperty();
+      case GuiDSLPackage.UI_DESCRIPTION__LAYOUT:
+        return getLayout();
       case GuiDSLPackage.UI_DESCRIPTION__USED_DESCRIPTIONS:
         return getUsedDescriptions();
       case GuiDSLPackage.UI_DESCRIPTION__REFINEMENTS:
@@ -382,6 +446,9 @@ public class UIDescriptionImpl extends MinimalEObjectImpl.Container implements U
         return;
       case GuiDSLPackage.UI_DESCRIPTION__PROPERTY:
         setProperty((Property)newValue);
+        return;
+      case GuiDSLPackage.UI_DESCRIPTION__LAYOUT:
+        setLayout((Layout)newValue);
         return;
       case GuiDSLPackage.UI_DESCRIPTION__USED_DESCRIPTIONS:
         getUsedDescriptions().clear();
@@ -418,6 +485,9 @@ public class UIDescriptionImpl extends MinimalEObjectImpl.Container implements U
       case GuiDSLPackage.UI_DESCRIPTION__PROPERTY:
         setProperty((Property)null);
         return;
+      case GuiDSLPackage.UI_DESCRIPTION__LAYOUT:
+        setLayout((Layout)null);
+        return;
       case GuiDSLPackage.UI_DESCRIPTION__USED_DESCRIPTIONS:
         getUsedDescriptions().clear();
         return;
@@ -448,6 +518,8 @@ public class UIDescriptionImpl extends MinimalEObjectImpl.Container implements U
         return typeDefinition != null;
       case GuiDSLPackage.UI_DESCRIPTION__PROPERTY:
         return property != null;
+      case GuiDSLPackage.UI_DESCRIPTION__LAYOUT:
+        return layout != null;
       case GuiDSLPackage.UI_DESCRIPTION__USED_DESCRIPTIONS:
         return usedDescriptions != null && !usedDescriptions.isEmpty();
       case GuiDSLPackage.UI_DESCRIPTION__REFINEMENTS:

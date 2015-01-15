@@ -18,6 +18,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <p>
  * The following features are implemented:
  * <ul>
+ *   <li>{@link org.deg.xtext.gui.guiDSL.impl.MultiselectionImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.deg.xtext.gui.guiDSL.impl.MultiselectionImpl#getInputType <em>Input Type</em>}</li>
  * </ul>
  * </p>
@@ -26,6 +27,26 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  */
 public class MultiselectionImpl extends ComplexComponentImpl implements Multiselection
 {
+  /**
+   * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getName()
+   * @generated
+   * @ordered
+   */
+  protected static final String NAME_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getName()
+   * @generated
+   * @ordered
+   */
+  protected String name = NAME_EDEFAULT;
+
   /**
    * The default value of the '{@link #getInputType() <em>Input Type</em>}' attribute.
    * <!-- begin-user-doc -->
@@ -72,6 +93,29 @@ public class MultiselectionImpl extends ComplexComponentImpl implements Multisel
    * <!-- end-user-doc -->
    * @generated
    */
+  public String getName()
+  {
+    return name;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setName(String newName)
+  {
+    String oldName = name;
+    name = newName;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, GuiDSLPackage.MULTISELECTION__NAME, oldName, name));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public String getInputType()
   {
     return inputType;
@@ -100,6 +144,8 @@ public class MultiselectionImpl extends ComplexComponentImpl implements Multisel
   {
     switch (featureID)
     {
+      case GuiDSLPackage.MULTISELECTION__NAME:
+        return getName();
       case GuiDSLPackage.MULTISELECTION__INPUT_TYPE:
         return getInputType();
     }
@@ -116,6 +162,9 @@ public class MultiselectionImpl extends ComplexComponentImpl implements Multisel
   {
     switch (featureID)
     {
+      case GuiDSLPackage.MULTISELECTION__NAME:
+        setName((String)newValue);
+        return;
       case GuiDSLPackage.MULTISELECTION__INPUT_TYPE:
         setInputType((String)newValue);
         return;
@@ -133,6 +182,9 @@ public class MultiselectionImpl extends ComplexComponentImpl implements Multisel
   {
     switch (featureID)
     {
+      case GuiDSLPackage.MULTISELECTION__NAME:
+        setName(NAME_EDEFAULT);
+        return;
       case GuiDSLPackage.MULTISELECTION__INPUT_TYPE:
         setInputType(INPUT_TYPE_EDEFAULT);
         return;
@@ -150,6 +202,8 @@ public class MultiselectionImpl extends ComplexComponentImpl implements Multisel
   {
     switch (featureID)
     {
+      case GuiDSLPackage.MULTISELECTION__NAME:
+        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
       case GuiDSLPackage.MULTISELECTION__INPUT_TYPE:
         return INPUT_TYPE_EDEFAULT == null ? inputType != null : !INPUT_TYPE_EDEFAULT.equals(inputType);
     }
@@ -167,7 +221,9 @@ public class MultiselectionImpl extends ComplexComponentImpl implements Multisel
     if (eIsProxy()) return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (inputType: ");
+    result.append(" (name: ");
+    result.append(name);
+    result.append(", inputType: ");
     result.append(inputType);
     result.append(')');
     return result.toString();

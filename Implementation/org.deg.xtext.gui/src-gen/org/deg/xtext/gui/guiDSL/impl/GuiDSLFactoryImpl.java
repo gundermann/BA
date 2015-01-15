@@ -65,6 +65,7 @@ public class GuiDSLFactoryImpl extends EFactoryImpl implements GuiDSLFactory
     switch (eClass.getClassifierID())
     {
       case GuiDSLPackage.UI_DESCRIPTION: return createUIDescription();
+      case GuiDSLPackage.LAYOUT: return createLayout();
       case GuiDSLPackage.STRUCTURE: return createStructure();
       case GuiDSLPackage.ELEMENT: return createElement();
       case GuiDSLPackage.REFINEMENT: return createRefinement();
@@ -79,14 +80,22 @@ public class GuiDSLFactoryImpl extends EFactoryImpl implements GuiDSLFactory
       case GuiDSLPackage.TYPE: return createType();
       case GuiDSLPackage.UI_DESCRIPTION_IMPORT: return createUIDescriptionImport();
       case GuiDSLPackage.COMPLEX_COMPONENT: return createComplexComponent();
-      case GuiDSLPackage.TAB_VIEW: return createTabView();
+      case GuiDSLPackage.TAB_VIEW_DEFINITION: return createTabViewDefinition();
       case GuiDSLPackage.TAB_DEFINITION: return createTabDefinition();
       case GuiDSLPackage.MULTISELECTION: return createMultiselection();
       case GuiDSLPackage.COMPONENT_DEFINITION: return createComponentDefinition();
+      case GuiDSLPackage.TEXTFIELD_DEFINITION: return createTextfieldDefinition();
+      case GuiDSLPackage.TEXTFIELD_PROPERTIES: return createTextfieldProperties();
+      case GuiDSLPackage.TEXTAREA_DEFINITION: return createTextareaDefinition();
+      case GuiDSLPackage.TEXTAREA_PROPERTIES: return createTextareaProperties();
+      case GuiDSLPackage.TREE_DEFINITION: return createTreeDefinition();
+      case GuiDSLPackage.TABLE_DEFINITION: return createTableDefinition();
+      case GuiDSLPackage.INTERCHANGEABLE_DEFINITION: return createInterchangeableDefinition();
       case GuiDSLPackage.BUTTON_DEFINITION: return createButtonDefinition();
-      case GuiDSLPackage.PROPERTIES: return createProperties();
-      case GuiDSLPackage.PROPERTIES_DEFINITION: return createPropertiesDefinition();
+      case GuiDSLPackage.BUTTON_PROPERTIES: return createButtonProperties();
+      case GuiDSLPackage.COMMON_PROPERTIES: return createCommonProperties();
       case GuiDSLPackage.LABEL_DEFINITION: return createLabelDefinition();
+      case GuiDSLPackage.LABEL_PROPERTIES: return createLabelProperties();
       case GuiDSLPackage.INTERACTIONTYPE: return createInteractiontype();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
@@ -102,6 +111,17 @@ public class GuiDSLFactoryImpl extends EFactoryImpl implements GuiDSLFactory
   {
     UIDescriptionImpl uiDescription = new UIDescriptionImpl();
     return uiDescription;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Layout createLayout()
+  {
+    LayoutImpl layout = new LayoutImpl();
+    return layout;
   }
 
   /**
@@ -263,10 +283,10 @@ public class GuiDSLFactoryImpl extends EFactoryImpl implements GuiDSLFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public TabView createTabView()
+  public TabViewDefinition createTabViewDefinition()
   {
-    TabViewImpl tabView = new TabViewImpl();
-    return tabView;
+    TabViewDefinitionImpl tabViewDefinition = new TabViewDefinitionImpl();
+    return tabViewDefinition;
   }
 
   /**
@@ -307,6 +327,83 @@ public class GuiDSLFactoryImpl extends EFactoryImpl implements GuiDSLFactory
    * <!-- end-user-doc -->
    * @generated
    */
+  public TextfieldDefinition createTextfieldDefinition()
+  {
+    TextfieldDefinitionImpl textfieldDefinition = new TextfieldDefinitionImpl();
+    return textfieldDefinition;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public TextfieldProperties createTextfieldProperties()
+  {
+    TextfieldPropertiesImpl textfieldProperties = new TextfieldPropertiesImpl();
+    return textfieldProperties;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public TextareaDefinition createTextareaDefinition()
+  {
+    TextareaDefinitionImpl textareaDefinition = new TextareaDefinitionImpl();
+    return textareaDefinition;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public TextareaProperties createTextareaProperties()
+  {
+    TextareaPropertiesImpl textareaProperties = new TextareaPropertiesImpl();
+    return textareaProperties;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public TreeDefinition createTreeDefinition()
+  {
+    TreeDefinitionImpl treeDefinition = new TreeDefinitionImpl();
+    return treeDefinition;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public TableDefinition createTableDefinition()
+  {
+    TableDefinitionImpl tableDefinition = new TableDefinitionImpl();
+    return tableDefinition;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public InterchangeableDefinition createInterchangeableDefinition()
+  {
+    InterchangeableDefinitionImpl interchangeableDefinition = new InterchangeableDefinitionImpl();
+    return interchangeableDefinition;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public ButtonDefinition createButtonDefinition()
   {
     ButtonDefinitionImpl buttonDefinition = new ButtonDefinitionImpl();
@@ -318,10 +415,10 @@ public class GuiDSLFactoryImpl extends EFactoryImpl implements GuiDSLFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public Properties createProperties()
+  public ButtonProperties createButtonProperties()
   {
-    PropertiesImpl properties = new PropertiesImpl();
-    return properties;
+    ButtonPropertiesImpl buttonProperties = new ButtonPropertiesImpl();
+    return buttonProperties;
   }
 
   /**
@@ -329,10 +426,10 @@ public class GuiDSLFactoryImpl extends EFactoryImpl implements GuiDSLFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public PropertiesDefinition createPropertiesDefinition()
+  public CommonProperties createCommonProperties()
   {
-    PropertiesDefinitionImpl propertiesDefinition = new PropertiesDefinitionImpl();
-    return propertiesDefinition;
+    CommonPropertiesImpl commonProperties = new CommonPropertiesImpl();
+    return commonProperties;
   }
 
   /**
@@ -344,6 +441,17 @@ public class GuiDSLFactoryImpl extends EFactoryImpl implements GuiDSLFactory
   {
     LabelDefinitionImpl labelDefinition = new LabelDefinitionImpl();
     return labelDefinition;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public LabelProperties createLabelProperties()
+  {
+    LabelPropertiesImpl labelProperties = new LabelPropertiesImpl();
+    return labelProperties;
   }
 
   /**

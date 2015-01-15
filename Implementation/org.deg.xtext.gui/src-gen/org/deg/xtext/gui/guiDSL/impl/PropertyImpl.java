@@ -2,15 +2,18 @@
  */
 package org.deg.xtext.gui.guiDSL.impl;
 
+import java.util.Collection;
+
 import org.deg.xtext.gui.guiDSL.GuiDSLPackage;
 import org.deg.xtext.gui.guiDSL.Property;
 
-import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
+import org.eclipse.emf.ecore.util.EDataTypeEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -19,7 +22,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.deg.xtext.gui.guiDSL.impl.PropertyImpl#getPropertiesFile <em>Properties File</em>}</li>
+ *   <li>{@link org.deg.xtext.gui.guiDSL.impl.PropertyImpl#getPropertiesFiles <em>Properties Files</em>}</li>
  * </ul>
  * </p>
  *
@@ -28,24 +31,14 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 public class PropertyImpl extends MinimalEObjectImpl.Container implements Property
 {
   /**
-   * The default value of the '{@link #getPropertiesFile() <em>Properties File</em>}' attribute.
+   * The cached value of the '{@link #getPropertiesFiles() <em>Properties Files</em>}' attribute list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getPropertiesFile()
+   * @see #getPropertiesFiles()
    * @generated
    * @ordered
    */
-  protected static final String PROPERTIES_FILE_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getPropertiesFile() <em>Properties File</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getPropertiesFile()
-   * @generated
-   * @ordered
-   */
-  protected String propertiesFile = PROPERTIES_FILE_EDEFAULT;
+  protected EList<String> propertiesFiles;
 
   /**
    * <!-- begin-user-doc -->
@@ -73,22 +66,13 @@ public class PropertyImpl extends MinimalEObjectImpl.Container implements Proper
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getPropertiesFile()
+  public EList<String> getPropertiesFiles()
   {
-    return propertiesFile;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setPropertiesFile(String newPropertiesFile)
-  {
-    String oldPropertiesFile = propertiesFile;
-    propertiesFile = newPropertiesFile;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, GuiDSLPackage.PROPERTY__PROPERTIES_FILE, oldPropertiesFile, propertiesFile));
+    if (propertiesFiles == null)
+    {
+      propertiesFiles = new EDataTypeEList<String>(String.class, this, GuiDSLPackage.PROPERTY__PROPERTIES_FILES);
+    }
+    return propertiesFiles;
   }
 
   /**
@@ -101,8 +85,8 @@ public class PropertyImpl extends MinimalEObjectImpl.Container implements Proper
   {
     switch (featureID)
     {
-      case GuiDSLPackage.PROPERTY__PROPERTIES_FILE:
-        return getPropertiesFile();
+      case GuiDSLPackage.PROPERTY__PROPERTIES_FILES:
+        return getPropertiesFiles();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -112,13 +96,15 @@ public class PropertyImpl extends MinimalEObjectImpl.Container implements Proper
    * <!-- end-user-doc -->
    * @generated
    */
+  @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {
     switch (featureID)
     {
-      case GuiDSLPackage.PROPERTY__PROPERTIES_FILE:
-        setPropertiesFile((String)newValue);
+      case GuiDSLPackage.PROPERTY__PROPERTIES_FILES:
+        getPropertiesFiles().clear();
+        getPropertiesFiles().addAll((Collection<? extends String>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -134,8 +120,8 @@ public class PropertyImpl extends MinimalEObjectImpl.Container implements Proper
   {
     switch (featureID)
     {
-      case GuiDSLPackage.PROPERTY__PROPERTIES_FILE:
-        setPropertiesFile(PROPERTIES_FILE_EDEFAULT);
+      case GuiDSLPackage.PROPERTY__PROPERTIES_FILES:
+        getPropertiesFiles().clear();
         return;
     }
     super.eUnset(featureID);
@@ -151,8 +137,8 @@ public class PropertyImpl extends MinimalEObjectImpl.Container implements Proper
   {
     switch (featureID)
     {
-      case GuiDSLPackage.PROPERTY__PROPERTIES_FILE:
-        return PROPERTIES_FILE_EDEFAULT == null ? propertiesFile != null : !PROPERTIES_FILE_EDEFAULT.equals(propertiesFile);
+      case GuiDSLPackage.PROPERTY__PROPERTIES_FILES:
+        return propertiesFiles != null && !propertiesFiles.isEmpty();
     }
     return super.eIsSet(featureID);
   }
@@ -168,8 +154,8 @@ public class PropertyImpl extends MinimalEObjectImpl.Container implements Proper
     if (eIsProxy()) return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (propertiesFile: ");
-    result.append(propertiesFile);
+    result.append(" (propertiesFiles: ");
+    result.append(propertiesFiles);
     result.append(')');
     return result.toString();
   }

@@ -4,13 +4,10 @@ package org.deg.xtext.gui.guiDSL.impl;
 
 import org.deg.xtext.gui.guiDSL.ComponentDefinition;
 import org.deg.xtext.gui.guiDSL.GuiDSLPackage;
-import org.deg.xtext.gui.guiDSL.Properties;
 
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
@@ -24,7 +21,6 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <ul>
  *   <li>{@link org.deg.xtext.gui.guiDSL.impl.ComponentDefinitionImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.deg.xtext.gui.guiDSL.impl.ComponentDefinitionImpl#getId <em>Id</em>}</li>
- *   <li>{@link org.deg.xtext.gui.guiDSL.impl.ComponentDefinitionImpl#getProperties <em>Properties</em>}</li>
  * </ul>
  * </p>
  *
@@ -71,16 +67,6 @@ public class ComponentDefinitionImpl extends MinimalEObjectImpl.Container implem
    * @ordered
    */
   protected String id = ID_EDEFAULT;
-
-  /**
-   * The cached value of the '{@link #getProperties() <em>Properties</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getProperties()
-   * @generated
-   * @ordered
-   */
-  protected Properties properties;
 
   /**
    * <!-- begin-user-doc -->
@@ -154,70 +140,6 @@ public class ComponentDefinitionImpl extends MinimalEObjectImpl.Container implem
    * <!-- end-user-doc -->
    * @generated
    */
-  public Properties getProperties()
-  {
-    return properties;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public NotificationChain basicSetProperties(Properties newProperties, NotificationChain msgs)
-  {
-    Properties oldProperties = properties;
-    properties = newProperties;
-    if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GuiDSLPackage.COMPONENT_DEFINITION__PROPERTIES, oldProperties, newProperties);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setProperties(Properties newProperties)
-  {
-    if (newProperties != properties)
-    {
-      NotificationChain msgs = null;
-      if (properties != null)
-        msgs = ((InternalEObject)properties).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GuiDSLPackage.COMPONENT_DEFINITION__PROPERTIES, null, msgs);
-      if (newProperties != null)
-        msgs = ((InternalEObject)newProperties).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GuiDSLPackage.COMPONENT_DEFINITION__PROPERTIES, null, msgs);
-      msgs = basicSetProperties(newProperties, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, GuiDSLPackage.COMPONENT_DEFINITION__PROPERTIES, newProperties, newProperties));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
-  {
-    switch (featureID)
-    {
-      case GuiDSLPackage.COMPONENT_DEFINITION__PROPERTIES:
-        return basicSetProperties(null, msgs);
-    }
-    return super.eInverseRemove(otherEnd, featureID, msgs);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
@@ -227,8 +149,6 @@ public class ComponentDefinitionImpl extends MinimalEObjectImpl.Container implem
         return getName();
       case GuiDSLPackage.COMPONENT_DEFINITION__ID:
         return getId();
-      case GuiDSLPackage.COMPONENT_DEFINITION__PROPERTIES:
-        return getProperties();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -248,9 +168,6 @@ public class ComponentDefinitionImpl extends MinimalEObjectImpl.Container implem
         return;
       case GuiDSLPackage.COMPONENT_DEFINITION__ID:
         setId((String)newValue);
-        return;
-      case GuiDSLPackage.COMPONENT_DEFINITION__PROPERTIES:
-        setProperties((Properties)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -272,9 +189,6 @@ public class ComponentDefinitionImpl extends MinimalEObjectImpl.Container implem
       case GuiDSLPackage.COMPONENT_DEFINITION__ID:
         setId(ID_EDEFAULT);
         return;
-      case GuiDSLPackage.COMPONENT_DEFINITION__PROPERTIES:
-        setProperties((Properties)null);
-        return;
     }
     super.eUnset(featureID);
   }
@@ -293,8 +207,6 @@ public class ComponentDefinitionImpl extends MinimalEObjectImpl.Container implem
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
       case GuiDSLPackage.COMPONENT_DEFINITION__ID:
         return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
-      case GuiDSLPackage.COMPONENT_DEFINITION__PROPERTIES:
-        return properties != null;
     }
     return super.eIsSet(featureID);
   }

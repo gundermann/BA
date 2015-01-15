@@ -3,7 +3,9 @@
 package org.deg.xtext.gui.guiDSL.impl;
 
 import org.deg.xtext.gui.guiDSL.ButtonDefinition;
+import org.deg.xtext.gui.guiDSL.ButtonProperties;
 import org.deg.xtext.gui.guiDSL.ButtonRefinement;
+import org.deg.xtext.gui.guiDSL.CommonProperties;
 import org.deg.xtext.gui.guiDSL.ComplexComponent;
 import org.deg.xtext.gui.guiDSL.ComponentDefinition;
 import org.deg.xtext.gui.guiDSL.ComponentRefinement;
@@ -13,16 +15,23 @@ import org.deg.xtext.gui.guiDSL.Element;
 import org.deg.xtext.gui.guiDSL.GuiDSLFactory;
 import org.deg.xtext.gui.guiDSL.GuiDSLPackage;
 import org.deg.xtext.gui.guiDSL.Interactiontype;
+import org.deg.xtext.gui.guiDSL.InterchangeableDefinition;
 import org.deg.xtext.gui.guiDSL.LabelDefinition;
+import org.deg.xtext.gui.guiDSL.LabelProperties;
 import org.deg.xtext.gui.guiDSL.LabelRefinement;
+import org.deg.xtext.gui.guiDSL.Layout;
 import org.deg.xtext.gui.guiDSL.Multiselection;
-import org.deg.xtext.gui.guiDSL.Properties;
-import org.deg.xtext.gui.guiDSL.PropertiesDefinition;
 import org.deg.xtext.gui.guiDSL.Property;
 import org.deg.xtext.gui.guiDSL.Refinement;
 import org.deg.xtext.gui.guiDSL.Structure;
 import org.deg.xtext.gui.guiDSL.TabDefinition;
-import org.deg.xtext.gui.guiDSL.TabView;
+import org.deg.xtext.gui.guiDSL.TabViewDefinition;
+import org.deg.xtext.gui.guiDSL.TableDefinition;
+import org.deg.xtext.gui.guiDSL.TextareaDefinition;
+import org.deg.xtext.gui.guiDSL.TextareaProperties;
+import org.deg.xtext.gui.guiDSL.TextfieldDefinition;
+import org.deg.xtext.gui.guiDSL.TextfieldProperties;
+import org.deg.xtext.gui.guiDSL.TreeDefinition;
 import org.deg.xtext.gui.guiDSL.Type;
 import org.deg.xtext.gui.guiDSL.TypeDefinition;
 import org.deg.xtext.gui.guiDSL.UIDescription;
@@ -50,6 +59,13 @@ public class GuiDSLPackageImpl extends EPackageImpl implements GuiDSLPackage
    * @generated
    */
   private EClass uiDescriptionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass layoutEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -154,7 +170,7 @@ public class GuiDSLPackageImpl extends EPackageImpl implements GuiDSLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass tabViewEClass = null;
+  private EClass tabViewDefinitionEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -182,6 +198,55 @@ public class GuiDSLPackageImpl extends EPackageImpl implements GuiDSLPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  private EClass textfieldDefinitionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass textfieldPropertiesEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass textareaDefinitionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass textareaPropertiesEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass treeDefinitionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass tableDefinitionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass interchangeableDefinitionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   private EClass buttonDefinitionEClass = null;
 
   /**
@@ -189,14 +254,14 @@ public class GuiDSLPackageImpl extends EPackageImpl implements GuiDSLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass propertiesEClass = null;
+  private EClass buttonPropertiesEClass = null;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass propertiesDefinitionEClass = null;
+  private EClass commonPropertiesEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -204,6 +269,13 @@ public class GuiDSLPackageImpl extends EPackageImpl implements GuiDSLPackage
    * @generated
    */
   private EClass labelDefinitionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass labelPropertiesEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -310,7 +382,7 @@ public class GuiDSLPackageImpl extends EPackageImpl implements GuiDSLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getUIDescription_UsedDescriptions()
+  public EReference getUIDescription_Layout()
   {
     return (EReference)uiDescriptionEClass.getEStructuralFeatures().get(2);
   }
@@ -320,7 +392,7 @@ public class GuiDSLPackageImpl extends EPackageImpl implements GuiDSLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getUIDescription_Refinements()
+  public EReference getUIDescription_UsedDescriptions()
   {
     return (EReference)uiDescriptionEClass.getEStructuralFeatures().get(3);
   }
@@ -330,7 +402,7 @@ public class GuiDSLPackageImpl extends EPackageImpl implements GuiDSLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getUIDescription_Definitions()
+  public EReference getUIDescription_Refinements()
   {
     return (EReference)uiDescriptionEClass.getEStructuralFeatures().get(4);
   }
@@ -340,9 +412,39 @@ public class GuiDSLPackageImpl extends EPackageImpl implements GuiDSLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getUIDescription_Structure()
+  public EReference getUIDescription_Definitions()
   {
     return (EReference)uiDescriptionEClass.getEStructuralFeatures().get(5);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getUIDescription_Structure()
+  {
+    return (EReference)uiDescriptionEClass.getEStructuralFeatures().get(6);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getLayout()
+  {
+    return layoutEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getLayout_LayoutFiles()
+  {
+    return (EAttribute)layoutEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -450,9 +552,9 @@ public class GuiDSLPackageImpl extends EPackageImpl implements GuiDSLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getComponentRefinement_Properties()
+  public EClass getButtonRefinement()
   {
-    return (EReference)componentRefinementEClass.getEStructuralFeatures().get(2);
+    return buttonRefinementEClass;
   }
 
   /**
@@ -460,9 +562,9 @@ public class GuiDSLPackageImpl extends EPackageImpl implements GuiDSLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getButtonRefinement()
+  public EReference getButtonRefinement_Properties()
   {
-    return buttonRefinementEClass;
+    return (EReference)buttonRefinementEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -480,6 +582,16 @@ public class GuiDSLPackageImpl extends EPackageImpl implements GuiDSLPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EReference getLabelRefinement_Properties()
+  {
+    return (EReference)labelRefinementEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getProperty()
   {
     return propertyEClass;
@@ -490,7 +602,7 @@ public class GuiDSLPackageImpl extends EPackageImpl implements GuiDSLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getProperty_PropertiesFile()
+  public EAttribute getProperty_PropertiesFiles()
   {
     return (EAttribute)propertyEClass.getEStructuralFeatures().get(0);
   }
@@ -630,9 +742,9 @@ public class GuiDSLPackageImpl extends EPackageImpl implements GuiDSLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getComplexComponent_Name()
+  public EClass getTabViewDefinition()
   {
-    return (EAttribute)complexComponentEClass.getEStructuralFeatures().get(0);
+    return tabViewDefinitionEClass;
   }
 
   /**
@@ -640,9 +752,9 @@ public class GuiDSLPackageImpl extends EPackageImpl implements GuiDSLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getTabView()
+  public EReference getTabViewDefinition_Tabs()
   {
-    return tabViewEClass;
+    return (EReference)tabViewDefinitionEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -650,9 +762,9 @@ public class GuiDSLPackageImpl extends EPackageImpl implements GuiDSLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getTabView_Tabs()
+  public EReference getTabViewDefinition_Properties()
   {
-    return (EReference)tabViewEClass.getEStructuralFeatures().get(0);
+    return (EReference)tabViewDefinitionEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -690,9 +802,19 @@ public class GuiDSLPackageImpl extends EPackageImpl implements GuiDSLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getMultiselection_InputType()
+  public EAttribute getMultiselection_Name()
   {
     return (EAttribute)multiselectionEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getMultiselection_InputType()
+  {
+    return (EAttribute)multiselectionEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -730,9 +852,199 @@ public class GuiDSLPackageImpl extends EPackageImpl implements GuiDSLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getComponentDefinition_Properties()
+  public EClass getTextfieldDefinition()
   {
-    return (EReference)componentDefinitionEClass.getEStructuralFeatures().get(2);
+    return textfieldDefinitionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getTextfieldDefinition_Properties()
+  {
+    return (EReference)textfieldDefinitionEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getTextfieldProperties()
+  {
+    return textfieldPropertiesEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getTextfieldProperties_CommonProperties()
+  {
+    return (EReference)textfieldPropertiesEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getTextfieldProperties_Text()
+  {
+    return (EAttribute)textfieldPropertiesEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getTextfieldProperties_Editable()
+  {
+    return (EAttribute)textfieldPropertiesEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getTextareaDefinition()
+  {
+    return textareaDefinitionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getTextareaDefinition_Properties()
+  {
+    return (EReference)textareaDefinitionEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getTextareaProperties()
+  {
+    return textareaPropertiesEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getTextareaProperties_CommonProperties()
+  {
+    return (EReference)textareaPropertiesEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getTextareaProperties_Text()
+  {
+    return (EAttribute)textareaPropertiesEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getTextareaProperties_Editable()
+  {
+    return (EAttribute)textareaPropertiesEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getTreeDefinition()
+  {
+    return treeDefinitionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getTreeDefinition_InputType()
+  {
+    return (EAttribute)treeDefinitionEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getTreeDefinition_Properties()
+  {
+    return (EReference)treeDefinitionEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getTableDefinition()
+  {
+    return tableDefinitionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getTableDefinition_InputType()
+  {
+    return (EAttribute)tableDefinitionEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getTableDefinition_Properties()
+  {
+    return (EReference)tableDefinitionEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getInterchangeableDefinition()
+  {
+    return interchangeableDefinitionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getInterchangeableDefinition_Properties()
+  {
+    return (EReference)interchangeableDefinitionEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -750,9 +1062,9 @@ public class GuiDSLPackageImpl extends EPackageImpl implements GuiDSLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getProperties()
+  public EReference getButtonDefinition_Properties()
   {
-    return propertiesEClass;
+    return (EReference)buttonDefinitionEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -760,9 +1072,9 @@ public class GuiDSLPackageImpl extends EPackageImpl implements GuiDSLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getProperties_PropertiesDefinitions()
+  public EClass getButtonProperties()
   {
-    return (EReference)propertiesEClass.getEStructuralFeatures().get(0);
+    return buttonPropertiesEClass;
   }
 
   /**
@@ -770,9 +1082,9 @@ public class GuiDSLPackageImpl extends EPackageImpl implements GuiDSLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getPropertiesDefinition()
+  public EReference getButtonProperties_CommonProperties()
   {
-    return propertiesDefinitionEClass;
+    return (EReference)buttonPropertiesEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -780,9 +1092,9 @@ public class GuiDSLPackageImpl extends EPackageImpl implements GuiDSLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getPropertiesDefinition_PropertyKey()
+  public EAttribute getButtonProperties_Text()
   {
-    return (EAttribute)propertiesDefinitionEClass.getEStructuralFeatures().get(0);
+    return (EAttribute)buttonPropertiesEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -790,9 +1102,9 @@ public class GuiDSLPackageImpl extends EPackageImpl implements GuiDSLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getPropertiesDefinition_Text()
+  public EClass getCommonProperties()
   {
-    return (EAttribute)propertiesDefinitionEClass.getEStructuralFeatures().get(1);
+    return commonPropertiesEClass;
   }
 
   /**
@@ -800,9 +1112,39 @@ public class GuiDSLPackageImpl extends EPackageImpl implements GuiDSLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getPropertiesDefinition_Interactiontype()
+  public EAttribute getCommonProperties_Name()
   {
-    return (EReference)propertiesDefinitionEClass.getEStructuralFeatures().get(2);
+    return (EAttribute)commonPropertiesEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getCommonProperties_PropertyKey()
+  {
+    return (EAttribute)commonPropertiesEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getCommonProperties_LayoutKey()
+  {
+    return (EAttribute)commonPropertiesEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getCommonProperties_Interactiontype()
+  {
+    return (EReference)commonPropertiesEClass.getEStructuralFeatures().get(3);
   }
 
   /**
@@ -813,6 +1155,56 @@ public class GuiDSLPackageImpl extends EPackageImpl implements GuiDSLPackage
   public EClass getLabelDefinition()
   {
     return labelDefinitionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getLabelDefinition_Properties()
+  {
+    return (EReference)labelDefinitionEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getLabelProperties()
+  {
+    return labelPropertiesEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getLabelProperties_CommonProperties()
+  {
+    return (EReference)labelPropertiesEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getLabelProperties_Text()
+  {
+    return (EAttribute)labelPropertiesEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getLabelProperties_Name()
+  {
+    return (EAttribute)labelPropertiesEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -868,10 +1260,14 @@ public class GuiDSLPackageImpl extends EPackageImpl implements GuiDSLPackage
     uiDescriptionEClass = createEClass(UI_DESCRIPTION);
     createEReference(uiDescriptionEClass, UI_DESCRIPTION__TYPE_DEFINITION);
     createEReference(uiDescriptionEClass, UI_DESCRIPTION__PROPERTY);
+    createEReference(uiDescriptionEClass, UI_DESCRIPTION__LAYOUT);
     createEReference(uiDescriptionEClass, UI_DESCRIPTION__USED_DESCRIPTIONS);
     createEReference(uiDescriptionEClass, UI_DESCRIPTION__REFINEMENTS);
     createEReference(uiDescriptionEClass, UI_DESCRIPTION__DEFINITIONS);
     createEReference(uiDescriptionEClass, UI_DESCRIPTION__STRUCTURE);
+
+    layoutEClass = createEClass(LAYOUT);
+    createEAttribute(layoutEClass, LAYOUT__LAYOUT_FILES);
 
     structureEClass = createEClass(STRUCTURE);
     createEAttribute(structureEClass, STRUCTURE__NAME);
@@ -886,14 +1282,15 @@ public class GuiDSLPackageImpl extends EPackageImpl implements GuiDSLPackage
     componentRefinementEClass = createEClass(COMPONENT_REFINEMENT);
     createEAttribute(componentRefinementEClass, COMPONENT_REFINEMENT__NAME);
     createEAttribute(componentRefinementEClass, COMPONENT_REFINEMENT__ID);
-    createEReference(componentRefinementEClass, COMPONENT_REFINEMENT__PROPERTIES);
 
     buttonRefinementEClass = createEClass(BUTTON_REFINEMENT);
+    createEReference(buttonRefinementEClass, BUTTON_REFINEMENT__PROPERTIES);
 
     labelRefinementEClass = createEClass(LABEL_REFINEMENT);
+    createEReference(labelRefinementEClass, LABEL_REFINEMENT__PROPERTIES);
 
     propertyEClass = createEClass(PROPERTY);
-    createEAttribute(propertyEClass, PROPERTY__PROPERTIES_FILE);
+    createEAttribute(propertyEClass, PROPERTY__PROPERTIES_FILES);
 
     usedDescriptionsEClass = createEClass(USED_DESCRIPTIONS);
     createEReference(usedDescriptionsEClass, USED_DESCRIPTIONS__DESCRIPTION);
@@ -914,33 +1311,69 @@ public class GuiDSLPackageImpl extends EPackageImpl implements GuiDSLPackage
     createEAttribute(uiDescriptionImportEClass, UI_DESCRIPTION_IMPORT__DESCRIPTION_NAME);
 
     complexComponentEClass = createEClass(COMPLEX_COMPONENT);
-    createEAttribute(complexComponentEClass, COMPLEX_COMPONENT__NAME);
 
-    tabViewEClass = createEClass(TAB_VIEW);
-    createEReference(tabViewEClass, TAB_VIEW__TABS);
+    tabViewDefinitionEClass = createEClass(TAB_VIEW_DEFINITION);
+    createEReference(tabViewDefinitionEClass, TAB_VIEW_DEFINITION__TABS);
+    createEReference(tabViewDefinitionEClass, TAB_VIEW_DEFINITION__PROPERTIES);
 
     tabDefinitionEClass = createEClass(TAB_DEFINITION);
     createEAttribute(tabDefinitionEClass, TAB_DEFINITION__NAME);
 
     multiselectionEClass = createEClass(MULTISELECTION);
+    createEAttribute(multiselectionEClass, MULTISELECTION__NAME);
     createEAttribute(multiselectionEClass, MULTISELECTION__INPUT_TYPE);
 
     componentDefinitionEClass = createEClass(COMPONENT_DEFINITION);
     createEAttribute(componentDefinitionEClass, COMPONENT_DEFINITION__NAME);
     createEAttribute(componentDefinitionEClass, COMPONENT_DEFINITION__ID);
-    createEReference(componentDefinitionEClass, COMPONENT_DEFINITION__PROPERTIES);
+
+    textfieldDefinitionEClass = createEClass(TEXTFIELD_DEFINITION);
+    createEReference(textfieldDefinitionEClass, TEXTFIELD_DEFINITION__PROPERTIES);
+
+    textfieldPropertiesEClass = createEClass(TEXTFIELD_PROPERTIES);
+    createEReference(textfieldPropertiesEClass, TEXTFIELD_PROPERTIES__COMMON_PROPERTIES);
+    createEAttribute(textfieldPropertiesEClass, TEXTFIELD_PROPERTIES__TEXT);
+    createEAttribute(textfieldPropertiesEClass, TEXTFIELD_PROPERTIES__EDITABLE);
+
+    textareaDefinitionEClass = createEClass(TEXTAREA_DEFINITION);
+    createEReference(textareaDefinitionEClass, TEXTAREA_DEFINITION__PROPERTIES);
+
+    textareaPropertiesEClass = createEClass(TEXTAREA_PROPERTIES);
+    createEReference(textareaPropertiesEClass, TEXTAREA_PROPERTIES__COMMON_PROPERTIES);
+    createEAttribute(textareaPropertiesEClass, TEXTAREA_PROPERTIES__TEXT);
+    createEAttribute(textareaPropertiesEClass, TEXTAREA_PROPERTIES__EDITABLE);
+
+    treeDefinitionEClass = createEClass(TREE_DEFINITION);
+    createEAttribute(treeDefinitionEClass, TREE_DEFINITION__INPUT_TYPE);
+    createEReference(treeDefinitionEClass, TREE_DEFINITION__PROPERTIES);
+
+    tableDefinitionEClass = createEClass(TABLE_DEFINITION);
+    createEAttribute(tableDefinitionEClass, TABLE_DEFINITION__INPUT_TYPE);
+    createEReference(tableDefinitionEClass, TABLE_DEFINITION__PROPERTIES);
+
+    interchangeableDefinitionEClass = createEClass(INTERCHANGEABLE_DEFINITION);
+    createEReference(interchangeableDefinitionEClass, INTERCHANGEABLE_DEFINITION__PROPERTIES);
 
     buttonDefinitionEClass = createEClass(BUTTON_DEFINITION);
+    createEReference(buttonDefinitionEClass, BUTTON_DEFINITION__PROPERTIES);
 
-    propertiesEClass = createEClass(PROPERTIES);
-    createEReference(propertiesEClass, PROPERTIES__PROPERTIES_DEFINITIONS);
+    buttonPropertiesEClass = createEClass(BUTTON_PROPERTIES);
+    createEReference(buttonPropertiesEClass, BUTTON_PROPERTIES__COMMON_PROPERTIES);
+    createEAttribute(buttonPropertiesEClass, BUTTON_PROPERTIES__TEXT);
 
-    propertiesDefinitionEClass = createEClass(PROPERTIES_DEFINITION);
-    createEAttribute(propertiesDefinitionEClass, PROPERTIES_DEFINITION__PROPERTY_KEY);
-    createEAttribute(propertiesDefinitionEClass, PROPERTIES_DEFINITION__TEXT);
-    createEReference(propertiesDefinitionEClass, PROPERTIES_DEFINITION__INTERACTIONTYPE);
+    commonPropertiesEClass = createEClass(COMMON_PROPERTIES);
+    createEAttribute(commonPropertiesEClass, COMMON_PROPERTIES__NAME);
+    createEAttribute(commonPropertiesEClass, COMMON_PROPERTIES__PROPERTY_KEY);
+    createEAttribute(commonPropertiesEClass, COMMON_PROPERTIES__LAYOUT_KEY);
+    createEReference(commonPropertiesEClass, COMMON_PROPERTIES__INTERACTIONTYPE);
 
     labelDefinitionEClass = createEClass(LABEL_DEFINITION);
+    createEReference(labelDefinitionEClass, LABEL_DEFINITION__PROPERTIES);
+
+    labelPropertiesEClass = createEClass(LABEL_PROPERTIES);
+    createEReference(labelPropertiesEClass, LABEL_PROPERTIES__COMMON_PROPERTIES);
+    createEAttribute(labelPropertiesEClass, LABEL_PROPERTIES__TEXT);
+    createEAttribute(labelPropertiesEClass, LABEL_PROPERTIES__NAME);
 
     interactiontypeEClass = createEClass(INTERACTIONTYPE);
     createEAttribute(interactiontypeEClass, INTERACTIONTYPE__ID);
@@ -979,8 +1412,13 @@ public class GuiDSLPackageImpl extends EPackageImpl implements GuiDSLPackage
     labelRefinementEClass.getESuperTypes().add(this.getComponentRefinement());
     uiDescriptionImportEClass.getESuperTypes().add(this.getDescriptionType());
     complexComponentEClass.getESuperTypes().add(this.getDescriptionType());
-    tabViewEClass.getESuperTypes().add(this.getComplexComponent());
+    tabViewDefinitionEClass.getESuperTypes().add(this.getComponentDefinition());
     multiselectionEClass.getESuperTypes().add(this.getComplexComponent());
+    textfieldDefinitionEClass.getESuperTypes().add(this.getComponentDefinition());
+    textareaDefinitionEClass.getESuperTypes().add(this.getComponentDefinition());
+    treeDefinitionEClass.getESuperTypes().add(this.getComponentDefinition());
+    tableDefinitionEClass.getESuperTypes().add(this.getComponentDefinition());
+    interchangeableDefinitionEClass.getESuperTypes().add(this.getComponentDefinition());
     buttonDefinitionEClass.getESuperTypes().add(this.getComponentDefinition());
     labelDefinitionEClass.getESuperTypes().add(this.getComponentDefinition());
 
@@ -988,10 +1426,14 @@ public class GuiDSLPackageImpl extends EPackageImpl implements GuiDSLPackage
     initEClass(uiDescriptionEClass, UIDescription.class, "UIDescription", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getUIDescription_TypeDefinition(), this.getTypeDefinition(), null, "typeDefinition", null, 0, 1, UIDescription.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getUIDescription_Property(), this.getProperty(), null, "property", null, 0, 1, UIDescription.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getUIDescription_Layout(), this.getLayout(), null, "layout", null, 0, 1, UIDescription.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getUIDescription_UsedDescriptions(), this.getUsedDescriptions(), null, "usedDescriptions", null, 0, -1, UIDescription.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getUIDescription_Refinements(), this.getRefinement(), null, "refinements", null, 0, -1, UIDescription.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getUIDescription_Definitions(), this.getDefinition(), null, "definitions", null, 0, -1, UIDescription.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getUIDescription_Structure(), this.getStructure(), null, "structure", null, 0, 1, UIDescription.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(layoutEClass, Layout.class, "Layout", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getLayout_LayoutFiles(), ecorePackage.getEString(), "layoutFiles", null, 0, -1, Layout.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(structureEClass, Structure.class, "Structure", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getStructure_Name(), ecorePackage.getEString(), "name", null, 0, 1, Structure.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1006,14 +1448,15 @@ public class GuiDSLPackageImpl extends EPackageImpl implements GuiDSLPackage
     initEClass(componentRefinementEClass, ComponentRefinement.class, "ComponentRefinement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getComponentRefinement_Name(), ecorePackage.getEString(), "name", null, 0, 1, ComponentRefinement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getComponentRefinement_Id(), ecorePackage.getEString(), "id", null, 0, 1, ComponentRefinement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getComponentRefinement_Properties(), this.getProperties(), null, "properties", null, 0, 1, ComponentRefinement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(buttonRefinementEClass, ButtonRefinement.class, "ButtonRefinement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getButtonRefinement_Properties(), this.getButtonProperties(), null, "properties", null, 0, 1, ButtonRefinement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(labelRefinementEClass, LabelRefinement.class, "LabelRefinement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getLabelRefinement_Properties(), this.getLabelProperties(), null, "properties", null, 0, 1, LabelRefinement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(propertyEClass, Property.class, "Property", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getProperty_PropertiesFile(), ecorePackage.getEString(), "propertiesFile", null, 0, 1, Property.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getProperty_PropertiesFiles(), ecorePackage.getEString(), "propertiesFiles", null, 0, -1, Property.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(usedDescriptionsEClass, UsedDescriptions.class, "UsedDescriptions", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getUsedDescriptions_Description(), this.getDescriptionType(), null, "description", null, 0, 1, UsedDescriptions.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1034,33 +1477,69 @@ public class GuiDSLPackageImpl extends EPackageImpl implements GuiDSLPackage
     initEAttribute(getUIDescriptionImport_DescriptionName(), ecorePackage.getEString(), "descriptionName", null, 0, 1, UIDescriptionImport.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(complexComponentEClass, ComplexComponent.class, "ComplexComponent", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getComplexComponent_Name(), ecorePackage.getEString(), "name", null, 0, 1, ComplexComponent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(tabViewEClass, TabView.class, "TabView", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getTabView_Tabs(), this.getTabDefinition(), null, "tabs", null, 0, -1, TabView.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(tabViewDefinitionEClass, TabViewDefinition.class, "TabViewDefinition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getTabViewDefinition_Tabs(), this.getTabDefinition(), null, "tabs", null, 0, -1, TabViewDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getTabViewDefinition_Properties(), this.getCommonProperties(), null, "properties", null, 0, 1, TabViewDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(tabDefinitionEClass, TabDefinition.class, "TabDefinition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getTabDefinition_Name(), ecorePackage.getEString(), "name", null, 0, 1, TabDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(multiselectionEClass, Multiselection.class, "Multiselection", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getMultiselection_Name(), ecorePackage.getEString(), "name", null, 0, 1, Multiselection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getMultiselection_InputType(), ecorePackage.getEString(), "inputType", null, 0, 1, Multiselection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(componentDefinitionEClass, ComponentDefinition.class, "ComponentDefinition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getComponentDefinition_Name(), ecorePackage.getEString(), "name", null, 0, 1, ComponentDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getComponentDefinition_Id(), ecorePackage.getEString(), "id", null, 0, 1, ComponentDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getComponentDefinition_Properties(), this.getProperties(), null, "properties", null, 0, 1, ComponentDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(textfieldDefinitionEClass, TextfieldDefinition.class, "TextfieldDefinition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getTextfieldDefinition_Properties(), this.getTextfieldProperties(), null, "properties", null, 0, 1, TextfieldDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(textfieldPropertiesEClass, TextfieldProperties.class, "TextfieldProperties", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getTextfieldProperties_CommonProperties(), this.getCommonProperties(), null, "commonProperties", null, 0, 1, TextfieldProperties.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getTextfieldProperties_Text(), ecorePackage.getEString(), "text", null, 0, 1, TextfieldProperties.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getTextfieldProperties_Editable(), ecorePackage.getEString(), "editable", null, 0, 1, TextfieldProperties.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(textareaDefinitionEClass, TextareaDefinition.class, "TextareaDefinition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getTextareaDefinition_Properties(), this.getTextareaProperties(), null, "properties", null, 0, 1, TextareaDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(textareaPropertiesEClass, TextareaProperties.class, "TextareaProperties", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getTextareaProperties_CommonProperties(), this.getCommonProperties(), null, "commonProperties", null, 0, 1, TextareaProperties.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getTextareaProperties_Text(), ecorePackage.getEString(), "text", null, 0, 1, TextareaProperties.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getTextareaProperties_Editable(), ecorePackage.getEString(), "editable", null, 0, 1, TextareaProperties.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(treeDefinitionEClass, TreeDefinition.class, "TreeDefinition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getTreeDefinition_InputType(), ecorePackage.getEString(), "inputType", null, 0, 1, TreeDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getTreeDefinition_Properties(), this.getCommonProperties(), null, "properties", null, 0, 1, TreeDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(tableDefinitionEClass, TableDefinition.class, "TableDefinition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getTableDefinition_InputType(), ecorePackage.getEString(), "inputType", null, 0, 1, TableDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getTableDefinition_Properties(), this.getCommonProperties(), null, "properties", null, 0, 1, TableDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(interchangeableDefinitionEClass, InterchangeableDefinition.class, "InterchangeableDefinition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getInterchangeableDefinition_Properties(), this.getCommonProperties(), null, "properties", null, 0, 1, InterchangeableDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(buttonDefinitionEClass, ButtonDefinition.class, "ButtonDefinition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getButtonDefinition_Properties(), this.getButtonProperties(), null, "properties", null, 0, 1, ButtonDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(propertiesEClass, Properties.class, "Properties", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getProperties_PropertiesDefinitions(), this.getPropertiesDefinition(), null, "propertiesDefinitions", null, 0, -1, Properties.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(buttonPropertiesEClass, ButtonProperties.class, "ButtonProperties", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getButtonProperties_CommonProperties(), this.getCommonProperties(), null, "commonProperties", null, 0, 1, ButtonProperties.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getButtonProperties_Text(), ecorePackage.getEString(), "text", null, 0, 1, ButtonProperties.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(propertiesDefinitionEClass, PropertiesDefinition.class, "PropertiesDefinition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getPropertiesDefinition_PropertyKey(), ecorePackage.getEString(), "propertyKey", null, 0, 1, PropertiesDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getPropertiesDefinition_Text(), ecorePackage.getEString(), "text", null, 0, 1, PropertiesDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getPropertiesDefinition_Interactiontype(), this.getInteractiontype(), null, "interactiontype", null, 0, -1, PropertiesDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(commonPropertiesEClass, CommonProperties.class, "CommonProperties", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getCommonProperties_Name(), ecorePackage.getEString(), "name", null, 0, 1, CommonProperties.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getCommonProperties_PropertyKey(), ecorePackage.getEString(), "propertyKey", null, 0, 1, CommonProperties.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getCommonProperties_LayoutKey(), ecorePackage.getEString(), "layoutKey", null, 0, 1, CommonProperties.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getCommonProperties_Interactiontype(), this.getInteractiontype(), null, "interactiontype", null, 0, -1, CommonProperties.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(labelDefinitionEClass, LabelDefinition.class, "LabelDefinition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getLabelDefinition_Properties(), this.getLabelProperties(), null, "properties", null, 0, 1, LabelDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(labelPropertiesEClass, LabelProperties.class, "LabelProperties", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getLabelProperties_CommonProperties(), this.getCommonProperties(), null, "commonProperties", null, 0, 1, LabelProperties.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getLabelProperties_Text(), ecorePackage.getEString(), "text", null, 0, 1, LabelProperties.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getLabelProperties_Name(), ecorePackage.getEString(), "name", null, 0, 1, LabelProperties.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(interactiontypeEClass, Interactiontype.class, "Interactiontype", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getInteractiontype_Id(), ecorePackage.getEString(), "id", null, 0, 1, Interactiontype.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

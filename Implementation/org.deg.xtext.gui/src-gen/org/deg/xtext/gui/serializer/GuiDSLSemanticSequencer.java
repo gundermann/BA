@@ -3,21 +3,30 @@ package org.deg.xtext.gui.serializer;
 import com.google.inject.Inject;
 import com.google.inject.Provider;
 import org.deg.xtext.gui.guiDSL.ButtonDefinition;
+import org.deg.xtext.gui.guiDSL.ButtonProperties;
 import org.deg.xtext.gui.guiDSL.ButtonRefinement;
+import org.deg.xtext.gui.guiDSL.CommonProperties;
 import org.deg.xtext.gui.guiDSL.Definition;
 import org.deg.xtext.gui.guiDSL.Element;
 import org.deg.xtext.gui.guiDSL.GuiDSLPackage;
 import org.deg.xtext.gui.guiDSL.Interactiontype;
+import org.deg.xtext.gui.guiDSL.InterchangeableDefinition;
 import org.deg.xtext.gui.guiDSL.LabelDefinition;
+import org.deg.xtext.gui.guiDSL.LabelProperties;
 import org.deg.xtext.gui.guiDSL.LabelRefinement;
+import org.deg.xtext.gui.guiDSL.Layout;
 import org.deg.xtext.gui.guiDSL.Multiselection;
-import org.deg.xtext.gui.guiDSL.Properties;
-import org.deg.xtext.gui.guiDSL.PropertiesDefinition;
 import org.deg.xtext.gui.guiDSL.Property;
 import org.deg.xtext.gui.guiDSL.Refinement;
 import org.deg.xtext.gui.guiDSL.Structure;
 import org.deg.xtext.gui.guiDSL.TabDefinition;
-import org.deg.xtext.gui.guiDSL.TabView;
+import org.deg.xtext.gui.guiDSL.TabViewDefinition;
+import org.deg.xtext.gui.guiDSL.TableDefinition;
+import org.deg.xtext.gui.guiDSL.TextareaDefinition;
+import org.deg.xtext.gui.guiDSL.TextareaProperties;
+import org.deg.xtext.gui.guiDSL.TextfieldDefinition;
+import org.deg.xtext.gui.guiDSL.TextfieldProperties;
+import org.deg.xtext.gui.guiDSL.TreeDefinition;
 import org.deg.xtext.gui.guiDSL.Type;
 import org.deg.xtext.gui.guiDSL.TypeDefinition;
 import org.deg.xtext.gui.guiDSL.UIDescription;
@@ -51,10 +60,22 @@ public class GuiDSLSemanticSequencer extends AbstractDelegatingSemanticSequencer
 					return; 
 				}
 				else break;
+			case GuiDSLPackage.BUTTON_PROPERTIES:
+				if(context == grammarAccess.getButtonPropertiesRule()) {
+					sequence_ButtonProperties(context, (ButtonProperties) semanticObject); 
+					return; 
+				}
+				else break;
 			case GuiDSLPackage.BUTTON_REFINEMENT:
 				if(context == grammarAccess.getButtonRefinementRule() ||
 				   context == grammarAccess.getComponentRefinementRule()) {
 					sequence_ButtonRefinement(context, (ButtonRefinement) semanticObject); 
+					return; 
+				}
+				else break;
+			case GuiDSLPackage.COMMON_PROPERTIES:
+				if(context == grammarAccess.getCommonPropertiesRule()) {
+					sequence_CommonProperties(context, (CommonProperties) semanticObject); 
 					return; 
 				}
 				else break;
@@ -76,10 +97,23 @@ public class GuiDSLSemanticSequencer extends AbstractDelegatingSemanticSequencer
 					return; 
 				}
 				else break;
+			case GuiDSLPackage.INTERCHANGEABLE_DEFINITION:
+				if(context == grammarAccess.getComponentDefinitionRule() ||
+				   context == grammarAccess.getInterchangeableDefinitionRule()) {
+					sequence_InterchangeableDefinition(context, (InterchangeableDefinition) semanticObject); 
+					return; 
+				}
+				else break;
 			case GuiDSLPackage.LABEL_DEFINITION:
 				if(context == grammarAccess.getComponentDefinitionRule() ||
 				   context == grammarAccess.getLabelDefinitionRule()) {
 					sequence_LabelDefinition(context, (LabelDefinition) semanticObject); 
+					return; 
+				}
+				else break;
+			case GuiDSLPackage.LABEL_PROPERTIES:
+				if(context == grammarAccess.getLabelPropertiesRule()) {
+					sequence_LabelProperties(context, (LabelProperties) semanticObject); 
 					return; 
 				}
 				else break;
@@ -90,23 +124,17 @@ public class GuiDSLSemanticSequencer extends AbstractDelegatingSemanticSequencer
 					return; 
 				}
 				else break;
+			case GuiDSLPackage.LAYOUT:
+				if(context == grammarAccess.getLayoutRule()) {
+					sequence_Layout(context, (Layout) semanticObject); 
+					return; 
+				}
+				else break;
 			case GuiDSLPackage.MULTISELECTION:
 				if(context == grammarAccess.getComplexComponentRule() ||
 				   context == grammarAccess.getDescriptionTypeRule() ||
 				   context == grammarAccess.getMultiselectionRule()) {
 					sequence_Multiselection(context, (Multiselection) semanticObject); 
-					return; 
-				}
-				else break;
-			case GuiDSLPackage.PROPERTIES:
-				if(context == grammarAccess.getPropertiesRule()) {
-					sequence_Properties(context, (Properties) semanticObject); 
-					return; 
-				}
-				else break;
-			case GuiDSLPackage.PROPERTIES_DEFINITION:
-				if(context == grammarAccess.getPropertiesDefinitionRule()) {
-					sequence_PropertiesDefinition(context, (PropertiesDefinition) semanticObject); 
 					return; 
 				}
 				else break;
@@ -134,11 +162,50 @@ public class GuiDSLSemanticSequencer extends AbstractDelegatingSemanticSequencer
 					return; 
 				}
 				else break;
-			case GuiDSLPackage.TAB_VIEW:
-				if(context == grammarAccess.getComplexComponentRule() ||
-				   context == grammarAccess.getDescriptionTypeRule() ||
-				   context == grammarAccess.getTabViewRule()) {
-					sequence_TabView(context, (TabView) semanticObject); 
+			case GuiDSLPackage.TAB_VIEW_DEFINITION:
+				if(context == grammarAccess.getComponentDefinitionRule() ||
+				   context == grammarAccess.getTabViewDefinitionRule()) {
+					sequence_TabViewDefinition(context, (TabViewDefinition) semanticObject); 
+					return; 
+				}
+				else break;
+			case GuiDSLPackage.TABLE_DEFINITION:
+				if(context == grammarAccess.getComponentDefinitionRule() ||
+				   context == grammarAccess.getTableDefinitionRule()) {
+					sequence_TableDefinition(context, (TableDefinition) semanticObject); 
+					return; 
+				}
+				else break;
+			case GuiDSLPackage.TEXTAREA_DEFINITION:
+				if(context == grammarAccess.getComponentDefinitionRule() ||
+				   context == grammarAccess.getTextareaDefinitionRule()) {
+					sequence_TextareaDefinition(context, (TextareaDefinition) semanticObject); 
+					return; 
+				}
+				else break;
+			case GuiDSLPackage.TEXTAREA_PROPERTIES:
+				if(context == grammarAccess.getTextareaPropertiesRule()) {
+					sequence_TextareaProperties(context, (TextareaProperties) semanticObject); 
+					return; 
+				}
+				else break;
+			case GuiDSLPackage.TEXTFIELD_DEFINITION:
+				if(context == grammarAccess.getComponentDefinitionRule() ||
+				   context == grammarAccess.getTextfieldDefinitionRule()) {
+					sequence_TextfieldDefinition(context, (TextfieldDefinition) semanticObject); 
+					return; 
+				}
+				else break;
+			case GuiDSLPackage.TEXTFIELD_PROPERTIES:
+				if(context == grammarAccess.getTextfieldPropertiesRule()) {
+					sequence_TextfieldProperties(context, (TextfieldProperties) semanticObject); 
+					return; 
+				}
+				else break;
+			case GuiDSLPackage.TREE_DEFINITION:
+				if(context == grammarAccess.getComponentDefinitionRule() ||
+				   context == grammarAccess.getTreeDefinitionRule()) {
+					sequence_TreeDefinition(context, (TreeDefinition) semanticObject); 
 					return; 
 				}
 				else break;
@@ -179,7 +246,7 @@ public class GuiDSLSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	
 	/**
 	 * Constraint:
-	 *     (name='Button' id=STRING properties=Properties?)
+	 *     (name='Button' id=STRING properties=ButtonProperties?)
 	 */
 	protected void sequence_ButtonDefinition(EObject context, ButtonDefinition semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -188,9 +255,27 @@ public class GuiDSLSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	
 	/**
 	 * Constraint:
-	 *     (name='Button' id=STRING properties=Properties?)
+	 *     (commonProperties=CommonProperties text=STRING?)
+	 */
+	protected void sequence_ButtonProperties(EObject context, ButtonProperties semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (name='Button' id=STRING properties=ButtonProperties?)
 	 */
 	protected void sequence_ButtonRefinement(EObject context, ButtonRefinement semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     ((name='propertyKey' propertyKey=STRING)? (name='layoutKey' layoutKey=STRING)? (name='interactiontype' interactiontype+=Interactiontype+)?)
+	 */
+	protected void sequence_CommonProperties(EObject context, CommonProperties semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -229,7 +314,7 @@ public class GuiDSLSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	
 	/**
 	 * Constraint:
-	 *     (id='Click' | id='ChangeText')
+	 *     (id='IfActivator' | id='IfTextDisplay')
 	 */
 	protected void sequence_Interactiontype(EObject context, Interactiontype semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -238,7 +323,16 @@ public class GuiDSLSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	
 	/**
 	 * Constraint:
-	 *     (name='Label' id=STRING properties=Properties?)
+	 *     (name='Interchangeable Area' id=STRING properties=CommonProperties?)
+	 */
+	protected void sequence_InterchangeableDefinition(EObject context, InterchangeableDefinition semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (name='Label' id=STRING properties=LabelProperties?)
 	 */
 	protected void sequence_LabelDefinition(EObject context, LabelDefinition semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -247,9 +341,27 @@ public class GuiDSLSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	
 	/**
 	 * Constraint:
-	 *     (name='Label' id=STRING properties=Properties?)
+	 *     (commonProperties=CommonProperties (text=STRING name='LabelProperty')?)
+	 */
+	protected void sequence_LabelProperties(EObject context, LabelProperties semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (name='Label' id=STRING properties=LabelProperties?)
 	 */
 	protected void sequence_LabelRefinement(EObject context, LabelRefinement semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     layoutFiles+=STRING+
+	 */
+	protected void sequence_Layout(EObject context, Layout semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -265,35 +377,10 @@ public class GuiDSLSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	
 	/**
 	 * Constraint:
-	 *     (propertyKey=STRING | text=STRING | interactiontype+=Interactiontype+)
-	 */
-	protected void sequence_PropertiesDefinition(EObject context, PropertiesDefinition semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Constraint:
-	 *     propertiesDefinitions+=PropertiesDefinition+
-	 */
-	protected void sequence_Properties(EObject context, Properties semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Constraint:
-	 *     propertiesFile=STRING
+	 *     propertiesFiles+=STRING+
 	 */
 	protected void sequence_Property(EObject context, Property semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, GuiDSLPackage.Literals.PROPERTY__PROPERTIES_FILE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, GuiDSLPackage.Literals.PROPERTY__PROPERTIES_FILE));
-		}
-		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getPropertyAccess().getPropertiesFileSTRINGTerminalRuleCall_1_0(), semanticObject.getPropertiesFile());
-		feeder.finish();
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
@@ -340,9 +427,63 @@ public class GuiDSLSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	
 	/**
 	 * Constraint:
-	 *     (name='TabView' tabs+=TabDefinition*)
+	 *     (name='TabView' tabs+=TabDefinition* id=STRING properties=CommonProperties?)
 	 */
-	protected void sequence_TabView(EObject context, TabView semanticObject) {
+	protected void sequence_TabViewDefinition(EObject context, TabViewDefinition semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (name='Table' inputType=INPUT_DESCRIPTION id=STRING properties=CommonProperties?)
+	 */
+	protected void sequence_TableDefinition(EObject context, TableDefinition semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (name='Textarea' id=STRING properties=TextareaProperties?)
+	 */
+	protected void sequence_TextareaDefinition(EObject context, TextareaDefinition semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (commonProperties=CommonProperties text=STRING? editable=BOOLEAN?)
+	 */
+	protected void sequence_TextareaProperties(EObject context, TextareaProperties semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (name='Textfield' id=STRING properties=TextfieldProperties?)
+	 */
+	protected void sequence_TextfieldDefinition(EObject context, TextfieldDefinition semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (commonProperties=CommonProperties text=STRING? editable=BOOLEAN?)
+	 */
+	protected void sequence_TextfieldProperties(EObject context, TextfieldProperties semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (name='Tree' inputType=INPUT_DESCRIPTION id=STRING properties=CommonProperties?)
+	 */
+	protected void sequence_TreeDefinition(EObject context, TreeDefinition semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -393,6 +534,7 @@ public class GuiDSLSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	 *     (
 	 *         typeDefinition=TypeDefinition 
 	 *         property=Property? 
+	 *         layout=Layout? 
 	 *         usedDescriptions+=UsedDescriptions* 
 	 *         refinements+=Refinement* 
 	 *         definitions+=Definition* 

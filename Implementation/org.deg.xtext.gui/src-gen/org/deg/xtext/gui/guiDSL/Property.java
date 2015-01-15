@@ -2,6 +2,8 @@
  */
 package org.deg.xtext.gui.guiDSL;
 
+import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -12,7 +14,7 @@ import org.eclipse.emf.ecore.EObject;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.deg.xtext.gui.guiDSL.Property#getPropertiesFile <em>Properties File</em>}</li>
+ *   <li>{@link org.deg.xtext.gui.guiDSL.Property#getPropertiesFiles <em>Properties Files</em>}</li>
  * </ul>
  * </p>
  *
@@ -23,29 +25,19 @@ import org.eclipse.emf.ecore.EObject;
 public interface Property extends EObject
 {
   /**
-   * Returns the value of the '<em><b>Properties File</b></em>' attribute.
+   * Returns the value of the '<em><b>Properties Files</b></em>' attribute list.
+   * The list contents are of type {@link java.lang.String}.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Properties File</em>' attribute isn't clear,
+   * If the meaning of the '<em>Properties Files</em>' attribute list isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Properties File</em>' attribute.
-   * @see #setPropertiesFile(String)
-   * @see org.deg.xtext.gui.guiDSL.GuiDSLPackage#getProperty_PropertiesFile()
-   * @model
+   * @return the value of the '<em>Properties Files</em>' attribute list.
+   * @see org.deg.xtext.gui.guiDSL.GuiDSLPackage#getProperty_PropertiesFiles()
+   * @model unique="false"
    * @generated
    */
-  String getPropertiesFile();
-
-  /**
-   * Sets the value of the '{@link org.deg.xtext.gui.guiDSL.Property#getPropertiesFile <em>Properties File</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Properties File</em>' attribute.
-   * @see #getPropertiesFile()
-   * @generated
-   */
-  void setPropertiesFile(String value);
+  EList<String> getPropertiesFiles();
 
 } // Property

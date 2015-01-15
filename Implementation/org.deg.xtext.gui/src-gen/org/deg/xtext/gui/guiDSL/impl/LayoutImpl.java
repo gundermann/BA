@@ -5,50 +5,47 @@ package org.deg.xtext.gui.guiDSL.impl;
 import java.util.Collection;
 
 import org.deg.xtext.gui.guiDSL.GuiDSLPackage;
-import org.deg.xtext.gui.guiDSL.TabDefinition;
-import org.deg.xtext.gui.guiDSL.TabView;
-
-import org.eclipse.emf.common.notify.NotificationChain;
+import org.deg.xtext.gui.guiDSL.Layout;
 
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
 
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.emf.ecore.util.InternalEList;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
+import org.eclipse.emf.ecore.util.EDataTypeEList;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Tab View</b></em>'.
+ * An implementation of the model object '<em><b>Layout</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.deg.xtext.gui.guiDSL.impl.TabViewImpl#getTabs <em>Tabs</em>}</li>
+ *   <li>{@link org.deg.xtext.gui.guiDSL.impl.LayoutImpl#getLayoutFiles <em>Layout Files</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class TabViewImpl extends ComplexComponentImpl implements TabView
+public class LayoutImpl extends MinimalEObjectImpl.Container implements Layout
 {
   /**
-   * The cached value of the '{@link #getTabs() <em>Tabs</em>}' containment reference list.
+   * The cached value of the '{@link #getLayoutFiles() <em>Layout Files</em>}' attribute list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getTabs()
+   * @see #getLayoutFiles()
    * @generated
    * @ordered
    */
-  protected EList<TabDefinition> tabs;
+  protected EList<String> layoutFiles;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected TabViewImpl()
+  protected LayoutImpl()
   {
     super();
   }
@@ -61,7 +58,7 @@ public class TabViewImpl extends ComplexComponentImpl implements TabView
   @Override
   protected EClass eStaticClass()
   {
-    return GuiDSLPackage.Literals.TAB_VIEW;
+    return GuiDSLPackage.Literals.LAYOUT;
   }
 
   /**
@@ -69,29 +66,13 @@ public class TabViewImpl extends ComplexComponentImpl implements TabView
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<TabDefinition> getTabs()
+  public EList<String> getLayoutFiles()
   {
-    if (tabs == null)
+    if (layoutFiles == null)
     {
-      tabs = new EObjectContainmentEList<TabDefinition>(TabDefinition.class, this, GuiDSLPackage.TAB_VIEW__TABS);
+      layoutFiles = new EDataTypeEList<String>(String.class, this, GuiDSLPackage.LAYOUT__LAYOUT_FILES);
     }
-    return tabs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
-  {
-    switch (featureID)
-    {
-      case GuiDSLPackage.TAB_VIEW__TABS:
-        return ((InternalEList<?>)getTabs()).basicRemove(otherEnd, msgs);
-    }
-    return super.eInverseRemove(otherEnd, featureID, msgs);
+    return layoutFiles;
   }
 
   /**
@@ -104,8 +85,8 @@ public class TabViewImpl extends ComplexComponentImpl implements TabView
   {
     switch (featureID)
     {
-      case GuiDSLPackage.TAB_VIEW__TABS:
-        return getTabs();
+      case GuiDSLPackage.LAYOUT__LAYOUT_FILES:
+        return getLayoutFiles();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -121,9 +102,9 @@ public class TabViewImpl extends ComplexComponentImpl implements TabView
   {
     switch (featureID)
     {
-      case GuiDSLPackage.TAB_VIEW__TABS:
-        getTabs().clear();
-        getTabs().addAll((Collection<? extends TabDefinition>)newValue);
+      case GuiDSLPackage.LAYOUT__LAYOUT_FILES:
+        getLayoutFiles().clear();
+        getLayoutFiles().addAll((Collection<? extends String>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -139,8 +120,8 @@ public class TabViewImpl extends ComplexComponentImpl implements TabView
   {
     switch (featureID)
     {
-      case GuiDSLPackage.TAB_VIEW__TABS:
-        getTabs().clear();
+      case GuiDSLPackage.LAYOUT__LAYOUT_FILES:
+        getLayoutFiles().clear();
         return;
     }
     super.eUnset(featureID);
@@ -156,10 +137,27 @@ public class TabViewImpl extends ComplexComponentImpl implements TabView
   {
     switch (featureID)
     {
-      case GuiDSLPackage.TAB_VIEW__TABS:
-        return tabs != null && !tabs.isEmpty();
+      case GuiDSLPackage.LAYOUT__LAYOUT_FILES:
+        return layoutFiles != null && !layoutFiles.isEmpty();
     }
     return super.eIsSet(featureID);
   }
 
-} //TabViewImpl
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String toString()
+  {
+    if (eIsProxy()) return super.toString();
+
+    StringBuffer result = new StringBuffer(super.toString());
+    result.append(" (layoutFiles: ");
+    result.append(layoutFiles);
+    result.append(')');
+    return result.toString();
+  }
+
+} //LayoutImpl

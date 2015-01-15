@@ -32,6 +32,15 @@ public interface GuiDSLFactory extends EFactory
   UIDescription createUIDescription();
 
   /**
+   * Returns a new object of class '<em>Layout</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Layout</em>'.
+   * @generated
+   */
+  Layout createLayout();
+
+  /**
    * Returns a new object of class '<em>Structure</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -158,13 +167,13 @@ public interface GuiDSLFactory extends EFactory
   ComplexComponent createComplexComponent();
 
   /**
-   * Returns a new object of class '<em>Tab View</em>'.
+   * Returns a new object of class '<em>Tab View Definition</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Tab View</em>'.
+   * @return a new object of class '<em>Tab View Definition</em>'.
    * @generated
    */
-  TabView createTabView();
+  TabViewDefinition createTabViewDefinition();
 
   /**
    * Returns a new object of class '<em>Tab Definition</em>'.
@@ -194,6 +203,69 @@ public interface GuiDSLFactory extends EFactory
   ComponentDefinition createComponentDefinition();
 
   /**
+   * Returns a new object of class '<em>Textfield Definition</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Textfield Definition</em>'.
+   * @generated
+   */
+  TextfieldDefinition createTextfieldDefinition();
+
+  /**
+   * Returns a new object of class '<em>Textfield Properties</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Textfield Properties</em>'.
+   * @generated
+   */
+  TextfieldProperties createTextfieldProperties();
+
+  /**
+   * Returns a new object of class '<em>Textarea Definition</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Textarea Definition</em>'.
+   * @generated
+   */
+  TextareaDefinition createTextareaDefinition();
+
+  /**
+   * Returns a new object of class '<em>Textarea Properties</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Textarea Properties</em>'.
+   * @generated
+   */
+  TextareaProperties createTextareaProperties();
+
+  /**
+   * Returns a new object of class '<em>Tree Definition</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Tree Definition</em>'.
+   * @generated
+   */
+  TreeDefinition createTreeDefinition();
+
+  /**
+   * Returns a new object of class '<em>Table Definition</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Table Definition</em>'.
+   * @generated
+   */
+  TableDefinition createTableDefinition();
+
+  /**
+   * Returns a new object of class '<em>Interchangeable Definition</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Interchangeable Definition</em>'.
+   * @generated
+   */
+  InterchangeableDefinition createInterchangeableDefinition();
+
+  /**
    * Returns a new object of class '<em>Button Definition</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -203,22 +275,22 @@ public interface GuiDSLFactory extends EFactory
   ButtonDefinition createButtonDefinition();
 
   /**
-   * Returns a new object of class '<em>Properties</em>'.
+   * Returns a new object of class '<em>Button Properties</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Properties</em>'.
+   * @return a new object of class '<em>Button Properties</em>'.
    * @generated
    */
-  Properties createProperties();
+  ButtonProperties createButtonProperties();
 
   /**
-   * Returns a new object of class '<em>Properties Definition</em>'.
+   * Returns a new object of class '<em>Common Properties</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Properties Definition</em>'.
+   * @return a new object of class '<em>Common Properties</em>'.
    * @generated
    */
-  PropertiesDefinition createPropertiesDefinition();
+  CommonProperties createCommonProperties();
 
   /**
    * Returns a new object of class '<em>Label Definition</em>'.
@@ -228,6 +300,15 @@ public interface GuiDSLFactory extends EFactory
    * @generated
    */
   LabelDefinition createLabelDefinition();
+
+  /**
+   * Returns a new object of class '<em>Label Properties</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Label Properties</em>'.
+   * @generated
+   */
+  LabelProperties createLabelProperties();
 
   /**
    * Returns a new object of class '<em>Interactiontype</em>'.

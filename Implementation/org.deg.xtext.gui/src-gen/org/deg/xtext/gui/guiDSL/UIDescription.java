@@ -16,6 +16,7 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link org.deg.xtext.gui.guiDSL.UIDescription#getTypeDefinition <em>Type Definition</em>}</li>
  *   <li>{@link org.deg.xtext.gui.guiDSL.UIDescription#getProperty <em>Property</em>}</li>
+ *   <li>{@link org.deg.xtext.gui.guiDSL.UIDescription#getLayout <em>Layout</em>}</li>
  *   <li>{@link org.deg.xtext.gui.guiDSL.UIDescription#getUsedDescriptions <em>Used Descriptions</em>}</li>
  *   <li>{@link org.deg.xtext.gui.guiDSL.UIDescription#getRefinements <em>Refinements</em>}</li>
  *   <li>{@link org.deg.xtext.gui.guiDSL.UIDescription#getDefinitions <em>Definitions</em>}</li>
@@ -80,6 +81,32 @@ public interface UIDescription extends EObject
    * @generated
    */
   void setProperty(Property value);
+
+  /**
+   * Returns the value of the '<em><b>Layout</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Layout</em>' containment reference isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Layout</em>' containment reference.
+   * @see #setLayout(Layout)
+   * @see org.deg.xtext.gui.guiDSL.GuiDSLPackage#getUIDescription_Layout()
+   * @model containment="true"
+   * @generated
+   */
+  Layout getLayout();
+
+  /**
+   * Sets the value of the '{@link org.deg.xtext.gui.guiDSL.UIDescription#getLayout <em>Layout</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Layout</em>' containment reference.
+   * @see #getLayout()
+   * @generated
+   */
+  void setLayout(Layout value);
 
   /**
    * Returns the value of the '<em><b>Used Descriptions</b></em>' containment reference list.
