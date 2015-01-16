@@ -24,7 +24,6 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <ul>
  *   <li>{@link org.deg.xtext.gui.guiDSL.impl.LabelPropertiesImpl#getCommonProperties <em>Common Properties</em>}</li>
  *   <li>{@link org.deg.xtext.gui.guiDSL.impl.LabelPropertiesImpl#getText <em>Text</em>}</li>
- *   <li>{@link org.deg.xtext.gui.guiDSL.impl.LabelPropertiesImpl#getName <em>Name</em>}</li>
  * </ul>
  * </p>
  *
@@ -61,26 +60,6 @@ public class LabelPropertiesImpl extends MinimalEObjectImpl.Container implements
    * @ordered
    */
   protected String text = TEXT_EDEFAULT;
-
-  /**
-   * The default value of the '{@link #getName() <em>Name</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getName()
-   * @generated
-   * @ordered
-   */
-  protected static final String NAME_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getName()
-   * @generated
-   * @ordered
-   */
-  protected String name = NAME_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -179,29 +158,6 @@ public class LabelPropertiesImpl extends MinimalEObjectImpl.Container implements
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getName()
-  {
-    return name;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setName(String newName)
-  {
-    String oldName = name;
-    name = newName;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, GuiDSLPackage.LABEL_PROPERTIES__NAME, oldName, name));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
@@ -227,8 +183,6 @@ public class LabelPropertiesImpl extends MinimalEObjectImpl.Container implements
         return getCommonProperties();
       case GuiDSLPackage.LABEL_PROPERTIES__TEXT:
         return getText();
-      case GuiDSLPackage.LABEL_PROPERTIES__NAME:
-        return getName();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -248,9 +202,6 @@ public class LabelPropertiesImpl extends MinimalEObjectImpl.Container implements
         return;
       case GuiDSLPackage.LABEL_PROPERTIES__TEXT:
         setText((String)newValue);
-        return;
-      case GuiDSLPackage.LABEL_PROPERTIES__NAME:
-        setName((String)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -272,9 +223,6 @@ public class LabelPropertiesImpl extends MinimalEObjectImpl.Container implements
       case GuiDSLPackage.LABEL_PROPERTIES__TEXT:
         setText(TEXT_EDEFAULT);
         return;
-      case GuiDSLPackage.LABEL_PROPERTIES__NAME:
-        setName(NAME_EDEFAULT);
-        return;
     }
     super.eUnset(featureID);
   }
@@ -293,8 +241,6 @@ public class LabelPropertiesImpl extends MinimalEObjectImpl.Container implements
         return commonProperties != null;
       case GuiDSLPackage.LABEL_PROPERTIES__TEXT:
         return TEXT_EDEFAULT == null ? text != null : !TEXT_EDEFAULT.equals(text);
-      case GuiDSLPackage.LABEL_PROPERTIES__NAME:
-        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
     }
     return super.eIsSet(featureID);
   }
@@ -312,8 +258,6 @@ public class LabelPropertiesImpl extends MinimalEObjectImpl.Container implements
     StringBuffer result = new StringBuffer(super.toString());
     result.append(" (text: ");
     result.append(text);
-    result.append(", name: ");
-    result.append(name);
     result.append(')');
     return result.toString();
   }

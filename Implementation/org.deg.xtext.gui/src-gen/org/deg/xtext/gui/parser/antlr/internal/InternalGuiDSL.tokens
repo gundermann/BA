@@ -1,43 +1,43 @@
-'->'=20
-':'=17
+'->'=40
+':'=23
 ';'=15
-'='=38
-'Button'=18
-'INNERCOMPLEX'=27
-'IfActivator'=43
-'IfTextDisplay'=44
-'Interchangeable Area'=36
-'Label'=21
-'LabelProperty'=42
-'Multiselection'=29
-'Structure'=16
-'TabView'=28
-'Table'=35
-'Textarea'=33
+'='=42
+'Button'=31
+'INNERCOMPLEX'=17
+'IfActivator'=35
+'IfTextDisplay'=36
+'IfViewImage'=37
+'Interchangeable Area'=34
+'Interchangeable'=28
+'Label'=32
+'Multiselection'=33
+'Structure'=22
+'TabView'=26
+'Table'=24
+'Textarea'=29
 'Textfield'=30
-'Tree'=34
-'WINDOW'=26
-'as'=41
-'as:'=24
-'editable='=32
-'from:'=19
-'get layout from:'=14
-'get properties from:'=22
-'interactiontype'=40
-'layoutKey'=39
-'propertyKey'=37
-'text='=31
-'type: '=25
-'use:'=23
+'Tree'=27
+'WINDOW'=16
+'as:'=21
+'change:'=25
+'editable='=39
+'get layout from:'=19
+'get properties from:'=18
+'interactiontype'=44
+'layoutKey'=43
+'propertyKey'=41
+'text='=38
+'type: '=14
+'use:'=20
 RULE_ANY_OTHER=13
 RULE_BOOLEAN=7
 RULE_ID=9
-RULE_INPUT_DESCRIPTION=6
+RULE_INPUT_DESCRIPTION=5
 RULE_INT=10
 RULE_ML_COMMENT=11
 RULE_SL_COMMENT=12
 RULE_STRING=4
-RULE_TABNAME=5
+RULE_TABNAME=6
 RULE_WS=8
 T__14=14
 T__15=15

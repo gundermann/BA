@@ -21,7 +21,7 @@ public class InternalGuiDSLLexer extends Lexer {
     public static final int T__25=25;
     public static final int T__24=24;
     public static final int T__23=23;
-    public static final int RULE_INPUT_DESCRIPTION=6;
+    public static final int RULE_INPUT_DESCRIPTION=5;
     public static final int T__22=22;
     public static final int T__21=21;
     public static final int RULE_ANY_OTHER=13;
@@ -34,7 +34,7 @@ public class InternalGuiDSLLexer extends Lexer {
     public static final int T__17=17;
     public static final int T__14=14;
     public static final int RULE_INT=10;
-    public static final int RULE_TABNAME=5;
+    public static final int RULE_TABNAME=6;
     public static final int T__42=42;
     public static final int T__43=43;
     public static final int T__40=40;
@@ -73,10 +73,10 @@ public class InternalGuiDSLLexer extends Lexer {
         try {
             int _type = T__14;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:11:7: ( 'get layout from:' )
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:11:9: 'get layout from:'
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:11:7: ( 'type: ' )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:11:9: 'type: '
             {
-            match("get layout from:"); 
+            match("type: "); 
 
 
             }
@@ -114,10 +114,10 @@ public class InternalGuiDSLLexer extends Lexer {
         try {
             int _type = T__16;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:13:7: ( 'Structure' )
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:13:9: 'Structure'
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:13:7: ( 'WINDOW' )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:13:9: 'WINDOW'
             {
-            match("Structure"); 
+            match("WINDOW"); 
 
 
             }
@@ -135,10 +135,11 @@ public class InternalGuiDSLLexer extends Lexer {
         try {
             int _type = T__17;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:14:7: ( ':' )
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:14:9: ':'
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:14:7: ( 'INNERCOMPLEX' )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:14:9: 'INNERCOMPLEX'
             {
-            match(':'); 
+            match("INNERCOMPLEX"); 
+
 
             }
 
@@ -155,10 +156,10 @@ public class InternalGuiDSLLexer extends Lexer {
         try {
             int _type = T__18;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:15:7: ( 'Button' )
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:15:9: 'Button'
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:15:7: ( 'get properties from:' )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:15:9: 'get properties from:'
             {
-            match("Button"); 
+            match("get properties from:"); 
 
 
             }
@@ -176,10 +177,10 @@ public class InternalGuiDSLLexer extends Lexer {
         try {
             int _type = T__19;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:16:7: ( 'from:' )
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:16:9: 'from:'
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:16:7: ( 'get layout from:' )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:16:9: 'get layout from:'
             {
-            match("from:"); 
+            match("get layout from:"); 
 
 
             }
@@ -197,10 +198,10 @@ public class InternalGuiDSLLexer extends Lexer {
         try {
             int _type = T__20;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:17:7: ( '->' )
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:17:9: '->'
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:17:7: ( 'use:' )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:17:9: 'use:'
             {
-            match("->"); 
+            match("use:"); 
 
 
             }
@@ -218,10 +219,10 @@ public class InternalGuiDSLLexer extends Lexer {
         try {
             int _type = T__21;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:18:7: ( 'Label' )
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:18:9: 'Label'
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:18:7: ( 'as:' )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:18:9: 'as:'
             {
-            match("Label"); 
+            match("as:"); 
 
 
             }
@@ -239,10 +240,10 @@ public class InternalGuiDSLLexer extends Lexer {
         try {
             int _type = T__22;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:19:7: ( 'get properties from:' )
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:19:9: 'get properties from:'
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:19:7: ( 'Structure' )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:19:9: 'Structure'
             {
-            match("get properties from:"); 
+            match("Structure"); 
 
 
             }
@@ -260,11 +261,10 @@ public class InternalGuiDSLLexer extends Lexer {
         try {
             int _type = T__23;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:20:7: ( 'use:' )
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:20:9: 'use:'
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:20:7: ( ':' )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:20:9: ':'
             {
-            match("use:"); 
-
+            match(':'); 
 
             }
 
@@ -281,10 +281,10 @@ public class InternalGuiDSLLexer extends Lexer {
         try {
             int _type = T__24;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:21:7: ( 'as:' )
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:21:9: 'as:'
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:21:7: ( 'Table' )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:21:9: 'Table'
             {
-            match("as:"); 
+            match("Table"); 
 
 
             }
@@ -302,10 +302,10 @@ public class InternalGuiDSLLexer extends Lexer {
         try {
             int _type = T__25;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:22:7: ( 'type: ' )
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:22:9: 'type: '
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:22:7: ( 'change:' )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:22:9: 'change:'
             {
-            match("type: "); 
+            match("change:"); 
 
 
             }
@@ -323,10 +323,10 @@ public class InternalGuiDSLLexer extends Lexer {
         try {
             int _type = T__26;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:23:7: ( 'WINDOW' )
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:23:9: 'WINDOW'
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:23:7: ( 'TabView' )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:23:9: 'TabView'
             {
-            match("WINDOW"); 
+            match("TabView"); 
 
 
             }
@@ -344,10 +344,10 @@ public class InternalGuiDSLLexer extends Lexer {
         try {
             int _type = T__27;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:24:7: ( 'INNERCOMPLEX' )
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:24:9: 'INNERCOMPLEX'
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:24:7: ( 'Tree' )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:24:9: 'Tree'
             {
-            match("INNERCOMPLEX"); 
+            match("Tree"); 
 
 
             }
@@ -365,10 +365,10 @@ public class InternalGuiDSLLexer extends Lexer {
         try {
             int _type = T__28;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:25:7: ( 'TabView' )
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:25:9: 'TabView'
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:25:7: ( 'Interchangeable' )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:25:9: 'Interchangeable'
             {
-            match("TabView"); 
+            match("Interchangeable"); 
 
 
             }
@@ -386,10 +386,10 @@ public class InternalGuiDSLLexer extends Lexer {
         try {
             int _type = T__29;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:26:7: ( 'Multiselection' )
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:26:9: 'Multiselection'
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:26:7: ( 'Textarea' )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:26:9: 'Textarea'
             {
-            match("Multiselection"); 
+            match("Textarea"); 
 
 
             }
@@ -428,10 +428,10 @@ public class InternalGuiDSLLexer extends Lexer {
         try {
             int _type = T__31;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:28:7: ( 'text=' )
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:28:9: 'text='
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:28:7: ( 'Button' )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:28:9: 'Button'
             {
-            match("text="); 
+            match("Button"); 
 
 
             }
@@ -449,10 +449,10 @@ public class InternalGuiDSLLexer extends Lexer {
         try {
             int _type = T__32;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:29:7: ( 'editable=' )
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:29:9: 'editable='
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:29:7: ( 'Label' )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:29:9: 'Label'
             {
-            match("editable="); 
+            match("Label"); 
 
 
             }
@@ -470,10 +470,10 @@ public class InternalGuiDSLLexer extends Lexer {
         try {
             int _type = T__33;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:30:7: ( 'Textarea' )
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:30:9: 'Textarea'
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:30:7: ( 'Multiselection' )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:30:9: 'Multiselection'
             {
-            match("Textarea"); 
+            match("Multiselection"); 
 
 
             }
@@ -491,10 +491,10 @@ public class InternalGuiDSLLexer extends Lexer {
         try {
             int _type = T__34;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:31:7: ( 'Tree' )
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:31:9: 'Tree'
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:31:7: ( 'Interchangeable Area' )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:31:9: 'Interchangeable Area'
             {
-            match("Tree"); 
+            match("Interchangeable Area"); 
 
 
             }
@@ -512,10 +512,10 @@ public class InternalGuiDSLLexer extends Lexer {
         try {
             int _type = T__35;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:32:7: ( 'Table' )
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:32:9: 'Table'
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:32:7: ( 'IfActivator' )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:32:9: 'IfActivator'
             {
-            match("Table"); 
+            match("IfActivator"); 
 
 
             }
@@ -533,10 +533,10 @@ public class InternalGuiDSLLexer extends Lexer {
         try {
             int _type = T__36;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:33:7: ( 'Interchangeable Area' )
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:33:9: 'Interchangeable Area'
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:33:7: ( 'IfTextDisplay' )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:33:9: 'IfTextDisplay'
             {
-            match("Interchangeable Area"); 
+            match("IfTextDisplay"); 
 
 
             }
@@ -554,10 +554,10 @@ public class InternalGuiDSLLexer extends Lexer {
         try {
             int _type = T__37;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:34:7: ( 'propertyKey' )
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:34:9: 'propertyKey'
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:34:7: ( 'IfViewImage' )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:34:9: 'IfViewImage'
             {
-            match("propertyKey"); 
+            match("IfViewImage"); 
 
 
             }
@@ -575,10 +575,11 @@ public class InternalGuiDSLLexer extends Lexer {
         try {
             int _type = T__38;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:35:7: ( '=' )
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:35:9: '='
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:35:7: ( 'text=' )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:35:9: 'text='
             {
-            match('='); 
+            match("text="); 
+
 
             }
 
@@ -595,10 +596,10 @@ public class InternalGuiDSLLexer extends Lexer {
         try {
             int _type = T__39;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:36:7: ( 'layoutKey' )
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:36:9: 'layoutKey'
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:36:7: ( 'editable=' )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:36:9: 'editable='
             {
-            match("layoutKey"); 
+            match("editable="); 
 
 
             }
@@ -616,10 +617,10 @@ public class InternalGuiDSLLexer extends Lexer {
         try {
             int _type = T__40;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:37:7: ( 'interactiontype' )
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:37:9: 'interactiontype'
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:37:7: ( '->' )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:37:9: '->'
             {
-            match("interactiontype"); 
+            match("->"); 
 
 
             }
@@ -637,10 +638,10 @@ public class InternalGuiDSLLexer extends Lexer {
         try {
             int _type = T__41;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:38:7: ( 'as' )
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:38:9: 'as'
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:38:7: ( 'propertyKey' )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:38:9: 'propertyKey'
             {
-            match("as"); 
+            match("propertyKey"); 
 
 
             }
@@ -658,11 +659,10 @@ public class InternalGuiDSLLexer extends Lexer {
         try {
             int _type = T__42;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:39:7: ( 'LabelProperty' )
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:39:9: 'LabelProperty'
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:39:7: ( '=' )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:39:9: '='
             {
-            match("LabelProperty"); 
-
+            match('='); 
 
             }
 
@@ -679,10 +679,10 @@ public class InternalGuiDSLLexer extends Lexer {
         try {
             int _type = T__43;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:40:7: ( 'IfActivator' )
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:40:9: 'IfActivator'
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:40:7: ( 'layoutKey' )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:40:9: 'layoutKey'
             {
-            match("IfActivator"); 
+            match("layoutKey"); 
 
 
             }
@@ -700,10 +700,10 @@ public class InternalGuiDSLLexer extends Lexer {
         try {
             int _type = T__44;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:41:7: ( 'IfTextDisplay' )
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:41:9: 'IfTextDisplay'
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:41:7: ( 'interactiontype' )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:41:9: 'interactiontype'
             {
-            match("IfTextDisplay"); 
+            match("interactiontype"); 
 
 
             }
@@ -721,10 +721,10 @@ public class InternalGuiDSLLexer extends Lexer {
         try {
             int _type = RULE_WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:2343:9: ( ( ' ' | '\\t' | '\\r' | '\\n' | ',' )+ )
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:2343:11: ( ' ' | '\\t' | '\\r' | '\\n' | ',' )+
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:2841:9: ( ( ' ' | '\\t' | '\\r' | '\\n' | ',' )+ )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:2841:11: ( ' ' | '\\t' | '\\r' | '\\n' | ',' )+
             {
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:2343:11: ( ' ' | '\\t' | '\\r' | '\\n' | ',' )+
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:2841:11: ( ' ' | '\\t' | '\\r' | '\\n' | ',' )+
             int cnt1=0;
             loop1:
             do {
@@ -778,56 +778,24 @@ public class InternalGuiDSLLexer extends Lexer {
         try {
             int _type = RULE_TABNAME;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:2345:14: ( '[' ( '\\\\' . | ~ ( ( '[' | ']' ) ) )* ']' )
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:2345:16: '[' ( '\\\\' . | ~ ( ( '[' | ']' ) ) )* ']'
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:2843:14: ( '[' (~ ( ( '[' | ']' ) ) )* ']' )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:2843:16: '[' (~ ( ( '[' | ']' ) ) )* ']'
             {
             match('['); 
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:2345:20: ( '\\\\' . | ~ ( ( '[' | ']' ) ) )*
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:2843:20: (~ ( ( '[' | ']' ) ) )*
             loop2:
             do {
-                int alt2=3;
+                int alt2=2;
                 int LA2_0 = input.LA(1);
 
-                if ( (LA2_0=='\\') ) {
-                    int LA2_2 = input.LA(2);
-
-                    if ( (LA2_2==']') ) {
-                        int LA2_4 = input.LA(3);
-
-                        if ( ((LA2_4>='\u0000' && LA2_4<='Z')||(LA2_4>='\\' && LA2_4<='\uFFFF')) ) {
-                            alt2=1;
-                        }
-
-                        else {
-                            alt2=2;
-                        }
-
-                    }
-                    else if ( (LA2_2=='\\') ) {
-                        alt2=1;
-                    }
-                    else if ( ((LA2_2>='\u0000' && LA2_2<='[')||(LA2_2>='^' && LA2_2<='\uFFFF')) ) {
-                        alt2=1;
-                    }
-
-
-                }
-                else if ( ((LA2_0>='\u0000' && LA2_0<='Z')||(LA2_0>='^' && LA2_0<='\uFFFF')) ) {
-                    alt2=2;
+                if ( ((LA2_0>='\u0000' && LA2_0<='Z')||LA2_0=='\\'||(LA2_0>='^' && LA2_0<='\uFFFF')) ) {
+                    alt2=1;
                 }
 
 
                 switch (alt2) {
             	case 1 :
-            	    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:2345:21: '\\\\' .
-            	    {
-            	    match('\\'); 
-            	    matchAny(); 
-
-            	    }
-            	    break;
-            	case 2 :
-            	    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:2345:28: ~ ( ( '[' | ']' ) )
+            	    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:2843:20: ~ ( ( '[' | ']' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='Z')||input.LA(1)=='\\'||(input.LA(1)>='^' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -864,56 +832,24 @@ public class InternalGuiDSLLexer extends Lexer {
         try {
             int _type = RULE_INPUT_DESCRIPTION;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:2347:24: ( '<' ( '\\\\' . | ~ ( ( '<' | '>' ) ) )* '>' )
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:2347:26: '<' ( '\\\\' . | ~ ( ( '<' | '>' ) ) )* '>'
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:2845:24: ( '<' (~ ( ( '<' | '>' ) ) )* '>' )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:2845:26: '<' (~ ( ( '<' | '>' ) ) )* '>'
             {
             match('<'); 
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:2347:30: ( '\\\\' . | ~ ( ( '<' | '>' ) ) )*
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:2845:30: (~ ( ( '<' | '>' ) ) )*
             loop3:
             do {
-                int alt3=3;
+                int alt3=2;
                 int LA3_0 = input.LA(1);
 
-                if ( (LA3_0=='\\') ) {
-                    int LA3_2 = input.LA(2);
-
-                    if ( (LA3_2=='>') ) {
-                        int LA3_4 = input.LA(3);
-
-                        if ( ((LA3_4>='\u0000' && LA3_4<=';')||(LA3_4>='=' && LA3_4<='\uFFFF')) ) {
-                            alt3=1;
-                        }
-
-                        else {
-                            alt3=2;
-                        }
-
-                    }
-                    else if ( (LA3_2=='\\') ) {
-                        alt3=1;
-                    }
-                    else if ( ((LA3_2>='\u0000' && LA3_2<='=')||(LA3_2>='?' && LA3_2<='[')||(LA3_2>=']' && LA3_2<='\uFFFF')) ) {
-                        alt3=1;
-                    }
-
-
-                }
-                else if ( ((LA3_0>='\u0000' && LA3_0<=';')||LA3_0=='='||(LA3_0>='?' && LA3_0<='[')||(LA3_0>=']' && LA3_0<='\uFFFF')) ) {
-                    alt3=2;
+                if ( ((LA3_0>='\u0000' && LA3_0<=';')||LA3_0=='='||(LA3_0>='?' && LA3_0<='\uFFFF')) ) {
+                    alt3=1;
                 }
 
 
                 switch (alt3) {
             	case 1 :
-            	    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:2347:31: '\\\\' .
-            	    {
-            	    match('\\'); 
-            	    matchAny(); 
-
-            	    }
-            	    break;
-            	case 2 :
-            	    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:2347:38: ~ ( ( '<' | '>' ) )
+            	    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:2845:30: ~ ( ( '<' | '>' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<=';')||input.LA(1)=='='||(input.LA(1)>='?' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -950,10 +886,10 @@ public class InternalGuiDSLLexer extends Lexer {
         try {
             int _type = RULE_BOOLEAN;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:2349:14: ( ( 'TRUE' | 'FALSE' ) )
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:2349:16: ( 'TRUE' | 'FALSE' )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:2847:14: ( ( 'TRUE' | 'FALSE' ) )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:2847:16: ( 'TRUE' | 'FALSE' )
             {
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:2349:16: ( 'TRUE' | 'FALSE' )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:2847:16: ( 'TRUE' | 'FALSE' )
             int alt4=2;
             int LA4_0 = input.LA(1);
 
@@ -971,7 +907,7 @@ public class InternalGuiDSLLexer extends Lexer {
             }
             switch (alt4) {
                 case 1 :
-                    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:2349:17: 'TRUE'
+                    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:2847:17: 'TRUE'
                     {
                     match("TRUE"); 
 
@@ -979,7 +915,7 @@ public class InternalGuiDSLLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:2349:24: 'FALSE'
+                    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:2847:24: 'FALSE'
                     {
                     match("FALSE"); 
 
@@ -1005,10 +941,10 @@ public class InternalGuiDSLLexer extends Lexer {
         try {
             int _type = RULE_ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:2351:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:2351:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:2849:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:2849:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             {
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:2351:11: ( '^' )?
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:2849:11: ( '^' )?
             int alt5=2;
             int LA5_0 = input.LA(1);
 
@@ -1017,7 +953,7 @@ public class InternalGuiDSLLexer extends Lexer {
             }
             switch (alt5) {
                 case 1 :
-                    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:2351:11: '^'
+                    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:2849:11: '^'
                     {
                     match('^'); 
 
@@ -1035,7 +971,7 @@ public class InternalGuiDSLLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:2351:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:2849:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             loop6:
             do {
                 int alt6=2;
@@ -1084,10 +1020,10 @@ public class InternalGuiDSLLexer extends Lexer {
         try {
             int _type = RULE_INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:2353:10: ( ( '0' .. '9' )+ )
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:2353:12: ( '0' .. '9' )+
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:2851:10: ( ( '0' .. '9' )+ )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:2851:12: ( '0' .. '9' )+
             {
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:2353:12: ( '0' .. '9' )+
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:2851:12: ( '0' .. '9' )+
             int cnt7=0;
             loop7:
             do {
@@ -1101,7 +1037,7 @@ public class InternalGuiDSLLexer extends Lexer {
 
                 switch (alt7) {
             	case 1 :
-            	    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:2353:13: '0' .. '9'
+            	    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:2851:13: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -1133,10 +1069,10 @@ public class InternalGuiDSLLexer extends Lexer {
         try {
             int _type = RULE_STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:2355:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:2355:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:2853:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:2853:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             {
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:2355:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:2853:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             int alt10=2;
             int LA10_0 = input.LA(1);
 
@@ -1154,10 +1090,10 @@ public class InternalGuiDSLLexer extends Lexer {
             }
             switch (alt10) {
                 case 1 :
-                    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:2355:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
+                    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:2853:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
                     {
                     match('\"'); 
-                    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:2355:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
+                    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:2853:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
                     loop8:
                     do {
                         int alt8=3;
@@ -1173,7 +1109,7 @@ public class InternalGuiDSLLexer extends Lexer {
 
                         switch (alt8) {
                     	case 1 :
-                    	    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:2355:21: '\\\\' .
+                    	    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:2853:21: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -1181,7 +1117,7 @@ public class InternalGuiDSLLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:2355:28: ~ ( ( '\\\\' | '\"' ) )
+                    	    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:2853:28: ~ ( ( '\\\\' | '\"' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -1206,10 +1142,10 @@ public class InternalGuiDSLLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:2355:48: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
+                    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:2853:48: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
                     {
                     match('\''); 
-                    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:2355:53: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
+                    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:2853:53: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
                     loop9:
                     do {
                         int alt9=3;
@@ -1225,7 +1161,7 @@ public class InternalGuiDSLLexer extends Lexer {
 
                         switch (alt9) {
                     	case 1 :
-                    	    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:2355:54: '\\\\' .
+                    	    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:2853:54: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -1233,7 +1169,7 @@ public class InternalGuiDSLLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:2355:61: ~ ( ( '\\\\' | '\\'' ) )
+                    	    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:2853:61: ~ ( ( '\\\\' | '\\'' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='&')||(input.LA(1)>='(' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -1276,12 +1212,12 @@ public class InternalGuiDSLLexer extends Lexer {
         try {
             int _type = RULE_ML_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:2357:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:2357:19: '/*' ( options {greedy=false; } : . )* '*/'
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:2855:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:2855:19: '/*' ( options {greedy=false; } : . )* '*/'
             {
             match("/*"); 
 
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:2357:24: ( options {greedy=false; } : . )*
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:2855:24: ( options {greedy=false; } : . )*
             loop11:
             do {
                 int alt11=2;
@@ -1306,7 +1242,7 @@ public class InternalGuiDSLLexer extends Lexer {
 
                 switch (alt11) {
             	case 1 :
-            	    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:2357:52: .
+            	    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:2855:52: .
             	    {
             	    matchAny(); 
 
@@ -1336,12 +1272,12 @@ public class InternalGuiDSLLexer extends Lexer {
         try {
             int _type = RULE_SL_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:2359:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:2359:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:2857:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:2857:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
             {
             match("//"); 
 
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:2359:24: (~ ( ( '\\n' | '\\r' ) ) )*
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:2857:24: (~ ( ( '\\n' | '\\r' ) ) )*
             loop12:
             do {
                 int alt12=2;
@@ -1354,7 +1290,7 @@ public class InternalGuiDSLLexer extends Lexer {
 
                 switch (alt12) {
             	case 1 :
-            	    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:2359:24: ~ ( ( '\\n' | '\\r' ) )
+            	    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:2857:24: ~ ( ( '\\n' | '\\r' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -1374,7 +1310,7 @@ public class InternalGuiDSLLexer extends Lexer {
                 }
             } while (true);
 
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:2359:40: ( ( '\\r' )? '\\n' )?
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:2857:40: ( ( '\\r' )? '\\n' )?
             int alt14=2;
             int LA14_0 = input.LA(1);
 
@@ -1383,9 +1319,9 @@ public class InternalGuiDSLLexer extends Lexer {
             }
             switch (alt14) {
                 case 1 :
-                    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:2359:41: ( '\\r' )? '\\n'
+                    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:2857:41: ( '\\r' )? '\\n'
                     {
-                    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:2359:41: ( '\\r' )?
+                    // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:2857:41: ( '\\r' )?
                     int alt13=2;
                     int LA13_0 = input.LA(1);
 
@@ -1394,7 +1330,7 @@ public class InternalGuiDSLLexer extends Lexer {
                     }
                     switch (alt13) {
                         case 1 :
-                            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:2359:41: '\\r'
+                            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:2857:41: '\\r'
                             {
                             match('\r'); 
 
@@ -1426,8 +1362,8 @@ public class InternalGuiDSLLexer extends Lexer {
         try {
             int _type = RULE_ANY_OTHER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:2361:16: ( . )
-            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:2361:18: .
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:2859:16: ( . )
+            // ../org.deg.xtext.gui/src-gen/org/deg/xtext/gui/parser/antlr/internal/InternalGuiDSL.g:2859:18: .
             {
             matchAny(); 
 
@@ -1741,96 +1677,98 @@ public class InternalGuiDSLLexer extends Lexer {
 
     protected DFA15 dfa15 = new DFA15(this);
     static final String DFA15_eotS =
-        "\1\uffff\1\41\1\uffff\1\41\1\uffff\2\41\1\37\12\41\1\uffff\2\41"+
-        "\1\uffff\2\37\1\41\1\37\2\uffff\3\37\1\uffff\1\41\2\uffff\1\41\1"+
-        "\uffff\2\41\1\uffff\2\41\1\112\15\41\1\uffff\2\41\3\uffff\1\41\4"+
-        "\uffff\6\41\2\uffff\21\41\1\uffff\4\41\1\uffff\12\41\1\u0085\1\u0086"+
-        "\6\41\2\uffff\2\41\1\uffff\1\u0090\2\uffff\6\41\1\u0097\2\41\2\uffff"+
-        "\5\41\1\u0086\1\41\1\u00a0\1\41\1\uffff\1\u00a2\5\41\1\uffff\10"+
-        "\41\1\uffff\1\41\1\uffff\4\41\1\u00b5\15\41\1\uffff\1\41\1\u00c4"+
-        "\5\41\1\u00ca\5\41\1\u00d0\1\uffff\1\41\1\uffff\1\41\1\u00d3\1\41"+
-        "\1\uffff\5\41\1\uffff\2\41\1\uffff\4\41\1\u00e0\2\41\1\u00e3\2\41"+
-        "\1\u00e6\1\41\1\uffff\2\41\1\uffff\1\41\1\u00eb\1\uffff\1\41\1\u00ed"+
-        "\2\41\1\uffff\1\41\1\uffff\1\u00f1\2\41\1\uffff\1\u00f4\2\uffff";
+        "\1\uffff\1\42\1\uffff\6\42\1\uffff\6\42\1\37\1\42\1\uffff\2\42"+
+        "\1\uffff\2\37\1\42\1\37\2\uffff\3\37\1\uffff\2\42\2\uffff\10\42"+
+        "\1\uffff\11\42\1\uffff\1\42\1\uffff\2\42\3\uffff\1\42\4\uffff\12"+
+        "\42\1\uffff\26\42\2\uffff\3\42\1\u0082\1\42\1\u0085\11\42\2\uffff"+
+        "\6\42\2\uffff\1\42\1\u0096\1\42\1\uffff\2\42\1\uffff\2\42\1\u009c"+
+        "\5\42\1\u0085\1\u00a2\6\42\1\uffff\4\42\1\u00ad\1\uffff\5\42\1\uffff"+
+        "\6\42\1\u00b9\2\42\2\uffff\13\42\1\uffff\1\u00c7\13\42\1\u00d3\1"+
+        "\uffff\1\u00d4\1\42\1\uffff\1\42\1\u00d7\6\42\2\uffff\2\42\1\uffff"+
+        "\3\42\1\u00e3\1\42\1\u00e5\1\42\1\u00e7\1\42\1\u00e9\1\42\1\uffff"+
+        "\1\42\1\uffff\1\42\1\uffff\1\42\1\uffff\1\42\1\u00ef\3\42\1\uffff"+
+        "\1\u00f3\1\42\1\u00f6\1\uffff\1\u00f7\3\uffff";
     static final String DFA15_eofS =
-        "\u00f5\uffff";
+        "\u00f8\uffff";
     static final String DFA15_minS =
-        "\1\0\1\145\1\uffff\1\164\1\uffff\1\165\1\162\1\76\1\141\2\163\1"+
-        "\145\1\111\1\116\1\122\1\165\1\144\1\162\1\uffff\1\141\1\156\1\uffff"+
-        "\2\0\2\101\2\uffff\2\0\1\52\1\uffff\1\164\2\uffff\1\162\1\uffff"+
-        "\1\164\1\157\1\uffff\1\142\1\145\1\60\1\160\1\170\2\116\1\164\1"+
-        "\101\1\142\1\170\1\145\1\125\1\154\1\151\1\157\1\uffff\1\171\1\164"+
-        "\3\uffff\1\114\4\uffff\1\40\1\165\1\164\1\155\1\145\1\72\2\uffff"+
-        "\1\145\1\164\1\104\1\105\1\145\1\143\1\145\1\126\1\164\1\145\1\105"+
-        "\2\164\1\160\1\157\1\145\1\123\1\154\1\143\1\157\1\72\1\154\1\uffff"+
-        "\1\72\1\75\1\117\1\122\1\162\1\164\1\170\1\151\1\145\1\141\2\60"+
-        "\1\151\1\141\1\145\1\165\1\162\1\105\2\uffff\1\164\1\156\1\uffff"+
-        "\1\60\2\uffff\1\127\1\103\1\143\1\151\1\164\1\145\1\60\1\151\1\162"+
-        "\2\uffff\1\163\1\142\1\162\1\164\1\141\1\60\1\165\1\60\1\162\1\uffff"+
-        "\1\60\1\117\1\150\1\166\1\104\1\167\1\uffff\3\145\1\154\1\164\1"+
-        "\113\1\143\1\162\1\uffff\1\157\1\uffff\1\115\2\141\1\151\1\60\1"+
-        "\154\1\141\1\154\1\145\1\171\1\145\1\164\1\145\1\160\1\120\1\156"+
-        "\1\164\1\163\1\uffff\1\144\1\60\1\145\1\75\1\113\1\171\1\151\1\60"+
-        "\1\145\1\114\1\147\1\157\1\160\1\60\1\uffff\1\143\1\uffff\1\145"+
-        "\1\60\1\157\1\uffff\1\162\1\105\1\145\1\162\1\154\1\uffff\1\164"+
-        "\1\171\1\uffff\1\156\1\164\1\130\1\141\1\60\1\141\1\151\1\60\1\164"+
-        "\1\171\1\60\1\142\1\uffff\1\171\1\157\1\uffff\1\171\1\60\1\uffff"+
-        "\1\154\1\60\1\156\1\160\1\uffff\1\145\1\uffff\1\60\1\145\1\40\1"+
-        "\uffff\1\60\2\uffff";
+        "\1\0\1\145\1\uffff\1\111\1\116\1\145\2\163\1\164\1\uffff\1\122"+
+        "\1\150\1\165\1\141\1\165\1\144\1\76\1\162\1\uffff\1\141\1\156\1"+
+        "\uffff\2\0\2\101\2\uffff\2\0\1\52\1\uffff\1\160\1\170\2\uffff\2"+
+        "\116\1\164\1\101\1\164\1\145\1\72\1\162\1\uffff\1\142\1\145\1\170"+
+        "\1\125\1\141\1\164\1\142\1\154\1\151\1\uffff\1\157\1\uffff\1\171"+
+        "\1\164\3\uffff\1\114\4\uffff\1\145\1\164\1\104\1\105\1\145\1\143"+
+        "\1\145\1\151\1\40\1\72\1\uffff\1\165\1\126\1\145\1\164\1\105\1\156"+
+        "\1\164\1\145\2\164\1\160\1\157\1\145\1\123\1\72\1\75\1\117\1\122"+
+        "\1\162\1\164\1\170\1\145\1\154\1\uffff\1\143\1\145\1\151\1\60\1"+
+        "\141\1\60\1\147\1\157\1\154\1\151\1\141\1\145\1\165\1\162\1\105"+
+        "\2\uffff\1\127\1\103\1\143\1\151\1\164\1\167\2\uffff\1\164\1\60"+
+        "\1\145\1\uffff\1\162\1\151\1\uffff\1\145\1\156\1\60\1\163\1\142"+
+        "\1\162\1\164\1\141\2\60\1\117\1\150\1\166\1\104\1\111\1\165\1\uffff"+
+        "\1\167\2\145\1\72\1\60\1\uffff\1\145\1\154\1\164\1\113\1\143\1\uffff"+
+        "\1\115\2\141\1\151\1\155\1\162\1\60\1\141\1\154\2\uffff\1\154\1"+
+        "\145\1\171\1\145\1\164\1\120\1\156\1\164\1\163\1\141\1\145\1\uffff"+
+        "\1\60\1\144\1\145\1\75\1\113\1\171\1\151\1\114\1\147\1\157\1\160"+
+        "\1\147\1\60\1\uffff\1\60\1\143\1\uffff\1\145\1\60\1\157\1\105\1"+
+        "\145\1\162\1\154\1\145\2\uffff\1\164\1\171\1\uffff\1\156\1\130\1"+
+        "\141\1\60\1\141\1\60\1\151\1\60\1\164\1\60\1\142\1\uffff\1\171\1"+
+        "\uffff\1\157\1\uffff\1\171\1\uffff\1\154\1\60\1\156\1\160\1\145"+
+        "\1\uffff\1\60\1\145\1\40\1\uffff\1\60\3\uffff";
     static final String DFA15_maxS =
-        "\1\uffff\1\145\1\uffff\1\164\1\uffff\1\165\1\162\1\76\1\141\2\163"+
-        "\1\171\1\111\1\156\1\162\1\165\1\144\1\162\1\uffff\1\141\1\156\1"+
-        "\uffff\2\uffff\1\101\1\172\2\uffff\2\uffff\1\57\1\uffff\1\164\2"+
-        "\uffff\1\162\1\uffff\1\164\1\157\1\uffff\1\142\1\145\1\172\1\160"+
-        "\1\170\2\116\1\164\1\124\1\142\1\170\1\145\1\125\1\154\1\151\1\157"+
-        "\1\uffff\1\171\1\164\3\uffff\1\114\4\uffff\1\40\1\165\1\164\1\155"+
-        "\1\145\1\72\2\uffff\1\145\1\164\1\104\1\105\1\145\1\143\1\145\1"+
-        "\154\1\164\1\145\1\105\2\164\1\160\1\157\1\145\1\123\1\160\1\143"+
-        "\1\157\1\72\1\154\1\uffff\1\72\1\75\1\117\1\122\1\162\1\164\1\170"+
-        "\1\151\1\145\1\146\2\172\1\151\1\141\1\145\1\165\1\162\1\105\2\uffff"+
-        "\1\164\1\156\1\uffff\1\172\2\uffff\1\127\1\103\1\143\1\151\1\164"+
-        "\1\145\1\172\1\151\1\162\2\uffff\1\163\1\142\1\162\1\164\1\141\1"+
-        "\172\1\165\1\172\1\162\1\uffff\1\172\1\117\1\150\1\166\1\104\1\167"+
-        "\1\uffff\3\145\1\154\1\164\1\113\1\143\1\162\1\uffff\1\157\1\uffff"+
-        "\1\115\2\141\1\151\1\172\1\154\1\141\1\154\1\145\1\171\1\145\1\164"+
-        "\1\145\1\160\1\120\1\156\1\164\1\163\1\uffff\1\144\1\172\1\145\1"+
-        "\75\1\113\1\171\1\151\1\172\1\145\1\114\1\147\1\157\1\160\1\172"+
-        "\1\uffff\1\143\1\uffff\1\145\1\172\1\157\1\uffff\1\162\1\105\1\145"+
-        "\1\162\1\154\1\uffff\1\164\1\171\1\uffff\1\156\1\164\1\130\1\141"+
-        "\1\172\1\141\1\151\1\172\1\164\1\171\1\172\1\142\1\uffff\1\171\1"+
-        "\157\1\uffff\1\171\1\172\1\uffff\1\154\1\172\1\156\1\160\1\uffff"+
-        "\1\145\1\uffff\1\172\1\145\1\40\1\uffff\1\172\2\uffff";
+        "\1\uffff\1\171\1\uffff\1\111\1\156\1\145\2\163\1\164\1\uffff\1"+
+        "\162\1\150\1\165\1\141\1\165\1\144\1\76\1\162\1\uffff\1\141\1\156"+
+        "\1\uffff\2\uffff\1\101\1\172\2\uffff\2\uffff\1\57\1\uffff\1\160"+
+        "\1\170\2\uffff\2\116\1\164\1\126\1\164\1\145\1\72\1\162\1\uffff"+
+        "\1\142\1\145\1\170\1\125\1\141\1\164\1\142\1\154\1\151\1\uffff\1"+
+        "\157\1\uffff\1\171\1\164\3\uffff\1\114\4\uffff\1\145\1\164\1\104"+
+        "\1\105\1\145\1\143\1\145\1\151\1\40\1\72\1\uffff\1\165\1\154\1\145"+
+        "\1\164\1\105\1\156\1\164\1\145\2\164\1\160\1\157\1\145\1\123\1\72"+
+        "\1\75\1\117\1\122\1\162\1\164\1\170\1\145\1\160\1\uffff\1\143\1"+
+        "\145\1\151\1\172\1\146\1\172\1\147\1\157\1\154\1\151\1\141\1\145"+
+        "\1\165\1\162\1\105\2\uffff\1\127\1\103\1\143\1\151\1\164\1\167\2"+
+        "\uffff\1\164\1\172\1\145\1\uffff\1\162\1\151\1\uffff\1\145\1\156"+
+        "\1\172\1\163\1\142\1\162\1\164\1\141\2\172\1\117\1\150\1\166\1\104"+
+        "\1\111\1\165\1\uffff\1\167\2\145\1\72\1\172\1\uffff\1\145\1\154"+
+        "\1\164\1\113\1\143\1\uffff\1\115\2\141\1\151\1\155\1\162\1\172\1"+
+        "\141\1\154\2\uffff\1\154\1\145\1\171\1\145\1\164\1\120\1\156\1\164"+
+        "\1\163\1\141\1\145\1\uffff\1\172\1\144\1\145\1\75\1\113\1\171\1"+
+        "\151\1\114\1\147\1\157\1\160\1\147\1\172\1\uffff\1\172\1\143\1\uffff"+
+        "\1\145\1\172\1\157\1\105\1\145\1\162\1\154\1\145\2\uffff\1\164\1"+
+        "\171\1\uffff\1\156\1\130\1\141\1\172\1\141\1\172\1\151\1\172\1\164"+
+        "\1\172\1\142\1\uffff\1\171\1\uffff\1\157\1\uffff\1\171\1\uffff\1"+
+        "\154\1\172\1\156\1\160\1\145\1\uffff\1\172\1\145\1\172\1\uffff\1"+
+        "\172\3\uffff";
     static final String DFA15_acceptS =
-        "\2\uffff\1\2\1\uffff\1\4\15\uffff\1\31\2\uffff\1\40\4\uffff\1\44"+
-        "\1\45\3\uffff\1\51\1\uffff\1\44\1\2\1\uffff\1\4\2\uffff\1\7\20\uffff"+
-        "\1\31\2\uffff\1\40\1\41\1\42\1\uffff\1\45\1\46\1\47\1\50\6\uffff"+
-        "\1\13\1\34\26\uffff\1\12\22\uffff\1\1\1\11\2\uffff\1\6\1\uffff\1"+
-        "\14\1\22\11\uffff\1\25\1\43\11\uffff\1\10\6\uffff\1\26\10\uffff"+
-        "\1\5\1\uffff\1\15\22\uffff\1\17\16\uffff\1\24\1\uffff\1\23\3\uffff"+
-        "\1\3\5\uffff\1\21\2\uffff\1\32\14\uffff\1\36\2\uffff\1\30\2\uffff"+
-        "\1\16\4\uffff\1\35\1\uffff\1\37\3\uffff\1\20\1\uffff\1\27\1\33";
+        "\2\uffff\1\2\6\uffff\1\12\10\uffff\1\35\2\uffff\1\40\4\uffff\1"+
+        "\44\1\45\3\uffff\1\51\2\uffff\1\44\1\2\10\uffff\1\12\11\uffff\1"+
+        "\33\1\uffff\1\35\2\uffff\1\40\1\41\1\42\1\uffff\1\45\1\46\1\47\1"+
+        "\50\12\uffff\1\10\27\uffff\1\7\17\uffff\1\1\1\31\6\uffff\1\5\1\6"+
+        "\3\uffff\1\16\2\uffff\1\43\20\uffff\1\13\5\uffff\1\23\5\uffff\1"+
+        "\3\11\uffff\1\14\1\22\13\uffff\1\15\15\uffff\1\20\2\uffff\1\32\10"+
+        "\uffff\1\11\1\21\2\uffff\1\36\13\uffff\1\26\1\uffff\1\30\1\uffff"+
+        "\1\34\1\uffff\1\4\5\uffff\1\27\3\uffff\1\24\1\uffff\1\25\1\17\1"+
+        "\37";
     static final String DFA15_specialS =
-        "\1\2\25\uffff\1\4\1\0\4\uffff\1\3\1\1\u00d7\uffff}>";
+        "\1\4\25\uffff\1\1\1\2\4\uffff\1\3\1\0\u00da\uffff}>";
     static final String[] DFA15_transitionS = {
             "\11\37\2\25\2\37\1\25\22\37\1\25\1\37\1\34\4\37\1\35\4\37\1"+
-            "\25\1\7\1\37\1\36\12\33\1\4\1\2\1\27\1\22\3\37\1\32\1\5\3\32"+
-            "\1\30\2\32\1\15\2\32\1\10\1\17\5\32\1\3\1\16\2\32\1\14\3\32"+
-            "\1\26\2\37\1\31\1\32\1\37\1\12\3\32\1\20\1\6\1\1\1\32\1\24\2"+
-            "\32\1\23\3\32\1\21\3\32\1\13\1\11\5\32\uff85\37",
-            "\1\40",
+            "\25\1\20\1\37\1\36\12\33\1\11\1\2\1\27\1\22\3\37\1\32\1\14\3"+
+            "\32\1\30\2\32\1\4\2\32\1\15\1\16\5\32\1\10\1\12\2\32\1\3\3\32"+
+            "\1\26\2\37\1\31\1\32\1\37\1\7\1\32\1\13\1\32\1\17\1\32\1\5\1"+
+            "\32\1\24\2\32\1\23\3\32\1\21\3\32\1\1\1\6\5\32\uff85\37",
+            "\1\41\23\uffff\1\40",
             "",
-            "\1\43",
-            "",
-            "\1\45",
-            "\1\46",
-            "\1\47",
+            "\1\44",
+            "\1\45\27\uffff\1\47\7\uffff\1\46",
             "\1\50",
             "\1\51",
             "\1\52",
-            "\1\54\23\uffff\1\53",
-            "\1\55",
-            "\1\56\27\uffff\1\60\7\uffff\1\57",
-            "\1\64\16\uffff\1\61\3\uffff\1\62\14\uffff\1\63",
+            "\1\53",
+            "",
+            "\1\60\16\uffff\1\55\3\uffff\1\57\14\uffff\1\56",
+            "\1\61",
+            "\1\62",
+            "\1\63",
+            "\1\64",
             "\1\65",
             "\1\66",
             "\1\67",
@@ -1841,7 +1779,7 @@ public class InternalGuiDSLLexer extends Lexer {
             "\133\74\1\uffff\uffa4\74",
             "\74\75\1\uffff\uffc3\75",
             "\1\76",
-            "\32\41\4\uffff\1\41\1\uffff\32\41",
+            "\32\42\4\uffff\1\42\1\uffff\32\42",
             "",
             "",
             "\0\100",
@@ -1849,28 +1787,28 @@ public class InternalGuiDSLLexer extends Lexer {
             "\1\101\4\uffff\1\102",
             "",
             "\1\103",
-            "",
-            "",
             "\1\104",
+            "",
             "",
             "\1\105",
             "\1\106",
-            "",
             "\1\107",
-            "\1\110",
-            "\12\41\1\111\6\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
+            "\1\110\22\uffff\1\111\1\uffff\1\112",
             "\1\113",
             "\1\114",
             "\1\115",
             "\1\116",
+            "",
             "\1\117",
-            "\1\120\22\uffff\1\121",
+            "\1\120",
+            "\1\121",
             "\1\122",
             "\1\123",
             "\1\124",
             "\1\125",
             "\1\126",
             "\1\127",
+            "",
             "\1\130",
             "",
             "\1\131",
@@ -1889,16 +1827,15 @@ public class InternalGuiDSLLexer extends Lexer {
             "\1\137",
             "\1\140",
             "\1\141",
-            "",
-            "",
             "\1\142",
             "\1\143",
             "\1\144",
             "\1\145",
+            "",
             "\1\146",
-            "\1\147",
-            "\1\150",
-            "\1\151\25\uffff\1\152",
+            "\1\150\25\uffff\1\147",
+            "\1\151",
+            "\1\152",
             "\1\153",
             "\1\154",
             "\1\155",
@@ -1908,89 +1845,89 @@ public class InternalGuiDSLLexer extends Lexer {
             "\1\161",
             "\1\162",
             "\1\163",
-            "\1\164\3\uffff\1\165",
+            "\1\164",
+            "\1\165",
             "\1\166",
             "\1\167",
             "\1\170",
             "\1\171",
-            "",
             "\1\172",
             "\1\173",
             "\1\174",
-            "\1\175",
-            "\1\176",
+            "\1\176\3\uffff\1\175",
+            "",
             "\1\177",
             "\1\u0080",
             "\1\u0081",
-            "\1\u0082",
-            "\1\u0084\4\uffff\1\u0083",
-            "\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
-            "\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
+            "\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
+            "\1\u0083\4\uffff\1\u0084",
+            "\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
+            "\1\u0086",
             "\1\u0087",
             "\1\u0088",
             "\1\u0089",
             "\1\u008a",
             "\1\u008b",
             "\1\u008c",
-            "",
-            "",
             "\1\u008d",
             "\1\u008e",
             "",
-            "\12\41\7\uffff\17\41\1\u008f\12\41\4\uffff\1\41\1\uffff\32"+
-            "\41",
             "",
-            "",
+            "\1\u008f",
+            "\1\u0090",
             "\1\u0091",
             "\1\u0092",
             "\1\u0093",
             "\1\u0094",
+            "",
+            "",
             "\1\u0095",
-            "\1\u0096",
-            "\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
+            "\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
+            "\1\u0097",
+            "",
             "\1\u0098",
             "\1\u0099",
             "",
-            "",
             "\1\u009a",
             "\1\u009b",
-            "\1\u009c",
+            "\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
             "\1\u009d",
             "\1\u009e",
-            "\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
             "\1\u009f",
-            "\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
+            "\1\u00a0",
             "\1\u00a1",
-            "",
-            "\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
+            "\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
+            "\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
             "\1\u00a3",
             "\1\u00a4",
             "\1\u00a5",
             "\1\u00a6",
             "\1\u00a7",
-            "",
             "\1\u00a8",
+            "",
             "\1\u00a9",
             "\1\u00aa",
             "\1\u00ab",
             "\1\u00ac",
-            "\1\u00ad",
+            "\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
+            "",
             "\1\u00ae",
             "\1\u00af",
-            "",
             "\1\u00b0",
-            "",
             "\1\u00b1",
             "\1\u00b2",
+            "",
             "\1\u00b3",
             "\1\u00b4",
-            "\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
+            "\1\u00b5",
             "\1\u00b6",
             "\1\u00b7",
             "\1\u00b8",
-            "\1\u00b9",
+            "\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
             "\1\u00ba",
             "\1\u00bb",
+            "",
+            "",
             "\1\u00bc",
             "\1\u00bd",
             "\1\u00be",
@@ -1998,68 +1935,72 @@ public class InternalGuiDSLLexer extends Lexer {
             "\1\u00c0",
             "\1\u00c1",
             "\1\u00c2",
-            "",
             "\1\u00c3",
-            "\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
+            "\1\u00c4",
             "\1\u00c5",
             "\1\u00c6",
-            "\1\u00c7",
+            "",
+            "\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
             "\1\u00c8",
             "\1\u00c9",
-            "\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
+            "\1\u00ca",
             "\1\u00cb",
             "\1\u00cc",
             "\1\u00cd",
             "\1\u00ce",
             "\1\u00cf",
-            "\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
-            "",
+            "\1\u00d0",
             "\1\u00d1",
-            "",
             "\1\u00d2",
-            "\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
-            "\1\u00d4",
+            "\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
             "",
+            "\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
             "\1\u00d5",
+            "",
             "\1\u00d6",
-            "\1\u00d7",
+            "\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
             "\1\u00d8",
             "\1\u00d9",
-            "",
             "\1\u00da",
             "\1\u00db",
-            "",
             "\1\u00dc",
             "\1\u00dd",
+            "",
+            "",
             "\1\u00de",
             "\1\u00df",
-            "\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
+            "",
+            "\1\u00e0",
             "\1\u00e1",
             "\1\u00e2",
-            "\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
+            "\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
             "\1\u00e4",
-            "\1\u00e5",
-            "\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
-            "\1\u00e7",
-            "",
+            "\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
+            "\1\u00e6",
+            "\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
             "\1\u00e8",
-            "\1\u00e9",
-            "",
+            "\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
             "\1\u00ea",
-            "\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
+            "",
+            "\1\u00eb",
             "",
             "\1\u00ec",
-            "\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
+            "",
+            "\1\u00ed",
+            "",
             "\1\u00ee",
-            "\1\u00ef",
-            "",
+            "\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
             "\1\u00f0",
-            "",
-            "\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
+            "\1\u00f1",
             "\1\u00f2",
-            "\1\u00f3",
             "",
-            "\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
+            "\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
+            "\1\u00f4",
+            "\1\u00f5\17\uffff\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff"+
+            "\32\42",
+            "",
+            "\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
+            "",
             "",
             ""
     };
@@ -2101,16 +2042,6 @@ public class InternalGuiDSLLexer extends Lexer {
         	int _s = s;
             switch ( s ) {
                     case 0 : 
-                        int LA15_23 = input.LA(1);
-
-                        s = -1;
-                        if ( ((LA15_23>='\u0000' && LA15_23<=';')||(LA15_23>='=' && LA15_23<='\uFFFF')) ) {s = 61;}
-
-                        else s = 31;
-
-                        if ( s>=0 ) return s;
-                        break;
-                    case 1 : 
                         int LA15_29 = input.LA(1);
 
                         s = -1;
@@ -2120,41 +2051,71 @@ public class InternalGuiDSLLexer extends Lexer {
 
                         if ( s>=0 ) return s;
                         break;
+                    case 1 : 
+                        int LA15_22 = input.LA(1);
+
+                        s = -1;
+                        if ( ((LA15_22>='\u0000' && LA15_22<='Z')||(LA15_22>='\\' && LA15_22<='\uFFFF')) ) {s = 60;}
+
+                        else s = 31;
+
+                        if ( s>=0 ) return s;
+                        break;
                     case 2 : 
+                        int LA15_23 = input.LA(1);
+
+                        s = -1;
+                        if ( ((LA15_23>='\u0000' && LA15_23<=';')||(LA15_23>='=' && LA15_23<='\uFFFF')) ) {s = 61;}
+
+                        else s = 31;
+
+                        if ( s>=0 ) return s;
+                        break;
+                    case 3 : 
+                        int LA15_28 = input.LA(1);
+
+                        s = -1;
+                        if ( ((LA15_28>='\u0000' && LA15_28<='\uFFFF')) ) {s = 64;}
+
+                        else s = 31;
+
+                        if ( s>=0 ) return s;
+                        break;
+                    case 4 : 
                         int LA15_0 = input.LA(1);
 
                         s = -1;
-                        if ( (LA15_0=='g') ) {s = 1;}
+                        if ( (LA15_0=='t') ) {s = 1;}
 
                         else if ( (LA15_0==';') ) {s = 2;}
 
-                        else if ( (LA15_0=='S') ) {s = 3;}
+                        else if ( (LA15_0=='W') ) {s = 3;}
 
-                        else if ( (LA15_0==':') ) {s = 4;}
+                        else if ( (LA15_0=='I') ) {s = 4;}
 
-                        else if ( (LA15_0=='B') ) {s = 5;}
+                        else if ( (LA15_0=='g') ) {s = 5;}
 
-                        else if ( (LA15_0=='f') ) {s = 6;}
+                        else if ( (LA15_0=='u') ) {s = 6;}
 
-                        else if ( (LA15_0=='-') ) {s = 7;}
+                        else if ( (LA15_0=='a') ) {s = 7;}
 
-                        else if ( (LA15_0=='L') ) {s = 8;}
+                        else if ( (LA15_0=='S') ) {s = 8;}
 
-                        else if ( (LA15_0=='u') ) {s = 9;}
+                        else if ( (LA15_0==':') ) {s = 9;}
 
-                        else if ( (LA15_0=='a') ) {s = 10;}
+                        else if ( (LA15_0=='T') ) {s = 10;}
 
-                        else if ( (LA15_0=='t') ) {s = 11;}
+                        else if ( (LA15_0=='c') ) {s = 11;}
 
-                        else if ( (LA15_0=='W') ) {s = 12;}
+                        else if ( (LA15_0=='B') ) {s = 12;}
 
-                        else if ( (LA15_0=='I') ) {s = 13;}
+                        else if ( (LA15_0=='L') ) {s = 13;}
 
-                        else if ( (LA15_0=='T') ) {s = 14;}
+                        else if ( (LA15_0=='M') ) {s = 14;}
 
-                        else if ( (LA15_0=='M') ) {s = 15;}
+                        else if ( (LA15_0=='e') ) {s = 15;}
 
-                        else if ( (LA15_0=='e') ) {s = 16;}
+                        else if ( (LA15_0=='-') ) {s = 16;}
 
                         else if ( (LA15_0=='p') ) {s = 17;}
 
@@ -2174,7 +2135,7 @@ public class InternalGuiDSLLexer extends Lexer {
 
                         else if ( (LA15_0=='^') ) {s = 25;}
 
-                        else if ( (LA15_0=='A'||(LA15_0>='C' && LA15_0<='E')||(LA15_0>='G' && LA15_0<='H')||(LA15_0>='J' && LA15_0<='K')||(LA15_0>='N' && LA15_0<='R')||(LA15_0>='U' && LA15_0<='V')||(LA15_0>='X' && LA15_0<='Z')||LA15_0=='_'||(LA15_0>='b' && LA15_0<='d')||LA15_0=='h'||(LA15_0>='j' && LA15_0<='k')||(LA15_0>='m' && LA15_0<='o')||(LA15_0>='q' && LA15_0<='s')||(LA15_0>='v' && LA15_0<='z')) ) {s = 26;}
+                        else if ( (LA15_0=='A'||(LA15_0>='C' && LA15_0<='E')||(LA15_0>='G' && LA15_0<='H')||(LA15_0>='J' && LA15_0<='K')||(LA15_0>='N' && LA15_0<='R')||(LA15_0>='U' && LA15_0<='V')||(LA15_0>='X' && LA15_0<='Z')||LA15_0=='_'||LA15_0=='b'||LA15_0=='d'||LA15_0=='f'||LA15_0=='h'||(LA15_0>='j' && LA15_0<='k')||(LA15_0>='m' && LA15_0<='o')||(LA15_0>='q' && LA15_0<='s')||(LA15_0>='v' && LA15_0<='z')) ) {s = 26;}
 
                         else if ( ((LA15_0>='0' && LA15_0<='9')) ) {s = 27;}
 
@@ -2185,26 +2146,6 @@ public class InternalGuiDSLLexer extends Lexer {
                         else if ( (LA15_0=='/') ) {s = 30;}
 
                         else if ( ((LA15_0>='\u0000' && LA15_0<='\b')||(LA15_0>='\u000B' && LA15_0<='\f')||(LA15_0>='\u000E' && LA15_0<='\u001F')||LA15_0=='!'||(LA15_0>='#' && LA15_0<='&')||(LA15_0>='(' && LA15_0<='+')||LA15_0=='.'||(LA15_0>='>' && LA15_0<='@')||(LA15_0>='\\' && LA15_0<=']')||LA15_0=='`'||(LA15_0>='{' && LA15_0<='\uFFFF')) ) {s = 31;}
-
-                        if ( s>=0 ) return s;
-                        break;
-                    case 3 : 
-                        int LA15_28 = input.LA(1);
-
-                        s = -1;
-                        if ( ((LA15_28>='\u0000' && LA15_28<='\uFFFF')) ) {s = 64;}
-
-                        else s = 31;
-
-                        if ( s>=0 ) return s;
-                        break;
-                    case 4 : 
-                        int LA15_22 = input.LA(1);
-
-                        s = -1;
-                        if ( ((LA15_22>='\u0000' && LA15_22<='Z')||(LA15_22>='\\' && LA15_22<='\uFFFF')) ) {s = 60;}
-
-                        else s = 31;
 
                         if ( s>=0 ) return s;
                         break;

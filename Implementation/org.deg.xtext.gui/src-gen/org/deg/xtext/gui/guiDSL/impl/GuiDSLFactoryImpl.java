@@ -65,38 +65,44 @@ public class GuiDSLFactoryImpl extends EFactoryImpl implements GuiDSLFactory
     switch (eClass.getClassifierID())
     {
       case GuiDSLPackage.UI_DESCRIPTION: return createUIDescription();
-      case GuiDSLPackage.LAYOUT: return createLayout();
-      case GuiDSLPackage.STRUCTURE: return createStructure();
-      case GuiDSLPackage.ELEMENT: return createElement();
-      case GuiDSLPackage.REFINEMENT: return createRefinement();
-      case GuiDSLPackage.COMPONENT_REFINEMENT: return createComponentRefinement();
-      case GuiDSLPackage.BUTTON_REFINEMENT: return createButtonRefinement();
-      case GuiDSLPackage.LABEL_REFINEMENT: return createLabelRefinement();
-      case GuiDSLPackage.PROPERTY: return createProperty();
-      case GuiDSLPackage.USED_DESCRIPTIONS: return createUsedDescriptions();
-      case GuiDSLPackage.DESCRIPTION_TYPE: return createDescriptionType();
-      case GuiDSLPackage.DEFINITION: return createDefinition();
       case GuiDSLPackage.TYPE_DEFINITION: return createTypeDefinition();
       case GuiDSLPackage.TYPE: return createType();
-      case GuiDSLPackage.UI_DESCRIPTION_IMPORT: return createUIDescriptionImport();
+      case GuiDSLPackage.PROPERTY: return createProperty();
+      case GuiDSLPackage.LAYOUT: return createLayout();
+      case GuiDSLPackage.USED_DESCRIPTIONS: return createUsedDescriptions();
+      case GuiDSLPackage.DESCRIPTION_TYPE: return createDescriptionType();
       case GuiDSLPackage.COMPLEX_COMPONENT: return createComplexComponent();
+      case GuiDSLPackage.UI_DESCRIPTION_IMPORT: return createUIDescriptionImport();
+      case GuiDSLPackage.REFINEMENT: return createRefinement();
+      case GuiDSLPackage.COMPONENT_REFINEMENT: return createComponentRefinement();
+      case GuiDSLPackage.DEFINITION: return createDefinition();
+      case GuiDSLPackage.COMPONENT_DEFINITION: return createComponentDefinition();
+      case GuiDSLPackage.STRUCTURE: return createStructure();
+      case GuiDSLPackage.ELEMENT: return createElement();
+      case GuiDSLPackage.TABLE_REFINEMENT: return createTableRefinement();
+      case GuiDSLPackage.TAB_VIEW_REFINEMENT: return createTabViewRefinement();
+      case GuiDSLPackage.TREE_REFINEMENT: return createTreeRefinement();
+      case GuiDSLPackage.INTERCHANGEABLE_REFINEMENT: return createInterchangeableRefinement();
+      case GuiDSLPackage.TEXTAREA_REFINEMENT: return createTextareaRefinement();
+      case GuiDSLPackage.TEXTFIELD_REFINEMENT: return createTextfieldRefinement();
+      case GuiDSLPackage.BUTTON_REFINEMENT: return createButtonRefinement();
+      case GuiDSLPackage.LABEL_REFINEMENT: return createLabelRefinement();
       case GuiDSLPackage.TAB_VIEW_DEFINITION: return createTabViewDefinition();
       case GuiDSLPackage.TAB_DEFINITION: return createTabDefinition();
       case GuiDSLPackage.MULTISELECTION: return createMultiselection();
-      case GuiDSLPackage.COMPONENT_DEFINITION: return createComponentDefinition();
       case GuiDSLPackage.TEXTFIELD_DEFINITION: return createTextfieldDefinition();
-      case GuiDSLPackage.TEXTFIELD_PROPERTIES: return createTextfieldProperties();
       case GuiDSLPackage.TEXTAREA_DEFINITION: return createTextareaDefinition();
-      case GuiDSLPackage.TEXTAREA_PROPERTIES: return createTextareaProperties();
       case GuiDSLPackage.TREE_DEFINITION: return createTreeDefinition();
       case GuiDSLPackage.TABLE_DEFINITION: return createTableDefinition();
       case GuiDSLPackage.INTERCHANGEABLE_DEFINITION: return createInterchangeableDefinition();
       case GuiDSLPackage.BUTTON_DEFINITION: return createButtonDefinition();
+      case GuiDSLPackage.LABEL_DEFINITION: return createLabelDefinition();
+      case GuiDSLPackage.INTERACTIONTYPE: return createInteractiontype();
+      case GuiDSLPackage.TEXTAREA_PROPERTIES: return createTextareaProperties();
+      case GuiDSLPackage.TEXTFIELD_PROPERTIES: return createTextfieldProperties();
+      case GuiDSLPackage.LABEL_PROPERTIES: return createLabelProperties();
       case GuiDSLPackage.BUTTON_PROPERTIES: return createButtonProperties();
       case GuiDSLPackage.COMMON_PROPERTIES: return createCommonProperties();
-      case GuiDSLPackage.LABEL_DEFINITION: return createLabelDefinition();
-      case GuiDSLPackage.LABEL_PROPERTIES: return createLabelProperties();
-      case GuiDSLPackage.INTERACTIONTYPE: return createInteractiontype();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
     }
@@ -111,127 +117,6 @@ public class GuiDSLFactoryImpl extends EFactoryImpl implements GuiDSLFactory
   {
     UIDescriptionImpl uiDescription = new UIDescriptionImpl();
     return uiDescription;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Layout createLayout()
-  {
-    LayoutImpl layout = new LayoutImpl();
-    return layout;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Structure createStructure()
-  {
-    StructureImpl structure = new StructureImpl();
-    return structure;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Element createElement()
-  {
-    ElementImpl element = new ElementImpl();
-    return element;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Refinement createRefinement()
-  {
-    RefinementImpl refinement = new RefinementImpl();
-    return refinement;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public ComponentRefinement createComponentRefinement()
-  {
-    ComponentRefinementImpl componentRefinement = new ComponentRefinementImpl();
-    return componentRefinement;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public ButtonRefinement createButtonRefinement()
-  {
-    ButtonRefinementImpl buttonRefinement = new ButtonRefinementImpl();
-    return buttonRefinement;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public LabelRefinement createLabelRefinement()
-  {
-    LabelRefinementImpl labelRefinement = new LabelRefinementImpl();
-    return labelRefinement;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Property createProperty()
-  {
-    PropertyImpl property = new PropertyImpl();
-    return property;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public UsedDescriptions createUsedDescriptions()
-  {
-    UsedDescriptionsImpl usedDescriptions = new UsedDescriptionsImpl();
-    return usedDescriptions;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public DescriptionType createDescriptionType()
-  {
-    DescriptionTypeImpl descriptionType = new DescriptionTypeImpl();
-    return descriptionType;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Definition createDefinition()
-  {
-    DefinitionImpl definition = new DefinitionImpl();
-    return definition;
   }
 
   /**
@@ -261,10 +146,43 @@ public class GuiDSLFactoryImpl extends EFactoryImpl implements GuiDSLFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public UIDescriptionImport createUIDescriptionImport()
+  public Property createProperty()
   {
-    UIDescriptionImportImpl uiDescriptionImport = new UIDescriptionImportImpl();
-    return uiDescriptionImport;
+    PropertyImpl property = new PropertyImpl();
+    return property;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Layout createLayout()
+  {
+    LayoutImpl layout = new LayoutImpl();
+    return layout;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public UsedDescriptions createUsedDescriptions()
+  {
+    UsedDescriptionsImpl usedDescriptions = new UsedDescriptionsImpl();
+    return usedDescriptions;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public DescriptionType createDescriptionType()
+  {
+    DescriptionTypeImpl descriptionType = new DescriptionTypeImpl();
+    return descriptionType;
   }
 
   /**
@@ -276,6 +194,171 @@ public class GuiDSLFactoryImpl extends EFactoryImpl implements GuiDSLFactory
   {
     ComplexComponentImpl complexComponent = new ComplexComponentImpl();
     return complexComponent;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public UIDescriptionImport createUIDescriptionImport()
+  {
+    UIDescriptionImportImpl uiDescriptionImport = new UIDescriptionImportImpl();
+    return uiDescriptionImport;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Refinement createRefinement()
+  {
+    RefinementImpl refinement = new RefinementImpl();
+    return refinement;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public ComponentRefinement createComponentRefinement()
+  {
+    ComponentRefinementImpl componentRefinement = new ComponentRefinementImpl();
+    return componentRefinement;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Definition createDefinition()
+  {
+    DefinitionImpl definition = new DefinitionImpl();
+    return definition;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public ComponentDefinition createComponentDefinition()
+  {
+    ComponentDefinitionImpl componentDefinition = new ComponentDefinitionImpl();
+    return componentDefinition;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Structure createStructure()
+  {
+    StructureImpl structure = new StructureImpl();
+    return structure;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Element createElement()
+  {
+    ElementImpl element = new ElementImpl();
+    return element;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public TableRefinement createTableRefinement()
+  {
+    TableRefinementImpl tableRefinement = new TableRefinementImpl();
+    return tableRefinement;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public TabViewRefinement createTabViewRefinement()
+  {
+    TabViewRefinementImpl tabViewRefinement = new TabViewRefinementImpl();
+    return tabViewRefinement;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public TreeRefinement createTreeRefinement()
+  {
+    TreeRefinementImpl treeRefinement = new TreeRefinementImpl();
+    return treeRefinement;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public InterchangeableRefinement createInterchangeableRefinement()
+  {
+    InterchangeableRefinementImpl interchangeableRefinement = new InterchangeableRefinementImpl();
+    return interchangeableRefinement;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public TextareaRefinement createTextareaRefinement()
+  {
+    TextareaRefinementImpl textareaRefinement = new TextareaRefinementImpl();
+    return textareaRefinement;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public TextfieldRefinement createTextfieldRefinement()
+  {
+    TextfieldRefinementImpl textfieldRefinement = new TextfieldRefinementImpl();
+    return textfieldRefinement;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public ButtonRefinement createButtonRefinement()
+  {
+    ButtonRefinementImpl buttonRefinement = new ButtonRefinementImpl();
+    return buttonRefinement;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public LabelRefinement createLabelRefinement()
+  {
+    LabelRefinementImpl labelRefinement = new LabelRefinementImpl();
+    return labelRefinement;
   }
 
   /**
@@ -316,17 +399,6 @@ public class GuiDSLFactoryImpl extends EFactoryImpl implements GuiDSLFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public ComponentDefinition createComponentDefinition()
-  {
-    ComponentDefinitionImpl componentDefinition = new ComponentDefinitionImpl();
-    return componentDefinition;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public TextfieldDefinition createTextfieldDefinition()
   {
     TextfieldDefinitionImpl textfieldDefinition = new TextfieldDefinitionImpl();
@@ -338,32 +410,10 @@ public class GuiDSLFactoryImpl extends EFactoryImpl implements GuiDSLFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public TextfieldProperties createTextfieldProperties()
-  {
-    TextfieldPropertiesImpl textfieldProperties = new TextfieldPropertiesImpl();
-    return textfieldProperties;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public TextareaDefinition createTextareaDefinition()
   {
     TextareaDefinitionImpl textareaDefinition = new TextareaDefinitionImpl();
     return textareaDefinition;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public TextareaProperties createTextareaProperties()
-  {
-    TextareaPropertiesImpl textareaProperties = new TextareaPropertiesImpl();
-    return textareaProperties;
   }
 
   /**
@@ -415,32 +465,43 @@ public class GuiDSLFactoryImpl extends EFactoryImpl implements GuiDSLFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public ButtonProperties createButtonProperties()
-  {
-    ButtonPropertiesImpl buttonProperties = new ButtonPropertiesImpl();
-    return buttonProperties;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public CommonProperties createCommonProperties()
-  {
-    CommonPropertiesImpl commonProperties = new CommonPropertiesImpl();
-    return commonProperties;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public LabelDefinition createLabelDefinition()
   {
     LabelDefinitionImpl labelDefinition = new LabelDefinitionImpl();
     return labelDefinition;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Interactiontype createInteractiontype()
+  {
+    InteractiontypeImpl interactiontype = new InteractiontypeImpl();
+    return interactiontype;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public TextareaProperties createTextareaProperties()
+  {
+    TextareaPropertiesImpl textareaProperties = new TextareaPropertiesImpl();
+    return textareaProperties;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public TextfieldProperties createTextfieldProperties()
+  {
+    TextfieldPropertiesImpl textfieldProperties = new TextfieldPropertiesImpl();
+    return textfieldProperties;
   }
 
   /**
@@ -459,10 +520,21 @@ public class GuiDSLFactoryImpl extends EFactoryImpl implements GuiDSLFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public Interactiontype createInteractiontype()
+  public ButtonProperties createButtonProperties()
   {
-    InteractiontypeImpl interactiontype = new InteractiontypeImpl();
-    return interactiontype;
+    ButtonPropertiesImpl buttonProperties = new ButtonPropertiesImpl();
+    return buttonProperties;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public CommonProperties createCommonProperties()
+  {
+    CommonPropertiesImpl commonProperties = new CommonPropertiesImpl();
+    return commonProperties;
   }
 
   /**

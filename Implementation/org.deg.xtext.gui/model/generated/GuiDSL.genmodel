@@ -16,15 +16,26 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GuiDSL.ecore#//UIDescription/definitions"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GuiDSL.ecore#//UIDescription/structure"/>
     </genClasses>
+    <genClasses ecoreClass="GuiDSL.ecore#//TypeDefinition">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GuiDSL.ecore#//TypeDefinition/type"/>
+    </genClasses>
+    <genClasses ecoreClass="GuiDSL.ecore#//Type">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GuiDSL.ecore#//Type/id"/>
+    </genClasses>
+    <genClasses ecoreClass="GuiDSL.ecore#//Property">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GuiDSL.ecore#//Property/propertiesFiles"/>
+    </genClasses>
     <genClasses ecoreClass="GuiDSL.ecore#//Layout">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GuiDSL.ecore#//Layout/layoutFiles"/>
     </genClasses>
-    <genClasses ecoreClass="GuiDSL.ecore#//Structure">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GuiDSL.ecore#//Structure/name"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GuiDSL.ecore#//Structure/orderedElements"/>
+    <genClasses ecoreClass="GuiDSL.ecore#//UsedDescriptions">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GuiDSL.ecore#//UsedDescriptions/description"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GuiDSL.ecore#//UsedDescriptions/id"/>
     </genClasses>
-    <genClasses ecoreClass="GuiDSL.ecore#//Element">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GuiDSL.ecore#//Element/id"/>
+    <genClasses ecoreClass="GuiDSL.ecore#//DescriptionType"/>
+    <genClasses ecoreClass="GuiDSL.ecore#//ComplexComponent"/>
+    <genClasses ecoreClass="GuiDSL.ecore#//UIDescriptionImport">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GuiDSL.ecore#//UIDescriptionImport/descriptionName"/>
     </genClasses>
     <genClasses ecoreClass="GuiDSL.ecore#//Refinement">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GuiDSL.ecore#//Refinement/concreteRefinement"/>
@@ -33,33 +44,47 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GuiDSL.ecore#//ComponentRefinement/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GuiDSL.ecore#//ComponentRefinement/id"/>
     </genClasses>
+    <genClasses ecoreClass="GuiDSL.ecore#//Definition">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GuiDSL.ecore#//Definition/concreteDefition"/>
+    </genClasses>
+    <genClasses ecoreClass="GuiDSL.ecore#//ComponentDefinition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GuiDSL.ecore#//ComponentDefinition/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GuiDSL.ecore#//ComponentDefinition/id"/>
+    </genClasses>
+    <genClasses ecoreClass="GuiDSL.ecore#//Structure">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GuiDSL.ecore#//Structure/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GuiDSL.ecore#//Structure/orderedElements"/>
+    </genClasses>
+    <genClasses ecoreClass="GuiDSL.ecore#//Element">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GuiDSL.ecore#//Element/id"/>
+    </genClasses>
+    <genClasses ecoreClass="GuiDSL.ecore#//TableRefinement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GuiDSL.ecore#//TableRefinement/inputType"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GuiDSL.ecore#//TableRefinement/properties"/>
+    </genClasses>
+    <genClasses ecoreClass="GuiDSL.ecore#//TabViewRefinement">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GuiDSL.ecore#//TabViewRefinement/tabs"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GuiDSL.ecore#//TabViewRefinement/properties"/>
+    </genClasses>
+    <genClasses ecoreClass="GuiDSL.ecore#//TreeRefinement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GuiDSL.ecore#//TreeRefinement/inputType"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GuiDSL.ecore#//TreeRefinement/properties"/>
+    </genClasses>
+    <genClasses ecoreClass="GuiDSL.ecore#//InterchangeableRefinement">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GuiDSL.ecore#//InterchangeableRefinement/properties"/>
+    </genClasses>
+    <genClasses ecoreClass="GuiDSL.ecore#//TextareaRefinement">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GuiDSL.ecore#//TextareaRefinement/properties"/>
+    </genClasses>
+    <genClasses ecoreClass="GuiDSL.ecore#//TextfieldRefinement">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GuiDSL.ecore#//TextfieldRefinement/properties"/>
+    </genClasses>
     <genClasses ecoreClass="GuiDSL.ecore#//ButtonRefinement">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GuiDSL.ecore#//ButtonRefinement/properties"/>
     </genClasses>
     <genClasses ecoreClass="GuiDSL.ecore#//LabelRefinement">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GuiDSL.ecore#//LabelRefinement/properties"/>
     </genClasses>
-    <genClasses ecoreClass="GuiDSL.ecore#//Property">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GuiDSL.ecore#//Property/propertiesFiles"/>
-    </genClasses>
-    <genClasses ecoreClass="GuiDSL.ecore#//UsedDescriptions">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GuiDSL.ecore#//UsedDescriptions/description"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GuiDSL.ecore#//UsedDescriptions/id"/>
-    </genClasses>
-    <genClasses ecoreClass="GuiDSL.ecore#//DescriptionType"/>
-    <genClasses ecoreClass="GuiDSL.ecore#//Definition">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GuiDSL.ecore#//Definition/concreteDefition"/>
-    </genClasses>
-    <genClasses ecoreClass="GuiDSL.ecore#//TypeDefinition">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GuiDSL.ecore#//TypeDefinition/type"/>
-    </genClasses>
-    <genClasses ecoreClass="GuiDSL.ecore#//Type">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GuiDSL.ecore#//Type/id"/>
-    </genClasses>
-    <genClasses ecoreClass="GuiDSL.ecore#//UIDescriptionImport">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GuiDSL.ecore#//UIDescriptionImport/descriptionName"/>
-    </genClasses>
-    <genClasses ecoreClass="GuiDSL.ecore#//ComplexComponent"/>
     <genClasses ecoreClass="GuiDSL.ecore#//TabViewDefinition">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GuiDSL.ecore#//TabViewDefinition/tabs"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GuiDSL.ecore#//TabViewDefinition/properties"/>
@@ -71,25 +96,11 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GuiDSL.ecore#//Multiselection/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GuiDSL.ecore#//Multiselection/inputType"/>
     </genClasses>
-    <genClasses ecoreClass="GuiDSL.ecore#//ComponentDefinition">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GuiDSL.ecore#//ComponentDefinition/name"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GuiDSL.ecore#//ComponentDefinition/id"/>
-    </genClasses>
     <genClasses ecoreClass="GuiDSL.ecore#//TextfieldDefinition">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GuiDSL.ecore#//TextfieldDefinition/properties"/>
     </genClasses>
-    <genClasses ecoreClass="GuiDSL.ecore#//TextfieldProperties">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GuiDSL.ecore#//TextfieldProperties/commonProperties"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GuiDSL.ecore#//TextfieldProperties/text"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GuiDSL.ecore#//TextfieldProperties/editable"/>
-    </genClasses>
     <genClasses ecoreClass="GuiDSL.ecore#//TextareaDefinition">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GuiDSL.ecore#//TextareaDefinition/properties"/>
-    </genClasses>
-    <genClasses ecoreClass="GuiDSL.ecore#//TextareaProperties">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GuiDSL.ecore#//TextareaProperties/commonProperties"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GuiDSL.ecore#//TextareaProperties/text"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GuiDSL.ecore#//TextareaProperties/editable"/>
     </genClasses>
     <genClasses ecoreClass="GuiDSL.ecore#//TreeDefinition">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GuiDSL.ecore#//TreeDefinition/inputType"/>
@@ -105,26 +116,34 @@
     <genClasses ecoreClass="GuiDSL.ecore#//ButtonDefinition">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GuiDSL.ecore#//ButtonDefinition/properties"/>
     </genClasses>
+    <genClasses ecoreClass="GuiDSL.ecore#//LabelDefinition">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GuiDSL.ecore#//LabelDefinition/properties"/>
+    </genClasses>
+    <genClasses ecoreClass="GuiDSL.ecore#//Interactiontype">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GuiDSL.ecore#//Interactiontype/id"/>
+    </genClasses>
+    <genClasses ecoreClass="GuiDSL.ecore#//TextareaProperties">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GuiDSL.ecore#//TextareaProperties/commonProperties"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GuiDSL.ecore#//TextareaProperties/text"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GuiDSL.ecore#//TextareaProperties/editable"/>
+    </genClasses>
+    <genClasses ecoreClass="GuiDSL.ecore#//TextfieldProperties">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GuiDSL.ecore#//TextfieldProperties/commonProperties"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GuiDSL.ecore#//TextfieldProperties/text"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GuiDSL.ecore#//TextfieldProperties/editable"/>
+    </genClasses>
+    <genClasses ecoreClass="GuiDSL.ecore#//LabelProperties">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GuiDSL.ecore#//LabelProperties/commonProperties"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GuiDSL.ecore#//LabelProperties/text"/>
+    </genClasses>
     <genClasses ecoreClass="GuiDSL.ecore#//ButtonProperties">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GuiDSL.ecore#//ButtonProperties/commonProperties"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GuiDSL.ecore#//ButtonProperties/text"/>
     </genClasses>
     <genClasses ecoreClass="GuiDSL.ecore#//CommonProperties">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GuiDSL.ecore#//CommonProperties/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GuiDSL.ecore#//CommonProperties/propertyKey"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GuiDSL.ecore#//CommonProperties/layoutKey"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GuiDSL.ecore#//CommonProperties/interactiontype"/>
-    </genClasses>
-    <genClasses ecoreClass="GuiDSL.ecore#//LabelDefinition">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GuiDSL.ecore#//LabelDefinition/properties"/>
-    </genClasses>
-    <genClasses ecoreClass="GuiDSL.ecore#//LabelProperties">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GuiDSL.ecore#//LabelProperties/commonProperties"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GuiDSL.ecore#//LabelProperties/text"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GuiDSL.ecore#//LabelProperties/name"/>
-    </genClasses>
-    <genClasses ecoreClass="GuiDSL.ecore#//Interactiontype">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GuiDSL.ecore#//Interactiontype/id"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

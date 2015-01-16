@@ -392,4 +392,109 @@ folgender Tabelle aufgelistet.
 \end{table}
 \subsection*{Semantisches Modell} 
 \subsection*{Konkrete Syntax}
+Die syntaktischen Konstrukte wurden in dieser Iteration stark vermehrt. Das
+liegt vor allem daran, dass viele neue \Ks hinzugekommen sind. Der
+Grundsätzliche syntaktische Aufbau einer GUI-Beschreibung hat sich jedoch nicht
+verändert. Eingeleitet wird die Beschreibung weiterhin mit der Typ-Definition,
+gefolgt von der Angabe der Properties-Dateien. Sofern mehrere Properties-Dateien
+vorhanden sind, werden diese mit Komma getrennt voneinander aufgezählt. Dasselbe
+Prinzip wird bei der sich anschließenden Angabe der Layout-Dateien verwendet.
+Das Semikolon gilt ab sofort als Trennzeichen für einen abgeschlossen
+definierten Komplex (sieh Listing \ref{LST_PropertiesLayout3}).
+\begin{lstlisting}[{caption = 3.
+Iteration:
+Properties- und Layout-Dateien},{label = LST_PropertiesLayout3}] 
+type: INNERCOMPLEX;
+get properties from:'properties1', 'properties2';
+get layout from:'layout1','layout2';
+\end{lstlisting}
+Für die eingebundenen GUI-Beschreibungen bzw. \kks wurden keine
+großen syntaktischen Veränderungen vorgenommen. Lediglich das Semikolon wird für
+den Abschluss des Komplexes benötigt (siehe Listing \ref{LST_Use3}).
+\begin{lstlisting}[{caption = 3.
+Iteration:
+Eingebundene UI-Komponenten},{label = LST_Use3}] 
+use: Multiselection<Input> as: "multi";
+\end{lstlisting}
+Die Definitionen der einzelnen \Ks hat sich syntaktisch stark verändert. Grund
+dafür ist vor allem, dass die Anforderung Nr. 5 (siehe Kapitel
+\ref{AllgAnforderungen}) mehr Beachtung finden soll. Somit werden die bekannten
+\Ks wie folgt definiert (siehe Listing \ref{LST_Bt+Lb3}).
+\begin{lstlisting}[{caption = 3.
+Iteration:
+Button und Label},{label = LST_Bt+Lb3}] 
+Button as: "Button" -> propertyKey='buttonproperty' layoutKey='buttonlayout'
+interactiontype=IfViewImage text='buttontext';
 
+Label as: 'Label' -> propertyKey='labelproperty' layoutKey='labellayout'
+interactiontype=IfActivator text='labeltext';
+\end{lstlisting}
+Bei den Definitionen der anderen \Ks werden die allgemienen Properties wie im
+vorherigen Beispiel zugewiesen. In den Fällen der \Ks Textflied und Textarea
+werden die speziellen Properties nach demselben Prinzip definiert (siehe Listing \ref{})
+\begin{lstlisting}[{caption = 3.
+Iteration:
+Textfield und Textarea},{label = LST_Tf+Ta3}] 
+Textfield as: 'Textfield' -> propertyKey='textfieldproperty'
+layoutKey='textfieldlayout' interactiontype=IfActivator 
+text='textfieldtext' editable=TRUE;
+
+Textarea as: 'Textarea' -> propertyKey='textareaproperty'
+layoutKey='textarealayout' interactiontype=IfActivator 
+text='textareatext' editable=TRUE;
+\end{lstlisting}
+Die Syntax für die Definition der \Ks Table und Tree sind ebenfalls ähnlich. Der
+benötigte Input-Typ wird nach dem Schlüsselwort angegeben, welches die
+UI-Komponente bestimmt (siehe Listing \ref{LST_T+T3}).
+\begin{lstlisting}[{caption = 3.
+Iteration:
+Table und Tree},{label = LST_T+T3}] 
+Table<tablemodel> as: 'Table' -> propertyKey='tableproperty'
+layoutKey='tablelayout' interactiontype=IfActivator;
+
+Tree<treemodel> as: 'Tree' -> propertyKey='treeproperty'
+layoutKey='treelayout' interactiontype=IfActivator;
+\end{lstlisting}
+Die \Ks TabView werden die verwendeten UI-Komponenten der einzelnen Tabs
+ebenfalls nach dem Schlüsselwort angegeben, welches die UI-Komponente festlegt.
+Hierbei können anderes als bei den \Ks Table und Tree mehrere Angaben getätigt
+werden (siehe Listing \ref{LST_Tab3}). In den folgenden Beispiele wird davon
+ausgegange, dass die vorher genannten Beispiele für die \Ks Tree, Table und Textarea in
+derselben GUI-Beschreibung definiert wurde. Durch das syntaktische Konstrukt in
+Listing \ref{LST_Tab3} wird eine Tab-Ansicht mit drei Tabe beschrieben. Das
+erste Tab enthält den Tree, das zweite die Table und das dritte die Textarea.
+\begin{lstlisting}[{caption = 3.
+Iteration:
+TabView},{label = LST_Tab3}] 
+TabView[Tree][Table][Textarea] as: 'tabview' -> propertyKey='tabviewproperty'
+layoutKey='tabviewlayout' interactiontype=IfViewImage;
+\end{lstlisting}
+Dabei ist zu erwähnen, dass die Angabe der Properties in den meisten
+Fällen optional ist. Lediglich die speziellen Properties der \Ks Table, Tree und
+TabView müssen zwingend angegeben werden.\\
+Die Syntax zur Veränderung einer \K einer eingebundenen GUI-Beschreibung ähnelt
+der Definition einer \K des gleichen Typs. Es muss lediglich angegenben werden,
+welche UI-Komponenten in welcher GUI-Beschreibung verändert werden soll.
+Folgendes Beispiel zeigt, wie die Aufschrift eines Buttons einer eingebundenen
+GUI-Beschreibung verändert wird (siehe Listing \ref{LST_Refine3}). Der Button
+trägt die Bezeichnung \emph{EmbeddedButton} und die
+GUI-Beschreibung liegt im Package
+\emph{guidescription} und trägt die Bezeichnung
+\emph{Embedded}.
+\begin{lstlisting}[{caption = 3.
+Iteration:
+TabView},{label = LST_Refine3}] 
+use: "guidescription.Embedded" as: "embedded";
+Button change:'embedded.EmbeddedButton' -> text='Neuer Text';
+\end{lstlisting}
+
+Der letzte Teil einer GUI-Beschreibung beinhaltet die Angabe der Struktur. Diese
+Angabe ähnelt der Zuweisung von UI-Komponenten zu Bereichen, wie es auch der
+ersten und zweiten Iteration bekannt ist. Da dieses Konstrukt vereinfacht werden
+sollte, werden die UI-Komponenten in der richtigen Reihenfolgen nach dem
+Schlüsselwort \emph{Structur} aufgezählt (siehe Listing \ref{LST_Structure3}).
+\begin{lstlisting}[{caption = 3.
+Iteration:
+Struktur},{label = LST_Structure3}] 
+Structure:'Button','Label','Textfield','tabview';
+\end{lstlisting}

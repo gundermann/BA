@@ -32,67 +32,22 @@ public interface GuiDSLFactory extends EFactory
   UIDescription createUIDescription();
 
   /**
-   * Returns a new object of class '<em>Layout</em>'.
+   * Returns a new object of class '<em>Type Definition</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Layout</em>'.
+   * @return a new object of class '<em>Type Definition</em>'.
    * @generated
    */
-  Layout createLayout();
+  TypeDefinition createTypeDefinition();
 
   /**
-   * Returns a new object of class '<em>Structure</em>'.
+   * Returns a new object of class '<em>Type</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Structure</em>'.
+   * @return a new object of class '<em>Type</em>'.
    * @generated
    */
-  Structure createStructure();
-
-  /**
-   * Returns a new object of class '<em>Element</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Element</em>'.
-   * @generated
-   */
-  Element createElement();
-
-  /**
-   * Returns a new object of class '<em>Refinement</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Refinement</em>'.
-   * @generated
-   */
-  Refinement createRefinement();
-
-  /**
-   * Returns a new object of class '<em>Component Refinement</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Component Refinement</em>'.
-   * @generated
-   */
-  ComponentRefinement createComponentRefinement();
-
-  /**
-   * Returns a new object of class '<em>Button Refinement</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Button Refinement</em>'.
-   * @generated
-   */
-  ButtonRefinement createButtonRefinement();
-
-  /**
-   * Returns a new object of class '<em>Label Refinement</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Label Refinement</em>'.
-   * @generated
-   */
-  LabelRefinement createLabelRefinement();
+  Type createType();
 
   /**
    * Returns a new object of class '<em>Property</em>'.
@@ -102,6 +57,15 @@ public interface GuiDSLFactory extends EFactory
    * @generated
    */
   Property createProperty();
+
+  /**
+   * Returns a new object of class '<em>Layout</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Layout</em>'.
+   * @generated
+   */
+  Layout createLayout();
 
   /**
    * Returns a new object of class '<em>Used Descriptions</em>'.
@@ -122,31 +86,13 @@ public interface GuiDSLFactory extends EFactory
   DescriptionType createDescriptionType();
 
   /**
-   * Returns a new object of class '<em>Definition</em>'.
+   * Returns a new object of class '<em>Complex Component</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Definition</em>'.
+   * @return a new object of class '<em>Complex Component</em>'.
    * @generated
    */
-  Definition createDefinition();
-
-  /**
-   * Returns a new object of class '<em>Type Definition</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Type Definition</em>'.
-   * @generated
-   */
-  TypeDefinition createTypeDefinition();
-
-  /**
-   * Returns a new object of class '<em>Type</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Type</em>'.
-   * @generated
-   */
-  Type createType();
+  ComplexComponent createComplexComponent();
 
   /**
    * Returns a new object of class '<em>UI Description Import</em>'.
@@ -158,13 +104,130 @@ public interface GuiDSLFactory extends EFactory
   UIDescriptionImport createUIDescriptionImport();
 
   /**
-   * Returns a new object of class '<em>Complex Component</em>'.
+   * Returns a new object of class '<em>Refinement</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Complex Component</em>'.
+   * @return a new object of class '<em>Refinement</em>'.
    * @generated
    */
-  ComplexComponent createComplexComponent();
+  Refinement createRefinement();
+
+  /**
+   * Returns a new object of class '<em>Component Refinement</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Component Refinement</em>'.
+   * @generated
+   */
+  ComponentRefinement createComponentRefinement();
+
+  /**
+   * Returns a new object of class '<em>Definition</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Definition</em>'.
+   * @generated
+   */
+  Definition createDefinition();
+
+  /**
+   * Returns a new object of class '<em>Component Definition</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Component Definition</em>'.
+   * @generated
+   */
+  ComponentDefinition createComponentDefinition();
+
+  /**
+   * Returns a new object of class '<em>Structure</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Structure</em>'.
+   * @generated
+   */
+  Structure createStructure();
+
+  /**
+   * Returns a new object of class '<em>Element</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Element</em>'.
+   * @generated
+   */
+  Element createElement();
+
+  /**
+   * Returns a new object of class '<em>Table Refinement</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Table Refinement</em>'.
+   * @generated
+   */
+  TableRefinement createTableRefinement();
+
+  /**
+   * Returns a new object of class '<em>Tab View Refinement</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Tab View Refinement</em>'.
+   * @generated
+   */
+  TabViewRefinement createTabViewRefinement();
+
+  /**
+   * Returns a new object of class '<em>Tree Refinement</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Tree Refinement</em>'.
+   * @generated
+   */
+  TreeRefinement createTreeRefinement();
+
+  /**
+   * Returns a new object of class '<em>Interchangeable Refinement</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Interchangeable Refinement</em>'.
+   * @generated
+   */
+  InterchangeableRefinement createInterchangeableRefinement();
+
+  /**
+   * Returns a new object of class '<em>Textarea Refinement</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Textarea Refinement</em>'.
+   * @generated
+   */
+  TextareaRefinement createTextareaRefinement();
+
+  /**
+   * Returns a new object of class '<em>Textfield Refinement</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Textfield Refinement</em>'.
+   * @generated
+   */
+  TextfieldRefinement createTextfieldRefinement();
+
+  /**
+   * Returns a new object of class '<em>Button Refinement</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Button Refinement</em>'.
+   * @generated
+   */
+  ButtonRefinement createButtonRefinement();
+
+  /**
+   * Returns a new object of class '<em>Label Refinement</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Label Refinement</em>'.
+   * @generated
+   */
+  LabelRefinement createLabelRefinement();
 
   /**
    * Returns a new object of class '<em>Tab View Definition</em>'.
@@ -194,15 +257,6 @@ public interface GuiDSLFactory extends EFactory
   Multiselection createMultiselection();
 
   /**
-   * Returns a new object of class '<em>Component Definition</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Component Definition</em>'.
-   * @generated
-   */
-  ComponentDefinition createComponentDefinition();
-
-  /**
    * Returns a new object of class '<em>Textfield Definition</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -212,15 +266,6 @@ public interface GuiDSLFactory extends EFactory
   TextfieldDefinition createTextfieldDefinition();
 
   /**
-   * Returns a new object of class '<em>Textfield Properties</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Textfield Properties</em>'.
-   * @generated
-   */
-  TextfieldProperties createTextfieldProperties();
-
-  /**
    * Returns a new object of class '<em>Textarea Definition</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -228,15 +273,6 @@ public interface GuiDSLFactory extends EFactory
    * @generated
    */
   TextareaDefinition createTextareaDefinition();
-
-  /**
-   * Returns a new object of class '<em>Textarea Properties</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Textarea Properties</em>'.
-   * @generated
-   */
-  TextareaProperties createTextareaProperties();
 
   /**
    * Returns a new object of class '<em>Tree Definition</em>'.
@@ -275,6 +311,51 @@ public interface GuiDSLFactory extends EFactory
   ButtonDefinition createButtonDefinition();
 
   /**
+   * Returns a new object of class '<em>Label Definition</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Label Definition</em>'.
+   * @generated
+   */
+  LabelDefinition createLabelDefinition();
+
+  /**
+   * Returns a new object of class '<em>Interactiontype</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Interactiontype</em>'.
+   * @generated
+   */
+  Interactiontype createInteractiontype();
+
+  /**
+   * Returns a new object of class '<em>Textarea Properties</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Textarea Properties</em>'.
+   * @generated
+   */
+  TextareaProperties createTextareaProperties();
+
+  /**
+   * Returns a new object of class '<em>Textfield Properties</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Textfield Properties</em>'.
+   * @generated
+   */
+  TextfieldProperties createTextfieldProperties();
+
+  /**
+   * Returns a new object of class '<em>Label Properties</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Label Properties</em>'.
+   * @generated
+   */
+  LabelProperties createLabelProperties();
+
+  /**
    * Returns a new object of class '<em>Button Properties</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -291,33 +372,6 @@ public interface GuiDSLFactory extends EFactory
    * @generated
    */
   CommonProperties createCommonProperties();
-
-  /**
-   * Returns a new object of class '<em>Label Definition</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Label Definition</em>'.
-   * @generated
-   */
-  LabelDefinition createLabelDefinition();
-
-  /**
-   * Returns a new object of class '<em>Label Properties</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Label Properties</em>'.
-   * @generated
-   */
-  LabelProperties createLabelProperties();
-
-  /**
-   * Returns a new object of class '<em>Interactiontype</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Interactiontype</em>'.
-   * @generated
-   */
-  Interactiontype createInteractiontype();
 
   /**
    * Returns the package supported by this factory.

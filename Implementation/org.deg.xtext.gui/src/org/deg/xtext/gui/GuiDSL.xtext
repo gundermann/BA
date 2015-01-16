@@ -11,14 +11,29 @@ UIDescription:
 	definitions+=(Definition)*
 	structure=Structure;
 
+TypeDefinition:
+	'type: ' type=Type ';';
+
+Type:
+	id=('WINDOW' | 'INNERCOMPLEX');
+
+Property:
+	'get properties from:' propertiesFiles+=(STRING)+ ';';
+
 Layout:
 	'get layout from:' layoutFiles+=(STRING)+ ';';
 
-Structure:
-	name="Structure" ":" orderedElements+=(Element)* ';';
+UsedDescriptions:
+	'use:' description=DescriptionType ('as:' id=STRING)? ';';
 
-Element:
-	id=STRING;
+DescriptionType:
+	UIDescriptionImport | ComplexComponent;
+
+ComplexComponent:
+	Multiselection;
+
+UIDescriptionImport:
+	descriptionName=(STRING);
 
 Refinement:
 	concreteRefinement=ComponentRefinement ';';
@@ -27,64 +42,54 @@ ComponentRefinement:
 	LabelRefinement | ButtonRefinement | TextfieldRefinement | TextareaRefinement | TableRefinement | TabViewRefinement |
 	TreeRefinement | InterchangeableRefinement;
 
-TableRefinement:
-name='Table' (inputType=INPUT_DESCRIPTION)? 'from:' id=STRING
-	(properties=(CommonProperties))?;
-TabViewRefinement:
-	name='TabView' (tabs+=(TabDefinition)+)? 'from:' id=STRING
-	(properties=(CommonProperties))?;
-
-TreeRefinement:
-	name='Tree' (inputType=INPUT_DESCRIPTION)? 'from:' id=STRING
-	(properties=(CommonProperties))?;
-
-InterchangeableRefinement:
-	name='Interchangeable' 'from:' id=STRING
-	(properties=(CommonProperties))?;
-
-TextareaRefinement:
-	name='Textarea' 'from:' id=STRING
-	(properties=(TextareaProperties))?;
-
-TextfieldRefinement:
-	name='Textfield' 'from:' id=STRING
-	(properties=(TextfieldProperties))?;
-
-ButtonRefinement:
-	name='Button' 'from:' id=STRING
-	(properties=(ButtonProperties))?;
-
-LabelRefinement:
-	name='Label' 'from:' id=STRING
-	(properties=(LabelProperties))?;
-
-Property:
-	'get properties from:' propertiesFiles+=(STRING)+ ';';
-
-UsedDescriptions:
-	'use:' description=DescriptionType ('as:' id=STRING)? ';';
-
-DescriptionType:
-	UIDescriptionImport | ComplexComponent;
-
 Definition:
 	concreteDefition=ComponentDefinition ';';
 
-TypeDefinition:
-	'type: ' type=Type ';';
+ComponentDefinition:
+	LabelDefinition | ButtonDefinition | TextfieldDefinition | TextareaDefinition | TreeDefinition | TableDefinition |
+	TabViewDefinition | InterchangeableDefinition;
 
-Type:
-	id=('WINDOW' | 'INNERCOMPLEX');
+Structure:
+	name="Structure" ":" orderedElements+=(Element)* ';';
 
-UIDescriptionImport:
-	descriptionName=(STRING);
+Element:
+	id=STRING;
 
-ComplexComponent:
-	Multiselection;
+TableRefinement:
+	name='Table' (inputType=INPUT_DESCRIPTION)? 'change:' id=STRING
+	(properties=(CommonProperties))?;
+
+TabViewRefinement:
+	name='TabView' (tabs+=(TabDefinition)+)? 'change:' id=STRING
+	(properties=(CommonProperties))?;
+
+TreeRefinement:
+	name='Tree' (inputType=INPUT_DESCRIPTION)? 'change:' id=STRING
+	(properties=(CommonProperties))?;
+
+InterchangeableRefinement:
+	name='Interchangeable' 'change:' id=STRING
+	(properties=(CommonProperties))?;
+
+TextareaRefinement:
+	name='Textarea' 'change:' id=STRING
+	(properties=(TextareaProperties))?;
+
+TextfieldRefinement:
+	name='Textfield' 'change:' id=STRING
+	(properties=(TextfieldProperties))?;
+
+ButtonRefinement:
+	name='Button' 'change:' id=STRING
+	(properties=(ButtonProperties))?;
+
+LabelRefinement:
+	name='Label' 'change:' id=STRING
+	(properties=(LabelProperties))?;
 
 TabViewDefinition:
 	name='TabView' tabs+=(TabDefinition)* 'as:' id=STRING
-	('->' properties=(CommonProperties))?;
+	(properties=(CommonProperties))?;
 
 TabDefinition:
 	name=TABNAME;
@@ -92,27 +97,13 @@ TabDefinition:
 Multiselection:
 	name='Multiselection' (inputType=INPUT_DESCRIPTION)?;
 
-ComponentDefinition:
-	LabelDefinition | ButtonDefinition | TextfieldDefinition | TextareaDefinition | TreeDefinition | TableDefinition |
-	TabViewDefinition | InterchangeableDefinition;
-
 TextfieldDefinition:
 	name='Textfield' 'as:' id=STRING
 	(properties=(TextfieldProperties))?;
 
-TextfieldProperties:
-	commonProperties=CommonProperties
-	('text=' text=STRING)?
-	('editable=' editable=BOOLEAN)?;
-
 TextareaDefinition:
 	name='Textarea' 'as:' id=STRING
 	(properties=(TextareaProperties))?;
-
-TextareaProperties:
-	commonProperties=CommonProperties
-	('text=' text=STRING)?
-	('editable=' editable=BOOLEAN)?;
 
 TreeDefinition:
 	name='Tree' inputType=INPUT_DESCRIPTION 'as:' id=STRING
@@ -130,6 +121,27 @@ ButtonDefinition:
 	name='Button' 'as:' id=STRING
 	(properties=ButtonProperties)?;
 
+LabelDefinition:
+	name='Label' 'as:' id=STRING
+	(properties=(LabelProperties))?;
+
+Interactiontype:
+	id=('IfActivator' | 'IfTextDisplay' | 'IfViewImage');
+
+TextareaProperties:
+	commonProperties=CommonProperties
+	('text=' text=STRING)?
+	('editable=' editable=BOOLEAN)?;
+
+TextfieldProperties:
+	commonProperties=CommonProperties
+	('text=' text=STRING)?
+	('editable=' editable=BOOLEAN)?;
+
+LabelProperties:
+	commonProperties=CommonProperties
+	('text=' text=STRING )?;
+
 ButtonProperties:
 	commonProperties=CommonProperties
 	('text=' text=STRING)?;
@@ -140,25 +152,15 @@ CommonProperties:
 	('layoutKey' '=' layoutKey=STRING)?
 	('interactiontype' '=' interactiontype+=(Interactiontype)+)?;
 
-LabelDefinition:
-	name='Label' 'as' id=STRING
-	(properties=(LabelProperties))?;
-
-LabelProperties:
-	commonProperties=CommonProperties
-	('text=' text=STRING name='LabelProperty')?;
-
-Interactiontype:
-	id=('IfActivator' | 'IfTextDisplay');
-
 terminal WS:
 	(' ' | '\t' | '\r' | '\n' | ',')+;
 
 terminal TABNAME:
-	'[' ('\\' . /* 'b'|'t'|'n'|'f'|'r'|'u'|'"'|"'"|'\\' */ | !('[' | ']'))* ']';
+	'[' (!('[' | ']'))* ']';
 
 terminal INPUT_DESCRIPTION:
-	'<' ('\\' . /* 'b'|'t'|'n'|'f'|'r'|'u'|'"'|"'"|'\\' */ | !('<' | '>'))* '>';
+	'<' (!('<' | '>'))* '>';
 
+//'\\' . /* 'b'|'t'|'n'|'f'|'r'|'u'|'"'|"'"|'\\' */ | 
 terminal BOOLEAN:
 	'TRUE' | 'FALSE';
