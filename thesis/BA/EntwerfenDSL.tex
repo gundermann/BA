@@ -391,9 +391,54 @@ folgender Tabelle aufgelistet.
  \label{tab_bewertung}
 \end{table}
 \subsection*{Semantisches Modell} 
-\subsection*{Konkrete Syntax}
-Die syntaktischen Konstrukte wurden in dieser Iteration stark vermehrt. Das
-liegt vor allem daran, dass viele neue \Ks hinzugekommen sind. Der
+Das semantische Modell hat sich durch die vielen Änderungen in dieser Iteration
+ebenso stark verändert. Bei der Betrachtung der \emph{UIDescription} (siehe
+Abbildung \ref{Abb_I3_1}) fällt auf, dass \emph{Area} und \emph{AreaCount} nicht mehr
+vorhanden sind. Hinzugekommen sind \emph{Structure} (worin die Anordnung der
+UI-Komponenten (\emph{Element}) in einer Liste abgelegt wird) und Layout
+(worin die zu verwendenen Layout-Dateien in einer Liste abgelegt werden).
+Eine weitere Änderungen ist bei \emph{Property} zu finden. Dort ist ebenfalls
+eine Liste vorhanden und kein allein stehender Wert.
+\myBigFigure{v3-1.jpg}{3. Iteration: UIDescription}{I3_1}
+\noindent
+An \emph{TypeDefinition} und \emph{UsedDescription} wurden keine signifikanten
+Änderungen vorgenommen. Die meisten Änderungen wurden bei den Artefakten
+\emph{Refinement} und \emph{Definition} vorgenommen. Der Aufbau der dieser
+Artefakte ist ähnlich. Das Interface (\emph{Refinement} und \emph{Definition})
+wird von einer Klasse implementiert (\emph{RefinementImpl} und
+\emph{DefinitionImpl}), die mehrere Objekte eines bestimmter Klassen,
+die das Interface \emph{ComponentRefinement} oder \emph{ComponentDefinition}
+implementieren, enthält. In Abbildung \ref{Abb_I3_2} ist diese Struktur für die
+\emph{Definition} abgebildet.
+\myBigFigure{v3-2}{3. Iteration: Definition}{I3_2}
+\noindent
+Die benannten Klassen bilden die unterschiedlichen \Ks ab, die
+definiert oder verändert werden können. Jede dieser Klassen aggregiert ein
+Objekt des Typen \emph{CommonProperties} ein. Dieses Interface bilder die
+allgemeinen Properties ab. Bei den \Ks Label, Button, Textfield und Textarea ist
+diese Aggregation transitiv, da die speziellen Properties dieser \Ks als eigenes
+Artefakt implementiert sind. Abbildung \ref{Abb_I3_3} zeigt dies für einen
+Button auf.
+\myBigFigure{v3-3.jpg}{3. Iteration: Button}{I3_3}
+\noindent
+Eine direkte Aggergation der \emph{CommonProperties} findet bei den \Ks TabView,
+Table und Tree statt. Für die speziellen Properties dieser \Ks existieren keine
+einelnen Klassen. Grund dafür ist, dass die speziellen Properties dieser \Ks
+obligatorisch sind. Die folgenden Abbildungen zeigen diese drei \Ks
+(\emph{Refinement} und \emph{Definition}) mit der Aggregation der
+\emph{CommonProperties}. Um die Übersicht zu bewahren werden die Methoden der
+Klassen nicht mit aufgeführt.
+\myBigFigure{v3-4.jpg}{3. Iteration: TabView}{I3_4}
+\noindent
+Die \K TabView benötigt eine Menge von \emph{TabDefinition}s. Diese Klasse
+bildet die Referenz zu den in die TabView einzubindenen UI-Komponenten.
+Die \Ks Tree und Table benötigen lediglich eine Referenz auf den Input-Typen,
+den sie abbilden sollen, in Form einer Zeichenkette (siehe Abbildung
+\ref{Abb_I3_5} und \ref{Abb_I3_6}).
+\myBigFigure{v3-5.jpg}{3. Iteration: TabView}{I3_5}
+\myBigFigure{v3-6.jpg}{3. Iteration: TabView}{I3_6}
+\subsection*{Konkrete Syntax} Die syntaktischen
+Konstrukte wurden in dieser Iteration stark vermehrt. Das liegt vor allem daran, dass viele neue \Ks hinzugekommen sind. Der
 Grundsätzliche syntaktische Aufbau einer GUI-Beschreibung hat sich jedoch nicht
 verändert. Eingeleitet wird die Beschreibung weiterhin mit der Typ-Definition,
 gefolgt von der Angabe der Properties-Dateien. Sofern mehrere Properties-Dateien
