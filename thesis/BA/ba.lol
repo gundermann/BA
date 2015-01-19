@@ -15,3 +15,8 @@
 \contentsline {lstlisting}{\numberline {8.14}3. Iteration: TabView}{74}{lstlisting.8.14}
 \contentsline {lstlisting}{\numberline {8.15}3. Iteration: TabView}{74}{lstlisting.8.15}
 \contentsline {lstlisting}{\numberline {8.16}3. Iteration: Struktur}{75}{lstlisting.8.16}
+\contentsline {lstlisting}{\numberline {9.1}GUI-Beschreibung Inhaltsbaum}{78}{lstlisting.9.1}
+\contentsline {lstlisting}{\numberline {9.2}GUI-Beschreibung Verweisebaum}{78}{lstlisting.9.2}
+\contentsline {lstlisting}{\numberline {9.3}Speichern der Importe}{78}{lstlisting.9.3}
+\contentsline {lstlisting}{\numberline {9.4}Speichern der globalen Varialben}{79}{lstlisting.9.4}
+\contentsline {lstlisting}{\numberline {9.5}Speichern der globalen Varialben}{79}{lstlisting.9.5}

@@ -31,7 +31,11 @@ import org.eclipse.xtext.xbase.lib.IteratorExtensions;
  */
 @SuppressWarnings("all")
 public class GuiDSLGenerator implements IGenerator {
-  private String name;
+  private String descriptionname;
+  
+  private String guiFilename;
+  
+  private String ipFilename;
   
   private List<String> imports = new ArrayList<String>();
   
@@ -46,7 +50,9 @@ public class GuiDSLGenerator implements IGenerator {
     String _segment = _uRI.segment(3);
     String[] _split = _segment.split("\\.");
     String _get = _split[0];
-    this.name = _get;
+    this.descriptionname = _get;
+    this.guiFilename = ("Gui" + this.descriptionname);
+    this.ipFilename = ("Ip" + this.descriptionname);
     TreeIterator<EObject> _allContents = resource.getAllContents();
     Iterable<EObject> _iterable = IteratorExtensions.<EObject>toIterable(_allContents);
     Iterable<Definition> _filter = Iterables.<Definition>filter(_iterable, Definition.class);
@@ -66,12 +72,12 @@ public class GuiDSLGenerator implements IGenerator {
           CharSequence source = this.compileWindow(d);
           String _genImports = this.genImports();
           String _plus = (_genImports + source);
-          fsa.generateFile((this.name + ".java"), _plus);
+          fsa.generateFile((this.descriptionname + ".java"), _plus);
         } else {
           CharSequence source_1 = this.compileComplex(d);
           String _genImports_1 = this.genImports();
           String _plus_1 = (_genImports_1 + source_1);
-          fsa.generateFile((this.name + ".java"), _plus_1);
+          fsa.generateFile((this.descriptionname + ".java"), _plus_1);
         }
         this.imports.clear();
         this.globalVars.clear();
@@ -90,14 +96,8 @@ public class GuiDSLGenerator implements IGenerator {
   
   public CharSequence compileComplex(final UIDescription description) {
     StringConcatenation _builder = new StringConcatenation();
-    String _addImport = this.addImport("import javafx.scene.Node;");
+    String _addImport = this.addImport("import DE.data_experts.jwammc.core.pf.PfPanel;");
     _builder.append(_addImport, "");
-    _builder.newLineIfNotEmpty();
-    String _addImport_1 = this.addImport("import javafx.scene.layout.Pane;");
-    _builder.append(_addImport_1, "");
-    _builder.newLineIfNotEmpty();
-    String _addImport_2 = this.addImport("import javafx.scene.layout.VBox;");
-    _builder.append(_addImport_2, "");
     _builder.newLineIfNotEmpty();
     _builder.append("/**");
     _builder.newLine();
@@ -107,29 +107,41 @@ public class GuiDSLGenerator implements IGenerator {
     _builder.newLine();
     _builder.newLine();
     _builder.append("public class ");
-    _builder.append(this.name, "");
-    _builder.append(" extends Pane{");
+    _builder.append(this.guiFilename, "");
+    _builder.append(" extends PfPanel{");
     _builder.newLineIfNotEmpty();
     _builder.append("\t");
     _builder.newLine();
     _builder.append("\t");
     _builder.append("public ");
-    _builder.append(this.name, "\t");
+    _builder.append(this.guiFilename, "\t");
     _builder.append("(){");
     _builder.newLineIfNotEmpty();
     _builder.append("\t\t");
-    _builder.append("VBox b = new VBox();");
+    _builder.append("super( new BorderLayout() );");
     _builder.newLine();
     _builder.append("\t\t");
-    _builder.append("getChildren().add(b);");
+    _builder.append("try {");
     _builder.newLine();
-    _builder.append("\t\t");
-    _builder.append("initBox(b);");
+    _builder.append("     \t\t\t\t");
+    _builder.append("init();");
+    _builder.newLine();
+    _builder.append("     \t\t\t");
+    _builder.append("}");
+    _builder.newLine();
+    _builder.append("    \t\t\t");
+    _builder.append("catch ( Exception e ) {");
+    _builder.newLine();
+    _builder.append("     \t\t\t\t ");
+    _builder.append("e.printStackTrace();");
+    _builder.newLine();
+    _builder.append("   \t\t\t\t ");
+    _builder.append("}");
     _builder.newLine();
     _builder.append("\t");
     _builder.append("}");
     _builder.newLine();
-    CharSequence _initMainBox = this.getInitMainBox(description);
+    CharSequence _initMainBox = this.getInit(description);
     _builder.append(_initMainBox, "");
     _builder.newLineIfNotEmpty();
     _builder.append("/**");
@@ -155,7 +167,7 @@ public class GuiDSLGenerator implements IGenerator {
     return _builder;
   }
   
-  public CharSequence getInitMainBox(final UIDescription description) {
+  public CharSequence getInit(final UIDescription description) {
     StringConcatenation _builder = new StringConcatenation();
     _builder.append("public void initBox(VBox b){");
     _builder.newLine();
@@ -201,14 +213,14 @@ public class GuiDSLGenerator implements IGenerator {
     _builder.newLine();
     _builder.newLine();
     _builder.append("public class ");
-    _builder.append(this.name, "");
+    _builder.append(this.descriptionname, "");
     _builder.append(" extends Scene{");
     _builder.newLineIfNotEmpty();
     _builder.append("\t");
     _builder.newLine();
     _builder.append("\t\t");
     _builder.append("public ");
-    _builder.append(this.name, "\t\t");
+    _builder.append(this.descriptionname, "\t\t");
     _builder.append("(){");
     _builder.newLineIfNotEmpty();
     _builder.append("\t\t");
@@ -238,7 +250,7 @@ public class GuiDSLGenerator implements IGenerator {
   
   public CharSequence genOtherStuff(final UIDescription description) {
     StringConcatenation _builder = new StringConcatenation();
-    CharSequence _initMainBox = this.getInitMainBox(description);
+    CharSequence _initMainBox = this.getInit(description);
     _builder.append(_initMainBox, "");
     _builder.newLineIfNotEmpty();
     _builder.append("/**");

@@ -1,18 +1,122 @@
 \chapter{Entwicklung des Generators für das Generieren von Klassen für
 das Multichannel-Framework}\label{Entwicklung des Generators für das Generieren von Klassen für
 das Multichannel-Framework}
-
-Die GUI bei der deg teilt sich in drei Bereiche. Diese Dreiteilung entspricht
-dem WAM-Ansatz entnommen. Auf diesen Ansatz wird in Kapitel \ref{Entwicklung des
-Generators für das Generieren von Klassen für das Multichannel-Framework} etwas
-genauer eingegangen. Der erste Teil übernimmt die Beschreibung des Aufbaus
-des UIs (GUI-Part). Der zweite Teil enthält die Interaktionsformen mit den
-Komponenten, welche im GUI-Part deklariert wurden. Dieser Teil wird als
-\emph{Interaction Part} (IP) bezeichnet. Der dritte Teil enthält den
-funktionalen Teil der GUI und wird \emph{Functionally Part} (FP) genannt.\\
-Bei den Überlegungen darüber, wie die DSL umzusetzen ist, wurde frühzeitig
-entschieden, dass der FP in der DSL nicht beschrieben wird. Es soll nur
-der GUI-Part neben einigen Inhalten aus dem IP beschrieben.\\
-\section{Syntax und Semantik für die Beschreibung der GUIs im
-Multichannel-Framework }
+Alle Umsetzungen die in diesem beschrieben werden, fanden in der 3. Iteration
+statt. Von daher wird in den folgenden Kapitel nicht mehr zwischen
+Iterationen unterschieden.\\
+Ziel ist es mit dem Generator und einem entsprechenden DSL-Skript eine
+Exploreransicht zu erststellen, wie sie in profil c/s geläufig ist. Abbildung
+\ref{Abb_ee} zeigt ein solches GUI. Darin enthalten sind zwei Bäume (auf der
+linken Seite) und ein CardPanel (auf der rechten Seite), worin der Inhalt der
+Ausgewählten Elemente der Bäume angezeigt werden soll. Das Anzeigen des Inhalts
+wird jedoch nicht umgesetzt.
+\myBigFigure{explorerbaum.jpg}{Einfacher Explorer}{ee}
+Die notwendigen DSL-Skripte werden bei der Umsetzung vorgestellt.
+\section{Beschreibung der GUI- und IP-Klassen im Multichannel-Framework }
+Durch die Beschreibung der GUIs mit der entwickelten DSL, ist es möglich die
+GUI- und die IP-Klassen (siehe Kapitel \ref{Analyse}) zu generieren. Die
+GUI-Klasse soll dabei vollständig generiert werden. Zur Umsetzung dessen, werden
+Informationen über das Layout aus der Layout-Datei benötigt. Die Umsetzung
+und Einbindung dieser Datei nicht in dieser Arbeit nicht behandelt. Aus
+diesem Grund wird in dem Generator ein Layout festgelegt. Die IP-Klasse soll nur
+teilweise generiert werden. Somit unterteilt sich das folgende
+Kapitel in zwei Abschnitte (GUI-Klasse und IP-Klasse).\\
+In den GUI-Klassen der deg sind die UI-Komponenten durch
+\emph{Präsentationsformen} beschrieben (siehe Kapitel \ref{Analyse}). Alle
+UI-Komponenten sind in diesen Klassen global zugreifbar, da sie in
+Instanzvariabeln abgelegt werden. Die Instanzvariablen stehen bei der deg am
+Ende der Klasse. Die bestehende Struktur der GUI-Klassen nicht verändert
+werden soll. Beim Implementieren des Generators muss darauf geachtet werden.
+Da die Interaktion von der Präsentation getrennt ist, müssen zur
+Referenzierung von Interaktionen zu UI-Komponenten entsprechende Schlüssel
+vergeben werden.\\
+Die IP-Klassen ordnen den UI-Komponenten mit Hilfe dieses Schlüssels
+entsprechende Interaktionen zu. Was genau bei der Interaktion gesehen soll, kann
+vom Generator nicht erzeugt werden. Dies muss vom Entwickler nachgepflegt
+werden.\\ 
+In beiden Fällen handelt es sich in dieser Arbeit um Transformer Generation
+(siehe Kapitel \ref{Domänenspezifische Sprachen}). In Bezug auf die IP-Klassen
+ist auch die Templated Generation (siehe Kapitel \ref{Domänenspezifische
+Sprachen}) in Erwägung zu ziehen. Um bei der Art der Generation einheitlich zu
+sein, wird auf diese Möglichkeit nicht weiter eingegangen.
 \section{Umsetzung des frameworkspezifischen Generators}
+\subsection*{GUI-Klasse}
+Bei Betrachtung der Präsentation aus Abbildung \ref{Abb_ee} können die
+Baumstrukturen auf der linken Seite als eine GUI-Beschreibungen betrachtet
+werden, die mit zwei fachlichen Konzepten Assoziiert werden können. Der obere
+Baum kann mit dem fachlichen Konzept des Inhaltsbaumes in Verbindung gebracht
+werden und der untere mit dem des Verweisebaums. Da sich die fachlichen Konzepte
+erkennen lassen, sollten separate GUI-Beschreibungen erstellt werden (siehe
+Listing \ref{LST_Inhaltsbaum} und \ref{LST_Verweisebaum}.
+\begin{lstlisting}[{caption = GUI-Beschreibung Inhaltsbaum},{label =
+LST_Inhaltsbaum}]
+type: INNERCOMPLEX;
+Label as: 'Kopfzeile'->text='Inhaltsbaum';
+Tree<Inhalt> as: 'Inhaltsbaum';
+Structure:'Kopfzeile','Inhaltsbaum';
+\end{lstlisting}
+\begin{lstlisting}[{caption = GUI-Beschreibung Verweisebaum},{label =
+LST_Verweisebaum}]
+type: INNERCOMPLEX;
+Label as: 'Kopfzeile'->text='Verweisebaum';
+Tree<Verweise> as: 'Verweisebaum';
+Structure:'Kopfzeile','Verweisebaum';
+\end{lstlisting}
+
+Bei der Generierung betrachtet Xtext eine GUI-Beschreibung immer im Ganzen. Für
+jede GUI-Beschreibung soll eine eigene Klasse angelegt werden. Die Klassen
+enthalten in diesen beiden Fällen zwei globale Variablen. Darüber hinaus
+enthalten sie Importe, die am Anfang der beiden Klassen stehen. Um die Importe
+an diese Stelle zu schreiben, ist es notwendig die GUI-Beschreibung auf benötigte Importe zu
+untersuchen und zu diese zu speichern (siehe Listing \ref{LST_Importe}).
+\begin{lstlisting}[{caption = Speichern der Importe},{label =
+LST_Importe}]
+def addImport(String newImport) {
+		if (!imports.contains(newImport)) {
+			imports.add(newImport)
+		}
+	}
+\end{lstlisting}
+ Von daher wird der
+generierte Quell-Code nicht sofort in die Datei geschrieben, sondern
+zwischengespeichert. So ist es möglich die Importe an den Anfang der Datei zu
+schreiben.\\
+Die globalen Variablen werden zusammen mit den Importen generiert und in eine
+separate Varialbe angespeichert (siehe Listing \ref{LST_GlobalVars}).
+\begin{lstlisting}[{caption = Speichern der globalen Varialben},{label =
+LST_GlobalVars}]
+def addGlobalVar(String globalVar) {
+		if(!globalVars.contains(globalVar))
+			globalVars.add(globalVar)
+	}
+\end{lstlisting}
+Dadruch
+ist es möglich diese hinter die generierten Methoden zu schreiben.\\
+Zu Beginn einer Generierung muss zwischen den Typen der GUI-Beschreibung
+unterschieden werden. Je nachdem wird die Beschreibung als \emph{Window} oder
+\emph{Innercomplex} compiliert und benötigt entsprechende Importe. In den Fällen
+der o.g. Bäume wird eine Innercomplex compiliert. Der Klassenkopf wird wie folgt
+erzeugt (siehe Listing \ref{LST_HeadComplex}).
+\begin{lstlisting}[{caption = Speichern der globalen Varialben},{label =
+LST_GlobalVars}]
+	def compileComplex(UIDescription description) '''
+		«addImport("import DE.data_experts.jwammc.core.pf.PfPanel;")»
+		public class «guiFilename» extends PfPanel{
+			public «guiFilename»(){
+				super( new BorderLayout() );
+				try {
+     				init();
+     			}
+    			catch ( Exception e ) {
+     				 e.printStackTrace();
+   				 }
+			}
+		«description.init»
+		«genGlobalVars»
+		}	
+	'''
+\end{lstlisting}
+Zum Abschluss dieser Methoden werden zwei weitere Methoden aufgerufen. Die erste
+(\emph{descrition.init}) generiert die im Konstruktor aufgerufene init-Methode.
+Die andere ist für die Generierung der globalen Variablen zuständig.
+\subsection*{IP-Klasse}
