@@ -3918,7 +3918,7 @@ rule__TreeDefinition__Group__1__Impl
 :
 (
 { before(grammarAccess.getTreeDefinitionAccess().getInputTypeAssignment_1()); }
-(rule__TreeDefinition__InputTypeAssignment_1)
+(rule__TreeDefinition__InputTypeAssignment_1)?
 { after(grammarAccess.getTreeDefinitionAccess().getInputTypeAssignment_1()); }
 )
 
@@ -4074,7 +4074,7 @@ rule__TableDefinition__Group__1__Impl
 :
 (
 { before(grammarAccess.getTableDefinitionAccess().getInputTypeAssignment_1()); }
-(rule__TableDefinition__InputTypeAssignment_1)
+(rule__TableDefinition__InputTypeAssignment_1)?
 { after(grammarAccess.getTableDefinitionAccess().getInputTypeAssignment_1()); }
 )
 

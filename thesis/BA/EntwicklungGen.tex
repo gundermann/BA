@@ -51,16 +51,16 @@ Listing \ref{LST_Inhaltsbaum} und \ref{LST_Verweisebaum}.
 \begin{lstlisting}[{caption = GUI-Beschreibung Inhaltsbaum},{label =
 LST_Inhaltsbaum}]
 type: INNERCOMPLEX;
-Label as: 'Kopfzeile'->text='Inhaltsbaum';
-Tree<Inhalt> as: 'Inhaltsbaum';
-Structure:'Kopfzeile','Inhaltsbaum';
+Label as: 'kopfzeile'->text='Inhaltsbaum';
+Tree as: 'inhaltsbaum';
+Structure:'kopfzeile','inhaltsbaum';
 \end{lstlisting}
 \begin{lstlisting}[{caption = GUI-Beschreibung Verweisebaum},{label =
 LST_Verweisebaum}]
 type: INNERCOMPLEX;
-Label as: 'Kopfzeile'->text='Verweisebaum';
-Tree<Verweise> as: 'Verweisebaum';
-Structure:'Kopfzeile','Verweisebaum';
+Label as: 'kopfzeile'->text='Verweisebaum';
+Tree as: 'verweisebaum';
+Structure:'kopfzeile','verweisebaum';
 \end{lstlisting}
 
 Bei der Generierung betrachtet Xtext eine GUI-Beschreibung immer im Ganzen. Für
@@ -95,8 +95,8 @@ ist es möglich diese hinter die generierten Methoden zu schreiben.\\
 Zu Beginn einer Generierung muss zwischen den Typen der GUI-Beschreibung
 unterschieden werden. Je nachdem wird die Beschreibung als \emph{Window} oder
 \emph{Innercomplex} compiliert und benötigt entsprechende Importe. In den Fällen
-der o.g. Bäume wird eine Innercomplex compiliert. Der Klassenkopf wird wie folgt
-erzeugt (siehe Listing \ref{LST_HeadComplex}).
+der o.g. Bäume wird eine Innercomplex compiliert. Der Klassenkopf und der
+Konstruktor werden wie folgt erzeugt (siehe Listing \ref{LST_HeadComplex}).
 \begin{lstlisting}[{caption = Speichern der globalen Varialben},{label =
 LST_GlobalVars}]
 	def compileComplex(UIDescription description) '''
@@ -116,7 +116,89 @@ LST_GlobalVars}]
 		}	
 	'''
 \end{lstlisting}
-Zum Abschluss dieser Methoden werden zwei weitere Methoden aufgerufen. Die erste
-(\emph{descrition.init}) generiert die im Konstruktor aufgerufene init-Methode.
-Die andere ist für die Generierung der globalen Variablen zuständig.
+In dieser Methode wird festgelegt, dass sich die UI-Komponenten auf einem
+Border-Layout anordnen. Wenn die Layout-Datei verwendet wird, muss der Generator
+aus dem Inhalt dieser Datei auf einen entsprechenden Layout-Container
+schließen können. Zum Abschluss dieser Methode werden zwei weitere Methoden
+aufgerufen.
+Die erste (\emph{descrition.init}) generiert die im Konstruktor aufgerufene init-Methode.
+Die andere ist für die Generierung der globalen Variablen zuständig.\\
+In der Init-Methode werden alle UI-Komponenten und das Layout definiert. Da für
+das Layout in dieser Arbeit keine Beschreibung existiert,
+müssen diese Angaben nachgepflegt werden. Die Definition
+der UI-Komponenten mit ihren Properties können jedoch
+erzeugt werden. Listing \ref{LST_Init} zeigt die Init-Methode zum
+ohne Rücksicht auf das Layout.
+\begin{lstlisting}[{caption = Init-Methode},{label =
+LST_Init}]
+	def getInit(UIDescription description) '''
+		public void init(){
+						«FOR def : description.definitions»
+								«def.compileComponent»
+						«ENDFOR»
+				}
+	'''
+\end{lstlisting}
+In der Methode \emph{compileComponent} wird geprüft um welche UI-Komponente es
+sich handelt. Diese wird anschließend compiliert, wobei der entsprechende
+Quell-Code zur frameworkspezifischen Definition der Komponente generiert wird.
+Im Fall des Labels werden der entsprechende Import, die globale Variable
+hinzugefügt. Weiterhin muss die Referenz für die IP-Klasse definiert werden, da
+Labels Standardinteraktionen besitzen. Letzlich müssen wenn vorhanden, die
+Properties am Label gesetzt (siehe Listing \ref{LST_LabelGen}).
+\begin{lstlisting}[{caption = Label-Generierung},{label =
+LST_LabelGen}]
+def compileLabel(LabelDefinition definition) '''
+		«addImport("import DE.data_experts.jwammc.core.pf.PfLabel;")»
+		«addGlobalVar("PfLabel " + definition.id + ";")»
+		«definition.id» = new PfLabel();
+		«definition.id».setIfName("«definition.id»");
+		«IF definition.properties != null»
+			«genProperty(definition.id, 'setText',definition.properties.text, true)»
+		«ENDIF»
+'''
+
+def genProperty(String id, String method, String value, Boolean isString) '''
+	«IF value != null»
+		«IF isString»
+			«id».«method»("«value»");
+		«ELSE»
+			«id».«method»(«value»);
+		«ENDIF»
+	«ENDIF»
+	'''
+'''
+\end{lstlisting}
+Die Eigenschafte aus den Properties-Dateien müssten an dieser Stelle noch
+berücksichtigt werden.
+Dies wurde aus Zeitgründen bei allen UI-Komponenten weggelassen.\\
+Der Quell-Code für den Baum wird ähnlich generiert. Wenn der Input-Typ des
+Baumes nicht gesetzt ist, muss ein Standard dafür eingesetzt werden. Desweiteren
+muss für den Baum ein CellRenderer definiert werden (siehe Listing
+\ref{LST_Tree}.
+\begin{lstlisting}[{caption = Label-Generierung},{label =
+LST_Tree}]
+def compileTree(TreeDefinition definition)'''
+		«addImport("import DE.data_experts.jwammc.core.pf.PfTree;")»
+		«addImport("import DE.data_experts.jwammc.core.pf.TreeCellRenderer;")»
+		«addImport("import DE.data_experts.jwammc.core.pf.PfTree;")»
+			«addImport("import javax.swing.tree.DefaultTreeModel;")»
+		«addGlobalVar("PfTree " + definition.id + ";")»
+		«definition.id» = new PfTree();
+		«definition.id».setIfName("«definition.id»");
+		«IF definition.inputType == null»
+			«addImport("import DE.data_experts.util.ObjectNode;")»
+			«definition.id».setTreeModel( new DefaultTreeModel( new ObjectNode() ) );
+		«ELSE»
+			«definition.id».setTreeModel( new DefaultTreeModel( 
+			new «definition.inputType.substring(1,definition.inputType.length-1)»() ) );
+		«ENDIF»
+			«definition.id».setCellRenderer( new TreeCellRenderer() );
+'''
+\end{lstlisting}
+Allein durch die genannten Methoden kann der Generator die beiden DSL-Skripte
+zur Beschreibung des Inhalts- und des Verweisebaums in GUI-Klassen
+transformieren, die innerhalb der MCF ausgeführt werden können.
+
+
 \subsection*{IP-Klasse}

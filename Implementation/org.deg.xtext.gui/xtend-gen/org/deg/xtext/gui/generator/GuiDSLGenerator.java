@@ -3,6 +3,7 @@
  */
 package org.deg.xtext.gui.generator;
 
+import com.google.common.base.Objects;
 import com.google.common.collect.Iterables;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -12,9 +13,13 @@ import org.deg.xtext.gui.guiDSL.ButtonDefinition;
 import org.deg.xtext.gui.guiDSL.ComponentDefinition;
 import org.deg.xtext.gui.guiDSL.Definition;
 import org.deg.xtext.gui.guiDSL.LabelDefinition;
+import org.deg.xtext.gui.guiDSL.LabelProperties;
+import org.deg.xtext.gui.guiDSL.Refinement;
+import org.deg.xtext.gui.guiDSL.TreeDefinition;
 import org.deg.xtext.gui.guiDSL.Type;
 import org.deg.xtext.gui.guiDSL.TypeDefinition;
 import org.deg.xtext.gui.guiDSL.UIDescription;
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.TreeIterator;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EObject;
@@ -72,12 +77,12 @@ public class GuiDSLGenerator implements IGenerator {
           CharSequence source = this.compileWindow(d);
           String _genImports = this.genImports();
           String _plus = (_genImports + source);
-          fsa.generateFile((this.descriptionname + ".java"), _plus);
+          fsa.generateFile((this.guiFilename + ".java"), _plus);
         } else {
           CharSequence source_1 = this.compileComplex(d);
           String _genImports_1 = this.genImports();
           String _plus_1 = (_genImports_1 + source_1);
-          fsa.generateFile((this.descriptionname + ".java"), _plus_1);
+          fsa.generateFile((this.guiFilename + ".java"), _plus_1);
         }
         this.imports.clear();
         this.globalVars.clear();
@@ -98,6 +103,9 @@ public class GuiDSLGenerator implements IGenerator {
     StringConcatenation _builder = new StringConcatenation();
     String _addImport = this.addImport("import DE.data_experts.jwammc.core.pf.PfPanel;");
     _builder.append(_addImport, "");
+    _builder.newLineIfNotEmpty();
+    String _addImport_1 = this.addImport("import java.awt.BorderLayout;");
+    _builder.append(_addImport_1, "");
     _builder.newLineIfNotEmpty();
     _builder.append("/**");
     _builder.newLine();
@@ -141,8 +149,8 @@ public class GuiDSLGenerator implements IGenerator {
     _builder.append("\t");
     _builder.append("}");
     _builder.newLine();
-    CharSequence _initMainBox = this.getInit(description);
-    _builder.append(_initMainBox, "");
+    CharSequence _init = this.getInit(description);
+    _builder.append(_init, "");
     _builder.newLineIfNotEmpty();
     _builder.append("/**");
     _builder.newLine();
@@ -169,14 +177,34 @@ public class GuiDSLGenerator implements IGenerator {
   
   public CharSequence getInit(final UIDescription description) {
     StringConcatenation _builder = new StringConcatenation();
-    _builder.append("public void initBox(VBox b){");
+    _builder.append("public void init(){");
     _builder.newLine();
+    {
+      EList<Definition> _definitions = description.getDefinitions();
+      for(final Definition def : _definitions) {
+        _builder.append("\t\t\t\t");
+        CharSequence _compileDefinition = this.compileDefinition(def);
+        _builder.append(_compileDefinition, "\t\t\t\t");
+        _builder.newLineIfNotEmpty();
+      }
+    }
+    {
+      EList<Refinement> _refinements = description.getRefinements();
+      for(final Refinement ref : _refinements) {
+        _builder.append("\t\t\t\t");
+        Object _compileRefinement = this.compileRefinement(ref);
+        _builder.append(_compileRefinement, "\t\t\t\t");
+        _builder.newLineIfNotEmpty();
+      }
+    }
     _builder.append("\t\t");
     _builder.append("}");
     _builder.newLine();
-    _builder.append("\t\t");
-    _builder.newLine();
     return _builder;
+  }
+  
+  public Object compileRefinement(final Refinement refinement) {
+    return null;
   }
   
   public String addImport(final String newImport) {
@@ -250,8 +278,8 @@ public class GuiDSLGenerator implements IGenerator {
   
   public CharSequence genOtherStuff(final UIDescription description) {
     StringConcatenation _builder = new StringConcatenation();
-    CharSequence _initMainBox = this.getInit(description);
-    _builder.append(_initMainBox, "");
+    CharSequence _init = this.getInit(description);
+    _builder.append(_init, "");
     _builder.newLineIfNotEmpty();
     _builder.append("/**");
     _builder.newLine();
@@ -288,41 +316,178 @@ public class GuiDSLGenerator implements IGenerator {
   
   public CharSequence genInteractions() {
     StringConcatenation _builder = new StringConcatenation();
-    _builder.newLine();
-    _builder.append("//\tdef extract(UIAction action) ");
     return _builder;
   }
   
   public CharSequence compileDefinition(final Definition definition) {
     StringConcatenation _builder = new StringConcatenation();
-    String _switchCompiled = this.switchCompiled();
-    _builder.append(_switchCompiled, "");
+    {
+      ComponentDefinition _concreteDefition = definition.getConcreteDefition();
+      String _name = _concreteDefition.getName();
+      boolean _equals = Objects.equal(_name, "Label");
+      if (_equals) {
+        ComponentDefinition _concreteDefition_1 = definition.getConcreteDefition();
+        CharSequence _compileLabel = this.compileLabel(((LabelDefinition) _concreteDefition_1));
+        _builder.append(_compileLabel, "");
+        _builder.newLineIfNotEmpty();
+      } else {
+        ComponentDefinition _concreteDefition_2 = definition.getConcreteDefition();
+        String _name_1 = _concreteDefition_2.getName();
+        boolean _equals_1 = Objects.equal(_name_1, "Tree");
+        if (_equals_1) {
+          ComponentDefinition _concreteDefition_3 = definition.getConcreteDefition();
+          CharSequence _compileTree = this.compileTree(((TreeDefinition) _concreteDefition_3));
+          _builder.append(_compileTree, "");
+          _builder.newLineIfNotEmpty();
+        }
+      }
+    }
+    _builder.newLine();
+    return _builder;
+  }
+  
+  public CharSequence compileTree(final TreeDefinition definition) {
+    StringConcatenation _builder = new StringConcatenation();
+    String _addImport = this.addImport("import DE.data_experts.jwammc.core.pf.PfTree;");
+    _builder.append(_addImport, "");
+    _builder.newLineIfNotEmpty();
+    String _addImport_1 = this.addImport("import DE.data_experts.jwammc.core.pf.TreeCellRenderer;");
+    _builder.append(_addImport_1, "");
+    _builder.newLineIfNotEmpty();
+    String _addImport_2 = this.addImport("import DE.data_experts.jwammc.core.pf.PfTree;");
+    _builder.append(_addImport_2, "");
+    _builder.newLineIfNotEmpty();
+    _builder.append("\t");
+    String _addImport_3 = this.addImport("import javax.swing.tree.DefaultTreeModel;");
+    _builder.append(_addImport_3, "\t");
+    _builder.newLineIfNotEmpty();
+    String _id = definition.getId();
+    String _plus = ("PfTree " + _id);
+    String _plus_1 = (_plus + ";");
+    String _addGlobalVar = this.addGlobalVar(_plus_1);
+    _builder.append(_addGlobalVar, "");
+    _builder.newLineIfNotEmpty();
+    String _id_1 = definition.getId();
+    _builder.append(_id_1, "");
+    _builder.append(" = new PfTree();");
+    _builder.newLineIfNotEmpty();
+    String _id_2 = definition.getId();
+    _builder.append(_id_2, "");
+    _builder.append(".setIfName(\"");
+    String _id_3 = definition.getId();
+    _builder.append(_id_3, "");
+    _builder.append("\");");
+    _builder.newLineIfNotEmpty();
+    {
+      String _inputType = definition.getInputType();
+      boolean _equals = Objects.equal(_inputType, null);
+      if (_equals) {
+        String _addImport_4 = this.addImport("import DE.data_experts.util.ObjectNode;");
+        _builder.append(_addImport_4, "");
+        _builder.newLineIfNotEmpty();
+        String _id_4 = definition.getId();
+        _builder.append(_id_4, "");
+        _builder.append(".setTreeModel( new DefaultTreeModel( new ObjectNode() ) );");
+        _builder.newLineIfNotEmpty();
+      } else {
+        String _id_5 = definition.getId();
+        _builder.append(_id_5, "");
+        _builder.append(".setTreeModel( new DefaultTreeModel( new ");
+        String _inputType_1 = definition.getInputType();
+        String _inputType_2 = definition.getInputType();
+        int _length = _inputType_2.length();
+        int _minus = (_length - 1);
+        String _substring = _inputType_1.substring(1, _minus);
+        _builder.append(_substring, "");
+        _builder.append("() ) );");
+        _builder.newLineIfNotEmpty();
+      }
+    }
+    _builder.append("\t");
+    String _id_6 = definition.getId();
+    _builder.append(_id_6, "\t");
+    _builder.append(".setCellRenderer( new TreeCellRenderer() );");
+    _builder.newLineIfNotEmpty();
+    _builder.newLine();
+    _builder.newLine();
+    _builder.append(" ");
+    _builder.append("this.add( ");
+    String _id_7 = definition.getId();
+    _builder.append(_id_7, " ");
+    _builder.append(", BorderLayout.CENTER );");
     _builder.newLineIfNotEmpty();
     return _builder;
   }
   
   public CharSequence compileLabel(final LabelDefinition definition) {
     StringConcatenation _builder = new StringConcatenation();
-    String _addImport = this.addImport("import javafx.scene.control.Label;");
+    String _addImport = this.addImport("import DE.data_experts.jwammc.core.pf.PfLabel;");
     _builder.append(_addImport, "");
     _builder.newLineIfNotEmpty();
-    String _name = definition.getName();
-    String _plus = ("Label " + _name);
+    String _id = definition.getId();
+    String _plus = ("PfLabel " + _id);
     String _plus_1 = (_plus + ";");
     String _addGlobalVar = this.addGlobalVar(_plus_1);
     _builder.append(_addGlobalVar, "");
     _builder.newLineIfNotEmpty();
-    _builder.append("\t");
-    String _name_1 = definition.getName();
-    _builder.append(_name_1, "\t");
-    _builder.append(" = new Label();");
+    String _id_1 = definition.getId();
+    _builder.append(_id_1, "");
+    _builder.append(" = new PfLabel();");
     _builder.newLineIfNotEmpty();
-    _builder.append("\t");
-    _builder.append("return ");
-    String _name_2 = definition.getName();
-    _builder.append(_name_2, "\t");
-    _builder.append(";");
+    String _id_2 = definition.getId();
+    _builder.append(_id_2, "");
+    _builder.append(".setIfName(\"");
+    String _id_3 = definition.getId();
+    _builder.append(_id_3, "");
+    _builder.append("\");");
     _builder.newLineIfNotEmpty();
+    {
+      LabelProperties _properties = definition.getProperties();
+      boolean _notEquals = (!Objects.equal(_properties, null));
+      if (_notEquals) {
+        String _id_4 = definition.getId();
+        LabelProperties _properties_1 = definition.getProperties();
+        String _text = _properties_1.getText();
+        CharSequence _genProperty = this.genProperty(_id_4, "setText", _text, Boolean.valueOf(true));
+        _builder.append(_genProperty, "");
+        _builder.newLineIfNotEmpty();
+      }
+    }
+    _builder.newLine();
+    _builder.append("this.add(");
+    String _id_5 = definition.getId();
+    _builder.append(_id_5, "");
+    _builder.append(", BorderLayout.NORTH);");
+    _builder.newLineIfNotEmpty();
+    return _builder;
+  }
+  
+  public CharSequence genProperty(final String id, final String method, final String value, final Boolean isString) {
+    StringConcatenation _builder = new StringConcatenation();
+    {
+      boolean _notEquals = (!Objects.equal(value, null));
+      if (_notEquals) {
+        {
+          if ((isString).booleanValue()) {
+            _builder.append(id, "");
+            _builder.append(".");
+            _builder.append(method, "");
+            _builder.append("(\"");
+            _builder.append(value, "");
+            _builder.append("\");");
+            _builder.newLineIfNotEmpty();
+          } else {
+            _builder.append(id, "");
+            _builder.append(".");
+            _builder.append(method, "");
+            _builder.append("(");
+            _builder.append(value, "");
+            _builder.append(");");
+            _builder.newLineIfNotEmpty();
+          }
+        }
+      }
+    }
     return _builder;
   }
   

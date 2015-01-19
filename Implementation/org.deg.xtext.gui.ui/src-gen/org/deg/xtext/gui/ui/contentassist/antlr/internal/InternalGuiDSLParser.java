@@ -10747,27 +10747,38 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TreeDefinition__Group__1__Impl"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:3914:1: rule__TreeDefinition__Group__1__Impl : ( ( rule__TreeDefinition__InputTypeAssignment_1 ) ) ;
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:3914:1: rule__TreeDefinition__Group__1__Impl : ( ( rule__TreeDefinition__InputTypeAssignment_1 )? ) ;
     public final void rule__TreeDefinition__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:3918:1: ( ( ( rule__TreeDefinition__InputTypeAssignment_1 ) ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:3919:1: ( ( rule__TreeDefinition__InputTypeAssignment_1 ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:3918:1: ( ( ( rule__TreeDefinition__InputTypeAssignment_1 )? ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:3919:1: ( ( rule__TreeDefinition__InputTypeAssignment_1 )? )
             {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:3919:1: ( ( rule__TreeDefinition__InputTypeAssignment_1 ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:3920:1: ( rule__TreeDefinition__InputTypeAssignment_1 )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:3919:1: ( ( rule__TreeDefinition__InputTypeAssignment_1 )? )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:3920:1: ( rule__TreeDefinition__InputTypeAssignment_1 )?
             {
              before(grammarAccess.getTreeDefinitionAccess().getInputTypeAssignment_1()); 
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:3921:1: ( rule__TreeDefinition__InputTypeAssignment_1 )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:3921:2: rule__TreeDefinition__InputTypeAssignment_1
-            {
-            pushFollow(FOLLOW_rule__TreeDefinition__InputTypeAssignment_1_in_rule__TreeDefinition__Group__1__Impl7980);
-            rule__TreeDefinition__InputTypeAssignment_1();
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:3921:1: ( rule__TreeDefinition__InputTypeAssignment_1 )?
+            int alt31=2;
+            int LA31_0 = input.LA(1);
 
-            state._fsp--;
+            if ( (LA31_0==RULE_INPUT_DESCRIPTION) ) {
+                alt31=1;
+            }
+            switch (alt31) {
+                case 1 :
+                    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:3921:2: rule__TreeDefinition__InputTypeAssignment_1
+                    {
+                    pushFollow(FOLLOW_rule__TreeDefinition__InputTypeAssignment_1_in_rule__TreeDefinition__Group__1__Impl7980);
+                    rule__TreeDefinition__InputTypeAssignment_1();
 
+                    state._fsp--;
+
+
+                    }
+                    break;
 
             }
 
@@ -10803,12 +10814,12 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:3935:1: ( rule__TreeDefinition__Group__2__Impl rule__TreeDefinition__Group__3 )
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:3936:2: rule__TreeDefinition__Group__2__Impl rule__TreeDefinition__Group__3
             {
-            pushFollow(FOLLOW_rule__TreeDefinition__Group__2__Impl_in_rule__TreeDefinition__Group__28010);
+            pushFollow(FOLLOW_rule__TreeDefinition__Group__2__Impl_in_rule__TreeDefinition__Group__28011);
             rule__TreeDefinition__Group__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__TreeDefinition__Group__3_in_rule__TreeDefinition__Group__28013);
+            pushFollow(FOLLOW_rule__TreeDefinition__Group__3_in_rule__TreeDefinition__Group__28014);
             rule__TreeDefinition__Group__3();
 
             state._fsp--;
@@ -10845,7 +10856,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:3949:1: 'as:'
             {
              before(grammarAccess.getTreeDefinitionAccess().getAsKeyword_2()); 
-            match(input,24,FOLLOW_24_in_rule__TreeDefinition__Group__2__Impl8041); 
+            match(input,24,FOLLOW_24_in_rule__TreeDefinition__Group__2__Impl8042); 
              after(grammarAccess.getTreeDefinitionAccess().getAsKeyword_2()); 
 
             }
@@ -10878,12 +10889,12 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:3966:1: ( rule__TreeDefinition__Group__3__Impl rule__TreeDefinition__Group__4 )
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:3967:2: rule__TreeDefinition__Group__3__Impl rule__TreeDefinition__Group__4
             {
-            pushFollow(FOLLOW_rule__TreeDefinition__Group__3__Impl_in_rule__TreeDefinition__Group__38072);
+            pushFollow(FOLLOW_rule__TreeDefinition__Group__3__Impl_in_rule__TreeDefinition__Group__38073);
             rule__TreeDefinition__Group__3__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__TreeDefinition__Group__4_in_rule__TreeDefinition__Group__38075);
+            pushFollow(FOLLOW_rule__TreeDefinition__Group__4_in_rule__TreeDefinition__Group__38076);
             rule__TreeDefinition__Group__4();
 
             state._fsp--;
@@ -10923,7 +10934,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:3981:1: ( rule__TreeDefinition__IdAssignment_3 )
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:3981:2: rule__TreeDefinition__IdAssignment_3
             {
-            pushFollow(FOLLOW_rule__TreeDefinition__IdAssignment_3_in_rule__TreeDefinition__Group__3__Impl8102);
+            pushFollow(FOLLOW_rule__TreeDefinition__IdAssignment_3_in_rule__TreeDefinition__Group__3__Impl8103);
             rule__TreeDefinition__IdAssignment_3();
 
             state._fsp--;
@@ -10963,7 +10974,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:3995:1: ( rule__TreeDefinition__Group__4__Impl )
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:3996:2: rule__TreeDefinition__Group__4__Impl
             {
-            pushFollow(FOLLOW_rule__TreeDefinition__Group__4__Impl_in_rule__TreeDefinition__Group__48132);
+            pushFollow(FOLLOW_rule__TreeDefinition__Group__4__Impl_in_rule__TreeDefinition__Group__48133);
             rule__TreeDefinition__Group__4__Impl();
 
             state._fsp--;
@@ -11001,17 +11012,17 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             {
              before(grammarAccess.getTreeDefinitionAccess().getPropertiesAssignment_4()); 
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:4009:1: ( rule__TreeDefinition__PropertiesAssignment_4 )?
-            int alt31=2;
-            int LA31_0 = input.LA(1);
+            int alt32=2;
+            int LA32_0 = input.LA(1);
 
-            if ( (LA31_0==29) ) {
-                alt31=1;
+            if ( (LA32_0==29) ) {
+                alt32=1;
             }
-            switch (alt31) {
+            switch (alt32) {
                 case 1 :
                     // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:4009:2: rule__TreeDefinition__PropertiesAssignment_4
                     {
-                    pushFollow(FOLLOW_rule__TreeDefinition__PropertiesAssignment_4_in_rule__TreeDefinition__Group__4__Impl8159);
+                    pushFollow(FOLLOW_rule__TreeDefinition__PropertiesAssignment_4_in_rule__TreeDefinition__Group__4__Impl8160);
                     rule__TreeDefinition__PropertiesAssignment_4();
 
                     state._fsp--;
@@ -11054,12 +11065,12 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:4033:1: ( rule__TableDefinition__Group__0__Impl rule__TableDefinition__Group__1 )
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:4034:2: rule__TableDefinition__Group__0__Impl rule__TableDefinition__Group__1
             {
-            pushFollow(FOLLOW_rule__TableDefinition__Group__0__Impl_in_rule__TableDefinition__Group__08200);
+            pushFollow(FOLLOW_rule__TableDefinition__Group__0__Impl_in_rule__TableDefinition__Group__08201);
             rule__TableDefinition__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__TableDefinition__Group__1_in_rule__TableDefinition__Group__08203);
+            pushFollow(FOLLOW_rule__TableDefinition__Group__1_in_rule__TableDefinition__Group__08204);
             rule__TableDefinition__Group__1();
 
             state._fsp--;
@@ -11099,7 +11110,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:4048:1: ( rule__TableDefinition__NameAssignment_0 )
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:4048:2: rule__TableDefinition__NameAssignment_0
             {
-            pushFollow(FOLLOW_rule__TableDefinition__NameAssignment_0_in_rule__TableDefinition__Group__0__Impl8230);
+            pushFollow(FOLLOW_rule__TableDefinition__NameAssignment_0_in_rule__TableDefinition__Group__0__Impl8231);
             rule__TableDefinition__NameAssignment_0();
 
             state._fsp--;
@@ -11139,12 +11150,12 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:4062:1: ( rule__TableDefinition__Group__1__Impl rule__TableDefinition__Group__2 )
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:4063:2: rule__TableDefinition__Group__1__Impl rule__TableDefinition__Group__2
             {
-            pushFollow(FOLLOW_rule__TableDefinition__Group__1__Impl_in_rule__TableDefinition__Group__18260);
+            pushFollow(FOLLOW_rule__TableDefinition__Group__1__Impl_in_rule__TableDefinition__Group__18261);
             rule__TableDefinition__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__TableDefinition__Group__2_in_rule__TableDefinition__Group__18263);
+            pushFollow(FOLLOW_rule__TableDefinition__Group__2_in_rule__TableDefinition__Group__18264);
             rule__TableDefinition__Group__2();
 
             state._fsp--;
@@ -11168,27 +11179,38 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TableDefinition__Group__1__Impl"
-    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:4070:1: rule__TableDefinition__Group__1__Impl : ( ( rule__TableDefinition__InputTypeAssignment_1 ) ) ;
+    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:4070:1: rule__TableDefinition__Group__1__Impl : ( ( rule__TableDefinition__InputTypeAssignment_1 )? ) ;
     public final void rule__TableDefinition__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:4074:1: ( ( ( rule__TableDefinition__InputTypeAssignment_1 ) ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:4075:1: ( ( rule__TableDefinition__InputTypeAssignment_1 ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:4074:1: ( ( ( rule__TableDefinition__InputTypeAssignment_1 )? ) )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:4075:1: ( ( rule__TableDefinition__InputTypeAssignment_1 )? )
             {
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:4075:1: ( ( rule__TableDefinition__InputTypeAssignment_1 ) )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:4076:1: ( rule__TableDefinition__InputTypeAssignment_1 )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:4075:1: ( ( rule__TableDefinition__InputTypeAssignment_1 )? )
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:4076:1: ( rule__TableDefinition__InputTypeAssignment_1 )?
             {
              before(grammarAccess.getTableDefinitionAccess().getInputTypeAssignment_1()); 
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:4077:1: ( rule__TableDefinition__InputTypeAssignment_1 )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:4077:2: rule__TableDefinition__InputTypeAssignment_1
-            {
-            pushFollow(FOLLOW_rule__TableDefinition__InputTypeAssignment_1_in_rule__TableDefinition__Group__1__Impl8290);
-            rule__TableDefinition__InputTypeAssignment_1();
+            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:4077:1: ( rule__TableDefinition__InputTypeAssignment_1 )?
+            int alt33=2;
+            int LA33_0 = input.LA(1);
 
-            state._fsp--;
+            if ( (LA33_0==RULE_INPUT_DESCRIPTION) ) {
+                alt33=1;
+            }
+            switch (alt33) {
+                case 1 :
+                    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:4077:2: rule__TableDefinition__InputTypeAssignment_1
+                    {
+                    pushFollow(FOLLOW_rule__TableDefinition__InputTypeAssignment_1_in_rule__TableDefinition__Group__1__Impl8291);
+                    rule__TableDefinition__InputTypeAssignment_1();
 
+                    state._fsp--;
+
+
+                    }
+                    break;
 
             }
 
@@ -11224,12 +11246,12 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:4091:1: ( rule__TableDefinition__Group__2__Impl rule__TableDefinition__Group__3 )
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:4092:2: rule__TableDefinition__Group__2__Impl rule__TableDefinition__Group__3
             {
-            pushFollow(FOLLOW_rule__TableDefinition__Group__2__Impl_in_rule__TableDefinition__Group__28320);
+            pushFollow(FOLLOW_rule__TableDefinition__Group__2__Impl_in_rule__TableDefinition__Group__28322);
             rule__TableDefinition__Group__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__TableDefinition__Group__3_in_rule__TableDefinition__Group__28323);
+            pushFollow(FOLLOW_rule__TableDefinition__Group__3_in_rule__TableDefinition__Group__28325);
             rule__TableDefinition__Group__3();
 
             state._fsp--;
@@ -11266,7 +11288,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:4105:1: 'as:'
             {
              before(grammarAccess.getTableDefinitionAccess().getAsKeyword_2()); 
-            match(input,24,FOLLOW_24_in_rule__TableDefinition__Group__2__Impl8351); 
+            match(input,24,FOLLOW_24_in_rule__TableDefinition__Group__2__Impl8353); 
              after(grammarAccess.getTableDefinitionAccess().getAsKeyword_2()); 
 
             }
@@ -11299,12 +11321,12 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:4122:1: ( rule__TableDefinition__Group__3__Impl rule__TableDefinition__Group__4 )
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:4123:2: rule__TableDefinition__Group__3__Impl rule__TableDefinition__Group__4
             {
-            pushFollow(FOLLOW_rule__TableDefinition__Group__3__Impl_in_rule__TableDefinition__Group__38382);
+            pushFollow(FOLLOW_rule__TableDefinition__Group__3__Impl_in_rule__TableDefinition__Group__38384);
             rule__TableDefinition__Group__3__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__TableDefinition__Group__4_in_rule__TableDefinition__Group__38385);
+            pushFollow(FOLLOW_rule__TableDefinition__Group__4_in_rule__TableDefinition__Group__38387);
             rule__TableDefinition__Group__4();
 
             state._fsp--;
@@ -11344,7 +11366,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:4137:1: ( rule__TableDefinition__IdAssignment_3 )
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:4137:2: rule__TableDefinition__IdAssignment_3
             {
-            pushFollow(FOLLOW_rule__TableDefinition__IdAssignment_3_in_rule__TableDefinition__Group__3__Impl8412);
+            pushFollow(FOLLOW_rule__TableDefinition__IdAssignment_3_in_rule__TableDefinition__Group__3__Impl8414);
             rule__TableDefinition__IdAssignment_3();
 
             state._fsp--;
@@ -11384,7 +11406,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:4151:1: ( rule__TableDefinition__Group__4__Impl )
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:4152:2: rule__TableDefinition__Group__4__Impl
             {
-            pushFollow(FOLLOW_rule__TableDefinition__Group__4__Impl_in_rule__TableDefinition__Group__48442);
+            pushFollow(FOLLOW_rule__TableDefinition__Group__4__Impl_in_rule__TableDefinition__Group__48444);
             rule__TableDefinition__Group__4__Impl();
 
             state._fsp--;
@@ -11422,17 +11444,17 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             {
              before(grammarAccess.getTableDefinitionAccess().getPropertiesAssignment_4()); 
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:4165:1: ( rule__TableDefinition__PropertiesAssignment_4 )?
-            int alt32=2;
-            int LA32_0 = input.LA(1);
+            int alt34=2;
+            int LA34_0 = input.LA(1);
 
-            if ( (LA32_0==29) ) {
-                alt32=1;
+            if ( (LA34_0==29) ) {
+                alt34=1;
             }
-            switch (alt32) {
+            switch (alt34) {
                 case 1 :
                     // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:4165:2: rule__TableDefinition__PropertiesAssignment_4
                     {
-                    pushFollow(FOLLOW_rule__TableDefinition__PropertiesAssignment_4_in_rule__TableDefinition__Group__4__Impl8469);
+                    pushFollow(FOLLOW_rule__TableDefinition__PropertiesAssignment_4_in_rule__TableDefinition__Group__4__Impl8471);
                     rule__TableDefinition__PropertiesAssignment_4();
 
                     state._fsp--;
@@ -11475,12 +11497,12 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:4189:1: ( rule__InterchangeableDefinition__Group__0__Impl rule__InterchangeableDefinition__Group__1 )
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:4190:2: rule__InterchangeableDefinition__Group__0__Impl rule__InterchangeableDefinition__Group__1
             {
-            pushFollow(FOLLOW_rule__InterchangeableDefinition__Group__0__Impl_in_rule__InterchangeableDefinition__Group__08510);
+            pushFollow(FOLLOW_rule__InterchangeableDefinition__Group__0__Impl_in_rule__InterchangeableDefinition__Group__08512);
             rule__InterchangeableDefinition__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__InterchangeableDefinition__Group__1_in_rule__InterchangeableDefinition__Group__08513);
+            pushFollow(FOLLOW_rule__InterchangeableDefinition__Group__1_in_rule__InterchangeableDefinition__Group__08515);
             rule__InterchangeableDefinition__Group__1();
 
             state._fsp--;
@@ -11520,7 +11542,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:4204:1: ( rule__InterchangeableDefinition__NameAssignment_0 )
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:4204:2: rule__InterchangeableDefinition__NameAssignment_0
             {
-            pushFollow(FOLLOW_rule__InterchangeableDefinition__NameAssignment_0_in_rule__InterchangeableDefinition__Group__0__Impl8540);
+            pushFollow(FOLLOW_rule__InterchangeableDefinition__NameAssignment_0_in_rule__InterchangeableDefinition__Group__0__Impl8542);
             rule__InterchangeableDefinition__NameAssignment_0();
 
             state._fsp--;
@@ -11560,12 +11582,12 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:4218:1: ( rule__InterchangeableDefinition__Group__1__Impl rule__InterchangeableDefinition__Group__2 )
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:4219:2: rule__InterchangeableDefinition__Group__1__Impl rule__InterchangeableDefinition__Group__2
             {
-            pushFollow(FOLLOW_rule__InterchangeableDefinition__Group__1__Impl_in_rule__InterchangeableDefinition__Group__18570);
+            pushFollow(FOLLOW_rule__InterchangeableDefinition__Group__1__Impl_in_rule__InterchangeableDefinition__Group__18572);
             rule__InterchangeableDefinition__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__InterchangeableDefinition__Group__2_in_rule__InterchangeableDefinition__Group__18573);
+            pushFollow(FOLLOW_rule__InterchangeableDefinition__Group__2_in_rule__InterchangeableDefinition__Group__18575);
             rule__InterchangeableDefinition__Group__2();
 
             state._fsp--;
@@ -11602,7 +11624,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:4232:1: 'as:'
             {
              before(grammarAccess.getInterchangeableDefinitionAccess().getAsKeyword_1()); 
-            match(input,24,FOLLOW_24_in_rule__InterchangeableDefinition__Group__1__Impl8601); 
+            match(input,24,FOLLOW_24_in_rule__InterchangeableDefinition__Group__1__Impl8603); 
              after(grammarAccess.getInterchangeableDefinitionAccess().getAsKeyword_1()); 
 
             }
@@ -11635,12 +11657,12 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:4249:1: ( rule__InterchangeableDefinition__Group__2__Impl rule__InterchangeableDefinition__Group__3 )
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:4250:2: rule__InterchangeableDefinition__Group__2__Impl rule__InterchangeableDefinition__Group__3
             {
-            pushFollow(FOLLOW_rule__InterchangeableDefinition__Group__2__Impl_in_rule__InterchangeableDefinition__Group__28632);
+            pushFollow(FOLLOW_rule__InterchangeableDefinition__Group__2__Impl_in_rule__InterchangeableDefinition__Group__28634);
             rule__InterchangeableDefinition__Group__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__InterchangeableDefinition__Group__3_in_rule__InterchangeableDefinition__Group__28635);
+            pushFollow(FOLLOW_rule__InterchangeableDefinition__Group__3_in_rule__InterchangeableDefinition__Group__28637);
             rule__InterchangeableDefinition__Group__3();
 
             state._fsp--;
@@ -11680,7 +11702,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:4264:1: ( rule__InterchangeableDefinition__IdAssignment_2 )
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:4264:2: rule__InterchangeableDefinition__IdAssignment_2
             {
-            pushFollow(FOLLOW_rule__InterchangeableDefinition__IdAssignment_2_in_rule__InterchangeableDefinition__Group__2__Impl8662);
+            pushFollow(FOLLOW_rule__InterchangeableDefinition__IdAssignment_2_in_rule__InterchangeableDefinition__Group__2__Impl8664);
             rule__InterchangeableDefinition__IdAssignment_2();
 
             state._fsp--;
@@ -11720,7 +11742,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:4278:1: ( rule__InterchangeableDefinition__Group__3__Impl )
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:4279:2: rule__InterchangeableDefinition__Group__3__Impl
             {
-            pushFollow(FOLLOW_rule__InterchangeableDefinition__Group__3__Impl_in_rule__InterchangeableDefinition__Group__38692);
+            pushFollow(FOLLOW_rule__InterchangeableDefinition__Group__3__Impl_in_rule__InterchangeableDefinition__Group__38694);
             rule__InterchangeableDefinition__Group__3__Impl();
 
             state._fsp--;
@@ -11758,17 +11780,17 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             {
              before(grammarAccess.getInterchangeableDefinitionAccess().getPropertiesAssignment_3()); 
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:4292:1: ( rule__InterchangeableDefinition__PropertiesAssignment_3 )?
-            int alt33=2;
-            int LA33_0 = input.LA(1);
+            int alt35=2;
+            int LA35_0 = input.LA(1);
 
-            if ( (LA33_0==29) ) {
-                alt33=1;
+            if ( (LA35_0==29) ) {
+                alt35=1;
             }
-            switch (alt33) {
+            switch (alt35) {
                 case 1 :
                     // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:4292:2: rule__InterchangeableDefinition__PropertiesAssignment_3
                     {
-                    pushFollow(FOLLOW_rule__InterchangeableDefinition__PropertiesAssignment_3_in_rule__InterchangeableDefinition__Group__3__Impl8719);
+                    pushFollow(FOLLOW_rule__InterchangeableDefinition__PropertiesAssignment_3_in_rule__InterchangeableDefinition__Group__3__Impl8721);
                     rule__InterchangeableDefinition__PropertiesAssignment_3();
 
                     state._fsp--;
@@ -11811,12 +11833,12 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:4314:1: ( rule__ButtonDefinition__Group__0__Impl rule__ButtonDefinition__Group__1 )
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:4315:2: rule__ButtonDefinition__Group__0__Impl rule__ButtonDefinition__Group__1
             {
-            pushFollow(FOLLOW_rule__ButtonDefinition__Group__0__Impl_in_rule__ButtonDefinition__Group__08758);
+            pushFollow(FOLLOW_rule__ButtonDefinition__Group__0__Impl_in_rule__ButtonDefinition__Group__08760);
             rule__ButtonDefinition__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__ButtonDefinition__Group__1_in_rule__ButtonDefinition__Group__08761);
+            pushFollow(FOLLOW_rule__ButtonDefinition__Group__1_in_rule__ButtonDefinition__Group__08763);
             rule__ButtonDefinition__Group__1();
 
             state._fsp--;
@@ -11856,7 +11878,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:4329:1: ( rule__ButtonDefinition__NameAssignment_0 )
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:4329:2: rule__ButtonDefinition__NameAssignment_0
             {
-            pushFollow(FOLLOW_rule__ButtonDefinition__NameAssignment_0_in_rule__ButtonDefinition__Group__0__Impl8788);
+            pushFollow(FOLLOW_rule__ButtonDefinition__NameAssignment_0_in_rule__ButtonDefinition__Group__0__Impl8790);
             rule__ButtonDefinition__NameAssignment_0();
 
             state._fsp--;
@@ -11896,12 +11918,12 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:4343:1: ( rule__ButtonDefinition__Group__1__Impl rule__ButtonDefinition__Group__2 )
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:4344:2: rule__ButtonDefinition__Group__1__Impl rule__ButtonDefinition__Group__2
             {
-            pushFollow(FOLLOW_rule__ButtonDefinition__Group__1__Impl_in_rule__ButtonDefinition__Group__18818);
+            pushFollow(FOLLOW_rule__ButtonDefinition__Group__1__Impl_in_rule__ButtonDefinition__Group__18820);
             rule__ButtonDefinition__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__ButtonDefinition__Group__2_in_rule__ButtonDefinition__Group__18821);
+            pushFollow(FOLLOW_rule__ButtonDefinition__Group__2_in_rule__ButtonDefinition__Group__18823);
             rule__ButtonDefinition__Group__2();
 
             state._fsp--;
@@ -11938,7 +11960,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:4357:1: 'as:'
             {
              before(grammarAccess.getButtonDefinitionAccess().getAsKeyword_1()); 
-            match(input,24,FOLLOW_24_in_rule__ButtonDefinition__Group__1__Impl8849); 
+            match(input,24,FOLLOW_24_in_rule__ButtonDefinition__Group__1__Impl8851); 
              after(grammarAccess.getButtonDefinitionAccess().getAsKeyword_1()); 
 
             }
@@ -11971,12 +11993,12 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:4374:1: ( rule__ButtonDefinition__Group__2__Impl rule__ButtonDefinition__Group__3 )
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:4375:2: rule__ButtonDefinition__Group__2__Impl rule__ButtonDefinition__Group__3
             {
-            pushFollow(FOLLOW_rule__ButtonDefinition__Group__2__Impl_in_rule__ButtonDefinition__Group__28880);
+            pushFollow(FOLLOW_rule__ButtonDefinition__Group__2__Impl_in_rule__ButtonDefinition__Group__28882);
             rule__ButtonDefinition__Group__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__ButtonDefinition__Group__3_in_rule__ButtonDefinition__Group__28883);
+            pushFollow(FOLLOW_rule__ButtonDefinition__Group__3_in_rule__ButtonDefinition__Group__28885);
             rule__ButtonDefinition__Group__3();
 
             state._fsp--;
@@ -12016,7 +12038,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:4389:1: ( rule__ButtonDefinition__IdAssignment_2 )
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:4389:2: rule__ButtonDefinition__IdAssignment_2
             {
-            pushFollow(FOLLOW_rule__ButtonDefinition__IdAssignment_2_in_rule__ButtonDefinition__Group__2__Impl8910);
+            pushFollow(FOLLOW_rule__ButtonDefinition__IdAssignment_2_in_rule__ButtonDefinition__Group__2__Impl8912);
             rule__ButtonDefinition__IdAssignment_2();
 
             state._fsp--;
@@ -12056,7 +12078,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:4403:1: ( rule__ButtonDefinition__Group__3__Impl )
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:4404:2: rule__ButtonDefinition__Group__3__Impl
             {
-            pushFollow(FOLLOW_rule__ButtonDefinition__Group__3__Impl_in_rule__ButtonDefinition__Group__38940);
+            pushFollow(FOLLOW_rule__ButtonDefinition__Group__3__Impl_in_rule__ButtonDefinition__Group__38942);
             rule__ButtonDefinition__Group__3__Impl();
 
             state._fsp--;
@@ -12094,17 +12116,17 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             {
              before(grammarAccess.getButtonDefinitionAccess().getPropertiesAssignment_3()); 
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:4417:1: ( rule__ButtonDefinition__PropertiesAssignment_3 )?
-            int alt34=2;
-            int LA34_0 = input.LA(1);
+            int alt36=2;
+            int LA36_0 = input.LA(1);
 
-            if ( (LA34_0==29) ) {
-                alt34=1;
+            if ( (LA36_0==29) ) {
+                alt36=1;
             }
-            switch (alt34) {
+            switch (alt36) {
                 case 1 :
                     // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:4417:2: rule__ButtonDefinition__PropertiesAssignment_3
                     {
-                    pushFollow(FOLLOW_rule__ButtonDefinition__PropertiesAssignment_3_in_rule__ButtonDefinition__Group__3__Impl8967);
+                    pushFollow(FOLLOW_rule__ButtonDefinition__PropertiesAssignment_3_in_rule__ButtonDefinition__Group__3__Impl8969);
                     rule__ButtonDefinition__PropertiesAssignment_3();
 
                     state._fsp--;
@@ -12147,12 +12169,12 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:4439:1: ( rule__LabelDefinition__Group__0__Impl rule__LabelDefinition__Group__1 )
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:4440:2: rule__LabelDefinition__Group__0__Impl rule__LabelDefinition__Group__1
             {
-            pushFollow(FOLLOW_rule__LabelDefinition__Group__0__Impl_in_rule__LabelDefinition__Group__09006);
+            pushFollow(FOLLOW_rule__LabelDefinition__Group__0__Impl_in_rule__LabelDefinition__Group__09008);
             rule__LabelDefinition__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__LabelDefinition__Group__1_in_rule__LabelDefinition__Group__09009);
+            pushFollow(FOLLOW_rule__LabelDefinition__Group__1_in_rule__LabelDefinition__Group__09011);
             rule__LabelDefinition__Group__1();
 
             state._fsp--;
@@ -12192,7 +12214,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:4454:1: ( rule__LabelDefinition__NameAssignment_0 )
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:4454:2: rule__LabelDefinition__NameAssignment_0
             {
-            pushFollow(FOLLOW_rule__LabelDefinition__NameAssignment_0_in_rule__LabelDefinition__Group__0__Impl9036);
+            pushFollow(FOLLOW_rule__LabelDefinition__NameAssignment_0_in_rule__LabelDefinition__Group__0__Impl9038);
             rule__LabelDefinition__NameAssignment_0();
 
             state._fsp--;
@@ -12232,12 +12254,12 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:4468:1: ( rule__LabelDefinition__Group__1__Impl rule__LabelDefinition__Group__2 )
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:4469:2: rule__LabelDefinition__Group__1__Impl rule__LabelDefinition__Group__2
             {
-            pushFollow(FOLLOW_rule__LabelDefinition__Group__1__Impl_in_rule__LabelDefinition__Group__19066);
+            pushFollow(FOLLOW_rule__LabelDefinition__Group__1__Impl_in_rule__LabelDefinition__Group__19068);
             rule__LabelDefinition__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__LabelDefinition__Group__2_in_rule__LabelDefinition__Group__19069);
+            pushFollow(FOLLOW_rule__LabelDefinition__Group__2_in_rule__LabelDefinition__Group__19071);
             rule__LabelDefinition__Group__2();
 
             state._fsp--;
@@ -12274,7 +12296,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:4482:1: 'as:'
             {
              before(grammarAccess.getLabelDefinitionAccess().getAsKeyword_1()); 
-            match(input,24,FOLLOW_24_in_rule__LabelDefinition__Group__1__Impl9097); 
+            match(input,24,FOLLOW_24_in_rule__LabelDefinition__Group__1__Impl9099); 
              after(grammarAccess.getLabelDefinitionAccess().getAsKeyword_1()); 
 
             }
@@ -12307,12 +12329,12 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:4499:1: ( rule__LabelDefinition__Group__2__Impl rule__LabelDefinition__Group__3 )
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:4500:2: rule__LabelDefinition__Group__2__Impl rule__LabelDefinition__Group__3
             {
-            pushFollow(FOLLOW_rule__LabelDefinition__Group__2__Impl_in_rule__LabelDefinition__Group__29128);
+            pushFollow(FOLLOW_rule__LabelDefinition__Group__2__Impl_in_rule__LabelDefinition__Group__29130);
             rule__LabelDefinition__Group__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__LabelDefinition__Group__3_in_rule__LabelDefinition__Group__29131);
+            pushFollow(FOLLOW_rule__LabelDefinition__Group__3_in_rule__LabelDefinition__Group__29133);
             rule__LabelDefinition__Group__3();
 
             state._fsp--;
@@ -12352,7 +12374,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:4514:1: ( rule__LabelDefinition__IdAssignment_2 )
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:4514:2: rule__LabelDefinition__IdAssignment_2
             {
-            pushFollow(FOLLOW_rule__LabelDefinition__IdAssignment_2_in_rule__LabelDefinition__Group__2__Impl9158);
+            pushFollow(FOLLOW_rule__LabelDefinition__IdAssignment_2_in_rule__LabelDefinition__Group__2__Impl9160);
             rule__LabelDefinition__IdAssignment_2();
 
             state._fsp--;
@@ -12392,7 +12414,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:4528:1: ( rule__LabelDefinition__Group__3__Impl )
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:4529:2: rule__LabelDefinition__Group__3__Impl
             {
-            pushFollow(FOLLOW_rule__LabelDefinition__Group__3__Impl_in_rule__LabelDefinition__Group__39188);
+            pushFollow(FOLLOW_rule__LabelDefinition__Group__3__Impl_in_rule__LabelDefinition__Group__39190);
             rule__LabelDefinition__Group__3__Impl();
 
             state._fsp--;
@@ -12430,17 +12452,17 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             {
              before(grammarAccess.getLabelDefinitionAccess().getPropertiesAssignment_3()); 
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:4542:1: ( rule__LabelDefinition__PropertiesAssignment_3 )?
-            int alt35=2;
-            int LA35_0 = input.LA(1);
+            int alt37=2;
+            int LA37_0 = input.LA(1);
 
-            if ( (LA35_0==29) ) {
-                alt35=1;
+            if ( (LA37_0==29) ) {
+                alt37=1;
             }
-            switch (alt35) {
+            switch (alt37) {
                 case 1 :
                     // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:4542:2: rule__LabelDefinition__PropertiesAssignment_3
                     {
-                    pushFollow(FOLLOW_rule__LabelDefinition__PropertiesAssignment_3_in_rule__LabelDefinition__Group__3__Impl9215);
+                    pushFollow(FOLLOW_rule__LabelDefinition__PropertiesAssignment_3_in_rule__LabelDefinition__Group__3__Impl9217);
                     rule__LabelDefinition__PropertiesAssignment_3();
 
                     state._fsp--;
@@ -12483,12 +12505,12 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:4564:1: ( rule__TextareaProperties__Group__0__Impl rule__TextareaProperties__Group__1 )
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:4565:2: rule__TextareaProperties__Group__0__Impl rule__TextareaProperties__Group__1
             {
-            pushFollow(FOLLOW_rule__TextareaProperties__Group__0__Impl_in_rule__TextareaProperties__Group__09254);
+            pushFollow(FOLLOW_rule__TextareaProperties__Group__0__Impl_in_rule__TextareaProperties__Group__09256);
             rule__TextareaProperties__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__TextareaProperties__Group__1_in_rule__TextareaProperties__Group__09257);
+            pushFollow(FOLLOW_rule__TextareaProperties__Group__1_in_rule__TextareaProperties__Group__09259);
             rule__TextareaProperties__Group__1();
 
             state._fsp--;
@@ -12528,7 +12550,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:4579:1: ( rule__TextareaProperties__CommonPropertiesAssignment_0 )
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:4579:2: rule__TextareaProperties__CommonPropertiesAssignment_0
             {
-            pushFollow(FOLLOW_rule__TextareaProperties__CommonPropertiesAssignment_0_in_rule__TextareaProperties__Group__0__Impl9284);
+            pushFollow(FOLLOW_rule__TextareaProperties__CommonPropertiesAssignment_0_in_rule__TextareaProperties__Group__0__Impl9286);
             rule__TextareaProperties__CommonPropertiesAssignment_0();
 
             state._fsp--;
@@ -12568,12 +12590,12 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:4593:1: ( rule__TextareaProperties__Group__1__Impl rule__TextareaProperties__Group__2 )
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:4594:2: rule__TextareaProperties__Group__1__Impl rule__TextareaProperties__Group__2
             {
-            pushFollow(FOLLOW_rule__TextareaProperties__Group__1__Impl_in_rule__TextareaProperties__Group__19314);
+            pushFollow(FOLLOW_rule__TextareaProperties__Group__1__Impl_in_rule__TextareaProperties__Group__19316);
             rule__TextareaProperties__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__TextareaProperties__Group__2_in_rule__TextareaProperties__Group__19317);
+            pushFollow(FOLLOW_rule__TextareaProperties__Group__2_in_rule__TextareaProperties__Group__19319);
             rule__TextareaProperties__Group__2();
 
             state._fsp--;
@@ -12611,17 +12633,17 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             {
              before(grammarAccess.getTextareaPropertiesAccess().getGroup_1()); 
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:4608:1: ( rule__TextareaProperties__Group_1__0 )?
-            int alt36=2;
-            int LA36_0 = input.LA(1);
+            int alt38=2;
+            int LA38_0 = input.LA(1);
 
-            if ( (LA36_0==27) ) {
-                alt36=1;
+            if ( (LA38_0==27) ) {
+                alt38=1;
             }
-            switch (alt36) {
+            switch (alt38) {
                 case 1 :
                     // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:4608:2: rule__TextareaProperties__Group_1__0
                     {
-                    pushFollow(FOLLOW_rule__TextareaProperties__Group_1__0_in_rule__TextareaProperties__Group__1__Impl9344);
+                    pushFollow(FOLLOW_rule__TextareaProperties__Group_1__0_in_rule__TextareaProperties__Group__1__Impl9346);
                     rule__TextareaProperties__Group_1__0();
 
                     state._fsp--;
@@ -12664,7 +12686,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:4622:1: ( rule__TextareaProperties__Group__2__Impl )
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:4623:2: rule__TextareaProperties__Group__2__Impl
             {
-            pushFollow(FOLLOW_rule__TextareaProperties__Group__2__Impl_in_rule__TextareaProperties__Group__29375);
+            pushFollow(FOLLOW_rule__TextareaProperties__Group__2__Impl_in_rule__TextareaProperties__Group__29377);
             rule__TextareaProperties__Group__2__Impl();
 
             state._fsp--;
@@ -12702,17 +12724,17 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             {
              before(grammarAccess.getTextareaPropertiesAccess().getGroup_2()); 
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:4636:1: ( rule__TextareaProperties__Group_2__0 )?
-            int alt37=2;
-            int LA37_0 = input.LA(1);
+            int alt39=2;
+            int LA39_0 = input.LA(1);
 
-            if ( (LA37_0==28) ) {
-                alt37=1;
+            if ( (LA39_0==28) ) {
+                alt39=1;
             }
-            switch (alt37) {
+            switch (alt39) {
                 case 1 :
                     // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:4636:2: rule__TextareaProperties__Group_2__0
                     {
-                    pushFollow(FOLLOW_rule__TextareaProperties__Group_2__0_in_rule__TextareaProperties__Group__2__Impl9402);
+                    pushFollow(FOLLOW_rule__TextareaProperties__Group_2__0_in_rule__TextareaProperties__Group__2__Impl9404);
                     rule__TextareaProperties__Group_2__0();
 
                     state._fsp--;
@@ -12755,12 +12777,12 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:4656:1: ( rule__TextareaProperties__Group_1__0__Impl rule__TextareaProperties__Group_1__1 )
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:4657:2: rule__TextareaProperties__Group_1__0__Impl rule__TextareaProperties__Group_1__1
             {
-            pushFollow(FOLLOW_rule__TextareaProperties__Group_1__0__Impl_in_rule__TextareaProperties__Group_1__09439);
+            pushFollow(FOLLOW_rule__TextareaProperties__Group_1__0__Impl_in_rule__TextareaProperties__Group_1__09441);
             rule__TextareaProperties__Group_1__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__TextareaProperties__Group_1__1_in_rule__TextareaProperties__Group_1__09442);
+            pushFollow(FOLLOW_rule__TextareaProperties__Group_1__1_in_rule__TextareaProperties__Group_1__09444);
             rule__TextareaProperties__Group_1__1();
 
             state._fsp--;
@@ -12797,7 +12819,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:4670:1: 'text='
             {
              before(grammarAccess.getTextareaPropertiesAccess().getTextKeyword_1_0()); 
-            match(input,27,FOLLOW_27_in_rule__TextareaProperties__Group_1__0__Impl9470); 
+            match(input,27,FOLLOW_27_in_rule__TextareaProperties__Group_1__0__Impl9472); 
              after(grammarAccess.getTextareaPropertiesAccess().getTextKeyword_1_0()); 
 
             }
@@ -12830,7 +12852,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:4687:1: ( rule__TextareaProperties__Group_1__1__Impl )
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:4688:2: rule__TextareaProperties__Group_1__1__Impl
             {
-            pushFollow(FOLLOW_rule__TextareaProperties__Group_1__1__Impl_in_rule__TextareaProperties__Group_1__19501);
+            pushFollow(FOLLOW_rule__TextareaProperties__Group_1__1__Impl_in_rule__TextareaProperties__Group_1__19503);
             rule__TextareaProperties__Group_1__1__Impl();
 
             state._fsp--;
@@ -12870,7 +12892,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:4701:1: ( rule__TextareaProperties__TextAssignment_1_1 )
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:4701:2: rule__TextareaProperties__TextAssignment_1_1
             {
-            pushFollow(FOLLOW_rule__TextareaProperties__TextAssignment_1_1_in_rule__TextareaProperties__Group_1__1__Impl9528);
+            pushFollow(FOLLOW_rule__TextareaProperties__TextAssignment_1_1_in_rule__TextareaProperties__Group_1__1__Impl9530);
             rule__TextareaProperties__TextAssignment_1_1();
 
             state._fsp--;
@@ -12910,12 +12932,12 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:4719:1: ( rule__TextareaProperties__Group_2__0__Impl rule__TextareaProperties__Group_2__1 )
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:4720:2: rule__TextareaProperties__Group_2__0__Impl rule__TextareaProperties__Group_2__1
             {
-            pushFollow(FOLLOW_rule__TextareaProperties__Group_2__0__Impl_in_rule__TextareaProperties__Group_2__09562);
+            pushFollow(FOLLOW_rule__TextareaProperties__Group_2__0__Impl_in_rule__TextareaProperties__Group_2__09564);
             rule__TextareaProperties__Group_2__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__TextareaProperties__Group_2__1_in_rule__TextareaProperties__Group_2__09565);
+            pushFollow(FOLLOW_rule__TextareaProperties__Group_2__1_in_rule__TextareaProperties__Group_2__09567);
             rule__TextareaProperties__Group_2__1();
 
             state._fsp--;
@@ -12952,7 +12974,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:4733:1: 'editable='
             {
              before(grammarAccess.getTextareaPropertiesAccess().getEditableKeyword_2_0()); 
-            match(input,28,FOLLOW_28_in_rule__TextareaProperties__Group_2__0__Impl9593); 
+            match(input,28,FOLLOW_28_in_rule__TextareaProperties__Group_2__0__Impl9595); 
              after(grammarAccess.getTextareaPropertiesAccess().getEditableKeyword_2_0()); 
 
             }
@@ -12985,7 +13007,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:4750:1: ( rule__TextareaProperties__Group_2__1__Impl )
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:4751:2: rule__TextareaProperties__Group_2__1__Impl
             {
-            pushFollow(FOLLOW_rule__TextareaProperties__Group_2__1__Impl_in_rule__TextareaProperties__Group_2__19624);
+            pushFollow(FOLLOW_rule__TextareaProperties__Group_2__1__Impl_in_rule__TextareaProperties__Group_2__19626);
             rule__TextareaProperties__Group_2__1__Impl();
 
             state._fsp--;
@@ -13025,7 +13047,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:4764:1: ( rule__TextareaProperties__EditableAssignment_2_1 )
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:4764:2: rule__TextareaProperties__EditableAssignment_2_1
             {
-            pushFollow(FOLLOW_rule__TextareaProperties__EditableAssignment_2_1_in_rule__TextareaProperties__Group_2__1__Impl9651);
+            pushFollow(FOLLOW_rule__TextareaProperties__EditableAssignment_2_1_in_rule__TextareaProperties__Group_2__1__Impl9653);
             rule__TextareaProperties__EditableAssignment_2_1();
 
             state._fsp--;
@@ -13065,12 +13087,12 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:4782:1: ( rule__TextfieldProperties__Group__0__Impl rule__TextfieldProperties__Group__1 )
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:4783:2: rule__TextfieldProperties__Group__0__Impl rule__TextfieldProperties__Group__1
             {
-            pushFollow(FOLLOW_rule__TextfieldProperties__Group__0__Impl_in_rule__TextfieldProperties__Group__09685);
+            pushFollow(FOLLOW_rule__TextfieldProperties__Group__0__Impl_in_rule__TextfieldProperties__Group__09687);
             rule__TextfieldProperties__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__TextfieldProperties__Group__1_in_rule__TextfieldProperties__Group__09688);
+            pushFollow(FOLLOW_rule__TextfieldProperties__Group__1_in_rule__TextfieldProperties__Group__09690);
             rule__TextfieldProperties__Group__1();
 
             state._fsp--;
@@ -13110,7 +13132,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:4797:1: ( rule__TextfieldProperties__CommonPropertiesAssignment_0 )
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:4797:2: rule__TextfieldProperties__CommonPropertiesAssignment_0
             {
-            pushFollow(FOLLOW_rule__TextfieldProperties__CommonPropertiesAssignment_0_in_rule__TextfieldProperties__Group__0__Impl9715);
+            pushFollow(FOLLOW_rule__TextfieldProperties__CommonPropertiesAssignment_0_in_rule__TextfieldProperties__Group__0__Impl9717);
             rule__TextfieldProperties__CommonPropertiesAssignment_0();
 
             state._fsp--;
@@ -13150,12 +13172,12 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:4811:1: ( rule__TextfieldProperties__Group__1__Impl rule__TextfieldProperties__Group__2 )
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:4812:2: rule__TextfieldProperties__Group__1__Impl rule__TextfieldProperties__Group__2
             {
-            pushFollow(FOLLOW_rule__TextfieldProperties__Group__1__Impl_in_rule__TextfieldProperties__Group__19745);
+            pushFollow(FOLLOW_rule__TextfieldProperties__Group__1__Impl_in_rule__TextfieldProperties__Group__19747);
             rule__TextfieldProperties__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__TextfieldProperties__Group__2_in_rule__TextfieldProperties__Group__19748);
+            pushFollow(FOLLOW_rule__TextfieldProperties__Group__2_in_rule__TextfieldProperties__Group__19750);
             rule__TextfieldProperties__Group__2();
 
             state._fsp--;
@@ -13193,17 +13215,17 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             {
              before(grammarAccess.getTextfieldPropertiesAccess().getGroup_1()); 
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:4826:1: ( rule__TextfieldProperties__Group_1__0 )?
-            int alt38=2;
-            int LA38_0 = input.LA(1);
+            int alt40=2;
+            int LA40_0 = input.LA(1);
 
-            if ( (LA38_0==27) ) {
-                alt38=1;
+            if ( (LA40_0==27) ) {
+                alt40=1;
             }
-            switch (alt38) {
+            switch (alt40) {
                 case 1 :
                     // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:4826:2: rule__TextfieldProperties__Group_1__0
                     {
-                    pushFollow(FOLLOW_rule__TextfieldProperties__Group_1__0_in_rule__TextfieldProperties__Group__1__Impl9775);
+                    pushFollow(FOLLOW_rule__TextfieldProperties__Group_1__0_in_rule__TextfieldProperties__Group__1__Impl9777);
                     rule__TextfieldProperties__Group_1__0();
 
                     state._fsp--;
@@ -13246,7 +13268,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:4840:1: ( rule__TextfieldProperties__Group__2__Impl )
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:4841:2: rule__TextfieldProperties__Group__2__Impl
             {
-            pushFollow(FOLLOW_rule__TextfieldProperties__Group__2__Impl_in_rule__TextfieldProperties__Group__29806);
+            pushFollow(FOLLOW_rule__TextfieldProperties__Group__2__Impl_in_rule__TextfieldProperties__Group__29808);
             rule__TextfieldProperties__Group__2__Impl();
 
             state._fsp--;
@@ -13284,17 +13306,17 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             {
              before(grammarAccess.getTextfieldPropertiesAccess().getGroup_2()); 
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:4854:1: ( rule__TextfieldProperties__Group_2__0 )?
-            int alt39=2;
-            int LA39_0 = input.LA(1);
+            int alt41=2;
+            int LA41_0 = input.LA(1);
 
-            if ( (LA39_0==28) ) {
-                alt39=1;
+            if ( (LA41_0==28) ) {
+                alt41=1;
             }
-            switch (alt39) {
+            switch (alt41) {
                 case 1 :
                     // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:4854:2: rule__TextfieldProperties__Group_2__0
                     {
-                    pushFollow(FOLLOW_rule__TextfieldProperties__Group_2__0_in_rule__TextfieldProperties__Group__2__Impl9833);
+                    pushFollow(FOLLOW_rule__TextfieldProperties__Group_2__0_in_rule__TextfieldProperties__Group__2__Impl9835);
                     rule__TextfieldProperties__Group_2__0();
 
                     state._fsp--;
@@ -13337,12 +13359,12 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:4874:1: ( rule__TextfieldProperties__Group_1__0__Impl rule__TextfieldProperties__Group_1__1 )
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:4875:2: rule__TextfieldProperties__Group_1__0__Impl rule__TextfieldProperties__Group_1__1
             {
-            pushFollow(FOLLOW_rule__TextfieldProperties__Group_1__0__Impl_in_rule__TextfieldProperties__Group_1__09870);
+            pushFollow(FOLLOW_rule__TextfieldProperties__Group_1__0__Impl_in_rule__TextfieldProperties__Group_1__09872);
             rule__TextfieldProperties__Group_1__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__TextfieldProperties__Group_1__1_in_rule__TextfieldProperties__Group_1__09873);
+            pushFollow(FOLLOW_rule__TextfieldProperties__Group_1__1_in_rule__TextfieldProperties__Group_1__09875);
             rule__TextfieldProperties__Group_1__1();
 
             state._fsp--;
@@ -13379,7 +13401,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:4888:1: 'text='
             {
              before(grammarAccess.getTextfieldPropertiesAccess().getTextKeyword_1_0()); 
-            match(input,27,FOLLOW_27_in_rule__TextfieldProperties__Group_1__0__Impl9901); 
+            match(input,27,FOLLOW_27_in_rule__TextfieldProperties__Group_1__0__Impl9903); 
              after(grammarAccess.getTextfieldPropertiesAccess().getTextKeyword_1_0()); 
 
             }
@@ -13412,7 +13434,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:4905:1: ( rule__TextfieldProperties__Group_1__1__Impl )
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:4906:2: rule__TextfieldProperties__Group_1__1__Impl
             {
-            pushFollow(FOLLOW_rule__TextfieldProperties__Group_1__1__Impl_in_rule__TextfieldProperties__Group_1__19932);
+            pushFollow(FOLLOW_rule__TextfieldProperties__Group_1__1__Impl_in_rule__TextfieldProperties__Group_1__19934);
             rule__TextfieldProperties__Group_1__1__Impl();
 
             state._fsp--;
@@ -13452,7 +13474,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:4919:1: ( rule__TextfieldProperties__TextAssignment_1_1 )
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:4919:2: rule__TextfieldProperties__TextAssignment_1_1
             {
-            pushFollow(FOLLOW_rule__TextfieldProperties__TextAssignment_1_1_in_rule__TextfieldProperties__Group_1__1__Impl9959);
+            pushFollow(FOLLOW_rule__TextfieldProperties__TextAssignment_1_1_in_rule__TextfieldProperties__Group_1__1__Impl9961);
             rule__TextfieldProperties__TextAssignment_1_1();
 
             state._fsp--;
@@ -13492,12 +13514,12 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:4937:1: ( rule__TextfieldProperties__Group_2__0__Impl rule__TextfieldProperties__Group_2__1 )
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:4938:2: rule__TextfieldProperties__Group_2__0__Impl rule__TextfieldProperties__Group_2__1
             {
-            pushFollow(FOLLOW_rule__TextfieldProperties__Group_2__0__Impl_in_rule__TextfieldProperties__Group_2__09993);
+            pushFollow(FOLLOW_rule__TextfieldProperties__Group_2__0__Impl_in_rule__TextfieldProperties__Group_2__09995);
             rule__TextfieldProperties__Group_2__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__TextfieldProperties__Group_2__1_in_rule__TextfieldProperties__Group_2__09996);
+            pushFollow(FOLLOW_rule__TextfieldProperties__Group_2__1_in_rule__TextfieldProperties__Group_2__09998);
             rule__TextfieldProperties__Group_2__1();
 
             state._fsp--;
@@ -13534,7 +13556,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:4951:1: 'editable='
             {
              before(grammarAccess.getTextfieldPropertiesAccess().getEditableKeyword_2_0()); 
-            match(input,28,FOLLOW_28_in_rule__TextfieldProperties__Group_2__0__Impl10024); 
+            match(input,28,FOLLOW_28_in_rule__TextfieldProperties__Group_2__0__Impl10026); 
              after(grammarAccess.getTextfieldPropertiesAccess().getEditableKeyword_2_0()); 
 
             }
@@ -13567,7 +13589,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:4968:1: ( rule__TextfieldProperties__Group_2__1__Impl )
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:4969:2: rule__TextfieldProperties__Group_2__1__Impl
             {
-            pushFollow(FOLLOW_rule__TextfieldProperties__Group_2__1__Impl_in_rule__TextfieldProperties__Group_2__110055);
+            pushFollow(FOLLOW_rule__TextfieldProperties__Group_2__1__Impl_in_rule__TextfieldProperties__Group_2__110057);
             rule__TextfieldProperties__Group_2__1__Impl();
 
             state._fsp--;
@@ -13607,7 +13629,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:4982:1: ( rule__TextfieldProperties__EditableAssignment_2_1 )
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:4982:2: rule__TextfieldProperties__EditableAssignment_2_1
             {
-            pushFollow(FOLLOW_rule__TextfieldProperties__EditableAssignment_2_1_in_rule__TextfieldProperties__Group_2__1__Impl10082);
+            pushFollow(FOLLOW_rule__TextfieldProperties__EditableAssignment_2_1_in_rule__TextfieldProperties__Group_2__1__Impl10084);
             rule__TextfieldProperties__EditableAssignment_2_1();
 
             state._fsp--;
@@ -13647,12 +13669,12 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:5000:1: ( rule__LabelProperties__Group__0__Impl rule__LabelProperties__Group__1 )
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:5001:2: rule__LabelProperties__Group__0__Impl rule__LabelProperties__Group__1
             {
-            pushFollow(FOLLOW_rule__LabelProperties__Group__0__Impl_in_rule__LabelProperties__Group__010116);
+            pushFollow(FOLLOW_rule__LabelProperties__Group__0__Impl_in_rule__LabelProperties__Group__010118);
             rule__LabelProperties__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__LabelProperties__Group__1_in_rule__LabelProperties__Group__010119);
+            pushFollow(FOLLOW_rule__LabelProperties__Group__1_in_rule__LabelProperties__Group__010121);
             rule__LabelProperties__Group__1();
 
             state._fsp--;
@@ -13692,7 +13714,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:5015:1: ( rule__LabelProperties__CommonPropertiesAssignment_0 )
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:5015:2: rule__LabelProperties__CommonPropertiesAssignment_0
             {
-            pushFollow(FOLLOW_rule__LabelProperties__CommonPropertiesAssignment_0_in_rule__LabelProperties__Group__0__Impl10146);
+            pushFollow(FOLLOW_rule__LabelProperties__CommonPropertiesAssignment_0_in_rule__LabelProperties__Group__0__Impl10148);
             rule__LabelProperties__CommonPropertiesAssignment_0();
 
             state._fsp--;
@@ -13732,7 +13754,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:5029:1: ( rule__LabelProperties__Group__1__Impl )
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:5030:2: rule__LabelProperties__Group__1__Impl
             {
-            pushFollow(FOLLOW_rule__LabelProperties__Group__1__Impl_in_rule__LabelProperties__Group__110176);
+            pushFollow(FOLLOW_rule__LabelProperties__Group__1__Impl_in_rule__LabelProperties__Group__110178);
             rule__LabelProperties__Group__1__Impl();
 
             state._fsp--;
@@ -13770,17 +13792,17 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             {
              before(grammarAccess.getLabelPropertiesAccess().getGroup_1()); 
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:5043:1: ( rule__LabelProperties__Group_1__0 )?
-            int alt40=2;
-            int LA40_0 = input.LA(1);
+            int alt42=2;
+            int LA42_0 = input.LA(1);
 
-            if ( (LA40_0==27) ) {
-                alt40=1;
+            if ( (LA42_0==27) ) {
+                alt42=1;
             }
-            switch (alt40) {
+            switch (alt42) {
                 case 1 :
                     // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:5043:2: rule__LabelProperties__Group_1__0
                     {
-                    pushFollow(FOLLOW_rule__LabelProperties__Group_1__0_in_rule__LabelProperties__Group__1__Impl10203);
+                    pushFollow(FOLLOW_rule__LabelProperties__Group_1__0_in_rule__LabelProperties__Group__1__Impl10205);
                     rule__LabelProperties__Group_1__0();
 
                     state._fsp--;
@@ -13823,12 +13845,12 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:5061:1: ( rule__LabelProperties__Group_1__0__Impl rule__LabelProperties__Group_1__1 )
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:5062:2: rule__LabelProperties__Group_1__0__Impl rule__LabelProperties__Group_1__1
             {
-            pushFollow(FOLLOW_rule__LabelProperties__Group_1__0__Impl_in_rule__LabelProperties__Group_1__010238);
+            pushFollow(FOLLOW_rule__LabelProperties__Group_1__0__Impl_in_rule__LabelProperties__Group_1__010240);
             rule__LabelProperties__Group_1__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__LabelProperties__Group_1__1_in_rule__LabelProperties__Group_1__010241);
+            pushFollow(FOLLOW_rule__LabelProperties__Group_1__1_in_rule__LabelProperties__Group_1__010243);
             rule__LabelProperties__Group_1__1();
 
             state._fsp--;
@@ -13865,7 +13887,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:5075:1: 'text='
             {
              before(grammarAccess.getLabelPropertiesAccess().getTextKeyword_1_0()); 
-            match(input,27,FOLLOW_27_in_rule__LabelProperties__Group_1__0__Impl10269); 
+            match(input,27,FOLLOW_27_in_rule__LabelProperties__Group_1__0__Impl10271); 
              after(grammarAccess.getLabelPropertiesAccess().getTextKeyword_1_0()); 
 
             }
@@ -13898,7 +13920,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:5092:1: ( rule__LabelProperties__Group_1__1__Impl )
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:5093:2: rule__LabelProperties__Group_1__1__Impl
             {
-            pushFollow(FOLLOW_rule__LabelProperties__Group_1__1__Impl_in_rule__LabelProperties__Group_1__110300);
+            pushFollow(FOLLOW_rule__LabelProperties__Group_1__1__Impl_in_rule__LabelProperties__Group_1__110302);
             rule__LabelProperties__Group_1__1__Impl();
 
             state._fsp--;
@@ -13938,7 +13960,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:5106:1: ( rule__LabelProperties__TextAssignment_1_1 )
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:5106:2: rule__LabelProperties__TextAssignment_1_1
             {
-            pushFollow(FOLLOW_rule__LabelProperties__TextAssignment_1_1_in_rule__LabelProperties__Group_1__1__Impl10327);
+            pushFollow(FOLLOW_rule__LabelProperties__TextAssignment_1_1_in_rule__LabelProperties__Group_1__1__Impl10329);
             rule__LabelProperties__TextAssignment_1_1();
 
             state._fsp--;
@@ -13978,12 +14000,12 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:5124:1: ( rule__ButtonProperties__Group__0__Impl rule__ButtonProperties__Group__1 )
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:5125:2: rule__ButtonProperties__Group__0__Impl rule__ButtonProperties__Group__1
             {
-            pushFollow(FOLLOW_rule__ButtonProperties__Group__0__Impl_in_rule__ButtonProperties__Group__010361);
+            pushFollow(FOLLOW_rule__ButtonProperties__Group__0__Impl_in_rule__ButtonProperties__Group__010363);
             rule__ButtonProperties__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__ButtonProperties__Group__1_in_rule__ButtonProperties__Group__010364);
+            pushFollow(FOLLOW_rule__ButtonProperties__Group__1_in_rule__ButtonProperties__Group__010366);
             rule__ButtonProperties__Group__1();
 
             state._fsp--;
@@ -14023,7 +14045,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:5139:1: ( rule__ButtonProperties__CommonPropertiesAssignment_0 )
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:5139:2: rule__ButtonProperties__CommonPropertiesAssignment_0
             {
-            pushFollow(FOLLOW_rule__ButtonProperties__CommonPropertiesAssignment_0_in_rule__ButtonProperties__Group__0__Impl10391);
+            pushFollow(FOLLOW_rule__ButtonProperties__CommonPropertiesAssignment_0_in_rule__ButtonProperties__Group__0__Impl10393);
             rule__ButtonProperties__CommonPropertiesAssignment_0();
 
             state._fsp--;
@@ -14063,7 +14085,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:5153:1: ( rule__ButtonProperties__Group__1__Impl )
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:5154:2: rule__ButtonProperties__Group__1__Impl
             {
-            pushFollow(FOLLOW_rule__ButtonProperties__Group__1__Impl_in_rule__ButtonProperties__Group__110421);
+            pushFollow(FOLLOW_rule__ButtonProperties__Group__1__Impl_in_rule__ButtonProperties__Group__110423);
             rule__ButtonProperties__Group__1__Impl();
 
             state._fsp--;
@@ -14101,17 +14123,17 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             {
              before(grammarAccess.getButtonPropertiesAccess().getGroup_1()); 
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:5167:1: ( rule__ButtonProperties__Group_1__0 )?
-            int alt41=2;
-            int LA41_0 = input.LA(1);
+            int alt43=2;
+            int LA43_0 = input.LA(1);
 
-            if ( (LA41_0==27) ) {
-                alt41=1;
+            if ( (LA43_0==27) ) {
+                alt43=1;
             }
-            switch (alt41) {
+            switch (alt43) {
                 case 1 :
                     // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:5167:2: rule__ButtonProperties__Group_1__0
                     {
-                    pushFollow(FOLLOW_rule__ButtonProperties__Group_1__0_in_rule__ButtonProperties__Group__1__Impl10448);
+                    pushFollow(FOLLOW_rule__ButtonProperties__Group_1__0_in_rule__ButtonProperties__Group__1__Impl10450);
                     rule__ButtonProperties__Group_1__0();
 
                     state._fsp--;
@@ -14154,12 +14176,12 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:5185:1: ( rule__ButtonProperties__Group_1__0__Impl rule__ButtonProperties__Group_1__1 )
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:5186:2: rule__ButtonProperties__Group_1__0__Impl rule__ButtonProperties__Group_1__1
             {
-            pushFollow(FOLLOW_rule__ButtonProperties__Group_1__0__Impl_in_rule__ButtonProperties__Group_1__010483);
+            pushFollow(FOLLOW_rule__ButtonProperties__Group_1__0__Impl_in_rule__ButtonProperties__Group_1__010485);
             rule__ButtonProperties__Group_1__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__ButtonProperties__Group_1__1_in_rule__ButtonProperties__Group_1__010486);
+            pushFollow(FOLLOW_rule__ButtonProperties__Group_1__1_in_rule__ButtonProperties__Group_1__010488);
             rule__ButtonProperties__Group_1__1();
 
             state._fsp--;
@@ -14196,7 +14218,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:5199:1: 'text='
             {
              before(grammarAccess.getButtonPropertiesAccess().getTextKeyword_1_0()); 
-            match(input,27,FOLLOW_27_in_rule__ButtonProperties__Group_1__0__Impl10514); 
+            match(input,27,FOLLOW_27_in_rule__ButtonProperties__Group_1__0__Impl10516); 
              after(grammarAccess.getButtonPropertiesAccess().getTextKeyword_1_0()); 
 
             }
@@ -14229,7 +14251,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:5216:1: ( rule__ButtonProperties__Group_1__1__Impl )
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:5217:2: rule__ButtonProperties__Group_1__1__Impl
             {
-            pushFollow(FOLLOW_rule__ButtonProperties__Group_1__1__Impl_in_rule__ButtonProperties__Group_1__110545);
+            pushFollow(FOLLOW_rule__ButtonProperties__Group_1__1__Impl_in_rule__ButtonProperties__Group_1__110547);
             rule__ButtonProperties__Group_1__1__Impl();
 
             state._fsp--;
@@ -14269,7 +14291,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:5230:1: ( rule__ButtonProperties__TextAssignment_1_1 )
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:5230:2: rule__ButtonProperties__TextAssignment_1_1
             {
-            pushFollow(FOLLOW_rule__ButtonProperties__TextAssignment_1_1_in_rule__ButtonProperties__Group_1__1__Impl10572);
+            pushFollow(FOLLOW_rule__ButtonProperties__TextAssignment_1_1_in_rule__ButtonProperties__Group_1__1__Impl10574);
             rule__ButtonProperties__TextAssignment_1_1();
 
             state._fsp--;
@@ -14309,12 +14331,12 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:5248:1: ( rule__CommonProperties__Group__0__Impl rule__CommonProperties__Group__1 )
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:5249:2: rule__CommonProperties__Group__0__Impl rule__CommonProperties__Group__1
             {
-            pushFollow(FOLLOW_rule__CommonProperties__Group__0__Impl_in_rule__CommonProperties__Group__010606);
+            pushFollow(FOLLOW_rule__CommonProperties__Group__0__Impl_in_rule__CommonProperties__Group__010608);
             rule__CommonProperties__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__CommonProperties__Group__1_in_rule__CommonProperties__Group__010609);
+            pushFollow(FOLLOW_rule__CommonProperties__Group__1_in_rule__CommonProperties__Group__010611);
             rule__CommonProperties__Group__1();
 
             state._fsp--;
@@ -14351,7 +14373,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:5262:1: '->'
             {
              before(grammarAccess.getCommonPropertiesAccess().getHyphenMinusGreaterThanSignKeyword_0()); 
-            match(input,29,FOLLOW_29_in_rule__CommonProperties__Group__0__Impl10637); 
+            match(input,29,FOLLOW_29_in_rule__CommonProperties__Group__0__Impl10639); 
              after(grammarAccess.getCommonPropertiesAccess().getHyphenMinusGreaterThanSignKeyword_0()); 
 
             }
@@ -14384,12 +14406,12 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:5279:1: ( rule__CommonProperties__Group__1__Impl rule__CommonProperties__Group__2 )
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:5280:2: rule__CommonProperties__Group__1__Impl rule__CommonProperties__Group__2
             {
-            pushFollow(FOLLOW_rule__CommonProperties__Group__1__Impl_in_rule__CommonProperties__Group__110668);
+            pushFollow(FOLLOW_rule__CommonProperties__Group__1__Impl_in_rule__CommonProperties__Group__110670);
             rule__CommonProperties__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__CommonProperties__Group__2_in_rule__CommonProperties__Group__110671);
+            pushFollow(FOLLOW_rule__CommonProperties__Group__2_in_rule__CommonProperties__Group__110673);
             rule__CommonProperties__Group__2();
 
             state._fsp--;
@@ -14427,17 +14449,17 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             {
              before(grammarAccess.getCommonPropertiesAccess().getGroup_1()); 
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:5294:1: ( rule__CommonProperties__Group_1__0 )?
-            int alt42=2;
-            int LA42_0 = input.LA(1);
+            int alt44=2;
+            int LA44_0 = input.LA(1);
 
-            if ( (LA42_0==30) ) {
-                alt42=1;
+            if ( (LA44_0==30) ) {
+                alt44=1;
             }
-            switch (alt42) {
+            switch (alt44) {
                 case 1 :
                     // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:5294:2: rule__CommonProperties__Group_1__0
                     {
-                    pushFollow(FOLLOW_rule__CommonProperties__Group_1__0_in_rule__CommonProperties__Group__1__Impl10698);
+                    pushFollow(FOLLOW_rule__CommonProperties__Group_1__0_in_rule__CommonProperties__Group__1__Impl10700);
                     rule__CommonProperties__Group_1__0();
 
                     state._fsp--;
@@ -14480,12 +14502,12 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:5308:1: ( rule__CommonProperties__Group__2__Impl rule__CommonProperties__Group__3 )
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:5309:2: rule__CommonProperties__Group__2__Impl rule__CommonProperties__Group__3
             {
-            pushFollow(FOLLOW_rule__CommonProperties__Group__2__Impl_in_rule__CommonProperties__Group__210729);
+            pushFollow(FOLLOW_rule__CommonProperties__Group__2__Impl_in_rule__CommonProperties__Group__210731);
             rule__CommonProperties__Group__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__CommonProperties__Group__3_in_rule__CommonProperties__Group__210732);
+            pushFollow(FOLLOW_rule__CommonProperties__Group__3_in_rule__CommonProperties__Group__210734);
             rule__CommonProperties__Group__3();
 
             state._fsp--;
@@ -14523,17 +14545,17 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             {
              before(grammarAccess.getCommonPropertiesAccess().getGroup_2()); 
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:5323:1: ( rule__CommonProperties__Group_2__0 )?
-            int alt43=2;
-            int LA43_0 = input.LA(1);
+            int alt45=2;
+            int LA45_0 = input.LA(1);
 
-            if ( (LA43_0==32) ) {
-                alt43=1;
+            if ( (LA45_0==32) ) {
+                alt45=1;
             }
-            switch (alt43) {
+            switch (alt45) {
                 case 1 :
                     // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:5323:2: rule__CommonProperties__Group_2__0
                     {
-                    pushFollow(FOLLOW_rule__CommonProperties__Group_2__0_in_rule__CommonProperties__Group__2__Impl10759);
+                    pushFollow(FOLLOW_rule__CommonProperties__Group_2__0_in_rule__CommonProperties__Group__2__Impl10761);
                     rule__CommonProperties__Group_2__0();
 
                     state._fsp--;
@@ -14576,7 +14598,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:5337:1: ( rule__CommonProperties__Group__3__Impl )
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:5338:2: rule__CommonProperties__Group__3__Impl
             {
-            pushFollow(FOLLOW_rule__CommonProperties__Group__3__Impl_in_rule__CommonProperties__Group__310790);
+            pushFollow(FOLLOW_rule__CommonProperties__Group__3__Impl_in_rule__CommonProperties__Group__310792);
             rule__CommonProperties__Group__3__Impl();
 
             state._fsp--;
@@ -14614,17 +14636,17 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             {
              before(grammarAccess.getCommonPropertiesAccess().getGroup_3()); 
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:5351:1: ( rule__CommonProperties__Group_3__0 )?
-            int alt44=2;
-            int LA44_0 = input.LA(1);
+            int alt46=2;
+            int LA46_0 = input.LA(1);
 
-            if ( (LA44_0==33) ) {
-                alt44=1;
+            if ( (LA46_0==33) ) {
+                alt46=1;
             }
-            switch (alt44) {
+            switch (alt46) {
                 case 1 :
                     // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:5351:2: rule__CommonProperties__Group_3__0
                     {
-                    pushFollow(FOLLOW_rule__CommonProperties__Group_3__0_in_rule__CommonProperties__Group__3__Impl10817);
+                    pushFollow(FOLLOW_rule__CommonProperties__Group_3__0_in_rule__CommonProperties__Group__3__Impl10819);
                     rule__CommonProperties__Group_3__0();
 
                     state._fsp--;
@@ -14667,12 +14689,12 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:5373:1: ( rule__CommonProperties__Group_1__0__Impl rule__CommonProperties__Group_1__1 )
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:5374:2: rule__CommonProperties__Group_1__0__Impl rule__CommonProperties__Group_1__1
             {
-            pushFollow(FOLLOW_rule__CommonProperties__Group_1__0__Impl_in_rule__CommonProperties__Group_1__010856);
+            pushFollow(FOLLOW_rule__CommonProperties__Group_1__0__Impl_in_rule__CommonProperties__Group_1__010858);
             rule__CommonProperties__Group_1__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__CommonProperties__Group_1__1_in_rule__CommonProperties__Group_1__010859);
+            pushFollow(FOLLOW_rule__CommonProperties__Group_1__1_in_rule__CommonProperties__Group_1__010861);
             rule__CommonProperties__Group_1__1();
 
             state._fsp--;
@@ -14709,7 +14731,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:5387:1: 'propertyKey'
             {
              before(grammarAccess.getCommonPropertiesAccess().getPropertyKeyKeyword_1_0()); 
-            match(input,30,FOLLOW_30_in_rule__CommonProperties__Group_1__0__Impl10887); 
+            match(input,30,FOLLOW_30_in_rule__CommonProperties__Group_1__0__Impl10889); 
              after(grammarAccess.getCommonPropertiesAccess().getPropertyKeyKeyword_1_0()); 
 
             }
@@ -14742,12 +14764,12 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:5404:1: ( rule__CommonProperties__Group_1__1__Impl rule__CommonProperties__Group_1__2 )
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:5405:2: rule__CommonProperties__Group_1__1__Impl rule__CommonProperties__Group_1__2
             {
-            pushFollow(FOLLOW_rule__CommonProperties__Group_1__1__Impl_in_rule__CommonProperties__Group_1__110918);
+            pushFollow(FOLLOW_rule__CommonProperties__Group_1__1__Impl_in_rule__CommonProperties__Group_1__110920);
             rule__CommonProperties__Group_1__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__CommonProperties__Group_1__2_in_rule__CommonProperties__Group_1__110921);
+            pushFollow(FOLLOW_rule__CommonProperties__Group_1__2_in_rule__CommonProperties__Group_1__110923);
             rule__CommonProperties__Group_1__2();
 
             state._fsp--;
@@ -14784,7 +14806,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:5418:1: '='
             {
              before(grammarAccess.getCommonPropertiesAccess().getEqualsSignKeyword_1_1()); 
-            match(input,31,FOLLOW_31_in_rule__CommonProperties__Group_1__1__Impl10949); 
+            match(input,31,FOLLOW_31_in_rule__CommonProperties__Group_1__1__Impl10951); 
              after(grammarAccess.getCommonPropertiesAccess().getEqualsSignKeyword_1_1()); 
 
             }
@@ -14817,7 +14839,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:5435:1: ( rule__CommonProperties__Group_1__2__Impl )
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:5436:2: rule__CommonProperties__Group_1__2__Impl
             {
-            pushFollow(FOLLOW_rule__CommonProperties__Group_1__2__Impl_in_rule__CommonProperties__Group_1__210980);
+            pushFollow(FOLLOW_rule__CommonProperties__Group_1__2__Impl_in_rule__CommonProperties__Group_1__210982);
             rule__CommonProperties__Group_1__2__Impl();
 
             state._fsp--;
@@ -14857,7 +14879,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:5449:1: ( rule__CommonProperties__PropertyKeyAssignment_1_2 )
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:5449:2: rule__CommonProperties__PropertyKeyAssignment_1_2
             {
-            pushFollow(FOLLOW_rule__CommonProperties__PropertyKeyAssignment_1_2_in_rule__CommonProperties__Group_1__2__Impl11007);
+            pushFollow(FOLLOW_rule__CommonProperties__PropertyKeyAssignment_1_2_in_rule__CommonProperties__Group_1__2__Impl11009);
             rule__CommonProperties__PropertyKeyAssignment_1_2();
 
             state._fsp--;
@@ -14897,12 +14919,12 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:5469:1: ( rule__CommonProperties__Group_2__0__Impl rule__CommonProperties__Group_2__1 )
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:5470:2: rule__CommonProperties__Group_2__0__Impl rule__CommonProperties__Group_2__1
             {
-            pushFollow(FOLLOW_rule__CommonProperties__Group_2__0__Impl_in_rule__CommonProperties__Group_2__011043);
+            pushFollow(FOLLOW_rule__CommonProperties__Group_2__0__Impl_in_rule__CommonProperties__Group_2__011045);
             rule__CommonProperties__Group_2__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__CommonProperties__Group_2__1_in_rule__CommonProperties__Group_2__011046);
+            pushFollow(FOLLOW_rule__CommonProperties__Group_2__1_in_rule__CommonProperties__Group_2__011048);
             rule__CommonProperties__Group_2__1();
 
             state._fsp--;
@@ -14939,7 +14961,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:5483:1: 'layoutKey'
             {
              before(grammarAccess.getCommonPropertiesAccess().getLayoutKeyKeyword_2_0()); 
-            match(input,32,FOLLOW_32_in_rule__CommonProperties__Group_2__0__Impl11074); 
+            match(input,32,FOLLOW_32_in_rule__CommonProperties__Group_2__0__Impl11076); 
              after(grammarAccess.getCommonPropertiesAccess().getLayoutKeyKeyword_2_0()); 
 
             }
@@ -14972,12 +14994,12 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:5500:1: ( rule__CommonProperties__Group_2__1__Impl rule__CommonProperties__Group_2__2 )
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:5501:2: rule__CommonProperties__Group_2__1__Impl rule__CommonProperties__Group_2__2
             {
-            pushFollow(FOLLOW_rule__CommonProperties__Group_2__1__Impl_in_rule__CommonProperties__Group_2__111105);
+            pushFollow(FOLLOW_rule__CommonProperties__Group_2__1__Impl_in_rule__CommonProperties__Group_2__111107);
             rule__CommonProperties__Group_2__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__CommonProperties__Group_2__2_in_rule__CommonProperties__Group_2__111108);
+            pushFollow(FOLLOW_rule__CommonProperties__Group_2__2_in_rule__CommonProperties__Group_2__111110);
             rule__CommonProperties__Group_2__2();
 
             state._fsp--;
@@ -15014,7 +15036,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:5514:1: '='
             {
              before(grammarAccess.getCommonPropertiesAccess().getEqualsSignKeyword_2_1()); 
-            match(input,31,FOLLOW_31_in_rule__CommonProperties__Group_2__1__Impl11136); 
+            match(input,31,FOLLOW_31_in_rule__CommonProperties__Group_2__1__Impl11138); 
              after(grammarAccess.getCommonPropertiesAccess().getEqualsSignKeyword_2_1()); 
 
             }
@@ -15047,7 +15069,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:5531:1: ( rule__CommonProperties__Group_2__2__Impl )
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:5532:2: rule__CommonProperties__Group_2__2__Impl
             {
-            pushFollow(FOLLOW_rule__CommonProperties__Group_2__2__Impl_in_rule__CommonProperties__Group_2__211167);
+            pushFollow(FOLLOW_rule__CommonProperties__Group_2__2__Impl_in_rule__CommonProperties__Group_2__211169);
             rule__CommonProperties__Group_2__2__Impl();
 
             state._fsp--;
@@ -15087,7 +15109,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:5545:1: ( rule__CommonProperties__LayoutKeyAssignment_2_2 )
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:5545:2: rule__CommonProperties__LayoutKeyAssignment_2_2
             {
-            pushFollow(FOLLOW_rule__CommonProperties__LayoutKeyAssignment_2_2_in_rule__CommonProperties__Group_2__2__Impl11194);
+            pushFollow(FOLLOW_rule__CommonProperties__LayoutKeyAssignment_2_2_in_rule__CommonProperties__Group_2__2__Impl11196);
             rule__CommonProperties__LayoutKeyAssignment_2_2();
 
             state._fsp--;
@@ -15127,12 +15149,12 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:5565:1: ( rule__CommonProperties__Group_3__0__Impl rule__CommonProperties__Group_3__1 )
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:5566:2: rule__CommonProperties__Group_3__0__Impl rule__CommonProperties__Group_3__1
             {
-            pushFollow(FOLLOW_rule__CommonProperties__Group_3__0__Impl_in_rule__CommonProperties__Group_3__011230);
+            pushFollow(FOLLOW_rule__CommonProperties__Group_3__0__Impl_in_rule__CommonProperties__Group_3__011232);
             rule__CommonProperties__Group_3__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__CommonProperties__Group_3__1_in_rule__CommonProperties__Group_3__011233);
+            pushFollow(FOLLOW_rule__CommonProperties__Group_3__1_in_rule__CommonProperties__Group_3__011235);
             rule__CommonProperties__Group_3__1();
 
             state._fsp--;
@@ -15169,7 +15191,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:5579:1: 'interactiontype'
             {
              before(grammarAccess.getCommonPropertiesAccess().getInteractiontypeKeyword_3_0()); 
-            match(input,33,FOLLOW_33_in_rule__CommonProperties__Group_3__0__Impl11261); 
+            match(input,33,FOLLOW_33_in_rule__CommonProperties__Group_3__0__Impl11263); 
              after(grammarAccess.getCommonPropertiesAccess().getInteractiontypeKeyword_3_0()); 
 
             }
@@ -15202,12 +15224,12 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:5596:1: ( rule__CommonProperties__Group_3__1__Impl rule__CommonProperties__Group_3__2 )
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:5597:2: rule__CommonProperties__Group_3__1__Impl rule__CommonProperties__Group_3__2
             {
-            pushFollow(FOLLOW_rule__CommonProperties__Group_3__1__Impl_in_rule__CommonProperties__Group_3__111292);
+            pushFollow(FOLLOW_rule__CommonProperties__Group_3__1__Impl_in_rule__CommonProperties__Group_3__111294);
             rule__CommonProperties__Group_3__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__CommonProperties__Group_3__2_in_rule__CommonProperties__Group_3__111295);
+            pushFollow(FOLLOW_rule__CommonProperties__Group_3__2_in_rule__CommonProperties__Group_3__111297);
             rule__CommonProperties__Group_3__2();
 
             state._fsp--;
@@ -15244,7 +15266,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:5610:1: '='
             {
              before(grammarAccess.getCommonPropertiesAccess().getEqualsSignKeyword_3_1()); 
-            match(input,31,FOLLOW_31_in_rule__CommonProperties__Group_3__1__Impl11323); 
+            match(input,31,FOLLOW_31_in_rule__CommonProperties__Group_3__1__Impl11325); 
              after(grammarAccess.getCommonPropertiesAccess().getEqualsSignKeyword_3_1()); 
 
             }
@@ -15277,7 +15299,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:5627:1: ( rule__CommonProperties__Group_3__2__Impl )
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:5628:2: rule__CommonProperties__Group_3__2__Impl
             {
-            pushFollow(FOLLOW_rule__CommonProperties__Group_3__2__Impl_in_rule__CommonProperties__Group_3__211354);
+            pushFollow(FOLLOW_rule__CommonProperties__Group_3__2__Impl_in_rule__CommonProperties__Group_3__211356);
             rule__CommonProperties__Group_3__2__Impl();
 
             state._fsp--;
@@ -15320,7 +15342,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:5642:1: ( rule__CommonProperties__InteractiontypeAssignment_3_2 )
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:5642:2: rule__CommonProperties__InteractiontypeAssignment_3_2
             {
-            pushFollow(FOLLOW_rule__CommonProperties__InteractiontypeAssignment_3_2_in_rule__CommonProperties__Group_3__2__Impl11383);
+            pushFollow(FOLLOW_rule__CommonProperties__InteractiontypeAssignment_3_2_in_rule__CommonProperties__Group_3__2__Impl11385);
             rule__CommonProperties__InteractiontypeAssignment_3_2();
 
             state._fsp--;
@@ -15337,21 +15359,21 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             {
              before(grammarAccess.getCommonPropertiesAccess().getInteractiontypeAssignment_3_2()); 
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:5647:1: ( rule__CommonProperties__InteractiontypeAssignment_3_2 )*
-            loop45:
+            loop47:
             do {
-                int alt45=2;
-                int LA45_0 = input.LA(1);
+                int alt47=2;
+                int LA47_0 = input.LA(1);
 
-                if ( ((LA45_0>=16 && LA45_0<=18)) ) {
-                    alt45=1;
+                if ( ((LA47_0>=16 && LA47_0<=18)) ) {
+                    alt47=1;
                 }
 
 
-                switch (alt45) {
+                switch (alt47) {
             	case 1 :
             	    // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:5647:2: rule__CommonProperties__InteractiontypeAssignment_3_2
             	    {
-            	    pushFollow(FOLLOW_rule__CommonProperties__InteractiontypeAssignment_3_2_in_rule__CommonProperties__Group_3__2__Impl11395);
+            	    pushFollow(FOLLOW_rule__CommonProperties__InteractiontypeAssignment_3_2_in_rule__CommonProperties__Group_3__2__Impl11397);
             	    rule__CommonProperties__InteractiontypeAssignment_3_2();
 
             	    state._fsp--;
@@ -15361,7 +15383,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             	    break;
 
             	default :
-            	    break loop45;
+            	    break loop47;
                 }
             } while (true);
 
@@ -15404,7 +15426,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:5671:1: ruleTypeDefinition
             {
              before(grammarAccess.getUIDescriptionAccess().getTypeDefinitionTypeDefinitionParserRuleCall_0_0()); 
-            pushFollow(FOLLOW_ruleTypeDefinition_in_rule__UIDescription__TypeDefinitionAssignment_011439);
+            pushFollow(FOLLOW_ruleTypeDefinition_in_rule__UIDescription__TypeDefinitionAssignment_011441);
             ruleTypeDefinition();
 
             state._fsp--;
@@ -15445,7 +15467,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:5686:1: ruleProperty
             {
              before(grammarAccess.getUIDescriptionAccess().getPropertyPropertyParserRuleCall_1_0()); 
-            pushFollow(FOLLOW_ruleProperty_in_rule__UIDescription__PropertyAssignment_111470);
+            pushFollow(FOLLOW_ruleProperty_in_rule__UIDescription__PropertyAssignment_111472);
             ruleProperty();
 
             state._fsp--;
@@ -15486,7 +15508,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:5701:1: ruleLayout
             {
              before(grammarAccess.getUIDescriptionAccess().getLayoutLayoutParserRuleCall_2_0()); 
-            pushFollow(FOLLOW_ruleLayout_in_rule__UIDescription__LayoutAssignment_211501);
+            pushFollow(FOLLOW_ruleLayout_in_rule__UIDescription__LayoutAssignment_211503);
             ruleLayout();
 
             state._fsp--;
@@ -15527,7 +15549,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:5716:1: ruleUsedDescriptions
             {
              before(grammarAccess.getUIDescriptionAccess().getUsedDescriptionsUsedDescriptionsParserRuleCall_3_0()); 
-            pushFollow(FOLLOW_ruleUsedDescriptions_in_rule__UIDescription__UsedDescriptionsAssignment_311532);
+            pushFollow(FOLLOW_ruleUsedDescriptions_in_rule__UIDescription__UsedDescriptionsAssignment_311534);
             ruleUsedDescriptions();
 
             state._fsp--;
@@ -15568,7 +15590,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:5731:1: ruleRefinement
             {
              before(grammarAccess.getUIDescriptionAccess().getRefinementsRefinementParserRuleCall_4_0()); 
-            pushFollow(FOLLOW_ruleRefinement_in_rule__UIDescription__RefinementsAssignment_411563);
+            pushFollow(FOLLOW_ruleRefinement_in_rule__UIDescription__RefinementsAssignment_411565);
             ruleRefinement();
 
             state._fsp--;
@@ -15609,7 +15631,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:5746:1: ruleDefinition
             {
              before(grammarAccess.getUIDescriptionAccess().getDefinitionsDefinitionParserRuleCall_5_0()); 
-            pushFollow(FOLLOW_ruleDefinition_in_rule__UIDescription__DefinitionsAssignment_511594);
+            pushFollow(FOLLOW_ruleDefinition_in_rule__UIDescription__DefinitionsAssignment_511596);
             ruleDefinition();
 
             state._fsp--;
@@ -15650,7 +15672,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:5761:1: ruleStructure
             {
              before(grammarAccess.getUIDescriptionAccess().getStructureStructureParserRuleCall_6_0()); 
-            pushFollow(FOLLOW_ruleStructure_in_rule__UIDescription__StructureAssignment_611625);
+            pushFollow(FOLLOW_ruleStructure_in_rule__UIDescription__StructureAssignment_611627);
             ruleStructure();
 
             state._fsp--;
@@ -15691,7 +15713,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:5776:1: ruleType
             {
              before(grammarAccess.getTypeDefinitionAccess().getTypeTypeParserRuleCall_1_0()); 
-            pushFollow(FOLLOW_ruleType_in_rule__TypeDefinition__TypeAssignment_111656);
+            pushFollow(FOLLOW_ruleType_in_rule__TypeDefinition__TypeAssignment_111658);
             ruleType();
 
             state._fsp--;
@@ -15735,7 +15757,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:5792:1: ( rule__Type__IdAlternatives_0 )
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:5792:2: rule__Type__IdAlternatives_0
             {
-            pushFollow(FOLLOW_rule__Type__IdAlternatives_0_in_rule__Type__IdAssignment11687);
+            pushFollow(FOLLOW_rule__Type__IdAlternatives_0_in_rule__Type__IdAssignment11689);
             rule__Type__IdAlternatives_0();
 
             state._fsp--;
@@ -15779,7 +15801,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:5807:1: RULE_STRING
             {
              before(grammarAccess.getPropertyAccess().getPropertiesFilesSTRINGTerminalRuleCall_1_0()); 
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__Property__PropertiesFilesAssignment_111720); 
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__Property__PropertiesFilesAssignment_111722); 
              after(grammarAccess.getPropertyAccess().getPropertiesFilesSTRINGTerminalRuleCall_1_0()); 
 
             }
@@ -15816,7 +15838,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:5822:1: RULE_STRING
             {
              before(grammarAccess.getLayoutAccess().getLayoutFilesSTRINGTerminalRuleCall_1_0()); 
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__Layout__LayoutFilesAssignment_111751); 
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__Layout__LayoutFilesAssignment_111753); 
              after(grammarAccess.getLayoutAccess().getLayoutFilesSTRINGTerminalRuleCall_1_0()); 
 
             }
@@ -15853,7 +15875,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:5837:1: ruleDescriptionType
             {
              before(grammarAccess.getUsedDescriptionsAccess().getDescriptionDescriptionTypeParserRuleCall_1_0()); 
-            pushFollow(FOLLOW_ruleDescriptionType_in_rule__UsedDescriptions__DescriptionAssignment_111782);
+            pushFollow(FOLLOW_ruleDescriptionType_in_rule__UsedDescriptions__DescriptionAssignment_111784);
             ruleDescriptionType();
 
             state._fsp--;
@@ -15894,7 +15916,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:5852:1: RULE_STRING
             {
              before(grammarAccess.getUsedDescriptionsAccess().getIdSTRINGTerminalRuleCall_2_1_0()); 
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__UsedDescriptions__IdAssignment_2_111813); 
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__UsedDescriptions__IdAssignment_2_111815); 
              after(grammarAccess.getUsedDescriptionsAccess().getIdSTRINGTerminalRuleCall_2_1_0()); 
 
             }
@@ -15931,7 +15953,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:5867:1: RULE_STRING
             {
              before(grammarAccess.getUIDescriptionImportAccess().getDescriptionNameSTRINGTerminalRuleCall_0()); 
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__UIDescriptionImport__DescriptionNameAssignment11844); 
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__UIDescriptionImport__DescriptionNameAssignment11846); 
              after(grammarAccess.getUIDescriptionImportAccess().getDescriptionNameSTRINGTerminalRuleCall_0()); 
 
             }
@@ -15968,7 +15990,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:5882:1: ruleComponentRefinement
             {
              before(grammarAccess.getRefinementAccess().getConcreteRefinementComponentRefinementParserRuleCall_0_0()); 
-            pushFollow(FOLLOW_ruleComponentRefinement_in_rule__Refinement__ConcreteRefinementAssignment_011875);
+            pushFollow(FOLLOW_ruleComponentRefinement_in_rule__Refinement__ConcreteRefinementAssignment_011877);
             ruleComponentRefinement();
 
             state._fsp--;
@@ -16009,7 +16031,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:5897:1: ruleComponentDefinition
             {
              before(grammarAccess.getDefinitionAccess().getConcreteDefitionComponentDefinitionParserRuleCall_0_0()); 
-            pushFollow(FOLLOW_ruleComponentDefinition_in_rule__Definition__ConcreteDefitionAssignment_011906);
+            pushFollow(FOLLOW_ruleComponentDefinition_in_rule__Definition__ConcreteDefitionAssignment_011908);
             ruleComponentDefinition();
 
             state._fsp--;
@@ -16054,7 +16076,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:5914:1: 'Structure'
             {
              before(grammarAccess.getStructureAccess().getNameStructureKeyword_0_0()); 
-            match(input,34,FOLLOW_34_in_rule__Structure__NameAssignment_011942); 
+            match(input,34,FOLLOW_34_in_rule__Structure__NameAssignment_011944); 
              after(grammarAccess.getStructureAccess().getNameStructureKeyword_0_0()); 
 
             }
@@ -16095,7 +16117,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:5935:1: ruleElement
             {
              before(grammarAccess.getStructureAccess().getOrderedElementsElementParserRuleCall_2_0()); 
-            pushFollow(FOLLOW_ruleElement_in_rule__Structure__OrderedElementsAssignment_211981);
+            pushFollow(FOLLOW_ruleElement_in_rule__Structure__OrderedElementsAssignment_211983);
             ruleElement();
 
             state._fsp--;
@@ -16136,7 +16158,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:5950:1: RULE_STRING
             {
              before(grammarAccess.getElementAccess().getIdSTRINGTerminalRuleCall_0()); 
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__Element__IdAssignment12012); 
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__Element__IdAssignment12014); 
              after(grammarAccess.getElementAccess().getIdSTRINGTerminalRuleCall_0()); 
 
             }
@@ -16177,7 +16199,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:5967:1: 'Table'
             {
              before(grammarAccess.getTableRefinementAccess().getNameTableKeyword_0_0()); 
-            match(input,35,FOLLOW_35_in_rule__TableRefinement__NameAssignment_012048); 
+            match(input,35,FOLLOW_35_in_rule__TableRefinement__NameAssignment_012050); 
              after(grammarAccess.getTableRefinementAccess().getNameTableKeyword_0_0()); 
 
             }
@@ -16218,7 +16240,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:5988:1: RULE_INPUT_DESCRIPTION
             {
              before(grammarAccess.getTableRefinementAccess().getInputTypeINPUT_DESCRIPTIONTerminalRuleCall_1_0()); 
-            match(input,RULE_INPUT_DESCRIPTION,FOLLOW_RULE_INPUT_DESCRIPTION_in_rule__TableRefinement__InputTypeAssignment_112087); 
+            match(input,RULE_INPUT_DESCRIPTION,FOLLOW_RULE_INPUT_DESCRIPTION_in_rule__TableRefinement__InputTypeAssignment_112089); 
              after(grammarAccess.getTableRefinementAccess().getInputTypeINPUT_DESCRIPTIONTerminalRuleCall_1_0()); 
 
             }
@@ -16255,7 +16277,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:6003:1: RULE_STRING
             {
              before(grammarAccess.getTableRefinementAccess().getIdSTRINGTerminalRuleCall_3_0()); 
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__TableRefinement__IdAssignment_312118); 
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__TableRefinement__IdAssignment_312120); 
              after(grammarAccess.getTableRefinementAccess().getIdSTRINGTerminalRuleCall_3_0()); 
 
             }
@@ -16292,7 +16314,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:6018:1: ruleCommonProperties
             {
              before(grammarAccess.getTableRefinementAccess().getPropertiesCommonPropertiesParserRuleCall_4_0()); 
-            pushFollow(FOLLOW_ruleCommonProperties_in_rule__TableRefinement__PropertiesAssignment_412149);
+            pushFollow(FOLLOW_ruleCommonProperties_in_rule__TableRefinement__PropertiesAssignment_412151);
             ruleCommonProperties();
 
             state._fsp--;
@@ -16337,7 +16359,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:6035:1: 'TabView'
             {
              before(grammarAccess.getTabViewRefinementAccess().getNameTabViewKeyword_0_0()); 
-            match(input,36,FOLLOW_36_in_rule__TabViewRefinement__NameAssignment_012185); 
+            match(input,36,FOLLOW_36_in_rule__TabViewRefinement__NameAssignment_012187); 
              after(grammarAccess.getTabViewRefinementAccess().getNameTabViewKeyword_0_0()); 
 
             }
@@ -16378,7 +16400,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:6056:1: ruleTabDefinition
             {
              before(grammarAccess.getTabViewRefinementAccess().getTabsTabDefinitionParserRuleCall_1_0()); 
-            pushFollow(FOLLOW_ruleTabDefinition_in_rule__TabViewRefinement__TabsAssignment_112224);
+            pushFollow(FOLLOW_ruleTabDefinition_in_rule__TabViewRefinement__TabsAssignment_112226);
             ruleTabDefinition();
 
             state._fsp--;
@@ -16419,7 +16441,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:6071:1: RULE_STRING
             {
              before(grammarAccess.getTabViewRefinementAccess().getIdSTRINGTerminalRuleCall_3_0()); 
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__TabViewRefinement__IdAssignment_312255); 
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__TabViewRefinement__IdAssignment_312257); 
              after(grammarAccess.getTabViewRefinementAccess().getIdSTRINGTerminalRuleCall_3_0()); 
 
             }
@@ -16456,7 +16478,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:6086:1: ruleCommonProperties
             {
              before(grammarAccess.getTabViewRefinementAccess().getPropertiesCommonPropertiesParserRuleCall_4_0()); 
-            pushFollow(FOLLOW_ruleCommonProperties_in_rule__TabViewRefinement__PropertiesAssignment_412286);
+            pushFollow(FOLLOW_ruleCommonProperties_in_rule__TabViewRefinement__PropertiesAssignment_412288);
             ruleCommonProperties();
 
             state._fsp--;
@@ -16501,7 +16523,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:6103:1: 'Tree'
             {
              before(grammarAccess.getTreeRefinementAccess().getNameTreeKeyword_0_0()); 
-            match(input,37,FOLLOW_37_in_rule__TreeRefinement__NameAssignment_012322); 
+            match(input,37,FOLLOW_37_in_rule__TreeRefinement__NameAssignment_012324); 
              after(grammarAccess.getTreeRefinementAccess().getNameTreeKeyword_0_0()); 
 
             }
@@ -16542,7 +16564,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:6124:1: RULE_INPUT_DESCRIPTION
             {
              before(grammarAccess.getTreeRefinementAccess().getInputTypeINPUT_DESCRIPTIONTerminalRuleCall_1_0()); 
-            match(input,RULE_INPUT_DESCRIPTION,FOLLOW_RULE_INPUT_DESCRIPTION_in_rule__TreeRefinement__InputTypeAssignment_112361); 
+            match(input,RULE_INPUT_DESCRIPTION,FOLLOW_RULE_INPUT_DESCRIPTION_in_rule__TreeRefinement__InputTypeAssignment_112363); 
              after(grammarAccess.getTreeRefinementAccess().getInputTypeINPUT_DESCRIPTIONTerminalRuleCall_1_0()); 
 
             }
@@ -16579,7 +16601,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:6139:1: RULE_STRING
             {
              before(grammarAccess.getTreeRefinementAccess().getIdSTRINGTerminalRuleCall_3_0()); 
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__TreeRefinement__IdAssignment_312392); 
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__TreeRefinement__IdAssignment_312394); 
              after(grammarAccess.getTreeRefinementAccess().getIdSTRINGTerminalRuleCall_3_0()); 
 
             }
@@ -16616,7 +16638,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:6154:1: ruleCommonProperties
             {
              before(grammarAccess.getTreeRefinementAccess().getPropertiesCommonPropertiesParserRuleCall_4_0()); 
-            pushFollow(FOLLOW_ruleCommonProperties_in_rule__TreeRefinement__PropertiesAssignment_412423);
+            pushFollow(FOLLOW_ruleCommonProperties_in_rule__TreeRefinement__PropertiesAssignment_412425);
             ruleCommonProperties();
 
             state._fsp--;
@@ -16661,7 +16683,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:6171:1: 'Interchangeable'
             {
              before(grammarAccess.getInterchangeableRefinementAccess().getNameInterchangeableKeyword_0_0()); 
-            match(input,38,FOLLOW_38_in_rule__InterchangeableRefinement__NameAssignment_012459); 
+            match(input,38,FOLLOW_38_in_rule__InterchangeableRefinement__NameAssignment_012461); 
              after(grammarAccess.getInterchangeableRefinementAccess().getNameInterchangeableKeyword_0_0()); 
 
             }
@@ -16702,7 +16724,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:6192:1: RULE_STRING
             {
              before(grammarAccess.getInterchangeableRefinementAccess().getIdSTRINGTerminalRuleCall_2_0()); 
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__InterchangeableRefinement__IdAssignment_212498); 
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__InterchangeableRefinement__IdAssignment_212500); 
              after(grammarAccess.getInterchangeableRefinementAccess().getIdSTRINGTerminalRuleCall_2_0()); 
 
             }
@@ -16739,7 +16761,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:6207:1: ruleCommonProperties
             {
              before(grammarAccess.getInterchangeableRefinementAccess().getPropertiesCommonPropertiesParserRuleCall_3_0()); 
-            pushFollow(FOLLOW_ruleCommonProperties_in_rule__InterchangeableRefinement__PropertiesAssignment_312529);
+            pushFollow(FOLLOW_ruleCommonProperties_in_rule__InterchangeableRefinement__PropertiesAssignment_312531);
             ruleCommonProperties();
 
             state._fsp--;
@@ -16784,7 +16806,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:6224:1: 'Textarea'
             {
              before(grammarAccess.getTextareaRefinementAccess().getNameTextareaKeyword_0_0()); 
-            match(input,39,FOLLOW_39_in_rule__TextareaRefinement__NameAssignment_012565); 
+            match(input,39,FOLLOW_39_in_rule__TextareaRefinement__NameAssignment_012567); 
              after(grammarAccess.getTextareaRefinementAccess().getNameTextareaKeyword_0_0()); 
 
             }
@@ -16825,7 +16847,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:6245:1: RULE_STRING
             {
              before(grammarAccess.getTextareaRefinementAccess().getIdSTRINGTerminalRuleCall_2_0()); 
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__TextareaRefinement__IdAssignment_212604); 
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__TextareaRefinement__IdAssignment_212606); 
              after(grammarAccess.getTextareaRefinementAccess().getIdSTRINGTerminalRuleCall_2_0()); 
 
             }
@@ -16862,7 +16884,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:6260:1: ruleTextareaProperties
             {
              before(grammarAccess.getTextareaRefinementAccess().getPropertiesTextareaPropertiesParserRuleCall_3_0()); 
-            pushFollow(FOLLOW_ruleTextareaProperties_in_rule__TextareaRefinement__PropertiesAssignment_312635);
+            pushFollow(FOLLOW_ruleTextareaProperties_in_rule__TextareaRefinement__PropertiesAssignment_312637);
             ruleTextareaProperties();
 
             state._fsp--;
@@ -16907,7 +16929,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:6277:1: 'Textfield'
             {
              before(grammarAccess.getTextfieldRefinementAccess().getNameTextfieldKeyword_0_0()); 
-            match(input,40,FOLLOW_40_in_rule__TextfieldRefinement__NameAssignment_012671); 
+            match(input,40,FOLLOW_40_in_rule__TextfieldRefinement__NameAssignment_012673); 
              after(grammarAccess.getTextfieldRefinementAccess().getNameTextfieldKeyword_0_0()); 
 
             }
@@ -16948,7 +16970,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:6298:1: RULE_STRING
             {
              before(grammarAccess.getTextfieldRefinementAccess().getIdSTRINGTerminalRuleCall_2_0()); 
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__TextfieldRefinement__IdAssignment_212710); 
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__TextfieldRefinement__IdAssignment_212712); 
              after(grammarAccess.getTextfieldRefinementAccess().getIdSTRINGTerminalRuleCall_2_0()); 
 
             }
@@ -16985,7 +17007,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:6313:1: ruleTextfieldProperties
             {
              before(grammarAccess.getTextfieldRefinementAccess().getPropertiesTextfieldPropertiesParserRuleCall_3_0()); 
-            pushFollow(FOLLOW_ruleTextfieldProperties_in_rule__TextfieldRefinement__PropertiesAssignment_312741);
+            pushFollow(FOLLOW_ruleTextfieldProperties_in_rule__TextfieldRefinement__PropertiesAssignment_312743);
             ruleTextfieldProperties();
 
             state._fsp--;
@@ -17030,7 +17052,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:6330:1: 'Button'
             {
              before(grammarAccess.getButtonRefinementAccess().getNameButtonKeyword_0_0()); 
-            match(input,41,FOLLOW_41_in_rule__ButtonRefinement__NameAssignment_012777); 
+            match(input,41,FOLLOW_41_in_rule__ButtonRefinement__NameAssignment_012779); 
              after(grammarAccess.getButtonRefinementAccess().getNameButtonKeyword_0_0()); 
 
             }
@@ -17071,7 +17093,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:6351:1: RULE_STRING
             {
              before(grammarAccess.getButtonRefinementAccess().getIdSTRINGTerminalRuleCall_2_0()); 
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__ButtonRefinement__IdAssignment_212816); 
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__ButtonRefinement__IdAssignment_212818); 
              after(grammarAccess.getButtonRefinementAccess().getIdSTRINGTerminalRuleCall_2_0()); 
 
             }
@@ -17108,7 +17130,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:6366:1: ruleButtonProperties
             {
              before(grammarAccess.getButtonRefinementAccess().getPropertiesButtonPropertiesParserRuleCall_3_0()); 
-            pushFollow(FOLLOW_ruleButtonProperties_in_rule__ButtonRefinement__PropertiesAssignment_312847);
+            pushFollow(FOLLOW_ruleButtonProperties_in_rule__ButtonRefinement__PropertiesAssignment_312849);
             ruleButtonProperties();
 
             state._fsp--;
@@ -17153,7 +17175,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:6383:1: 'Label'
             {
              before(grammarAccess.getLabelRefinementAccess().getNameLabelKeyword_0_0()); 
-            match(input,42,FOLLOW_42_in_rule__LabelRefinement__NameAssignment_012883); 
+            match(input,42,FOLLOW_42_in_rule__LabelRefinement__NameAssignment_012885); 
              after(grammarAccess.getLabelRefinementAccess().getNameLabelKeyword_0_0()); 
 
             }
@@ -17194,7 +17216,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:6404:1: RULE_STRING
             {
              before(grammarAccess.getLabelRefinementAccess().getIdSTRINGTerminalRuleCall_2_0()); 
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__LabelRefinement__IdAssignment_212922); 
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__LabelRefinement__IdAssignment_212924); 
              after(grammarAccess.getLabelRefinementAccess().getIdSTRINGTerminalRuleCall_2_0()); 
 
             }
@@ -17231,7 +17253,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:6419:1: ruleLabelProperties
             {
              before(grammarAccess.getLabelRefinementAccess().getPropertiesLabelPropertiesParserRuleCall_3_0()); 
-            pushFollow(FOLLOW_ruleLabelProperties_in_rule__LabelRefinement__PropertiesAssignment_312953);
+            pushFollow(FOLLOW_ruleLabelProperties_in_rule__LabelRefinement__PropertiesAssignment_312955);
             ruleLabelProperties();
 
             state._fsp--;
@@ -17276,7 +17298,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:6436:1: 'TabView'
             {
              before(grammarAccess.getTabViewDefinitionAccess().getNameTabViewKeyword_0_0()); 
-            match(input,36,FOLLOW_36_in_rule__TabViewDefinition__NameAssignment_012989); 
+            match(input,36,FOLLOW_36_in_rule__TabViewDefinition__NameAssignment_012991); 
              after(grammarAccess.getTabViewDefinitionAccess().getNameTabViewKeyword_0_0()); 
 
             }
@@ -17317,7 +17339,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:6457:1: ruleTabDefinition
             {
              before(grammarAccess.getTabViewDefinitionAccess().getTabsTabDefinitionParserRuleCall_1_0()); 
-            pushFollow(FOLLOW_ruleTabDefinition_in_rule__TabViewDefinition__TabsAssignment_113028);
+            pushFollow(FOLLOW_ruleTabDefinition_in_rule__TabViewDefinition__TabsAssignment_113030);
             ruleTabDefinition();
 
             state._fsp--;
@@ -17358,7 +17380,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:6472:1: RULE_STRING
             {
              before(grammarAccess.getTabViewDefinitionAccess().getIdSTRINGTerminalRuleCall_3_0()); 
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__TabViewDefinition__IdAssignment_313059); 
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__TabViewDefinition__IdAssignment_313061); 
              after(grammarAccess.getTabViewDefinitionAccess().getIdSTRINGTerminalRuleCall_3_0()); 
 
             }
@@ -17395,7 +17417,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:6487:1: ruleCommonProperties
             {
              before(grammarAccess.getTabViewDefinitionAccess().getPropertiesCommonPropertiesParserRuleCall_4_0()); 
-            pushFollow(FOLLOW_ruleCommonProperties_in_rule__TabViewDefinition__PropertiesAssignment_413090);
+            pushFollow(FOLLOW_ruleCommonProperties_in_rule__TabViewDefinition__PropertiesAssignment_413092);
             ruleCommonProperties();
 
             state._fsp--;
@@ -17436,7 +17458,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:6502:1: RULE_TABNAME
             {
              before(grammarAccess.getTabDefinitionAccess().getNameTABNAMETerminalRuleCall_0()); 
-            match(input,RULE_TABNAME,FOLLOW_RULE_TABNAME_in_rule__TabDefinition__NameAssignment13121); 
+            match(input,RULE_TABNAME,FOLLOW_RULE_TABNAME_in_rule__TabDefinition__NameAssignment13123); 
              after(grammarAccess.getTabDefinitionAccess().getNameTABNAMETerminalRuleCall_0()); 
 
             }
@@ -17477,7 +17499,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:6519:1: 'Multiselection'
             {
              before(grammarAccess.getMultiselectionAccess().getNameMultiselectionKeyword_0_0()); 
-            match(input,43,FOLLOW_43_in_rule__Multiselection__NameAssignment_013157); 
+            match(input,43,FOLLOW_43_in_rule__Multiselection__NameAssignment_013159); 
              after(grammarAccess.getMultiselectionAccess().getNameMultiselectionKeyword_0_0()); 
 
             }
@@ -17518,7 +17540,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:6540:1: RULE_INPUT_DESCRIPTION
             {
              before(grammarAccess.getMultiselectionAccess().getInputTypeINPUT_DESCRIPTIONTerminalRuleCall_1_0()); 
-            match(input,RULE_INPUT_DESCRIPTION,FOLLOW_RULE_INPUT_DESCRIPTION_in_rule__Multiselection__InputTypeAssignment_113196); 
+            match(input,RULE_INPUT_DESCRIPTION,FOLLOW_RULE_INPUT_DESCRIPTION_in_rule__Multiselection__InputTypeAssignment_113198); 
              after(grammarAccess.getMultiselectionAccess().getInputTypeINPUT_DESCRIPTIONTerminalRuleCall_1_0()); 
 
             }
@@ -17559,7 +17581,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:6557:1: 'Textfield'
             {
              before(grammarAccess.getTextfieldDefinitionAccess().getNameTextfieldKeyword_0_0()); 
-            match(input,40,FOLLOW_40_in_rule__TextfieldDefinition__NameAssignment_013232); 
+            match(input,40,FOLLOW_40_in_rule__TextfieldDefinition__NameAssignment_013234); 
              after(grammarAccess.getTextfieldDefinitionAccess().getNameTextfieldKeyword_0_0()); 
 
             }
@@ -17600,7 +17622,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:6578:1: RULE_STRING
             {
              before(grammarAccess.getTextfieldDefinitionAccess().getIdSTRINGTerminalRuleCall_2_0()); 
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__TextfieldDefinition__IdAssignment_213271); 
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__TextfieldDefinition__IdAssignment_213273); 
              after(grammarAccess.getTextfieldDefinitionAccess().getIdSTRINGTerminalRuleCall_2_0()); 
 
             }
@@ -17637,7 +17659,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:6593:1: ruleTextfieldProperties
             {
              before(grammarAccess.getTextfieldDefinitionAccess().getPropertiesTextfieldPropertiesParserRuleCall_3_0()); 
-            pushFollow(FOLLOW_ruleTextfieldProperties_in_rule__TextfieldDefinition__PropertiesAssignment_313302);
+            pushFollow(FOLLOW_ruleTextfieldProperties_in_rule__TextfieldDefinition__PropertiesAssignment_313304);
             ruleTextfieldProperties();
 
             state._fsp--;
@@ -17682,7 +17704,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:6610:1: 'Textarea'
             {
              before(grammarAccess.getTextareaDefinitionAccess().getNameTextareaKeyword_0_0()); 
-            match(input,39,FOLLOW_39_in_rule__TextareaDefinition__NameAssignment_013338); 
+            match(input,39,FOLLOW_39_in_rule__TextareaDefinition__NameAssignment_013340); 
              after(grammarAccess.getTextareaDefinitionAccess().getNameTextareaKeyword_0_0()); 
 
             }
@@ -17723,7 +17745,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:6631:1: RULE_STRING
             {
              before(grammarAccess.getTextareaDefinitionAccess().getIdSTRINGTerminalRuleCall_2_0()); 
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__TextareaDefinition__IdAssignment_213377); 
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__TextareaDefinition__IdAssignment_213379); 
              after(grammarAccess.getTextareaDefinitionAccess().getIdSTRINGTerminalRuleCall_2_0()); 
 
             }
@@ -17760,7 +17782,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:6646:1: ruleTextareaProperties
             {
              before(grammarAccess.getTextareaDefinitionAccess().getPropertiesTextareaPropertiesParserRuleCall_3_0()); 
-            pushFollow(FOLLOW_ruleTextareaProperties_in_rule__TextareaDefinition__PropertiesAssignment_313408);
+            pushFollow(FOLLOW_ruleTextareaProperties_in_rule__TextareaDefinition__PropertiesAssignment_313410);
             ruleTextareaProperties();
 
             state._fsp--;
@@ -17805,7 +17827,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:6663:1: 'Tree'
             {
              before(grammarAccess.getTreeDefinitionAccess().getNameTreeKeyword_0_0()); 
-            match(input,37,FOLLOW_37_in_rule__TreeDefinition__NameAssignment_013444); 
+            match(input,37,FOLLOW_37_in_rule__TreeDefinition__NameAssignment_013446); 
              after(grammarAccess.getTreeDefinitionAccess().getNameTreeKeyword_0_0()); 
 
             }
@@ -17846,7 +17868,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:6684:1: RULE_INPUT_DESCRIPTION
             {
              before(grammarAccess.getTreeDefinitionAccess().getInputTypeINPUT_DESCRIPTIONTerminalRuleCall_1_0()); 
-            match(input,RULE_INPUT_DESCRIPTION,FOLLOW_RULE_INPUT_DESCRIPTION_in_rule__TreeDefinition__InputTypeAssignment_113483); 
+            match(input,RULE_INPUT_DESCRIPTION,FOLLOW_RULE_INPUT_DESCRIPTION_in_rule__TreeDefinition__InputTypeAssignment_113485); 
              after(grammarAccess.getTreeDefinitionAccess().getInputTypeINPUT_DESCRIPTIONTerminalRuleCall_1_0()); 
 
             }
@@ -17883,7 +17905,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:6699:1: RULE_STRING
             {
              before(grammarAccess.getTreeDefinitionAccess().getIdSTRINGTerminalRuleCall_3_0()); 
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__TreeDefinition__IdAssignment_313514); 
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__TreeDefinition__IdAssignment_313516); 
              after(grammarAccess.getTreeDefinitionAccess().getIdSTRINGTerminalRuleCall_3_0()); 
 
             }
@@ -17920,7 +17942,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:6714:1: ruleCommonProperties
             {
              before(grammarAccess.getTreeDefinitionAccess().getPropertiesCommonPropertiesParserRuleCall_4_0()); 
-            pushFollow(FOLLOW_ruleCommonProperties_in_rule__TreeDefinition__PropertiesAssignment_413545);
+            pushFollow(FOLLOW_ruleCommonProperties_in_rule__TreeDefinition__PropertiesAssignment_413547);
             ruleCommonProperties();
 
             state._fsp--;
@@ -17965,7 +17987,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:6731:1: 'Table'
             {
              before(grammarAccess.getTableDefinitionAccess().getNameTableKeyword_0_0()); 
-            match(input,35,FOLLOW_35_in_rule__TableDefinition__NameAssignment_013581); 
+            match(input,35,FOLLOW_35_in_rule__TableDefinition__NameAssignment_013583); 
              after(grammarAccess.getTableDefinitionAccess().getNameTableKeyword_0_0()); 
 
             }
@@ -18006,7 +18028,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:6752:1: RULE_INPUT_DESCRIPTION
             {
              before(grammarAccess.getTableDefinitionAccess().getInputTypeINPUT_DESCRIPTIONTerminalRuleCall_1_0()); 
-            match(input,RULE_INPUT_DESCRIPTION,FOLLOW_RULE_INPUT_DESCRIPTION_in_rule__TableDefinition__InputTypeAssignment_113620); 
+            match(input,RULE_INPUT_DESCRIPTION,FOLLOW_RULE_INPUT_DESCRIPTION_in_rule__TableDefinition__InputTypeAssignment_113622); 
              after(grammarAccess.getTableDefinitionAccess().getInputTypeINPUT_DESCRIPTIONTerminalRuleCall_1_0()); 
 
             }
@@ -18043,7 +18065,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:6767:1: RULE_STRING
             {
              before(grammarAccess.getTableDefinitionAccess().getIdSTRINGTerminalRuleCall_3_0()); 
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__TableDefinition__IdAssignment_313651); 
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__TableDefinition__IdAssignment_313653); 
              after(grammarAccess.getTableDefinitionAccess().getIdSTRINGTerminalRuleCall_3_0()); 
 
             }
@@ -18080,7 +18102,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:6782:1: ruleCommonProperties
             {
              before(grammarAccess.getTableDefinitionAccess().getPropertiesCommonPropertiesParserRuleCall_4_0()); 
-            pushFollow(FOLLOW_ruleCommonProperties_in_rule__TableDefinition__PropertiesAssignment_413682);
+            pushFollow(FOLLOW_ruleCommonProperties_in_rule__TableDefinition__PropertiesAssignment_413684);
             ruleCommonProperties();
 
             state._fsp--;
@@ -18125,7 +18147,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:6799:1: 'Interchangeable Area'
             {
              before(grammarAccess.getInterchangeableDefinitionAccess().getNameInterchangeableAreaKeyword_0_0()); 
-            match(input,44,FOLLOW_44_in_rule__InterchangeableDefinition__NameAssignment_013718); 
+            match(input,44,FOLLOW_44_in_rule__InterchangeableDefinition__NameAssignment_013720); 
              after(grammarAccess.getInterchangeableDefinitionAccess().getNameInterchangeableAreaKeyword_0_0()); 
 
             }
@@ -18166,7 +18188,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:6820:1: RULE_STRING
             {
              before(grammarAccess.getInterchangeableDefinitionAccess().getIdSTRINGTerminalRuleCall_2_0()); 
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__InterchangeableDefinition__IdAssignment_213757); 
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__InterchangeableDefinition__IdAssignment_213759); 
              after(grammarAccess.getInterchangeableDefinitionAccess().getIdSTRINGTerminalRuleCall_2_0()); 
 
             }
@@ -18203,7 +18225,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:6835:1: ruleCommonProperties
             {
              before(grammarAccess.getInterchangeableDefinitionAccess().getPropertiesCommonPropertiesParserRuleCall_3_0()); 
-            pushFollow(FOLLOW_ruleCommonProperties_in_rule__InterchangeableDefinition__PropertiesAssignment_313788);
+            pushFollow(FOLLOW_ruleCommonProperties_in_rule__InterchangeableDefinition__PropertiesAssignment_313790);
             ruleCommonProperties();
 
             state._fsp--;
@@ -18248,7 +18270,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:6852:1: 'Button'
             {
              before(grammarAccess.getButtonDefinitionAccess().getNameButtonKeyword_0_0()); 
-            match(input,41,FOLLOW_41_in_rule__ButtonDefinition__NameAssignment_013824); 
+            match(input,41,FOLLOW_41_in_rule__ButtonDefinition__NameAssignment_013826); 
              after(grammarAccess.getButtonDefinitionAccess().getNameButtonKeyword_0_0()); 
 
             }
@@ -18289,7 +18311,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:6873:1: RULE_STRING
             {
              before(grammarAccess.getButtonDefinitionAccess().getIdSTRINGTerminalRuleCall_2_0()); 
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__ButtonDefinition__IdAssignment_213863); 
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__ButtonDefinition__IdAssignment_213865); 
              after(grammarAccess.getButtonDefinitionAccess().getIdSTRINGTerminalRuleCall_2_0()); 
 
             }
@@ -18326,7 +18348,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:6888:1: ruleButtonProperties
             {
              before(grammarAccess.getButtonDefinitionAccess().getPropertiesButtonPropertiesParserRuleCall_3_0()); 
-            pushFollow(FOLLOW_ruleButtonProperties_in_rule__ButtonDefinition__PropertiesAssignment_313894);
+            pushFollow(FOLLOW_ruleButtonProperties_in_rule__ButtonDefinition__PropertiesAssignment_313896);
             ruleButtonProperties();
 
             state._fsp--;
@@ -18371,7 +18393,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:6905:1: 'Label'
             {
              before(grammarAccess.getLabelDefinitionAccess().getNameLabelKeyword_0_0()); 
-            match(input,42,FOLLOW_42_in_rule__LabelDefinition__NameAssignment_013930); 
+            match(input,42,FOLLOW_42_in_rule__LabelDefinition__NameAssignment_013932); 
              after(grammarAccess.getLabelDefinitionAccess().getNameLabelKeyword_0_0()); 
 
             }
@@ -18412,7 +18434,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:6926:1: RULE_STRING
             {
              before(grammarAccess.getLabelDefinitionAccess().getIdSTRINGTerminalRuleCall_2_0()); 
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__LabelDefinition__IdAssignment_213969); 
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__LabelDefinition__IdAssignment_213971); 
              after(grammarAccess.getLabelDefinitionAccess().getIdSTRINGTerminalRuleCall_2_0()); 
 
             }
@@ -18449,7 +18471,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:6941:1: ruleLabelProperties
             {
              before(grammarAccess.getLabelDefinitionAccess().getPropertiesLabelPropertiesParserRuleCall_3_0()); 
-            pushFollow(FOLLOW_ruleLabelProperties_in_rule__LabelDefinition__PropertiesAssignment_314000);
+            pushFollow(FOLLOW_ruleLabelProperties_in_rule__LabelDefinition__PropertiesAssignment_314002);
             ruleLabelProperties();
 
             state._fsp--;
@@ -18493,7 +18515,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:6957:1: ( rule__Interactiontype__IdAlternatives_0 )
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:6957:2: rule__Interactiontype__IdAlternatives_0
             {
-            pushFollow(FOLLOW_rule__Interactiontype__IdAlternatives_0_in_rule__Interactiontype__IdAssignment14031);
+            pushFollow(FOLLOW_rule__Interactiontype__IdAlternatives_0_in_rule__Interactiontype__IdAssignment14033);
             rule__Interactiontype__IdAlternatives_0();
 
             state._fsp--;
@@ -18537,7 +18559,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:6972:1: ruleCommonProperties
             {
              before(grammarAccess.getTextareaPropertiesAccess().getCommonPropertiesCommonPropertiesParserRuleCall_0_0()); 
-            pushFollow(FOLLOW_ruleCommonProperties_in_rule__TextareaProperties__CommonPropertiesAssignment_014064);
+            pushFollow(FOLLOW_ruleCommonProperties_in_rule__TextareaProperties__CommonPropertiesAssignment_014066);
             ruleCommonProperties();
 
             state._fsp--;
@@ -18578,7 +18600,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:6987:1: RULE_STRING
             {
              before(grammarAccess.getTextareaPropertiesAccess().getTextSTRINGTerminalRuleCall_1_1_0()); 
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__TextareaProperties__TextAssignment_1_114095); 
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__TextareaProperties__TextAssignment_1_114097); 
              after(grammarAccess.getTextareaPropertiesAccess().getTextSTRINGTerminalRuleCall_1_1_0()); 
 
             }
@@ -18615,7 +18637,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:7002:1: RULE_BOOLEAN
             {
              before(grammarAccess.getTextareaPropertiesAccess().getEditableBOOLEANTerminalRuleCall_2_1_0()); 
-            match(input,RULE_BOOLEAN,FOLLOW_RULE_BOOLEAN_in_rule__TextareaProperties__EditableAssignment_2_114126); 
+            match(input,RULE_BOOLEAN,FOLLOW_RULE_BOOLEAN_in_rule__TextareaProperties__EditableAssignment_2_114128); 
              after(grammarAccess.getTextareaPropertiesAccess().getEditableBOOLEANTerminalRuleCall_2_1_0()); 
 
             }
@@ -18652,7 +18674,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:7017:1: ruleCommonProperties
             {
              before(grammarAccess.getTextfieldPropertiesAccess().getCommonPropertiesCommonPropertiesParserRuleCall_0_0()); 
-            pushFollow(FOLLOW_ruleCommonProperties_in_rule__TextfieldProperties__CommonPropertiesAssignment_014157);
+            pushFollow(FOLLOW_ruleCommonProperties_in_rule__TextfieldProperties__CommonPropertiesAssignment_014159);
             ruleCommonProperties();
 
             state._fsp--;
@@ -18693,7 +18715,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:7032:1: RULE_STRING
             {
              before(grammarAccess.getTextfieldPropertiesAccess().getTextSTRINGTerminalRuleCall_1_1_0()); 
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__TextfieldProperties__TextAssignment_1_114188); 
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__TextfieldProperties__TextAssignment_1_114190); 
              after(grammarAccess.getTextfieldPropertiesAccess().getTextSTRINGTerminalRuleCall_1_1_0()); 
 
             }
@@ -18730,7 +18752,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:7047:1: RULE_BOOLEAN
             {
              before(grammarAccess.getTextfieldPropertiesAccess().getEditableBOOLEANTerminalRuleCall_2_1_0()); 
-            match(input,RULE_BOOLEAN,FOLLOW_RULE_BOOLEAN_in_rule__TextfieldProperties__EditableAssignment_2_114219); 
+            match(input,RULE_BOOLEAN,FOLLOW_RULE_BOOLEAN_in_rule__TextfieldProperties__EditableAssignment_2_114221); 
              after(grammarAccess.getTextfieldPropertiesAccess().getEditableBOOLEANTerminalRuleCall_2_1_0()); 
 
             }
@@ -18767,7 +18789,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:7062:1: ruleCommonProperties
             {
              before(grammarAccess.getLabelPropertiesAccess().getCommonPropertiesCommonPropertiesParserRuleCall_0_0()); 
-            pushFollow(FOLLOW_ruleCommonProperties_in_rule__LabelProperties__CommonPropertiesAssignment_014250);
+            pushFollow(FOLLOW_ruleCommonProperties_in_rule__LabelProperties__CommonPropertiesAssignment_014252);
             ruleCommonProperties();
 
             state._fsp--;
@@ -18808,7 +18830,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:7077:1: RULE_STRING
             {
              before(grammarAccess.getLabelPropertiesAccess().getTextSTRINGTerminalRuleCall_1_1_0()); 
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__LabelProperties__TextAssignment_1_114281); 
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__LabelProperties__TextAssignment_1_114283); 
              after(grammarAccess.getLabelPropertiesAccess().getTextSTRINGTerminalRuleCall_1_1_0()); 
 
             }
@@ -18845,7 +18867,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:7092:1: ruleCommonProperties
             {
              before(grammarAccess.getButtonPropertiesAccess().getCommonPropertiesCommonPropertiesParserRuleCall_0_0()); 
-            pushFollow(FOLLOW_ruleCommonProperties_in_rule__ButtonProperties__CommonPropertiesAssignment_014312);
+            pushFollow(FOLLOW_ruleCommonProperties_in_rule__ButtonProperties__CommonPropertiesAssignment_014314);
             ruleCommonProperties();
 
             state._fsp--;
@@ -18886,7 +18908,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:7107:1: RULE_STRING
             {
              before(grammarAccess.getButtonPropertiesAccess().getTextSTRINGTerminalRuleCall_1_1_0()); 
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__ButtonProperties__TextAssignment_1_114343); 
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__ButtonProperties__TextAssignment_1_114345); 
              after(grammarAccess.getButtonPropertiesAccess().getTextSTRINGTerminalRuleCall_1_1_0()); 
 
             }
@@ -18923,7 +18945,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:7122:1: RULE_STRING
             {
              before(grammarAccess.getCommonPropertiesAccess().getPropertyKeySTRINGTerminalRuleCall_1_2_0()); 
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__CommonProperties__PropertyKeyAssignment_1_214374); 
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__CommonProperties__PropertyKeyAssignment_1_214376); 
              after(grammarAccess.getCommonPropertiesAccess().getPropertyKeySTRINGTerminalRuleCall_1_2_0()); 
 
             }
@@ -18960,7 +18982,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:7137:1: RULE_STRING
             {
              before(grammarAccess.getCommonPropertiesAccess().getLayoutKeySTRINGTerminalRuleCall_2_2_0()); 
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__CommonProperties__LayoutKeyAssignment_2_214405); 
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__CommonProperties__LayoutKeyAssignment_2_214407); 
              after(grammarAccess.getCommonPropertiesAccess().getLayoutKeySTRINGTerminalRuleCall_2_2_0()); 
 
             }
@@ -18997,7 +19019,7 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:7152:1: ruleInteractiontype
             {
              before(grammarAccess.getCommonPropertiesAccess().getInteractiontypeInteractiontypeParserRuleCall_3_2_0()); 
-            pushFollow(FOLLOW_ruleInteractiontype_in_rule__CommonProperties__InteractiontypeAssignment_3_214436);
+            pushFollow(FOLLOW_ruleInteractiontype_in_rule__CommonProperties__InteractiontypeAssignment_3_214438);
             ruleInteractiontype();
 
             state._fsp--;
@@ -19045,8 +19067,8 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
             "\1\10\1\uffff\1\11",
             "\1\10\1\uffff\1\11",
             "\1\10\1\uffff\1\11",
-            "\1\12\24\uffff\1\11",
-            "\1\13\24\uffff\1\11",
+            "\1\12\22\uffff\1\10\1\uffff\1\11",
+            "\1\13\22\uffff\1\10\1\uffff\1\11",
             "\1\14\21\uffff\1\10\1\uffff\1\11",
             "",
             "",
@@ -19451,248 +19473,248 @@ public class InternalGuiDSLParser extends AbstractInternalContentAssistParser {
     public static final BitSet FOLLOW_rule__TextareaDefinition__IdAssignment_2_in_rule__TextareaDefinition__Group__2__Impl7794 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__TextareaDefinition__Group__3__Impl_in_rule__TextareaDefinition__Group__37824 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__TextareaDefinition__PropertiesAssignment_3_in_rule__TextareaDefinition__Group__3__Impl7851 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__TreeDefinition__Group__0__Impl_in_rule__TreeDefinition__Group__07890 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_rule__TreeDefinition__Group__0__Impl_in_rule__TreeDefinition__Group__07890 = new BitSet(new long[]{0x0000000001000020L});
     public static final BitSet FOLLOW_rule__TreeDefinition__Group__1_in_rule__TreeDefinition__Group__07893 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__TreeDefinition__NameAssignment_0_in_rule__TreeDefinition__Group__0__Impl7920 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__TreeDefinition__Group__1__Impl_in_rule__TreeDefinition__Group__17950 = new BitSet(new long[]{0x0000000001000000L});
+    public static final BitSet FOLLOW_rule__TreeDefinition__Group__1__Impl_in_rule__TreeDefinition__Group__17950 = new BitSet(new long[]{0x0000000001000020L});
     public static final BitSet FOLLOW_rule__TreeDefinition__Group__2_in_rule__TreeDefinition__Group__17953 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__TreeDefinition__InputTypeAssignment_1_in_rule__TreeDefinition__Group__1__Impl7980 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__TreeDefinition__Group__2__Impl_in_rule__TreeDefinition__Group__28010 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__TreeDefinition__Group__3_in_rule__TreeDefinition__Group__28013 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_24_in_rule__TreeDefinition__Group__2__Impl8041 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__TreeDefinition__Group__3__Impl_in_rule__TreeDefinition__Group__38072 = new BitSet(new long[]{0x0000000020000000L});
-    public static final BitSet FOLLOW_rule__TreeDefinition__Group__4_in_rule__TreeDefinition__Group__38075 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__TreeDefinition__IdAssignment_3_in_rule__TreeDefinition__Group__3__Impl8102 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__TreeDefinition__Group__4__Impl_in_rule__TreeDefinition__Group__48132 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__TreeDefinition__PropertiesAssignment_4_in_rule__TreeDefinition__Group__4__Impl8159 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__TableDefinition__Group__0__Impl_in_rule__TableDefinition__Group__08200 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_rule__TableDefinition__Group__1_in_rule__TableDefinition__Group__08203 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__TableDefinition__NameAssignment_0_in_rule__TableDefinition__Group__0__Impl8230 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__TableDefinition__Group__1__Impl_in_rule__TableDefinition__Group__18260 = new BitSet(new long[]{0x0000000001000000L});
-    public static final BitSet FOLLOW_rule__TableDefinition__Group__2_in_rule__TableDefinition__Group__18263 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__TableDefinition__InputTypeAssignment_1_in_rule__TableDefinition__Group__1__Impl8290 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__TableDefinition__Group__2__Impl_in_rule__TableDefinition__Group__28320 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__TableDefinition__Group__3_in_rule__TableDefinition__Group__28323 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_24_in_rule__TableDefinition__Group__2__Impl8351 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__TableDefinition__Group__3__Impl_in_rule__TableDefinition__Group__38382 = new BitSet(new long[]{0x0000000020000000L});
-    public static final BitSet FOLLOW_rule__TableDefinition__Group__4_in_rule__TableDefinition__Group__38385 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__TableDefinition__IdAssignment_3_in_rule__TableDefinition__Group__3__Impl8412 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__TableDefinition__Group__4__Impl_in_rule__TableDefinition__Group__48442 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__TableDefinition__PropertiesAssignment_4_in_rule__TableDefinition__Group__4__Impl8469 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__InterchangeableDefinition__Group__0__Impl_in_rule__InterchangeableDefinition__Group__08510 = new BitSet(new long[]{0x0000000001000000L});
-    public static final BitSet FOLLOW_rule__InterchangeableDefinition__Group__1_in_rule__InterchangeableDefinition__Group__08513 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__InterchangeableDefinition__NameAssignment_0_in_rule__InterchangeableDefinition__Group__0__Impl8540 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__InterchangeableDefinition__Group__1__Impl_in_rule__InterchangeableDefinition__Group__18570 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__InterchangeableDefinition__Group__2_in_rule__InterchangeableDefinition__Group__18573 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_24_in_rule__InterchangeableDefinition__Group__1__Impl8601 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__InterchangeableDefinition__Group__2__Impl_in_rule__InterchangeableDefinition__Group__28632 = new BitSet(new long[]{0x0000000020000000L});
-    public static final BitSet FOLLOW_rule__InterchangeableDefinition__Group__3_in_rule__InterchangeableDefinition__Group__28635 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__InterchangeableDefinition__IdAssignment_2_in_rule__InterchangeableDefinition__Group__2__Impl8662 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__InterchangeableDefinition__Group__3__Impl_in_rule__InterchangeableDefinition__Group__38692 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__InterchangeableDefinition__PropertiesAssignment_3_in_rule__InterchangeableDefinition__Group__3__Impl8719 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ButtonDefinition__Group__0__Impl_in_rule__ButtonDefinition__Group__08758 = new BitSet(new long[]{0x0000000001000000L});
-    public static final BitSet FOLLOW_rule__ButtonDefinition__Group__1_in_rule__ButtonDefinition__Group__08761 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ButtonDefinition__NameAssignment_0_in_rule__ButtonDefinition__Group__0__Impl8788 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ButtonDefinition__Group__1__Impl_in_rule__ButtonDefinition__Group__18818 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__ButtonDefinition__Group__2_in_rule__ButtonDefinition__Group__18821 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_24_in_rule__ButtonDefinition__Group__1__Impl8849 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ButtonDefinition__Group__2__Impl_in_rule__ButtonDefinition__Group__28880 = new BitSet(new long[]{0x0000000020000000L});
-    public static final BitSet FOLLOW_rule__ButtonDefinition__Group__3_in_rule__ButtonDefinition__Group__28883 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ButtonDefinition__IdAssignment_2_in_rule__ButtonDefinition__Group__2__Impl8910 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ButtonDefinition__Group__3__Impl_in_rule__ButtonDefinition__Group__38940 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ButtonDefinition__PropertiesAssignment_3_in_rule__ButtonDefinition__Group__3__Impl8967 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__LabelDefinition__Group__0__Impl_in_rule__LabelDefinition__Group__09006 = new BitSet(new long[]{0x0000000001000000L});
-    public static final BitSet FOLLOW_rule__LabelDefinition__Group__1_in_rule__LabelDefinition__Group__09009 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__LabelDefinition__NameAssignment_0_in_rule__LabelDefinition__Group__0__Impl9036 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__LabelDefinition__Group__1__Impl_in_rule__LabelDefinition__Group__19066 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__LabelDefinition__Group__2_in_rule__LabelDefinition__Group__19069 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_24_in_rule__LabelDefinition__Group__1__Impl9097 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__LabelDefinition__Group__2__Impl_in_rule__LabelDefinition__Group__29128 = new BitSet(new long[]{0x0000000020000000L});
-    public static final BitSet FOLLOW_rule__LabelDefinition__Group__3_in_rule__LabelDefinition__Group__29131 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__LabelDefinition__IdAssignment_2_in_rule__LabelDefinition__Group__2__Impl9158 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__LabelDefinition__Group__3__Impl_in_rule__LabelDefinition__Group__39188 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__LabelDefinition__PropertiesAssignment_3_in_rule__LabelDefinition__Group__3__Impl9215 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__TextareaProperties__Group__0__Impl_in_rule__TextareaProperties__Group__09254 = new BitSet(new long[]{0x0000000018000000L});
-    public static final BitSet FOLLOW_rule__TextareaProperties__Group__1_in_rule__TextareaProperties__Group__09257 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__TextareaProperties__CommonPropertiesAssignment_0_in_rule__TextareaProperties__Group__0__Impl9284 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__TextareaProperties__Group__1__Impl_in_rule__TextareaProperties__Group__19314 = new BitSet(new long[]{0x0000000018000000L});
-    public static final BitSet FOLLOW_rule__TextareaProperties__Group__2_in_rule__TextareaProperties__Group__19317 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__TextareaProperties__Group_1__0_in_rule__TextareaProperties__Group__1__Impl9344 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__TextareaProperties__Group__2__Impl_in_rule__TextareaProperties__Group__29375 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__TextareaProperties__Group_2__0_in_rule__TextareaProperties__Group__2__Impl9402 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__TextareaProperties__Group_1__0__Impl_in_rule__TextareaProperties__Group_1__09439 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__TextareaProperties__Group_1__1_in_rule__TextareaProperties__Group_1__09442 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_27_in_rule__TextareaProperties__Group_1__0__Impl9470 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__TextareaProperties__Group_1__1__Impl_in_rule__TextareaProperties__Group_1__19501 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__TextareaProperties__TextAssignment_1_1_in_rule__TextareaProperties__Group_1__1__Impl9528 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__TextareaProperties__Group_2__0__Impl_in_rule__TextareaProperties__Group_2__09562 = new BitSet(new long[]{0x0000000000000080L});
-    public static final BitSet FOLLOW_rule__TextareaProperties__Group_2__1_in_rule__TextareaProperties__Group_2__09565 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_28_in_rule__TextareaProperties__Group_2__0__Impl9593 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__TextareaProperties__Group_2__1__Impl_in_rule__TextareaProperties__Group_2__19624 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__TextareaProperties__EditableAssignment_2_1_in_rule__TextareaProperties__Group_2__1__Impl9651 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__TextfieldProperties__Group__0__Impl_in_rule__TextfieldProperties__Group__09685 = new BitSet(new long[]{0x0000000018000000L});
-    public static final BitSet FOLLOW_rule__TextfieldProperties__Group__1_in_rule__TextfieldProperties__Group__09688 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__TextfieldProperties__CommonPropertiesAssignment_0_in_rule__TextfieldProperties__Group__0__Impl9715 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__TextfieldProperties__Group__1__Impl_in_rule__TextfieldProperties__Group__19745 = new BitSet(new long[]{0x0000000018000000L});
-    public static final BitSet FOLLOW_rule__TextfieldProperties__Group__2_in_rule__TextfieldProperties__Group__19748 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__TextfieldProperties__Group_1__0_in_rule__TextfieldProperties__Group__1__Impl9775 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__TextfieldProperties__Group__2__Impl_in_rule__TextfieldProperties__Group__29806 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__TextfieldProperties__Group_2__0_in_rule__TextfieldProperties__Group__2__Impl9833 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__TextfieldProperties__Group_1__0__Impl_in_rule__TextfieldProperties__Group_1__09870 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__TextfieldProperties__Group_1__1_in_rule__TextfieldProperties__Group_1__09873 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_27_in_rule__TextfieldProperties__Group_1__0__Impl9901 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__TextfieldProperties__Group_1__1__Impl_in_rule__TextfieldProperties__Group_1__19932 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__TextfieldProperties__TextAssignment_1_1_in_rule__TextfieldProperties__Group_1__1__Impl9959 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__TextfieldProperties__Group_2__0__Impl_in_rule__TextfieldProperties__Group_2__09993 = new BitSet(new long[]{0x0000000000000080L});
-    public static final BitSet FOLLOW_rule__TextfieldProperties__Group_2__1_in_rule__TextfieldProperties__Group_2__09996 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_28_in_rule__TextfieldProperties__Group_2__0__Impl10024 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__TextfieldProperties__Group_2__1__Impl_in_rule__TextfieldProperties__Group_2__110055 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__TextfieldProperties__EditableAssignment_2_1_in_rule__TextfieldProperties__Group_2__1__Impl10082 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__LabelProperties__Group__0__Impl_in_rule__LabelProperties__Group__010116 = new BitSet(new long[]{0x0000000008000000L});
-    public static final BitSet FOLLOW_rule__LabelProperties__Group__1_in_rule__LabelProperties__Group__010119 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__LabelProperties__CommonPropertiesAssignment_0_in_rule__LabelProperties__Group__0__Impl10146 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__LabelProperties__Group__1__Impl_in_rule__LabelProperties__Group__110176 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__LabelProperties__Group_1__0_in_rule__LabelProperties__Group__1__Impl10203 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__LabelProperties__Group_1__0__Impl_in_rule__LabelProperties__Group_1__010238 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__LabelProperties__Group_1__1_in_rule__LabelProperties__Group_1__010241 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_27_in_rule__LabelProperties__Group_1__0__Impl10269 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__LabelProperties__Group_1__1__Impl_in_rule__LabelProperties__Group_1__110300 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__LabelProperties__TextAssignment_1_1_in_rule__LabelProperties__Group_1__1__Impl10327 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ButtonProperties__Group__0__Impl_in_rule__ButtonProperties__Group__010361 = new BitSet(new long[]{0x0000000008000000L});
-    public static final BitSet FOLLOW_rule__ButtonProperties__Group__1_in_rule__ButtonProperties__Group__010364 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ButtonProperties__CommonPropertiesAssignment_0_in_rule__ButtonProperties__Group__0__Impl10391 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ButtonProperties__Group__1__Impl_in_rule__ButtonProperties__Group__110421 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ButtonProperties__Group_1__0_in_rule__ButtonProperties__Group__1__Impl10448 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ButtonProperties__Group_1__0__Impl_in_rule__ButtonProperties__Group_1__010483 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__ButtonProperties__Group_1__1_in_rule__ButtonProperties__Group_1__010486 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_27_in_rule__ButtonProperties__Group_1__0__Impl10514 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ButtonProperties__Group_1__1__Impl_in_rule__ButtonProperties__Group_1__110545 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ButtonProperties__TextAssignment_1_1_in_rule__ButtonProperties__Group_1__1__Impl10572 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CommonProperties__Group__0__Impl_in_rule__CommonProperties__Group__010606 = new BitSet(new long[]{0x0000000340000000L});
-    public static final BitSet FOLLOW_rule__CommonProperties__Group__1_in_rule__CommonProperties__Group__010609 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_29_in_rule__CommonProperties__Group__0__Impl10637 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CommonProperties__Group__1__Impl_in_rule__CommonProperties__Group__110668 = new BitSet(new long[]{0x0000000340000000L});
-    public static final BitSet FOLLOW_rule__CommonProperties__Group__2_in_rule__CommonProperties__Group__110671 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CommonProperties__Group_1__0_in_rule__CommonProperties__Group__1__Impl10698 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CommonProperties__Group__2__Impl_in_rule__CommonProperties__Group__210729 = new BitSet(new long[]{0x0000000340000000L});
-    public static final BitSet FOLLOW_rule__CommonProperties__Group__3_in_rule__CommonProperties__Group__210732 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CommonProperties__Group_2__0_in_rule__CommonProperties__Group__2__Impl10759 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CommonProperties__Group__3__Impl_in_rule__CommonProperties__Group__310790 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CommonProperties__Group_3__0_in_rule__CommonProperties__Group__3__Impl10817 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CommonProperties__Group_1__0__Impl_in_rule__CommonProperties__Group_1__010856 = new BitSet(new long[]{0x0000000080000000L});
-    public static final BitSet FOLLOW_rule__CommonProperties__Group_1__1_in_rule__CommonProperties__Group_1__010859 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_30_in_rule__CommonProperties__Group_1__0__Impl10887 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CommonProperties__Group_1__1__Impl_in_rule__CommonProperties__Group_1__110918 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__CommonProperties__Group_1__2_in_rule__CommonProperties__Group_1__110921 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_31_in_rule__CommonProperties__Group_1__1__Impl10949 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CommonProperties__Group_1__2__Impl_in_rule__CommonProperties__Group_1__210980 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CommonProperties__PropertyKeyAssignment_1_2_in_rule__CommonProperties__Group_1__2__Impl11007 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CommonProperties__Group_2__0__Impl_in_rule__CommonProperties__Group_2__011043 = new BitSet(new long[]{0x0000000080000000L});
-    public static final BitSet FOLLOW_rule__CommonProperties__Group_2__1_in_rule__CommonProperties__Group_2__011046 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_32_in_rule__CommonProperties__Group_2__0__Impl11074 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CommonProperties__Group_2__1__Impl_in_rule__CommonProperties__Group_2__111105 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__CommonProperties__Group_2__2_in_rule__CommonProperties__Group_2__111108 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_31_in_rule__CommonProperties__Group_2__1__Impl11136 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CommonProperties__Group_2__2__Impl_in_rule__CommonProperties__Group_2__211167 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CommonProperties__LayoutKeyAssignment_2_2_in_rule__CommonProperties__Group_2__2__Impl11194 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CommonProperties__Group_3__0__Impl_in_rule__CommonProperties__Group_3__011230 = new BitSet(new long[]{0x0000000080000000L});
-    public static final BitSet FOLLOW_rule__CommonProperties__Group_3__1_in_rule__CommonProperties__Group_3__011233 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_33_in_rule__CommonProperties__Group_3__0__Impl11261 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CommonProperties__Group_3__1__Impl_in_rule__CommonProperties__Group_3__111292 = new BitSet(new long[]{0x0000000000070000L});
-    public static final BitSet FOLLOW_rule__CommonProperties__Group_3__2_in_rule__CommonProperties__Group_3__111295 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_31_in_rule__CommonProperties__Group_3__1__Impl11323 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CommonProperties__Group_3__2__Impl_in_rule__CommonProperties__Group_3__211354 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CommonProperties__InteractiontypeAssignment_3_2_in_rule__CommonProperties__Group_3__2__Impl11383 = new BitSet(new long[]{0x0000000000070002L});
-    public static final BitSet FOLLOW_rule__CommonProperties__InteractiontypeAssignment_3_2_in_rule__CommonProperties__Group_3__2__Impl11395 = new BitSet(new long[]{0x0000000000070002L});
-    public static final BitSet FOLLOW_ruleTypeDefinition_in_rule__UIDescription__TypeDefinitionAssignment_011439 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleProperty_in_rule__UIDescription__PropertyAssignment_111470 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleLayout_in_rule__UIDescription__LayoutAssignment_211501 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleUsedDescriptions_in_rule__UIDescription__UsedDescriptionsAssignment_311532 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleRefinement_in_rule__UIDescription__RefinementsAssignment_411563 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleDefinition_in_rule__UIDescription__DefinitionsAssignment_511594 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleStructure_in_rule__UIDescription__StructureAssignment_611625 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleType_in_rule__TypeDefinition__TypeAssignment_111656 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Type__IdAlternatives_0_in_rule__Type__IdAssignment11687 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__Property__PropertiesFilesAssignment_111720 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__Layout__LayoutFilesAssignment_111751 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleDescriptionType_in_rule__UsedDescriptions__DescriptionAssignment_111782 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__UsedDescriptions__IdAssignment_2_111813 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__UIDescriptionImport__DescriptionNameAssignment11844 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleComponentRefinement_in_rule__Refinement__ConcreteRefinementAssignment_011875 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleComponentDefinition_in_rule__Definition__ConcreteDefitionAssignment_011906 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_34_in_rule__Structure__NameAssignment_011942 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleElement_in_rule__Structure__OrderedElementsAssignment_211981 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__Element__IdAssignment12012 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_35_in_rule__TableRefinement__NameAssignment_012048 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_INPUT_DESCRIPTION_in_rule__TableRefinement__InputTypeAssignment_112087 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__TableRefinement__IdAssignment_312118 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleCommonProperties_in_rule__TableRefinement__PropertiesAssignment_412149 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_36_in_rule__TabViewRefinement__NameAssignment_012185 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleTabDefinition_in_rule__TabViewRefinement__TabsAssignment_112224 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__TabViewRefinement__IdAssignment_312255 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleCommonProperties_in_rule__TabViewRefinement__PropertiesAssignment_412286 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_37_in_rule__TreeRefinement__NameAssignment_012322 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_INPUT_DESCRIPTION_in_rule__TreeRefinement__InputTypeAssignment_112361 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__TreeRefinement__IdAssignment_312392 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleCommonProperties_in_rule__TreeRefinement__PropertiesAssignment_412423 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_38_in_rule__InterchangeableRefinement__NameAssignment_012459 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__InterchangeableRefinement__IdAssignment_212498 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleCommonProperties_in_rule__InterchangeableRefinement__PropertiesAssignment_312529 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_39_in_rule__TextareaRefinement__NameAssignment_012565 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__TextareaRefinement__IdAssignment_212604 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleTextareaProperties_in_rule__TextareaRefinement__PropertiesAssignment_312635 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_40_in_rule__TextfieldRefinement__NameAssignment_012671 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__TextfieldRefinement__IdAssignment_212710 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleTextfieldProperties_in_rule__TextfieldRefinement__PropertiesAssignment_312741 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_41_in_rule__ButtonRefinement__NameAssignment_012777 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__ButtonRefinement__IdAssignment_212816 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleButtonProperties_in_rule__ButtonRefinement__PropertiesAssignment_312847 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_42_in_rule__LabelRefinement__NameAssignment_012883 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__LabelRefinement__IdAssignment_212922 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleLabelProperties_in_rule__LabelRefinement__PropertiesAssignment_312953 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_36_in_rule__TabViewDefinition__NameAssignment_012989 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleTabDefinition_in_rule__TabViewDefinition__TabsAssignment_113028 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__TabViewDefinition__IdAssignment_313059 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleCommonProperties_in_rule__TabViewDefinition__PropertiesAssignment_413090 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_TABNAME_in_rule__TabDefinition__NameAssignment13121 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_43_in_rule__Multiselection__NameAssignment_013157 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_INPUT_DESCRIPTION_in_rule__Multiselection__InputTypeAssignment_113196 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_40_in_rule__TextfieldDefinition__NameAssignment_013232 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__TextfieldDefinition__IdAssignment_213271 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleTextfieldProperties_in_rule__TextfieldDefinition__PropertiesAssignment_313302 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_39_in_rule__TextareaDefinition__NameAssignment_013338 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__TextareaDefinition__IdAssignment_213377 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleTextareaProperties_in_rule__TextareaDefinition__PropertiesAssignment_313408 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_37_in_rule__TreeDefinition__NameAssignment_013444 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_INPUT_DESCRIPTION_in_rule__TreeDefinition__InputTypeAssignment_113483 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__TreeDefinition__IdAssignment_313514 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleCommonProperties_in_rule__TreeDefinition__PropertiesAssignment_413545 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_35_in_rule__TableDefinition__NameAssignment_013581 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_INPUT_DESCRIPTION_in_rule__TableDefinition__InputTypeAssignment_113620 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__TableDefinition__IdAssignment_313651 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleCommonProperties_in_rule__TableDefinition__PropertiesAssignment_413682 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_44_in_rule__InterchangeableDefinition__NameAssignment_013718 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__InterchangeableDefinition__IdAssignment_213757 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleCommonProperties_in_rule__InterchangeableDefinition__PropertiesAssignment_313788 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_41_in_rule__ButtonDefinition__NameAssignment_013824 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__ButtonDefinition__IdAssignment_213863 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleButtonProperties_in_rule__ButtonDefinition__PropertiesAssignment_313894 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_42_in_rule__LabelDefinition__NameAssignment_013930 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__LabelDefinition__IdAssignment_213969 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleLabelProperties_in_rule__LabelDefinition__PropertiesAssignment_314000 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Interactiontype__IdAlternatives_0_in_rule__Interactiontype__IdAssignment14031 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleCommonProperties_in_rule__TextareaProperties__CommonPropertiesAssignment_014064 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__TextareaProperties__TextAssignment_1_114095 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_BOOLEAN_in_rule__TextareaProperties__EditableAssignment_2_114126 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleCommonProperties_in_rule__TextfieldProperties__CommonPropertiesAssignment_014157 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__TextfieldProperties__TextAssignment_1_114188 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_BOOLEAN_in_rule__TextfieldProperties__EditableAssignment_2_114219 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleCommonProperties_in_rule__LabelProperties__CommonPropertiesAssignment_014250 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__LabelProperties__TextAssignment_1_114281 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleCommonProperties_in_rule__ButtonProperties__CommonPropertiesAssignment_014312 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__ButtonProperties__TextAssignment_1_114343 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__CommonProperties__PropertyKeyAssignment_1_214374 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__CommonProperties__LayoutKeyAssignment_2_214405 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleInteractiontype_in_rule__CommonProperties__InteractiontypeAssignment_3_214436 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__TreeDefinition__Group__2__Impl_in_rule__TreeDefinition__Group__28011 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__TreeDefinition__Group__3_in_rule__TreeDefinition__Group__28014 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_24_in_rule__TreeDefinition__Group__2__Impl8042 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__TreeDefinition__Group__3__Impl_in_rule__TreeDefinition__Group__38073 = new BitSet(new long[]{0x0000000020000000L});
+    public static final BitSet FOLLOW_rule__TreeDefinition__Group__4_in_rule__TreeDefinition__Group__38076 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__TreeDefinition__IdAssignment_3_in_rule__TreeDefinition__Group__3__Impl8103 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__TreeDefinition__Group__4__Impl_in_rule__TreeDefinition__Group__48133 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__TreeDefinition__PropertiesAssignment_4_in_rule__TreeDefinition__Group__4__Impl8160 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__TableDefinition__Group__0__Impl_in_rule__TableDefinition__Group__08201 = new BitSet(new long[]{0x0000000001000020L});
+    public static final BitSet FOLLOW_rule__TableDefinition__Group__1_in_rule__TableDefinition__Group__08204 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__TableDefinition__NameAssignment_0_in_rule__TableDefinition__Group__0__Impl8231 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__TableDefinition__Group__1__Impl_in_rule__TableDefinition__Group__18261 = new BitSet(new long[]{0x0000000001000020L});
+    public static final BitSet FOLLOW_rule__TableDefinition__Group__2_in_rule__TableDefinition__Group__18264 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__TableDefinition__InputTypeAssignment_1_in_rule__TableDefinition__Group__1__Impl8291 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__TableDefinition__Group__2__Impl_in_rule__TableDefinition__Group__28322 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__TableDefinition__Group__3_in_rule__TableDefinition__Group__28325 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_24_in_rule__TableDefinition__Group__2__Impl8353 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__TableDefinition__Group__3__Impl_in_rule__TableDefinition__Group__38384 = new BitSet(new long[]{0x0000000020000000L});
+    public static final BitSet FOLLOW_rule__TableDefinition__Group__4_in_rule__TableDefinition__Group__38387 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__TableDefinition__IdAssignment_3_in_rule__TableDefinition__Group__3__Impl8414 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__TableDefinition__Group__4__Impl_in_rule__TableDefinition__Group__48444 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__TableDefinition__PropertiesAssignment_4_in_rule__TableDefinition__Group__4__Impl8471 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__InterchangeableDefinition__Group__0__Impl_in_rule__InterchangeableDefinition__Group__08512 = new BitSet(new long[]{0x0000000001000000L});
+    public static final BitSet FOLLOW_rule__InterchangeableDefinition__Group__1_in_rule__InterchangeableDefinition__Group__08515 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__InterchangeableDefinition__NameAssignment_0_in_rule__InterchangeableDefinition__Group__0__Impl8542 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__InterchangeableDefinition__Group__1__Impl_in_rule__InterchangeableDefinition__Group__18572 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__InterchangeableDefinition__Group__2_in_rule__InterchangeableDefinition__Group__18575 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_24_in_rule__InterchangeableDefinition__Group__1__Impl8603 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__InterchangeableDefinition__Group__2__Impl_in_rule__InterchangeableDefinition__Group__28634 = new BitSet(new long[]{0x0000000020000000L});
+    public static final BitSet FOLLOW_rule__InterchangeableDefinition__Group__3_in_rule__InterchangeableDefinition__Group__28637 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__InterchangeableDefinition__IdAssignment_2_in_rule__InterchangeableDefinition__Group__2__Impl8664 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__InterchangeableDefinition__Group__3__Impl_in_rule__InterchangeableDefinition__Group__38694 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__InterchangeableDefinition__PropertiesAssignment_3_in_rule__InterchangeableDefinition__Group__3__Impl8721 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ButtonDefinition__Group__0__Impl_in_rule__ButtonDefinition__Group__08760 = new BitSet(new long[]{0x0000000001000000L});
+    public static final BitSet FOLLOW_rule__ButtonDefinition__Group__1_in_rule__ButtonDefinition__Group__08763 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ButtonDefinition__NameAssignment_0_in_rule__ButtonDefinition__Group__0__Impl8790 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ButtonDefinition__Group__1__Impl_in_rule__ButtonDefinition__Group__18820 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__ButtonDefinition__Group__2_in_rule__ButtonDefinition__Group__18823 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_24_in_rule__ButtonDefinition__Group__1__Impl8851 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ButtonDefinition__Group__2__Impl_in_rule__ButtonDefinition__Group__28882 = new BitSet(new long[]{0x0000000020000000L});
+    public static final BitSet FOLLOW_rule__ButtonDefinition__Group__3_in_rule__ButtonDefinition__Group__28885 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ButtonDefinition__IdAssignment_2_in_rule__ButtonDefinition__Group__2__Impl8912 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ButtonDefinition__Group__3__Impl_in_rule__ButtonDefinition__Group__38942 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ButtonDefinition__PropertiesAssignment_3_in_rule__ButtonDefinition__Group__3__Impl8969 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__LabelDefinition__Group__0__Impl_in_rule__LabelDefinition__Group__09008 = new BitSet(new long[]{0x0000000001000000L});
+    public static final BitSet FOLLOW_rule__LabelDefinition__Group__1_in_rule__LabelDefinition__Group__09011 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__LabelDefinition__NameAssignment_0_in_rule__LabelDefinition__Group__0__Impl9038 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__LabelDefinition__Group__1__Impl_in_rule__LabelDefinition__Group__19068 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__LabelDefinition__Group__2_in_rule__LabelDefinition__Group__19071 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_24_in_rule__LabelDefinition__Group__1__Impl9099 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__LabelDefinition__Group__2__Impl_in_rule__LabelDefinition__Group__29130 = new BitSet(new long[]{0x0000000020000000L});
+    public static final BitSet FOLLOW_rule__LabelDefinition__Group__3_in_rule__LabelDefinition__Group__29133 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__LabelDefinition__IdAssignment_2_in_rule__LabelDefinition__Group__2__Impl9160 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__LabelDefinition__Group__3__Impl_in_rule__LabelDefinition__Group__39190 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__LabelDefinition__PropertiesAssignment_3_in_rule__LabelDefinition__Group__3__Impl9217 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__TextareaProperties__Group__0__Impl_in_rule__TextareaProperties__Group__09256 = new BitSet(new long[]{0x0000000018000000L});
+    public static final BitSet FOLLOW_rule__TextareaProperties__Group__1_in_rule__TextareaProperties__Group__09259 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__TextareaProperties__CommonPropertiesAssignment_0_in_rule__TextareaProperties__Group__0__Impl9286 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__TextareaProperties__Group__1__Impl_in_rule__TextareaProperties__Group__19316 = new BitSet(new long[]{0x0000000018000000L});
+    public static final BitSet FOLLOW_rule__TextareaProperties__Group__2_in_rule__TextareaProperties__Group__19319 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__TextareaProperties__Group_1__0_in_rule__TextareaProperties__Group__1__Impl9346 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__TextareaProperties__Group__2__Impl_in_rule__TextareaProperties__Group__29377 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__TextareaProperties__Group_2__0_in_rule__TextareaProperties__Group__2__Impl9404 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__TextareaProperties__Group_1__0__Impl_in_rule__TextareaProperties__Group_1__09441 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__TextareaProperties__Group_1__1_in_rule__TextareaProperties__Group_1__09444 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_27_in_rule__TextareaProperties__Group_1__0__Impl9472 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__TextareaProperties__Group_1__1__Impl_in_rule__TextareaProperties__Group_1__19503 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__TextareaProperties__TextAssignment_1_1_in_rule__TextareaProperties__Group_1__1__Impl9530 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__TextareaProperties__Group_2__0__Impl_in_rule__TextareaProperties__Group_2__09564 = new BitSet(new long[]{0x0000000000000080L});
+    public static final BitSet FOLLOW_rule__TextareaProperties__Group_2__1_in_rule__TextareaProperties__Group_2__09567 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_28_in_rule__TextareaProperties__Group_2__0__Impl9595 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__TextareaProperties__Group_2__1__Impl_in_rule__TextareaProperties__Group_2__19626 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__TextareaProperties__EditableAssignment_2_1_in_rule__TextareaProperties__Group_2__1__Impl9653 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__TextfieldProperties__Group__0__Impl_in_rule__TextfieldProperties__Group__09687 = new BitSet(new long[]{0x0000000018000000L});
+    public static final BitSet FOLLOW_rule__TextfieldProperties__Group__1_in_rule__TextfieldProperties__Group__09690 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__TextfieldProperties__CommonPropertiesAssignment_0_in_rule__TextfieldProperties__Group__0__Impl9717 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__TextfieldProperties__Group__1__Impl_in_rule__TextfieldProperties__Group__19747 = new BitSet(new long[]{0x0000000018000000L});
+    public static final BitSet FOLLOW_rule__TextfieldProperties__Group__2_in_rule__TextfieldProperties__Group__19750 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__TextfieldProperties__Group_1__0_in_rule__TextfieldProperties__Group__1__Impl9777 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__TextfieldProperties__Group__2__Impl_in_rule__TextfieldProperties__Group__29808 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__TextfieldProperties__Group_2__0_in_rule__TextfieldProperties__Group__2__Impl9835 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__TextfieldProperties__Group_1__0__Impl_in_rule__TextfieldProperties__Group_1__09872 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__TextfieldProperties__Group_1__1_in_rule__TextfieldProperties__Group_1__09875 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_27_in_rule__TextfieldProperties__Group_1__0__Impl9903 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__TextfieldProperties__Group_1__1__Impl_in_rule__TextfieldProperties__Group_1__19934 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__TextfieldProperties__TextAssignment_1_1_in_rule__TextfieldProperties__Group_1__1__Impl9961 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__TextfieldProperties__Group_2__0__Impl_in_rule__TextfieldProperties__Group_2__09995 = new BitSet(new long[]{0x0000000000000080L});
+    public static final BitSet FOLLOW_rule__TextfieldProperties__Group_2__1_in_rule__TextfieldProperties__Group_2__09998 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_28_in_rule__TextfieldProperties__Group_2__0__Impl10026 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__TextfieldProperties__Group_2__1__Impl_in_rule__TextfieldProperties__Group_2__110057 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__TextfieldProperties__EditableAssignment_2_1_in_rule__TextfieldProperties__Group_2__1__Impl10084 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__LabelProperties__Group__0__Impl_in_rule__LabelProperties__Group__010118 = new BitSet(new long[]{0x0000000008000000L});
+    public static final BitSet FOLLOW_rule__LabelProperties__Group__1_in_rule__LabelProperties__Group__010121 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__LabelProperties__CommonPropertiesAssignment_0_in_rule__LabelProperties__Group__0__Impl10148 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__LabelProperties__Group__1__Impl_in_rule__LabelProperties__Group__110178 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__LabelProperties__Group_1__0_in_rule__LabelProperties__Group__1__Impl10205 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__LabelProperties__Group_1__0__Impl_in_rule__LabelProperties__Group_1__010240 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__LabelProperties__Group_1__1_in_rule__LabelProperties__Group_1__010243 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_27_in_rule__LabelProperties__Group_1__0__Impl10271 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__LabelProperties__Group_1__1__Impl_in_rule__LabelProperties__Group_1__110302 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__LabelProperties__TextAssignment_1_1_in_rule__LabelProperties__Group_1__1__Impl10329 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ButtonProperties__Group__0__Impl_in_rule__ButtonProperties__Group__010363 = new BitSet(new long[]{0x0000000008000000L});
+    public static final BitSet FOLLOW_rule__ButtonProperties__Group__1_in_rule__ButtonProperties__Group__010366 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ButtonProperties__CommonPropertiesAssignment_0_in_rule__ButtonProperties__Group__0__Impl10393 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ButtonProperties__Group__1__Impl_in_rule__ButtonProperties__Group__110423 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ButtonProperties__Group_1__0_in_rule__ButtonProperties__Group__1__Impl10450 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ButtonProperties__Group_1__0__Impl_in_rule__ButtonProperties__Group_1__010485 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__ButtonProperties__Group_1__1_in_rule__ButtonProperties__Group_1__010488 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_27_in_rule__ButtonProperties__Group_1__0__Impl10516 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ButtonProperties__Group_1__1__Impl_in_rule__ButtonProperties__Group_1__110547 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ButtonProperties__TextAssignment_1_1_in_rule__ButtonProperties__Group_1__1__Impl10574 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CommonProperties__Group__0__Impl_in_rule__CommonProperties__Group__010608 = new BitSet(new long[]{0x0000000340000000L});
+    public static final BitSet FOLLOW_rule__CommonProperties__Group__1_in_rule__CommonProperties__Group__010611 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_29_in_rule__CommonProperties__Group__0__Impl10639 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CommonProperties__Group__1__Impl_in_rule__CommonProperties__Group__110670 = new BitSet(new long[]{0x0000000340000000L});
+    public static final BitSet FOLLOW_rule__CommonProperties__Group__2_in_rule__CommonProperties__Group__110673 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CommonProperties__Group_1__0_in_rule__CommonProperties__Group__1__Impl10700 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CommonProperties__Group__2__Impl_in_rule__CommonProperties__Group__210731 = new BitSet(new long[]{0x0000000340000000L});
+    public static final BitSet FOLLOW_rule__CommonProperties__Group__3_in_rule__CommonProperties__Group__210734 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CommonProperties__Group_2__0_in_rule__CommonProperties__Group__2__Impl10761 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CommonProperties__Group__3__Impl_in_rule__CommonProperties__Group__310792 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CommonProperties__Group_3__0_in_rule__CommonProperties__Group__3__Impl10819 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CommonProperties__Group_1__0__Impl_in_rule__CommonProperties__Group_1__010858 = new BitSet(new long[]{0x0000000080000000L});
+    public static final BitSet FOLLOW_rule__CommonProperties__Group_1__1_in_rule__CommonProperties__Group_1__010861 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_30_in_rule__CommonProperties__Group_1__0__Impl10889 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CommonProperties__Group_1__1__Impl_in_rule__CommonProperties__Group_1__110920 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__CommonProperties__Group_1__2_in_rule__CommonProperties__Group_1__110923 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_31_in_rule__CommonProperties__Group_1__1__Impl10951 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CommonProperties__Group_1__2__Impl_in_rule__CommonProperties__Group_1__210982 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CommonProperties__PropertyKeyAssignment_1_2_in_rule__CommonProperties__Group_1__2__Impl11009 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CommonProperties__Group_2__0__Impl_in_rule__CommonProperties__Group_2__011045 = new BitSet(new long[]{0x0000000080000000L});
+    public static final BitSet FOLLOW_rule__CommonProperties__Group_2__1_in_rule__CommonProperties__Group_2__011048 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_32_in_rule__CommonProperties__Group_2__0__Impl11076 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CommonProperties__Group_2__1__Impl_in_rule__CommonProperties__Group_2__111107 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__CommonProperties__Group_2__2_in_rule__CommonProperties__Group_2__111110 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_31_in_rule__CommonProperties__Group_2__1__Impl11138 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CommonProperties__Group_2__2__Impl_in_rule__CommonProperties__Group_2__211169 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CommonProperties__LayoutKeyAssignment_2_2_in_rule__CommonProperties__Group_2__2__Impl11196 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CommonProperties__Group_3__0__Impl_in_rule__CommonProperties__Group_3__011232 = new BitSet(new long[]{0x0000000080000000L});
+    public static final BitSet FOLLOW_rule__CommonProperties__Group_3__1_in_rule__CommonProperties__Group_3__011235 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_33_in_rule__CommonProperties__Group_3__0__Impl11263 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CommonProperties__Group_3__1__Impl_in_rule__CommonProperties__Group_3__111294 = new BitSet(new long[]{0x0000000000070000L});
+    public static final BitSet FOLLOW_rule__CommonProperties__Group_3__2_in_rule__CommonProperties__Group_3__111297 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_31_in_rule__CommonProperties__Group_3__1__Impl11325 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CommonProperties__Group_3__2__Impl_in_rule__CommonProperties__Group_3__211356 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CommonProperties__InteractiontypeAssignment_3_2_in_rule__CommonProperties__Group_3__2__Impl11385 = new BitSet(new long[]{0x0000000000070002L});
+    public static final BitSet FOLLOW_rule__CommonProperties__InteractiontypeAssignment_3_2_in_rule__CommonProperties__Group_3__2__Impl11397 = new BitSet(new long[]{0x0000000000070002L});
+    public static final BitSet FOLLOW_ruleTypeDefinition_in_rule__UIDescription__TypeDefinitionAssignment_011441 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleProperty_in_rule__UIDescription__PropertyAssignment_111472 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleLayout_in_rule__UIDescription__LayoutAssignment_211503 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleUsedDescriptions_in_rule__UIDescription__UsedDescriptionsAssignment_311534 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleRefinement_in_rule__UIDescription__RefinementsAssignment_411565 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleDefinition_in_rule__UIDescription__DefinitionsAssignment_511596 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleStructure_in_rule__UIDescription__StructureAssignment_611627 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleType_in_rule__TypeDefinition__TypeAssignment_111658 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Type__IdAlternatives_0_in_rule__Type__IdAssignment11689 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__Property__PropertiesFilesAssignment_111722 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__Layout__LayoutFilesAssignment_111753 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleDescriptionType_in_rule__UsedDescriptions__DescriptionAssignment_111784 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__UsedDescriptions__IdAssignment_2_111815 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__UIDescriptionImport__DescriptionNameAssignment11846 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleComponentRefinement_in_rule__Refinement__ConcreteRefinementAssignment_011877 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleComponentDefinition_in_rule__Definition__ConcreteDefitionAssignment_011908 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_34_in_rule__Structure__NameAssignment_011944 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleElement_in_rule__Structure__OrderedElementsAssignment_211983 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__Element__IdAssignment12014 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_35_in_rule__TableRefinement__NameAssignment_012050 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_INPUT_DESCRIPTION_in_rule__TableRefinement__InputTypeAssignment_112089 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__TableRefinement__IdAssignment_312120 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleCommonProperties_in_rule__TableRefinement__PropertiesAssignment_412151 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_36_in_rule__TabViewRefinement__NameAssignment_012187 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleTabDefinition_in_rule__TabViewRefinement__TabsAssignment_112226 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__TabViewRefinement__IdAssignment_312257 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleCommonProperties_in_rule__TabViewRefinement__PropertiesAssignment_412288 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_37_in_rule__TreeRefinement__NameAssignment_012324 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_INPUT_DESCRIPTION_in_rule__TreeRefinement__InputTypeAssignment_112363 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__TreeRefinement__IdAssignment_312394 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleCommonProperties_in_rule__TreeRefinement__PropertiesAssignment_412425 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_38_in_rule__InterchangeableRefinement__NameAssignment_012461 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__InterchangeableRefinement__IdAssignment_212500 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleCommonProperties_in_rule__InterchangeableRefinement__PropertiesAssignment_312531 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_39_in_rule__TextareaRefinement__NameAssignment_012567 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__TextareaRefinement__IdAssignment_212606 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleTextareaProperties_in_rule__TextareaRefinement__PropertiesAssignment_312637 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_40_in_rule__TextfieldRefinement__NameAssignment_012673 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__TextfieldRefinement__IdAssignment_212712 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleTextfieldProperties_in_rule__TextfieldRefinement__PropertiesAssignment_312743 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_41_in_rule__ButtonRefinement__NameAssignment_012779 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__ButtonRefinement__IdAssignment_212818 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleButtonProperties_in_rule__ButtonRefinement__PropertiesAssignment_312849 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_42_in_rule__LabelRefinement__NameAssignment_012885 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__LabelRefinement__IdAssignment_212924 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleLabelProperties_in_rule__LabelRefinement__PropertiesAssignment_312955 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_36_in_rule__TabViewDefinition__NameAssignment_012991 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleTabDefinition_in_rule__TabViewDefinition__TabsAssignment_113030 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__TabViewDefinition__IdAssignment_313061 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleCommonProperties_in_rule__TabViewDefinition__PropertiesAssignment_413092 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_TABNAME_in_rule__TabDefinition__NameAssignment13123 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_43_in_rule__Multiselection__NameAssignment_013159 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_INPUT_DESCRIPTION_in_rule__Multiselection__InputTypeAssignment_113198 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_40_in_rule__TextfieldDefinition__NameAssignment_013234 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__TextfieldDefinition__IdAssignment_213273 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleTextfieldProperties_in_rule__TextfieldDefinition__PropertiesAssignment_313304 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_39_in_rule__TextareaDefinition__NameAssignment_013340 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__TextareaDefinition__IdAssignment_213379 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleTextareaProperties_in_rule__TextareaDefinition__PropertiesAssignment_313410 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_37_in_rule__TreeDefinition__NameAssignment_013446 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_INPUT_DESCRIPTION_in_rule__TreeDefinition__InputTypeAssignment_113485 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__TreeDefinition__IdAssignment_313516 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleCommonProperties_in_rule__TreeDefinition__PropertiesAssignment_413547 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_35_in_rule__TableDefinition__NameAssignment_013583 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_INPUT_DESCRIPTION_in_rule__TableDefinition__InputTypeAssignment_113622 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__TableDefinition__IdAssignment_313653 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleCommonProperties_in_rule__TableDefinition__PropertiesAssignment_413684 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_44_in_rule__InterchangeableDefinition__NameAssignment_013720 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__InterchangeableDefinition__IdAssignment_213759 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleCommonProperties_in_rule__InterchangeableDefinition__PropertiesAssignment_313790 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_41_in_rule__ButtonDefinition__NameAssignment_013826 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__ButtonDefinition__IdAssignment_213865 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleButtonProperties_in_rule__ButtonDefinition__PropertiesAssignment_313896 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_42_in_rule__LabelDefinition__NameAssignment_013932 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__LabelDefinition__IdAssignment_213971 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleLabelProperties_in_rule__LabelDefinition__PropertiesAssignment_314002 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Interactiontype__IdAlternatives_0_in_rule__Interactiontype__IdAssignment14033 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleCommonProperties_in_rule__TextareaProperties__CommonPropertiesAssignment_014066 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__TextareaProperties__TextAssignment_1_114097 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_BOOLEAN_in_rule__TextareaProperties__EditableAssignment_2_114128 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleCommonProperties_in_rule__TextfieldProperties__CommonPropertiesAssignment_014159 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__TextfieldProperties__TextAssignment_1_114190 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_BOOLEAN_in_rule__TextfieldProperties__EditableAssignment_2_114221 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleCommonProperties_in_rule__LabelProperties__CommonPropertiesAssignment_014252 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__LabelProperties__TextAssignment_1_114283 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleCommonProperties_in_rule__ButtonProperties__CommonPropertiesAssignment_014314 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__ButtonProperties__TextAssignment_1_114345 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__CommonProperties__PropertyKeyAssignment_1_214376 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__CommonProperties__LayoutKeyAssignment_2_214407 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleInteractiontype_in_rule__CommonProperties__InteractiontypeAssignment_3_214438 = new BitSet(new long[]{0x0000000000000002L});
 
 }

@@ -502,7 +502,7 @@ public class GuiDSLSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	
 	/**
 	 * Constraint:
-	 *     (name='Table' inputType=INPUT_DESCRIPTION id=STRING properties=CommonProperties?)
+	 *     (name='Table' inputType=INPUT_DESCRIPTION? id=STRING properties=CommonProperties?)
 	 */
 	protected void sequence_TableDefinition(EObject context, TableDefinition semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -574,7 +574,7 @@ public class GuiDSLSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	
 	/**
 	 * Constraint:
-	 *     (name='Tree' inputType=INPUT_DESCRIPTION id=STRING properties=CommonProperties?)
+	 *     (name='Tree' inputType=INPUT_DESCRIPTION? id=STRING properties=CommonProperties?)
 	 */
 	protected void sequence_TreeDefinition(EObject context, TreeDefinition semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

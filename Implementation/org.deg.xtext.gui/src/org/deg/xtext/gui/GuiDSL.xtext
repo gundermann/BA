@@ -106,11 +106,11 @@ TextareaDefinition:
 	(properties=(TextareaProperties))?;
 
 TreeDefinition:
-	name='Tree' inputType=INPUT_DESCRIPTION 'as:' id=STRING
+	name='Tree' (inputType=INPUT_DESCRIPTION)? 'as:' id=STRING
 	(properties=(CommonProperties))?;
 
 TableDefinition:
-	name='Table' inputType=INPUT_DESCRIPTION 'as:' id=STRING
+	name='Table' (inputType=INPUT_DESCRIPTION)? 'as:' id=STRING
 	(properties=(CommonProperties))?;
 
 InterchangeableDefinition:

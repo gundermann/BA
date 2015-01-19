@@ -2015,7 +2015,7 @@ ruleTreeDefinition returns [EObject current=null]
 	    }
 
 )
-)	otherlv_2='as:' 
+)?	otherlv_2='as:' 
     {
     	newLeafNode(otherlv_2, grammarAccess.getTreeDefinitionAccess().getAsKeyword_2());
     }
@@ -2109,7 +2109,7 @@ ruleTableDefinition returns [EObject current=null]
 	    }
 
 )
-)	otherlv_2='as:' 
+)?	otherlv_2='as:' 
     {
     	newLeafNode(otherlv_2, grammarAccess.getTableDefinitionAccess().getAsKeyword_2());
     }

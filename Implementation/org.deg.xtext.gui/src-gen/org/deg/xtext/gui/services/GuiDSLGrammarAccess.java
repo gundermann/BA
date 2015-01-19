@@ -1010,10 +1010,10 @@ public class GuiDSLGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cPropertiesCommonPropertiesParserRuleCall_4_0 = (RuleCall)cPropertiesAssignment_4.eContents().get(0);
 		
 		//TreeDefinition:
-		//	name="Tree" inputType=INPUT_DESCRIPTION "as:" id=STRING properties=CommonProperties?;
+		//	name="Tree" inputType=INPUT_DESCRIPTION? "as:" id=STRING properties=CommonProperties?;
 		public ParserRule getRule() { return rule; }
 
-		//name="Tree" inputType=INPUT_DESCRIPTION "as:" id=STRING properties=CommonProperties?
+		//name="Tree" inputType=INPUT_DESCRIPTION? "as:" id=STRING properties=CommonProperties?
 		public Group getGroup() { return cGroup; }
 
 		//name="Tree"
@@ -1022,7 +1022,7 @@ public class GuiDSLGrammarAccess extends AbstractGrammarElementFinder {
 		//"Tree"
 		public Keyword getNameTreeKeyword_0_0() { return cNameTreeKeyword_0_0; }
 
-		//inputType=INPUT_DESCRIPTION
+		//inputType=INPUT_DESCRIPTION?
 		public Assignment getInputTypeAssignment_1() { return cInputTypeAssignment_1; }
 
 		//INPUT_DESCRIPTION
@@ -1058,10 +1058,10 @@ public class GuiDSLGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cPropertiesCommonPropertiesParserRuleCall_4_0 = (RuleCall)cPropertiesAssignment_4.eContents().get(0);
 		
 		//TableDefinition:
-		//	name="Table" inputType=INPUT_DESCRIPTION "as:" id=STRING properties=CommonProperties?;
+		//	name="Table" inputType=INPUT_DESCRIPTION? "as:" id=STRING properties=CommonProperties?;
 		public ParserRule getRule() { return rule; }
 
-		//name="Table" inputType=INPUT_DESCRIPTION "as:" id=STRING properties=CommonProperties?
+		//name="Table" inputType=INPUT_DESCRIPTION? "as:" id=STRING properties=CommonProperties?
 		public Group getGroup() { return cGroup; }
 
 		//name="Table"
@@ -1070,7 +1070,7 @@ public class GuiDSLGrammarAccess extends AbstractGrammarElementFinder {
 		//"Table"
 		public Keyword getNameTableKeyword_0_0() { return cNameTableKeyword_0_0; }
 
-		//inputType=INPUT_DESCRIPTION
+		//inputType=INPUT_DESCRIPTION?
 		public Assignment getInputTypeAssignment_1() { return cInputTypeAssignment_1; }
 
 		//INPUT_DESCRIPTION
@@ -1904,7 +1904,7 @@ public class GuiDSLGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//TreeDefinition:
-	//	name="Tree" inputType=INPUT_DESCRIPTION "as:" id=STRING properties=CommonProperties?;
+	//	name="Tree" inputType=INPUT_DESCRIPTION? "as:" id=STRING properties=CommonProperties?;
 	public TreeDefinitionElements getTreeDefinitionAccess() {
 		return pTreeDefinition;
 	}
@@ -1914,7 +1914,7 @@ public class GuiDSLGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//TableDefinition:
-	//	name="Table" inputType=INPUT_DESCRIPTION "as:" id=STRING properties=CommonProperties?;
+	//	name="Table" inputType=INPUT_DESCRIPTION? "as:" id=STRING properties=CommonProperties?;
 	public TableDefinitionElements getTableDefinitionAccess() {
 		return pTableDefinition;
 	}
