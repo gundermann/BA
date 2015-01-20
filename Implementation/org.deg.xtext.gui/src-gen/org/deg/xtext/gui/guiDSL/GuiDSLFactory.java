@@ -68,13 +68,13 @@ public interface GuiDSLFactory extends EFactory
   Layout createLayout();
 
   /**
-   * Returns a new object of class '<em>Used Descriptions</em>'.
+   * Returns a new object of class '<em>Used Description</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Used Descriptions</em>'.
+   * @return a new object of class '<em>Used Description</em>'.
    * @generated
    */
-  UsedDescriptions createUsedDescriptions();
+  UsedDescription createUsedDescription();
 
   /**
    * Returns a new object of class '<em>Description Type</em>'.

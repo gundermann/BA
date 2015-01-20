@@ -28,9 +28,9 @@
     <genClasses ecoreClass="GuiDSL.ecore#//Layout">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GuiDSL.ecore#//Layout/layoutFiles"/>
     </genClasses>
-    <genClasses ecoreClass="GuiDSL.ecore#//UsedDescriptions">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GuiDSL.ecore#//UsedDescriptions/description"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GuiDSL.ecore#//UsedDescriptions/id"/>
+    <genClasses ecoreClass="GuiDSL.ecore#//UsedDescription">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GuiDSL.ecore#//UsedDescription/descriptionType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GuiDSL.ecore#//UsedDescription/id"/>
     </genClasses>
     <genClasses ecoreClass="GuiDSL.ecore#//DescriptionType"/>
     <genClasses ecoreClass="GuiDSL.ecore#//ComplexComponent"/>

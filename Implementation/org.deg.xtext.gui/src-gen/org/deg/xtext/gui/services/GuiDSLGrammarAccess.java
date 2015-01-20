@@ -28,7 +28,7 @@ public class GuiDSLGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cLayoutAssignment_2 = (Assignment)cGroup.eContents().get(2);
 		private final RuleCall cLayoutLayoutParserRuleCall_2_0 = (RuleCall)cLayoutAssignment_2.eContents().get(0);
 		private final Assignment cUsedDescriptionsAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final RuleCall cUsedDescriptionsUsedDescriptionsParserRuleCall_3_0 = (RuleCall)cUsedDescriptionsAssignment_3.eContents().get(0);
+		private final RuleCall cUsedDescriptionsUsedDescriptionParserRuleCall_3_0 = (RuleCall)cUsedDescriptionsAssignment_3.eContents().get(0);
 		private final Assignment cRefinementsAssignment_4 = (Assignment)cGroup.eContents().get(4);
 		private final RuleCall cRefinementsRefinementParserRuleCall_4_0 = (RuleCall)cRefinementsAssignment_4.eContents().get(0);
 		private final Assignment cDefinitionsAssignment_5 = (Assignment)cGroup.eContents().get(5);
@@ -37,11 +37,11 @@ public class GuiDSLGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cStructureStructureParserRuleCall_6_0 = (RuleCall)cStructureAssignment_6.eContents().get(0);
 		
 		//UIDescription:
-		//	typeDefinition=TypeDefinition property=Property? layout=Layout? usedDescriptions+=UsedDescriptions*
+		//	typeDefinition=TypeDefinition property=Property? layout=Layout? usedDescriptions+=UsedDescription*
 		//	refinements+=Refinement* definitions+=Definition* structure=Structure;
 		public ParserRule getRule() { return rule; }
 
-		//typeDefinition=TypeDefinition property=Property? layout=Layout? usedDescriptions+=UsedDescriptions*
+		//typeDefinition=TypeDefinition property=Property? layout=Layout? usedDescriptions+=UsedDescription*
 		//refinements+=Refinement* definitions+=Definition* structure=Structure
 		public Group getGroup() { return cGroup; }
 
@@ -63,11 +63,11 @@ public class GuiDSLGrammarAccess extends AbstractGrammarElementFinder {
 		//Layout
 		public RuleCall getLayoutLayoutParserRuleCall_2_0() { return cLayoutLayoutParserRuleCall_2_0; }
 
-		//usedDescriptions+=UsedDescriptions*
+		//usedDescriptions+=UsedDescription*
 		public Assignment getUsedDescriptionsAssignment_3() { return cUsedDescriptionsAssignment_3; }
 
-		//UsedDescriptions
-		public RuleCall getUsedDescriptionsUsedDescriptionsParserRuleCall_3_0() { return cUsedDescriptionsUsedDescriptionsParserRuleCall_3_0; }
+		//UsedDescription
+		public RuleCall getUsedDescriptionsUsedDescriptionParserRuleCall_3_0() { return cUsedDescriptionsUsedDescriptionParserRuleCall_3_0; }
 
 		//refinements+=Refinement*
 		public Assignment getRefinementsAssignment_4() { return cRefinementsAssignment_4; }
@@ -196,33 +196,33 @@ public class GuiDSLGrammarAccess extends AbstractGrammarElementFinder {
 		public Keyword getSemicolonKeyword_2() { return cSemicolonKeyword_2; }
 	}
 
-	public class UsedDescriptionsElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "UsedDescriptions");
+	public class UsedDescriptionElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "UsedDescription");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cUseKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Assignment cDescriptionAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cDescriptionDescriptionTypeParserRuleCall_1_0 = (RuleCall)cDescriptionAssignment_1.eContents().get(0);
+		private final Assignment cDescriptionTypeAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cDescriptionTypeDescriptionTypeParserRuleCall_1_0 = (RuleCall)cDescriptionTypeAssignment_1.eContents().get(0);
 		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
 		private final Keyword cAsKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
 		private final Assignment cIdAssignment_2_1 = (Assignment)cGroup_2.eContents().get(1);
 		private final RuleCall cIdSTRINGTerminalRuleCall_2_1_0 = (RuleCall)cIdAssignment_2_1.eContents().get(0);
 		private final Keyword cSemicolonKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		
-		//UsedDescriptions:
-		//	"use:" description=DescriptionType ("as:" id=STRING)? ";";
+		//UsedDescription:
+		//	"use:" descriptionType=DescriptionType ("as:" id=STRING)? ";";
 		public ParserRule getRule() { return rule; }
 
-		//"use:" description=DescriptionType ("as:" id=STRING)? ";"
+		//"use:" descriptionType=DescriptionType ("as:" id=STRING)? ";"
 		public Group getGroup() { return cGroup; }
 
 		//"use:"
 		public Keyword getUseKeyword_0() { return cUseKeyword_0; }
 
-		//description=DescriptionType
-		public Assignment getDescriptionAssignment_1() { return cDescriptionAssignment_1; }
+		//descriptionType=DescriptionType
+		public Assignment getDescriptionTypeAssignment_1() { return cDescriptionTypeAssignment_1; }
 
 		//DescriptionType
-		public RuleCall getDescriptionDescriptionTypeParserRuleCall_1_0() { return cDescriptionDescriptionTypeParserRuleCall_1_0; }
+		public RuleCall getDescriptionTypeDescriptionTypeParserRuleCall_1_0() { return cDescriptionTypeDescriptionTypeParserRuleCall_1_0; }
 
 		//("as:" id=STRING)?
 		public Group getGroup_2() { return cGroup_2; }
@@ -1096,7 +1096,7 @@ public class GuiDSLGrammarAccess extends AbstractGrammarElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "InterchangeableDefinition");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final Keyword cNameInterchangeableAreaKeyword_0_0 = (Keyword)cNameAssignment_0.eContents().get(0);
+		private final Keyword cNameInterchangeableKeyword_0_0 = (Keyword)cNameAssignment_0.eContents().get(0);
 		private final Keyword cAsKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Assignment cIdAssignment_2 = (Assignment)cGroup.eContents().get(2);
 		private final RuleCall cIdSTRINGTerminalRuleCall_2_0 = (RuleCall)cIdAssignment_2.eContents().get(0);
@@ -1104,17 +1104,17 @@ public class GuiDSLGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cPropertiesCommonPropertiesParserRuleCall_3_0 = (RuleCall)cPropertiesAssignment_3.eContents().get(0);
 		
 		//InterchangeableDefinition:
-		//	name="Interchangeable Area" "as:" id=STRING properties=CommonProperties?;
+		//	name="Interchangeable" "as:" id=STRING properties=CommonProperties?;
 		public ParserRule getRule() { return rule; }
 
-		//name="Interchangeable Area" "as:" id=STRING properties=CommonProperties?
+		//name="Interchangeable" "as:" id=STRING properties=CommonProperties?
 		public Group getGroup() { return cGroup; }
 
-		//name="Interchangeable Area"
+		//name="Interchangeable"
 		public Assignment getNameAssignment_0() { return cNameAssignment_0; }
 
-		//"Interchangeable Area"
-		public Keyword getNameInterchangeableAreaKeyword_0_0() { return cNameInterchangeableAreaKeyword_0_0; }
+		//"Interchangeable"
+		public Keyword getNameInterchangeableKeyword_0_0() { return cNameInterchangeableKeyword_0_0; }
 
 		//"as:"
 		public Keyword getAsKeyword_1() { return cAsKeyword_1; }
@@ -1500,7 +1500,7 @@ public class GuiDSLGrammarAccess extends AbstractGrammarElementFinder {
 	private final TypeElements pType;
 	private final PropertyElements pProperty;
 	private final LayoutElements pLayout;
-	private final UsedDescriptionsElements pUsedDescriptions;
+	private final UsedDescriptionElements pUsedDescription;
 	private final DescriptionTypeElements pDescriptionType;
 	private final ComplexComponentElements pComplexComponent;
 	private final UIDescriptionImportElements pUIDescriptionImport;
@@ -1553,7 +1553,7 @@ public class GuiDSLGrammarAccess extends AbstractGrammarElementFinder {
 		this.pType = new TypeElements();
 		this.pProperty = new PropertyElements();
 		this.pLayout = new LayoutElements();
-		this.pUsedDescriptions = new UsedDescriptionsElements();
+		this.pUsedDescription = new UsedDescriptionElements();
 		this.pDescriptionType = new DescriptionTypeElements();
 		this.pComplexComponent = new ComplexComponentElements();
 		this.pUIDescriptionImport = new UIDescriptionImportElements();
@@ -1621,7 +1621,7 @@ public class GuiDSLGrammarAccess extends AbstractGrammarElementFinder {
 
 	
 	//UIDescription:
-	//	typeDefinition=TypeDefinition property=Property? layout=Layout? usedDescriptions+=UsedDescriptions*
+	//	typeDefinition=TypeDefinition property=Property? layout=Layout? usedDescriptions+=UsedDescription*
 	//	refinements+=Refinement* definitions+=Definition* structure=Structure;
 	public UIDescriptionElements getUIDescriptionAccess() {
 		return pUIDescription;
@@ -1671,14 +1671,14 @@ public class GuiDSLGrammarAccess extends AbstractGrammarElementFinder {
 		return getLayoutAccess().getRule();
 	}
 
-	//UsedDescriptions:
-	//	"use:" description=DescriptionType ("as:" id=STRING)? ";";
-	public UsedDescriptionsElements getUsedDescriptionsAccess() {
-		return pUsedDescriptions;
+	//UsedDescription:
+	//	"use:" descriptionType=DescriptionType ("as:" id=STRING)? ";";
+	public UsedDescriptionElements getUsedDescriptionAccess() {
+		return pUsedDescription;
 	}
 	
-	public ParserRule getUsedDescriptionsRule() {
-		return getUsedDescriptionsAccess().getRule();
+	public ParserRule getUsedDescriptionRule() {
+		return getUsedDescriptionAccess().getRule();
 	}
 
 	//DescriptionType:
@@ -1924,7 +1924,7 @@ public class GuiDSLGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//InterchangeableDefinition:
-	//	name="Interchangeable Area" "as:" id=STRING properties=CommonProperties?;
+	//	name="Interchangeable" "as:" id=STRING properties=CommonProperties?;
 	public InterchangeableDefinitionElements getInterchangeableDefinitionAccess() {
 		return pInterchangeableDefinition;
 	}

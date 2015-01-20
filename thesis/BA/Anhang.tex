@@ -155,3 +155,173 @@ terminal WS:
 	(' ' | '\t' | '\r' | '\n' | ',')+;
 
 \end{lstlisting}
+
+\subsection*{3. Iteration}
+\begin{lstlisting}[caption = Grammatik der 3. Iteration]
+
+grammar org.deg.xtext.gui.GuiDSL with org.eclipse.xtext.common.Terminals
+
+generate guiDSL "http://www.deg.org/xtext/gui/GuiDSL"
+
+UIDescription:
+	typeDefinition=(TypeDefinition)
+	(property=(Property))?
+	(layout=(Layout))?
+	usedDescriptions+=(UsedDescriptions)*
+	refinements+=(Refinement)*
+	definitions+=(Definition)*
+	structure=Structure;
+
+TypeDefinition:
+	'type: ' type=Type ';';
+
+Type:
+	id=('WINDOW' | 'INNERCOMPLEX');
+
+Property:
+	'get properties from:' propertiesFiles+=(STRING)+ ';';
+
+Layout:
+	'get layout from:' layoutFiles+=(STRING)+ ';';
+
+UsedDescriptions:
+	'use:' description=DescriptionType ('as:' id=STRING)? ';';
+
+DescriptionType:
+	UIDescriptionImport | ComplexComponent;
+
+ComplexComponent:
+	Multiselection;
+
+UIDescriptionImport:
+	descriptionName=(STRING);
+
+Refinement:
+	concreteRefinement=ComponentRefinement ';';
+
+ComponentRefinement:
+	LabelRefinement | ButtonRefinement | TextfieldRefinement | TextareaRefinement | TableRefinement | TabViewRefinement |
+	TreeRefinement | InterchangeableRefinement;
+
+Definition:
+	concreteDefition=ComponentDefinition ';';
+
+ComponentDefinition:
+	LabelDefinition | ButtonDefinition | TextfieldDefinition | TextareaDefinition | TreeDefinition | TableDefinition |
+	TabViewDefinition | InterchangeableDefinition;
+
+Structure:
+	name="Structure" ":" orderedElements+=(Element)* ';';
+
+Element:
+	id=STRING;
+
+TableRefinement:
+	name='Table' (inputType=INPUT_DESCRIPTION)? 'change:' id=STRING
+	(properties=(CommonProperties))?;
+
+TabViewRefinement:
+	name='TabView' (tabs+=(TabDefinition)+)? 'change:' id=STRING
+	(properties=(CommonProperties))?;
+
+TreeRefinement:
+	name='Tree' (inputType=INPUT_DESCRIPTION)? 'change:' id=STRING
+	(properties=(CommonProperties))?;
+
+InterchangeableRefinement:
+	name='Interchangeable' 'change:' id=STRING
+	(properties=(CommonProperties))?;
+
+TextareaRefinement:
+	name='Textarea' 'change:' id=STRING
+	(properties=(TextareaProperties))?;
+
+TextfieldRefinement:
+	name='Textfield' 'change:' id=STRING
+	(properties=(TextfieldProperties))?;
+
+ButtonRefinement:
+	name='Button' 'change:' id=STRING
+	(properties=(ButtonProperties))?;
+
+LabelRefinement:
+	name='Label' 'change:' id=STRING
+	(properties=(LabelProperties))?;
+
+TabViewDefinition:
+	name='TabView' tabs+=(TabDefinition)* 'as:' id=STRING
+	(properties=(CommonProperties))?;
+
+TabDefinition:
+	name=TABNAME;
+
+Multiselection:
+	name='Multiselection' (inputType=INPUT_DESCRIPTION)?;
+
+TextfieldDefinition:
+	name='Textfield' 'as:' id=STRING
+	(properties=(TextfieldProperties))?;
+
+TextareaDefinition:
+	name='Textarea' 'as:' id=STRING
+	(properties=(TextareaProperties))?;
+
+TreeDefinition:
+	name='Tree' (inputType=INPUT_DESCRIPTION)? 'as:' id=STRING
+	(properties=(CommonProperties))?;
+
+TableDefinition:
+	name='Table' (inputType=INPUT_DESCRIPTION)? 'as:' id=STRING
+	(properties=(CommonProperties))?;
+
+InterchangeableDefinition:
+	name='Interchangeable' 'as:' id=STRING
+	(properties=(CommonProperties))?;
+
+ButtonDefinition:
+	name='Button' 'as:' id=STRING
+	(properties=ButtonProperties)?;
+
+LabelDefinition:
+	name='Label' 'as:' id=STRING
+	(properties=(LabelProperties))?;
+
+Interactiontype:
+	id=('IfActivator' | 'IfTextDisplay' | 'IfViewImage');
+
+TextareaProperties:
+	commonProperties=CommonProperties
+	('text=' text=STRING)?
+	('editable=' editable=BOOLEAN)?;
+
+TextfieldProperties:
+	commonProperties=CommonProperties
+	('text=' text=STRING)?
+	('editable=' editable=BOOLEAN)?;
+
+LabelProperties:
+	commonProperties=CommonProperties
+	('text=' text=STRING )?;
+
+ButtonProperties:
+	commonProperties=CommonProperties
+	('text=' text=STRING)?;
+
+CommonProperties:
+	'->'
+	('propertyKey' '=' propertyKey=STRING)?
+	('layoutKey' '=' layoutKey=STRING)?
+	('interactiontype' '=' interactiontype+=(Interactiontype)+)?;
+
+terminal WS:
+	(' ' | '\t' | '\r' | '\n' | ',')+;
+
+terminal TABNAME:
+	'[' (!('[' | ']'))* ']';
+
+terminal INPUT_DESCRIPTION:
+	'<' (!('<' | '>'))* '>';
+
+terminal BOOLEAN:
+	'TRUE' | 'FALSE';
+\end{lstlisting}

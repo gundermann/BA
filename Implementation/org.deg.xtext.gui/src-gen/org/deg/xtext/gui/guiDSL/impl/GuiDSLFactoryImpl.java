@@ -69,7 +69,7 @@ public class GuiDSLFactoryImpl extends EFactoryImpl implements GuiDSLFactory
       case GuiDSLPackage.TYPE: return createType();
       case GuiDSLPackage.PROPERTY: return createProperty();
       case GuiDSLPackage.LAYOUT: return createLayout();
-      case GuiDSLPackage.USED_DESCRIPTIONS: return createUsedDescriptions();
+      case GuiDSLPackage.USED_DESCRIPTION: return createUsedDescription();
       case GuiDSLPackage.DESCRIPTION_TYPE: return createDescriptionType();
       case GuiDSLPackage.COMPLEX_COMPONENT: return createComplexComponent();
       case GuiDSLPackage.UI_DESCRIPTION_IMPORT: return createUIDescriptionImport();
@@ -168,10 +168,10 @@ public class GuiDSLFactoryImpl extends EFactoryImpl implements GuiDSLFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public UsedDescriptions createUsedDescriptions()
+  public UsedDescription createUsedDescription()
   {
-    UsedDescriptionsImpl usedDescriptions = new UsedDescriptionsImpl();
-    return usedDescriptions;
+    UsedDescriptionImpl usedDescription = new UsedDescriptionImpl();
+    return usedDescription;
   }
 
   /**

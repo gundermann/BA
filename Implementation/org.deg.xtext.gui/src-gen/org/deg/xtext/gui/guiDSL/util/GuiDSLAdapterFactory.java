@@ -100,9 +100,9 @@ public class GuiDSLAdapterFactory extends AdapterFactoryImpl
         return createLayoutAdapter();
       }
       @Override
-      public Adapter caseUsedDescriptions(UsedDescriptions object)
+      public Adapter caseUsedDescription(UsedDescription object)
       {
-        return createUsedDescriptionsAdapter();
+        return createUsedDescriptionAdapter();
       }
       @Override
       public Adapter caseDescriptionType(DescriptionType object)
@@ -367,16 +367,16 @@ public class GuiDSLAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.deg.xtext.gui.guiDSL.UsedDescriptions <em>Used Descriptions</em>}'.
+   * Creates a new adapter for an object of class '{@link org.deg.xtext.gui.guiDSL.UsedDescription <em>Used Description</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see org.deg.xtext.gui.guiDSL.UsedDescriptions
+   * @see org.deg.xtext.gui.guiDSL.UsedDescription
    * @generated
    */
-  public Adapter createUsedDescriptionsAdapter()
+  public Adapter createUsedDescriptionAdapter()
   {
     return null;
   }

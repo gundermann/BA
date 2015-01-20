@@ -251,23 +251,23 @@ public interface GuiDSLPackage extends EPackage
   int LAYOUT_FEATURE_COUNT = 1;
 
   /**
-   * The meta object id for the '{@link org.deg.xtext.gui.guiDSL.impl.UsedDescriptionsImpl <em>Used Descriptions</em>}' class.
+   * The meta object id for the '{@link org.deg.xtext.gui.guiDSL.impl.UsedDescriptionImpl <em>Used Description</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see org.deg.xtext.gui.guiDSL.impl.UsedDescriptionsImpl
-   * @see org.deg.xtext.gui.guiDSL.impl.GuiDSLPackageImpl#getUsedDescriptions()
+   * @see org.deg.xtext.gui.guiDSL.impl.UsedDescriptionImpl
+   * @see org.deg.xtext.gui.guiDSL.impl.GuiDSLPackageImpl#getUsedDescription()
    * @generated
    */
-  int USED_DESCRIPTIONS = 5;
+  int USED_DESCRIPTION = 5;
 
   /**
-   * The feature id for the '<em><b>Description</b></em>' containment reference.
+   * The feature id for the '<em><b>Description Type</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int USED_DESCRIPTIONS__DESCRIPTION = 0;
+  int USED_DESCRIPTION__DESCRIPTION_TYPE = 0;
 
   /**
    * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -276,16 +276,16 @@ public interface GuiDSLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int USED_DESCRIPTIONS__ID = 1;
+  int USED_DESCRIPTION__ID = 1;
 
   /**
-   * The number of structural features of the '<em>Used Descriptions</em>' class.
+   * The number of structural features of the '<em>Used Description</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int USED_DESCRIPTIONS_FEATURE_COUNT = 2;
+  int USED_DESCRIPTION_FEATURE_COUNT = 2;
 
   /**
    * The meta object id for the '{@link org.deg.xtext.gui.guiDSL.impl.DescriptionTypeImpl <em>Description Type</em>}' class.
@@ -1816,36 +1816,36 @@ public interface GuiDSLPackage extends EPackage
   EAttribute getLayout_LayoutFiles();
 
   /**
-   * Returns the meta object for class '{@link org.deg.xtext.gui.guiDSL.UsedDescriptions <em>Used Descriptions</em>}'.
+   * Returns the meta object for class '{@link org.deg.xtext.gui.guiDSL.UsedDescription <em>Used Description</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Used Descriptions</em>'.
-   * @see org.deg.xtext.gui.guiDSL.UsedDescriptions
+   * @return the meta object for class '<em>Used Description</em>'.
+   * @see org.deg.xtext.gui.guiDSL.UsedDescription
    * @generated
    */
-  EClass getUsedDescriptions();
+  EClass getUsedDescription();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.deg.xtext.gui.guiDSL.UsedDescriptions#getDescription <em>Description</em>}'.
+   * Returns the meta object for the containment reference '{@link org.deg.xtext.gui.guiDSL.UsedDescription#getDescriptionType <em>Description Type</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Description</em>'.
-   * @see org.deg.xtext.gui.guiDSL.UsedDescriptions#getDescription()
-   * @see #getUsedDescriptions()
+   * @return the meta object for the containment reference '<em>Description Type</em>'.
+   * @see org.deg.xtext.gui.guiDSL.UsedDescription#getDescriptionType()
+   * @see #getUsedDescription()
    * @generated
    */
-  EReference getUsedDescriptions_Description();
+  EReference getUsedDescription_DescriptionType();
 
   /**
-   * Returns the meta object for the attribute '{@link org.deg.xtext.gui.guiDSL.UsedDescriptions#getId <em>Id</em>}'.
+   * Returns the meta object for the attribute '{@link org.deg.xtext.gui.guiDSL.UsedDescription#getId <em>Id</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Id</em>'.
-   * @see org.deg.xtext.gui.guiDSL.UsedDescriptions#getId()
-   * @see #getUsedDescriptions()
+   * @see org.deg.xtext.gui.guiDSL.UsedDescription#getId()
+   * @see #getUsedDescription()
    * @generated
    */
-  EAttribute getUsedDescriptions_Id();
+  EAttribute getUsedDescription_Id();
 
   /**
    * Returns the meta object for class '{@link org.deg.xtext.gui.guiDSL.DescriptionType <em>Description Type</em>}'.
@@ -2878,22 +2878,22 @@ public interface GuiDSLPackage extends EPackage
     EAttribute LAYOUT__LAYOUT_FILES = eINSTANCE.getLayout_LayoutFiles();
 
     /**
-     * The meta object literal for the '{@link org.deg.xtext.gui.guiDSL.impl.UsedDescriptionsImpl <em>Used Descriptions</em>}' class.
+     * The meta object literal for the '{@link org.deg.xtext.gui.guiDSL.impl.UsedDescriptionImpl <em>Used Description</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see org.deg.xtext.gui.guiDSL.impl.UsedDescriptionsImpl
-     * @see org.deg.xtext.gui.guiDSL.impl.GuiDSLPackageImpl#getUsedDescriptions()
+     * @see org.deg.xtext.gui.guiDSL.impl.UsedDescriptionImpl
+     * @see org.deg.xtext.gui.guiDSL.impl.GuiDSLPackageImpl#getUsedDescription()
      * @generated
      */
-    EClass USED_DESCRIPTIONS = eINSTANCE.getUsedDescriptions();
+    EClass USED_DESCRIPTION = eINSTANCE.getUsedDescription();
 
     /**
-     * The meta object literal for the '<em><b>Description</b></em>' containment reference feature.
+     * The meta object literal for the '<em><b>Description Type</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference USED_DESCRIPTIONS__DESCRIPTION = eINSTANCE.getUsedDescriptions_Description();
+    EReference USED_DESCRIPTION__DESCRIPTION_TYPE = eINSTANCE.getUsedDescription_DescriptionType();
 
     /**
      * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
@@ -2901,7 +2901,7 @@ public interface GuiDSLPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute USED_DESCRIPTIONS__ID = eINSTANCE.getUsedDescriptions_Id();
+    EAttribute USED_DESCRIPTION__ID = eINSTANCE.getUsedDescription_Id();
 
     /**
      * The meta object literal for the '{@link org.deg.xtext.gui.guiDSL.impl.DescriptionTypeImpl <em>Description Type</em>}' class.

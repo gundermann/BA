@@ -110,7 +110,7 @@ public interface UIDescription extends EObject
 
   /**
    * Returns the value of the '<em><b>Used Descriptions</b></em>' containment reference list.
-   * The list contents are of type {@link org.deg.xtext.gui.guiDSL.UsedDescriptions}.
+   * The list contents are of type {@link org.deg.xtext.gui.guiDSL.UsedDescription}.
    * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Used Descriptions</em>' containment reference list isn't clear,
@@ -122,7 +122,7 @@ public interface UIDescription extends EObject
    * @model containment="true"
    * @generated
    */
-  EList<UsedDescriptions> getUsedDescriptions();
+  EList<UsedDescription> getUsedDescriptions();
 
   /**
    * Returns the value of the '<em><b>Refinements</b></em>' containment reference list.

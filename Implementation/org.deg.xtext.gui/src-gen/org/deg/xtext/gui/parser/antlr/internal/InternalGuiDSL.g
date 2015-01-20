@@ -134,9 +134,9 @@ ruleUIDescription returns [EObject current=null]
 )?(
 (
 		{ 
-	        newCompositeNode(grammarAccess.getUIDescriptionAccess().getUsedDescriptionsUsedDescriptionsParserRuleCall_3_0()); 
+	        newCompositeNode(grammarAccess.getUIDescriptionAccess().getUsedDescriptionsUsedDescriptionParserRuleCall_3_0()); 
 	    }
-		lv_usedDescriptions_3_0=ruleUsedDescriptions		{
+		lv_usedDescriptions_3_0=ruleUsedDescription		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getUIDescriptionRule());
 	        }
@@ -144,7 +144,7 @@ ruleUIDescription returns [EObject current=null]
        			$current, 
        			"usedDescriptions",
         		lv_usedDescriptions_3_0, 
-        		"UsedDescriptions");
+        		"UsedDescription");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -402,37 +402,37 @@ ruleLayout returns [EObject current=null]
 
 
 
-// Entry rule entryRuleUsedDescriptions
-entryRuleUsedDescriptions returns [EObject current=null] 
+// Entry rule entryRuleUsedDescription
+entryRuleUsedDescription returns [EObject current=null] 
 	:
-	{ newCompositeNode(grammarAccess.getUsedDescriptionsRule()); }
-	 iv_ruleUsedDescriptions=ruleUsedDescriptions 
-	 { $current=$iv_ruleUsedDescriptions.current; } 
+	{ newCompositeNode(grammarAccess.getUsedDescriptionRule()); }
+	 iv_ruleUsedDescription=ruleUsedDescription 
+	 { $current=$iv_ruleUsedDescription.current; } 
 	 EOF 
 ;
 
-// Rule UsedDescriptions
-ruleUsedDescriptions returns [EObject current=null] 
+// Rule UsedDescription
+ruleUsedDescription returns [EObject current=null] 
     @init { enterRule(); 
     }
     @after { leaveRule(); }:
 (	otherlv_0='use:' 
     {
-    	newLeafNode(otherlv_0, grammarAccess.getUsedDescriptionsAccess().getUseKeyword_0());
+    	newLeafNode(otherlv_0, grammarAccess.getUsedDescriptionAccess().getUseKeyword_0());
     }
 (
 (
 		{ 
-	        newCompositeNode(grammarAccess.getUsedDescriptionsAccess().getDescriptionDescriptionTypeParserRuleCall_1_0()); 
+	        newCompositeNode(grammarAccess.getUsedDescriptionAccess().getDescriptionTypeDescriptionTypeParserRuleCall_1_0()); 
 	    }
-		lv_description_1_0=ruleDescriptionType		{
+		lv_descriptionType_1_0=ruleDescriptionType		{
 	        if ($current==null) {
-	            $current = createModelElementForParent(grammarAccess.getUsedDescriptionsRule());
+	            $current = createModelElementForParent(grammarAccess.getUsedDescriptionRule());
 	        }
        		set(
        			$current, 
-       			"description",
-        		lv_description_1_0, 
+       			"descriptionType",
+        		lv_descriptionType_1_0, 
         		"DescriptionType");
 	        afterParserOrEnumRuleCall();
 	    }
@@ -440,17 +440,17 @@ ruleUsedDescriptions returns [EObject current=null]
 )
 )(	otherlv_2='as:' 
     {
-    	newLeafNode(otherlv_2, grammarAccess.getUsedDescriptionsAccess().getAsKeyword_2_0());
+    	newLeafNode(otherlv_2, grammarAccess.getUsedDescriptionAccess().getAsKeyword_2_0());
     }
 (
 (
 		lv_id_3_0=RULE_STRING
 		{
-			newLeafNode(lv_id_3_0, grammarAccess.getUsedDescriptionsAccess().getIdSTRINGTerminalRuleCall_2_1_0()); 
+			newLeafNode(lv_id_3_0, grammarAccess.getUsedDescriptionAccess().getIdSTRINGTerminalRuleCall_2_1_0()); 
 		}
 		{
 	        if ($current==null) {
-	            $current = createModelElement(grammarAccess.getUsedDescriptionsRule());
+	            $current = createModelElement(grammarAccess.getUsedDescriptionRule());
 	        }
        		setWithLastConsumed(
        			$current, 
@@ -462,7 +462,7 @@ ruleUsedDescriptions returns [EObject current=null]
 )
 ))?	otherlv_4=';' 
     {
-    	newLeafNode(otherlv_4, grammarAccess.getUsedDescriptionsAccess().getSemicolonKeyword_3());
+    	newLeafNode(otherlv_4, grammarAccess.getUsedDescriptionAccess().getSemicolonKeyword_3());
     }
 )
 ;
@@ -2172,16 +2172,16 @@ ruleInterchangeableDefinition returns [EObject current=null]
     @after { leaveRule(); }:
 ((
 (
-		lv_name_0_0=	'Interchangeable Area' 
+		lv_name_0_0=	'Interchangeable' 
     {
-        newLeafNode(lv_name_0_0, grammarAccess.getInterchangeableDefinitionAccess().getNameInterchangeableAreaKeyword_0_0());
+        newLeafNode(lv_name_0_0, grammarAccess.getInterchangeableDefinitionAccess().getNameInterchangeableKeyword_0_0());
     }
  
 	    {
 	        if ($current==null) {
 	            $current = createModelElement(grammarAccess.getInterchangeableDefinitionRule());
 	        }
-       		setWithLastConsumed($current, "name", lv_name_0_0, "Interchangeable Area");
+       		setWithLastConsumed($current, "name", lv_name_0_0, "Interchangeable");
 	    }
 
 )

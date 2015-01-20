@@ -46,8 +46,8 @@ public class GuiDSLParser extends AbstractContentAssistParser {
 					put(grammarAccess.getTypeDefinitionAccess().getGroup(), "rule__TypeDefinition__Group__0");
 					put(grammarAccess.getPropertyAccess().getGroup(), "rule__Property__Group__0");
 					put(grammarAccess.getLayoutAccess().getGroup(), "rule__Layout__Group__0");
-					put(grammarAccess.getUsedDescriptionsAccess().getGroup(), "rule__UsedDescriptions__Group__0");
-					put(grammarAccess.getUsedDescriptionsAccess().getGroup_2(), "rule__UsedDescriptions__Group_2__0");
+					put(grammarAccess.getUsedDescriptionAccess().getGroup(), "rule__UsedDescription__Group__0");
+					put(grammarAccess.getUsedDescriptionAccess().getGroup_2(), "rule__UsedDescription__Group_2__0");
 					put(grammarAccess.getRefinementAccess().getGroup(), "rule__Refinement__Group__0");
 					put(grammarAccess.getDefinitionAccess().getGroup(), "rule__Definition__Group__0");
 					put(grammarAccess.getStructureAccess().getGroup(), "rule__Structure__Group__0");
@@ -93,8 +93,8 @@ public class GuiDSLParser extends AbstractContentAssistParser {
 					put(grammarAccess.getTypeAccess().getIdAssignment(), "rule__Type__IdAssignment");
 					put(grammarAccess.getPropertyAccess().getPropertiesFilesAssignment_1(), "rule__Property__PropertiesFilesAssignment_1");
 					put(grammarAccess.getLayoutAccess().getLayoutFilesAssignment_1(), "rule__Layout__LayoutFilesAssignment_1");
-					put(grammarAccess.getUsedDescriptionsAccess().getDescriptionAssignment_1(), "rule__UsedDescriptions__DescriptionAssignment_1");
-					put(grammarAccess.getUsedDescriptionsAccess().getIdAssignment_2_1(), "rule__UsedDescriptions__IdAssignment_2_1");
+					put(grammarAccess.getUsedDescriptionAccess().getDescriptionTypeAssignment_1(), "rule__UsedDescription__DescriptionTypeAssignment_1");
+					put(grammarAccess.getUsedDescriptionAccess().getIdAssignment_2_1(), "rule__UsedDescription__IdAssignment_2_1");
 					put(grammarAccess.getUIDescriptionImportAccess().getDescriptionNameAssignment(), "rule__UIDescriptionImport__DescriptionNameAssignment");
 					put(grammarAccess.getRefinementAccess().getConcreteRefinementAssignment_0(), "rule__Refinement__ConcreteRefinementAssignment_0");
 					put(grammarAccess.getDefinitionAccess().getConcreteDefitionAssignment_0(), "rule__Definition__ConcreteDefitionAssignment_0");

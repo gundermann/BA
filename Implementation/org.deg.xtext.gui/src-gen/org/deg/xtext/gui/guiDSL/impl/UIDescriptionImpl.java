@@ -12,7 +12,7 @@ import org.deg.xtext.gui.guiDSL.Refinement;
 import org.deg.xtext.gui.guiDSL.Structure;
 import org.deg.xtext.gui.guiDSL.TypeDefinition;
 import org.deg.xtext.gui.guiDSL.UIDescription;
-import org.deg.xtext.gui.guiDSL.UsedDescriptions;
+import org.deg.xtext.gui.guiDSL.UsedDescription;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -87,7 +87,7 @@ public class UIDescriptionImpl extends MinimalEObjectImpl.Container implements U
    * @generated
    * @ordered
    */
-  protected EList<UsedDescriptions> usedDescriptions;
+  protected EList<UsedDescription> usedDescriptions;
 
   /**
    * The cached value of the '{@link #getRefinements() <em>Refinements</em>}' containment reference list.
@@ -289,11 +289,11 @@ public class UIDescriptionImpl extends MinimalEObjectImpl.Container implements U
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<UsedDescriptions> getUsedDescriptions()
+  public EList<UsedDescription> getUsedDescriptions()
   {
     if (usedDescriptions == null)
     {
-      usedDescriptions = new EObjectContainmentEList<UsedDescriptions>(UsedDescriptions.class, this, GuiDSLPackage.UI_DESCRIPTION__USED_DESCRIPTIONS);
+      usedDescriptions = new EObjectContainmentEList<UsedDescription>(UsedDescription.class, this, GuiDSLPackage.UI_DESCRIPTION__USED_DESCRIPTIONS);
     }
     return usedDescriptions;
   }
@@ -452,7 +452,7 @@ public class UIDescriptionImpl extends MinimalEObjectImpl.Container implements U
         return;
       case GuiDSLPackage.UI_DESCRIPTION__USED_DESCRIPTIONS:
         getUsedDescriptions().clear();
-        getUsedDescriptions().addAll((Collection<? extends UsedDescriptions>)newValue);
+        getUsedDescriptions().addAll((Collection<? extends UsedDescription>)newValue);
         return;
       case GuiDSLPackage.UI_DESCRIPTION__REFINEMENTS:
         getRefinements().clear();

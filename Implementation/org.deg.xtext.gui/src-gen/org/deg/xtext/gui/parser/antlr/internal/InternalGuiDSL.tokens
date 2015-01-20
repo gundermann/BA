@@ -1,13 +1,12 @@
-'->'=40
+'->'=39
 ':'=23
 ';'=15
-'='=42
+'='=41
 'Button'=31
 'INNERCOMPLEX'=17
-'IfActivator'=35
-'IfTextDisplay'=36
-'IfViewImage'=37
-'Interchangeable Area'=34
+'IfActivator'=34
+'IfTextDisplay'=35
+'IfViewImage'=36
 'Interchangeable'=28
 'Label'=32
 'Multiselection'=33
@@ -20,13 +19,13 @@
 'WINDOW'=16
 'as:'=21
 'change:'=25
-'editable='=39
+'editable='=38
 'get layout from:'=19
 'get properties from:'=18
-'interactiontype'=44
-'layoutKey'=43
-'propertyKey'=41
-'text='=38
+'interactiontype'=43
+'layoutKey'=42
+'propertyKey'=40
+'text='=37
 'type: '=14
 'use:'=20
 RULE_ANY_OTHER=13
@@ -69,4 +68,3 @@ T__40=40
 T__41=41
 T__42=42
 T__43=43
-T__44=44

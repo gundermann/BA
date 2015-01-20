@@ -4,7 +4,7 @@ package org.deg.xtext.gui.guiDSL.impl;
 
 import org.deg.xtext.gui.guiDSL.DescriptionType;
 import org.deg.xtext.gui.guiDSL.GuiDSLPackage;
-import org.deg.xtext.gui.guiDSL.UsedDescriptions;
+import org.deg.xtext.gui.guiDSL.UsedDescription;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -17,29 +17,29 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Used Descriptions</b></em>'.
+ * An implementation of the model object '<em><b>Used Description</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.deg.xtext.gui.guiDSL.impl.UsedDescriptionsImpl#getDescription <em>Description</em>}</li>
- *   <li>{@link org.deg.xtext.gui.guiDSL.impl.UsedDescriptionsImpl#getId <em>Id</em>}</li>
+ *   <li>{@link org.deg.xtext.gui.guiDSL.impl.UsedDescriptionImpl#getDescriptionType <em>Description Type</em>}</li>
+ *   <li>{@link org.deg.xtext.gui.guiDSL.impl.UsedDescriptionImpl#getId <em>Id</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class UsedDescriptionsImpl extends MinimalEObjectImpl.Container implements UsedDescriptions
+public class UsedDescriptionImpl extends MinimalEObjectImpl.Container implements UsedDescription
 {
   /**
-   * The cached value of the '{@link #getDescription() <em>Description</em>}' containment reference.
+   * The cached value of the '{@link #getDescriptionType() <em>Description Type</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getDescription()
+   * @see #getDescriptionType()
    * @generated
    * @ordered
    */
-  protected DescriptionType description;
+  protected DescriptionType descriptionType;
 
   /**
    * The default value of the '{@link #getId() <em>Id</em>}' attribute.
@@ -66,7 +66,7 @@ public class UsedDescriptionsImpl extends MinimalEObjectImpl.Container implement
    * <!-- end-user-doc -->
    * @generated
    */
-  protected UsedDescriptionsImpl()
+  protected UsedDescriptionImpl()
   {
     super();
   }
@@ -79,7 +79,7 @@ public class UsedDescriptionsImpl extends MinimalEObjectImpl.Container implement
   @Override
   protected EClass eStaticClass()
   {
-    return GuiDSLPackage.Literals.USED_DESCRIPTIONS;
+    return GuiDSLPackage.Literals.USED_DESCRIPTION;
   }
 
   /**
@@ -87,9 +87,9 @@ public class UsedDescriptionsImpl extends MinimalEObjectImpl.Container implement
    * <!-- end-user-doc -->
    * @generated
    */
-  public DescriptionType getDescription()
+  public DescriptionType getDescriptionType()
   {
-    return description;
+    return descriptionType;
   }
 
   /**
@@ -97,13 +97,13 @@ public class UsedDescriptionsImpl extends MinimalEObjectImpl.Container implement
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetDescription(DescriptionType newDescription, NotificationChain msgs)
+  public NotificationChain basicSetDescriptionType(DescriptionType newDescriptionType, NotificationChain msgs)
   {
-    DescriptionType oldDescription = description;
-    description = newDescription;
+    DescriptionType oldDescriptionType = descriptionType;
+    descriptionType = newDescriptionType;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GuiDSLPackage.USED_DESCRIPTIONS__DESCRIPTION, oldDescription, newDescription);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GuiDSLPackage.USED_DESCRIPTION__DESCRIPTION_TYPE, oldDescriptionType, newDescriptionType);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -114,20 +114,20 @@ public class UsedDescriptionsImpl extends MinimalEObjectImpl.Container implement
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setDescription(DescriptionType newDescription)
+  public void setDescriptionType(DescriptionType newDescriptionType)
   {
-    if (newDescription != description)
+    if (newDescriptionType != descriptionType)
     {
       NotificationChain msgs = null;
-      if (description != null)
-        msgs = ((InternalEObject)description).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GuiDSLPackage.USED_DESCRIPTIONS__DESCRIPTION, null, msgs);
-      if (newDescription != null)
-        msgs = ((InternalEObject)newDescription).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GuiDSLPackage.USED_DESCRIPTIONS__DESCRIPTION, null, msgs);
-      msgs = basicSetDescription(newDescription, msgs);
+      if (descriptionType != null)
+        msgs = ((InternalEObject)descriptionType).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GuiDSLPackage.USED_DESCRIPTION__DESCRIPTION_TYPE, null, msgs);
+      if (newDescriptionType != null)
+        msgs = ((InternalEObject)newDescriptionType).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GuiDSLPackage.USED_DESCRIPTION__DESCRIPTION_TYPE, null, msgs);
+      msgs = basicSetDescriptionType(newDescriptionType, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, GuiDSLPackage.USED_DESCRIPTIONS__DESCRIPTION, newDescription, newDescription));
+      eNotify(new ENotificationImpl(this, Notification.SET, GuiDSLPackage.USED_DESCRIPTION__DESCRIPTION_TYPE, newDescriptionType, newDescriptionType));
   }
 
   /**
@@ -150,7 +150,7 @@ public class UsedDescriptionsImpl extends MinimalEObjectImpl.Container implement
     String oldId = id;
     id = newId;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, GuiDSLPackage.USED_DESCRIPTIONS__ID, oldId, id));
+      eNotify(new ENotificationImpl(this, Notification.SET, GuiDSLPackage.USED_DESCRIPTION__ID, oldId, id));
   }
 
   /**
@@ -163,8 +163,8 @@ public class UsedDescriptionsImpl extends MinimalEObjectImpl.Container implement
   {
     switch (featureID)
     {
-      case GuiDSLPackage.USED_DESCRIPTIONS__DESCRIPTION:
-        return basicSetDescription(null, msgs);
+      case GuiDSLPackage.USED_DESCRIPTION__DESCRIPTION_TYPE:
+        return basicSetDescriptionType(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -179,9 +179,9 @@ public class UsedDescriptionsImpl extends MinimalEObjectImpl.Container implement
   {
     switch (featureID)
     {
-      case GuiDSLPackage.USED_DESCRIPTIONS__DESCRIPTION:
-        return getDescription();
-      case GuiDSLPackage.USED_DESCRIPTIONS__ID:
+      case GuiDSLPackage.USED_DESCRIPTION__DESCRIPTION_TYPE:
+        return getDescriptionType();
+      case GuiDSLPackage.USED_DESCRIPTION__ID:
         return getId();
     }
     return super.eGet(featureID, resolve, coreType);
@@ -197,10 +197,10 @@ public class UsedDescriptionsImpl extends MinimalEObjectImpl.Container implement
   {
     switch (featureID)
     {
-      case GuiDSLPackage.USED_DESCRIPTIONS__DESCRIPTION:
-        setDescription((DescriptionType)newValue);
+      case GuiDSLPackage.USED_DESCRIPTION__DESCRIPTION_TYPE:
+        setDescriptionType((DescriptionType)newValue);
         return;
-      case GuiDSLPackage.USED_DESCRIPTIONS__ID:
+      case GuiDSLPackage.USED_DESCRIPTION__ID:
         setId((String)newValue);
         return;
     }
@@ -217,10 +217,10 @@ public class UsedDescriptionsImpl extends MinimalEObjectImpl.Container implement
   {
     switch (featureID)
     {
-      case GuiDSLPackage.USED_DESCRIPTIONS__DESCRIPTION:
-        setDescription((DescriptionType)null);
+      case GuiDSLPackage.USED_DESCRIPTION__DESCRIPTION_TYPE:
+        setDescriptionType((DescriptionType)null);
         return;
-      case GuiDSLPackage.USED_DESCRIPTIONS__ID:
+      case GuiDSLPackage.USED_DESCRIPTION__ID:
         setId(ID_EDEFAULT);
         return;
     }
@@ -237,9 +237,9 @@ public class UsedDescriptionsImpl extends MinimalEObjectImpl.Container implement
   {
     switch (featureID)
     {
-      case GuiDSLPackage.USED_DESCRIPTIONS__DESCRIPTION:
-        return description != null;
-      case GuiDSLPackage.USED_DESCRIPTIONS__ID:
+      case GuiDSLPackage.USED_DESCRIPTION__DESCRIPTION_TYPE:
+        return descriptionType != null;
+      case GuiDSLPackage.USED_DESCRIPTION__ID:
         return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
     }
     return super.eIsSet(featureID);
@@ -262,4 +262,4 @@ public class UsedDescriptionsImpl extends MinimalEObjectImpl.Container implement
     return result.toString();
   }
 
-} //UsedDescriptionsImpl
+} //UsedDescriptionImpl

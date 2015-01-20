@@ -39,7 +39,6 @@ public class InternalGuiDSLLexer extends Lexer {
     public static final int T__43=43;
     public static final int T__40=40;
     public static final int T__41=41;
-    public static final int T__44=44;
     public static final int RULE_SL_COMMENT=12;
     public static final int RULE_ML_COMMENT=11;
     public static final int T__30=30;
@@ -694,27 +693,6 @@ public class InternalGuiDSLLexer extends Lexer {
         }
     }
     // $ANTLR end "T__43"
-
-    // $ANTLR start "T__44"
-    public final void mT__44() throws RecognitionException {
-        try {
-            int _type = T__44;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:41:7: ( 'Interchangeable Area' )
-            // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:41:9: 'Interchangeable Area'
-            {
-            match("Interchangeable Area"); 
-
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "T__44"
 
     // $ANTLR start "RULE_WS"
     public final void mRULE_WS() throws RecognitionException {
@@ -1378,8 +1356,8 @@ public class InternalGuiDSLLexer extends Lexer {
     // $ANTLR end "RULE_ANY_OTHER"
 
     public void mTokens() throws RecognitionException {
-        // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1:8: ( T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | RULE_WS | RULE_TABNAME | RULE_INPUT_DESCRIPTION | RULE_BOOLEAN | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_ANY_OTHER )
-        int alt15=41;
+        // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1:8: ( T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | RULE_WS | RULE_TABNAME | RULE_INPUT_DESCRIPTION | RULE_BOOLEAN | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_ANY_OTHER )
+        int alt15=40;
         alt15 = dfa15.predict(input);
         switch (alt15) {
             case 1 :
@@ -1593,77 +1571,70 @@ public class InternalGuiDSLLexer extends Lexer {
                 }
                 break;
             case 31 :
-                // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1:190: T__44
-                {
-                mT__44(); 
-
-                }
-                break;
-            case 32 :
-                // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1:196: RULE_WS
+                // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1:190: RULE_WS
                 {
                 mRULE_WS(); 
 
                 }
                 break;
-            case 33 :
-                // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1:204: RULE_TABNAME
+            case 32 :
+                // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1:198: RULE_TABNAME
                 {
                 mRULE_TABNAME(); 
 
                 }
                 break;
-            case 34 :
-                // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1:217: RULE_INPUT_DESCRIPTION
+            case 33 :
+                // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1:211: RULE_INPUT_DESCRIPTION
                 {
                 mRULE_INPUT_DESCRIPTION(); 
 
                 }
                 break;
-            case 35 :
-                // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1:240: RULE_BOOLEAN
+            case 34 :
+                // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1:234: RULE_BOOLEAN
                 {
                 mRULE_BOOLEAN(); 
 
                 }
                 break;
-            case 36 :
-                // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1:253: RULE_ID
+            case 35 :
+                // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1:247: RULE_ID
                 {
                 mRULE_ID(); 
 
                 }
                 break;
-            case 37 :
-                // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1:261: RULE_INT
+            case 36 :
+                // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1:255: RULE_INT
                 {
                 mRULE_INT(); 
 
                 }
                 break;
-            case 38 :
-                // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1:270: RULE_STRING
+            case 37 :
+                // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1:264: RULE_STRING
                 {
                 mRULE_STRING(); 
 
                 }
                 break;
-            case 39 :
-                // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1:282: RULE_ML_COMMENT
+            case 38 :
+                // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1:276: RULE_ML_COMMENT
                 {
                 mRULE_ML_COMMENT(); 
 
                 }
                 break;
-            case 40 :
-                // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1:298: RULE_SL_COMMENT
+            case 39 :
+                // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1:292: RULE_SL_COMMENT
                 {
                 mRULE_SL_COMMENT(); 
 
                 }
                 break;
-            case 41 :
-                // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1:314: RULE_ANY_OTHER
+            case 40 :
+                // ../org.deg.xtext.gui.ui/src-gen/org/deg/xtext/gui/ui/contentassist/antlr/internal/InternalGuiDSL.g:1:308: RULE_ANY_OTHER
                 {
                 mRULE_ANY_OTHER(); 
 
@@ -1687,9 +1658,9 @@ public class InternalGuiDSLLexer extends Lexer {
         "\7\41\1\uffff\1\41\1\u00d4\1\41\1\u00d6\1\uffff\1\u00d7\7\41\1\uffff"+
         "\1\41\2\uffff\2\41\1\u00e2\1\41\1\u00e4\1\41\1\u00e6\2\41\1\u00e9"+
         "\1\uffff\1\41\1\uffff\1\41\1\uffff\2\41\1\uffff\1\u00ee\3\41\1\uffff"+
-        "\2\41\1\u00f4\1\u00f6\1\u00f7\4\uffff";
+        "\2\41\1\u00f4\1\u00f5\1\u00f6\3\uffff";
     static final String DFA15_eofS =
-        "\u00f8\uffff";
+        "\u00f7\uffff";
     static final String DFA15_minS =
         "\1\0\1\111\1\116\1\145\1\uffff\1\145\2\163\1\uffff\1\150\1\144"+
         "\1\76\1\162\1\uffff\1\141\1\156\1\164\1\122\1\165\1\141\1\165\1"+
@@ -1712,7 +1683,7 @@ public class InternalGuiDSLLexer extends Lexer {
         "\60\1\143\1\105\1\162\1\154\2\145\1\171\1\uffff\1\156\2\uffff\1"+
         "\164\1\130\1\60\1\141\1\60\1\141\1\60\1\164\1\151\1\60\1\uffff\1"+
         "\171\1\uffff\1\142\1\uffff\1\171\1\157\1\uffff\1\60\1\154\1\160"+
-        "\1\156\1\uffff\2\145\1\60\1\40\1\60\4\uffff";
+        "\1\156\1\uffff\2\145\3\60\3\uffff";
     static final String DFA15_maxS =
         "\1\uffff\1\111\1\156\1\171\1\uffff\1\145\2\163\1\uffff\1\150\1"+
         "\144\1\76\1\162\1\uffff\1\141\1\156\1\164\1\162\1\165\1\141\1\165"+
@@ -1735,18 +1706,18 @@ public class InternalGuiDSLLexer extends Lexer {
         "\172\1\uffff\1\172\1\143\1\105\1\162\1\154\2\145\1\171\1\uffff\1"+
         "\156\2\uffff\1\164\1\130\1\172\1\141\1\172\1\141\1\172\1\164\1\151"+
         "\1\172\1\uffff\1\171\1\uffff\1\142\1\uffff\1\171\1\157\1\uffff\1"+
-        "\172\1\154\1\160\1\156\1\uffff\2\145\3\172\4\uffff";
+        "\172\1\154\1\160\1\156\1\uffff\2\145\3\172\3\uffff";
     static final String DFA15_acceptS =
-        "\4\uffff\1\7\3\uffff\1\14\4\uffff\1\22\7\uffff\1\40\4\uffff\1\44"+
-        "\1\45\3\uffff\1\51\1\uffff\1\44\5\uffff\1\7\3\uffff\1\14\2\uffff"+
-        "\1\20\1\uffff\1\22\12\uffff\1\40\1\41\1\42\1\uffff\1\45\1\46\1\47"+
-        "\1\50\12\uffff\1\13\27\uffff\1\12\25\uffff\1\6\1\16\1\10\1\11\10"+
-        "\uffff\1\30\2\uffff\1\43\20\uffff\1\26\4\uffff\1\35\1\uffff\1\1"+
+        "\4\uffff\1\7\3\uffff\1\14\4\uffff\1\22\7\uffff\1\37\4\uffff\1\43"+
+        "\1\44\3\uffff\1\50\1\uffff\1\43\5\uffff\1\7\3\uffff\1\14\2\uffff"+
+        "\1\20\1\uffff\1\22\12\uffff\1\37\1\40\1\41\1\uffff\1\44\1\45\1\46"+
+        "\1\47\12\uffff\1\13\27\uffff\1\12\25\uffff\1\6\1\16\1\10\1\11\10"+
+        "\uffff\1\30\2\uffff\1\42\20\uffff\1\26\4\uffff\1\35\1\uffff\1\1"+
         "\5\uffff\1\15\10\uffff\1\34\13\uffff\1\27\10\uffff\1\17\4\uffff"+
         "\1\32\10\uffff\1\23\1\uffff\1\25\1\33\12\uffff\1\3\1\uffff\1\5\1"+
-        "\uffff\1\21\2\uffff\1\2\4\uffff\1\4\5\uffff\1\36\1\37\1\31\1\24";
+        "\uffff\1\21\2\uffff\1\2\4\uffff\1\4\5\uffff\1\36\1\31\1\24";
     static final String DFA15_specialS =
-        "\1\1\25\uffff\1\2\1\3\4\uffff\1\4\1\0\u00da\uffff}>";
+        "\1\0\25\uffff\1\2\1\4\4\uffff\1\3\1\1\u00d9\uffff}>";
     static final String[] DFA15_transitionS = {
             "\11\37\2\25\2\37\1\25\22\37\1\25\1\37\1\34\4\37\1\35\4\37\1"+
             "\25\1\13\1\37\1\36\12\33\1\10\1\4\1\27\1\15\3\37\1\32\1\22\3"+
@@ -1994,10 +1965,8 @@ public class InternalGuiDSLLexer extends Lexer {
             "\1\u00f2",
             "\1\u00f3",
             "\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
-            "\1\u00f5\17\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff"+
-            "\32\41",
             "\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
-            "",
+            "\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
             "",
             "",
             ""
@@ -2033,23 +2002,13 @@ public class InternalGuiDSLLexer extends Lexer {
             this.transition = DFA15_transition;
         }
         public String getDescription() {
-            return "1:1: Tokens : ( T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | RULE_WS | RULE_TABNAME | RULE_INPUT_DESCRIPTION | RULE_BOOLEAN | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_ANY_OTHER );";
+            return "1:1: Tokens : ( T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | RULE_WS | RULE_TABNAME | RULE_INPUT_DESCRIPTION | RULE_BOOLEAN | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_ANY_OTHER );";
         }
         public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
             IntStream input = _input;
         	int _s = s;
             switch ( s ) {
                     case 0 : 
-                        int LA15_29 = input.LA(1);
-
-                        s = -1;
-                        if ( ((LA15_29>='\u0000' && LA15_29<='\uFFFF')) ) {s = 64;}
-
-                        else s = 31;
-
-                        if ( s>=0 ) return s;
-                        break;
-                    case 1 : 
                         int LA15_0 = input.LA(1);
 
                         s = -1;
@@ -2117,6 +2076,16 @@ public class InternalGuiDSLLexer extends Lexer {
 
                         if ( s>=0 ) return s;
                         break;
+                    case 1 : 
+                        int LA15_29 = input.LA(1);
+
+                        s = -1;
+                        if ( ((LA15_29>='\u0000' && LA15_29<='\uFFFF')) ) {s = 64;}
+
+                        else s = 31;
+
+                        if ( s>=0 ) return s;
+                        break;
                     case 2 : 
                         int LA15_22 = input.LA(1);
 
@@ -2128,20 +2097,20 @@ public class InternalGuiDSLLexer extends Lexer {
                         if ( s>=0 ) return s;
                         break;
                     case 3 : 
-                        int LA15_23 = input.LA(1);
+                        int LA15_28 = input.LA(1);
 
                         s = -1;
-                        if ( ((LA15_23>='\u0000' && LA15_23<=';')||(LA15_23>='=' && LA15_23<='\uFFFF')) ) {s = 61;}
+                        if ( ((LA15_28>='\u0000' && LA15_28<='\uFFFF')) ) {s = 64;}
 
                         else s = 31;
 
                         if ( s>=0 ) return s;
                         break;
                     case 4 : 
-                        int LA15_28 = input.LA(1);
+                        int LA15_23 = input.LA(1);
 
                         s = -1;
-                        if ( ((LA15_28>='\u0000' && LA15_28<='\uFFFF')) ) {s = 64;}
+                        if ( ((LA15_23>='\u0000' && LA15_23<=';')||(LA15_23>='=' && LA15_23<='\uFFFF')) ) {s = 61;}
 
                         else s = 31;
 

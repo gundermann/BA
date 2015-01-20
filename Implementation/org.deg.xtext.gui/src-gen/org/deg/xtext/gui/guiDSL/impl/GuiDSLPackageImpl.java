@@ -42,7 +42,7 @@ import org.deg.xtext.gui.guiDSL.Type;
 import org.deg.xtext.gui.guiDSL.TypeDefinition;
 import org.deg.xtext.gui.guiDSL.UIDescription;
 import org.deg.xtext.gui.guiDSL.UIDescriptionImport;
-import org.deg.xtext.gui.guiDSL.UsedDescriptions;
+import org.deg.xtext.gui.guiDSL.UsedDescription;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -99,7 +99,7 @@ public class GuiDSLPackageImpl extends EPackageImpl implements GuiDSLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass usedDescriptionsEClass = null;
+  private EClass usedDescriptionEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -560,9 +560,9 @@ public class GuiDSLPackageImpl extends EPackageImpl implements GuiDSLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getUsedDescriptions()
+  public EClass getUsedDescription()
   {
-    return usedDescriptionsEClass;
+    return usedDescriptionEClass;
   }
 
   /**
@@ -570,9 +570,9 @@ public class GuiDSLPackageImpl extends EPackageImpl implements GuiDSLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getUsedDescriptions_Description()
+  public EReference getUsedDescription_DescriptionType()
   {
-    return (EReference)usedDescriptionsEClass.getEStructuralFeatures().get(0);
+    return (EReference)usedDescriptionEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -580,9 +580,9 @@ public class GuiDSLPackageImpl extends EPackageImpl implements GuiDSLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getUsedDescriptions_Id()
+  public EAttribute getUsedDescription_Id()
   {
-    return (EAttribute)usedDescriptionsEClass.getEStructuralFeatures().get(1);
+    return (EAttribute)usedDescriptionEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -1456,9 +1456,9 @@ public class GuiDSLPackageImpl extends EPackageImpl implements GuiDSLPackage
     layoutEClass = createEClass(LAYOUT);
     createEAttribute(layoutEClass, LAYOUT__LAYOUT_FILES);
 
-    usedDescriptionsEClass = createEClass(USED_DESCRIPTIONS);
-    createEReference(usedDescriptionsEClass, USED_DESCRIPTIONS__DESCRIPTION);
-    createEAttribute(usedDescriptionsEClass, USED_DESCRIPTIONS__ID);
+    usedDescriptionEClass = createEClass(USED_DESCRIPTION);
+    createEReference(usedDescriptionEClass, USED_DESCRIPTION__DESCRIPTION_TYPE);
+    createEAttribute(usedDescriptionEClass, USED_DESCRIPTION__ID);
 
     descriptionTypeEClass = createEClass(DESCRIPTION_TYPE);
 
@@ -1630,7 +1630,7 @@ public class GuiDSLPackageImpl extends EPackageImpl implements GuiDSLPackage
     initEReference(getUIDescription_TypeDefinition(), this.getTypeDefinition(), null, "typeDefinition", null, 0, 1, UIDescription.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getUIDescription_Property(), this.getProperty(), null, "property", null, 0, 1, UIDescription.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getUIDescription_Layout(), this.getLayout(), null, "layout", null, 0, 1, UIDescription.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getUIDescription_UsedDescriptions(), this.getUsedDescriptions(), null, "usedDescriptions", null, 0, -1, UIDescription.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getUIDescription_UsedDescriptions(), this.getUsedDescription(), null, "usedDescriptions", null, 0, -1, UIDescription.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getUIDescription_Refinements(), this.getRefinement(), null, "refinements", null, 0, -1, UIDescription.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getUIDescription_Definitions(), this.getDefinition(), null, "definitions", null, 0, -1, UIDescription.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getUIDescription_Structure(), this.getStructure(), null, "structure", null, 0, 1, UIDescription.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1647,9 +1647,9 @@ public class GuiDSLPackageImpl extends EPackageImpl implements GuiDSLPackage
     initEClass(layoutEClass, Layout.class, "Layout", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getLayout_LayoutFiles(), ecorePackage.getEString(), "layoutFiles", null, 0, -1, Layout.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(usedDescriptionsEClass, UsedDescriptions.class, "UsedDescriptions", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getUsedDescriptions_Description(), this.getDescriptionType(), null, "description", null, 0, 1, UsedDescriptions.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getUsedDescriptions_Id(), ecorePackage.getEString(), "id", null, 0, 1, UsedDescriptions.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(usedDescriptionEClass, UsedDescription.class, "UsedDescription", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getUsedDescription_DescriptionType(), this.getDescriptionType(), null, "descriptionType", null, 0, 1, UsedDescription.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getUsedDescription_Id(), ecorePackage.getEString(), "id", null, 0, 1, UsedDescription.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(descriptionTypeEClass, DescriptionType.class, "DescriptionType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

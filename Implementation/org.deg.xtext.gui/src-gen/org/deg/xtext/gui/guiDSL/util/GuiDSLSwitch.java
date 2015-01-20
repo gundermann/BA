@@ -107,10 +107,10 @@ public class GuiDSLSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case GuiDSLPackage.USED_DESCRIPTIONS:
+      case GuiDSLPackage.USED_DESCRIPTION:
       {
-        UsedDescriptions usedDescriptions = (UsedDescriptions)theEObject;
-        T result = caseUsedDescriptions(usedDescriptions);
+        UsedDescription usedDescription = (UsedDescription)theEObject;
+        T result = caseUsedDescription(usedDescription);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -450,17 +450,17 @@ public class GuiDSLSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Used Descriptions</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Used Description</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Used Descriptions</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Used Description</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseUsedDescriptions(UsedDescriptions object)
+  public T caseUsedDescription(UsedDescription object)
   {
     return null;
   }

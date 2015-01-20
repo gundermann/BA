@@ -37,7 +37,7 @@ import org.deg.xtext.gui.guiDSL.Type;
 import org.deg.xtext.gui.guiDSL.TypeDefinition;
 import org.deg.xtext.gui.guiDSL.UIDescription;
 import org.deg.xtext.gui.guiDSL.UIDescriptionImport;
-import org.deg.xtext.gui.guiDSL.UsedDescriptions;
+import org.deg.xtext.gui.guiDSL.UsedDescription;
 import org.deg.xtext.gui.services.GuiDSLGrammarAccess;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.xtext.serializer.acceptor.ISemanticSequenceAcceptor;
@@ -282,9 +282,9 @@ public class GuiDSLSemanticSequencer extends AbstractDelegatingSemanticSequencer
 					return; 
 				}
 				else break;
-			case GuiDSLPackage.USED_DESCRIPTIONS:
-				if(context == grammarAccess.getUsedDescriptionsRule()) {
-					sequence_UsedDescriptions(context, (UsedDescriptions) semanticObject); 
+			case GuiDSLPackage.USED_DESCRIPTION:
+				if(context == grammarAccess.getUsedDescriptionRule()) {
+					sequence_UsedDescription(context, (UsedDescription) semanticObject); 
 					return; 
 				}
 				else break;
@@ -371,7 +371,7 @@ public class GuiDSLSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	
 	/**
 	 * Constraint:
-	 *     (name='Interchangeable Area' id=STRING properties=CommonProperties?)
+	 *     (name='Interchangeable' id=STRING properties=CommonProperties?)
 	 */
 	protected void sequence_InterchangeableDefinition(EObject context, InterchangeableDefinition semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -637,7 +637,7 @@ public class GuiDSLSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	 *         typeDefinition=TypeDefinition 
 	 *         property=Property? 
 	 *         layout=Layout? 
-	 *         usedDescriptions+=UsedDescriptions* 
+	 *         usedDescriptions+=UsedDescription* 
 	 *         refinements+=Refinement* 
 	 *         definitions+=Definition* 
 	 *         structure=Structure
@@ -650,9 +650,9 @@ public class GuiDSLSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	
 	/**
 	 * Constraint:
-	 *     (description=DescriptionType id=STRING?)
+	 *     (descriptionType=DescriptionType id=STRING?)
 	 */
-	protected void sequence_UsedDescriptions(EObject context, UsedDescriptions semanticObject) {
+	protected void sequence_UsedDescription(EObject context, UsedDescription semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 }

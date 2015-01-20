@@ -6,7 +6,7 @@ UIDescription:
 	typeDefinition=(TypeDefinition)
 	(property=(Property))?
 	(layout=(Layout))?
-	usedDescriptions+=(UsedDescriptions)*
+	usedDescriptions+=(UsedDescription)*
 	refinements+=(Refinement)*
 	definitions+=(Definition)*
 	structure=Structure;
@@ -23,8 +23,8 @@ Property:
 Layout:
 	'get layout from:' layoutFiles+=(STRING)+ ';';
 
-UsedDescriptions:
-	'use:' description=DescriptionType ('as:' id=STRING)? ';';
+UsedDescription:
+	'use:' descriptionType=DescriptionType ('as:' id=STRING)? ';';
 
 DescriptionType:
 	UIDescriptionImport | ComplexComponent;
@@ -114,7 +114,7 @@ TableDefinition:
 	(properties=(CommonProperties))?;
 
 InterchangeableDefinition:
-	name='Interchangeable Area' 'as:' id=STRING
+	name='Interchangeable' 'as:' id=STRING
 	(properties=(CommonProperties))?;
 
 ButtonDefinition:
