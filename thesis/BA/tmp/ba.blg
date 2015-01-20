@@ -3,6 +3,10 @@ The style file: geralpha.bst
 A level-1 auxiliary file: titlepage.aux
 A level-1 auxiliary file: Einleitung.aux
 A level-1 auxiliary file: Analyse.aux
+Stuff after "}"---line 23 of file Analyse.aux
+ : \citation{sauerDip{30
+ :                      }}
+I'm skipping whatever remains of this command
 A level-1 auxiliary file: DSL.aux
 A level-1 auxiliary file: Loesungsidee.aux
 A level-1 auxiliary file: GUIDSL.aux
@@ -21,4 +25,4 @@ Warning--empty author and editor in brauer2010dsl
 Warning--empty author and editor in ghosh
 Warning--empty year in 1
 Warning--empty author and editor in mdsdvoelter
-(There were 8 warnings)
+(There was 1 error message)

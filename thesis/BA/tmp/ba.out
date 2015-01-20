@@ -4,7 +4,7 @@
 \BOOKMARK [0][-]{chapter.1}{Motivation}{}% 4
 \BOOKMARK [0][-]{chapter.2}{Problembeschreibung und Zielsetzung}{}% 5
 \BOOKMARK [1][-]{section.2.1}{Allgemeine Anforderungen an Benutzeroberfl\344chen von profil c/s}{chapter.2}% 6
-\BOOKMARK [1][-]{section.2.2}{Umsetzung der Benutzerschnittstellen f\374r mehreren Plattformen in der deg \(Ist-Zustand\)}{chapter.2}% 7
+\BOOKMARK [1][-]{section.2.2}{Umsetzung der Benutzerschnittstellen f\374r mehrere Plattformen in der deg \(Ist-Zustand\)}{chapter.2}% 7
 \BOOKMARK [2][-]{subsection.2.2.1}{Multichannel-Framework}{section.2.2}% 8
 \BOOKMARK [2][-]{subsection.2.2.2}{JWAM}{section.2.2}% 9
 \BOOKMARK [1][-]{section.2.3}{Probleme des Multichannel-Frameworks}{chapter.2}% 10
@@ -42,7 +42,7 @@
 \BOOKMARK [1][-]{section.8.2}{2. Iteration}{chapter.8}% 42
 \BOOKMARK [1][-]{section.8.3}{3. Iteration}{chapter.8}% 43
 \BOOKMARK [0][-]{chapter.9}{Entwicklung des Generators f\374r das Generieren von Klassen f\374r das Multichannel-Framework}{}% 44
-\BOOKMARK [1][-]{section.9.1}{Beschreibung der GUI- und IP-Klassen im Multichannel-Framework }{chapter.9}% 45
+\BOOKMARK [1][-]{section.9.1}{Beschreibung der GUI- und IP-Klassen}{chapter.9}% 45
 \BOOKMARK [1][-]{section.9.2}{Umsetzung des frameworkspezifischen Generators}{chapter.9}% 46
 \BOOKMARK [0][-]{chapter.10}{Zusammenfassung und Ausblick}{}% 47
 \BOOKMARK [0][-]{appendix*.24}{Anhang}{}% 48

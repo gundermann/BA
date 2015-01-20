@@ -4,37 +4,38 @@ Geräten (bspw. Desktop, Smartphone, Tablet) ausgeführt. Die \gloss{Usability}
 ist ein wichtiger Faktor bei der Entwicklung einer Anwendung. 
 Denn eine \emph{[\ldots] schlechte Useability führt zu
 Verwirrung und Miss- bzw.
-Unverständis beim Kunden}\cite{usability}. Dadurch geht letztendlich Umsatz
+Unverständis beim Kunden.} \cite{usability} Dadurch geht letztendlich Umsatz
 verloren. Die Usability wird hauptsächlich von der Benutzerschittstelle
 bestimmt. Folglich ist die Benutzeroberfläche neben der internen Umsetzung
-immer ein wichtiger Faktor, der für den Erfolg einer Anwendung eine große Rolle spielt. \cite{1}
+immer ein wichtiger Faktor, der für den Erfolg einer Anwendung eine große Rolle
+spielt. \simplevcite{1}
 \\
 Wenn ein Programm auf unterschiedlichen Gräten ausgeführt wird, muss der
-Entwickler bei der \gloss{traditionllen UI-Entwicklung} mehrere \gloss{Graphical
-User Interfaces (GUI)} manuell implementieren. Folglich werden mehrere GUIs mit unterschiedlichen
-Toolkits oder Frameworks entworfen. Diese Framworks haben einen starken 
-imperativen Character, sind schwer zu erweitern und sie verhalten sich je nach
-Platform unterschiedlich. \cite{10}
+Entwickler bei der UI-Entwicklung traditionllen UI-Entwicklung mehrere
+Graphical User Interfaces (GUIs) manuell implementieren. Folglich werden mehrere
+GUIs mit unterschiedlichen Toolkits oder Frameworks entworfen. Diese Framworks haben einen starken 
+imperativen Charackter, sind schwer zu erweitern und sie verhalten sich je nach
+Platform unterschiedlich. \simplevcite{10}
 Daraus folgt, dass Entwickler bei dem traditionellen Ansatz das GUI für jedes
 Framework explizit beschreiben muss.\\
 Ein anderer Ansatz zur Beschreibung von Benutzeroberflächen ist das Model-Driven
 Development (siehe Kapitel \ref{mdsd}). Damit sollen bspw. UIs anhand der
-modelierten Funktionalitäten automatisch erzeugt werden. \cite{3}
-Laut Myers et. al. wurde die Darstellung dieser generierten UIs in der
-Vergangenheit von der Darstellung traditionell implementierter
-Benutzerschnittstellen übertroffen.\cite{20} Grund dafür ist, dass die Abstraktionsebene, auf der die
-GUIs beschrieben wurden, oft nicht an die Gestaltung der GUI, sondern an
+modelierten Funktionalitäten automatisch erzeugt werden. \simplevcite{3}
+Laut Myers et. al. wurde die Darstellung dieser generierten User Interfaces
+(UIs) in der Vergangenheit von der Darstellung traditionell implementierter
+Benutzerschnittstellen übertroffen.\simplevcite{20} Grund dafür ist, dass die
+Abstraktionsebene, auf der die GUIs beschrieben wurden, oft nicht an die Gestaltung der GUI, sondern an
 fachliche Konzepte der Domäne angepasst wurde.\\
 Daraus ergibt sich die Überlegung, ob diese
 beiden Ansätze zur Implementierung von UIs (traditionell und Model-Driven)
 verbunden werden können (kombinierter Ansatz).
 Somit könnte die genaue Beschreibung der Darstellung mit einer höheren
 Abstraktion verbunden werden. Dieser Versuch wurde bspw. von
-Bacikov{\'a} im Jahr 2013 (siehe \cite{11}) unternommen. Dort wurde nachgewiesen,
-dass ein GUI eine Sprache definiert.\\
+Bacikov{\'a} im Jahr 2013 unternommen. \simplevcite{11} Dort wurde
+nachgewiesen, dass ein GUI eine Sprache definiert.\\
 In dieser Arbeit wird versucht den kombinierten Ansatz in einem anderen
 Fachbereich umzusetzen, um die Unterstützung eines GUIs auf unterschiedlichen
-PLatformen zu gewährleisten.
+Plattformen zu gewährleisten.
 Bei der Umsetzung wird sich auf die UIs der Anwendung
 \emph{profil c/s}. Profil c/s ist eine \gloss{JEE}-Anwendung die
 \gloss{InVeKoS} umsetzt und von der deg entwickelt wird.

@@ -8,20 +8,20 @@ in Web-Browsern (Web-Client) als auch standalone auf einem PC
 Da die Nutzer an einen bestimmten Aufbau der GUI
 gewöhnt sind, ist es von Vorteil, wenn beide Clients ein ähnliches UI bieten. 
 Von daher ist die Ähnlichkeit der UIs auf
-unterschieldichen Platformen eine weitere Anforderung.\\
+unterschieldichen Plattformen eine weitere Anforderung.\\
 Um eine effiziente
 Arbeitsweise zu ermöglichen, ist es wichtig, dass die
 verwendeten Frameworks um wiederverwendbare Komponenten
-erweiterbar sind. So ist er möglich redundarte
+erweiterbar sind. So ist er möglich redundante
 Implementierungen zu verallgemeinern und letztendlich zu
 reduzieren.\\
 Darauf aufbauend, ist weiterhin von großer Bedeutung, wie stark von den
-verwendeten Frameworks abstrahiert werden kann. Grund dafür ist, dass durch
+verwendeten Frameworks abstrahiert werden kann, da durch
 einen hohen Abstraktionsgrad ein hoher Komplexitätsgrad beherrscht werden kann.
-(vgl. \cite{brauer2003grundkurs})\\
+\simplevcite{brauer2003grundkurs}\\
 Abschließend ist die Ausdruckskraft der Syntax, in der die UIs entwickelt
 werden, als Kriterium zu nennen. Dies fördert die Lesbarkeit des Quell-Codes und
-damit letzendlich das Verständnis dessen (vgl. \cite[S.70]{voelter}), sowie die
+damit letzendlich das Verständnis dessen \vcite{voelter}{70}, sowie die
 Effiziens mit der die GUIs entwickelt werden.\\
 Diese Anforderungen an das UI haben in der deg unterschiedliche Prioritäten (1 =
 höchste Priorität, 3 = niedrigste Priorität), die in folgender Tabelle beschrieben
@@ -36,7 +36,7 @@ werden.
 				\hline\hline
 				1. & Bereitstellung für Standalone und Web & 1\\
 				\hline
-				2. & 	Ähnlicher Aufbau auf unterschiedlichen Platformen & 2 \\
+				2. & 	Ähnlicher Aufbau auf unterschiedlichen Plattformen & 2 \\
 				\hline
 				3. & Erweiterbarkeit der verwendeten Frameworks & 1\\
 				\hline
@@ -51,16 +51,18 @@ werden.
 \end{table}
 
 \section{Umsetzung der
-Benutzerschnittstellen für mehreren Plattformen in der deg (Ist-Zustand)}
+Benutzerschnittstellen für mehrere Plattformen in der deg (Ist-Zustand)}
 \subsection{Multichannel-Framework}
 Die Clients werden in der Programmiersprache Java entwickelt. Für die
 Realsierung des Standalone-Clients wird in der deg das \gloss{Swing}-Framework
 verwendet. Für den Web-Client wird auf \gloss{wingS} zurückgegriffen. Um eine
-Vorstellung des Ist-Zustandes zu vermitteln sind in Abbildung \ref{Abb_Web-Client} und in Abbildung \ref{Abb_Standalone-Client} die GUIs eines \gloss{Zuwendungsblatt} eines \gloss{Förderantrag} für den Web-Client und
-den Standalone-Client abgebildet.\\
+Vorstellung des Ist-Zustandes zu vermitteln sind in Abbildung
+\ref{Abb_Web-Client} und in Abbildung \ref{Abb_Standalone-Client} die GUIs
+eines \gloss{Zuwendungsblatt}es eines \gloss{Förderantrag}es für den Web-Client
+und den Standalone-Client abgebildet.\\
 In diesen UIs ist nur ein bestimmter Teil für fachlichen Informationen relevant.
-Dies ist lediglich die Tabelle und die darunter stehenden Buttons, sowies das Bemerkungsfeld (im Web-Client auf der rechten Seite und im
-Standalone-Client in der Mitte). Dieser Bereich des GUI ist in beiden
+Dies sind lediglich die Tabelle und die darunter stehenden Buttons, sowies das
+Bemerkungsfeld (im Web-Client auf der rechten Seite und im Standalone-Client in der Mitte). Dieser Bereich des GUI ist in beiden
 Clientsgleich aufgebaut. Andere Teile des GUIs haben derzeit einen
 unterschiedlichen Aufbau, was den unterschiedlichen Frameworks für die
 Umsetzung von Web- und Standalone-Client geschuldet ist.
@@ -75,17 +77,17 @@ Dieses Verfahren erwies sich mit komplexer werdenden GUIs als sehr
 ineffizient. Daher hat die deg
 eine Lösung erarbeitet mit der es möglich ist, ein einmal beschriebenes GUI auf mehrere
 Plattformen zu protieren. Durch diese Form der Abstraktion wird der Aufwand der
-Entwicklung neuer GUIs stark reduziert. Somit entstand die Anforderung Nr. 4,
-die damit ebenso erfüllt wurde. Zugleich fördert die einmalige Beschreibung auch eine ähnlichen Aufbau der GUI im Web- und
-Standalone-Client, was der Anfroderung Nr. 2 nachkommt.
+Entwicklung neuer GUIs stark reduziert. 
+Zugleich fördert die einmalige Beschreibung auch einen ähnlichen Aufbau der GUI
+im Web- und Standalone-Client, was der Anfroderung Nr. 2 nachkommt.
 Die Lösung der deg ist das \emph{Multichannel-Framework} (MCF).\\
 Die Architektur des
 Multichannel-Frameworks ist Abbildung \ref{Abb_MC-Framework} zu entnehmen.
 Innerhalb dieses Frameworks werden die GUIs mittels so genannter
-\emph{Präsentationsformen} beschreiben. 
+\emph{Präsentationsformen} beschrieben. 
 \myBigFigureCited{mcgrob.png}{Architektur des
 Multichannel-Frameworks}{\simplevcite{jwammc}}{MC-Framework}
-Aus Präsentationsformen mithilfe der
+Aus Präsentationsformen können mithilfe der
 \emph{Component-Factories} GUIs erzeugt werden, die auf unterschiedlichen
 Frameworks basieren\footnote{Hier: Swing, ULC und wingS. Wobei ULC bei der deg
 nicht mehr im Einsatz ist.} und das \emph{Component-Interface} implementieren.
@@ -98,19 +100,18 @@ der Clients wird der WAM-Ansatz verwendet, welcher im folgenden Kapitel kurz
 erläutert wird.
 \subsection{JWAM}
 \emph{JWAM ist eine Realisierung des WAM-Ansatzes in der Programmiersprache
-Java} \cite[S.30]{sauerDip}\\\\
+Java} \vcite{sauerDip{30}}\\\\
 \emph{WAM} steht für Werkzeug und Material-Ansatz. Es handelt sich dabei um
 einen Ansatz zur Softwarearchitektur, welcher die Anwendungsorientierung der
 Softwareentwicklung fördert und fordert. Der Benutzer der Software steht im
 Mittelpunkt, wodurch die Gestaltung der Funktionalitäten, Benutzerschnittstellen
-und die des Entwicklungs- und Implementierungsprozesses beeinflusst wird. (vgl.
-\cite[S.13]{schmelzer}) Weiterhin werden Entwurfsmethaphern verwendet, die den
-Entwicklern und Anwendern das Entwicklen und Verstehen der Software vereinfachen
-sollen. (vgl. \cite[S.30]{sauerDip}) Diese Entwurfsmethapher beschreiben
-\emph{[\ldots] Elemente und Konzepte der Anwendung durch bildhafte
-Vorstellungen von realen Gegenständen [\ldots]} \cite[S.30]{sauerDip}.
+und die des Entwicklungs- und Implementierungsprozesses beeinflusst wird.
+\vcite{schmelzer}{13} Weiterhin werden Entwurfsmethaphern verwendet, die den
+Entwicklern und Anwendern das Entwickeln und Verstehen der Software
+vereinfachen sollen. \vcite{sauerDip}{30} Diese Entwurfsmethapher
+beschreiben \emph{[\ldots] Elemente und Konzepte der Anwendung durch bildhafte Vorstellungen von realen Gegenständen [\ldots]} \cite[S.30]{sauerDip}.
 Die grundlegendes Methaphern werden hier kurz erläutert. Ein \emph{Material}
-können nicht direkt vom Nutzer bearbeitet werden. Sie besitzen jedoch eine
+kann nicht direkt vom Nutzer bearbeitet werden. Sie besitzen jedoch eine
 Schnittstelle, die fachliche Operationen erlaubt. Diese Operationen können
 bspw. von einem \emph{Werkzeug} aufgerufen werden, um den Zustand des Materials
 zu verändern. Dabei verfügen Werkzeuge über eine Präsentation und geben somit
@@ -121,8 +122,8 @@ assoziiert werden, können in \emph{Arbeitsumgebungen} abgelegt werden. Dabei wer
 unterschieden. Erstens die persönlichen Arbeitsplätze der Benutzer und Räume der
 Arbeitsumgebung, die für alle zugänglich sind und über die somit die
 Zusammenarbeit statt findet. (vgl. \cite[S.31]{sauerDip},
-\cite[S.15]{schmelzer}) Darüber hinaus gibt des \emph{fachliche Services}, die
-als Dienstleistern Funktionalität zur Verfügung stellen. Diese können
+\cite[S.15]{schmelzer}) Darüber hinaus gibt es \emph{fachliche Services}, die
+als Dienstleister Funktionalität zur Verfügung stellen. Diese können
 Materialien verwalten, verfügen jedoch über keine eigene Präsentation.
 (vgl. \cite[S.30f]{sauerDip})\\
 Durch fachliche Services ist mit dem WAM-Ansatz Multi-Channeling möglich.
@@ -131,19 +132,18 @@ dabei auf einer anderen Ebene an als das MCF. Das Multi-Channeling des
 WAM-Ansatzes basiert darauf, dass \emph{[\ldots] Funktionalität
 unabhängig von der konkreten Handhabung, Präsentation und Technik
 bereitgestellt wird.} \cite[S.42]{sauer} Das MCF hingegen basiert darauf, dass
-eine Präsentation und abhängig von der Technik bereitgestellt werden kann. Es
-setzt demnach ein einer höheren Ebene an, als das Multi-Channeling des
-WAM-Ansatzes. Die Mechanismen, die das Multi-Channeling im WAM-Ansatz
-werden jedoch auch im MCF verwendet.\\
-Da ein Werkzeug eine Präsentation darstellt, sind sie für den weiteren Verlauf
-der Arbeit (insbesondere Kapitel \ref{Entwicklung des Generators für das
-Generieren von Klassen für das Multichannel-Framework}) relevant. Es werden zwei
-Arten von Werkzeugen unterschieden - \emph{monolithische-} und \emph{komplexe
+eine Präsentation unabhängig von der Technik bereitgestellt werden kann. Es
+setzt demnach an einer höheren Ebene an, als das Multi-Channeling des
+WAM-Ansatzes. Die Mechanismen, die das Multi-Channeling im
+WAM-Ansatz bietet, werden jedoch auch im MCF verwendet.\\
+Bei Werkzeugen werden zwei
+Arten unterschieden - \emph{monolithische-} und \emph{komplexe
 Werkzeuge}. (vgl. \cite[S.5]{hofer}) Da in der deg hauptsächlich komplexe
-Werkzeuge Anwendung finden, werden die monolithischen Werkzeuge nicht hier
-weiter erläutert. Komplexe Werkzeuge gleidern sich in Oberfläche, Interaktion
+Werkzeuge Anwendung finden, werden die monolithischen Werkzeuge hier nicht
+weiter erläutert. Komplexe Werkzeuge gliedern sich in Oberfläche, Interaktion
 und Fachlogik auf. Dabei muss die Funktionskomponente (FunctionPart - FP)
-vollständig von der GUI abstrahiert und sich somit auf die Fachlogik beschränkt.
+vollständig von der GUI abstrahieren und sich somit auf die Fachlogik
+beschränken.
 Zwischen diesen Komponenten steht eine Interaktionskomponente (InteractionPart -
 IP), die für die Abstraktion Sorge trägt. Eine Werkzeugklasse umschließt diese
 drei Komponenten (siehe Abbildung \ref{Abb_WAM_GUI}). (vgl. \cite[S.5f]{hofer})
@@ -155,7 +155,7 @@ Beim Einsatz des MCF treten jedoch Probleme auf. Bezogen auf die Anforderungen
 wurden Anforderungen Nr. 3 und 5 nicht umgesetzt. (Fakt ist, dass jede Sprache
 eine gewisse Ausdruckskraft hat. Da in dieser Arbeit versucht wird die
 UI-Entwicklgung mittels einer ausdrucksstarken DSL, die sich auf die Domäne von profil c/s
-bezieht umzusetzen, ist die Ausdrucksstärke herkömmlichen
+bezieht umzusetzen, ist die Ausdrucksstärke herkömmlicher
 Programmiersprachen als unzureichend anzusehen).\\
 Ein weiteres Problem bezieht sich
 auf die integrierten Framworks (Swing und wingS). Beide Frameworks sind veraltet und werden nicht mehr gewartet.
@@ -171,13 +171,13 @@ widerlegt. Ein Problem, welches bei der Integration neuer Frameworks aufkommt,
 ist, dass sich das MCF sehr stark an Swing orientiert und die GUIs vor allem
 vom \gloss{GridBagLayout} stark beeinflusst sind. Ein solches Layout steht nicht
 in allen Frameworks zur Verfügung. Da die Beschreibung der GUI über ein solches
-Layout vollzogen wird, ist es der Umgang mit dem \gloss{GridBagLayout}
+Layout vollzogen wird, ist der Umgang mit dem \gloss{GridBagLayout}
 innerhalb des Frameworks eine Voraussetzung für die Intergration in das MCF.
-Zusammenfassen sind folgende Probleme des MCF zu nennen:
+Zusammenfassend sind folgende Probleme des MCF zu nennen:
 \begin{itemize}
-  \item verwendeten Frameworks sind inaktuell
+  \item Verwendeten Frameworks sind inaktuell
   \item Starke Orientierung an Swing
-  \item o.g. Anforderungen werden nicht komplett umgesetzt
+  \item Oben genannte Anforderungen werden nicht komplett umgesetzt
 \end{itemize}
 
 Dazu kommen lästige Routinearbeiten, die in der deg bei der Entwicklung von UIs
@@ -187,8 +187,8 @@ getätigt werden müssen.
   Klassen gepflegt werden. 
   \item Beim Erstellen von Tabellen müssen viele Methoden überschrieben werden.
   \item Die Werte für Aufschriften, Größeneinstellungen u.ä. für UI-Komponenten
-  wird bei der deg in Properties-Dateien festgehalten. Das Erstellen und Pflegen
-  wird als Fehleranfällig betrachtet.
+  werden bei der deg in Properties-Dateien festgehalten. Das Erstellen und
+  Pflegen wird als Fehleranfällig betrachtet.
 \end{itemize}
 Diese Routinearbeiten werden in Kapitel \ref{Entwicklung des
 Generators für das Generieren von Klassen für das Multichannel-Framework}
@@ -199,12 +199,13 @@ profil c/s genauer erläutert.
 Das langfristige Ziel der deg bzgl. des MCF ist es, eine Lösung zu entwickeln,
 welche das MCF ablösen kann. Anzustreben ist eine Lösung, die neben der
 Umsetzung der o.g.
-Anforderungen auch die genannten Routinearbeiten eindemmt.\\
+Anforderungen auch die genannten Routinearbeiten minert.\\
 In dieser Arbeit wird ein Ansatz unterschucht, bei dem es möglich ist, die oben
 genannten Anforderungen vollständig umzusetzen. Kern des Ansatzen ist eine
-DSL, mit deren Hilfe die UIs beschrieben werden sollen. Eine DSLs könnte so
-konzipiert werden, dass sie ausreichend abstrakt und erweiterbar ist und bzgl.
-der Ausdrucksstäkre das MCF übertrifft.\\
+Domänenspezifische Sprache (DSL), mit deren Hilfe die UIs beschrieben werden
+sollen.
+Eine DSLs könnte so konzipiert werden, dass sie ausreichend abstrakt und erweiterbar ist und bzgl.
+der Ausdrucksstärke das MCF übertrifft.\\
 Die genaue Lösungsidee mittels DSL, welche in dieser Arbeit verfolgt wird, ist
 in Kapitel \ref{Entwicklung einer Lösungsidee} beschrieben.
 
