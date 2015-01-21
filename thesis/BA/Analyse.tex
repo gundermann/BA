@@ -100,7 +100,7 @@ der Clients wird der WAM-Ansatz verwendet, welcher im folgenden Kapitel kurz
 erläutert wird.
 \subsection{JWAM}
 \emph{JWAM ist eine Realisierung des WAM-Ansatzes in der Programmiersprache
-Java} \vcite{sauerDip{30}}\\\\
+Java} \vcite{sauerDip}{30}\\\\
 \emph{WAM} steht für Werkzeug und Material-Ansatz. Es handelt sich dabei um
 einen Ansatz zur Softwarearchitektur, welcher die Anwendungsorientierung der
 Softwareentwicklung fördert und fordert. Der Benutzer der Software steht im
@@ -131,8 +131,8 @@ Durch fachliche Services ist mit dem WAM-Ansatz Multi-Channeling möglich.
 dabei auf einer anderen Ebene an als das MCF. Das Multi-Channeling des
 WAM-Ansatzes basiert darauf, dass \emph{[\ldots] Funktionalität
 unabhängig von der konkreten Handhabung, Präsentation und Technik
-bereitgestellt wird.} \cite[S.42]{sauer} Das MCF hingegen basiert darauf, dass
-eine Präsentation unabhängig von der Technik bereitgestellt werden kann. Es
+bereitgestellt wird.} \cite[S.42]{sauerDip} Das MCF hingegen basiert darauf,
+dass eine Präsentation unabhängig von der Technik bereitgestellt werden kann. Es
 setzt demnach an einer höheren Ebene an, als das Multi-Channeling des
 WAM-Ansatzes. Die Mechanismen, die das Multi-Channeling im
 WAM-Ansatz bietet, werden jedoch auch im MCF verwendet.\\
@@ -175,19 +175,26 @@ Layout vollzogen wird, ist der Umgang mit dem \gloss{GridBagLayout}
 innerhalb des Frameworks eine Voraussetzung für die Intergration in das MCF.
 Zusammenfassend sind folgende Probleme des MCF zu nennen:
 \begin{itemize}
-  \item Verwendeten Frameworks sind inaktuell
-  \item Starke Orientierung an Swing
-  \item Oben genannte Anforderungen werden nicht komplett umgesetzt
+  \item[ \textbf{P1}]
+  Verwendeten Frameworks sind inaktuell
+  \item[ \textbf{P2}]
+  Starke Orientierung an Swing
+  \item[ \textbf{P3}]
+  Oben genannte Anforderungen werden nicht komplett umgesetzt
 \end{itemize}
-
+\noindent
 Dazu kommen lästige Routinearbeiten, die in der deg bei der Entwicklung von UIs
 getätigt werden müssen. 
 \begin{itemize}
-  \item Vergebene Bezeichnungen für UI-Komponenten müssen in unterschiedlichen
+  \item[ \textbf{R1}]
+  Vergebene Bezeichnungen für UI-Komponenten müssen in unterschiedlichen
   Klassen gepflegt werden. 
-  \item Beim Erstellen von Tabellen müssen viele Methoden überschrieben werden.
-  \item Die Werte für Aufschriften, Größeneinstellungen u.ä. für UI-Komponenten
-  werden bei der deg in Properties-Dateien festgehalten. Das Erstellen und
+  \item[ \textbf{R2}]
+  Beim Erstellen von Tabellen müssen viele Methoden
+  überschrieben werden.
+  \item[ \textbf{R3}]
+  Die Werte für Aufschriften, Größeneinstellungen u.ä. für
+  UI-Komponenten werden bei der deg in Properties-Dateien festgehalten. Das Erstellen und
   Pflegen wird als Fehleranfällig betrachtet.
 \end{itemize}
 Diese Routinearbeiten werden in Kapitel \ref{Entwicklung des

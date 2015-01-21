@@ -360,19 +360,6 @@ class GuiDSLGenerator implements IGenerator {
 		«ENDFOR»
 	'''
 
-	def genInteractions() '''
-«««		«FOR i : interactions»
-«««			public void invoke«i.name»(){
-«««				«FOR a : i.actions»
-«««					«IF a.type.equals('UiAction')»
-«««						«(a as UIAction).extract»
-«««					«ENDIF»
-«««				«ENDFOR»
-«««			}
-«««		«ENDFOR»
-«««		
-	'''
-
 	def compileDefinition(Definition definition) '''
 	«IF definition.concreteDefition.name == 'Label'»
 		«(definition.concreteDefition as LabelDefinition).compileLabel»
@@ -420,45 +407,6 @@ class GuiDSLGenerator implements IGenerator {
 		this.add( scrollPane, BorderLayout.CENTER );
 	'''
 
-	//	def compileMultiSelection(MultiSelectionDefinition definition)'''
-	//		«addImport("import test.JavaFXMultiSelection;")»
-	//			«IF definition.inputType != null»
-	//				«addImport("import "+definition.inputType+";")»
-	//				«addGlobalVar( "JavaFXMultiSelection<"+definition.inputType+"> " + definition.name + ";")»
-	//				«definition.name» = new JavaFXMultiSelection<«definition.inputType»>();
-	//				«IF definition.selectableValuesLocation != null»
-	//				«definition.name».setSelectable(«definition.selectableValuesLocation»);
-	//					«IF definition.selectedValuesLocation != null»
-	//				«definition.name».setSelected(«definition.selectedValuesLocation»);
-	//					«ENDIF»
-	//				«ENDIF»
-	//			«ELSE»
-	//		«addGlobalVar( "JavaFXMultiSelection<?> " + definition.name + ";")»
-	//				«definition.name» = new JavaFXMultiSelection<?>();
-	//			«ENDIF»
-	//			return «definition.name»;
-	//	'''
-	//	def compileCheckbox(CheckboxDefinition definition) '''
-	//		«addImport("import javafx.scene.control.CheckBox;")»
-	//		«addGlobalVar( "CheckBox " + definition.name + ";")»
-	//			«definition.name» = new CheckBox();
-	//			«definition.name».setText("«definition.text»");
-	//			return «definition.name»;
-	//	'''
-	//	def compileRadiobox(RadioboxDefinition definition) '''
-	//		«addImport("import javafx.scene.control.RadioButton;")»
-	//		«addGlobalVar( "RadioButton " + definition.name + ";")»
-	//			«definition.name» = new RadioButton();
-	//			«definition.name».setText("«definition.text»");
-	//			return «definition.name»;
-	//	'''
-	//	def compileTextfield(TextfieldDefinition definition) '''
-	//		«addImport("import javafx.scene.control.TextField;")»
-	//		«addGlobalVar( "TextField " + definition.name + ";")»
-	//			«definition.name» = new TextField();
-	//			«definition.name».setText("«definition.text»");
-	//			return «definition.name»;
-	//	'''
 	def compileLabel(LabelDefinition definition) '''
 		«addImport("import DE.data_experts.jwammc.core.pf.PfLabel;")»
 		«addGlobalVar("PfLabel " + definition.id + ";")»
@@ -468,7 +416,6 @@ class GuiDSLGenerator implements IGenerator {
 			«genProperty(definition.id, 'setText', definition.properties.text, true)»
 		«ENDIF»
 		
-		«««		TODO
 «««		Label wird in der Layoutdatei genommen werden
 		«mainContainer».add(«definition.id», BorderLayout.NORTH);
 	'''
@@ -489,27 +436,4 @@ class GuiDSLGenerator implements IGenerator {
 		return '';
 	}
 
-	def compileButton(ButtonDefinition definition) '''
-		«addImport("import javafx.scene.control.Button;")»
-		«addGlobalVar("Button " + definition.name + ";")»
-			«definition.name»= new Button();
-		«««			«definition.name».setText("«definition.text»");
-«««			«IF definition.interaction != null»
-«««				«addImport("import javafx.event.ActionEvent;")»
-«««				«addImport("import javafx.event.EventHandler;")»
-«««				«definition.name».setOnAction(new EventHandler<ActionEvent>() {
-«««					@Override
-«««					public void handle(ActionEvent actionEvent) {
-«««						invoke«(definition as ButtonDefinition).interaction.name»();
-«««					}
-«««				});
-«««				«definition.interaction.addInteractionMethod»
-«««			«ENDIF»
-			return «definition.name»;
-	'''
-
-//	def String addInteractionMethod(Interaction interaction) {
-//		interactions.add(interaction)
-//		return ""
-//	}
 }

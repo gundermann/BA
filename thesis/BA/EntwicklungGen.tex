@@ -288,3 +288,181 @@ durch die Klasse \emph{GuiExplorer} erzeugt wird.
 \myBigFigure{explorer.jpg}{Generierte Explorer-GUI}{explorerGen} 
 
 \subsection*{IP-Klasse}
+Um ein Objekt der IP-Klasse zu instanziieren wird ein Objekt der dazugehörigen
+FP-Klasse benötigt. Die genauen Funktionen der FP-Klasse sollen nicht vom
+Generator generiert werden. Es ist jedoch möglich den Klassenrumpf
+vorzubereiten. Die Generierung der Klassenrumpfes der FP-Klasse
+ist im Verlgeich zu der Generierung der GUI- und der IP-Klasse recht einfach
+(siehe Listing \ref{LST_FPGen}.
+\begin{lstlisting}[{caption= Generierung der FP-Klasse
+},{label=LST_FPGen}] 
+def genFpSource() '''
+		«addImport("import DE.data_experts.jwam.tools.FpObject;")»
+		«addImport("import de.jwam.handling.toolconstruction.request.RequestHandler;")»
+		public class «specificFilename» extends FpObject{
+			 public «specificFilename»( RequestHandler parent ) {
+   		 		super( parent, "«descriptionname»" );
+  			}
+		}
+	'''	
+\end{lstlisting}
+Die Generierung der IP-Klasse beginnt wiederum mit der Generierung des
+Klassenkopfes mit entsprechend benötigten Imports (siehe Listing
+\ref{LST_IpKopf}.
+\begin{lstlisting}[{caption= Generierung des Klassenkopfs der
+IP-Klasse},{label=LST_IpKopf}] 
+def genIpSource(UIDescription description)'''
+		«addImport("import DE.data_experts.jwam.tools.IpObject;")»
+		«addImport("import de.jwamx.technology.iafpf.guimanagement.IAFContext;")»
+		«addImport("import DE.data_experts.util.degexception.ExceptionManager;")»
+		public class «specificFilename» extends IpObject{
+			public «specificFilename»( IAFContext iafContext, final Fp«descriptionname» fp) {
+    			super( iafContext, fp );
+    			«addGlobalVar("Fp" + descriptionname + ' fp;')»
+   				this.fp = fp;
+   				try {
+      				initCommands();
+				    initIAFs( iafContext );
+			    }
+    			catch ( Exception ex ) {
+      				ExceptionManager.getManager().addAndShow( ex );
+    			}
+   			}
+   				«description.genIAF»
+   				«description.genCommands»
+   				«description.genCommandMethods»
+   				«genGlobalVars»
+		}
+	'''
+\end{lstlisting}
+Wie bei der GUI-Klassen müssen hier ebenfalls die globalen Variablen am Ende der
+Klasse stehen. Zwischen dem Konstruktor und den globalen variablen werden die
+Interaktionsformen mit den Kommandos bestimmt (\emph{genIAF} - siehe Listing
+\ref{LST_GenIaf}), den Kommandos bestimmte Methoden zugeordnet
+(\emph{genCommands} - siehe Listing \ref{LST_GenCommands}) und die Rümpfe für
+diese Methoden (\emph{genCommandMethods} - siehe Listing
+\ref{LST_GenCommandMethods}) generiert.\\
+Bei der Bestimmung der Interaktionsformen werden die in der GUI-Beschreibung
+definierten UI-Komponenten durchlaufen und deren Standard-Interaktionsformen und
+spezielle Interaktionsformen übersetzt (siehe Listing \ref{LST_genIAF1}).
+\begin{lstlisting}[{caption= Übersetzung der
+Interaktionsformen},{label=LST_GenIAF1}] def genIAF(UIDescription
+description)''' protected void initIAFs( IAFContext iafContext ) {
+	 	«FOR definition : description.definitions»
+	 		«definition.compileIAF»
+	 	«ENDFOR»
+	 }
+	'''
+	
+def compileIAF(Definition definition)'''
+	«IF definition.concreteDefition.name == 'Label'»
+		«(definition.concreteDefition as LabelDefinition).compileLabelStandardIAF»
+	«ELSEIF definition.concreteDefition.name == 'Tree'»
+		«(definition.concreteDefition as TreeDefinition).compileTreeStandardIAF»
+	«ENDIF»
+	«««		Spezielle Interaktionsformen
+		«definition.compileSpecificInteractionTypes»
+	'''
+
+\end{lstlisting}
+Dabei muss für die Standard-Interaktionsformen unterschieden werden um welche
+UI-Komponente es sich handelt.\\
+Zu jeder Interaktionsform gibt es ein entsprechendes Kommando, welches zur
+Generierung des Codes relevant ist. Die Zuordung von Kommando zu
+Interaktionsform wird vom Generator vorgenommen (Beipsiel Tree - siehe Listing
+\ref{LST_compileTree}). Die dafür verwendeten Methoden (z.B.
+\emph{genIAFActivator} oder \emph{genIAFTree}) können wiederverwendet werden.
+\begin{lstlisting}[{caption= Übersetzung der Standard-Interaktionsform von
+Trees},{label=LST_compileTree}] 
+def compileTreeStandardIAF(TreeDefinition definition)'''
+		«definition.id.genIAFActivator»
+		«definition.id.genIAFTree»
+	'''
+	
+def genIAFTree(String id) '''
+		«genIAFSource("DE.data_experts.jwam.gui.interaction.IfTree","de.jwamx.technology.iafpf.command.cmdSelect",id)»
+	'''
+	
+def genIAFActivator(String id) '''
+		«genIAFSource("de.jwamx.technology.iafpf.interaction.ifActivator", "de.jwamx.technology.iafpf.command.cmdActivate", id)»
+	'''
+\end{lstlisting}
+Die Methode \emph{genIAFSource} hat einen sehr hohen Wiederverwendungsgrad. Sie
+wird von allen Methoden, die für die Zuordnung von Interaktionsform zu Kommando
+zuständig sind verwendet. In dieser Methode wird der Quellcode letztendlich
+generiert (siehe Listing \ref{LST_genIAFSource}).
+\begin{lstlisting}[{caption= Generierung einer
+Interaktionsform},{label=LST_genIAFSource}] 
+def genIAFSource(String iafSource, String commandSource, String id) '''
+		«addImport("import "+ iafSource +  ";")»
+		«var iafNameWithPrefix = iafSource.split("\\.").last»
+		«var iafName = iafNameWithPrefix.substring(2)»
+		«addGlobalVar(iafNameWithPrefix + " "+id+iafName+';')»
+		«id+iafName» = («iafNameWithPrefix») iafContext.interactionForm( «iafNameWithPrefix».class, "«id»" );
+		«IF !commandSource.equals("")»
+		«addImport("import "+ commandSource +  ";")»
+		«var commandNameWithPrefix = commandSource.getClassOfSource»
+		«var commandName = commandNameWithPrefix.substring(3)» 
+		«id + iafName».attach«commandName»Command( «id + commandName»Command );
+		«addCommand(id, commandName)»
+		«ENDIF»
+	'''
+	
+	
+	def addCommand(String id, String commandName) {
+		addGlobalVar("cmd"+commandName + ' ' + id + commandName + "Command;")
+		commands.put(id+commandName, commandName);
+		return ""
+	}
+\end{lstlisting}
+Die Einzelheiten dieser Methode sind abhängig von den Konventionen die bzgl.
+Namensbegund in der deg getroffen wurden. Der Aufruf der Methode
+\emph{addCommand} ist jedoch für weitere Generierungen von Belang.\\
+Nach Abschluss der Generierung des Quellcodes zur Bestimmung der
+Interaktionsformen und Kommandos, müssen den Kommandos entsprechende Methoden
+zugeordnet werden. Die Referenz auf die Kommandos wird über die Liste
+\emph{commands} ermöglicht, die durch den Aufruf der Methode \emph{addCommand}
+(siehe Listing \ref{LST_genIAFSource}) gefüllt wird. Die Methode
+\emph{genCommands} ist für die beschriebene Zuordnung zuständig (siehe Listing
+\ref{LST_GenCommands}).
+\begin{lstlisting}[{caption= Generierung der
+Kommandoinitialisierung},{label=LST_genIAFSource}] 
+def genCommands(UIDescription description)'''
+	 protected void initCommands() {
+	 	«FOR id : commands.keySet»
+	 		«var commandName = commands.get(id)»
+	 		«addImport("import DE.data_experts.jwam.util.CmdAusfuehrer" + commandName + ";")»
+	 		«id»Command = new CmdAusfuehrer«commandName»( getAusfuehrer() ) {
+      @Override
+      public void ausfuehren() {
+        «id»();
+      }
+    };
+	 	«ENDFOR»
+	 }
+	'''
+\end{lstlisting}
+Die genauen Bezeichnungen ergeben sich wiederum aus den Konventionen für die
+Bezeichnungen innerhalb der MCF der deg.\\
+Um Compilierungsfehler zu vermeiden, müssen die Methoden, die vom generierten
+ Quellcode verwendet werden, ebenfalls generiert werden. Dazu ist die Methode
+ \emph{genCommandMethods} zuständig. In dieser Methode wird die Liste
+ \emph{commands} ebenfalls benutzt, um die Methodenrümpfe zu erzeugen (siehe
+ Listing \ref{LST_GenCommandMethods}).
+ Die Implementierung der generierten Methoden muss der Entwickler übernehmen.
+ \begin{lstlisting}[{caption= Generierung der
+Methoden zur Bestimmung der auszuführenden Aktionen
+bei einer Interaktion},{label=LST_GenCommandMethods}] 
+def genCommandMethods(UIDescription description)'''
+		«FOR commandId : commands.keySet»
+		public void «commandId»(){
+			
+		}
+		«ENDFOR»
+	'''
+\end{lstlisting}
+\parskip 20pt
+Die Generator-Klasse ist im Anhang \ref{AppXtext} zu finden.
+In den Methoden zur Generierung von UI-Komponenten für die GUI-Klassen sind die Codezeilen, die
+das Layout bestimmen, entsprechend gekennzeichnet.
+

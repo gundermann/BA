@@ -46,9 +46,9 @@
 \contentsline {chapter}{\numberline {9}Entwicklung des Generators f\"ur das Generieren von Klassen f\"ur das Multichannel-Framework}{77}{chapter.9}
 \contentsline {section}{\numberline {9.1}Beschreibung der GUI- und IP-Klassen}{78}{section.9.1}
 \contentsline {section}{\numberline {9.2}Umsetzung des frameworkspezifischen Generators}{79}{section.9.2}
-\contentsline {chapter}{\numberline {10}Zusammenfassung und Ausblick}{86}{chapter.10}
+\contentsline {chapter}{\numberline {10}Zusammenfassung und Ausblick}{90}{chapter.10}
 \contentsline {chapter}{Anhang}{xi}{appendix*.24}
 \contentsline {chapter}{Glossar}{xviii}{lstnumber.1.166}
-\contentsline {chapter}{Literaturverzeichnis}{xviii}{appendix*.30}
+\contentsline {chapter}{Literaturverzeichnis}{xix}{appendix*.30}
 \select@language {English}
 \select@language {german}

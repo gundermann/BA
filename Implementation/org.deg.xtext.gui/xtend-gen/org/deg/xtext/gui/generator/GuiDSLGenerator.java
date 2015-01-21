@@ -10,7 +10,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-import org.deg.xtext.gui.guiDSL.ButtonDefinition;
 import org.deg.xtext.gui.guiDSL.ComponentDefinition;
 import org.deg.xtext.gui.guiDSL.Definition;
 import org.deg.xtext.gui.guiDSL.DescriptionType;
@@ -783,11 +782,6 @@ public class GuiDSLGenerator implements IGenerator {
     return _builder;
   }
   
-  public CharSequence genInteractions() {
-    StringConcatenation _builder = new StringConcatenation();
-    return _builder;
-  }
-  
   public CharSequence compileDefinition(final Definition definition) {
     StringConcatenation _builder = new StringConcatenation();
     {
@@ -974,11 +968,10 @@ public class GuiDSLGenerator implements IGenerator {
       }
     }
     _builder.newLine();
-    _builder.append("\t\t");
-    _builder.append(this.mainContainer, "\t\t");
+    _builder.append(this.mainContainer, "");
     _builder.append(".add(");
     String _id_5 = definition.getId();
-    _builder.append(_id_5, "\t\t");
+    _builder.append(_id_5, "");
     _builder.append(", BorderLayout.NORTH);");
     _builder.newLineIfNotEmpty();
     return _builder;
@@ -1020,30 +1013,5 @@ public class GuiDSLGenerator implements IGenerator {
       this.globalVars.add(globalVar);
     }
     return "";
-  }
-  
-  public CharSequence compileButton(final ButtonDefinition definition) {
-    StringConcatenation _builder = new StringConcatenation();
-    String _addImport = this.addImport("import javafx.scene.control.Button;");
-    _builder.append(_addImport, "");
-    _builder.newLineIfNotEmpty();
-    String _name = definition.getName();
-    String _plus = ("Button " + _name);
-    String _plus_1 = (_plus + ";");
-    String _addGlobalVar = this.addGlobalVar(_plus_1);
-    _builder.append(_addGlobalVar, "");
-    _builder.newLineIfNotEmpty();
-    _builder.append("\t");
-    String _name_1 = definition.getName();
-    _builder.append(_name_1, "\t");
-    _builder.append("= new Button();");
-    _builder.newLineIfNotEmpty();
-    _builder.append("\t\t\t");
-    _builder.append("return ");
-    String _name_2 = definition.getName();
-    _builder.append(_name_2, "\t\t\t");
-    _builder.append(";");
-    _builder.newLineIfNotEmpty();
-    return _builder;
   }
 }
