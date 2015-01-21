@@ -35,7 +35,6 @@ class GuiDSLGenerator implements IGenerator {
 	override void doGenerate(Resource resource, IFileSystemAccess fsa) {
 		descriptionname = resource.URI.getDescriptionName
 		packageName = resource.URI.getPackageName
-		System.out.println(packageName)
 		genGuiClass(resource.allContents.toIterable.filter(UIDescription), fsa)
 		
 
@@ -140,14 +139,19 @@ class GuiDSLGenerator implements IGenerator {
 	def compile(UsedDescription description) '''
 		«IF description.descriptionType instanceof UIDescriptionImport»
 			«var castedDescriptionType = description.descriptionType as UIDescriptionImport»
-			«var usedClassName = "Gui" + castedDescriptionType.descriptionName»
-			«addImport("import " + packageName + '.' + usedClassName + ';')»
-			«addGlobalVar(usedClassName + ' ' + description.id + ';')»
-				«description.id» = new «usedClassName»();
+			«var usedQualifiedClassName = castedDescriptionType.descriptionName.genGuiFileName»
+			«addGlobalVar(usedQualifiedClassName + ' ' + description.id + ';')»
+				«description.id» = new « usedQualifiedClassName»();
 		«ELSE»
 			«genComplexComponent(description)»
 		«ENDIF»
 	'''
+	
+	def genGuiFileName(String descriptionName) {
+		var separatedName = descriptionName.split('\\.')
+		separatedName.set(separatedName.size-1, "Gui"+ separatedName.get(separatedName.size-1))
+		return separatedName.join('.')
+	}
 
 	def genComplexComponent(UsedDescription description) {
 	}

@@ -29,6 +29,8 @@ import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.xtend2.lib.StringConcatenation;
 import org.eclipse.xtext.generator.IFileSystemAccess;
 import org.eclipse.xtext.generator.IGenerator;
+import org.eclipse.xtext.xbase.lib.Conversions;
+import org.eclipse.xtext.xbase.lib.IterableExtensions;
 import org.eclipse.xtext.xbase.lib.IteratorExtensions;
 
 /**
@@ -55,7 +57,6 @@ public class GuiDSLGenerator implements IGenerator {
     URI _uRI_1 = resource.getURI();
     String _getPackageName = this.getGetPackageName(_uRI_1);
     this.packageName = _getPackageName;
-    System.out.println(this.packageName);
     TreeIterator<EObject> _allContents = resource.getAllContents();
     Iterable<EObject> _iterable = IteratorExtensions.<EObject>toIterable(_allContents);
     Iterable<UIDescription> _filter = Iterables.<UIDescription>filter(_iterable, UIDescription.class);
@@ -256,13 +257,10 @@ public class GuiDSLGenerator implements IGenerator {
         UIDescriptionImport castedDescriptionType = ((UIDescriptionImport) _descriptionType_1);
         _builder.newLineIfNotEmpty();
         String _descriptionName = castedDescriptionType.getDescriptionName();
-        String usedClassName = ("Gui" + _descriptionName);
-        _builder.newLineIfNotEmpty();
-        String _addImport = this.addImport((((("import " + this.packageName) + ".") + usedClassName) + ";"));
-        _builder.append(_addImport, "");
+        String usedQualifiedClassName = this.genGuiFileName(_descriptionName);
         _builder.newLineIfNotEmpty();
         String _id = description.getId();
-        String _plus = ((usedClassName + " ") + _id);
+        String _plus = ((usedQualifiedClassName + " ") + _id);
         String _plus_1 = (_plus + ";");
         String _addGlobalVar = this.addGlobalVar(_plus_1);
         _builder.append(_addGlobalVar, "");
@@ -271,7 +269,7 @@ public class GuiDSLGenerator implements IGenerator {
         String _id_1 = description.getId();
         _builder.append(_id_1, "\t");
         _builder.append(" = new ");
-        _builder.append(usedClassName, "\t");
+        _builder.append(usedQualifiedClassName, "\t");
         _builder.append("();");
         _builder.newLineIfNotEmpty();
       } else {
@@ -281,6 +279,21 @@ public class GuiDSLGenerator implements IGenerator {
       }
     }
     return _builder;
+  }
+  
+  public String genGuiFileName(final String descriptionName) {
+    String[] separatedName = descriptionName.split("\\.");
+    final String[] _converted_separatedName = (String[])separatedName;
+    int _size = ((List<String>)Conversions.doWrapArray(_converted_separatedName)).size();
+    int _minus = (_size - 1);
+    final String[] _converted_separatedName_1 = (String[])separatedName;
+    int _size_1 = ((List<String>)Conversions.doWrapArray(_converted_separatedName_1)).size();
+    int _minus_1 = (_size_1 - 1);
+    String _get = separatedName[_minus_1];
+    String _plus = ("Gui" + _get);
+    separatedName[_minus] = _plus;
+    final String[] _converted_separatedName_2 = (String[])separatedName;
+    return IterableExtensions.join(((Iterable<?>)Conversions.doWrapArray(_converted_separatedName_2)), ".");
   }
   
   public Object genComplexComponent(final UsedDescription description) {
