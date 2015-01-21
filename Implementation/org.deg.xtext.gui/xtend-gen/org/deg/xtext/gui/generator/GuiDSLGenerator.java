@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 import org.deg.xtext.gui.guiDSL.ButtonDefinition;
 import org.deg.xtext.gui.guiDSL.ComponentDefinition;
 import org.deg.xtext.gui.guiDSL.Definition;
@@ -159,6 +160,10 @@ public class GuiDSLGenerator implements IGenerator {
     _builder.append(_genCommands, "   \t\t\t\t");
     _builder.newLineIfNotEmpty();
     _builder.append("   \t\t\t\t");
+    CharSequence _genCommandMethods = this.genCommandMethods(description);
+    _builder.append(_genCommandMethods, "   \t\t\t\t");
+    _builder.newLineIfNotEmpty();
+    _builder.append("   \t\t\t\t");
     CharSequence _genGlobalVars = this.genGlobalVars();
     _builder.append(_genGlobalVars, "   \t\t\t\t");
     _builder.newLineIfNotEmpty();
@@ -168,8 +173,66 @@ public class GuiDSLGenerator implements IGenerator {
     return _builder;
   }
   
+  public CharSequence genCommandMethods(final UIDescription description) {
+    StringConcatenation _builder = new StringConcatenation();
+    {
+      Set<String> _keySet = this.commands.keySet();
+      for(final String commandId : _keySet) {
+        _builder.append("public void ");
+        _builder.append(commandId, "");
+        _builder.append("(){");
+        _builder.newLineIfNotEmpty();
+        _builder.append("\t");
+        _builder.newLine();
+        _builder.append("}");
+        _builder.newLine();
+      }
+    }
+    _builder.append("\t");
+    _builder.newLine();
+    return _builder;
+  }
+  
   public CharSequence genCommands(final UIDescription description) {
     StringConcatenation _builder = new StringConcatenation();
+    _builder.append("protected void initCommands() {");
+    _builder.newLine();
+    {
+      Set<String> _keySet = this.commands.keySet();
+      for(final String id : _keySet) {
+        _builder.append("\t");
+        String commandName = this.commands.get(id);
+        _builder.newLineIfNotEmpty();
+        _builder.append("\t");
+        String _addImport = this.addImport((("import DE.data_experts.jwam.util.CmdAusfuehrer" + commandName) + ";"));
+        _builder.append(_addImport, "\t");
+        _builder.newLineIfNotEmpty();
+        _builder.append("\t");
+        _builder.append(id, "\t");
+        _builder.append("Command = new CmdAusfuehrer");
+        _builder.append(commandName, "\t");
+        _builder.append("( getAusfuehrer() ) {");
+        _builder.newLineIfNotEmpty();
+        _builder.append("      ");
+        _builder.append("@Override");
+        _builder.newLine();
+        _builder.append("      ");
+        _builder.append("public void ausfuehren() {");
+        _builder.newLine();
+        _builder.append("        ");
+        _builder.append(id, "        ");
+        _builder.append("();");
+        _builder.newLineIfNotEmpty();
+        _builder.append("      ");
+        _builder.append("}");
+        _builder.newLine();
+        _builder.append("    ");
+        _builder.append("};");
+        _builder.newLine();
+      }
+    }
+    _builder.append("}");
+    _builder.newLine();
     return _builder;
   }
   
@@ -301,8 +364,7 @@ public class GuiDSLGenerator implements IGenerator {
         String _addImport_1 = this.addImport((("import " + commandSource) + ";"));
         _builder.append(_addImport_1, "");
         _builder.newLineIfNotEmpty();
-        String[] _split_1 = commandSource.split("\\.");
-        String commandNameWithPrefix = IterableExtensions.<String>last(((Iterable<String>)Conversions.doWrapArray(_split_1)));
+        String commandNameWithPrefix = this.getClassOfSource(commandSource);
         _builder.newLineIfNotEmpty();
         String commandName = commandNameWithPrefix.substring(3);
         _builder.append(" ");
@@ -322,9 +384,14 @@ public class GuiDSLGenerator implements IGenerator {
     return _builder;
   }
   
+  public String getClassOfSource(final String source) {
+    String[] _split = source.split("\\.");
+    return IterableExtensions.<String>last(((Iterable<String>)Conversions.doWrapArray(_split)));
+  }
+  
   public String addCommand(final String id, final String commandName) {
     this.addGlobalVar(((((("cmd" + commandName) + " ") + id) + commandName) + "Command;"));
-    this.commands.put(id, commandName);
+    this.commands.put((id + commandName), commandName);
     return "";
   }
   

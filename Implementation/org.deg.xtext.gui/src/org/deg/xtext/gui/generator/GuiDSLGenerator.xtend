@@ -78,12 +78,34 @@ class GuiDSLGenerator implements IGenerator {
    			}
    				«description.genIAF»
    				«description.genCommands»
+   				«description.genCommandMethods»
    				«genGlobalVars»
 		}
 		
 	'''
 	
+	def genCommandMethods(UIDescription description)'''
+		«FOR commandId : commands.keySet»
+		public void «commandId»(){
+			
+		}
+		«ENDFOR»
+	
+	'''
+	
 	def genCommands(UIDescription description)'''
+	 protected void initCommands() {
+	 	«FOR id : commands.keySet»
+	 		«var commandName = commands.get(id)»
+	 		«addImport("import DE.data_experts.jwam.util.CmdAusfuehrer" + commandName + ";")»
+	 		«id»Command = new CmdAusfuehrer«commandName»( getAusfuehrer() ) {
+      @Override
+      public void ausfuehren() {
+        «id»();
+      }
+    };
+	 	«ENDFOR»
+	 }
 	'''
 	
 	def genIAF(UIDescription description)'''
@@ -136,16 +158,20 @@ class GuiDSLGenerator implements IGenerator {
 		«id+iafName» = («iafNameWithPrefix») iafContext.interactionForm( «iafNameWithPrefix».class, "«id»" );
 		«IF !commandSource.equals("")»
 		«addImport("import "+ commandSource +  ";")»
-		«var commandNameWithPrefix = commandSource.split("\\.").last»
+		«var commandNameWithPrefix = commandSource.getClassOfSource»
 		«var commandName = commandNameWithPrefix.substring(3)» 
 		«id + iafName».attach«commandName»Command( «id + commandName»Command );
 		«addCommand(id, commandName)»
 		«ENDIF»
 	'''
 	
+	def getClassOfSource(String source) {
+		return source.split("\\.").last
+	}
+	
 	def addCommand(String id, String commandName) {
 		addGlobalVar("cmd"+commandName + ' ' + id + commandName + "Command;")
-		commands.put(id, commandName);
+		commands.put(id+commandName, commandName);
 		return ""
 	}
 	
