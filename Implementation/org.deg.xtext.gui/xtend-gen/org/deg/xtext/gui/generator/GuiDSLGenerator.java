@@ -6,9 +6,7 @@ package org.deg.xtext.gui.generator;
 import com.google.common.base.Objects;
 import com.google.common.collect.Iterables;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 import org.deg.xtext.gui.guiDSL.ButtonDefinition;
 import org.deg.xtext.gui.guiDSL.ComponentDefinition;
 import org.deg.xtext.gui.guiDSL.Definition;
@@ -35,48 +33,71 @@ import org.eclipse.xtext.xbase.lib.IteratorExtensions;
 
 /**
  * Generates code from your model files on save.
- * 
- * see http://www.eclipse.org/Xtext/documentation.html#TutorialCodeGeneration
  */
 @SuppressWarnings("all")
 public class GuiDSLGenerator implements IGenerator {
+  private String specificFilename;
+  
   private String descriptionname;
-  
-  private String guiFilename;
-  
-  private String ipFilename;
   
   private List<String> imports = new ArrayList<String>();
   
-  private Boolean compiled = Boolean.valueOf(false);
-  
-  private Map<String, String> uiElemetsToType = new HashMap<String, String>();
-  
   private List<String> globalVars = new ArrayList<String>();
   
-  private String packageName = "gui";
+  private String mainContainer;
   
-  private String mainContainer = "this";
+  private String packageName;
   
   public void doGenerate(final Resource resource, final IFileSystemAccess fsa) {
     URI _uRI = resource.getURI();
-    String _segment = _uRI.segment(3);
-    String[] _split = _segment.split("\\.");
-    String _get = _split[0];
-    this.descriptionname = _get;
-    this.guiFilename = ("Gui" + this.descriptionname);
-    this.ipFilename = ("Ip" + this.descriptionname);
+    String _descriptionName = this.getDescriptionName(_uRI);
+    this.descriptionname = _descriptionName;
+    URI _uRI_1 = resource.getURI();
+    String _getPackageName = this.getGetPackageName(_uRI_1);
+    this.packageName = _getPackageName;
+    System.out.println(this.packageName);
     TreeIterator<EObject> _allContents = resource.getAllContents();
     Iterable<EObject> _iterable = IteratorExtensions.<EObject>toIterable(_allContents);
-    Iterable<Definition> _filter = Iterables.<Definition>filter(_iterable, Definition.class);
-    for (final Definition def : _filter) {
-      ComponentDefinition _concreteDefition = def.getConcreteDefition();
-      String element = _concreteDefition.getName();
+    Iterable<UIDescription> _filter = Iterables.<UIDescription>filter(_iterable, UIDescription.class);
+    this.genGuiClass(_filter, fsa);
+  }
+  
+  public String getGetPackageName(final URI uri) {
+    for (int index = 0; (index < (uri.segmentCount() - 1)); index++) {
+      String _segment = uri.segment(index);
+      boolean _equals = _segment.equals("src");
+      if (_equals) {
+        index++;
+        int _segmentCount = uri.segmentCount();
+        int _minus = (_segmentCount - 1);
+        boolean _notEquals = (index != _minus);
+        if (_notEquals) {
+          StringBuilder sb = new StringBuilder();
+          String _segment_1 = uri.segment(index);
+          sb.append(_segment_1);
+          for (index++; (index < (uri.segmentCount() - 1)); index++) {
+            StringBuilder _append = sb.append("\\/");
+            String _segment_2 = uri.segment(index);
+            _append.append(_segment_2);
+          }
+          return sb.toString();
+        }
+      }
     }
-    TreeIterator<EObject> _allContents_1 = resource.getAllContents();
-    Iterable<EObject> _iterable_1 = IteratorExtensions.<EObject>toIterable(_allContents_1);
-    Iterable<UIDescription> _filter_1 = Iterables.<UIDescription>filter(_iterable_1, UIDescription.class);
-    for (final UIDescription d : _filter_1) {
+    return "";
+  }
+  
+  public String getDescriptionName(final URI uri) {
+    int _segmentCount = uri.segmentCount();
+    int _minus = (_segmentCount - 1);
+    String _segment = uri.segment(_minus);
+    String[] _split = _segment.split("\\.");
+    return _split[0];
+  }
+  
+  public void genGuiClass(final Iterable<UIDescription> uiDescriptions, final IFileSystemAccess fsa) {
+    this.specificFilename = ("Gui" + this.descriptionname);
+    for (final UIDescription d : uiDescriptions) {
       {
         TypeDefinition _typeDefinition = d.getTypeDefinition();
         Type _type = _typeDefinition.getType();
@@ -89,7 +110,7 @@ public class GuiDSLGenerator implements IGenerator {
           String _genImports = this.genImports();
           String _plus = (_genPackage + _genImports);
           String _plus_1 = (_plus + source);
-          fsa.generateFile((((this.packageName + "/") + this.guiFilename) + ".java"), _plus_1);
+          fsa.generateFile((((this.packageName + "/") + this.specificFilename) + ".java"), _plus_1);
         } else {
           this.mainContainer = "this";
           CharSequence source_1 = this.compileComplex(d);
@@ -97,7 +118,7 @@ public class GuiDSLGenerator implements IGenerator {
           String _genImports_1 = this.genImports();
           String _plus_2 = (_genPackage_1 + _genImports_1);
           String _plus_3 = (_plus_2 + source_1);
-          fsa.generateFile((((this.packageName + "/") + this.guiFilename) + ".java"), _plus_3);
+          fsa.generateFile((((this.packageName + "/") + this.specificFilename) + ".java"), _plus_3);
         }
         this.imports.clear();
         this.globalVars.clear();
@@ -105,10 +126,15 @@ public class GuiDSLGenerator implements IGenerator {
     }
   }
   
+  public String genIpClass(final IFileSystemAccess fsa) {
+    return this.specificFilename = ("Ip" + this.descriptionname);
+  }
+  
   public CharSequence genPackage() {
     StringConcatenation _builder = new StringConcatenation();
     _builder.append("package ");
-    _builder.append(this.packageName, "");
+    String _replace = this.packageName.replace("\\/", "\\.");
+    _builder.append(_replace, "");
     _builder.append(";");
     _builder.newLineIfNotEmpty();
     _builder.newLine();
@@ -137,7 +163,7 @@ public class GuiDSLGenerator implements IGenerator {
     _builder.newLine();
     _builder.newLine();
     _builder.append("public class ");
-    _builder.append(this.guiFilename, "");
+    _builder.append(this.specificFilename, "");
     _builder.append(" extends PfPanel{");
     _builder.newLineIfNotEmpty();
     _builder.append("\t");
@@ -274,11 +300,6 @@ public class GuiDSLGenerator implements IGenerator {
     return "";
   }
   
-  public String switchCompiled() {
-    this.compiled = Boolean.valueOf((!(this.compiled).booleanValue()));
-    return "";
-  }
-  
   public CharSequence compileWindow(final UIDescription description) {
     StringConcatenation _builder = new StringConcatenation();
     String _addImport = this.addImport("import DE.data_experts.jwammc.core.pf.PfRootPane;");
@@ -293,7 +314,7 @@ public class GuiDSLGenerator implements IGenerator {
     _builder.newLine();
     _builder.newLine();
     _builder.append("public class ");
-    _builder.append(this.guiFilename, "");
+    _builder.append(this.specificFilename, "");
     _builder.append(" extends PfRootPane{");
     _builder.newLineIfNotEmpty();
     _builder.append("\t");
@@ -313,7 +334,7 @@ public class GuiDSLGenerator implements IGenerator {
     _builder.newLineIfNotEmpty();
     _builder.append("\t");
     _builder.append("public ");
-    _builder.append(this.guiFilename, "\t");
+    _builder.append(this.specificFilename, "\t");
     _builder.append("(){");
     _builder.newLineIfNotEmpty();
     _builder.append("\t\t\t");
