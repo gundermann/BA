@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.10.14)  20 JAN 2015 19:25
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.10.14)  21 JAN 2015 09:40
 entering extended mode
 **ba.tex
 (C:\Users\ngundermann\git\BA\thesis\BA\ba.tex
@@ -1653,24 +1653,24 @@ nung der Bäu-
 
 [84]
 
-LaTeX Warning: Reference `AppGeneriert' on page 85 undefined on input line 290.
+LaTeX Warning: Reference `AppGeneriert' on page 85 undefined on input line 284.
 
 
-<Bilder/explorer.jpg, id=1419, 831.105pt x 629.35126pt>
+<Bilder/explorer.jpg, id=1416, 831.105pt x 629.35126pt>
 File: Bilder/explorer.jpg Graphic file (type jpg)
 
 <use Bilder/explorer.jpg>
-Package pdftex.def Info: Bilder/explorer.jpg used on input line 294.
+Package pdftex.def Info: Bilder/explorer.jpg used on input line 288.
 (pdftex.def)             Requested size: 398.3386pt x 301.64342pt.
-) [85 <C:/Users/ngundermann/git/BA/thesis/BA/Bilder/explorer.jpg>] [86] (C:\Use
-rs\ngundermann\git\BA\thesis\BA\Fazit.tex
+) [85 <C:/Users/ngundermann/git/BA/thesis/BA/Bilder/explorer.jpg>] (C:\Users\ng
+undermann\git\BA\thesis\BA\Fazit.tex
 Kapitel 10.
 )
 
 Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
 less on input line 29.
 
-[87
+[86
 
 
 
@@ -1975,10 +1975,10 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 49.
  ) 
 Here is how much of TeX's memory you used:
- 14953 strings out of 493921
- 221293 string characters out of 3150471
+ 14963 strings out of 493921
+ 221470 string characters out of 3150471
  435127 words of memory out of 3000000
- 16948 multiletter control sequences out of 15000+200000
+ 16962 multiletter control sequences out of 15000+200000
  61518 words of font info for 77 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  50i,18n,51p,1722b,2009s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -2030,9 +2030,9 @@ lm/lmsy10.pfb><D:/Program Files/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><D:/Prog
 ram Files/MiKTeX/fonts/type1/urw/palatino/uplb8a.pfb><D:/Program Files/MiKTeX/f
 onts/type1/urw/palatino/uplr8a.pfb><D:/Program Files/MiKTeX/fonts/type1/urw/pal
 atino/uplr8a.pfb><D:/Program Files/MiKTeX/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on ba.pdf (109 pages, 3869959 bytes).
+Output written on ba.pdf (108 pages, 3864900 bytes).
 PDF statistics:
- 2067 PDF objects out of 2073 (max. 8388607)
- 869 named destinations out of 1000 (max. 500000)
+ 2058 PDF objects out of 2073 (max. 8388607)
+ 865 named destinations out of 1000 (max. 500000)
  556 words of extra memory for PDF output out of 10000 (max. 10000000)
 

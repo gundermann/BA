@@ -258,21 +258,15 @@ Komponenten untersucht werden. Darauf wird in dieser Arbeit nicht weiter
 eingegangen. 
 \begin{lstlisting}[{caption= Generierung von eingebundenen GUI-Beschreibungen
 },{label=LST_Used}] 
-def compile(UsedDescription description) '''
-		«IF description.descriptionType instanceof UIDescriptionImport»
+	«IF description.descriptionType instanceof UIDescriptionImport»
 			«var castedDescriptionType = description.descriptionType as UIDescriptionImport»
-			«var usedClassName = "Gui" + castedDescriptionType.descriptionName»
-			«addImport("import " + packageName + '.' + usedClassName + ';')»
-			«addGlobalVar(usedClassName + ' ' + description.id + ';')»
-				«description.id» = new «usedClassName»();
+			«var usedQualifiedClassName = castedDescriptionType.descriptionName.genGuiFileName»
+			«addGlobalVar(usedQualifiedClassName + ' ' + description.id + ';')»
+				«description.id» = new « usedQualifiedClassName»();
 		«ELSE»
 			«genComplexComponent(description)»
 		«ENDIF»
-	'''
 \end{lstlisting}
-Für die genaue Lokalisierung wird für diese Arbeit die Konvention getroffen,
-dass sich alle generierten Dateien im Package \emph{gui} befinden. Dies
-vereinfacht den Generator an dieser Stelle und entlastet das DSL-Skript.\\
 Die letzte Komponente, die damit noch nicht in der GUI-Klasse deklariert wurde
 ist die Interchangeable-Komponente. Da diese UI-Komponenten keine
 speziellen Properties besitzt, ist die Methode zur Generierung des Quell-Code
