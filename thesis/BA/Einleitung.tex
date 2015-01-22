@@ -1,42 +1,42 @@
 \chapter{Motivation}
 In der heutigen Zeit werden Programme auf vielen unterschiedlichen
-Geräten (bspw. Desktop, Smartphone, Tablet) ausgeführt. Die \gloss{Usability}
-ist ein wichtiger Faktor bei der Entwicklung einer Anwendung. 
-Denn eine \emph{[\ldots] schlechte Useability führt zu
-Verwirrung und Miss- bzw.
-Unverständis beim Kunden.} \cite{usability} Dadurch geht letztendlich Umsatz
-verloren. Die Usability wird hauptsächlich von der Benutzerschittstelle
-bestimmt. Folglich ist die Benutzeroberfläche neben der internen Umsetzung
-immer ein wichtiger Faktor, der für den Erfolg einer Anwendung eine große Rolle
-spielt. \simplevcite{1}
+Geräten (bspw. Desktop, Smartphone, Tablet) ausgeführt. Die \gloss{Useability}
+ist ein wichtiger Faktor bei der Entwicklung von Anwendungen. 
+Denn \simpledcite{schlechte Usability führt zu Verwirrung und Miss- bzw.
+Unverständnis}{usability} beim Kunden, wodurch letztendlich Umsatz verloren
+geht. Die \gloss{Useability} wird hauptsächlich vom User Interface (UI) bestimmt. Folglich ist die Benutzeroberfläche neben der
+internen Umsetzung ein wichtiger Faktor für den Erfolg einer Anwendung. \simplevcite{1}
 \\
-Wenn ein Programm auf unterschiedlichen Gräten ausgeführt wird, muss der
-Entwickler bei der UI-Entwicklung traditionllen UI-Entwicklung mehrere
-Graphical User Interfaces (GUIs) manuell implementieren. Folglich werden mehrere
-GUIs mit unterschiedlichen Toolkits oder Frameworks entworfen. Diese Framworks haben einen starken 
-imperativen Charackter, sind schwer zu erweitern und sie verhalten sich je nach
-Platform unterschiedlich. \simplevcite{10}
-Daraus folgt, dass Entwickler bei dem traditionellen Ansatz das GUI für jedes
-Framework explizit beschreiben muss.\\
+Wenn ein Programm auf unterschiedlichen Geräten ausgeführt wird, muss der
+Entwickler bei der \glossLink{Traditionlle UI-Entwicklung}{traditionellen
+UI-Entwicklung} mehrere \glossLink{GUI}{Graphical User
+Inferfaces (GUIs)} manuell implementieren.
+Folglich werden mehrere \glspl{GUI} mit unterschiedlichen
+Toolkits oder Frameworks entworfen. Diese Framworks haben einen starken
+imperativen Charakter, sind schwer zu erweitern und verhalten sich je nach
+Plattform unterschiedlich. \simplevcite{10} Daraus folgt, dass Entwickler bei
+dem traditionellen Ansatz das \acrshort{GUI} für jedes Framework explizit
+beschreiben müssen.\\
 Ein anderer Ansatz zur Beschreibung von Benutzeroberflächen ist das Model-Driven
 Development (siehe Kapitel \ref{mdsd}). Damit sollen bspw. UIs anhand der
-modelierten Funktionalitäten automatisch erzeugt werden. \simplevcite{3}
-Laut Myers et. al. wurde die Darstellung dieser generierten User Interfaces
-(UIs) in der Vergangenheit von der Darstellung traditionell implementierter
+modellierten Funktionalitäten automatisch erzeugt werden. \simplevcite{3}
+Laut Myers et. al. wurden die Darstellungen dieser generierten User Interfaces
+(UIs) in der Vergangenheit von den Darstellungen traditionell implementierter
 Benutzerschnittstellen übertroffen.\simplevcite{20} Grund dafür ist, dass die
-Abstraktionsebene, auf der die GUIs beschrieben wurden, oft nicht an die Gestaltung der GUI, sondern an
-fachliche Konzepte der Domäne angepasst wurde.\\
+Abstraktionsebene, auf der die Beschreibung der \glspl{GUI} beim Model-Driven
+Ansatz statt findet, oft nicht an die Gestaltung der \acrshort{GUI}, sondern an fachliche Konzepte
+der Domäne angepasst wird.\\
 Daraus ergibt sich die Überlegung, ob diese
 beiden Ansätze zur Implementierung von UIs (traditionell und Model-Driven)
 verbunden werden können (kombinierter Ansatz).
 Somit könnte die genaue Beschreibung der Darstellung mit einer höheren
 Abstraktion verbunden werden. Dieser Versuch wurde bspw. von
 Bacikov{\'a} im Jahr 2013 unternommen. \simplevcite{11} Dort wurde
-nachgewiesen, dass ein GUI eine Sprache definiert.\\
-In dieser Arbeit wird versucht den kombinierten Ansatz in einem anderen
-Fachbereich umzusetzen, um die Unterstützung eines GUIs auf unterschiedlichen
+nachgewiesen, dass eine \acrshort{GUI} eine Sprache definiert.\\
+In dieser Arbeit wird versucht den kombinierten Ansatz in einem speziellen
+Fachbereich umzusetzen, um die Unterstützung einer \acrshort{GUI} auf unterschiedlichen
 Plattformen zu gewährleisten.
 Bei der Umsetzung wird sich auf die UIs der Anwendung
-\emph{profil c/s}. Profil c/s ist eine \gloss{JEE}-Anwendung die
+\emph{profil c/s} bezogen. Profil c/s ist eine \gloss{JEE}-Anwendung die
 \gloss{InVeKoS} umsetzt und von der deg entwickelt wird.
 

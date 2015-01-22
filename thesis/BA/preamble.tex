@@ -135,7 +135,16 @@
 \emph{\glqq#1\grqq}\cite[S.#3]{#2}
 }
 
-
+%----------------------------------------------------------------------------------
+% \dcite	{ Text }
+%				{ source }
+%				{ page }
+%
+%Direktes Zitat
+\newcommand{\simpledcite}[2]
+{
+\emph{\glqq#1\grqq}\cite{#2}
+}
 
 %----------------------------------------------------------------------------------
 % \vcite	
@@ -206,6 +215,11 @@
 %}
 }
 
+\newcommand{\glossLink}[2]{
+%#1\footnote{Siehe Glossar: 
+\glslink{#1}{#2}
+%}
+}
 
 \newcommand{\Ks}{
 Basiskomponenten
