@@ -6,8 +6,9 @@ c/s}\label{AllgAnforderungen} Die erste Anforderung bezieht sich auf die
 \acrshort{GUI} des Clients von profil c/s. Dieser soll sowohl in Web-Browsern
 (Web-Client) als auch standalone auf einem PC (Standalone-Client) ausgeführt werden können.\\
 Da die Nutzer an einen bestimmten Aufbau der \glspl{GUI}
-gewöhnt sind, ist es von Vorteil, wenn beide Clients ein ähnliches UI bieten. 
-Von daher ist die Ähnlichkeit der UIs auf
+gewöhnt sind, ist es von Vorteil, wenn beide Clients eine ähnliche
+\acrshort{GUI} bieten.
+Von daher ist die Ähnlichkeit der \glspl{GUI} auf
 unterschiedlichen Plattformen eine weitere Anforderung.\\
 Um eine effiziente
 Arbeitsweise zu ermöglichen, ist es wichtig, dass die
@@ -19,12 +20,12 @@ Darauf aufbauend sind weiterhin die Abstraktionsmöglichkeitenvon den verwendeten
 Frameworks von großer Bedeutung, da durch einen hohen Abstraktionsgrad ein hoher
 Komplexitätsgrad beherrscht werden kann.
 \simplevcite{brauer2003grundkurs}\\
-Abschließend ist die Ausdruckskraft der Syntax, in der die UIs entwickelt
-werden, als Kriterium zu nennen. Dies fördert die Lesbarkeit des Quell-Codes und
+Abschließend ist die Ausdruckskraft der Syntax, in der die \glspl{GUI}
+entwickelt werden, als Kriterium zu nennen. Dies fördert die Lesbarkeit des Quell-Codes und
 damit letztendlich das Verständnis dessen, sowie die
 Effizienz mit der die \glspl{GUI} entwickelt werden. \vcite{voelter}{70}\\
-Diese Anforderungen an die UIs haben in der deg unterschiedliche Prioritäten (1
-= höchste Priorität, 3 = niedrigste Priorität), die in folgender Tabelle beschrieben
+Diese Anforderungen an die \glspl{GUI} haben in der deg unterschiedliche
+Prioritäten (1 = höchste Priorität, 3 = niedrigste Priorität), die in folgender Tabelle beschrieben
 werden.
 \begin{table}[H]
 \centering
@@ -61,8 +62,8 @@ Vorstellung des Ist-Zustandes zu vermitteln, sind in Abbildung
 \glspl{GUI} eines \glossLink{Zuwendungsblatt}{Zuwendungsblattes} und eines
 \glossLink{Förderantrag}{Förderantrags} für den Web-Client und den
 Standalone-Client abgebildet.\\
-In diesen UIs ist nur ein bestimmter Teil für die fachlichen Informationen
-relevant.
+In diesen \glspl{GUI} ist nur ein bestimmter Teil für die fachlichen
+Informationen relevant.
 Dies sind lediglich die Tabelle und die darunter stehenden Schaltflächen, sowie
 das Bemerkungsfeld (im Web-Client auf der rechten Seite und im Standalone-Client
 in der Mitte). Dieser Bereich der \acrshort{GUI} ist in beiden Clients gleich
@@ -166,7 +167,7 @@ WAM-Ansatz bietet, werden jedoch auch im MCF verwendet.\\
 Bezogen auf die Anforderungen
 wurden Anforderungen werden Nr. 3 und 5 nicht durch das MCF umgesetzt. (Fakt
 ist, dass jede Sprache eine gewisse Ausdruckskraft hat. Da in dieser Arbeit versucht wird die
-UI-Entwicklung mittels einer ausdrucksstarken DSL, die sich auf die Domäne von profil c/s
+\acrshort{GUI}-Entwicklung mittels einer ausdrucksstarken DSL, die sich auf die Domäne von profil c/s
 bezieht, umzusetzen, ist die Ausdruckskraft herkömmlicher
 Programmiersprachen als unzureichend anzusehen).\\
 Ein weiteres Problem bezieht sich
@@ -183,7 +184,7 @@ In der Praxis wurde die Einfachheit einer solchen Integration jedoch
 widerlegt. Ein Problem, welches bei der Integration neuer Frameworks aufkommt,
 ist, dass sich das MCF sehr stark an \gloss{Swing} orientiert und die \glspl{GUI} vor
 allem vom \gloss{GridBagLayout} stark beeinflusst werden. Ein solche
-Layoutmanager steht nicht in allen UI-Frameworks zur Verfügung. Da die
+Layoutmanager steht nicht in allen \acrshort{GUI}-Frameworks zur Verfügung. Da die
 Beschreibung der \acrshort{GUI} über ein solches Layout vollzogen wird, ist der Umgang mit dem \gloss{GridBagLayout}
 innerhalb des Frameworks eine Voraussetzung für die Integration in das MCF.
 Zusammenfassend sind folgende Probleme des MCF zu nennen:
@@ -196,30 +197,30 @@ Zusammenfassend sind folgende Probleme des MCF zu nennen:
   Oben genannte Anforderungen werden nicht komplett umgesetzt
 \end{itemize}
 \noindent
-Dazu kommen lästige Routinearbeiten, die in der deg bei der Entwicklung von UIs
-getätigt werden müssen. 
+Dazu kommen lästige Routinearbeiten, die in der deg bei der Entwicklung von
+\glspl{GUI} getätigt werden müssen. 
 \begin{itemize}
   \item[ \textbf{R1}]
-  Vergebene Bezeichnungen für UI-Komponenten müssen in unterschiedlichen
+  Vergebene Bezeichnungen für \acrshort{GUI}-Komponenten müssen in unterschiedlichen
   Klassen (IP- und GUI-Klassen) gepflegt werden. 
   \item[ \textbf{R2}]
   Beim Erstellen von Tabellen müssen viele Methoden
   überschrieben werden.
   \item[ \textbf{R3}]
   Die Werte für Aufschriften, Größeneinstellungen u.ä. für
-  UI-Komponenten werden bei der deg in Properties-Dateien festgehalten. Das Erstellen und
+  \acrshort{GUI}-Komponenten werden bei der deg in Properties-Dateien festgehalten. Das Erstellen und
   Pflegen wird als Fehleranfällig betrachtet.
 \end{itemize}
 
 \section{Zielsetzung}\label{Ziel}
-Das langfristige Ziel der deg bzgl. der UIs ist es, eine Lösung zu entwickeln,
-welche das MCF ablösen kann. Anzustreben ist eine Lösung, die neben der
+Das langfristige Ziel der deg bzgl. der \glspl{GUI} ist es, eine Lösung zu
+entwickeln, welche das MCF ablösen kann. Anzustreben ist eine Lösung, die neben der
 Umsetzung der oben genannten
 Anforderungen auch die genannten Routinearbeiten mindert.\\
 In dieser Arbeit wird ein Ansatz untersucht, bei dem es möglich ist, die
 oben genannten Anforderungen vollständig umzusetzen. Kern des Ansatzes ist eine
-Domänenspezifische Sprache (DSL), mit deren Hilfe die UIs beschrieben werden
-sollen.
+Domänenspezifische Sprache (DSL), mit deren Hilfe die \glspl{GUI} beschrieben
+werden sollen.
 Eine DSLs könnte so konzipiert werden, dass sie ausreichend abstrakt und erweiterbar ist und bzgl.
 der Ausdruckskraft das MCF übertrifft.\\
 Die genaue Lösungsidee mittels DSL, welche in dieser Arbeit verfolgt wird, ist
