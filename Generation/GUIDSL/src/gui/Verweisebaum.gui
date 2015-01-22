@@ -1,0 +1,4 @@
+type: INNERCOMPLEX;
+Label as: 'kopfzeile'->text='Verweisebaum';
+Tree<testwerkzeuge.modelle.VerweiseModell> as: 'verweisebaum';
+Structure:'kopfzeile','verweisebaum';

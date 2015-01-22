@@ -553,7 +553,7 @@ public class GuiDSLGenerator implements IGenerator {
     return _builder;
   }
   
-  public CharSequence getInit(final UIDescription description) {
+  public CharSequence genInit(final UIDescription description) {
     StringConcatenation _builder = new StringConcatenation();
     _builder.append("public void init(){");
     _builder.newLine();
@@ -751,8 +751,8 @@ public class GuiDSLGenerator implements IGenerator {
     _builder.newLine();
     _builder.newLine();
     _builder.append("\t");
-    CharSequence _init = this.getInit(description);
-    _builder.append(_init, "\t");
+    CharSequence _genInit = this.genInit(description);
+    _builder.append(_genInit, "\t");
     _builder.newLineIfNotEmpty();
     _builder.append("\t");
     _builder.append("/**");

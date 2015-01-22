@@ -1,0 +1,4 @@
+type: INNERCOMPLEX;
+Label as: 'kopfzeile'->text='Inhaltsbaum';
+Tree<testwerkzeuge.modelle.InhaltsModell> as: 'inhaltsbaum';
+Structure:'kopfzeile','inhaltsbaum';

@@ -269,7 +269,7 @@ class GuiDSLGenerator implements IGenerator {
 		}	
 	'''
 
-	def getInit(UIDescription description) '''
+	def genInit(UIDescription description) '''
 		public void init(){
 						«FOR def : description.definitions»
 							«def.compileDefinition»
@@ -347,7 +347,7 @@ class GuiDSLGenerator implements IGenerator {
 								 }
 				}
 		
-			«description.init»
+			«description.genInit»
 			/**
 			* Generated global variables.
 			*/
