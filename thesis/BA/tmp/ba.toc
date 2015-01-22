@@ -21,7 +21,7 @@
 \contentsline {subsection}{\numberline {3.6.1}Implementierungstechniken}{25}{subsection.3.6.1}
 \contentsline {section}{\numberline {3.7}Externe DSLs}{27}{section.3.7}
 \contentsline {subsection}{\numberline {3.7.1}Implementierungstechniken}{27}{subsection.3.7.1}
-\contentsline {section}{\numberline {3.8}Nicht-Textuelle DSL}{30}{section.3.8}
+\contentsline {section}{\numberline {3.8}Nicht-textuelle DSL}{30}{section.3.8}
 \contentsline {chapter}{\numberline {4}Entwicklung einer L\"osungsidee}{32}{chapter.4}
 \contentsline {section}{\numberline {4.1}Allgemeine Beschreibung der L\"osungsidee}{32}{section.4.1}
 \contentsline {section}{\numberline {4.2}Architektur}{32}{section.4.2}

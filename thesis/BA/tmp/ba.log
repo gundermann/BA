@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.10.14)  22 JAN 2015 11:41
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.10.14)  22 JAN 2015 12:52
 entering extended mode
 **ba.tex
 (C:\Users\ngundermann\git\BA\thesis\BA\ba.tex
@@ -869,6 +869,11 @@ Your command will be ignored, type <return> to proceed
 )
 \tf@lof=\write7
  [5] (C:\Users\ngundermann\git\BA\thesis\BA\ba.lot
+Overfull \hbox (5.07362pt too wide) in paragraph at lines 7--7
+ [][][] [][]\T1/ppl/m/n/12 Implementierung ein-fa-cher Grammatik-Regeln mit ei-
+nem RD- 
+ []
+
 
 ! Package babel Error: You haven't defined the language English yet.
 
@@ -1061,90 +1066,78 @@ Overfull \hbox (22.4367pt too wide) in paragraph at lines 40--48
  []
 
 
-Overfull \hbox (16.26802pt too wide) in paragraph at lines 48--66
+Overfull \hbox (16.26802pt too wide) in paragraph at lines 49--67
 \T1/ppl/m/n/12 spra-che, wel-che für ei-ne be-stimm-te  [][]Do-mä-ne[]  op-ti-m
 iert ist. (vgl. [[]VBK$[]$13[],
  []
 
-[13]
-Overfull \hbox (10.97638pt too wide) in paragraph at lines 67--76
-\T1/ppl/m/n/12 Grammatiken und ins-be-son-de-re Gram-ma-ti-kre-geln wer-den zur
- Be-schrei-
- []
-
-
-Overfull \hbox (3.176pt too wide) in paragraph at lines 67--76
-\T1/ppl/m/n/12 Gram-ma-ti-ken kön-nen in ei-ner Hier-achrie dar-ge-stellt wer-d
-en (\T1/ppl/m/it/12 Chomsky-
- []
-
-[14] [15]
-Overfull \hbox (10.34839pt too wide) in paragraph at lines 140--140
+[13] [14] [15]
+Overfull \hbox (10.34839pt too wide) in paragraph at lines 141--141
 []\T1/ppl/b/n/17.28 Model-Driven Soft-wa-re De-ve-lop-ment (MDSD) 
  []
 
-LaTeX Font Info:    Try loading font information for OMS+ppl on input line 155.
+LaTeX Font Info:    Try loading font information for OMS+ppl on input line 156.
 
 ("D:\Program Files\MiKTeX\tex\latex\psnfss\omsppl.fd"
 File: omsppl.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ppl/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 155.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 156.
  [16]
 <Bilder/mdsd.jpg, id=714, 663.22781pt x 380.92313pt>
 File: Bilder/mdsd.jpg Graphic file (type jpg)
  <use Bilder/mdsd.jpg>
-Package pdftex.def Info: Bilder/mdsd.jpg used on input line 171.
+Package pdftex.def Info: Bilder/mdsd.jpg used on input line 172.
 (pdftex.def)             Requested size: 398.3386pt x 228.7823pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 164--171
+Underfull \hbox (badness 10000) in paragraph at lines 165--172
 
  []
 
 [17 <C:/Users/ngundermann/git/BA/thesis/BA/Bilder/mdsd.jpg>]
-Overfull \hbox (2.19249pt too wide) in paragraph at lines 208--228
+Overfull \hbox (2.19249pt too wide) in paragraph at lines 211--231
 \T1/ppl/m/n/12 Durch die Aus-drucks-kraft und die Ab-strak-ti-on der Spra-che m
 uss i.d.R.
  []
 
 
-Overfull \hbox (3.78821pt too wide) in paragraph at lines 208--228
+Overfull \hbox (3.78821pt too wide) in paragraph at lines 211--231
 \T1/ppl/m/n/12 Die stär-ke-re Aus-drucks-kraft führt zu ei-ner bes-se-re Les-ba
 r-keit von DSL-
  []
 
 [18]
-Overfull \hbox (3.45766pt too wide) in paragraph at lines 231--248
+Overfull \hbox (3.45766pt too wide) in paragraph at lines 234--251
 \T1/ppl/m/n/12 Spra-che ver-wen-det wer-den, sind die Domänen-Experten bzw. die
  Kun-
  []
 
 [19]
-Overfull \hbox (7.95607pt too wide) in paragraph at lines 276--292
-\T1/ppl/m/n/12 ter-schied-li-cher Er-fah-rungs-tand bzgl. ei-ner spe-zi-el-len 
-Pro-gram-mier-spra-
+Overfull \hbox (12.37657pt too wide) in paragraph at lines 279--295
+\T1/ppl/m/n/12 lung der Pro-gram-mier-auf-ga-ben als Ge-fahr bzw. Nach-teil.  (
+vgl. [[]VBK$[]$13[],
  []
 
 [20]
-Overfull \hbox (1.46005pt too wide) in paragraph at lines 308--328
+Overfull \hbox (1.46005pt too wide) in paragraph at lines 311--331
 \T1/ppl/m/n/12 Bei wirt-schaft-li-chen Ent-schei-dun-gen wird der mo-ne-tä-re I
 n-put mit dem
  []
 
 [21]
-Overfull \hbox (8.56905pt too wide) in paragraph at lines 344--353
+Overfull \hbox (8.56905pt too wide) in paragraph at lines 348--357
 \T1/ppl/m/n/12 sche Struk-tu-ren. Das führt da-zu, dass Mit-ar-bei-ter un-ter-s
 chied-li-che Spra-
  []
 
 [22] [23] [24]
-Overfull \hbox (12.10844pt too wide) in paragraph at lines 440--458
+Overfull \hbox (12.10844pt too wide) in paragraph at lines 444--462
 []\T1/ppl/m/n/12 Allgemein be-trach-tet funk-tio-niert die-se Tech-nik wie folg
 t. Ein Code-Fragment,
  []
 
 
-Overfull \hbox (0.94485pt too wide) in paragraph at lines 440--458
+Overfull \hbox (0.94485pt too wide) in paragraph at lines 444--462
 \T1/ppl/m/n/12 Anders als Lisp bie-ten die an-de-ren Bei-spie-le die Mög-lich-k
 eit über den Parse-
  []
@@ -1153,23 +1146,23 @@ eit über den Parse-
 File: Bilder/parsing.jpg Graphic file (type jpg)
 
 <use Bilder/parsing.jpg>
-Package pdftex.def Info: Bilder/parsing.jpg used on input line 522.
+Package pdftex.def Info: Bilder/parsing.jpg used on input line 526.
 (pdftex.def)             Requested size: 398.3386pt x 144.57068pt.
  [27 <C:/Users/ngundermann/git/BA/thesis/BA/Bilder/parsing.jpg>] [28]
 <Bilder/parsercombinator.jpg, id=876, 456.95718pt x 276.28218pt>
 File: Bilder/parsercombinator.jpg Graphic file (type jpg)
 
 <use Bilder/parsercombinator.jpg>
-Package pdftex.def Info: Bilder/parsercombinator.jpg used on input line 625.
+Package pdftex.def Info: Bilder/parsercombinator.jpg used on input line 629.
 (pdftex.def)             Requested size: 398.3386pt x 240.84836pt.
 
-Overfull \hbox (16.91748pt too wide) in paragraph at lines 617--625
+Overfull \hbox (16.91748pt too wide) in paragraph at lines 621--629
 \T1/ppl/m/n/12 S.242])  Die Ele-men-te, die ver-ket-tet wer-den kön-nen wer-den
  \T1/ppl/m/it/12 Parser-Kombinatoren
  []
 
 [29]
-Overfull \hbox (1.96568pt too wide) in paragraph at lines 626--637
+Overfull \hbox (1.96568pt too wide) in paragraph at lines 630--641
 \T1/ppl/m/n/12 auch als Mit-tel-weg zwi-schen RD-Parsern und Par-ser Ge-ne-ra-t
 o-ren. [[]FP11[]]261 
  []
@@ -2008,9 +2001,15 @@ Your command will be ignored, type <return> to proceed
 )
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 49.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 49.
-Package rerunfilecheck Info: File `ba.out' has not changed.
-(rerunfilecheck)             Checksum: 6976E2B9AF4EBC43CC5E1B4A1BB3E5BD;3690.
 
+
+Package rerunfilecheck Warning: File `ba.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `ba.out':
+(rerunfilecheck)             Before: 6976E2B9AF4EBC43CC5E1B4A1BB3E5BD;3690
+(rerunfilecheck)             After:  4695D46A6081AFCC739E3A1117B5E05F;3690.
 
 LaTeX Warning: There were undefined references.
 
@@ -2022,7 +2021,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 49.
 Here is how much of TeX's memory you used:
  14792 strings out of 493921
  218361 string characters out of 3150471
- 430278 words of memory out of 3000000
+ 430279 words of memory out of 3000000
  16684 multiletter control sequences out of 15000+200000
  60069 words of font info for 75 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
@@ -2045,7 +2044,7 @@ lm/lmsy10.pfb><D:/Program Files/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><D:/Prog
 ram Files/MiKTeX/fonts/type1/urw/palatino/uplb8a.pfb><D:/Program Files/MiKTeX/f
 onts/type1/urw/palatino/uplr8a.pfb><D:/Program Files/MiKTeX/fonts/type1/urw/pal
 atino/uplr8a.pfb><D:/Program Files/MiKTeX/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on ba.pdf (114 pages, 3903314 bytes).
+Output written on ba.pdf (114 pages, 3903000 bytes).
 PDF statistics:
  2364 PDF objects out of 2487 (max. 8388607)
  977 named destinations out of 1000 (max. 500000)
