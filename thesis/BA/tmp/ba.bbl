@@ -59,6 +59,14 @@
   An Introduction to GUI Design Principles and Techniques}.
 \newblock John Wiley & Sons, New York, 2007.
 
+\bibitem[{Gen}14]{europa}
+{\sc {Generaldirektion Landwirtschaft und ländliche Entwicklung}}: {\em Das
+  Integrierte Verwaltungs- und Kontrollsystem (InVeKoS)}.
+\newblock URL:
+  http://ec.europa.eu/agriculture/direct-support/iacs/index\_de.htm, November
+  2014.
+\newblock Zuletzt eingesehen am 02.12.2014.
+
 \bibitem[gho11]{ghosh}
 {\em DSLs in Action}.
 \newblock Manning Publications Co., 2011.
@@ -177,6 +185,11 @@
 \newblock Online verfügbar URL:http://www.schmelzer.cc/Downloads/Files/
   Diplomarbeit\_Schmelzer.pdf . Zuletzt eingesehen am 09.01.2015.
 
+\bibitem[Sch07]{wings}
+{\sc Schmid, Benjamin}: {\em Get your wingS back!}
+\newblock URL: http://jaxenter.de/artikel/Get-your-wingS-back, Dezember 2007.
+\newblock Zuletzt eingesehen am 02.12.2014.
+
 \bibitem[SdS03]{sauerDip}
 {\sc Sauer, Joachim} \btxandlong{}\ {\sc Ausgew{\"a}hlte~Themen der
   Softwaretechnik}: {\em Gestaltung von Anwendungssoftware nach dem WAM-Ansatz
@@ -194,6 +207,10 @@
 \newblock \Btxtechreplong{}, IBM T.J. Watson Research Center, Oktober 2005.
 \newblock Verfügar unter URL:
   http://www.research.ibm.com/people/p/prabir/MDDAUI.pdf.
+
+\bibitem[sof08]{softarch}
+{\em Software-Architektur}.
+\newblock Springer Science & Business Media (Berlin Heidelberg), 2008.
 
 \bibitem[Ste07]{jwammc}
 {\sc Stechow, Dirk}: {\em JWAMMC - Das Multichannel-Framework der data-experts
