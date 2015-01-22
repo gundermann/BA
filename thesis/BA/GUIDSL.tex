@@ -1,5 +1,5 @@
 \chapter{Anforderung an die GUI-DSL}\label{GUI-DSL}
-Die allgemeinen Anfroderung an die GUI wurden in Kapitel \ref{AllgAnforderungen}
+Die allgemeinen Anforderung an die GUI wurden in Kapitel \ref{AllgAnforderungen}
 erläutert. Die folgenden Anforderungen beziehen sich auf die Aspekte der GUIs
 die beschrieben werden müssen.
 Ein UI ermöglicht die Interaktion mit einem Programm mit Hilfe unterschiedlicher
@@ -16,20 +16,20 @@ und die GUIs generieren zu lassen.
 Von daher ist dieser Ansatz vorerst nicht umsetzbar.\\
 Die Komplexität des zweiten Ansatzes schein weitaus geringer zu sein. Dabei
 werden weiterhin UI-Komponenten in der GUI-Beschreibung verwendet. Die
-Entwickler haben somit die Möglichkeit die UIs in einem gewissen Grad
+Entwickler haben somit die Möglichkeit die UIs bis zu einem gewissen Grad
 anzupassen. Die GUI von profil c/s wird dabei als Domäne betrachtet und nicht
 die fachlichen Hintergründe. Durch die Festlegung dieser Domäne lässt sich
-bei der Beschreibung von GUIs eine höhere Absatrktionsebene nutzen, als es bei
+bei der Beschreibung von GUIs eine höhere Abstraktionsebene nutzen, als es bei
 den verwendeten UI-Frameworks der Fall ist.\\
-Der Entwickler soll somit in der Lage sein ein UI relatic frei zu gestalten.
+Der Entwickler soll somit in der Lage sein ein UI relativ frei zu gestalten.
 Außerdem sollte er dadurch die Möglichkeit haben bestimmte Konzepte einfach
 wieder zu verwenden.
-Für die GUI-DSL wird bzgl. der Anfroderungen an die Komponenten zwischen drei
+Für die GUI-DSL wird bzgl. der Anforderungen an die Komponenten zwischen drei
 Kategorien unterschieden.\\
-Die erste Kategorie sind umfasst \emph{\Ks}. Dabei handelt
+Die erste Kategorie umfasst \emph{\Ks}. Dabei handelt
 es sich um UI-Komponenten, deren Funktionen in unterschiedlichen UI-Frameworks 
 ähnlich sind und in unterschiedlichen Anwendungen eingesetzt werden
-könne. Das bedeutet, dass sie nicht als domänenspezifisch angesehen werden
+können. Das bedeutet, dass sie nicht als domänenspezifisch angesehen werden
 können. Beispiele hierfür sind UI-Komponenten wie der \emph{Button} oder das
 \emph{Label}.\\
 Die zweite Kategorie umfasst \emph{\kks}. Diese zeichnen sich
@@ -46,27 +46,27 @@ Quellen für diese \knks sowohl zur Entwicklungszeit, als auch zur Laufzeit
 vorhanden sein müssen, ist ein Nachteil dieses Konzeptes.\\
 Die dritte Kategorie umfasst \emph{Layout Komponenten}. Dabei handelt es sich
 um strukturgebende Komponenten. In anderen UI-Frameworks sind dies bspw.
-\emph{Panel}, \emph{Div} oder \emph{Pane}. In der GUI-DSL müssen auch solche
-Komponenten verfügbar sein. Dabei ist besonders auf die Ausdruckskraft der
-für die Beschreibung dieser Komponenten verwendeten Bezeichnungen zu
-achten. Grund dafür ist, das sich bspw. auf dem Desktop ein Fenster als
+\emph{Panel} (\gloss{Swing}), \emph{Div} (HTML) oder \emph{Pane} (JavaFX). In
+der GUI-DSL müssen auch solche Komponenten verfügbar sein. Dabei ist besonders
+auf die Ausdruckskraft der für die Beschreibung dieser Komponenten verwendeten Bezeichnungen zu
+achten. Grund dafür ist, das sich bspw. auf dem Desktop ein Programmfenster als
 oberste Layout Komponente festlegen lässt. In einem Web-Browser ist der Begriff
-\emph{Fenster} als oberste Layout Komponenten jedoch nicht geläuft. Die
-Komponente, die in einem Browser dem Fester auf dem Desktop am nähsten 
+\emph{Fenster} als oberste Layout Komponenten jedoch nicht geläufig. Die
+Komponente, die in einem Browser dem Programmfester auf dem Desktop am nächsten 
 kommt, ist meiner Meinung nach das Tab.\\
 Die Attribute, die für die einzelnen Komponenten beschrieben werden
-müssen, werden in Kaptiel \ref{Entwicklung einer DSL zur Beschreibung der GUI in
-profil c/s} genauer analysiert.\\
+müssen, werden in Kapitel \ref{Entwicklung einer DSL zur Beschreibung der GUI
+in profil c/s} genauer analysiert.\\
 Bezüglich des Layouts ist neben den Layout Komponenten eine weitere Anforderung
-zu nennen. Hierzu muss erwähnt werden, dass in der traditionellen UI-Entiwcklung
-GUIs mit Hilfe von Layout-Containern strukturiert werden. In der Vergangenheit hat sich gezeigt,
-dass die strukturierung über ein spezifisches Layout zu einer Orientierung an
+zu nennen. Hierzu muss erwähnt werden, dass in der traditionellen UI-Entwicklung
+GUIs mit Hilfe von Layout-Containern Strukturiert werden. In der Vergangenheit
+hat sich gezeigt, dass die strukturierung über ein spezifisches Layout zu einer Orientierung an
 ein bestimmtes Framework führt (Beispiel: MCF orientiert sich an Swing). Das ist
 ein Problem, da bestimmte Layouts im Web oder auf mobilen Plattformen nicht
 genauso dargestellt werden können, wie auf einer Desktop-Anwendung. Von daher
 ist das Layout in der GUI-Beschreibung so zu beschreiben, dass es auf
-allem Plattformen gleichermaßen gut dargestellt werden kann.\\
-Darüber hinaus ist es für die Effizens in deg der wichtig, dass mit dem neuen
+allen Plattformen gleichermaßen gut dargestellt werden kann.\\
+Darüber hinaus ist es für die Effizenz der deg wichtig, dass mit dem neuen
 Ansatz weniger Codezeilen (LOC) geschrieben werden müssen als mit
 dem alten Ansatz.\\
 Weiterhin ist für ein effizientes Arbeiten auch die Bereitstellung
@@ -78,10 +78,10 @@ Bezüglich der Anforderungen an die Komponenten ist abschließend zu sagen, dass
 bei den trivialen und den komplexen UI-Komponenten die Möglichkeit bestehen muss
 Interaktionen festzulegen. Außerdem muss die GUI-DSL um weitere
 triviale und komplexe Komponenten erweiterbar sein.\\
-Zusammenfassen bestehen die Sprache folgenden Anforderungen
+Zusammenfassend bestehen folgende Anforderungen an die DSL
 \begin{itemize}
-  \item Beschreibung trivialer UI-Komponenten
-  \item Beschreibung komplexer UI-Komponenten
+  \item Beschreibung von \Ks
+  \item Beschreibung \kks
   \item Beschreibung von Layout Komponenten
   \item Verwendung einer abstrakten Layoutbeschreibung
   \item Weniger LOC zur Beschreibung von UIs
