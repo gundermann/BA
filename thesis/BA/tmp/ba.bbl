@@ -63,10 +63,21 @@
 {\em DSLs in Action}.
 \newblock Manning Publications Co., 2011.
 
-\bibitem[Gun14]{gundermann5}
+\bibitem[Gun13]{gundermann3}
+{\sc Gundermann, Niels}: {\em Prototypische Implementierung eines
+  JavaFX-Channels zur Integration ins MulitChannel-Framework der deg}, 2013.
+\newblock Praxisbericht.
+
+\bibitem[Gun14a]{gundermann5}
 {\sc Gundermann, Niels}: {\em Entwicklung einer Grammatik für eine DSL mit
   xText am Beispiel einer Sprache zur Definition von Pflichtprüfungen in profil
   c/s}, 2014.
+\newblock Praxisbericht.
+
+\bibitem[Gun14b]{gundermann4}
+{\sc Gundermann, Niels}: {\em Prototypische Implementierung eines
+  JavaFX/Web-Channels zur Integration ins Multichannel-Framework der deg},
+  2014.
 \newblock Praxisbericht.
 
 \bibitem[Hed12]{hedtstueck}
