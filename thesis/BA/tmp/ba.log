@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.10.14)  23 JAN 2015 11:57
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.10.14)  23 JAN 2015 12:04
 entering extended mode
 **ba.tex
 (C:\Users\ngundermann\git\BA\thesis\BA\ba.tex
@@ -1489,8 +1489,13 @@ Package pdftex.def Info: Bilder/v2-5.jpg used on input line 187.
 (pdftex.def)             Requested size: 398.3386pt x 438.90442pt.
 
 [60 <C:/Users/ngundermann/git/BA/thesis/BA/Bilder/v2-3.jpg>] [61 <C:/Users/ngun
-dermann/git/BA/thesis/BA/Bilder/v2-4.jpg>] [62 <C:/Users/ngundermann/git/BA/the
-sis/BA/Bilder/v2-5.jpg>]
+dermann/git/BA/thesis/BA/Bilder/v2-4.jpg>]
+Overfull \hbox (0.92496pt too wide) in paragraph at lines 192--200
+\T1/ppl/m/n/12 le-gung der Properties-Dateien. Um ei-ne Properties-Datei ein-zu
+-bin-den muss,
+ []
+
+[62 <C:/Users/ngundermann/git/BA/thesis/BA/Bilder/v2-5.jpg>]
 
 Package Listings Warning: Text dropped after begin of listing on input line 215
 .
@@ -1985,7 +1990,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 49.
 Here is how much of TeX's memory you used:
  14871 strings out of 493921
  219960 string characters out of 3150471
- 430154 words of memory out of 3000000
+ 431152 words of memory out of 3000000
  16758 multiletter control sequences out of 15000+200000
  60069 words of font info for 75 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191

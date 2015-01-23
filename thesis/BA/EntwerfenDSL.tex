@@ -53,13 +53,13 @@ Die Interaktion benötigt folgende Attributen, die beschrieben werden müssen.
 Aktionen nehmen wiederum einen eigenen Komplex innerhalb der
 Komponentendefinition ein. Dabei werden folgende Informationen benötigt.
 \begin{itemize}
-  \item[] Aktions-Typ\\
+  \item[] Aktionstyp\\
   Zur Unterscheidung zwischen Interaktionen mit anderen \gks oder
   fachlichen Modellen
   \item[] Element\\
   Ein Verweis auf das Element, mit dem interagiert werden soll.
   \item[] Attribute (siehe semantisches Modell \emph{Property})\\
-  Die zu veränderden Attribute des Elements.
+  Die zu verändernden Attribute des Elements.
 \end{itemize}
 Die \knks werden in einer eigenen Komponentendefinition beschrieben. Grund dafür
 ist, dass neben den vordefinierten Funktionalitäten der \knks auch weitere
@@ -76,8 +76,8 @@ selektiert wurden.
 
 
 \subsection*{Semantisches Modell}
-\myBigFigure{v1-1.jpg}{Teil 1: GUI-Beschreibungs-Model Version 1}{Teil1-1}
-Das Artefakt, welches beim dieserm Model im Mittelpunkt steht ist die
+\myBigFigure{v1-1.jpg}{Teil 1: GUI-Beschreibungsmodel Version 1}{Teil1-1}
+Das Artefakt, welches beim diesem Modell im Mittelpunkt steht ist die
 \emph{UIDescription} (siehe \ref{Abb_Teil1-1}). Bezüglich der Methoden sind
 im Allgemeinen nur Getter- und Setter-Methoden des semantischen Modells für
 diese Arbeit von Belang. Die aggregierten Artefakte sind aus dem Diagramm gut zu
@@ -85,11 +85,11 @@ entnehmen.
 Die Klasse \emph{DefinitionImpl} aggregiert weitere Artefakte des Modells. Diese sind um
 die Übersicht zu wahren Abbildung \ref{Abb_Teil2-1} zu entnehmen.\\
 \myBigFigure{v1-2.jpg}{Teil 2:
-GUI-Beschreibungs-Model Version 1}{Teil2-1} 
+GUI-Beschreibungsmodel Version 1}{Teil2-1} 
 Dort sind die drei umgesetzten Ausprägungen einer \emph{Definition} zu erkennen.
 Dabei handelt es sich um \emph{Label}, \emph{Button} und \emph{MultiSelection}.
 Weiterhin ist zu erkennen, dass nur der Button eine \emph{Interaction}
-aggregieren kann. Das bedeutet, dass nur an dieser Komponente eine Interaktion
+enthalten kann. Das bedeutet, dass nur an dieser Komponente eine Interaktion
 beschrieben werden kann. Das Artefakt \emph{Property} ist der letzte
 interessante Teil. Dieses Interface wird benötigt um bestimmte Werte an
 Komponenten zu setze, ohne das Wissen zu müssen um welchen Komponententyp es
@@ -126,7 +126,7 @@ Komponentendefinitionen werden durch das Schlüsselwort \emph{DEF} eingeleitet
 und durch das Schlüsselwort \emph{END DEF} abgeschlossen. Der Definitionskopf
 wird durch das Zeichen \emph{:} beendet. Dort sind die Pflichtfelder der
 Komponentendefinition zu finden (\emph{Titel} und \emph{Typ}).
-Bei der Multiselection-Komponente fällt auf, dass ein Referenzwert verwendet
+Bei der Multiselection-Komponente fällt auf, dass ein Referenz-Wert verwendet
 wird, der in dieser Beschreibung nicht deklariert wurde (\emph{valuespackage.Values}).
 Dabei handelt es sich um einen qualifizierten Namen einer Klasse.\\
 Die dazugehörige Grammatik befindet sich im Anhang
@@ -148,7 +148,7 @@ der Komponentendefinition abgrenzen, damit für nicht überschriebene Werte auf
 die eingebundene GUI-Beschreibung zurückgegriffen werden kann (siehe
 semantisches Modell \emph{Refinement}). Um die eindeutige Referenzierung zu
 ermöglichen muss bei der Bezeichnung der eingebundenen GUI-Beschreibung sowie
-bei der veränderten Komponente der qulifizierte Name angegeben werden.\\
+bei der veränderten Komponente der qualifizierte Name angegeben werden.\\
 Bei den Interaktionen der \Ks fällt die Aktion komplett weg. Somit muss nur noch
 der Interaktionstyp angegeben werden.\\
 In den Definitionen der \Ks muss aufgrund des Properties-Konzeptes die
@@ -157,7 +157,7 @@ für die \Ks bleiben bestehen.\\
 Bezogen auf die \knks ist es lediglich notwendig
 den Input-Typ anzugeben. Die Festlegung über selektierbare und
 selektierte Elemente in der Multiselection-Komponente wird nicht benötigt. Das
-ermöglicht, die \knks mittels \emph{use} (siehe semantisches Model
+ermöglicht, die \knks mittels \emph{use} (siehe semantisches Modell
 \emph{UsedDefinitions}) in die GUI-Beschreibung einzubinden (siehe konkrete
 Syntax).
 
@@ -168,29 +168,29 @@ In dieser Version wurden an den Artefakten \emph{AreaCount},
 Artefakte wie \emph{Property} und \emph{Refinement} sind hinzugekommen. Die
 weiteren Artefakte, die von \emph{UIDescriptionImpl} aggregiert werden
 (siehe Abbildung \ref{Abb_Teil2-1}), wurden verändert.
-\myBigFigure{v2-1.jpg}{Teil 1: GUI-Beschreibungs-Model Version 2}{Teil1-2}
+\myBigFigure{v2-1.jpg}{Teil 1: GUI-Beschreibungsmodell Version 2}{Teil1-2}
 Das Artefakt \emph{Property} bildet die Property-Datei ab. Sie ist nicht zu
 verwechseln mit dem Artefakt \emph{Properties}, welches die Eigenschaften von
 Komponenten abbildet. Abbildung \ref{Abb_Teil2-2} zeigt beide Artefakte auf.
-\myBigFigure{v2-2}{Teil 2: GUI-Beschreibungs-Model Version 2}{Teil2-2}
+\myBigFigure{v2-2}{Teil 2: GUI-Beschreibungsmodell Version 2}{Teil2-2}
 Die \emph{UsedDescription} enthält in dieser Version einen
 \emph{DefinitionType}.
 Dieser bestimmt, ob es sich bei der importierten Komponente um ein
 beschriebenes GUI handelt, oder um eine komplexe Komponente, für die ein
 Input-Typ (\emph{inputType}) festgelegt werden kann.
-\myBigFigure{v2-3}{Teil 3: GUI-Beschreibungs-Model Version 2}{Teil3-2}
+\myBigFigure{v2-3}{Teil 3: GUI-Beschreibungsmodell Version 2}{Teil3-2}
 Zwischen \emph{Definition} und \emph{Refinement} wird unterschieden. Die
 \emph{Definition} bildet neu definierte Komponenten für das GUI ab. Ein
 \emph{Refinement} hingegen bildet die veränderten Komponenten importierter
 GUIs ab (siehe Abbildung \ref{Abb_Teil4-2} und Abbildung \ref{Abb_Teil5-2}).
-\myBigFigure{v2-4}{Teil 4: GUI-Beschreibungs-Model Version 2}{Teil4-2}
-\myBigFigure{v2-5}{Teil 5: GUI-Beschreibungs-Model Version 2}{Teil5-2}
+\myBigFigure{v2-4}{Teil 4: GUI-Beschreibungsmodell Version 2}{Teil4-2}
+\myBigFigure{v2-5}{Teil 5: GUI-Beschreibungsmodell Version 2}{Teil5-2}
 
 
 
 \subsection*{Konkrete Syntax}
 Die einfachste der Veränderungen bzgl. der Syntax in Version 2 ist die
-festlegung der Properties-Dateien. Um eine Properties-Datei einzubinden muss,
+Festlegung der Properties-Dateien. Um eine Properties-Datei einzubinden muss,
 wie in Listing \ref{LST_Properties2}, eine entsprechende
 Datei festgelegt und in den Komponenten entsprechende Schlüssel vergeben
 werden. Das Label mit der Bezeichnung \emph{OneLabel} enthält keinen
@@ -226,7 +226,7 @@ angegeben werden.
 Komponenten},{label=LST_Komplexe2}] type: WINDOW 
 use: Multiselection<'valuepackage.Values'> as: 'Multi'
 \end{lstlisting}
-Für die Zuweisung mehrer Komponenten zu den Areas kamen zwei Lösungen in
+Für die Zuweisung mehrerer Komponenten zu den Areas kamen zwei Lösungen in
 Betracht. Bei der einen finden die Definitionen der Komponenten zusammen mit der
 Zuweisung zu dem Area statt. Dies könnte bspw. wie in Listing \ref{LST_Moeglichkeit1_2}
 dargestellt werden.
