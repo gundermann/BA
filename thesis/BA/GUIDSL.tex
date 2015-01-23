@@ -1,32 +1,81 @@
-\chapter{Anforderung an die GUI-DSL}\label{GUI-DSL}
-Die allgemeinen Anforderung an die \acrshort{GUI} wurden in Kapitel \ref{AllgAnforderungen}
-erläutert. Die folgenden Anforderungen beziehen sich auf die Aspekte der
-\glspl{GUI} die beschrieben werden müssen.
+\chapter{GUI-DSL}\label{GUI-DSL}
+\section{Motivation des Ansatzes}
 Eine \acrshort{GUI} ermöglicht die Interaktion mit einem Programm mit Hilfe
 unterschiedlicher \acrshort{GUI}-Komponenten (vgl. \cite[S.4]{Galitz2007}). Mithilfe dieser Komponenten werden
 Informationen dargestellt, oder Eingaben vom Nutzer getätigt. Um die
-Zusammensetzung dieser Komponenten zu beschreiben gibt es zwei Ansätze.\\
-Beim ersten Ansatz wird die \acrshort{GUI} durch fachliche Modelle beschrieben. (Motivation
-für MDSD \cite{3}) Das bedeutet, dass in der Beschreibung der \acrshort{GUI} keine
-\acrshort{GUI}-Komponenten verwendet werden, wie es in allgemein bekannten \acrshort{GUI}-Frameworks
-(JavaFX, Swing) der Fall ist. In der deg soll den Entwicklern weiterhin die
-Möglichkeit gegeben werden, die \glspl{GUI} selbst zu entwerfen. Ein Grund dafür
-ist, dass es ein zu großer Aufwand wäre alle Module von profil c/s auf MDSD umzustellen
-und die \glspl{GUI} generieren zu lassen.
-Von daher ist dieser Ansatz vorerst nicht umsetzbar.\\
-Die Komplexität des zweiten Ansatzes schein weitaus geringer zu sein. Dabei
-werden weiterhin \acrshort{GUI}-Komponenten in der \acrshort{GUI}-Beschreibung verwendet. Die
-Entwickler haben somit die Möglichkeit die \glspl{GUI} bis zu einem gewissen
-Grad anzupassen. Die \acrshort{GUI} von profil c/s wird dabei als Domäne betrachtet und nicht
-die fachlichen Hintergründe. Durch die Festlegung dieser Domäne lässt sich
-bei der Beschreibung von \glspl{GUI} eine höhere Abstraktionsebene nutzen, als
-es bei den verwendeten \acrshort{GUI}-Frameworks der Fall ist.\\
-Der Entwickler soll somit in der Lage sein eine \acrshort{GUI} relativ frei zu
-gestalten.
-Außerdem sollte er dadurch die Möglichkeit haben bestimmte Konzepte einfach
-wieder zu verwenden.
-Für die \acrshort{GUI}-DSL wird bzgl. der Anforderungen an die Komponenten zwischen drei
-Kategorien unterschieden.\\
+Zusammensetzung dieser Komponenten zu beschreiben gibt
+unterschiedliche Ansätze, wovon zwei im Folgenden vorgestellt werden.
+\begin{itemize}
+  \item []
+Beim ersten Ansatz wird die \acrshort{GUI} auf der Grundlage von fachlichen
+Modellen generiert, was dem MDSD nahe kommt. \simplevcite{3} Das bedeutet, dass
+in der Beschreibung der \acrshort{GUI} keine \acrshort{GUI}-Komponenten verwendet werden, wie es bei traditionellen
+\acrshort{GUI}-Frameworks (JavaFX, Swing) der Fall ist.
+\item []
+Beim zweiter Ansatz wid ein Modell der \acrshort{GUI} beschrieben, welches in
+andere GUI-Beschreibungen überführt werden kann .
+Somit wird die Trennung zwischen \acrshort{GUI} und fachlichen Aspekten in der Software
+erhalten und das Domänenproblem beschränkt sich auf die \acrshort{GUI}.
+\end{itemize}
+Die Komplexität des zweiten Ansatzes ist weitaus kleiner als die des ersten, da
+lediglich die Aspekte, welche die \acrshort{GUI} betreffen, auf MDSD umgestellt
+werden müssen. Außerdem soll den Entwicklern weiterhin die Möglichkeit gegeben
+werden, die \glspl{GUI} selbst zu entwerfen, was bei dem ersten Ansatz streng
+genommen nicht möglich ist, da die \acrshort{GUI} vollständig generiert wird.
+Beim zweiten Ansatz hingegen werden weiterhin \acrshort{GUI}-Komponenten in der
+\acrshort{GUI}-Beschreibung verwendet, was dem Entwicklern die Anpassung der
+\glspl{GUI} ermöglicht.\\
+Von daher wird der zweite Ansatz weiter verfolgt und eine \g konzipiert, welche
+die nachfolgenden Anforderung erfüllen soll.
+
+
+\section{Anforderungen an die GUI-DSL}
+Die allgemeinen Anforderung an die \acrshort{GUI} wurden in Kapitel \ref{AllgAnforderungen}
+erläutert. Die folgenden Anforderungen beziehen sich auf die
+Ausdrucksmöglichkeit der \g, wodurch eine \acrshort{GUI} werden soll.
+\begin{itemize}
+  \item[\textbf{AS1}] Beschreibung von \glspl{GUI} über die
+  Zusammensetzung von \acrshort{GUI}-Komponenten\label{AS1}
+  \item[\textbf{AS2}] Wiederverwendung und Erweiterung bzw.
+  Veränderung beschriebener
+  \glspl{GUI}\label{AS2}
+  \item[\textbf{AS3}] Verwendung einer abstrakten Layoutbeschreibung\label{AS3}
+  \item[\textbf{AS4}] Weniger Quell-Code zur Beschreibung von
+  \glspl{GUI}\label{AS4}
+  \item[\textbf{AS5}] Beschreibung von Interaktionen an
+  \acrshort{GUI}-Komponenten\label{AS5}
+  \item[\textbf{AS6}] Erweiterung um neue \acrshort{GUI}-Komponenten\label{AS6}
+\end{itemize}
+
+\noindent
+Wie im vorherigen Abschnitt bereits erwähnt, sollen die Entwickler in der Lage
+sein eine \acrshort{GUI} relativ frei zu gestalten. Das bedeutet, dass die
+einzelnen \acrshort{GUI}-Komponenten unterschiedlich kombinierbar sein sollen
+(\ref{AS1}). Außerdem sollten die beschriebenen \glspl{GUI} auch in anderen
+\glspl{GUI} wiederverwendet werde können (\ref{AS2})), da viele \glspl{GUI} in
+profil c/s ähnlich sind.\\
+Bezüglich des Layouts muss erwähnt werden, dass in der traditionellen \acrshort{GUI}-Entwicklung
+\glspl{GUI} die Strukturierung der \acrshort{GUI}-Komponenten mit Hilfe von
+Layout-Containern vorgenommen wird.
+In der Vergangenheit hat sich gezeigt, dass die Strukturierung über ein
+spezifisches Layout zu einer Orientierung an ein bestimmtes Framework führt (Beispiel: MCF orientiert sich an Swing). Das ist
+ein Problem, da bestimmte Layouts auf anderen Plattformen (Bspw. Web oder
+Mobil) nicht dargestellt werden können, da entsprechende Layoutmanager nicht
+vorhanden sind.
+Von daher ist das Layout in der \g so zu beschreiben, dass es auf
+allen Plattformen gleichermaßen gut dargestellt werden kann (\ref{AS3}).\\
+Für eine Steigerung der Effizenz der deg ist bei der Einführung neuer
+Techniken wichtig, dass weniger Quell-Code geschrieben werden muss, als
+zuvor, aber die Qualität nicht leidet (\ref{AS4}).\\
+Bezüglich der \acrshort{GUI}-Komponenten ist nicht nur die Beschreibung der
+Dargstellung, sondern aus die Beschreibung der Interaktionen von Belang
+(\ref{AS5}).\\
+Außerdem darf die Erweiterung um neue \acrshort{GUI}-Komponenten nicht außer
+Acht gelassen werden (\ref{AS6}), da anderen Falls die Gefahr besteht, dass die
+GUI-DSL unbrauchbar wird.
+
+Für die \acrshort{GUI}-DSL wird bzgl. der Anforderungen an
+die Komponenten zwischen drei Kategorien unterschieden.\\
 Die erste Kategorie umfasst \emph{\Ks}. Dabei handelt
 es sich um \acrshort{GUI}-Komponenten, deren Funktionen in unterschiedlichen \acrshort{GUI}-Frameworks 
 ähnlich sind und in unterschiedlichen Anwendungen eingesetzt werden
@@ -57,41 +106,4 @@ Komponente, die in einem Browser dem Programmfester auf dem Desktop am nächsten
 kommt, ist meiner Meinung nach das Tab.\\
 Die Attribute, die für die einzelnen Komponenten beschrieben werden
 müssen, werden in Kapitel \ref{Entwicklung einer DSL zur Beschreibung der GUI
-in profil c/s} genauer analysiert.\\
-Bezüglich des Layouts ist neben den Layout Komponenten eine weitere Anforderung
-zu nennen. Hierzu muss erwähnt werden, dass in der traditionellen \acrshort{GUI}-Entwicklung
-\glspl{GUI} mit Hilfe von Layout-Containern Strukturiert werden. In der
-Vergangenheit hat sich gezeigt, dass die strukturierung über ein spezifisches Layout zu einer Orientierung an
-ein bestimmtes Framework führt (Beispiel: MCF orientiert sich an Swing). Das ist
-ein Problem, da bestimmte Layouts im Web oder auf mobilen Plattformen nicht
-genauso dargestellt werden können, wie auf einer Desktop-Anwendung. Von daher
-ist das Layout in der \acrshort{GUI}-Beschreibung so zu beschreiben, dass es auf
-allen Plattformen gleichermaßen gut dargestellt werden kann.\\
-Darüber hinaus ist es für die Effizenz der deg wichtig, dass mit dem neuen
-Ansatz weniger Codezeilen (LOC) geschrieben werden müssen als mit
-dem alten Ansatz.\\
-Weiterhin ist für ein effizientes Arbeiten auch die Bereitstellung
-eines Editors für die DSL von großer Bedeutung. Dieser Editor soll
-nach Möglichkeit auch Validierungen durchführen können und
-Code-Completion anbieten. Eine Integration dieses Editors in die von der deg
-verwendete Entwicklungsumgebung (Eclipse) wäre wünschenswert.\\
-Bezüglich der Anforderungen an die Komponenten ist abschließend zu sagen, dass
-bei den trivialen und den komplexen \acrshort{GUI}-Komponenten die Möglichkeit bestehen muss
-Interaktionen festzulegen. Außerdem muss die \acrshort{GUI}-DSL um weitere
-triviale und komplexe Komponenten erweiterbar sein.\\
-Zusammenfassend bestehen folgende Anforderungen an die DSL
-\begin{itemize}
-  \item Beschreibung von \Ks
-  \item Beschreibung \kks
-  \item Beschreibung von Layout Komponenten
-  \item Verwendung einer abstrakten Layoutbeschreibung
-  \item Weniger LOC zur Beschreibung von \glspl{GUI}
-  \item Beschreibung von Interaktionen an \Ks und \kks
-  \item Erweiterung um neue \Ks und \kks
-\end{itemize}
-Für die Infrastruktur der DSL bestehend die folgenden Anforderungen.
-\begin{itemize}
-   \item Bereitstellung eines Editors mit Code-Completion und
-  Validierungsmöglichkeiten
-  \item Integration in die Eclipse IDE
-\end{itemize}
+in profil c/s} genauer analysiert.

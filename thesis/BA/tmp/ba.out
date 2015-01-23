@@ -20,31 +20,33 @@
 \BOOKMARK [1][-]{section.3.7}{Externe DSLs}{chapter.3}% 20
 \BOOKMARK [2][-]{subsection.3.7.1}{Implementierungstechniken}{section.3.7}% 21
 \BOOKMARK [1][-]{section.3.8}{Nicht-textuelle DSL}{chapter.3}% 22
-\BOOKMARK [0][-]{chapter.4}{Entwicklung einer L\366sungsidee}{}% 23
-\BOOKMARK [1][-]{section.4.1}{Allgemeine Beschreibung der L\366sungsidee}{chapter.4}% 24
-\BOOKMARK [1][-]{section.4.2}{Architektur}{chapter.4}% 25
-\BOOKMARK [1][-]{section.4.3}{Vorteile gegen\374ber dem Multichannel-Framework}{chapter.4}% 26
-\BOOKMARK [0][-]{chapter.5}{Anforderung an die GUI-DSL}{}% 27
-\BOOKMARK [0][-]{chapter.6}{Evaluation des Frameworks zur Entwicklung der DSL}{}% 28
-\BOOKMARK [1][-]{section.6.1}{Vorstellung ausgew\344hlter Frameworks}{chapter.6}% 29
-\BOOKMARK [2][-]{subsection.6.1.1}{PetitParser}{section.6.1}% 30
-\BOOKMARK [2][-]{subsection.6.1.2}{Xtext}{section.6.1}% 31
-\BOOKMARK [2][-]{subsection.6.1.3}{Meta Programming System}{section.6.1}% 32
-\BOOKMARK [1][-]{section.6.2}{Vergleich und Bewertung der vorgestellten Frameworks}{chapter.6}% 33
-\BOOKMARK [0][-]{chapter.7}{Festlegungen f\374r die Entwicklung des Prototypen}{}% 34
-\BOOKMARK [1][-]{section.7.1}{Vorgehensmodell}{chapter.7}% 35
-\BOOKMARK [1][-]{section.7.2}{Grobkonzept der DSL-Umgebung \(Vision\)}{chapter.7}% 36
-\BOOKMARK [2][-]{subsection.7.2.1}{1. Iteration}{section.7.2}% 37
-\BOOKMARK [2][-]{subsection.7.2.2}{2. Iteration}{section.7.2}% 38
-\BOOKMARK [2][-]{subsection.7.2.3}{3. Iteration}{section.7.2}% 39
-\BOOKMARK [0][-]{chapter.8}{Entwicklung einer DSL zur Beschreibung der GUI in profil c/s}{}% 40
-\BOOKMARK [1][-]{section.8.1}{1. Iteration}{chapter.8}% 41
-\BOOKMARK [1][-]{section.8.2}{2. Iteration}{chapter.8}% 42
-\BOOKMARK [1][-]{section.8.3}{3. Iteration}{chapter.8}% 43
-\BOOKMARK [0][-]{chapter.9}{Entwicklung des Generators zur Generierung von Klassen f\374r das Multichannel-Framework}{}% 44
-\BOOKMARK [1][-]{section.9.1}{Beschreibung der GUI- und IP-Klassen}{chapter.9}% 45
-\BOOKMARK [1][-]{section.9.2}{Umsetzung des frameworkspezifischen Generators}{chapter.9}% 46
-\BOOKMARK [0][-]{chapter.10}{Zusammenfassung und Ausblick}{}% 47
-\BOOKMARK [0][-]{appendix*.25}{Anhang}{}% 48
-\BOOKMARK [0][-]{lstnumber.1.166}{Glossar}{}% 49
-\BOOKMARK [0][-]{appendix*.31}{Literaturverzeichnis}{}% 50
+\BOOKMARK [0][-]{chapter.4}{GUI-DSL}{}% 23
+\BOOKMARK [1][-]{section.4.1}{Motivation des Ansatzes}{chapter.4}% 24
+\BOOKMARK [1][-]{section.4.2}{Anforderungen an die GUI-DSL}{chapter.4}% 25
+\BOOKMARK [0][-]{chapter.5}{Entwicklung einer L\366sungsidee}{}% 26
+\BOOKMARK [1][-]{section.5.1}{Allgemeine Beschreibung der L\366sungsidee}{chapter.5}% 27
+\BOOKMARK [1][-]{section.5.2}{Architektur}{chapter.5}% 28
+\BOOKMARK [1][-]{section.5.3}{Vorteile gegen\374ber dem Multichannel-Framework}{chapter.5}% 29
+\BOOKMARK [0][-]{chapter.6}{Evaluation des Frameworks zur Entwicklung der DSL}{}% 30
+\BOOKMARK [1][-]{section.6.1}{Vorstellung ausgew\344hlter Frameworks}{chapter.6}% 31
+\BOOKMARK [2][-]{subsection.6.1.1}{PetitParser}{section.6.1}% 32
+\BOOKMARK [2][-]{subsection.6.1.2}{Xtext}{section.6.1}% 33
+\BOOKMARK [2][-]{subsection.6.1.3}{Meta Programming System}{section.6.1}% 34
+\BOOKMARK [1][-]{section.6.2}{Vergleich und Bewertung der vorgestellten Frameworks}{chapter.6}% 35
+\BOOKMARK [0][-]{chapter.7}{Festlegungen f\374r die Entwicklung des Prototypen}{}% 36
+\BOOKMARK [1][-]{section.7.1}{Vorgehensmodell}{chapter.7}% 37
+\BOOKMARK [1][-]{section.7.2}{Grobkonzept der DSL-Umgebung \(Vision\)}{chapter.7}% 38
+\BOOKMARK [2][-]{subsection.7.2.1}{1. Iteration}{section.7.2}% 39
+\BOOKMARK [2][-]{subsection.7.2.2}{2. Iteration}{section.7.2}% 40
+\BOOKMARK [2][-]{subsection.7.2.3}{3. Iteration}{section.7.2}% 41
+\BOOKMARK [0][-]{chapter.8}{Entwicklung einer DSL zur Beschreibung der GUI in profil c/s}{}% 42
+\BOOKMARK [1][-]{section.8.1}{1. Iteration}{chapter.8}% 43
+\BOOKMARK [1][-]{section.8.2}{2. Iteration}{chapter.8}% 44
+\BOOKMARK [1][-]{section.8.3}{3. Iteration}{chapter.8}% 45
+\BOOKMARK [0][-]{chapter.9}{Entwicklung des Generators zur Generierung von Klassen f\374r das Multichannel-Framework}{}% 46
+\BOOKMARK [1][-]{section.9.1}{Beschreibung der GUI- und IP-Klassen}{chapter.9}% 47
+\BOOKMARK [1][-]{section.9.2}{Umsetzung des frameworkspezifischen Generators}{chapter.9}% 48
+\BOOKMARK [0][-]{chapter.10}{Zusammenfassung und Ausblick}{}% 49
+\BOOKMARK [0][-]{appendix*.25}{Anhang}{}% 50
+\BOOKMARK [0][-]{lstnumber.1.166}{Glossar}{}% 51
+\BOOKMARK [0][-]{appendix*.31}{Literaturverzeichnis}{}% 52
