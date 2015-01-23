@@ -27,7 +27,7 @@
 \contentsline {lstlisting}{\numberline {9.10}\"Ubersetzung eingebundener GUI-Beschreibungen}{83}{lstlisting.9.10}
 \contentsline {lstlisting}{\numberline {9.11}Generierung der Interchangeable-Komponente}{83}{lstlisting.9.11}
 \contentsline {lstlisting}{\numberline {9.12}Generierung der FP-Klasse}{85}{lstlisting.9.12}
-\contentsline {lstlisting}{\numberline {9.13}Generierung des Klassenkopfs der IP-Klasse}{85}{lstlisting.9.13}
+\contentsline {lstlisting}{\numberline {9.13}Generierung des Klassen-Kopfs der IP-Klasse}{85}{lstlisting.9.13}
 \contentsline {lstlisting}{\numberline {9.14}\"Ubersetzung der Interaktionsformen}{86}{lstlisting.9.14}
 \contentsline {lstlisting}{\numberline {9.15}\"Ubersetzung der Standard-Interaktionsform von Trees}{86}{lstlisting.9.15}
 \contentsline {lstlisting}{\numberline {9.16}Generierung einer Interaktionsform}{87}{lstlisting.9.16}
