@@ -7,32 +7,30 @@ beschrieben werden, dass sie in der Domäne von profil c/s für unterschiedliche
 \acrshort{GUI}-Frameworks genutzt werden können. Diese Beschreibung soll weiterhin nur
 einmal stattfinden. Der Quell-Code, welcher die \acrshort{GUI} im entsprechenden
 Framework darstellt, wird frameworkspezifisch aus der \acrshort{GUI}-Beschreibung generiert.
-Langfristig betrachtet könnte das MCF damit abgelöst werden.
+Langfristig betrachtet könnte das MCF damit abgelöst werden.\\
+Der Prototyp, welcher in dieser Arbeit entwickelt wird, soll Quell-Code
+erzeugen, der eine GUI mit den syntaktischen Strukturen des MCF beschreibt.
+Somit kann geprüft werden, ob sich der generierte Quell-Code in die
+Architektur der deg einbinden lässt. 
 \section{Architektur}
-Die, diesem Lösungsansatz zugrunde liegende, DSL wird für die abstrakte
+Die \g wird für die abstrakte
 Beschreibung der \acrshort{GUI} verwendet. Somit ist gewährleistet, dass die \acrshort{GUI} weiterhin
 nur einmal beschrieben werden muss. 
 Wie in Abschnitt \ref{AllgBeschreibLösung} beschrieben, wird der Quell-Code der \acrshort{GUI}
 frameworkspezifisch, mit Hilfe eines speziellen Generators, erzeugt. Dadruch
 ist die Integration neuer Frameworks an die Implementierung eines spezifischen
-Generators gekoppelt. Abbildung \ref{Abb_neuerAnsatz} zeigt die Architektur für diesen Ansatz auf. Dabei wurden exemplarisch drei unterschiedliche Generatoren für unterschiedliche Frameworks mit aufgenommen.
-\myBigFigure{neuerAnsatz.png}{DSL-Ansatz für gleich \glspl{GUI} auf
-unterschiedlichen Plattformen}{neuerAnsatz}
+Generators gekoppelt. Abbildung \ref{Abb_neuerAnsatz} zeigt das grundlegende
+Konzept für diesen Ansatz auf. Dabei wurden exemplarisch drei
+unterschiedliche Generatoren für unterschiedliche Frameworks mit aufgenommen.
+\myBigFigure{neuerAnsatz.png}{Grundlegendes Konzept}{neuerAnsatz}\noindent
+Der Prototyp wird dabei aus einem \g-Skript Quell-Code erzeugen, welcher in das
+MCF eingebunden werden kann. Somit lässt sich prüfen, ob die GUI-DSL für
+existierende \glspl{GUI} von profil c/s genügt. In Anlehnung an Abbildung
+\ref{Abb_mdsd} in Kapitel \ref{mdsd} wird eine \acrshort{GUI} mit sinnvollen
+Interaktionen nicht allein über die \g nicht umsetzbar sein, da entsprechende
+Modelle, über die Informationen durch die \acrshort{GUI} dem Nutzer kommuniziert
+werden sollen, nicht in der \g beschrieben werden. Daher ist zumindest zur
+Erzeugung diesre Informationesquellen individueller Quell-Code von Nöten.
+Abbildung \ref{Abb_genMCFCode} zeigt diese grundlegende Idee schematisch auf.
+\myBigFigure{genMCFCode.jpg}{Grundlegende Idee für den Prototypen}{genMCFCode}
 
-\section{Vorteile gegenüber dem Multichannel-Framework}
-Wie in Kapitel \ref{Probleme} erläutert, weist das MCF einige Probleme auf. Mit
-der vorgestellten Lösung kann das Problem der inaktuellen
-Frameworks und das Problem der starken Orientiertung an Swing (oder an ein anderes Framework) beseitigt werden.
-Eine DSL sollte sich nicht an Besonderheiten bestehender
-Frameworks orientieren, sondern an dem Domänenproblem.
-(vgl. \cite[S.15]{mdsdvoelter}) Von daher sollte bei korrekter Umsetzung
-sichergestellt sein, dass die Integration von unterschiedlichen Frameworks gleicher Maßen gut funktioniert.\\
-Ein weiterer Vorteil ist, dass durch die wegfallende Orientiertung an Swing auch
-die Beschreibungsform ausdrucksstärker wird. Grund dafür ist, dass die
-syntaktischen Strukten, die in Swing vorhanden sind, nicht mehr benötigt
-werden und die DSL auf einer höheren Abstraktionsebene konzipiert werden kann.
-Das erweitern der DSL um fachliche Konzepte aus profil c/s sollte somit
-ermöglicht werden. Mit diesen fachlichen Konzepten wird eine Annäherung an das
-Model-Driven Development (siehen Kapitel \ref{mdsd}) erreicht.\\
-Darüber hinaus werden dem Entwickler durch die Codegenerierung die in Kapitel
-\ref{Probleme} einige beschriebenen fehleranfälligen Routinearbeiten abgenommen.

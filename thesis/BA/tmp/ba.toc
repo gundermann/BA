@@ -28,7 +28,6 @@
 \contentsline {chapter}{\numberline {5}Entwicklung einer L\"osungsidee}{36}{chapter.5}
 \contentsline {section}{\numberline {5.1}Allgemeine Beschreibung der L\"osungsidee}{36}{section.5.1}
 \contentsline {section}{\numberline {5.2}Architektur}{36}{section.5.2}
-\contentsline {section}{\numberline {5.3}Vorteile gegen\"uber dem Multichannel-Framework}{37}{section.5.3}
 \contentsline {chapter}{\numberline {6}Evaluation des Frameworks zur Entwicklung der DSL}{38}{chapter.6}
 \contentsline {section}{\numberline {6.1}Vorstellung ausgew\"ahlter Frameworks}{38}{section.6.1}
 \contentsline {subsection}{\numberline {6.1.1}PetitParser}{38}{subsection.6.1.1}
