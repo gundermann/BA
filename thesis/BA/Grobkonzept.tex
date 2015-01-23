@@ -33,7 +33,7 @@ durchgeführten Iterationen beschrieben. Dabei werden folgende Aspekte
 beleuchtet.
 \begin{itemize}
   \item \textbf{Vision} (siehe Kapitel \ref{Grobkonzept})\\
-  Dabei wird das Konzpt der DSL beschrieben. Bezogen auf die schematische
+  Dabei wird das Konzept der DSL beschrieben. Bezogen auf die schematische
   Darstellung eines inkrementellen Modells (siehe Abbildung \ref{Abb_inkrement})
   ist die Vision als \emph{Anforderung} zu betrachten.
   \item \textbf{Entwicklung}\\
@@ -58,11 +58,51 @@ Funktionen (Blauer Kasten), die von ihnen umgesetzt werden sollen dargestellt.
 \myBigFigure{konzept_1.jpg}{Konzeption der DSL-Umgebung (1.
 Iteration)}{Konzept_1}
 \noindent
-Die elementare Aufgabe der GUI-Beschreibung ist es, die UI-Komponenten, die in
-dem GUI verwendet werden sollen, zu definieren. Dazu gehören auch
-Beschreibungen bzgl. der Art der Interaktion und den Aktionen, die bei der
-Interaktion ausgeführt werden sollen. Weiterhin sind hierbei die allgemeinen
-Anforderungen aus Kapitel \ref{AllgAnforderungen} zu beachten.\\
+Die elementare Aufgabe der GUI-Beschreibung ist es, die
+\gks, die in dem GUI verwendet werden sollen, zu
+definieren (siehe Anforderung \hyperref[AS1]{AS1}). Ausgehend von den für profil
+c/s verwendeten \gks, können diese in drei Kategorien unterteilt werden.
+\begin{itemize}
+  \item []\textbf{{\Ks}}\\
+  Dabei handelt
+es sich um \acrshort{GUI}-Komponenten, deren Funktionen in unterschiedlichen \acrshort{GUI}-Frameworks 
+ähnlich sind und in unterschiedlichen Anwendungen eingesetzt werden
+können. Das bedeutet, dass sie nicht als domänenspezifisch angesehen werden
+können. Beispiele hierfür sind \acrshort{GUI}-Komponenten wie der \emph{Button} oder das
+\emph{Label}.
+  \item[]\textbf{{\kks}}\\
+  Diese zeichnen sich
+dadurch aus, dass sie domänenspezifisch sind und speziell für profil c/s
+entwickelt wurden und Interaktionen und Funktionalitäten bereits festgelegt
+sind und nicht verändert werden können.
+Ein Beispiel für eine komplexe Komponenten ist die \gloss{Multiselection-Komponente}. 
+
+  \item[]\textbf{{Layout-Komponenten}}\\
+  Dabei handelt es sich
+um strukturgebende Komponenten. In anderen \acrshort{GUI}-Frameworks sind dies bspw.
+\emph{Panel} (\gloss{Swing}), \emph{Div} (HTML) oder \emph{Pane} (JavaFX).
+\end{itemize}
+\noindent
+Bei den Beschreibungen der \Ks muss auch die Möglichkeit bestehen Interaktionen
+festzulegen (siehe Anforderung \hyperref[AS5]{AS5}). Zu einer Interaktion
+gehört die Art der Interaktion und bestimmte Aktionen, die bei der Interaktion ausgeführt
+werden. Die anderen \gks bestimmen haben festgelegte Interaktionsmöglichkeiten
+(\kks) oder es ist nicht möglich mit ihnen zu interagieren (Layout-Komponenten).\\
+Bezüglich der \knks ist darauf zu achten, dass sie für jedes verwendete
+\acrshort{GUI}-Framework implementiert werden müssen. Damit wird verhindert,
+dass die Entwickler, die bzgl. der \acrshort{GUI} nur mit der DSL arbeiten,
+eigene \kks entwerfen, deren Wiederverwendungsgrad nierdirger ist, als wenn
+diese Komponenten nach ausreichender Evaluation an einer zentralen Stelle
+implementiert und bereitgestellt werden. Die Notwendigkeit dessen, dass die
+Quellen für diese \knks sowohl zur Entwicklungszeit, als auch zur Laufzeit
+vorhanden sein müssen, ist ein Nachteil dieses Konzeptes.\\
+Beim Layout und den Layout-Komponenten ist besonders
+auf die Ausdruckskraft der für die Beschreibung dieser Komponenten verwendeten Bezeichnungen zu
+achten. Grund dafür ist, das sich bspw. auf dem Desktop ein Programmfenster als
+oberste Layout Komponente festlegen lässt. In einem Web-Browser ist der Begriff
+\emph{Fenster} als oberste Layout Komponenten jedoch nicht geläufig. Die
+Komponente, die in einem Browser dem Programmfester auf dem Desktop am nächsten 
+kommt, ist meiner Meinung nach das Tab.\\
 Darüber hinaus sollen die Skripte für die Beschreibung der UIs so
 konzipiert werden, dass es möglich ist andere GUI-Beschreibungen dort
 einzubinden. Somit werden eingebundene GUIs wiederum zu UI-Komponenten.

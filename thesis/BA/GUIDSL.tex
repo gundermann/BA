@@ -74,36 +74,3 @@ Außerdem darf die Erweiterung um neue \acrshort{GUI}-Komponenten nicht außer
 Acht gelassen werden (\ref{AS6}), da anderen Falls die Gefahr besteht, dass die
 GUI-DSL unbrauchbar wird.
 
-Für die \acrshort{GUI}-DSL wird bzgl. der Anforderungen an
-die Komponenten zwischen drei Kategorien unterschieden.\\
-Die erste Kategorie umfasst \emph{\Ks}. Dabei handelt
-es sich um \acrshort{GUI}-Komponenten, deren Funktionen in unterschiedlichen \acrshort{GUI}-Frameworks 
-ähnlich sind und in unterschiedlichen Anwendungen eingesetzt werden
-können. Das bedeutet, dass sie nicht als domänenspezifisch angesehen werden
-können. Beispiele hierfür sind \acrshort{GUI}-Komponenten wie der \emph{Button} oder das
-\emph{Label}.\\
-Die zweite Kategorie umfasst \emph{\kks}. Diese zeichnen sich
-dadurch aus, dass sie domänenspezifisch sind und speziell für profil c/s
-entwickelt wurden. Ein Beispiel für eine komplexe Komponenten ist die
-\gloss{Multiselection-Komponente}. 
-Die \knks müssen für jedes verwendete \acrshort{GUI}-Framework
-implementiert werden. Damit wird verhindert, dass die
-Entwickler, die bzgl. der \acrshort{GUI} nur mit der DSL arbeiten, eigene komplexe
-Komponenten entwerfen, deren Wiederverwendungsgrad nierdirger ist, als wenn
-diese Komponenten nach ausreichender Evaluation an einer zentralen Stelle
-implementiert und bereitgestellt werden. Die Notwendigkeit dessen, dass die
-Quellen für diese \knks sowohl zur Entwicklungszeit, als auch zur Laufzeit
-vorhanden sein müssen, ist ein Nachteil dieses Konzeptes.\\
-Die dritte Kategorie umfasst \emph{Layout Komponenten}. Dabei handelt es sich
-um strukturgebende Komponenten. In anderen \acrshort{GUI}-Frameworks sind dies bspw.
-\emph{Panel} (\gloss{Swing}), \emph{Div} (HTML) oder \emph{Pane} (JavaFX). In
-der \acrshort{GUI}-DSL müssen auch solche Komponenten verfügbar sein. Dabei ist besonders
-auf die Ausdruckskraft der für die Beschreibung dieser Komponenten verwendeten Bezeichnungen zu
-achten. Grund dafür ist, das sich bspw. auf dem Desktop ein Programmfenster als
-oberste Layout Komponente festlegen lässt. In einem Web-Browser ist der Begriff
-\emph{Fenster} als oberste Layout Komponenten jedoch nicht geläufig. Die
-Komponente, die in einem Browser dem Programmfester auf dem Desktop am nächsten 
-kommt, ist meiner Meinung nach das Tab.\\
-Die Attribute, die für die einzelnen Komponenten beschrieben werden
-müssen, werden in Kapitel \ref{Entwicklung einer DSL zur Beschreibung der GUI
-in profil c/s} genauer analysiert.
