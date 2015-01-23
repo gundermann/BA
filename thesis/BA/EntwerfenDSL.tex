@@ -1,10 +1,10 @@
 \chapter{Entwicklung einer DSL zur Beschreibung der GUI in profil c/s}\label{Entwicklung einer DSL zur Beschreibung der GUI in profil c/s}
 \section{1. Iteration}
-\subsection*{Analyse der Metadaten des GUIs}
-Die Beschreibung einer GUI wird in der Sprache als eigener Komplex betrachtet
+\subsection*{Analyse der Metadaten der GUI}
+Die Beschreibung einer \acrshort{GUI} wird in der Sprache als eigener Komplex betrachtet
 (siehe semantisches Modell \emph{Definition}). Innerhalb dieses Komplexes werden
 die entsprechenden Komponenten definiert. Die Bereiche die innerhalb einer
-Beschreibung festgelegt werden sollen, müssen UI-Komponenten zugeordnet werden
+Beschreibung festgelegt werden sollen, müssen \gks zugeordnet werden
 können (siehe semantisches Modell \emph{AreaAssignment}). Diese Bereiche
 sollten vor der Entwicklung bereits festgelegt werden. Um abzusichern, dass die 
 die Anzahl der festgelegten Bereiche genau eingehalten wird, muss diese
@@ -12,17 +12,17 @@ Anzahl in der GUI-Beschreibung angegeben werden (siehe semantisches Modell
 \emph{AreaCount}).\\
 Für die Beschreibung der Layout-Komponenten werden zwei Typen unterschieden
 (siehe semantisches Model \emph{TypeDefinition}).\\
-Ein weiterer Aspekt in GUI-Beschreibung ist die Verwendung von anderen
+Ein weiterer Aspekt in der GUI-Beschreibung ist die Verwendung von anderen
 GUI-Beschreibungen (siehe semantisches Modell \emph{Use}).\\ 
 Zusammenfassend sind für die Beschreibung der GUI folgende Metadaten nötig.
 \begin{itemize}
   \item [] Anzahl der Bereiche
-  \item [] Zuweisung der UI-Komponenten zu den Bereichen
+  \item [] Zuweisung der \gks zu den Bereichen
   \item [] Angabe des Layout-Typs
   \item [] Angabe der Verwendeten GUI-Beschreibungen
-  \item [] Definition von UI-Komponenten
+  \item [] Definition von \gks
 \end{itemize}
-Die Definition der UI-Komponenten nehmen einen eigenen Komplex innerhalb der
+Die Definition der \gks nehmen einen eigenen Komplex innerhalb der
 GUI-Beschreibung ein. 
 Bezogen auf die \Ks des UIs ist die
 Beschreibung eines Textes wichtig. Im Falle eines Buttons oder eines Labels
@@ -54,7 +54,7 @@ Aktionen nehmen wiederum einen eigenen Komplex innerhalb der
 Komponentendefinition ein. Dabei werden folgende Informationen benötigt.
 \begin{itemize}
   \item[] Aktions-Typ\\
-  Zur Unterscheidung zwischen Interaktionen mit anderen UI-Komponenten oder
+  Zur Unterscheidung zwischen Interaktionen mit anderen \gks oder
   fachlichen Modellen
   \item[] Element\\
   Ein Verweis auf das Element, mit dem interagiert werden soll.
@@ -140,7 +140,7 @@ Die dazugehörige Grammatik befindet sich im Anhang
 
 \subsection*{Analyse der Metadaten des GUIs}
 Für die Metadaten der GUI-Beschreibung werden muss in dieser Iteration eine Properties-Datei angegeben werden, in der bestimmte Werte
-für die Attribute der UI-Komponenten enthält.\\
+für die Attribute der \gks enthält.\\
 Da die Möglichkeit bestehen soll die, in den eingebundenen GUI-Beschreibungen
 definierten, Komponenten in dieser Iteration zu verändert, wird eine weitere
 Ergänzung für die GUI-Beschreibung benötigt. Diese Veränderungen sollen sich von
@@ -312,20 +312,20 @@ Die dazugehörige Grammatik ist im Anhang \ref{AppGrammatiken} zu finden.
 
 \section{3. Iteration}
 \subsection*{Analyse der Metadaten des GUIs}
-Um eine Referenzierung von UI-Komponenten und dem entsprechenden Layout aus der
+Um eine Referenzierung von \gks und dem entsprechenden Layout aus der
 Layout-Datei zu ermöglichen, ist es wie bei den Properties notwendig, die
 Layout-Datei innerhalb der GUI-Beschreibung anzugeben. Weiterhin wird in den
 einzelnen Komponentendefinitionen ein Schlüssel benötigt, über den die
 Komponente eindeutig referenziert werden kann. Dafür kann die Bezeichnung der
 UI-Komponete verwendet werden. Um in der Layout-Datei nicht alle einzelnen
-UI-Komponenten unterscheiden zu müssen, wird innerhalb der GUI-Beschreibung
-ein optionales Feld benötigt, mittels dessen unterschiedlichen UI-Komponenten
+\gks unterscheiden zu müssen, wird innerhalb der GUI-Beschreibung
+ein optionales Feld benötigt, mittels dessen unterschiedlichen \gks
 dasselbe Layout zugeordnet werden kann. Dieser Schlüssel wird Layout-Schlüssel
 genannt.\\
 Da die Anzahl der Bereiche nicht mehr angegeben werden muss, fällt dies
 auch aus den Metadaten den GUI-Beschreibung heraus. Die Zuweisung der
-UI-Komponenten zu den Bereichen entfällt ebenfalls. Die Strukturierung wird über
-eine Aufzählung der UI-Komponenten vorgenommen.\\
+\gks zu den Bereichen entfällt ebenfalls. Die Strukturierung wird über
+eine Aufzählung der \gks vorgenommen.\\
 Zusammenfassend die benötigten Metadaten für die GUI-Beschreibung die folgenden.
 \begin{itemize}
   \item  Typ
@@ -397,7 +397,7 @@ Das semantische Modell hat sich durch die vielen Änderungen in dieser Iteration
 ebenso stark verändert. Bei der Betrachtung der \emph{UIDescription} (siehe
 Abbildung \ref{Abb_I3_1}) fällt auf, dass \emph{Area} und \emph{AreaCount} nicht mehr
 vorhanden sind. Hinzugekommen sind \emph{Structure} (worin die Anordnung der
-UI-Komponenten (\emph{Element}) in einer Liste abgelegt wird) und Layout
+\gks (\emph{Element}) in einer Liste abgelegt wird) und Layout
 (worin die zu verwendenen Layout-Dateien in einer Liste abgelegt werden).
 Eine weitere Änderungen ist bei \emph{Property} zu finden. Dort ist ebenfalls
 eine Liste vorhanden und kein allein stehender Wert.
@@ -432,7 +432,7 @@ Klassen nicht mit aufgeführt.
 \myBigFigure{v3-4.jpg}{3. Iteration: TabView}{I3_4}
 \noindent
 Die \K TabView benötigt eine Menge von \emph{TabDefinition}s. Diese Klasse
-bildet die Referenz zu den in die TabView einzubindenen UI-Komponenten.
+bildet die Referenz zu den in die TabView einzubindenen \gks.
 Die \Ks Tree und Table benötigen lediglich eine Referenz auf den Input-Typen,
 den sie abbilden sollen, in Form einer Zeichenkette (siehe Abbildung
 \ref{Abb_I3_5} und \ref{Abb_I3_6}).
@@ -459,7 +459,7 @@ großen syntaktischen Veränderungen vorgenommen. Lediglich das Semikolon wird für
 den Abschluss des Komplexes benötigt (siehe Listing \ref{LST_Use3}).
 \begin{lstlisting}[{caption = 3.
 Iteration:
-Eingebundene UI-Komponenten},{label = LST_Use3}] 
+Eingebundene \gks},{label = LST_Use3}] 
 use: Multiselection<Input> as: "multi";
 \end{lstlisting}
 Die Definitionen der einzelnen \Ks hat sich syntaktisch stark verändert. Grund
@@ -501,7 +501,7 @@ layoutKey='tablelayout' interactiontype=IfActivator;
 Tree<treemodel> as: 'Tree' -> propertyKey='treeproperty'
 layoutKey='treelayout' interactiontype=IfActivator;
 \end{lstlisting}
-Die \Ks TabView werden die verwendeten UI-Komponenten der einzelnen Tabs
+Die \Ks TabView werden die verwendeten \gks der einzelnen Tabs
 ebenfalls nach dem Schlüsselwort angegeben, welches die UI-Komponente festlegt.
 Hierbei können anderes als bei den \Ks Table und Tree mehrere Angaben getätigt
 werden (siehe Listing \ref{LST_Tab3}). In den folgenden Beispiele wird davon
@@ -520,7 +520,7 @@ Fällen optional ist. Lediglich die speziellen Properties der \Ks Table, Tree und
 TabView müssen zwingend angegeben werden.\\
 Die Syntax zur Veränderung einer \K einer eingebundenen GUI-Beschreibung ähnelt
 der Definition einer \K des gleichen Typs. Es muss lediglich angegenben werden,
-welche UI-Komponenten in welcher GUI-Beschreibung verändert werden soll.
+welche \gks in welcher GUI-Beschreibung verändert werden soll.
 Folgendes Beispiel zeigt, wie die Aufschrift eines Buttons einer eingebundenen
 GUI-Beschreibung verändert wird (siehe Listing \ref{LST_Refine3}). Der Button
 trägt die Bezeichnung \emph{EmbeddedButton} und die
@@ -535,9 +535,9 @@ Button change:'embedded.EmbeddedButton' -> text='Neuer Text';
 \end{lstlisting}
 
 Der letzte Teil einer GUI-Beschreibung beinhaltet die Angabe der Struktur. Diese
-Angabe ähnelt der Zuweisung von UI-Komponenten zu Bereichen, wie es auch der
+Angabe ähnelt der Zuweisung von \gks zu Bereichen, wie es auch der
 ersten und zweiten Iteration bekannt ist. Da dieses Konstrukt vereinfacht werden
-sollte, werden die UI-Komponenten in der richtigen Reihenfolgen nach dem
+sollte, werden die \gks in der richtigen Reihenfolgen nach dem
 Schlüsselwort \emph{Structur} aufgezählt (siehe Listing \ref{LST_Structure3}).
 \begin{lstlisting}[{caption = 3.
 Iteration:

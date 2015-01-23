@@ -50,7 +50,7 @@ beleuchtet.
 \subsection{1. Iteration}
 Die DSL-Umgebung soll sich in zwei Bereiche unterteilen. 
 \begin{itemize}
-  \item DSL zur Beschreibung des GUI
+  \item DSL zur Beschreibung der \acrshort{GUI}
   \item Generator zur Generierung von Code
 \end{itemize}
 In Abbildung \ref{Abb_Konzept_1} sind die Artefaktion mit den
@@ -58,7 +58,7 @@ Funktionen (Blauer Kasten), die von ihnen umgesetzt werden sollen dargestellt.
 \myBigFigure{konzept_1.jpg}{Konzeption der DSL-Umgebung (1.
 Iteration)}{Konzept_1}
 \noindent
-Die elementare Aufgabe der GUI-Beschreibung ist es, die
+Die elementare Aufgabe der GUI-DSL ist es, die
 \gks, die in dem GUI verwendet werden sollen, zu
 definieren (siehe Anforderung \hyperref[AS1]{AS1}). Ausgehend von den für profil
 c/s verwendeten \gks, können diese in drei Kategorien unterteilt werden.
@@ -86,7 +86,7 @@ um strukturgebende Komponenten. In anderen \acrshort{GUI}-Frameworks sind dies b
 Bei den Beschreibungen der \Ks muss auch die Möglichkeit bestehen Interaktionen
 festzulegen (siehe Anforderung \hyperref[AS5]{AS5}). Zu einer Interaktion
 gehört die Art der Interaktion und bestimmte Aktionen, die bei der Interaktion ausgeführt
-werden. Die anderen \gks bestimmen haben festgelegte Interaktionsmöglichkeiten
+werden. Die anderen \gks haben festgelegte Interaktionsmöglichkeiten
 (\kks) oder es ist nicht möglich mit ihnen zu interagieren (Layout-Komponenten).\\
 Bezüglich der \knks ist darauf zu achten, dass sie für jedes verwendete
 \acrshort{GUI}-Framework implementiert werden müssen. Damit wird verhindert,
@@ -128,19 +128,20 @@ In eine Suchmaske können mehrere dieser Suchfelder beliebig komponiert werden.
 \myBigFigure{suchmaske.jpg}{Beispiel: Suchmaske}{suchmaske}
 \noindent
 Durch diese Möglichkeit der Komposition können auch komplexere fachliche
-Konzepte auf das UI bezogen werden, wei z.B. \emph{Personensuche}.\\\\
-Um die miteinander komponierten UI-Komponenten zu
-strukturieren ist es notwendig, dass die GUI-Beschreibung Informationen über
-die Anordnung der UI-Komponenten enthält. Diese Inforamtionen sollen
+Konzepte auf die \acrshort{GUI} bezogen werden, wei z.B.
+\emph{Personensuche}.\\\\
+Um die miteinander komponierten \gks zu
+strukturieren ist es notwendig, dass die \g Informationen über
+die Anordnung der \gks enthält. Diese Inforamtionen sollen
 ausreichd abstrakt sein, damit sich diese Struktur auf unterschiedliche
-UI-Frameworks beziehen lässt. Dazu wird die Struktur innerhalb eines GUIs als
-Anordnung von Bereichen betrachtet. In der GUI-Beschreibung werden diesen
-Bereichen die UI-Komponenten zugeordnet. Genauere Informationen über die
+\acrshort{GUI}-Frameworks beziehen lässt. Dazu wird die Struktur innerhalb einer
+\acrshort{GUI} als Anordnung von Bereichen betrachtet. In der \g
+werden diesen Bereichen die \gks zugeordnet. Genauere Informationen über die
 Anordnung dieser Bereiche dürfen nicht enthalten sein, da dies eine Orientierung
 an bestimmte Layouts bedingt (was per Anforderung ausgeschlossen ist - siehe
 Kapitel \ref{AllgAnforderungen}). Dazu ist weiterhin wichtig, dass den Bereichen jeweils nur eine Komponente zugeordnet werden kann. Dadruch wird der Zwang zur
-vorher beschriebenen Komposition von eingebundenen GUI-Beschreibungen und
-definierten UI-Komponenten verstärkt werden.\\
+vorher beschriebenen Komposition von eingebundenen \g-Skripten und
+definierten \gks verstärkt werden.\\
 Der Generator übernimmt die konkrete Anordnung der beschriebenen Bereiche. Grund
 dafür ist, dass die Anordung der Komponenten frameworkspezifisch ist
 (teilweise werden unterschiedliche Layoutmanager in unterschiedlichen
@@ -158,22 +159,22 @@ Konzept um ein Artefakt erweitert (siehe Abbildung \ref{Abb_konzept_2}).
 Iteration)}{konzept_2}
 \noindent
 Eine Änderung, die in dieser Grafik nicht dargestellt wird, ist, dass die
-Aktionen, die bei Interaktionen mit UI-Komponenten ausgeführt werden sollen,
-nicht in der GUI-Beschreibung definiert werden sollen. Grund dafür ist, dass
+Aktionen, die bei Interaktionen mit \gks ausgeführt werden sollen,
+nicht in der GUI-DSL definiert werden sollen. Grund dafür ist, dass
 diese Aktionen sehr unterschiedlich bei profil c/s sind und somit kaum
 abstrahiert werden können.\\
-Eine weitere Änderung ist, dass die UI-Komponenten, die einer
-GUI-Beschreibungen direkt definiert werden, in einer anderen Beschreibung, wo jene GUI-Beschreibung eingebunden ist, verändert werden können. Dadruch
-werden die wiederverwendeten Beschreibungen anpassbar, was die Flexibilität
-enorm steigert.\\
+Eine weitere Änderung ist, dass die \gks, die einem
+GUI-DSL-Skript direkt definiert werden, in einer anderen Beschreibung, wo jenes
+GUI-DSL-Skript eingebunden ist, verändert werden können. Dadruch werden die
+wiederverwendeten Beschreibungen anpassbar, was die Flexibilität enorm steigert.\\
 Darüber hinaus soll die Möglichkeit bestehen, bestimmte Werte, welche die
-Attribute von UI-Komponenten annehmen können, in Properties-Dateien auszulagern.
-Dadruch wird die GUI-Beschreibung weitgehend entlastet. Allerdings muss für die
-Zuweisung von UI-Komponenten zu Wert-Beschreibung in der Properties-Datei und
+Attribute von \gks annehmen können, in Properties-Dateien auszulagern.
+Dadruch wird die GUI-DSL weitgehend entlastet. Allerdings muss für die
+Zuweisung von \gks zu Wert-Beschreibung in der Properties-Datei und
 dem DSL-Skript ein eindeutiger Schlüssel definiert werden.\\
 Der Generator muss die festgelegten Properties-Dateien in die Generierung mit
 einbeziehen und ihnen entsprechende Werte entnehmen. Dabei gilt die Festlegung,
-dass wenn in der GUI-Beschreibung einem Attribut ein bestimmter Wert zugewiesen
+dass wenn in dem GUI-DSL-Skript einem Attribut ein bestimmter Wert zugewiesen
 ist, wird in der Properties-Datei (wenn eine festgelegt wurde) nicht mehr nach
 diesem Attribut der Komponente gesucht.
 
@@ -189,21 +190,21 @@ werden. In Abbildung \ref{Abb_konzept_3} ist das neue Konzept schematisch darges
 Iteration)}{konzept_3}
 \noindent
 Da die Layout-Beschreibung in eine separate Datei augegliedert wurde, muss die
-Referenzierung von UI-Komponenten und Bereichen aus der GUI-Beschreibung mit den
+Referenzierung von \gks und Bereichen aus dem GUI-Skript mit den
 Festlegungen in der Layout-Datei referenziert werden können.\\
-Bezogen auf die in der GUI-Beschreibung definierten Bereiche ist aufgefallen,
+Bezogen auf die im GUI-Skript definierten Bereiche ist aufgefallen,
 dass die Angabe der Anzahl der Bereiche nicht notwendig ist. Grund dafür ist,
 dass dieser Wert doppelt definiert weden würde. Einerseits direkt in der Angabe
-der Anzahl und andererseits indirekt durch die Zuweisung der UI-Komponenten und
-eingebundenen GUI-Beschreibungen zu den Bereichen. Ursprünglich war die Idee,
+der Anzahl und andererseits indirekt durch die Zuweisung der \gks und
+eingebundenen GUI-Skripte zu den Bereichen. Ursprünglich war die Idee,
 dass auf Basis dieser doppelten Angabe Validierungen ausgeführt werden können.
 Die doppelte Deklaration wiederspricht jedoch der Anforderung, dass so wenig
-LOCs wie möglich geschrieben werden sollen, um eine GUI zu beschreiben (siehe
+LOCs wie möglich geschrieben werden sollen, um eine \acrshort{GUI} zu beschreiben (siehe
 Kapitel \ref{AllgAnforderungen}).\\
-Weiterhin ist aufgefallen, dass in einer GUI-Beschreibung nur eine
+Weiterhin ist aufgefallen, dass in einem GUI-Skript nur eine
 Properties Datei angegeben werden kann. In den GUI-Klassen der deg können jedoch
 mehrere Properties-Dateien angegeben werden. Dies ist auch in der
-GUI-Beschreibung via DSL zu beachten.\\
+GUI-DSL zu beachten.\\
 Neben den \Ks \emph{Button} und \emph{Label} müssen folgende weitere
 \Ks definiert werden können.
 \begin{itemize}
@@ -213,8 +214,8 @@ Neben den \Ks \emph{Button} und \emph{Label} müssen folgende weitere
   \item Table
   \item TabPane
   \item Interchangeable\\
-  Ein Bereich, in dem während der Laufzeit unterschiedliche UIs eingebunden
-  werden können.
+  Ein Bereich, in dem während der Laufzeit unterschiedliche \glspl{GUI}
+  eingebunden werden können.
 \end{itemize}
 Weiterhin müssen die Bezeichnungen der
 Interaktionstypen den Bezeichnungen der Interaktionsformen (IF) der deg
@@ -222,7 +223,7 @@ angeglichen werden. Darüber hinaus sollen folgende Standard-Interaktionstypen ve
 Komponente genannt und anschließend die Standard-Interaktionstypen)
 \begin{itemize}
   \item Button: IfActivator, IfTextDisplay
-  \item Interchangeable: Änderung des GUIs
+  \item Interchangeable: Änderung der \acrshort{GUI}
   \item Tree: Doppelklick
 \end{itemize}
 Diese Standard-Interaktionstypen müssen nicht in den jeweiligen Komponenten

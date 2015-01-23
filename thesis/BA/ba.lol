@@ -8,7 +8,7 @@
 \contentsline {lstlisting}{\numberline {8.7}2. Iteration: Ver\"andern von Komponenten eingebundener GUI-Beschreibungen}{64}{lstlisting.8.7}
 \contentsline {lstlisting}{\numberline {8.8}2. Iteration - Ver\"andern von Komponenten eingebundener GUI-Beschreibungen mit Namens\"uberschneidung}{65}{lstlisting.8.8}
 \contentsline {lstlisting}{\numberline {8.9}3. Iteration: Properties- und Layout-Dateien}{73}{lstlisting.8.9}
-\contentsline {lstlisting}{\numberline {8.10}3. Iteration: Eingebundene UI-Komponenten}{73}{lstlisting.8.10}
+\contentsline {lstlisting}{\numberline {8.10}3. Iteration: Eingebundene \acrshort {GUI}-Komponenten}{73}{lstlisting.8.10}
 \contentsline {lstlisting}{\numberline {8.11}3. Iteration: Button und Label}{73}{lstlisting.8.11}
 \contentsline {lstlisting}{\numberline {8.12}3. Iteration: Textfield und Textarea}{73}{lstlisting.8.12}
 \contentsline {lstlisting}{\numberline {8.13}3. Iteration: Table und Tree}{74}{lstlisting.8.13}
