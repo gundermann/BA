@@ -63,7 +63,7 @@
 \glossaryentry{Graphical User Interface?\glossentry{GUI}|setentrycounter[]{page}\glsnumberformat}{10}
 \glossaryentry{Graphical User Interface?\glossentry{GUI}|setentrycounter[]{page}\glsnumberformat}{10}
 \glossaryentry{Graphical User Interface?\glossentry{GUI}|setentrycounter[]{page}\glsnumberformat}{10}
-\glossaryentry{Graphical User Interface?\glossentry{GUI}|setentrycounter[]{page}\glsnumberformat}{10}
+\glossaryentry{Graphical User Interface?\glossentry{GUI}|setentrycounter[]{page}\glsnumberformat}{11}
 \glossaryentry{Turing-Maschine?\glossentry{Turing-Maschine}|setentrycounter[]{page}\glsnumberformat}{13}
 \glossaryentry{Domäne?\glossentry{Domäne}|setentrycounter[]{page}\glsnumberformat}{13}
 \glossaryentry{Compiler?\glossentry{Compiler}|setentrycounter[]{page}\glsnumberformat}{14}
@@ -115,7 +115,9 @@
 \glossaryentry{Graphical User Interface?\glossentry{GUI}|setentrycounter[]{page}\glsnumberformat}{36}
 \glossaryentry{Graphical User Interface?\glossentry{GUI}|setentrycounter[]{page}\glsnumberformat}{36}
 \glossaryentry{Multiselection-Komponente?\glossentry{Multiselection-Komponente}|setentrycounter[]{page}\glsnumberformat}{53}
-\glossaryentry{Graphical User Interface?\glossentry{GUI}|setentrycounter[]{page}\glsnumberformat}{84}
+\glossaryentry{Inhaltsbaum?\glossentry{Inhaltsbaum}|setentrycounter[]{page}\glsnumberformat}{78}
+\glossaryentry{Verweisebaum?\glossentry{Verweisebaum}|setentrycounter[]{page}\glsnumberformat}{78}
+\glossaryentry{Graphical User Interface?\glossentry{GUI}|setentrycounter[]{page}\glsnumberformat}{83}
 \glossaryentry{Swing?\glossentry{Swing}|setentrycounter[]{page}\glsnumberformat}{xviii}
 \glossaryentry{Zuwendungsblatt?\glossentry{Zuwendungsblatt}|setentrycounter[]{page}\glsnumberformat}{xx}
 \glossaryentry{Zuwendungs-Berechner?\glossentry{Zuwendungs-Berechner}|setentrycounter[]{page}\glsnumberformat}{xx}

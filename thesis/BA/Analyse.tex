@@ -35,15 +35,15 @@ werden.
 			\hline
 				\textbf{Nr.} & \textbf{Anforderung} & \textbf{Priorität}\\
 				\hline\hline
-				1. & Bereitstellung für standalone und Web & 1\\
+				AA1 & Bereitstellung für den Standalone- und Web-Bereich & 1\\
 				\hline
-				2. & 	Ähnlicher Aufbau auf unterschiedlichen Plattformen & 2 \\
+				AA2. & Ähnlicher Aufbau auf unterschiedlichen Plattformen & 2 \\
 				\hline
-				3. & Erweiterbarkeit der verwendeten Frameworks & 1\\
+				AA3. & Erweiterbarkeit der verwendeten Frameworks & 1\\
 				\hline
-				4.  & Verwendung abstrahierbarer Frameworks & 2\\
+				AA4  & Verwendung abstrahierbarer Frameworks & 2\\
 				\hline
-				5. & Ausdrucksstarke Syntax & 3\\
+				AA5 & Ausdrucksstarke Syntax & 3\\
 				\hline
 				\hline
 			\end{tabular}
@@ -76,7 +76,7 @@ Zuwendungsblatt}{\simplevcite{DegDKElerIAntragsmappe}}{Standalone-Client}
 \noindent
 Dass der Aufbau der \acrshort{GUI} in beiden Clients ähnlich ist, liegt an der
 Umsetzung der \acrshort{GUI}, die im folgenden erläutert wird.\\
-Aufgrund von Anforderung Nr. 1 wurden in der
+Aufgrund von Anforderung AA1 wurden in der
 Vergangenheit zwei \glspl{GUI} mit unterschiedlichen Frameworks von der deg
 entwickelt.
 Dieses Verfahren erwies sich mit komplexer werdenden \glspl{GUI} als sehr
@@ -85,7 +85,7 @@ eine Lösung erarbeitet mit der es möglich ist, eine einmal beschriebene
 \acrshort{GUI} auf mehrere Plattformen zu portieren. Durch diese Abstraktion
 wird der Aufwand der Entwicklung neuer \glspl{GUI} stark reduziert. 
 Zugleich fördert die einmalige Beschreibung auch einen ähnlichen Aufbau der
-\glspl{GUI} im Web- und Standalone-Client, was der Anforderung Nr. 2 nachkommt.
+\glspl{GUI} im Web- und Standalone-Client, was der Anforderung AA2 nachkommt.
 Die Lösung der deg ist das \emph{Multichannel-Framework} (MCF).\\
 Die Architektur des
 Multichannel-Frameworks ist Abbildung \ref{Abb_MC-Framework} zu entnehmen.
@@ -165,7 +165,7 @@ WAM-Ansatz bietet, werden jedoch auch im MCF verwendet.\\
 
 \section{Probleme des Multichannel-Frameworks}\label{Probleme}
 Bezogen auf die Anforderungen
-wurden Anforderungen werden Nr. 3 und 5 nicht durch das MCF umgesetzt. (Fakt
+wurden Anforderungen werden AA3 und AA5 nicht durch das MCF umgesetzt. (Fakt
 ist, dass jede Sprache eine gewisse Ausdruckskraft hat. Da in dieser Arbeit versucht wird die
 \acrshort{GUI}-Entwicklung mittels einer ausdrucksstarken DSL, die sich auf die Domäne von profil c/s
 bezieht, umzusetzen, ist die Ausdruckskraft herkömmlicher
@@ -220,8 +220,8 @@ Anforderungen auch die genannten Routinearbeiten mindert.\\
 In dieser Arbeit wird ein Ansatz untersucht, bei dem es möglich ist, die
 oben genannten Anforderungen vollständig umzusetzen. Kern des Ansatzes ist eine
 Domänenspezifische Sprache (DSL), mit deren Hilfe die \glspl{GUI} beschrieben
-werden sollen.
-Eine DSLs könnte so konzipiert werden, dass sie ausreichend abstrakt und erweiterbar ist und bzgl.
+werden sollen (im Folgenden als \g bezeichnet).
+Eine DSL könnte so konzipiert werden, dass sie ausreichend abstrakt und erweiterbar ist und bzgl.
 der Ausdruckskraft das MCF übertrifft.\\
 Die genaue Lösungsidee mittels DSL, welche in dieser Arbeit verfolgt wird, ist
 in Kapitel \ref{Entwicklung einer Lösungsidee} beschrieben.
