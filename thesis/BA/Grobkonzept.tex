@@ -53,7 +53,7 @@ Die DSL-Umgebung soll sich in zwei Bereiche unterteilen.
   \item DSL zur Beschreibung der \acrshort{GUI}
   \item Generator zur Generierung von Code
 \end{itemize}
-In Abbildung \ref{Abb_Konzept_1} sind die Artefaktion mit den
+In Abbildung \ref{Abb_Konzept_1} sind die Artefakte mit den
 Funktionen (Blauer Kasten), die von ihnen umgesetzt werden sollen dargestellt.
 \myBigFigure{konzept_1.jpg}{Konzeption der DSL-Umgebung (1.
 Iteration)}{Konzept_1}
@@ -79,7 +79,8 @@ Ein Beispiel für eine komplexe Komponenten ist die \gloss{Multiselection-Kompone
 
   \item[]\textbf{{Layout-Komponenten}}\\
   Dabei handelt es sich
-um strukturgebende Komponenten. In anderen \acrshort{GUI}-Frameworks sind dies bspw.
+um Komponenten, welche die Struktur der \acrshort{GUI} bestimmen. In anderen
+\acrshort{GUI}-Frameworks sind dies bspw.
 \emph{Panel} (\gloss{Swing}), \emph{Div} (HTML) oder \emph{Pane} (JavaFX).
 \end{itemize}
 \noindent
@@ -91,7 +92,7 @@ werden. Die anderen \gks haben festgelegte Interaktionsmöglichkeiten
 Bezüglich der \knks ist darauf zu achten, dass sie für jedes verwendete
 \acrshort{GUI}-Framework implementiert werden müssen. Damit wird verhindert,
 dass die Entwickler, die bzgl. der \acrshort{GUI} nur mit der DSL arbeiten,
-eigene \kks entwerfen, deren Wiederverwendungsgrad nierdirger ist, als wenn
+eigene \kks entwerfen, deren Wiederverwendungsgrad niedirger ist, als wenn
 diese Komponenten nach ausreichender Evaluation an einer zentralen Stelle
 implementiert und bereitgestellt werden. Die Notwendigkeit dessen, dass die
 Quellen für diese \knks sowohl zur Entwicklungszeit, als auch zur Laufzeit
@@ -110,7 +111,7 @@ Ziel dessen ist es, dass die Entwickler aus mehreren einfachen UIs ein komplexes
 UI erstellen können (Modularisierung). Die Gefahr die dabei besteht ist, dass
 mit der Zeit viel einfache GUI-Beschreibungen mit ähnlicher Strukturiert entwickelt werden. Da die
 deg bei den GUIs von profil c/s ein bestimmtes Schema verfolgt (Cooperate
-Design), sollte dieses Problem dadurch ausreichend eingedemmt sein. Wichtig ist
+Design), sollte dieses Problem dadurch ausreichend eingädemmt sein. Wichtig ist
 hierbei zu betonen, dass die DSL keine Sprache sein soll, mit der jedes GUI
 beschrieben werden kann. Sie soll lediglich UIs für profil c/s beschreiben
 können. Der Vorteil, der sich aus dieser starken Modularisierung ergibt, ist
@@ -132,18 +133,18 @@ Konzepte auf die \acrshort{GUI} bezogen werden, wei z.B.
 \emph{Personensuche}.\\\\
 Um die miteinander komponierten \gks zu
 strukturieren ist es notwendig, dass die \g Informationen über
-die Anordnung der \gks enthält. Diese Inforamtionen sollen
-ausreichd abstrakt sein, damit sich diese Struktur auf unterschiedliche
+die Anordnung der \gks enthält. Diese Informationen sollen
+ausreichend abstrakt sein, damit sich diese Struktur auf unterschiedliche
 \acrshort{GUI}-Frameworks beziehen lässt. Dazu wird die Struktur innerhalb einer
 \acrshort{GUI} als Anordnung von Bereichen betrachtet. In der \g
 werden diesen Bereichen die \gks zugeordnet. Genauere Informationen über die
 Anordnung dieser Bereiche dürfen nicht enthalten sein, da dies eine Orientierung
 an bestimmte Layouts bedingt (was per Anforderung ausgeschlossen ist - siehe
-Kapitel \ref{AllgAnforderungen}). Dazu ist weiterhin wichtig, dass den Bereichen jeweils nur eine Komponente zugeordnet werden kann. Dadruch wird der Zwang zur
-vorher beschriebenen Komposition von eingebundenen \g-Skripten und
-definierten \gks verstärkt werden.\\
+Kapitel \ref{AllgAnforderungen}). Dazu ist weiterhin wichtig, dass den
+Bereichen jeweils nur eine Komponente zugeordnet werden kann. Dadurch wird der
+Zwang zur vorher beschriebenen Komposition von eingebundenen \g-Skripten und definierten \gks verstärkt werden.\\
 Der Generator übernimmt die konkrete Anordnung der beschriebenen Bereiche. Grund
-dafür ist, dass die Anordung der Komponenten frameworkspezifisch ist
+dafür ist, dass die Anordnung der Komponenten frameworkspezifisch ist
 (teilweise werden unterschiedliche Layoutmanager in unterschiedlichen
 Frameworks unterstützt). Da für jedes eingesetzte Framework ein eigener
 Generator implementiert werden muss (siehe Kapitel \ref{Entwicklung einer
@@ -165,11 +166,11 @@ diese Aktionen sehr unterschiedlich bei profil c/s sind und somit kaum
 abstrahiert werden können.\\
 Eine weitere Änderung ist, dass die \gks, die einem
 GUI-DSL-Skript direkt definiert werden, in einer anderen Beschreibung, wo jenes
-GUI-DSL-Skript eingebunden ist, verändert werden können. Dadruch werden die
+GUI-DSL-Skript eingebunden ist, verändert werden können. Dadurch werden die
 wiederverwendeten Beschreibungen anpassbar, was die Flexibilität enorm steigert.\\
 Darüber hinaus soll die Möglichkeit bestehen, bestimmte Werte, welche die
-Attribute von \gks annehmen können, in Properties-Dateien auszulagern.
-Dadruch wird die GUI-DSL weitgehend entlastet. Allerdings muss für die
+Attribute von \gks annehmen können, in Properties-Dateien auszulagern, wodurch
+die GUI-DSL weitgehend entlastet wird. Allerdings muss für die
 Zuweisung von \gks zu Wert-Beschreibung in der Properties-Datei und
 dem DSL-Skript ein eindeutiger Schlüssel definiert werden.\\
 Der Generator muss die festgelegten Properties-Dateien in die Generierung mit
@@ -189,7 +190,7 @@ werden. In Abbildung \ref{Abb_konzept_3} ist das neue Konzept schematisch darges
 \myBigFigure{konzept_3.jpg}{Konzeption der DSL-Umgebung (3.
 Iteration)}{konzept_3}
 \noindent
-Da die Layout-Beschreibung in eine separate Datei augegliedert wurde, muss die
+Da die Layout-Beschreibung in eine separate Datei ausgegliedert wurde, muss die
 Referenzierung von \gks und Bereichen aus dem GUI-Skript mit den
 Festlegungen in der Layout-Datei referenziert werden können.\\
 Bezogen auf die im GUI-Skript definierten Bereiche ist aufgefallen,
@@ -198,7 +199,7 @@ dass dieser Wert doppelt definiert weden würde. Einerseits direkt in der Angabe
 der Anzahl und andererseits indirekt durch die Zuweisung der \gks und
 eingebundenen GUI-Skripte zu den Bereichen. Ursprünglich war die Idee,
 dass auf Basis dieser doppelten Angabe Validierungen ausgeführt werden können.
-Die doppelte Deklaration wiederspricht jedoch der Anforderung, dass so wenig
+Die doppelte Deklaration widerspricht jedoch der Anforderung, dass so wenig
 LOCs wie möglich geschrieben werden sollen, um eine \acrshort{GUI} zu beschreiben (siehe
 Kapitel \ref{AllgAnforderungen}).\\
 Weiterhin ist aufgefallen, dass in einem GUI-Skript nur eine
