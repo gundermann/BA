@@ -1,6 +1,6 @@
 \chapter{Entwicklung einer DSL zur Beschreibung der GUI in profil c/s}\label{Entwicklung einer DSL zur Beschreibung der GUI in profil c/s}
 \section{1. Iteration}
-\subsection*{Analyse der Metadaten der GUI}
+\subsection*{Analyse der Metadaten}
 Die Beschreibung einer \acrshort{GUI} wird in der Sprache als eigener Komplex betrachtet
 (siehe semantisches Modell \emph{Definition}). Innerhalb dieses Komplexes werden
 die entsprechenden Komponenten definiert. Die Bereiche die innerhalb einer
@@ -138,7 +138,7 @@ Die dazugehörige Grammatik befindet sich im Anhang
 
 \section{2. Iteration}
 
-\subsection*{Analyse der Metadaten des GUIs}
+\subsection*{Analyse der Metadaten}
 Für die Metadaten der GUI-Beschreibung werden muss in dieser Iteration eine Properties-Datei angegeben werden, in der bestimmte Werte
 für die Attribute der \gks enthält.\\
 Da die Möglichkeit bestehen soll die, in den eingebundenen GUI-Beschreibungen
@@ -311,34 +311,35 @@ Die dazugehörige Grammatik ist im Anhang \ref{AppGrammatiken} zu finden.
 
 
 \section{3. Iteration}
-\subsection*{Analyse der Metadaten des GUIs}
+\subsection*{Analyse der Metadaten}
 Um eine Referenzierung von \gks und dem entsprechenden Layout aus der
-Layout-Datei zu ermöglichen, ist es wie bei den Properties notwendig, die
-Layout-Datei innerhalb der GUI-Beschreibung anzugeben. Weiterhin wird in den
+Layout-Datei zu ermöglichen, ist es wie bei den Properties-Dateien notwendig,
+die Layout-Datei innerhalb der GUI-Beschreibung anzugeben. Weiterhin wird in den
 einzelnen Komponentendefinitionen ein Schlüssel benötigt, über den die
 Komponente eindeutig referenziert werden kann. Dafür kann die Bezeichnung der
 UI-Komponete verwendet werden. Um in der Layout-Datei nicht alle einzelnen
 \gks unterscheiden zu müssen, wird innerhalb der GUI-Beschreibung
 ein optionales Feld benötigt, mittels dessen unterschiedlichen \gks
-dasselbe Layout zugeordnet werden kann. Dieser Schlüssel wird Layout-Schlüssel
-genannt.\\
+derselbe Layout-Schlüssel zugeordnet werden kann. \\
 Da die Anzahl der Bereiche nicht mehr angegeben werden muss, fällt dies
 auch aus den Metadaten den GUI-Beschreibung heraus. Die Zuweisung der
 \gks zu den Bereichen entfällt ebenfalls. Die Strukturierung wird über
 eine Aufzählung der \gks vorgenommen.\\
-Zusammenfassend die benötigten Metadaten für die GUI-Beschreibung die folgenden.
+Zusammenfassend werden folgende benötigten Metadaten für die
+Beschreibung einer GUI mit der GUI-DSL benötigt.
 \begin{itemize}
   \item  Typ
   \item  Properties-Dateien
   \item  Layout-Dateien
-  \item  Eingebundene GUI-Beschreibungen
+  \item  Eingebundene \gks
   \item  Veränderte eingebundene Komponentendefinitionen
   \item  Komponentendefinitionen 
   \item  Struktur
 \end{itemize}
 \noindent
 Alle Komponentendefinitionen und die Veränderten eingebundenen
-Komponentendefinitionen benötigen durch die o.g. Änderung folgende Metadaten.
+Komponentendefinitionen benötigen durch die oben genannten Änderung folgende
+Metadaten.
 \begin{itemize}
   \item  Bezeichnung
   \item  Property-Schlüssel (optional)
@@ -346,7 +347,7 @@ Komponentendefinitionen benötigen durch die o.g. Änderung folgende Metadaten.
   \item  Interaktionen (optional)
 \end{itemize}
 \noindent
-Mit den konkreten Kompnentendefinitionen müssen mehrere \Ks beschrieben
+Über die konkreten Kompnentendefinitionen müssen mehrere \Ks beschrieben
 werden können. \Ks die spezielle Metadaten benötigen sind mit diesen in
 folgender Tabelle aufgelistet.
 \begin{table}[H]
@@ -408,7 +409,7 @@ An \emph{TypeDefinition} und \emph{UsedDescription} wurden keine signifikanten
 \emph{Refinement} und \emph{Definition} vorgenommen. Der Aufbau der dieser
 Artefakte ist ähnlich. Das Interface (\emph{Refinement} und \emph{Definition})
 wird von einer Klasse implementiert (\emph{RefinementImpl} und
-\emph{DefinitionImpl}), die mehrere Objekte eines bestimmter Klassen,
+\emph{DefinitionImpl}), die mehrere Objekte bestimmter Klassen,
 die das Interface \emph{ComponentRefinement} oder \emph{ComponentDefinition}
 implementieren, enthält. In Abbildung \ref{Abb_I3_2} ist diese Struktur für die
 \emph{Definition} abgebildet.
@@ -416,7 +417,7 @@ implementieren, enthält. In Abbildung \ref{Abb_I3_2} ist diese Struktur für die
 \noindent
 Die benannten Klassen bilden die unterschiedlichen \Ks ab, die
 definiert oder verändert werden können. Jede dieser Klassen aggregiert ein
-Objekt des Typen \emph{CommonProperties} ein. Dieses Interface bilder die
+Objekt des Typen \emph{CommonProperties} ein. Dieses Interface bildet die
 allgemeinen Properties ab. Bei den \Ks Label, Button, Textfield und Textarea ist
 diese Aggregation transitiv, da die speziellen Properties dieser \Ks als eigenes
 Artefakt implementiert sind. Abbildung \ref{Abb_I3_3} zeigt dies für einen
@@ -425,7 +426,7 @@ Button auf.
 \noindent
 Eine direkte Aggergation der \emph{CommonProperties} findet bei den \Ks TabView,
 Table und Tree statt. Für die speziellen Properties dieser \Ks existieren keine
-einelnen Klassen. Die folgenden Abbildungen zeigen diese drei \Ks
+einzelnen Klassen. Die folgenden Abbildungen zeigen diese drei \Ks
 (\emph{Refinement} und \emph{Definition}) mit der Aggregation der
 \emph{CommonProperties}. Um die Übersicht zu bewahren werden die Methoden der
 Klassen nicht mit aufgeführt.
@@ -440,7 +441,7 @@ den sie abbilden sollen, in Form einer Zeichenkette (siehe Abbildung
 \myBigFigure{v3-6.jpg}{3. Iteration: TabView}{I3_6}
 \subsection*{Konkrete Syntax} Die syntaktischen
 Konstrukte wurden in dieser Iteration stark vermehrt. Das liegt vor allem daran, dass viele neue \Ks hinzugekommen sind. Der
-Grundsätzliche syntaktische Aufbau einer GUI-Beschreibung hat sich jedoch nicht
+grundsätzliche syntaktische Aufbau einer GUI-Beschreibung hat sich jedoch nicht
 verändert. Eingeleitet wird die Beschreibung weiterhin mit der Typ-Definition,
 gefolgt von der Angabe der Properties-Dateien. Sofern mehrere Properties-Dateien
 vorhanden sind, werden diese mit Komma getrennt voneinander aufgezählt. Dasselbe
@@ -454,7 +455,7 @@ type: INNERCOMPLEX;
 get properties from:'properties1', 'properties2';
 get layout from:'layout1','layout2';
 \end{lstlisting}
-Für die eingebundenen GUI-Beschreibungen bzw. \kks wurden keine
+Für die eingebundenen \gks wurden keine
 großen syntaktischen Veränderungen vorgenommen. Lediglich das Semikolon wird für
 den Abschluss des Komplexes benötigt (siehe Listing \ref{LST_Use3}).
 \begin{lstlisting}[{caption = 3.
@@ -477,8 +478,8 @@ interactiontype=IfActivator text='labeltext';
 \end{lstlisting}
 Bei den Definitionen der anderen \Ks werden die allgemienen Properties wie im
 vorherigen Beispiel zugewiesen. In den Fällen der \Ks Textflied und Textarea
-werden die speziellen Properties nach demselben Prinzip definiert (siehe Listing \ref{})
-\begin{lstlisting}[{caption = 3.
+werden die speziellen Properties nach demselben Prinzip definiert (siehe Listing
+\ref{LST_Tf+Ta3}) \begin{lstlisting}[{caption = 3.
 Iteration:
 Textfield und Textarea},{label = LST_Tf+Ta3}] 
 Textfield as: 'Textfield' -> propertyKey='textfieldproperty'
@@ -489,7 +490,7 @@ Textarea as: 'Textarea' -> propertyKey='textareaproperty'
 layoutKey='textarealayout' interactiontype=IfActivator 
 text='textareatext' editable=TRUE;
 \end{lstlisting}
-Die Syntax für die Definition der \Ks Table und Tree sind ebenfalls ähnlich. Der
+Die Syntax für die Definition der \Ks Table und Tree sind ähnlich. Der
 benötigte Input-Typ wird nach dem Schlüsselwort angegeben, welches die
 UI-Komponente bestimmt (siehe Listing \ref{LST_T+T3}).
 \begin{lstlisting}[{caption = 3.
@@ -507,7 +508,7 @@ Hierbei können anderes als bei den \Ks Table und Tree mehrere Angaben getätigt
 werden (siehe Listing \ref{LST_Tab3}). In den folgenden Beispiele wird davon
 ausgegange, dass die vorher genannten Beispiele für die \Ks Tree, Table und Textarea in
 derselben GUI-Beschreibung definiert wurde. Durch das syntaktische Konstrukt in
-Listing \ref{LST_Tab3} wird eine Tab-Ansicht mit drei Tabe beschrieben. Das
+Listing \ref{LST_Tab3} wird eine Tab-Ansicht mit drei Taben beschrieben. Das
 erste Tab enthält den Tree, das zweite die Table und das dritte die Textarea.
 \begin{lstlisting}[{caption = 3.
 Iteration:
@@ -533,7 +534,7 @@ TabView},{label = LST_Refine3}]
 use: "guidescription.Embedded" as: "embedded";
 Button change:'embedded.EmbeddedButton' -> text='Neuer Text';
 \end{lstlisting}
-
+\noindent
 Der letzte Teil einer GUI-Beschreibung beinhaltet die Angabe der Struktur. Diese
 Angabe ähnelt der Zuweisung von \gks zu Bereichen, wie es auch der
 ersten und zweiten Iteration bekannt ist. Da dieses Konstrukt vereinfacht werden

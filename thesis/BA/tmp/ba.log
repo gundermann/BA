@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.10.14)  23 JAN 2015 12:12
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.10.14)  23 JAN 2015 12:22
 entering extended mode
 **ba.tex
 (C:\Users\ngundermann\git\BA\thesis\BA\ba.tex
@@ -1504,76 +1504,85 @@ Package Listings Warning: Text dropped after begin of listing on input line 215
 Package Listings Warning: Text dropped after begin of listing on input line 226
 .
 
-[63] [64] [65] [66] <Bilder/v3-1.jpg, id=1340, 565.36218pt x 572.1375pt>
+[63] [64]
+Overfull \hbox (12.71648pt too wide) in paragraph at lines 315--330
+\T1/ppl/m/n/12 Um in der Layout-Datei nicht al-le ein-zel-nen  [][]GUI[]-Kompon
+entenunterscheiden
+ []
+
+[65]
+Overfull \hbox (1.06161pt too wide) in paragraph at lines 349--393
+\T1/ppl/m/n/12 po-nen-ten be-schrie-ben wer-den kön-nen.  Ba-sis-kom-po-nen-ten
+ die spe-zi-el-le Me-
+ []
+
+[66] <Bilder/v3-1.jpg, id=1341, 565.36218pt x 572.1375pt>
 File: Bilder/v3-1.jpg Graphic file (type jpg)
 
 <use Bilder/v3-1.jpg>
-Package pdftex.def Info: Bilder/v3-1.jpg used on input line 404.
+Package pdftex.def Info: Bilder/v3-1.jpg used on input line 405.
 (pdftex.def)             Requested size: 398.3386pt x 403.12128pt.
- <Bilder/v3-2.jpg, id=1342, 423.83344pt x 198.7425pt>
+ <Bilder/v3-2.jpg, id=1343, 423.83344pt x 198.7425pt>
 File: Bilder/v3-2.jpg Graphic file (type jpg)
 
 <use Bilder/v3-2.jpg>
-Package pdftex.def Info: Bilder/v3-2.jpg used on input line 415.
+Package pdftex.def Info: Bilder/v3-2.jpg used on input line 416.
 (pdftex.def)             Requested size: 398.3386pt x 186.7937pt.
  [67 <C:/Users/ngundermann/git/BA/thesis/BA/Bilder/v3-1.jpg>] <Bilder/v3-3.jpg,
- id=1349, 493.845pt x 546.54187pt>
+ id=1350, 493.845pt x 546.54187pt>
 File: Bilder/v3-3.jpg Graphic file (type jpg)
  <use Bilder/v3-3.jpg>
-Package pdftex.def Info: Bilder/v3-3.jpg used on input line 424.
+Package pdftex.def Info: Bilder/v3-3.jpg used on input line 425.
 (pdftex.def)             Requested size: 398.3386pt x 440.83676pt.
 
 [68 <C:/Users/ngundermann/git/BA/thesis/BA/Bilder/v3-2.jpg>]
-<Bilder/v3-4.jpg, id=1354, 442.65375pt x 425.33907pt>
+<Bilder/v3-4.jpg, id=1355, 442.65375pt x 425.33907pt>
 File: Bilder/v3-4.jpg Graphic file (type jpg)
  <use Bilder/v3-4.jpg>
-Package pdftex.def Info: Bilder/v3-4.jpg used on input line 432.
+Package pdftex.def Info: Bilder/v3-4.jpg used on input line 433.
 (pdftex.def)             Requested size: 398.3386pt x 382.77565pt.
 
 [69 <C:/Users/ngundermann/git/BA/thesis/BA/Bilder/v3-3.jpg>]
-<Bilder/v3-5.jpg, id=1362, 338.76563pt x 429.10312pt>
+<Bilder/v3-5.jpg, id=1363, 338.76563pt x 429.10312pt>
 File: Bilder/v3-5.jpg Graphic file (type jpg)
  <use Bilder/v3-5.jpg>
-Package pdftex.def Info: Bilder/v3-5.jpg used on input line 439.
+Package pdftex.def Info: Bilder/v3-5.jpg used on input line 440.
 (pdftex.def)             Requested size: 398.3386pt x 504.58253pt.
 
-Overfull \hbox (0.68512pt too wide) in paragraph at lines 433--439
+Overfull \hbox (0.68512pt too wide) in paragraph at lines 434--440
 []\T1/ppl/m/n/12 Die  Ba-sis-kom-po-nen-te Tab-View be-nö-tigt ei-ne Men-ge von
  \T1/ppl/m/it/12 Tab-De-fi-ni-ti-on\T1/ppl/m/n/12 s. Die-
  []
 
-<Bilder/v3-6.jpg, id=1363, 343.2825pt x 433.62pt>
+<Bilder/v3-6.jpg, id=1364, 343.2825pt x 433.62pt>
 File: Bilder/v3-6.jpg Graphic file (type jpg)
  <use Bilder/v3-6.jpg>
-Package pdftex.def Info: Bilder/v3-6.jpg used on input line 440.
+Package pdftex.def Info: Bilder/v3-6.jpg used on input line 441.
 (pdftex.def)             Requested size: 398.3386pt x 503.16496pt.
 
 [70 <C:/Users/ngundermann/git/BA/thesis/BA/Bilder/v3-4.jpg>] [71 <C:/Users/ngun
 dermann/git/BA/thesis/BA/Bilder/v3-5.jpg>] [72 <C:/Users/ngundermann/git/BA/the
 sis/BA/Bilder/v3-6.jpg>]
-Overfull \hbox (1.42499pt too wide) in paragraph at lines 465--471
+Overfull \hbox (1.42499pt too wide) in paragraph at lines 466--472
 []\T1/ppl/m/n/12 Die De-fi-ni-tio-nen der ein-zel-nen  Ba-sis-kom-po-nen-ten ha
 t sich syn-tak-tisch stark
  []
 
-
-LaTeX Warning: Reference `' on page 73 undefined on input line 480.
-
 [73]
-Overfull \hbox (32.49307pt too wide) in paragraph at lines 504--514
+Overfull \hbox (32.49307pt too wide) in paragraph at lines 505--515
 []\T1/ppl/m/n/12 Die  Ba-sis-kom-po-nen-ten Tab-View wer-den die ver-wen-de-ten
   [][]GUI[]-Komponentender
  []
 
 
-Overfull \hbox (19.75409pt too wide) in paragraph at lines 518--532
+Overfull \hbox (19.75409pt too wide) in paragraph at lines 519--533
 \T1/ppl/m/n/12 chen Typs. Es muss le-dig-lich an-ge-gen-ben wer-den, wel-che  [
 ][]GUI[]-Komponentenin
  []
 
 [74]) [75] (C:\Users\ngundermann\git\BA\thesis\BA\EntwicklungGen.tex
 Kapitel 9.
-<Bilder/explorerbaum.jpg, id=1431, 459.21562pt x 202.50656pt>
+<Bilder/explorerbaum.jpg, id=1434, 459.21562pt x 202.50656pt>
 File: Bilder/explorerbaum.jpg Graphic file (type jpg)
 
 <use Bilder/explorerbaum.jpg>
@@ -1607,7 +1616,7 @@ Overfull \hbox (4.20226pt too wide) in paragraph at lines 120--136
 en-det wird,
  []
 
-[79] [80] <Bilder/Trees.jpg, id=1538, 356.0803pt x 261.97874pt>
+[79] [80] <Bilder/Trees.jpg, id=1541, 356.0803pt x 261.97874pt>
 File: Bilder/Trees.jpg Graphic file (type jpg)
 
 <use Bilder/Trees.jpg>
@@ -1630,7 +1639,7 @@ Overfull \hbox (6.65782pt too wide) in paragraph at lines 236--250
 LaTeX Warning: Reference `AppGeneriert' on page 83 undefined on input line 275.
 
 
-<Bilder/explorer.jpg, id=1582, 535.2497pt x 629.35126pt>
+<Bilder/explorer.jpg, id=1585, 535.2497pt x 629.35126pt>
 File: Bilder/explorer.jpg Graphic file (type jpg)
 
 <use Bilder/explorer.jpg>
@@ -1982,15 +1991,9 @@ Your command will be ignored, type <return> to proceed
 )
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 49.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 49.
+Package rerunfilecheck Info: File `ba.out' has not changed.
+(rerunfilecheck)             Checksum: FF8F83A426B9184FD0C51BDEB2E76638;3727.
 
-
-Package rerunfilecheck Warning: File `ba.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `ba.out':
-(rerunfilecheck)             Before: B83619029F2D03F2369D1BFBCCDA6ECC;3722
-(rerunfilecheck)             After:  FF8F83A426B9184FD0C51BDEB2E76638;3727.
 
 LaTeX Warning: There were undefined references.
 
@@ -2000,10 +2003,10 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 49.
  ) 
 Here is how much of TeX's memory you used:
- 14871 strings out of 493921
- 219960 string characters out of 3150471
- 431152 words of memory out of 3000000
- 16758 multiletter control sequences out of 15000+200000
+ 14870 strings out of 493921
+ 219958 string characters out of 3150471
+ 431153 words of memory out of 3000000
+ 16757 multiletter control sequences out of 15000+200000
  60069 words of font info for 75 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  50i,18n,51p,1707b,1986s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -2031,9 +2034,9 @@ lm/lmsy10.pfb><D:/Program Files/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><D:/Prog
 ram Files/MiKTeX/fonts/type1/urw/palatino/uplb8a.pfb><D:/Program Files/MiKTeX/f
 onts/type1/urw/palatino/uplr8a.pfb><D:/Program Files/MiKTeX/fonts/type1/urw/pal
 atino/uplr8a.pfb><D:/Program Files/MiKTeX/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on ba.pdf (114 pages, 3930214 bytes).
+Output written on ba.pdf (114 pages, 3930735 bytes).
 PDF statistics:
- 2434 PDF objects out of 2487 (max. 8388607)
+ 2437 PDF objects out of 2487 (max. 8388607)
  981 named destinations out of 1000 (max. 500000)
  569 words of extra memory for PDF output out of 10000 (max. 10000000)
 
