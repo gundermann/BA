@@ -43,11 +43,11 @@
 \contentsline {chapter}{\numberline {8}Entwicklung einer DSL zur Beschreibung der GUI in profil c/s}{51}{chapter.8}
 \contentsline {section}{\numberline {8.1}1. Iteration}{51}{section.8.1}
 \contentsline {section}{\numberline {8.2}2. Iteration}{56}{section.8.2}
-\contentsline {section}{\numberline {8.3}3. Iteration}{65}{section.8.3}
-\contentsline {chapter}{\numberline {9}Entwicklung des Generators zur Generierung von Klassen f\"ur das Multichannel-Framework}{76}{chapter.9}
-\contentsline {section}{\numberline {9.1}Beschreibung der GUI-, FP- und IP-Klassen}{77}{section.9.1}
-\contentsline {section}{\numberline {9.2}Umsetzung des frameworkspezifischen Generators}{78}{section.9.2}
-\contentsline {chapter}{\numberline {10}Zusammenfassung und Ausblick}{89}{chapter.10}
+\contentsline {section}{\numberline {8.3}3. Iteration}{64}{section.8.3}
+\contentsline {chapter}{\numberline {9}Entwicklung des Generators zur Generierung von Klassen f\"ur das Multichannel-Framework}{73}{chapter.9}
+\contentsline {section}{\numberline {9.1}Beschreibung der GUI-, FP- und IP-Klassen}{74}{section.9.1}
+\contentsline {section}{\numberline {9.2}Umsetzung des frameworkspezifischen Generators}{75}{section.9.2}
+\contentsline {chapter}{\numberline {10}Zusammenfassung und Ausblick}{86}{chapter.10}
 \contentsline {chapter}{Anhang}{xi}{appendix*.25}
 \contentsline {chapter}{Glossar}{xviii}{lstnumber.1.166}
 \contentsline {chapter}{Literaturverzeichnis}{xx}{appendix*.31}
