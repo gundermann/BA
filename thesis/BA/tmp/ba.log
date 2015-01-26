@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.10.14)  26 JAN 2015 12:26
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.10.14)  26 JAN 2015 12:55
 entering extended mode
 **ba.tex
 (C:\Users\ngundermann\git\BA\thesis\BA\ba.tex
@@ -1091,7 +1091,19 @@ Overfull \hbox (16.26802pt too wide) in paragraph at lines 50--68
 iert ist. (vgl. [[]VBK$[]$13[],
  []
 
-[13] [14] [15]
+[13]
+
+! Package glossaries Error: Glossary entry `Compiler' has not been defined.
+
+See the glossaries package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.76   und somit von einem \gloss{Compiler}
+                                            verarbeitet werden.
+You need to define a glossary entry before you can use it.
+
+[14] [15]
 Overfull \hbox (10.34839pt too wide) in paragraph at lines 142--142
 []\T1/ppl/b/n/17.28 Model-Driven Soft-wa-re De-ve-lop-ment (MDSD) 
  []
@@ -1104,7 +1116,7 @@ File: omsppl.fd
 LaTeX Font Info:    Font shape `OMS/ppl/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 157.
  [16]
-<Bilder/mdsd.jpg, id=730, 663.22781pt x 380.92313pt>
+<Bilder/mdsd.jpg, id=728, 663.22781pt x 380.92313pt>
 File: Bilder/mdsd.jpg Graphic file (type jpg)
  <use Bilder/mdsd.jpg>
 Package pdftex.def Info: Bilder/mdsd.jpg used on input line 173.
@@ -1162,14 +1174,20 @@ Overfull \hbox (0.94485pt too wide) in paragraph at lines 445--463
 eit über den Parse-
  []
 
-[25] [26] <Bilder/parsing.jpg, id=857, 576.65437pt x 209.28188pt>
+[25] [26] <Bilder/parsing.jpg, id=855, 576.65437pt x 209.28188pt>
 File: Bilder/parsing.jpg Graphic file (type jpg)
 
 <use Bilder/parsing.jpg>
 Package pdftex.def Info: Bilder/parsing.jpg used on input line 527.
 (pdftex.def)             Requested size: 398.3386pt x 144.57068pt.
- [27 <C:/Users/ngundermann/git/BA/thesis/BA/Bilder/parsing.jpg>] [28]
-<Bilder/parsercombinator.jpg, id=892, 456.95718pt x 276.28218pt>
+
+Overfull \hbox (10.23274pt too wide) in paragraph at lines 530--542
+\T1/ppl/m/n/12 gung be-stimm-ter Grammatik-Regeln aus-ge-führt wer-den sol-len 
+(Validierungs-
+ []
+
+[27 <C:/Users/ngundermann/git/BA/thesis/BA/Bilder/parsing.jpg>] [28]
+<Bilder/parsercombinator.jpg, id=888, 456.95718pt x 276.28218pt>
 File: Bilder/parsercombinator.jpg Graphic file (type jpg)
 
 <use Bilder/parsercombinator.jpg>
@@ -1224,7 +1242,7 @@ Overfull \hbox (32.35971pt too wide) in paragraph at lines 37--39
 
 [33]) [34] (C:\Users\ngundermann\git\BA\thesis\BA\Loesungsidee.tex
 Kapitel 5.
-<Bilder/neuerAnsatz.png, id=1007, 681.29532pt x 295.1025pt>
+<Bilder/neuerAnsatz.png, id=1003, 681.29532pt x 295.1025pt>
 File: Bilder/neuerAnsatz.png Graphic file (type png)
 
 <use Bilder/neuerAnsatz.png>
@@ -1239,7 +1257,7 @@ less on input line 25.
 
 
 
-] <Bilder/genMCFCode.jpg, id=1018, 701.62125pt x 240.9pt>
+] <Bilder/genMCFCode.jpg, id=1014, 701.62125pt x 240.9pt>
 File: Bilder/genMCFCode.jpg Graphic file (type jpg)
 
 <use Bilder/genMCFCode.jpg>
@@ -1290,7 +1308,7 @@ ass neue Kom-
 
 [39]) [40] [41] (C:\Users\ngundermann\git\BA\thesis\BA\Grobkonzept.tex
 Kapitel 7.
-<Bilder/inkrement.jpg, id=1075, 526.96875pt x 418.56375pt>
+<Bilder/inkrement.jpg, id=1071, 526.96875pt x 418.56375pt>
 File: Bilder/inkrement.jpg Graphic file (type jpg)
 
 <use Bilder/inkrement.jpg>
@@ -1316,7 +1334,7 @@ t und Missver-ständ-
  []
 
 [43 <C:/Users/ngundermann/git/BA/thesis/BA/Bilder/inkrement.jpg>]
-<Bilder/konzept_1.jpg, id=1095, 438.13687pt x 298.86656pt>
+<Bilder/konzept_1.jpg, id=1091, 438.13687pt x 298.86656pt>
 File: Bilder/konzept_1.jpg Graphic file (type jpg)
 
 <use Bilder/konzept_1.jpg>
@@ -1334,7 +1352,7 @@ Overfull \hbox (1.24146pt too wide) in paragraph at lines 80--85
 T1/ppl/m/it/12 Pa-nel \T1/ppl/m/n/12 ( [][]Swing[]
  []
 
-<Bilder/suchfeld.jpg, id=1115, 583.42969pt x 56.46094pt>
+<Bilder/suchfeld.jpg, id=1111, 583.42969pt x 56.46094pt>
 File: Bilder/suchfeld.jpg Graphic file (type jpg)
 
 <use Bilder/suchfeld.jpg>
@@ -1363,7 +1381,7 @@ Overfull \hbox (9.07297pt too wide) in paragraph at lines 86--125
 r-den un-ter-schied-
  []
 
-[45] <Bilder/suchmaske.jpg, id=1124, 584.93532pt x 176.15813pt>
+[45] <Bilder/suchmaske.jpg, id=1120, 584.93532pt x 176.15813pt>
 File: Bilder/suchmaske.jpg Graphic file (type jpg)
 
 <use Bilder/suchmaske.jpg>
@@ -1392,7 +1410,7 @@ Overfull \hbox (6.98083pt too wide) in paragraph at lines 130--155
 ig von der Be-schrei-
  []
 
-<Bilder/konzept_2.jpg, id=1139, 612.78937pt x 385.44pt>
+<Bilder/konzept_2.jpg, id=1135, 612.78937pt x 385.44pt>
 File: Bilder/konzept_2.jpg Graphic file (type jpg)
 
 <use Bilder/konzept_2.jpg>
@@ -1400,7 +1418,7 @@ Package pdftex.def Info: Bilder/konzept_2.jpg used on input line 160.
 (pdftex.def)             Requested size: 398.3386pt x 250.55067pt.
  [47 <C:/Users/ngundermann/git/BA/thesis/BA/Bilder/suchmaske.jpg>] [48 <C:/User
 s/ngundermann/git/BA/thesis/BA/Bilder/konzept_2.jpg>] <Bilder/konzept_3.jpg, id
-=1153, 723.45282pt x 386.19281pt>
+=1149, 723.45282pt x 386.19281pt>
 File: Bilder/konzept_3.jpg Graphic file (type jpg)
 
 <use Bilder/konzept_3.jpg>
@@ -1434,20 +1452,20 @@ Overfull \hbox (62.16725pt too wide) in paragraph at lines 56--59
  [][]GUI[]-Komponentenoder
  []
 
-[52] <Bilder/v1-1.jpg, id=1184, 583.42969pt x 478.03593pt>
+[52] <Bilder/v1-1.jpg, id=1180, 583.42969pt x 478.03593pt>
 File: Bilder/v1-1.jpg Graphic file (type jpg)
 
 <use Bilder/v1-1.jpg>
 Package pdftex.def Info: Bilder/v1-1.jpg used on input line 79.
 (pdftex.def)             Requested size: 398.3386pt x 326.38768pt.
- <Bilder/v1-1-1.jpg, id=1185, 490.83376pt x 243.15843pt>
+ <Bilder/v1-1-1.jpg, id=1181, 490.83376pt x 243.15843pt>
 File: Bilder/v1-1-1.jpg Graphic file (type jpg)
 
 <use Bilder/v1-1-1.jpg>
 Package pdftex.def Info: Bilder/v1-1-1.jpg used on input line 80.
 (pdftex.def)             Requested size: 398.3386pt x 197.34312pt.
  [53]
-<Bilder/v1-2.jpg, id=1192, 600.74437pt x 411.78844pt>
+<Bilder/v1-2.jpg, id=1188, 600.74437pt x 411.78844pt>
 File: Bilder/v1-2.jpg Graphic file (type jpg)
  <use Bilder/v1-2.jpg>
 Package pdftex.def Info: Bilder/v1-2.jpg used on input line 90.
@@ -1459,7 +1477,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 81--90
 
 [54 <C:/Users/ngundermann/git/BA/thesis/BA/Bilder/v1-1.jpg> <C:/Users/ngunderma
 nn/git/BA/thesis/BA/Bilder/v1-1-1.jpg>]
-<Bilder/v1-2-1.jpg, id=1198, 649.67719pt x 373.395pt>
+<Bilder/v1-2-1.jpg, id=1194, 649.67719pt x 373.395pt>
 File: Bilder/v1-2-1.jpg Graphic file (type jpg)
  <use Bilder/v1-2-1.jpg>
 Package pdftex.def Info: Bilder/v1-2-1.jpg used on input line 92.
@@ -1479,7 +1497,7 @@ Overfull \hbox (26.64915pt too wide) in paragraph at lines 147--168
 en GUI-Beschreibungen
  []
 
-<Bilder/v2-1.jpg, id=1228, 599.23875pt x 548.0475pt>
+<Bilder/v2-1.jpg, id=1224, 599.23875pt x 548.0475pt>
 File: Bilder/v2-1.jpg Graphic file (type jpg)
  <use Bilder/v2-1.jpg>
 Package pdftex.def Info: Bilder/v2-1.jpg used on input line 176.
@@ -1489,20 +1507,20 @@ Underfull \hbox (badness 10000) in paragraph at lines 171--176
 
  []
 
-[57] <Bilder/v2-2.jpg, id=1237, 411.78844pt x 194.22563pt>
+[57] <Bilder/v2-2.jpg, id=1233, 411.78844pt x 194.22563pt>
 File: Bilder/v2-2.jpg Graphic file (type jpg)
 
 <use Bilder/v2-2.jpg>
 Package pdftex.def Info: Bilder/v2-2.jpg used on input line 180.
 (pdftex.def)             Requested size: 398.3386pt x 187.88295pt.
  [58 <C:/Users/ngundermann/git/BA/thesis/BA/Bilder/v2-1.jpg>] <Bilder/v2-3.jpg,
- id=1243, 490.83376pt x 438.8897pt>
+ id=1239, 490.83376pt x 438.8897pt>
 File: Bilder/v2-3.jpg Graphic file (type jpg)
  <use Bilder/v2-3.jpg>
 Package pdftex.def Info: Bilder/v2-3.jpg used on input line 186.
 (pdftex.def)             Requested size: 398.3386pt x 356.19519pt.
 
-<Bilder/v2-4.jpg, id=1246, 514.92375pt x 302.63063pt>
+<Bilder/v2-4.jpg, id=1242, 514.92375pt x 302.63063pt>
 File: Bilder/v2-4.jpg Graphic file (type jpg)
  <use Bilder/v2-4.jpg>
 Package pdftex.def Info: Bilder/v2-4.jpg used on input line 191.
@@ -1510,7 +1528,7 @@ Package pdftex.def Info: Bilder/v2-4.jpg used on input line 191.
 
 [59 <C:/Users/ngundermann/git/BA/thesis/BA/Bilder/v2-2.jpg> <C:/Users/ngunderma
 nn/git/BA/thesis/BA/Bilder/v2-3.jpg>]
-<Bilder/v2-5.jpg, id=1251, 537.50812pt x 307.1475pt>
+<Bilder/v2-5.jpg, id=1247, 537.50812pt x 307.1475pt>
 File: Bilder/v2-5.jpg Graphic file (type jpg)
  <use Bilder/v2-5.jpg>
 Package pdftex.def Info: Bilder/v2-5.jpg used on input line 192.
@@ -1543,27 +1561,27 @@ Overfull \hbox (1.06161pt too wide) in paragraph at lines 354--398
  die spe-zi-el-le Me-
  []
 
-[64] <Bilder/v3-1.jpg, id=1343, 565.36218pt x 572.1375pt>
+[64] <Bilder/v3-1.jpg, id=1339, 565.36218pt x 572.1375pt>
 File: Bilder/v3-1.jpg Graphic file (type jpg)
 
 <use Bilder/v3-1.jpg>
 Package pdftex.def Info: Bilder/v3-1.jpg used on input line 410.
 (pdftex.def)             Requested size: 398.3386pt x 403.12128pt.
  [65]
-<Bilder/v3-2.jpg, id=1350, 423.83344pt x 198.7425pt>
+<Bilder/v3-2.jpg, id=1346, 423.83344pt x 198.7425pt>
 File: Bilder/v3-2.jpg Graphic file (type jpg)
  <use Bilder/v3-2.jpg>
 Package pdftex.def Info: Bilder/v3-2.jpg used on input line 421.
 (pdftex.def)             Requested size: 398.3386pt x 186.7937pt.
 
 [66 <C:/Users/ngundermann/git/BA/thesis/BA/Bilder/v3-1.jpg>]
-<Bilder/v3-3.jpg, id=1356, 513.41812pt x 203.25937pt>
+<Bilder/v3-3.jpg, id=1352, 513.41812pt x 203.25937pt>
 File: Bilder/v3-3.jpg Graphic file (type jpg)
  <use Bilder/v3-3.jpg>
 Package pdftex.def Info: Bilder/v3-3.jpg used on input line 430.
 (pdftex.def)             Requested size: 398.3386pt x 157.70116pt.
 
-<Bilder/v3-4.jpg, id=1357, 649.67719pt x 318.43968pt>
+<Bilder/v3-4.jpg, id=1353, 649.67719pt x 318.43968pt>
 File: Bilder/v3-4.jpg Graphic file (type jpg)
  <use Bilder/v3-4.jpg>
 Package pdftex.def Info: Bilder/v3-4.jpg used on input line 438.
@@ -1571,7 +1589,7 @@ Package pdftex.def Info: Bilder/v3-4.jpg used on input line 438.
 
 [67 <C:/Users/ngundermann/git/BA/thesis/BA/Bilder/v3-2.jpg> <C:/Users/ngunderma
 nn/git/BA/thesis/BA/Bilder/v3-3.jpg>]
-<Bilder/v3-5.jpg, id=1365, 491.58656pt x 341.77687pt>
+<Bilder/v3-5.jpg, id=1361, 491.58656pt x 341.77687pt>
 File: Bilder/v3-5.jpg Graphic file (type jpg)
  <use Bilder/v3-5.jpg>
 Package pdftex.def Info: Bilder/v3-5.jpg used on input line 445.
@@ -1582,7 +1600,7 @@ Overfull \hbox (0.68512pt too wide) in paragraph at lines 439--445
  \T1/ppl/m/it/12 Tab-De-fi-ni-ti-on\T1/ppl/m/n/12 s. Die-
  []
 
-<Bilder/v3-6.jpg, id=1366, 489.32813pt x 330.48468pt>
+<Bilder/v3-6.jpg, id=1362, 489.32813pt x 330.48468pt>
 File: Bilder/v3-6.jpg Graphic file (type jpg)
  <use Bilder/v3-6.jpg>
 Package pdftex.def Info: Bilder/v3-6.jpg used on input line 446.
@@ -1610,7 +1628,7 @@ Overfull \hbox (19.75409pt too wide) in paragraph at lines 524--538
 
 ) [71] (C:\Users\ngundermann\git\BA\thesis\BA\EntwicklungGen.tex
 Kapitel 9.
-<Bilder/explorerbaum.jpg, id=1428, 459.21562pt x 202.50656pt>
+<Bilder/explorerbaum.jpg, id=1424, 459.21562pt x 202.50656pt>
 File: Bilder/explorerbaum.jpg Graphic file (type jpg)
 
 <use Bilder/explorerbaum.jpg>
@@ -1644,7 +1662,7 @@ Overfull \hbox (4.20226pt too wide) in paragraph at lines 120--136
 en-det wird,
  []
 
-[75] [76] <Bilder/Trees.jpg, id=1535, 356.0803pt x 261.97874pt>
+[75] [76] <Bilder/Trees.jpg, id=1531, 356.0803pt x 261.97874pt>
 File: Bilder/Trees.jpg Graphic file (type jpg)
 
 <use Bilder/Trees.jpg>
@@ -1667,7 +1685,7 @@ Overfull \hbox (6.65782pt too wide) in paragraph at lines 236--250
 LaTeX Warning: Reference `AppGeneriert' on page 79 undefined on input line 275.
 
 
-<Bilder/explorer.jpg, id=1578, 535.2497pt x 629.35126pt>
+<Bilder/explorer.jpg, id=1574, 535.2497pt x 629.35126pt>
 File: Bilder/explorer.jpg Graphic file (type jpg)
 
 <use Bilder/explorer.jpg>
@@ -1729,6 +1747,30 @@ less on input line 36.
 ] [11] [12] [13] [14] [15]) [16]
 (C:\Users\ngundermann\git\BA\thesis\BA\ba.gls
 
+Package glossaries Warning: Glossary entry `Compiler' has not been defined on i
+nput line 5.
+
+
+Package glossaries Warning: Glossary entry `Compiler' has not been defined on i
+nput line 5.
+
+
+Package glossaries Warning: Glossary entry `Compiler' has not been defined on i
+nput line 5.
+
+
+Package glossaries Warning: Glossary entry `EBNF' has not been defined on input
+ line 13.
+
+
+Package glossaries Warning: Glossary entry `EBNF' has not been defined on input
+ line 13.
+
+
+Package glossaries Warning: Glossary entry `EBNF' has not been defined on input
+ line 13.
+
+
 Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
 less on input line 33.
 
@@ -1738,6 +1780,15 @@ less on input line 33.
 
 
 ]
+
+LaTeX Warning: Reference `msk' on page xviii undefined on input line 37.
+
+
+Overfull \hbox (4.69583pt too wide) in paragraph at lines 37--37
+[][]\T1/ppl/m/n/12 Die Multiselection-Komponenten stellt in pro-
+ []
+
+
 Overfull \hbox (15.22015pt too wide) in paragraph at lines 49--51
 [][]\T1/ppl/m/n/12 Bei der tra-di-tio-nel-len GUI-Entwicklung wird
  []
@@ -2032,10 +2083,10 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 51.
  ) 
 Here is how much of TeX's memory you used:
- 14898 strings out of 493921
- 220704 string characters out of 3150471
- 431642 words of memory out of 3000000
- 16773 multiletter control sequences out of 15000+200000
+ 14779 strings out of 493921
+ 218487 string characters out of 3150471
+ 432051 words of memory out of 3000000
+ 16654 multiletter control sequences out of 15000+200000
  89609 words of font info for 82 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  50i,18n,51p,1707b,1986s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -2064,9 +2115,9 @@ gram Files/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><D:/Program Files/MiKTeX/font
 s/type1/urw/palatino/uplb8a.pfb><D:/Program Files/MiKTeX/fonts/type1/urw/palati
 no/uplr8a.pfb><D:/Program Files/MiKTeX/fonts/type1/urw/palatino/uplr8a.pfb><D:/
 Program Files/MiKTeX/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on ba.pdf (111 pages, 3198189 bytes).
+Output written on ba.pdf (111 pages, 3198081 bytes).
 PDF statistics:
- 2434 PDF objects out of 2487 (max. 8388607)
+ 2432 PDF objects out of 2487 (max. 8388607)
  980 named destinations out of 1000 (max. 500000)
  579 words of extra memory for PDF output out of 10000 (max. 10000000)
 
