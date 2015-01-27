@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.10.14)  27 JAN 2015 16:46
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.10.14)  27 JAN 2015 19:50
 entering extended mode
 **ba.tex
 (C:\Users\ngundermann\git\BA\thesis\BA\ba.tex
@@ -1541,27 +1541,27 @@ Overfull \hbox (1.06161pt too wide) in paragraph at lines 359--403
  die spe-zi-el-le Me-
  []
 
-[65] <Bilder/v3-1.jpg, id=1355, 565.36218pt x 572.1375pt>
+[65] <Bilder/v3-1.jpg, id=1356, 565.36218pt x 572.1375pt>
 File: Bilder/v3-1.jpg Graphic file (type jpg)
 
 <use Bilder/v3-1.jpg>
 Package pdftex.def Info: Bilder/v3-1.jpg used on input line 417.
 (pdftex.def)             Requested size: 398.3386pt x 403.12128pt.
  [66]
-<Bilder/v3-2.jpg, id=1362, 423.83344pt x 198.7425pt>
+<Bilder/v3-2.jpg, id=1363, 423.83344pt x 198.7425pt>
 File: Bilder/v3-2.jpg Graphic file (type jpg)
  <use Bilder/v3-2.jpg>
 Package pdftex.def Info: Bilder/v3-2.jpg used on input line 428.
 (pdftex.def)             Requested size: 398.3386pt x 186.7937pt.
 
 [67 <C:/Users/ngundermann/git/BA/thesis/BA/Bilder/v3-1.jpg>]
-<Bilder/v3-3.jpg, id=1368, 513.41812pt x 203.25937pt>
+<Bilder/v3-3.jpg, id=1369, 513.41812pt x 203.25937pt>
 File: Bilder/v3-3.jpg Graphic file (type jpg)
  <use Bilder/v3-3.jpg>
 Package pdftex.def Info: Bilder/v3-3.jpg used on input line 437.
 (pdftex.def)             Requested size: 398.3386pt x 157.70116pt.
 
-<Bilder/v3-4.jpg, id=1372, 649.67719pt x 318.43968pt>
+<Bilder/v3-4.jpg, id=1373, 649.67719pt x 318.43968pt>
 File: Bilder/v3-4.jpg Graphic file (type jpg)
  <use Bilder/v3-4.jpg>
 Package pdftex.def Info: Bilder/v3-4.jpg used on input line 444.
@@ -1569,7 +1569,7 @@ Package pdftex.def Info: Bilder/v3-4.jpg used on input line 444.
 
 [68 <C:/Users/ngundermann/git/BA/thesis/BA/Bilder/v3-2.jpg> <C:/Users/ngunderma
 nn/git/BA/thesis/BA/Bilder/v3-3.jpg>]
-<Bilder/v3-5.jpg, id=1380, 491.58656pt x 341.77687pt>
+<Bilder/v3-5.jpg, id=1381, 491.58656pt x 341.77687pt>
 File: Bilder/v3-5.jpg Graphic file (type jpg)
  <use Bilder/v3-5.jpg>
 Package pdftex.def Info: Bilder/v3-5.jpg used on input line 451.
@@ -1580,45 +1580,38 @@ Overfull \hbox (0.68512pt too wide) in paragraph at lines 445--451
  \T1/ppl/m/it/12 Tab-De-fi-ni-ti-on\T1/ppl/m/n/12 s. Die-
  []
 
-<Bilder/v3-6.jpg, id=1381, 489.32813pt x 330.48468pt>
+<Bilder/v3-6.jpg, id=1382, 489.32813pt x 330.48468pt>
 File: Bilder/v3-6.jpg Graphic file (type jpg)
  <use Bilder/v3-6.jpg>
 Package pdftex.def Info: Bilder/v3-6.jpg used on input line 452.
 (pdftex.def)             Requested size: 398.3386pt x 269.03755pt.
 
 [69 <C:/Users/ngundermann/git/BA/thesis/BA/Bilder/v3-4.jpg> <C:/Users/ngunderma
-nn/git/BA/thesis/BA/Bilder/v3-5.jpg>] [70 <C:/Users/ngundermann/git/BA/thesis/B
-A/Bilder/v3-6.jpg>]
+nn/git/BA/thesis/BA/Bilder/v3-5.jpg>]
+Overfull \hbox (13.02904pt too wide) in paragraph at lines 453--464
+\T1/ppl/m/n/12 Dasselbe Prin-zip wird bei der sich an-schlie-ÿen-den An-ga-be d
+er Layout-Dateien
+ []
+
+[70 <C:/Users/ngundermann/git/BA/thesis/BA/Bilder/v3-6.jpg>]
 
 LaTeX Warning: Hyper reference `AA5' on page 71 undefined on input line 478.
 
 
-Overfull \hbox (1.42499pt too wide) in paragraph at lines 477--483
+Overfull \hbox (1.42499pt too wide) in paragraph at lines 477--484
 []\T1/ppl/m/n/12 Die De-fi-ni-tio-nen der ein-zel-nen  Ba-sis-kom-po-nen-ten ha
 t sich syn-tak-tisch stark
  []
 
 
-Overfull \hbox (14.67325pt too wide) in paragraph at lines 517--528
+Overfull \hbox (14.67325pt too wide) in paragraph at lines 518--530
 []\T1/ppl/m/n/12 Die  Ba-sis-kom-po-nen-ten Tab-View wer-den die ver-wen-de-ten
   [][]GUI[]-Komponenten
  []
 
-[71]
-Overfull \hbox (9.27827pt too wide) in paragraph at lines 532--546
-\T1/ppl/m/n/12 chen Typs. Es muss le-dig-lich an-ge-gen-ben wer-den, wel-che  [
-][]GUI[]-Komponenten
- []
-
-
-Overfull \hbox (9.39699pt too wide) in paragraph at lines 532--546
-\T1/ppl/m/n/12 in wel-cher GUI-Beschreibung ver-än-dert wer-den soll. Fol-gen-d
-es Bei-spiel zeigt,
- []
-
-) [72] (C:\Users\ngundermann\git\BA\thesis\BA\EntwicklungGen.tex
+[71]) [72] (C:\Users\ngundermann\git\BA\thesis\BA\EntwicklungGen.tex
 Kapitel 9.
-<Bilder/explorerbaum.jpg, id=1445, 459.21562pt x 202.50656pt>
+<Bilder/explorerbaum.jpg, id=1447, 459.21562pt x 202.50656pt>
 File: Bilder/explorerbaum.jpg Graphic file (type jpg)
 
 <use Bilder/explorerbaum.jpg>
@@ -1652,7 +1645,7 @@ Overfull \hbox (4.20226pt too wide) in paragraph at lines 120--136
 en-det wird,
  []
 
-[76] [77] <Bilder/Trees.jpg, id=1552, 356.0803pt x 261.97874pt>
+[76] [77] <Bilder/Trees.jpg, id=1554, 356.0803pt x 261.97874pt>
 File: Bilder/Trees.jpg Graphic file (type jpg)
 
 <use Bilder/Trees.jpg>
@@ -1675,7 +1668,7 @@ Overfull \hbox (6.65782pt too wide) in paragraph at lines 236--250
 LaTeX Warning: Reference `AppGeneriert' on page 80 undefined on input line 275.
 
 
-<Bilder/explorer.jpg, id=1595, 535.2497pt x 629.35126pt>
+<Bilder/explorer.jpg, id=1597, 535.2497pt x 629.35126pt>
 File: Bilder/explorer.jpg Graphic file (type jpg)
 
 <use Bilder/explorer.jpg>
@@ -2075,7 +2068,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 54.
 Here is how much of TeX's memory you used:
  14787 strings out of 493921
  218505 string characters out of 3150471
- 432104 words of memory out of 3000000
+ 432105 words of memory out of 3000000
  16658 multiletter control sequences out of 15000+200000
  89609 words of font info for 82 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
@@ -2114,9 +2107,9 @@ gram Files/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><D:/Program Files/MiKTeX/font
 s/type1/urw/palatino/uplb8a.pfb><D:/Program Files/MiKTeX/fonts/type1/urw/palati
 no/uplr8a.pfb><D:/Program Files/MiKTeX/fonts/type1/urw/palatino/uplr8a.pfb><D:/
 Program Files/MiKTeX/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on ba.pdf (112 pages, 3202512 bytes).
+Output written on ba.pdf (112 pages, 3202803 bytes).
 PDF statistics:
- 2456 PDF objects out of 2487 (max. 8388607)
+ 2458 PDF objects out of 2487 (max. 8388607)
  984 named destinations out of 1000 (max. 500000)
  579 words of extra memory for PDF output out of 10000 (max. 10000000)
 

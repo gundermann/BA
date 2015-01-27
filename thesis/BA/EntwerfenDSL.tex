@@ -218,7 +218,7 @@ END DEF
 Aufgrund der Reduzierung der Menge der Metadaten für eine Interaktion stand die
 Frage offen, ob die Interaktionstypen einfach hintereinander mit Komma, oder untereinander mit dem
 entsprechenden Schlüsselwort aufgezählt werden sollen. Aufgrund der
-Anforderung \hyperref[AS4]{AS4}, wird die erste Variante becorzugt (siehe
+Anforderung \hyperref[AS4]{AS4}, wird die erste Variante bevorzugt (siehe
 Listing \ref{LST_Interaktion2}).
 \begin{lstlisting}[{caption=2.
 Iteration: Interaktion},{label=LST_Interaktion2}] DEF Button as
@@ -305,7 +305,7 @@ Area:1<-'Embedded'
 Sollten mehrere GUI-Skripte eingebunden sein, in denen
 Komponenten mit demselben Namen definiert sind, muss die Bezeichnung der eingebundenen Ressource
 zur eindeutigen Identifikation in der Referenz stehen (siehe Listing
-\ref{LST_Override2_2}) 
+\ref{LST_Override2_2}).
 \begin{lstlisting}[{caption=2. Iteration - Verändern von Komponenten
 eingebundener GUI-Beschreibungen mit
 Namensüberschneidung},{label=LST_Override2_2}] 
@@ -328,7 +328,7 @@ Layout-Datei zu ermöglichen, ist es wie bei den Properties-Dateien notwendig,
 die Layout-Datei innerhalb des GUI-Skripts anzugeben. Weiterhin wird in den
 einzelnen Komponentendefinitionen ein Schlüssel benötigt, über den die
 Komponente eindeutig referenziert werden kann. Dafür kann die Bezeichnung der
-UI-Komponete verwendet werden. Um in der Layout-Datei nicht alle einzelnen
+\gk verwendet werden. Um in der Layout-Datei nicht alle einzelnen
 \gks unterscheiden zu müssen, wird innerhalb der GUI-Beschreibung
 ein optionales Feld benötigt, mittels dessen unterschiedlichen \gks
 derselbe Layout-Schlüssel zugeordnet werden kann. \\
@@ -366,7 +366,7 @@ folgender Tabelle aufgelistet.
 \begin{tabular}[c]{|l|l|}
 			\hline
 			\hline
-				\textbf{\K} & \textbf{Spezielle Metadaten}\\
+				\textbf{\K} & \textbf{Spezifische Metadaten}\\
 				\hline\hline
 				Label & 
   		  				Aufschrift
@@ -393,16 +393,16 @@ folgender Tabelle aufgelistet.
   		  \\
 				\hline
 				TabPane &  
-  		  GUI-Beschreibungen für die einzelnen Tabs
+  		  GUI-Beschreibungen für die einzelnen Tabe
   		  \\
 				\hline
 				\hline
 			\end{tabular} 
- \caption{Basiskomponenten mit spzifischen Metadaten}
+ \caption{Basiskomponenten mit spezifischen Metadaten}
  \label{tab_comp}
 \end{table}
 \noindent
-Mit Außnahme der Metadaten des TabPanes sind alle Angaben zu anderen
+Mit Ausnahme der Metadaten des TabPanes sind alle Angaben zu anderen
 Basiskomponenten optional.
 
 \subsection*{Semantisches Modell} 
@@ -411,7 +411,7 @@ ebenso stark verändert. Bei der Betrachtung der \emph{UIDescription} (siehe
 Abbildung \ref{Abb_I3_1}) fällt auf, dass \emph{Area} und \emph{AreaCount} nicht mehr
 vorhanden sind. Hinzugekommen sind \emph{Structure} (worin die Anordnung der
 \gks (\emph{Element}) in einer Liste abgelegt wird) und Layout
-(worin die zu verwendenen Layout-Dateien in einer Liste abgelegt werden).
+(worin die zu verwendeten Layout-Dateien in einer Liste abgelegt werden).\\
 Eine weitere Änderungen ist bei \emph{Property} zu finden. Dort ist ebenfalls
 eine Liste vorhanden und kein allein stehender Wert.
 \myBigFigure{v3-1.jpg}{3. Iteration: UIDescription}{I3_1}
@@ -436,7 +436,7 @@ Artefakt implementiert sind. Abbildung \ref{Abb_I3_3} zeigt dies für einen
 Button auf.
 \myBigFigure{v3-3.jpg}{3. Iteration: Button}{I3_3}
 \noindent
-Eine direkte Aggergation der \emph{CommonProperties} findet bei den \Ks TabView,
+Eine direkte Aggregation der \emph{CommonProperties} findet bei den \Ks TabView,
 Table und Tree statt. Für die speziellen Properties dieser \Ks existieren keine
 einzelnen Klassen. Die folgenden Abbildungen (\ref{Abb_I3_4}, \ref{Abb_I3_5} und
 \ref{Abb_I3_6}) zeigen diese drei \Ks (\emph{Refinement} und \emph{Definition})
@@ -444,7 +444,7 @@ mit der Aggregation der \emph{CommonProperties}.
 \myBigFigure{v3-4.jpg}{3. Iteration: TabView}{I3_4}
 \noindent
 Die \K TabView benötigt eine Menge von \emph{TabDefinition}s. Diese Klasse
-bildet die Referenz zu den in die TabView einzubindenen \gks.
+bildet die Referenz zu den in die TabView einzubindenden \gks.
 Die \Ks Tree und Table benötigen lediglich eine Referenz auf den Input-Typen,
 den sie abbilden sollen, in Form einer Zeichenkette (siehe Abbildung
 \ref{Abb_I3_5} und \ref{Abb_I3_6}).
@@ -455,8 +455,8 @@ Konstrukte wurden in dieser Iteration stark vermehrt. Das liegt vor allem daran,
 grundsätzliche syntaktische Aufbau eines GUI-Skripts hat sich jedoch nicht
 verändert. Eingeleitet wird die Beschreibung weiterhin mit der Typ-Definition,
 gefolgt von der Angabe der Properties-Dateien. Sofern mehrere Properties-Dateien
-vorhanden sind, werden diese mit Komma getrennt voneinander aufgezählt. Dasselbe
-Prinzip wird bei der sich anschließenden Angabe der Layout-Dateien verwendet.
+vorhanden sind, werden diese mit Komma getrennt voneinander aufgezählt.\\
+Dasselbe Prinzip wird bei der sich anschließenden Angabe der Layout-Dateien verwendet.
 Das Semikolon gilt ab sofort als Trennzeichen für einen abgeschlossen
 definierten Komplex (siehe Listing \ref{LST_PropertiesLayout3}).
 \begin{lstlisting}[{caption = 3.
@@ -475,9 +475,10 @@ Eingebundene \gks},{label = LST_Use3}]
 use: Multiselection<Input> as: "multi";
 \end{lstlisting}
 Die Definitionen der einzelnen \Ks hat sich syntaktisch stark verändert. Grund
-dafür ist vor allem, dass die Anforderung \hyperref[AA5]{AA5} und
+dafür ist vor allem, dass die Anforderungen \hyperref[AA5]{AA5} und
 \hyperref[AS4]{AS4} mehr Beachtung
-finden soll. Somit werden die bekannten \Ks wie folgt definiert (siehe Listing \ref{LST_Bt+Lb3}).
+finden sollen. Somit werden die bekannten \Ks wie folgt definiert (siehe Listing
+\ref{LST_Bt+Lb3}).
 \begin{lstlisting}[{caption = 3.
 Iteration:
 Button und Label},{label = LST_Bt+Lb3}] 
@@ -487,7 +488,7 @@ interactiontype=IfViewImage text='buttontext';
 Label as: 'Label' -> propertyKey='labelproperty' layoutKey='labellayout'
 interactiontype=IfActivator text='labeltext';
 \end{lstlisting}
-Bei den Definitionen der anderen \Ks werden die allgemienen Properties wie im
+Bei den Definitionen der anderen \Ks werden die allgemeinen Properties wie im
 vorherigen Beispiel zugewiesen. In den Fällen der \Ks Textflied und Textarea
 werden die speziellen Properties nach demselben Prinzip definiert (siehe Listing
 \ref{LST_Tf+Ta3}).
@@ -504,7 +505,7 @@ text='textareatext' editable=TRUE;
 \end{lstlisting}
 Die Syntax für die Definition der \Ks Table und Tree sind ähnlich. Der
 benötigte Input-Typ wird nach dem Schlüsselwort angegeben, welches die
-UI-Komponente bestimmt (siehe Listing \ref{LST_T+T3}).
+\gk bestimmt (siehe Listing \ref{LST_T+T3}).
 \begin{lstlisting}[{caption = 3.
 Iteration:
 Table und Tree},{label = LST_T+T3}] 
@@ -518,7 +519,8 @@ Die \Ks TabView werden die verwendeten \gks der einzelnen Tabs
 ebenfalls nach dem Schlüsselwort angegeben, welches die \gk
 festlegt.
 Hierbei können anderes als bei den \Ks Table und Tree mehrere Angaben getätigt
-werden (siehe Listing \ref{LST_Tab3}). In den folgenden Beispielen wird davon
+werden (siehe Listing \ref{LST_Tab3}).\\
+In den folgenden Beispielen wird davon
 ausgegangen, dass die vorher genannten Beispiele für die \Ks Tree, Table und
 Textarea in demselben GUI-Skript definiert wurden. Durch das syntaktische
 Konstrukt in Listing \ref{LST_Tab3} wird eine Tab-Ansicht mit drei Taben beschrieben. Das
@@ -532,9 +534,9 @@ layoutKey='tabviewlayout' interactiontype=IfViewImage;
 Dabei ist zu erwähnen, dass die Angabe der Properties in den meisten
 Fällen optional ist. Lediglich die speziellen Properties der \Ks Table, Tree und
 TabView müssen zwingend angegeben werden.\\
-Die Syntax zur Veränderung einer \K einer eingebundenen GUI-Beschreibung ähnelt
-der Definition einer \K des gleichen Typs. Es muss lediglich angegenben werden,
-welche \gks in welcher GUI-Beschreibung verändert werden soll.
+Die Syntax zur Veränderung einer \K eines eingebundenen GUI-Skripts ähnelt
+der Definition einer \K des gleichen Typs. Es muss lediglich angegeben werden,
+welche \gks in welcher GUI-Beschreibung verändert werden soll.\\
 Folgendes Beispiel zeigt, wie die Aufschrift eines Buttons eines eingebundenen
 GUI-Skripts verändert wird (siehe Listing \ref{LST_Refine3}). Der Button
 trägt die Bezeichnung \emph{EmbeddedButton}. Das
