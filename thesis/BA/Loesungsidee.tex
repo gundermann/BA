@@ -1,36 +1,41 @@
 \chapter{Entwicklung einer Lösungsidee}\label{Entwicklung einer Lösungsidee}
 \section{Allgemeine Beschreibung der Lösungsidee}\label{AllgBeschreibLösung}
-Eine Lösungsidee für die in Kapitel \ref{Probleme} beschriebenen Probleme wurde
-im Kapitel \ref{Ziel} bereits angedeutet. Kern dieser Idee ist, eine
-DSL zur Beschreibung von \glspl{GUI} zu nutzen. Diese \glspl{GUI} sollen so
-beschrieben werden, dass sie in der Domäne von profil c/s für unterschiedliche
+Eine Lösungsidee für die in Kapitel \ref{Probleme}
+beschriebenen Probleme wurde im Kapitel \ref{Ziel} bereits angedeutet. Kern dieser Idee
+ist, die im vorherigen Kapitel angesprochene GUI-DSL zur Beschreibung von
+\glspl{GUI} zu nutzen.
+Diese \glspl{GUI} sollen so beschrieben werden, dass sie in der Domäne von profil c/s für unterschiedliche
 \acrshort{GUI}-Frameworks genutzt werden können. Diese Beschreibung soll weiterhin nur
-einmal stattfinden. Der Quell-Code, welcher die \acrshort{GUI} im entsprechenden
+einmal stattfinden. Der Quellcode, welcher die \acrshort{GUI} im entsprechenden
 Framework darstellt, wird frameworkspezifisch aus der \acrshort{GUI}-Beschreibung generiert.
 Langfristig betrachtet könnte das MCF damit abgelöst werden.\\
-Der Prototyp, welcher in dieser Arbeit entwickelt wird, soll Quell-Code
-erzeugen, der eine GUI mit den syntaktischen Strukturen des MCF beschreibt.
-Somit kann geprüft werden, ob sich der generierte Quell-Code in die
-Architektur der deg einbinden lässt. 
-\section{Architektur}
-Die \g wird für die abstrakte
+Die Anforderungen für die GUI-DSL wurden bereits beschrieben. Diese sollen so
+weit wie möglich im Prototypen, welcher im Zuge dieser Arbeit entwickelt wird,
+umgesetzt werden. Der Prototyp soll
+Quellcode erzeugen, der eine GUI mit den syntaktischen Strukturen des MCF
+beschreibt. Somit kann geprüft werden, ob sich der generierte Quellcode in
+profil c/s einbinden lässt.
+\section{Konzept}
+Die \g  wird für die abstrakte
 Beschreibung der \acrshort{GUI} verwendet. Somit ist gewährleistet, dass die \acrshort{GUI} weiterhin
 nur einmal beschrieben werden muss. 
-Wie in Abschnitt \ref{AllgBeschreibLösung} beschrieben, wird der Quell-Code der \acrshort{GUI}
-frameworkspezifisch, mit Hilfe eines speziellen Generators, erzeugt. Dadruch
-ist die Integration neuer Frameworks an die Implementierung eines spezifischen
-Generators gekoppelt. Abbildung \ref{Abb_neuerAnsatz} zeigt das grundlegende
-Konzept für diesen Ansatz auf. Dabei wurden exemplarisch drei
-unterschiedliche Generatoren für unterschiedliche Frameworks mit aufgenommen.
-\myBigFigure{neuerAnsatz.png}{Grundlegendes Konzept}{neuerAnsatz}\noindent
-Der Prototyp wird dabei aus einem \g-Skript Quell-Code erzeugen, welcher in das
+Wie in Abschnitt \ref{AllgBeschreibLösung} beschrieben, wird der Quellcode zur
+Darstellung der \acrshort{GUI} frameworkspezifisch, mit Hilfe eines speziellen
+Generators, erzeugt. Daraus folgt, dass die Integration neuer Frameworks (siehe
+Anforderung \hyperref[AA2]{AA2}) an die Implementierung eines spezifischen
+Generators gekoppelt ist.
+Abbildung \ref{Abb_neuerAnsatz} zeigt das grundlegende Konzept für diesen Ansatz auf. Dabei wurden exemplarisch drei
+unterschiedliche Generatoren für bestimmte Frameworks verwendet.
+\myBigFigure{neuerAnsatz.png}{Grundlegendes Konzept}{neuerAnsatz}
+\noindent
+Der Prototyp wird aus einem GUI-Skript Quellcode erzeugen, welcher in das
 MCF eingebunden werden kann. Somit lässt sich prüfen, ob die GUI-DSL für
 existierende \glspl{GUI} von profil c/s genügt. In Anlehnung an Abbildung
 \ref{Abb_mdsd} in Kapitel \ref{mdsd} wird eine \acrshort{GUI} mit sinnvollen
-Interaktionen nicht allein über die \g nicht umsetzbar sein, da entsprechende
-Modelle, über die Informationen durch die \acrshort{GUI} dem Nutzer kommuniziert
-werden sollen, nicht in der \g beschrieben werden. Daher ist zumindest zur
-Erzeugung diesre Informationesquellen individueller Quell-Code von Nöten.
+Interaktionen nicht allein über die \g nicht umsetzbar sein, da
+die dafür notwendigen Informationen nicht in der \g beschrieben werden. Folglich
+ist zumindest zur Erzeugung dieser Informationsquellen individueller Quellcode
+von Nöten.
 Abbildung \ref{Abb_genMCFCode} zeigt diese grundlegende Idee schematisch auf.
 \myBigFigure{genMCFCode.jpg}{Grundlegende Idee für den Prototypen}{genMCFCode}
 

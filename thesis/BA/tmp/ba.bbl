@@ -24,11 +24,6 @@
 \newblock \Btxinlong{}\ {\em OASIcs-OpenAccess Series in Informatics},
   \btxvolumelong{}~29. Schloss Dagstuhl-Leibniz-Zentrum fuer Informatik, 2013.
 
-\bibitem[Bra03]{brauer2003grundkurs}
-{\sc Brauer, Johannes}: {\em Grundkurs Smalltalk-Objektorientierung von Anfang
-  an}.
-\newblock Vieweg+ Teubner Verlag, 3, 2003.
-
 \bibitem[bra10]{brauer2010dsl}
 {\em Eine DSL f{\"u}r Harel-Statecharts mit PetitParser}.
 \newblock Arbeitspapiere der Nordakademie. Nordakad., 2010.

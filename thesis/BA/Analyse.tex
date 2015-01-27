@@ -3,11 +3,17 @@
 
 \section{Allgemeine Anforderungen an Benutzeroberflächen von profil
 c/s}\label{AllgAnforderungen} Die erste Anforderung bezieht sich auf die
-\acrshort{GUI} des Clients von profil c/s. Dieser soll sowohl in Web-Browsern
-(Web-Client) als auch standalone auf einem PC (Standalone-Client) ausgeführt werden können.\\
-Da die Nutzer an einen bestimmten Aufbau der \glspl{GUI}
-gewöhnt sind, ist es von Vorteil, wenn beide Clients eine ähnliche
-\acrshort{GUI} bieten.
+Plattform, auf die der Clients von profil c/s dargestellt werden muss. Dieser
+soll sowohl in Web-Browsern (Web-Client) als auch standalone auf einem PC (Standalone-Client) ausgeführt
+werden können.\\
+Um die Darstellung auf unterschiedlichen Plattformen umzusetzen werden
+unterschiedliche Frameworks zur Darstellung der \acrshort{GUI} verwendet. Dabei
+besteht die Möglichkeit, dass verwendete Frameworks veralten, woraus sich der
+Bedarf an einer Überführungsmöglichkeit der \glspl{GUI}, die mit älteren
+Frameworks dargestellt werden, in \glspl{GUI}, die mit aktuellen Frameworks
+dargestellt werden, ergibt.\\
+Da die Nutzer an einen bestimmten Aufbau der \glspl{GUI} gewöhnt
+sind, ist es von Vorteil, wenn beide Clients eine ähnliche \acrshort{GUI} bieten.
 Von daher ist die Ähnlichkeit der \glspl{GUI} auf
 unterschiedlichen Plattformen eine weitere Anforderung.\\
 Um eine effiziente
@@ -16,10 +22,6 @@ verwendeten Frameworks um wiederverwendbare Komponenten
 erweitert werden können. So ist es möglich redundante
 Implementierungen zu verallgemeinern und letztendlich zu
 reduzieren.\\
-Darauf aufbauend sind weiterhin die Abstraktionsmöglichkeitenvon den verwendeten
-Frameworks von großer Bedeutung, da durch einen hohen Abstraktionsgrad ein hoher
-Komplexitätsgrad beherrscht werden kann.
-\simplevcite{brauer2003grundkurs}\\
 Abschließend ist die Ausdruckskraft der Syntax, in der die \glspl{GUI}
 entwickelt werden, als Kriterium zu nennen. Dies fördert die Lesbarkeit des Quell-Codes und
 damit letztendlich das Verständnis dessen, sowie die
@@ -37,11 +39,11 @@ werden.
 				\hline\hline
 				AA1 & Bereitstellung für den Standalone- und Web-Bereich & 1\\
 				\hline
-				AA2 & Ähnlicher Aufbau auf unterschiedlichen Plattformen & 2 \\
+				AA2 & Überführungsmöglichkeit in andere Frameworks & 1\\
 				\hline
-				AA3 & Erweiterbarkeit der verwendeten Frameworks & 1\\
+				AA3 & Ähnlicher Aufbau auf unterschiedlichen Plattformen & 2 \\
 				\hline
-				AA4  & Verwendung abstrahierbarer Frameworks & 2\\
+				AA4 & Erweiterbarkeit der verwendeten Frameworks & 1\\
 				\hline
 				AA5 & Ausdrucksstarke Syntax & 3\\
 				\hline
@@ -85,7 +87,7 @@ eine Lösung erarbeitet mit der es möglich ist, eine einmal beschriebene
 \acrshort{GUI} auf mehrere Plattformen zu portieren. Durch diese Abstraktion
 wird der Aufwand der Entwicklung neuer \glspl{GUI} stark reduziert. 
 Zugleich fördert die einmalige Beschreibung auch einen ähnlichen Aufbau der
-\glspl{GUI} im Web- und Standalone-Client, was der Anforderung AA2 nachkommt.
+\glspl{GUI} im Web- und Standalone-Client, was der Anforderung AA3 nachkommt.
 Die Lösung der deg ist das \emph{Multichannel-Framework} (MCF).\\
 Die Architektur des
 Multichannel-Frameworks ist Abbildung \ref{Abb_MC-Framework} zu entnehmen.
@@ -102,8 +104,11 @@ ULC bei der deg nicht mehr im Einsatz ist.) Das \emph{Component-Interface} wird 
 Komponenten der unterschiedlichen Frameworks benötigt. Mit dem MCF ist die deg
 in der Lage ihre \glspl{GUI} für das \emph{\gloss{Swing}}-Framework und für das
 \emph{\gloss{wingS}}-Framework mit nur einer \acrshort{GUI}-Beschreibung zu erzeugen.\\
-Wie bereits erwähnt werden die Clients mit Java entwickelt. Für die Architektur
-der Clients wird der WAM-Ansatz verwendet, welcher im folgenden Kapitel kurz
+Die Anbindung anderer Frameworks ist bei Betrachtung der Architeltur des MCF
+unproblematisch. Dadruch scheint die deg mit diesem Ansatz auch auf den
+Einsatz neuer Frameworks (siehe Anforderung AA2) vorbereitet zu sein.\\
+Wie bereits erwähnt werden die Clients mit Java entwickelt.
+Für die Architektur der Clients wird der WAM-Ansatz verwendet, welcher im folgenden Kapitel kurz
 erläutert wird.
 \subsection{JWAM}
 \dcite{JWAM ist eine Realisierung des WAM-Ansatzes in der Programmiersprache

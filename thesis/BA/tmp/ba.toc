@@ -27,7 +27,7 @@
 \contentsline {section}{\numberline {4.2}Anforderungen an die GUI-DSL}{33}{section.4.2}
 \contentsline {chapter}{\numberline {5}Entwicklung einer L\"osungsidee}{35}{chapter.5}
 \contentsline {section}{\numberline {5.1}Allgemeine Beschreibung der L\"osungsidee}{35}{section.5.1}
-\contentsline {section}{\numberline {5.2}Architektur}{35}{section.5.2}
+\contentsline {section}{\numberline {5.2}Konzept}{35}{section.5.2}
 \contentsline {chapter}{\numberline {6}Evaluation des Frameworks zur Entwicklung der DSL}{37}{chapter.6}
 \contentsline {section}{\numberline {6.1}Vorstellung ausgew\"ahlter Frameworks}{37}{section.6.1}
 \contentsline {subsection}{\numberline {6.1.1}PetitParser}{37}{subsection.6.1.1}
@@ -39,15 +39,15 @@
 \contentsline {section}{\numberline {7.2}Grobkonzept der DSL-Umgebung (Vision)}{44}{section.7.2}
 \contentsline {subsection}{\numberline {7.2.1}1. Iteration}{44}{subsection.7.2.1}
 \contentsline {subsection}{\numberline {7.2.2}2. Iteration}{48}{subsection.7.2.2}
-\contentsline {subsection}{\numberline {7.2.3}3. Iteration}{49}{subsection.7.2.3}
-\contentsline {chapter}{\numberline {8}Entwicklung einer DSL zur Beschreibung der GUI in profil c/s}{51}{chapter.8}
-\contentsline {section}{\numberline {8.1}1. Iteration}{51}{section.8.1}
-\contentsline {section}{\numberline {8.2}2. Iteration}{57}{section.8.2}
-\contentsline {section}{\numberline {8.3}3. Iteration}{63}{section.8.3}
-\contentsline {chapter}{\numberline {9}Entwicklung des Generators zur Generierung von Klassen f\"ur das Multichannel-Framework}{72}{chapter.9}
-\contentsline {section}{\numberline {9.1}Beschreibung der GUI-, FP- und IP-Klassen}{73}{section.9.1}
-\contentsline {section}{\numberline {9.2}Umsetzung des frameworkspezifischen Generators}{74}{section.9.2}
-\contentsline {chapter}{\numberline {10}Zusammenfassung und Ausblick}{85}{chapter.10}
+\contentsline {subsection}{\numberline {7.2.3}3. Iteration}{50}{subsection.7.2.3}
+\contentsline {chapter}{\numberline {8}Entwicklung einer DSL zur Beschreibung der GUI in profil c/s}{52}{chapter.8}
+\contentsline {section}{\numberline {8.1}1. Iteration}{52}{section.8.1}
+\contentsline {section}{\numberline {8.2}2. Iteration}{58}{section.8.2}
+\contentsline {section}{\numberline {8.3}3. Iteration}{64}{section.8.3}
+\contentsline {chapter}{\numberline {9}Entwicklung des Generators zur Generierung von Klassen f\"ur das Multichannel-Framework}{73}{chapter.9}
+\contentsline {section}{\numberline {9.1}Beschreibung der GUI-, FP- und IP-Klassen}{74}{section.9.1}
+\contentsline {section}{\numberline {9.2}Umsetzung des frameworkspezifischen Generators}{75}{section.9.2}
+\contentsline {chapter}{\numberline {10}Zusammenfassung und Ausblick}{86}{chapter.10}
 \contentsline {chapter}{Anhang}{X}{appendix*.25}
 \contentsline {chapter}{Glossar}{XVII}{lstnumber.1.166}
 \contentsline {chapter}{Literaturverzeichnis}{XIX}{appendix*.31}
