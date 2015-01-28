@@ -6,10 +6,9 @@
 
 \include{titlepage}
 \pagenumbering{Roman}
-\include{declarationofownwork}
+
 
 \tableofcontents
-
 
 \addcontentsline{toc}{chapter}{\listfigurename}
 \listoffigures
@@ -17,9 +16,9 @@
 \addcontentsline{toc}{chapter}{\listtablename}
 \listoftables
 
-
-\lstlistoflistings
 \addcontentsline{toc}{chapter}{Listings}
+\lstlistoflistings
+
 
 \mainmatter
 \include{Einleitung}
@@ -33,14 +32,15 @@
 \include{EntwicklungGen}
 \include{Fazit}
 
-
 \backmatter
 \pagenumbering{Roman}
-\setcounter{page}{10}
+%\setcounter{page}{11}
 
 
 \begin{appendix}
-\include{Anhang}
+\include{AnhangA}
+\include{AnhangB}
+\include{cd}
 \end{appendix}
 
 \clearpage
@@ -50,5 +50,5 @@
 
 \addcontentsline{toc}{chapter}{Literaturverzeichnis}
 \bibliography{thesis}{}
-
+\include{declarationofownwork}
 \end{document}
