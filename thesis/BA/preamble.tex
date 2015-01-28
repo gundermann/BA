@@ -168,8 +168,7 @@
 %Direktes Zitat
 \newcommand{\simplevcite}[1]
 {
-(vgl. \cite{#1})
-}
+(vgl. \cite{#1})}
 
 %----------------------------------------------------------------------------------
 % \myHUGEFigure	[ LABEL_PREFIX (optional) ]
@@ -213,13 +212,13 @@
 
 \newcommand{\gloss}[1]{
 %#1\footnote{Siehe Glossar: 
-\gls{#1}
+\emph{\gls{#1}}
 %}
 }
 
 \newcommand{\glossLink}[2]{
 %#1\footnote{Siehe Glossar: 
-\glslink{#1}{#2}
+\emph{\glslink{#1}{#2}}
 %}
 }
 
