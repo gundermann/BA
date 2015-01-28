@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.10.14)  28 JAN 2015 14:38
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.10.14)  28 JAN 2015 15:02
 entering extended mode
 **ba.tex
 (C:\Users\ngundermann\git\BA\thesis\BA\ba.tex
@@ -971,7 +971,7 @@ Overfull \hbox (11.6785pt too wide) in paragraph at lines 58--58
 []\T1/ppl/b/n/17.28 Umsetzung der Be-nut-zer-schnitt-stel-len für meh-
  []
 
-<Bilder/mcgrob.png, id=557, 452.4403pt x 231.11343pt>
+<Bilder/mcgrob.png, id=558, 452.4403pt x 231.11343pt>
 File: Bilder/mcgrob.png Graphic file (type png)
  <use Bilder/mcgrob.png>
 Package pdftex.def Info: Bilder/mcgrob.png used on input line 95.
@@ -995,7 +995,7 @@ Overfull \hbox (34.5218pt too wide) in paragraph at lines 96--113
  []
 
 [5 <C:/Users/ngundermann/git/BA/thesis/BA/Bilder/mcgrob.png>]
-<Bilder/wamgui.jpg, id=592, 343.2825pt x 74.52844pt>
+<Bilder/wamgui.jpg, id=593, 343.2825pt x 74.52844pt>
 File: Bilder/wamgui.jpg Graphic file (type jpg)
  <use Bilder/wamgui.jpg>
 Package pdftex.def Info: Bilder/wamgui.jpg used on input line 145.
@@ -1075,7 +1075,7 @@ File: omsppl.fd
 LaTeX Font Info:    Font shape `OMS/ppl/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 156.
  [14]
-<Bilder/mdsd.jpg, id=737, 663.22781pt x 380.92313pt>
+<Bilder/mdsd.jpg, id=738, 663.22781pt x 380.92313pt>
 File: Bilder/mdsd.jpg Graphic file (type jpg)
  <use Bilder/mdsd.jpg>
 Package pdftex.def Info: Bilder/mdsd.jpg used on input line 172.
@@ -1132,7 +1132,7 @@ Overfull \hbox (0.94485pt too wide) in paragraph at lines 441--459
 eit über den Parse-
  []
 
-[23] [24] <Bilder/parsing.jpg, id=881, 576.65437pt x 209.28188pt>
+[23] [24] <Bilder/parsing.jpg, id=882, 576.65437pt x 209.28188pt>
 File: Bilder/parsing.jpg Graphic file (type jpg)
 
 <use Bilder/parsing.jpg>
@@ -1145,7 +1145,7 @@ Overfull \hbox (10.23274pt too wide) in paragraph at lines 526--538
  []
 
 [26 <C:/Users/ngundermann/git/BA/thesis/BA/Bilder/parsing.jpg>]
-<Bilder/parsercombinator.jpg, id=911, 456.95718pt x 276.28218pt>
+<Bilder/parsercombinator.jpg, id=912, 456.95718pt x 276.28218pt>
 File: Bilder/parsercombinator.jpg Graphic file (type jpg)
 
 <use Bilder/parsercombinator.jpg>
@@ -1203,7 +1203,7 @@ Kapitel 5.
 
 LaTeX Warning: Hyper reference `AA2' on page 33 undefined on input line 25.
 
-<Bilder/neuerAnsatz.png, id=1027, 681.29532pt x 295.1025pt>
+<Bilder/neuerAnsatz.png, id=1028, 681.29532pt x 295.1025pt>
 File: Bilder/neuerAnsatz.png Graphic file (type png)
 
 <use Bilder/neuerAnsatz.png>
@@ -1218,7 +1218,7 @@ less on input line 29.
 
 
 
-] <Bilder/genMCFCode.jpg, id=1038, 701.62125pt x 240.9pt>
+] <Bilder/genMCFCode.jpg, id=1039, 701.62125pt x 240.9pt>
 File: Bilder/genMCFCode.jpg Graphic file (type jpg)
 
 <use Bilder/genMCFCode.jpg>
@@ -1275,7 +1275,7 @@ ass neue Kom-
 
 [37]) [38] [39] (C:\Users\ngundermann\git\BA\thesis\BA\Grobkonzept.tex
 Kapitel 7.
-<Bilder/inkrement.jpg, id=1095, 526.96875pt x 418.56375pt>
+<Bilder/inkrement.jpg, id=1096, 526.96875pt x 418.56375pt>
 File: Bilder/inkrement.jpg Graphic file (type jpg)
 
 <use Bilder/inkrement.jpg>
@@ -1297,7 +1297,7 @@ t und Missver-ständ-
  []
 
 [41 <C:/Users/ngundermann/git/BA/thesis/BA/Bilder/inkrement.jpg>]
-<Bilder/konzept_1.jpg, id=1116, 438.13687pt x 298.86656pt>
+<Bilder/konzept_1.jpg, id=1117, 438.13687pt x 298.86656pt>
 File: Bilder/konzept_1.jpg Graphic file (type jpg)
 
 <use Bilder/konzept_1.jpg>
@@ -1310,7 +1310,7 @@ Overfull \hbox (5.38742pt too wide) in paragraph at lines 76--82
  []
 
 [43 <C:/Users/ngundermann/git/BA/thesis/BA/Bilder/konzept_1.jpg>]
-<Bilder/suchfeld.jpg, id=1144, 583.42969pt x 56.46094pt>
+<Bilder/suchfeld.jpg, id=1145, 583.42969pt x 56.46094pt>
 File: Bilder/suchfeld.jpg Graphic file (type jpg)
 
 <use Bilder/suchfeld.jpg>
@@ -1327,7 +1327,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 89--131
 
  []
 
-[44] <Bilder/suchmaske.jpg, id=1150, 584.93532pt x 176.15813pt>
+[44] <Bilder/suchmaske.jpg, id=1151, 584.93532pt x 176.15813pt>
 File: Bilder/suchmaske.jpg Graphic file (type jpg)
 
 <use Bilder/suchmaske.jpg>
@@ -1364,14 +1364,14 @@ Overfull \hbox (3.39302pt too wide) in paragraph at lines 136--159
 
 [45 <C:/Users/ngundermann/git/BA/thesis/BA/Bilder/suchfeld.jpg> <C:/Users/ngund
 ermann/git/BA/thesis/BA/Bilder/suchmaske.jpg>]
-<Bilder/konzept_2.jpg, id=1163, 612.78937pt x 385.44pt>
+<Bilder/konzept_2.jpg, id=1164, 612.78937pt x 385.44pt>
 File: Bilder/konzept_2.jpg Graphic file (type jpg)
 
 <use Bilder/konzept_2.jpg>
 Package pdftex.def Info: Bilder/konzept_2.jpg used on input line 165.
 (pdftex.def)             Requested size: 398.3386pt x 250.55067pt.
  [46] [47 <C:/Users/ngundermann/git/BA/thesis/BA/Bilder/konzept_2.jpg>] <Bilder
-/konzept_3.jpg, id=1174, 723.45282pt x 386.19281pt>
+/konzept_3.jpg, id=1175, 723.45282pt x 386.19281pt>
 File: Bilder/konzept_3.jpg Graphic file (type jpg)
 
 <use Bilder/konzept_3.jpg>
@@ -1411,20 +1411,20 @@ Overfull \hbox (28.61562pt too wide) in paragraph at lines 56--59
  \T1/ppl/m/it/12 GUI-Komponenten
  []
 
-[52] <Bilder/v1-1.jpg, id=1204, 583.42969pt x 478.03593pt>
+[52] <Bilder/v1-1.jpg, id=1205, 583.42969pt x 478.03593pt>
 File: Bilder/v1-1.jpg Graphic file (type jpg)
 
 <use Bilder/v1-1.jpg>
 Package pdftex.def Info: Bilder/v1-1.jpg used on input line 85.
 (pdftex.def)             Requested size: 398.3386pt x 326.38768pt.
- <Bilder/v1-1-1.jpg, id=1205, 490.83376pt x 243.15843pt>
+ <Bilder/v1-1-1.jpg, id=1206, 490.83376pt x 243.15843pt>
 File: Bilder/v1-1-1.jpg Graphic file (type jpg)
 
 <use Bilder/v1-1-1.jpg>
 Package pdftex.def Info: Bilder/v1-1-1.jpg used on input line 86.
 (pdftex.def)             Requested size: 398.3386pt x 197.34312pt.
  [53]
-<Bilder/v1-2.jpg, id=1212, 600.74437pt x 411.78844pt>
+<Bilder/v1-2.jpg, id=1213, 600.74437pt x 411.78844pt>
 File: Bilder/v1-2.jpg Graphic file (type jpg)
  <use Bilder/v1-2.jpg>
 Package pdftex.def Info: Bilder/v1-2.jpg used on input line 91.
@@ -1434,7 +1434,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 87--91
 
  []
 
-<Bilder/v1-2-1.jpg, id=1213, 649.67719pt x 373.395pt>
+<Bilder/v1-2-1.jpg, id=1214, 649.67719pt x 373.395pt>
 File: Bilder/v1-2-1.jpg Graphic file (type jpg)
  <use Bilder/v1-2-1.jpg>
 Package pdftex.def Info: Bilder/v1-2-1.jpg used on input line 93.
@@ -1463,7 +1463,7 @@ Overfull \hbox (4.74878pt too wide) in paragraph at lines 148--169
 ppl/m/n/12 ist es le-dig-lich not-wen-dig den Input-
  []
 
-[56] <Bilder/v2-1.jpg, id=1246, 599.23875pt x 548.0475pt>
+[56] <Bilder/v2-1.jpg, id=1247, 599.23875pt x 548.0475pt>
 File: Bilder/v2-1.jpg Graphic file (type jpg)
 
 <use Bilder/v2-1.jpg>
@@ -1474,13 +1474,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 172--177
 
  []
 
-[57] <Bilder/v2-2.jpg, id=1255, 411.78844pt x 194.22563pt>
+[57] <Bilder/v2-2.jpg, id=1256, 411.78844pt x 194.22563pt>
 File: Bilder/v2-2.jpg Graphic file (type jpg)
 
 <use Bilder/v2-2.jpg>
 Package pdftex.def Info: Bilder/v2-2.jpg used on input line 182.
 (pdftex.def)             Requested size: 398.3386pt x 187.88295pt.
- <Bilder/v2-3.jpg, id=1256, 490.83376pt x 438.8897pt>
+ <Bilder/v2-3.jpg, id=1257, 490.83376pt x 438.8897pt>
 File: Bilder/v2-3.jpg Graphic file (type jpg)
 
 <use Bilder/v2-3.jpg>
@@ -1488,7 +1488,7 @@ Package pdftex.def Info: Bilder/v2-3.jpg used on input line 189.
 (pdftex.def)             Requested size: 398.3386pt x 356.19519pt.
  [58 <C:/Users/ngundermann/git/BA/thesis/BA/Bilder/v2-1.jpg> <C:/Users/ngunderm
 ann/git/BA/thesis/BA/Bilder/v2-2.jpg>]
-<Bilder/v2-4.jpg, id=1263, 514.92375pt x 302.63063pt>
+<Bilder/v2-4.jpg, id=1264, 514.92375pt x 302.63063pt>
 File: Bilder/v2-4.jpg Graphic file (type jpg)
  <use Bilder/v2-4.jpg>
 Package pdftex.def Info: Bilder/v2-4.jpg used on input line 197.
@@ -1500,7 +1500,7 @@ Overfull \hbox (2.32463pt too wide) in paragraph at lines 190--197
 12 vor-
  []
 
-<Bilder/v2-5.jpg, id=1264, 537.50812pt x 307.1475pt>
+<Bilder/v2-5.jpg, id=1265, 537.50812pt x 307.1475pt>
 File: Bilder/v2-5.jpg Graphic file (type jpg)
  <use Bilder/v2-5.jpg>
 Package pdftex.def Info: Bilder/v2-5.jpg used on input line 198.
@@ -1518,65 +1518,65 @@ Package Listings Warning: Text dropped after begin of listing on input line 225
 LaTeX Warning: Reference `AppGrammatiken' on page 63 undefined on input line 32
 1.
 
-[63] [64] <Bilder/v3-1.jpg, id=1354, 565.36218pt x 572.1375pt>
+[63] [64] <Bilder/v3-1.jpg, id=1355, 565.36218pt x 572.1375pt>
 File: Bilder/v3-1.jpg Graphic file (type jpg)
 
 <use Bilder/v3-1.jpg>
-Package pdftex.def Info: Bilder/v3-1.jpg used on input line 418.
+Package pdftex.def Info: Bilder/v3-1.jpg used on input line 419.
 (pdftex.def)             Requested size: 398.3386pt x 403.12128pt.
  [65]
-<Bilder/v3-2.jpg, id=1361, 423.83344pt x 198.7425pt>
+<Bilder/v3-2.jpg, id=1362, 423.83344pt x 198.7425pt>
 File: Bilder/v3-2.jpg Graphic file (type jpg)
  <use Bilder/v3-2.jpg>
-Package pdftex.def Info: Bilder/v3-2.jpg used on input line 429.
+Package pdftex.def Info: Bilder/v3-2.jpg used on input line 430.
 (pdftex.def)             Requested size: 398.3386pt x 186.7937pt.
 
 [66 <C:/Users/ngundermann/git/BA/thesis/BA/Bilder/v3-1.jpg>]
-<Bilder/v3-3.jpg, id=1367, 513.41812pt x 203.25937pt>
+<Bilder/v3-3.jpg, id=1368, 513.41812pt x 203.25937pt>
 File: Bilder/v3-3.jpg Graphic file (type jpg)
  <use Bilder/v3-3.jpg>
-Package pdftex.def Info: Bilder/v3-3.jpg used on input line 438.
+Package pdftex.def Info: Bilder/v3-3.jpg used on input line 439.
 (pdftex.def)             Requested size: 398.3386pt x 157.70116pt.
 
-<Bilder/v3-4.jpg, id=1371, 649.67719pt x 318.43968pt>
+<Bilder/v3-4.jpg, id=1372, 649.67719pt x 318.43968pt>
 File: Bilder/v3-4.jpg Graphic file (type jpg)
  <use Bilder/v3-4.jpg>
-Package pdftex.def Info: Bilder/v3-4.jpg used on input line 445.
+Package pdftex.def Info: Bilder/v3-4.jpg used on input line 446.
 (pdftex.def)             Requested size: 398.3386pt x 195.24887pt.
 
 [67 <C:/Users/ngundermann/git/BA/thesis/BA/Bilder/v3-2.jpg> <C:/Users/ngunderma
 nn/git/BA/thesis/BA/Bilder/v3-3.jpg>]
-<Bilder/v3-5.jpg, id=1378, 491.58656pt x 341.77687pt>
+<Bilder/v3-5.jpg, id=1379, 491.58656pt x 341.77687pt>
 File: Bilder/v3-5.jpg Graphic file (type jpg)
  <use Bilder/v3-5.jpg>
-Package pdftex.def Info: Bilder/v3-5.jpg used on input line 452.
+Package pdftex.def Info: Bilder/v3-5.jpg used on input line 453.
 (pdftex.def)             Requested size: 398.3386pt x 276.95769pt.
 
-<Bilder/v3-6.jpg, id=1379, 489.32813pt x 330.48468pt>
+<Bilder/v3-6.jpg, id=1380, 489.32813pt x 330.48468pt>
 File: Bilder/v3-6.jpg Graphic file (type jpg)
  <use Bilder/v3-6.jpg>
-Package pdftex.def Info: Bilder/v3-6.jpg used on input line 453.
+Package pdftex.def Info: Bilder/v3-6.jpg used on input line 454.
 (pdftex.def)             Requested size: 398.3386pt x 269.03755pt.
 
 [68 <C:/Users/ngundermann/git/BA/thesis/BA/Bilder/v3-4.jpg> <C:/Users/ngunderma
 nn/git/BA/thesis/BA/Bilder/v3-5.jpg>]
-Overfull \hbox (4.29315pt too wide) in paragraph at lines 454--466
+Overfull \hbox (4.29315pt too wide) in paragraph at lines 455--467
 \T1/ppl/m/n/12 Dasselbe Prin-zip wird bei der sich an-schlie-ÿen-den An-ga-be d
 er Layout-Datei-
  []
 
 [69 <C:/Users/ngundermann/git/BA/thesis/BA/Bilder/v3-6.jpg>]
 
-LaTeX Warning: Hyper reference `AA5' on page 70 undefined on input line 480.
+LaTeX Warning: Hyper reference `AA5' on page 70 undefined on input line 481.
 
 [70]
 
 LaTeX Warning: Reference `AppGrammatiken' on page 71 undefined on input line 56
-7.
+8.
 
 ) [71] (C:\Users\ngundermann\git\BA\thesis\BA\EntwicklungGen.tex
 Kapitel 9.
-<Bilder/explorerbaum.jpg, id=1435, 459.21562pt x 202.50656pt>
+<Bilder/explorerbaum.jpg, id=1436, 459.21562pt x 202.50656pt>
 File: Bilder/explorerbaum.jpg Graphic file (type jpg)
 
 <use Bilder/explorerbaum.jpg>
@@ -1610,7 +1610,7 @@ Overfull \hbox (4.20226pt too wide) in paragraph at lines 124--140
 en-det wird,
  []
 
-[75] [76] <Bilder/Trees.jpg, id=1543, 356.0803pt x 261.97874pt>
+[75] [76] <Bilder/Trees.jpg, id=1544, 356.0803pt x 261.97874pt>
 File: Bilder/Trees.jpg Graphic file (type jpg)
 
 <use Bilder/Trees.jpg>
@@ -1655,56 +1655,54 @@ less on input line 42.
 
 
 ] [86] (C:\Users\ngundermann\git\BA\thesis\BA\AnhangA.tex
-<Bilder/standalone.jpg, id=1756, 570.63188pt x 464.4853pt>
+Anhang A.
+<Bilder/standalone.jpg, id=1757, 570.63188pt x 464.4853pt>
 File: Bilder/standalone.jpg Graphic file (type jpg)
 
 <use Bilder/standalone.jpg>
-Package pdftex.def Info: Bilder/standalone.jpg used on input line 6.
+Package pdftex.def Info: Bilder/standalone.jpg used on input line 5.
 (pdftex.def)             Requested size: 398.3386pt x 324.2374pt.
 
-<Bilder/web.jpg, id=1758, 1264.725pt x 472.76625pt>
+<Bilder/web.jpg, id=1759, 1264.725pt x 472.76625pt>
 File: Bilder/web.jpg Graphic file (type jpg)
  <use Bilder/web.jpg>
-Package pdftex.def Info: Bilder/web.jpg used on input line 8.
+Package pdftex.def Info: Bilder/web.jpg used on input line 7.
 (pdftex.def)             Requested size: 731.23584pt x 273.34616pt.
 )
 
 Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
-less on input line 48.
+less on input line 47.
 
 [10
-
 
 
 
  <C:/Users/ngundermann/git/BA/thesis/BA/Bilder/standalone.jpg>] [11 <C:/Users/n
 gundermann/git/BA/thesis/BA/Bilder/web.jpg>]
 (C:\Users\ngundermann\git\BA\thesis\BA\AnhangB.tex
-<Bilder/explorer.jpg, id=1770, 631.60968pt x 629.35126pt>
+Anhang B.
+<Bilder/explorer.jpg, id=1771, 631.60968pt x 629.35126pt>
 File: Bilder/explorer.jpg Graphic file (type jpg)
 
 <use Bilder/explorer.jpg>
-Package pdftex.def Info: Bilder/explorer.jpg used on input line 5.
+Package pdftex.def Info: Bilder/explorer.jpg used on input line 4.
 (pdftex.def)             Requested size: 398.3386pt x 396.91592pt.
-pdfTeX warning (ext4): destination with the same identifier (name{figure.Alph0.
-1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.5 ....jpg}{Generierte Explorer-GUI}{explorerGen}
-                                                  )
+)
 
 Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
-less on input line 49.
+less on input line 48.
 
 [12
 
 
 
  <C:/Users/ngundermann/git/BA/thesis/BA/Bilder/explorer.jpg>]
-(C:\Users\ngundermann\git\BA\thesis\BA\cd.tex)
+(C:\Users\ngundermann\git\BA\thesis\BA\cd.tex
+Anhang C.
+)
 
 Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
-less on input line 50.
+less on input line 49.
 
 [13
 
@@ -1740,6 +1738,7 @@ Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
 less on input line 33.
 
 [14
+
 
 
 
@@ -2006,9 +2005,9 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 )
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 61.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 62.
  [21]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 61.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 62.
  (C:\Users\ngundermann\git\BA\thesis\BA\ba.aux
 (C:\Users\ngundermann\git\BA\thesis\BA\titlepage.aux)
 (C:\Users\ngundermann\git\BA\thesis\BA\declarationofownwork.aux)
@@ -2037,10 +2036,10 @@ l.69 \select@language{English}
 Your command will be ignored, type <return> to proceed
 
 )
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 61.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 61.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 62.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 62.
 Package rerunfilecheck Info: File `ba.out' has not changed.
-(rerunfilecheck)             Checksum: DC821EB46DF9C9244146725A1C9782F0;3927.
+(rerunfilecheck)             Checksum: F3192434FFB2A08065B3A2B0DC98724C;3901.
 
 
 LaTeX Warning: There were undefined references.
@@ -2048,13 +2047,13 @@ LaTeX Warning: There were undefined references.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 61.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 62.
  ) 
 Here is how much of TeX's memory you used:
- 14521 strings out of 493921
- 214792 string characters out of 3150471
- 437702 words of memory out of 3000000
- 16670 multiletter control sequences out of 15000+200000
+ 14523 strings out of 493921
+ 214793 string characters out of 3150471
+ 437664 words of memory out of 3000000
+ 16671 multiletter control sequences out of 15000+200000
  90949 words of font info for 83 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  50i,18n,51p,1707b,1992s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -2092,9 +2091,9 @@ s/MiKTeX/fonts/type1/urw/palatino/uplb8a.pfb><D:/Program Files/MiKTeX/fonts/typ
 e1/urw/palatino/uplbi8a.pfb><D:/Program Files/MiKTeX/fonts/type1/urw/palatino/u
 plr8a.pfb><D:/Program Files/MiKTeX/fonts/type1/urw/palatino/uplr8a.pfb><D:/Prog
 ram Files/MiKTeX/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on ba.pdf (108 pages, 3148973 bytes).
+Output written on ba.pdf (108 pages, 3148971 bytes).
 PDF statistics:
- 2070 PDF objects out of 2073 (max. 8388607)
- 692 named destinations out of 1000 (max. 500000)
+ 2071 PDF objects out of 2073 (max. 8388607)
+ 693 named destinations out of 1000 (max. 500000)
  595 words of extra memory for PDF output out of 10000 (max. 10000000)
 

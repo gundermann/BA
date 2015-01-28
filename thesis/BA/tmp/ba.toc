@@ -48,10 +48,10 @@
 \contentsline {section}{\numberline {9.1}Beschreibung der GUI-, FP- und IP-Klassen}{73}{section.9.1}
 \contentsline {section}{\numberline {9.2}Umsetzung des frameworkspezifischen Generators}{74}{section.9.2}
 \contentsline {chapter}{\numberline {10}Zusammenfassung und Ausblick}{85}{chapter.10}
-\contentsline {chapter}{Anhang A. Zuwendungsblatt f\"ur Web- und Standalone-Client}{X}{appendix*.52}
-\contentsline {chapter}{Anhang B. Generierte Explorer-GUI}{XII}{appendix*.53}
-\contentsline {chapter}{Inhalt des beiliegenden Datentr\"agers}{XIII}{appendix*.54}
-\contentsline {chapter}{Glossar}{XIV}{section*.55}
-\contentsline {chapter}{Literaturverzeichnis}{XVII}{section*.58}
+\contentsline {chapter}{\numberline {A}Zuwendungsblatt f\"ur Web- und Standalone-Client}{X}{appendix.A}
+\contentsline {chapter}{\numberline {B}Generierte Explorer-GUI}{XII}{appendix.B}
+\contentsline {chapter}{\numberline {C}Inhalt des beiliegenden Datentr\"agers}{XIII}{appendix.C}
+\contentsline {chapter}{Glossar}{XIV}{section*.52}
+\contentsline {chapter}{Literaturverzeichnis}{XVII}{section*.55}
 \select@language {English}
 \select@language {german}
