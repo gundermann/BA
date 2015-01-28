@@ -5,20 +5,29 @@
 \frontmatter
 
 \include{titlepage}
+\clearpage
 \pagenumbering{Roman}
 
+\include{declarationofownwork}
+\clearpage
 
 \tableofcontents
+\clearpage
 
+\phantomsection
 \addcontentsline{toc}{chapter}{\listfigurename}
 \listoffigures
+\clearpage
 
+\phantomsection
 \addcontentsline{toc}{chapter}{\listtablename}
 \listoftables
+\clearpage
 
+\phantomsection
 \addcontentsline{toc}{chapter}{Listings}
 \lstlistoflistings
-
+\clearpage
 
 \mainmatter
 \include{Einleitung}
@@ -34,21 +43,19 @@
 
 \backmatter
 \pagenumbering{Roman}
-%\setcounter{page}{11}
+\setcounter{page}{10}
 
-
-%\begin{appendix}
 \include{AnhangA}
 \include{AnhangB}
 \include{cd}
-%\end{appendix}
 
 \clearpage
+\phantomsection
 \addcontentsline{toc}{chapter}{Glossar}
 \printglossary[title=Glossar,toctitle=Glossar]
 
-
+\clearpage
+\phantomsection
 \addcontentsline{toc}{chapter}{Literaturverzeichnis}
 \bibliography{thesis}{}
-\include{declarationofownwork}
 \end{document}
