@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.10.14)  28 JAN 2015 13:27
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.10.14)  28 JAN 2015 14:38
 entering extended mode
 **ba.tex
 (C:\Users\ngundermann\git\BA\thesis\BA\ba.tex
@@ -929,20 +929,20 @@ less on input line 26.
  [9] (C:\Users\ngundermann\git\BA\thesis\BA\Einleitung.tex
 Kapitel 1.
 
-Overfull \hbox (3.51352pt too wide) in paragraph at lines 2--44
+Overfull \hbox (3.51352pt too wide) in paragraph at lines 2--45
 \T1/ppl/m/n/12 Ein an-de-rer An-satz zur Be-schrei-bung von Be-nut-ze-ro-ber-fl
 ä-chen ist das \T1/ppl/m/it/12 Model-
  []
 
 
-Overfull \hbox (4.89272pt too wide) in paragraph at lines 2--44
+Overfull \hbox (4.89272pt too wide) in paragraph at lines 2--45
 \T1/ppl/m/n/12 mo-del-lier-ten Funk-tio-na-li-tä-ten au-to-ma-tisch er-zeugt we
 r-den  (vgl. [[]SKNH05[]]).
  []
 
 
 Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
-less on input line 44.
+less on input line 45.
 
 [1
 
@@ -954,31 +954,33 @@ Kapitel 2.
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <17.28> not available
 (Font)              Font shape `T1/ppl/b/n' tried instead on input line 5.
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <10.95> not available
-(Font)              Font shape `T1/ppl/b/n' tried instead on input line 38.
+(Font)              Font shape `T1/ppl/b/n' tried instead on input line 39.
 
 Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
-less on input line 54.
+less on input line 55.
 
 [3
 
 
 
 ]
-Overfull \hbox (11.6785pt too wide) in paragraph at lines 57--57
+LaTeX Font Info:    Font shape `T1/ppl/bx/it' in size <17.28> not available
+(Font)              Font shape `T1/ppl/b/it' tried instead on input line 58.
+
+Overfull \hbox (11.6785pt too wide) in paragraph at lines 58--58
 []\T1/ppl/b/n/17.28 Umsetzung der Be-nut-zer-schnitt-stel-len für meh-
  []
 
-
-LaTeX Warning: Hyper reference `AA1' on page 4 undefined on input line 76.
-
-
-LaTeX Warning: Hyper reference `AA3' on page 4 undefined on input line 86.
-
-<Bilder/mcgrob.png, id=556, 452.4403pt x 231.11343pt>
+<Bilder/mcgrob.png, id=557, 452.4403pt x 231.11343pt>
 File: Bilder/mcgrob.png Graphic file (type png)
  <use Bilder/mcgrob.png>
-Package pdftex.def Info: Bilder/mcgrob.png used on input line 93.
+Package pdftex.def Info: Bilder/mcgrob.png used on input line 95.
 (pdftex.def)             Requested size: 398.3386pt x 203.47566pt.
+
+Overfull \hbox (4.47737pt too wide) in paragraph at lines 60--95
+\T1/ppl/m/n/12 deg ent-wickelt. Die-ses Ver-fah-ren er-wies sich mit kom-ple-xe
+r wer-den-den [][]\T1/ppl/m/it/12 GUIs[]
+ []
 
 
 Package Fancyhdr Warning: \headheight is too small (14.49998pt): 
@@ -987,201 +989,176 @@ Package Fancyhdr Warning: \headheight is too small (14.49998pt):
  This may cause the page layout to be inconsistent, however.
 
 [4]
-Overfull \hbox (34.5218pt too wide) in paragraph at lines 94--109
+Overfull \hbox (34.5218pt too wide) in paragraph at lines 96--113
 \T1/ppl/m/n/12 zeugt wer-den, die auf un-ter-schied-li-chen Fra-me-works ba-sie
 -ren und das \T1/ppl/m/it/12 Component-
  []
 
 [5 <C:/Users/ngundermann/git/BA/thesis/BA/Bilder/mcgrob.png>]
-<Bilder/wamgui.jpg, id=589, 343.2825pt x 74.52844pt>
+<Bilder/wamgui.jpg, id=592, 343.2825pt x 74.52844pt>
 File: Bilder/wamgui.jpg Graphic file (type jpg)
  <use Bilder/wamgui.jpg>
-Package pdftex.def Info: Bilder/wamgui.jpg used on input line 141.
+Package pdftex.def Info: Bilder/wamgui.jpg used on input line 145.
 (pdftex.def)             Requested size: 398.3386pt x 86.48146pt.
 
-Underfull \hbox (badness 1552) in paragraph at lines 141--141
+Underfull \hbox (badness 1552) in paragraph at lines 145--145
 []\T1/ppl/m/n/12 Abbildung 2.2: []Architektur ei-nes kom-ple-xen Werk-zeugs mit
  Benutzt-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 111--141
+Underfull \hbox (badness 10000) in paragraph at lines 115--145
 
  []
 
 [6]
-Overfull \hbox (11.9652pt too wide) in paragraph at lines 142--166
+Overfull \hbox (11.9652pt too wide) in paragraph at lines 146--172
 []\T1/ppl/m/it/12 Automaten \T1/ppl/m/n/12 kön-nen selbst-stän-dig Rou-ti-ne-ar
 -bei-ten er-le-di-gen. (vgl. [[]SdS03[], S.30])
  []
 
 
-Overfull \hbox (9.67287pt too wide) in paragraph at lines 142--166
+Overfull \hbox (9.67287pt too wide) in paragraph at lines 146--172
 \T1/ppl/m/n/12 un-ter-schie-den. Er-stens die per-sön-li-chen Ar-beitsplät-ze d
 er Be-nut-zer und zwei-
  []
 
 
-Overfull \hbox (3.03363pt too wide) in paragraph at lines 142--166
-\T1/ppl/m/it/12 kon-kre-ten Hand-ha-bung, Prä-sen-ta-ti-on und Tech-nik be-reit
--ge-stellt wird. \T1/ppl/m/n/12 [[]SdS03[], S.42]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 142--166
+Underfull \hbox (badness 10000) in paragraph at lines 146--172
 
  []
 
 [7 <C:/Users/ngundermann/git/BA/thesis/BA/Bilder/wamgui.jpg>]
-Overfull \hbox (31.22495pt too wide) in paragraph at lines 168--192
-\T1/ppl/m/n/12 wis-se Aus-drucks-kraft hat. Da in die-ser Ar-beit ver-sucht wir
-d die [][]GUI[]-Entwicklung
+Overfull \hbox (13.29225pt too wide) in paragraph at lines 174--199
+\T1/ppl/m/n/12 Entwicklung mit-tels ei-ner aus-drucks-star-ken \T1/ppl/m/it/12 
+do-mä-nen-spe-zi-fi-schen Spra-che (DSL)\T1/ppl/m/n/12 ,
  []
 
 [8]
-Overfull \hbox (31.53624pt too wide) in paragraph at lines 211--214
+Overfull \hbox (10.48381pt too wide) in paragraph at lines 212--214
+[][]\T1/ppl/m/n/12 Vergebene Be-zeich-nun-gen für  \T1/ppl/m/it/12 GUI-Komponen
+ten \T1/ppl/m/n/12 müs-sen in un-ter-schied-
+ []
+
+
+Overfull \hbox (24.6364pt too wide) in paragraph at lines 218--221
 [][]\T1/ppl/m/n/12 Die Wer-te für Auf-schrif-ten, Grö-ÿen-ein-stel-lun-gen u.ä.
- für [][]GUI[]-Komponenten
+ für  \T1/ppl/m/it/12 GUI-Komponenten
  []
 
 ) [9] (C:\Users\ngundermann\git\BA\thesis\BA\DSL.tex
 Kapitel 3.
 
-Overfull \hbox (9.10242pt too wide) in paragraph at lines 25--31
-\T1/ppl/m/n/12 die-ser Da-ten-struk-tur wer-den ab-strak-te Syn-tax-bäu-me ge-n
-utzt.  (vgl.
- []
-
-
 Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
-less on input line 31.
+less on input line 30.
 
 [10
 
 
 
 ]
-Overfull \hbox (22.4367pt too wide) in paragraph at lines 41--49
-\T1/ppl/m/n/12 Bei GPLs han-delt es sich um Pro-gram-mier-spra-chen, die Turing
--vollständig
+Overfull \hbox (0.50131pt too wide) in paragraph at lines 50--67
+\T1/ppl/m/n/12 Darüber hin-aus soll-te ein Pro-gramm, wel-ches in ei-ner DSL ge
+-schrie-ben wur-
  []
 
-
-Overfull \hbox (11.76772pt too wide) in paragraph at lines 50--68
-\T1/ppl/m/n/12 spra-che, wel-che für ei-ne be-stimm-te  [][]\T1/ppl/m/it/12 Do-
-mä-ne[]  \T1/ppl/m/n/12 op-ti-miert ist. (vgl. [[]VBK$[]$13[],
- []
-
-[11]
-
-! Package glossaries Error: Glossary entry `Compiler' has not been defined.
-
-See the glossaries package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.76   und somit von einem \gloss{Compiler}
-                                            verarbeitet werden.
-You need to define a glossary entry before you can use it.
-
-[12] [13]
-Overfull \hbox (10.34839pt too wide) in paragraph at lines 142--142
+[11] [12] [13]
+Overfull \hbox (10.34839pt too wide) in paragraph at lines 141--141
 []\T1/ppl/b/n/17.28 Model-Driven Soft-wa-re De-ve-lop-ment (MDSD) 
  []
 
-LaTeX Font Info:    Try loading font information for OMS+ppl on input line 157.
+LaTeX Font Info:    Try loading font information for OMS+ppl on input line 156.
 
 ("D:\Program Files\MiKTeX\tex\latex\psnfss\omsppl.fd"
 File: omsppl.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ppl/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 157.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 156.
  [14]
-<Bilder/mdsd.jpg, id=726, 663.22781pt x 380.92313pt>
+<Bilder/mdsd.jpg, id=737, 663.22781pt x 380.92313pt>
 File: Bilder/mdsd.jpg Graphic file (type jpg)
  <use Bilder/mdsd.jpg>
-Package pdftex.def Info: Bilder/mdsd.jpg used on input line 173.
+Package pdftex.def Info: Bilder/mdsd.jpg used on input line 172.
 (pdftex.def)             Requested size: 398.3386pt x 228.7823pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 166--173
+Underfull \hbox (badness 10000) in paragraph at lines 165--172
 
  []
 
 [15 <C:/Users/ngundermann/git/BA/thesis/BA/Bilder/mdsd.jpg>]
-Overfull \hbox (2.19249pt too wide) in paragraph at lines 212--232
-\T1/ppl/m/n/12 Durch die Aus-drucks-kraft und die Ab-strak-ti-on der Spra-che m
-uss i.d.R.
+Overfull \hbox (8.98575pt too wide) in paragraph at lines 201--208
+\T1/ppl/m/n/12 ge-för-dert, was eben-so zu qua-li-ta-tiv hö-her-wer-ti-gen Quel
+l-co-de führt. [[]gho11[]]21 
  []
 
 
-Overfull \hbox (3.78821pt too wide) in paragraph at lines 212--232
-\T1/ppl/m/n/12 Die stär-ke-re Aus-drucks-kraft führt zu ei-ner bes-se-re Les-ba
-r-keit von DSL-
+Overfull \hbox (0.64555pt too wide) in paragraph at lines 211--230
+[]\T1/ppl/m/n/12 Durch die Aus-drucks-kraft und die Ab-strak-ti-on der Spra-che
+ muss i.d.R. auch
  []
 
-[16]
-Overfull \hbox (3.45766pt too wide) in paragraph at lines 235--252
-\T1/ppl/m/n/12 Spra-che ver-wen-det wer-den, sind die Domänen-Experten bzw. die
- Kun-
+[16] [17]
+Overfull \hbox (6.10445pt too wide) in paragraph at lines 279--294
+\T1/ppl/m/n/12 Innerhalb ei-nes Ent-wick-ler-teams ha-ben die Mit-ar-bei-ter of
+t einen un-ter-schied-
  []
 
-[17]
-Overfull \hbox (12.37657pt too wide) in paragraph at lines 280--296
-\T1/ppl/m/n/12 lung der Pro-gram-mier-auf-ga-ben als Ge-fahr bzw. Nach-teil.  (
-vgl. [[]VBK$[]$13[],
+[18] [19] [20] [21]
+Overfull \hbox (6.04503pt too wide) in paragraph at lines 398--422
+\T1/ppl/m/n/12 ge-baut hat und die Ent-wick-lung durch ent-spre-chen-de Tools v
+er-ein-facht wird,
  []
 
-[18]
-Overfull \hbox (1.46005pt too wide) in paragraph at lines 312--332
-\T1/ppl/m/n/12 Bei wirt-schaft-li-chen Ent-schei-dun-gen wird der mo-ne-tä-re I
-n-put mit dem
+
+Overfull \hbox (1.6699pt too wide) in paragraph at lines 398--422
+\T1/ppl/m/n/12 Pro-ble-men ba-sie-ren, aber un-ter-ein-an-der in-kom-pa-ti-bel 
+sind. Au-ÿer-dem führt
  []
 
-[19]
-Overfull \hbox (8.56905pt too wide) in paragraph at lines 349--358
-\T1/ppl/m/n/12 sche Struk-tu-ren. Das führt da-zu, dass Mit-ar-bei-ter un-ter-s
-chied-li-che Spra-
+
+Underfull \hbox (badness 10000) in paragraph at lines 398--422
+
  []
 
-[20] [21] [22]
-Overfull \hbox (12.10844pt too wide) in paragraph at lines 445--463
+[22]
+Overfull \hbox (12.10844pt too wide) in paragraph at lines 441--459
 []\T1/ppl/m/n/12 Allgemein be-trach-tet funk-tio-niert die-se Tech-nik wie folg
 t. Ein Code-Fragment,
  []
 
 
-Overfull \hbox (0.94485pt too wide) in paragraph at lines 445--463
+Overfull \hbox (0.94485pt too wide) in paragraph at lines 441--459
 \T1/ppl/m/n/12 Anders als Lisp bie-ten die an-de-ren Bei-spie-le die Mög-lich-k
 eit über den Parse-
  []
 
-[23] [24] <Bilder/parsing.jpg, id=854, 576.65437pt x 209.28188pt>
+[23] [24] <Bilder/parsing.jpg, id=881, 576.65437pt x 209.28188pt>
 File: Bilder/parsing.jpg Graphic file (type jpg)
 
 <use Bilder/parsing.jpg>
-Package pdftex.def Info: Bilder/parsing.jpg used on input line 527.
+Package pdftex.def Info: Bilder/parsing.jpg used on input line 523.
 (pdftex.def)             Requested size: 398.3386pt x 144.57068pt.
-
-Overfull \hbox (10.23274pt too wide) in paragraph at lines 530--542
+ [25]
+Overfull \hbox (10.23274pt too wide) in paragraph at lines 526--538
 \T1/ppl/m/n/12 gung be-stimm-ter Grammatik-Regeln aus-ge-führt wer-den sol-len 
 (Validierungs-
  []
 
-[25 <C:/Users/ngundermann/git/BA/thesis/BA/Bilder/parsing.jpg>] [26]
-<Bilder/parsercombinator.jpg, id=886, 456.95718pt x 276.28218pt>
+[26 <C:/Users/ngundermann/git/BA/thesis/BA/Bilder/parsing.jpg>]
+<Bilder/parsercombinator.jpg, id=911, 456.95718pt x 276.28218pt>
 File: Bilder/parsercombinator.jpg Graphic file (type jpg)
 
 <use Bilder/parsercombinator.jpg>
-Package pdftex.def Info: Bilder/parsercombinator.jpg used on input line 630.
+Package pdftex.def Info: Bilder/parsercombinator.jpg used on input line 626.
 (pdftex.def)             Requested size: 398.3386pt x 240.84836pt.
 
-Overfull \hbox (16.91748pt too wide) in paragraph at lines 622--630
+Overfull \hbox (16.91748pt too wide) in paragraph at lines 618--626
 \T1/ppl/m/n/12 S.242])  Die Ele-men-te, die ver-ket-tet wer-den kön-nen wer-den
  \T1/ppl/m/it/12 Parser-Kombinatoren
  []
 
 [27]
-Overfull \hbox (1.96568pt too wide) in paragraph at lines 631--642
+Overfull \hbox (1.96568pt too wide) in paragraph at lines 627--638
 \T1/ppl/m/n/12 auch als Mit-tel-weg zwi-schen RD-Parsern und Par-ser Ge-ne-ra-t
 o-ren. [[]FP11[]]261 
  []
@@ -1190,13 +1167,13 @@ o-ren. [[]FP11[]]261
 [29] (C:\Users\ngundermann\git\BA\thesis\BA\GUIDSL.tex
 Kapitel 4.
 
-Overfull \hbox (43.208pt too wide) in paragraph at lines 10--13
+Overfull \hbox (43.208pt too wide) in paragraph at lines 10--14
 \T1/ppl/m/n/12 Das be-deu-tet, dass in der Be-schrei-bung der GUI-DSL kei-ne []
 []GUI[]-Komponenten
  []
 
 
-Overfull \hbox (2.97282pt too wide) in paragraph at lines 10--13
+Overfull \hbox (2.97282pt too wide) in paragraph at lines 10--14
 \T1/ppl/m/n/12 ver-wen-det wer-den, wie es bei tra-di-tio-nel-len [][]GUI[]-Fra
 meworks (Ja-vaFX,
  []
@@ -1226,7 +1203,7 @@ Kapitel 5.
 
 LaTeX Warning: Hyper reference `AA2' on page 33 undefined on input line 25.
 
-<Bilder/neuerAnsatz.png, id=998, 681.29532pt x 295.1025pt>
+<Bilder/neuerAnsatz.png, id=1027, 681.29532pt x 295.1025pt>
 File: Bilder/neuerAnsatz.png Graphic file (type png)
 
 <use Bilder/neuerAnsatz.png>
@@ -1241,7 +1218,7 @@ less on input line 29.
 
 
 
-] <Bilder/genMCFCode.jpg, id=1009, 701.62125pt x 240.9pt>
+] <Bilder/genMCFCode.jpg, id=1038, 701.62125pt x 240.9pt>
 File: Bilder/genMCFCode.jpg Graphic file (type jpg)
 
 <use Bilder/genMCFCode.jpg>
@@ -1298,7 +1275,7 @@ ass neue Kom-
 
 [37]) [38] [39] (C:\Users\ngundermann\git\BA\thesis\BA\Grobkonzept.tex
 Kapitel 7.
-<Bilder/inkrement.jpg, id=1066, 526.96875pt x 418.56375pt>
+<Bilder/inkrement.jpg, id=1095, 526.96875pt x 418.56375pt>
 File: Bilder/inkrement.jpg Graphic file (type jpg)
 
 <use Bilder/inkrement.jpg>
@@ -1320,128 +1297,134 @@ t und Missver-ständ-
  []
 
 [41 <C:/Users/ngundermann/git/BA/thesis/BA/Bilder/inkrement.jpg>]
-<Bilder/konzept_1.jpg, id=1087, 438.13687pt x 298.86656pt>
+<Bilder/konzept_1.jpg, id=1116, 438.13687pt x 298.86656pt>
 File: Bilder/konzept_1.jpg Graphic file (type jpg)
 
 <use Bilder/konzept_1.jpg>
-Package pdftex.def Info: Bilder/konzept_1.jpg used on input line 60.
+Package pdftex.def Info: Bilder/konzept_1.jpg used on input line 62.
 (pdftex.def)             Requested size: 398.3386pt x 271.72272pt.
  [42]
-Overfull \hbox (5.38742pt too wide) in paragraph at lines 74--80
+Overfull \hbox (5.38742pt too wide) in paragraph at lines 76--82
 \T1/ppl/m/n/12 nen. Ein Bei-spiel für ei-ne kom-ple-xe Kom-po-nen-ten ist die  
 [][]\T1/ppl/m/it/12 Multiselection-
  []
 
 [43 <C:/Users/ngundermann/git/BA/thesis/BA/Bilder/konzept_1.jpg>]
-<Bilder/suchfeld.jpg, id=1118, 583.42969pt x 56.46094pt>
+<Bilder/suchfeld.jpg, id=1144, 583.42969pt x 56.46094pt>
 File: Bilder/suchfeld.jpg Graphic file (type jpg)
 
 <use Bilder/suchfeld.jpg>
-Package pdftex.def Info: Bilder/suchfeld.jpg used on input line 129.
+Package pdftex.def Info: Bilder/suchfeld.jpg used on input line 131.
 (pdftex.def)             Requested size: 398.3386pt x 38.54971pt.
 
-Overfull \hbox (0.60901pt too wide) in paragraph at lines 87--129
+Overfull \hbox (0.60901pt too wide) in paragraph at lines 89--131
 \T1/ppl/m/n/12 die Be-schrei-bung die-ser Kom-po-nen-ten ver-wen-de-ten Be-zeic
 h-nun-gen zu ach-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 87--129
+Underfull \hbox (badness 10000) in paragraph at lines 89--131
 
  []
 
-[44] <Bilder/suchmaske.jpg, id=1124, 584.93532pt x 176.15813pt>
+[44] <Bilder/suchmaske.jpg, id=1150, 584.93532pt x 176.15813pt>
 File: Bilder/suchmaske.jpg Graphic file (type jpg)
 
 <use Bilder/suchmaske.jpg>
-Package pdftex.def Info: Bilder/suchmaske.jpg used on input line 133.
+Package pdftex.def Info: Bilder/suchmaske.jpg used on input line 135.
 (pdftex.def)             Requested size: 398.3386pt x 119.96602pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 134--157
+Underfull \hbox (badness 10000) in paragraph at lines 136--159
 
  []
 
 
-Overfull \hbox (2.25197pt too wide) in paragraph at lines 134--157
-\T1/ppl/m/n/12 von ein-ge-bun-de-nen  \T1/ppl/m/it/12 GUI-DSL \T1/ppl/m/n/12 -S
-kripten und de-fi-nier-ten  [][]GUI[]-Komponenten
+Overfull \hbox (2.82135pt too wide) in paragraph at lines 136--159
+\T1/ppl/m/it/12 GUI-Komponenten \T1/ppl/m/n/12 ent-hält. Die-se In-for-ma-tio-n
+en müs-sen aus-rei-chend ab-strakt
  []
 
 
-Overfull \hbox (3.39302pt too wide) in paragraph at lines 134--157
+Overfull \hbox (0.5054pt too wide) in paragraph at lines 136--159
+\T1/ppl/m/it/12 Komponenten \T1/ppl/m/n/12 zu-ge-ord-net. Ge-naue-re In-for-ma-
+tio-nen über die An-ord-nung die-
+ []
+
+
+Overfull \hbox (0.50551pt too wide) in paragraph at lines 136--159
+\T1/ppl/m/n/12 stimm-te Lay-outs be-dingt (sie-he An-for-de-rung []AS3[]). Da-z
+u ist wei-ter-hin wich-
+ []
+
+
+Overfull \hbox (3.39302pt too wide) in paragraph at lines 136--159
 \T1/ppl/m/n/12 Der Ge-ne-ra-tor über-nimmt beim Er-zeu-gen des fra-me-work-s-pe
 -zi-fi-schen Quell-
  []
 
 [45 <C:/Users/ngundermann/git/BA/thesis/BA/Bilder/suchfeld.jpg> <C:/Users/ngund
 ermann/git/BA/thesis/BA/Bilder/suchmaske.jpg>]
-<Bilder/konzept_2.jpg, id=1141, 612.78937pt x 385.44pt>
+<Bilder/konzept_2.jpg, id=1163, 612.78937pt x 385.44pt>
 File: Bilder/konzept_2.jpg Graphic file (type jpg)
 
 <use Bilder/konzept_2.jpg>
-Package pdftex.def Info: Bilder/konzept_2.jpg used on input line 163.
+Package pdftex.def Info: Bilder/konzept_2.jpg used on input line 165.
 (pdftex.def)             Requested size: 398.3386pt x 250.55067pt.
  [46] [47 <C:/Users/ngundermann/git/BA/thesis/BA/Bilder/konzept_2.jpg>] <Bilder
-/konzept_3.jpg, id=1156, 723.45282pt x 386.19281pt>
+/konzept_3.jpg, id=1174, 723.45282pt x 386.19281pt>
 File: Bilder/konzept_3.jpg Graphic file (type jpg)
 
 <use Bilder/konzept_3.jpg>
-Package pdftex.def Info: Bilder/konzept_3.jpg used on input line 195.
+Package pdftex.def Info: Bilder/konzept_3.jpg used on input line 197.
 (pdftex.def)             Requested size: 398.3386pt x 212.6424pt.
-
-Overfull \hbox (1.29712pt too wide) in paragraph at lines 196--215
-\T1/ppl/m/n/12 run-gen aus-ge-führt wer-den kön-nen. Die dop-pel-te De-kla-rie-
-rung wi-der-spricht
- []
-
-[48 <C:/Users/ngundermann/git/BA/thesis/BA/Bilder/konzept_3.jpg>]
-Overfull \hbox (11.37291pt too wide) in paragraph at lines 225--230
-\T1/ppl/m/n/12 hin-aus sol-len fol-gen-de Standard-Interaktionstypen in den  []
-[]GUI[]-Komponenten
+ [48 <C:/Users/ngundermann/git/BA/thesis/BA/Bilder/konzept_3.jpg>]
+Overfull \hbox (2.19304pt too wide) in paragraph at lines 232--237
+\T1/ppl/m/n/12 hin-aus sol-len fol-gen-de Standard-Interaktionstypen in den  \T
+1/ppl/m/it/12 GUI-Komponenten
  []
 
 
-Overfull \hbox (3.20105pt too wide) in paragraph at lines 225--230
+Overfull \hbox (3.20105pt too wide) in paragraph at lines 232--237
 \T1/ppl/m/n/12 die Kom-po-nen-te ge-nannt und an-schlie-ÿend die Standard-Inter
 aktionstypen) 
  []
 
-) [49] (C:\Users\ngundermann\git\BA\thesis\BA\EntwerfenDSL.tex
+[49]) [50] (C:\Users\ngundermann\git\BA\thesis\BA\EntwerfenDSL.tex
 Kapitel 8.
 
-Overfull \hbox (14.09712pt too wide) in paragraph at lines 4--18
-\T1/ppl/m/n/12 Komponenten zu-ge-ord-net wer-den kön-nen (sie-he se-man-ti-sche
-s Mo-dell \T1/ppl/m/it/12 AreaAs-
+Overfull \hbox (5.45718pt too wide) in paragraph at lines 4--18
+\T1/ppl/m/it/12 Komponenten \T1/ppl/m/n/12 zu-ge-ord-net wer-den kön-nen (sie-h
+e se-man-ti-sches Mo-dell \T1/ppl/m/it/12 AreaAs-
  []
 
 
 Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
 less on input line 21.
 
-[50
+[51
 
 
 
 ]
-Overfull \hbox (37.79549pt too wide) in paragraph at lines 56--59
+Overfull \hbox (28.61562pt too wide) in paragraph at lines 56--59
 \T1/ppl/m/n/12 Zur Un-ter-schei-dung zwi-schen In-ter-ak-tio-nen mit an-de-ren 
- [][]GUI[]-Komponenten
+ \T1/ppl/m/it/12 GUI-Komponenten
  []
 
-[51] <Bilder/v1-1.jpg, id=1191, 583.42969pt x 478.03593pt>
+[52] <Bilder/v1-1.jpg, id=1204, 583.42969pt x 478.03593pt>
 File: Bilder/v1-1.jpg Graphic file (type jpg)
 
 <use Bilder/v1-1.jpg>
 Package pdftex.def Info: Bilder/v1-1.jpg used on input line 85.
 (pdftex.def)             Requested size: 398.3386pt x 326.38768pt.
- <Bilder/v1-1-1.jpg, id=1192, 490.83376pt x 243.15843pt>
+ <Bilder/v1-1-1.jpg, id=1205, 490.83376pt x 243.15843pt>
 File: Bilder/v1-1-1.jpg Graphic file (type jpg)
 
 <use Bilder/v1-1-1.jpg>
 Package pdftex.def Info: Bilder/v1-1-1.jpg used on input line 86.
 (pdftex.def)             Requested size: 398.3386pt x 197.34312pt.
- [52]
-<Bilder/v1-2.jpg, id=1199, 600.74437pt x 411.78844pt>
+ [53]
+<Bilder/v1-2.jpg, id=1212, 600.74437pt x 411.78844pt>
 File: Bilder/v1-2.jpg Graphic file (type jpg)
  <use Bilder/v1-2.jpg>
 Package pdftex.def Info: Bilder/v1-2.jpg used on input line 91.
@@ -1451,21 +1434,21 @@ Underfull \hbox (badness 10000) in paragraph at lines 87--91
 
  []
 
-<Bilder/v1-2-1.jpg, id=1200, 649.67719pt x 373.395pt>
+<Bilder/v1-2-1.jpg, id=1213, 649.67719pt x 373.395pt>
 File: Bilder/v1-2-1.jpg Graphic file (type jpg)
  <use Bilder/v1-2-1.jpg>
 Package pdftex.def Info: Bilder/v1-2-1.jpg used on input line 93.
 (pdftex.def)             Requested size: 398.3386pt x 228.9443pt.
 
-[53 <C:/Users/ngundermann/git/BA/thesis/BA/Bilder/v1-1.jpg> <C:/Users/ngunderma
-nn/git/BA/thesis/BA/Bilder/v1-1-1.jpg>] [54 <C:/Users/ngundermann/git/BA/thesis
+[54 <C:/Users/ngundermann/git/BA/thesis/BA/Bilder/v1-1.jpg> <C:/Users/ngunderma
+nn/git/BA/thesis/BA/Bilder/v1-1-1.jpg>] [55 <C:/Users/ngundermann/git/BA/thesis
 /BA/Bilder/v1-2.jpg> <C:/Users/ngundermann/git/BA/thesis/BA/Bilder/v1-2-1.jpg>]
 
 Package Listings Warning: Text dropped after begin of listing on input line 110
 .
 
 
-LaTeX Warning: Reference `AppGrammatiken' on page 55 undefined on input line 13
+LaTeX Warning: Reference `AppGrammatiken' on page 56 undefined on input line 13
 9.
 
 
@@ -1474,7 +1457,13 @@ Overfull \hbox (6.66916pt too wide) in paragraph at lines 148--169
 a-ti-on ei-ne Proper-
  []
 
-[55] <Bilder/v2-1.jpg, id=1235, 599.23875pt x 548.0475pt>
+
+Overfull \hbox (4.74878pt too wide) in paragraph at lines 148--169
+\T1/ppl/m/n/12 Bezogen auf die  \T1/ppl/m/it/12 kom-ple-xen Kom-po-nen-ten \T1/
+ppl/m/n/12 ist es le-dig-lich not-wen-dig den Input-
+ []
+
+[56] <Bilder/v2-1.jpg, id=1246, 599.23875pt x 548.0475pt>
 File: Bilder/v2-1.jpg Graphic file (type jpg)
 
 <use Bilder/v2-1.jpg>
@@ -1485,21 +1474,21 @@ Underfull \hbox (badness 10000) in paragraph at lines 172--177
 
  []
 
-[56] <Bilder/v2-2.jpg, id=1243, 411.78844pt x 194.22563pt>
+[57] <Bilder/v2-2.jpg, id=1255, 411.78844pt x 194.22563pt>
 File: Bilder/v2-2.jpg Graphic file (type jpg)
 
 <use Bilder/v2-2.jpg>
 Package pdftex.def Info: Bilder/v2-2.jpg used on input line 182.
 (pdftex.def)             Requested size: 398.3386pt x 187.88295pt.
- <Bilder/v2-3.jpg, id=1244, 490.83376pt x 438.8897pt>
+ <Bilder/v2-3.jpg, id=1256, 490.83376pt x 438.8897pt>
 File: Bilder/v2-3.jpg Graphic file (type jpg)
 
 <use Bilder/v2-3.jpg>
 Package pdftex.def Info: Bilder/v2-3.jpg used on input line 189.
 (pdftex.def)             Requested size: 398.3386pt x 356.19519pt.
- [57 <C:/Users/ngundermann/git/BA/thesis/BA/Bilder/v2-1.jpg> <C:/Users/ngunderm
+ [58 <C:/Users/ngundermann/git/BA/thesis/BA/Bilder/v2-1.jpg> <C:/Users/ngunderm
 ann/git/BA/thesis/BA/Bilder/v2-2.jpg>]
-<Bilder/v2-4.jpg, id=1252, 514.92375pt x 302.63063pt>
+<Bilder/v2-4.jpg, id=1263, 514.92375pt x 302.63063pt>
 File: Bilder/v2-4.jpg Graphic file (type jpg)
  <use Bilder/v2-4.jpg>
 Package pdftex.def Info: Bilder/v2-4.jpg used on input line 197.
@@ -1511,100 +1500,83 @@ Overfull \hbox (2.32463pt too wide) in paragraph at lines 190--197
 12 vor-
  []
 
-<Bilder/v2-5.jpg, id=1253, 537.50812pt x 307.1475pt>
+<Bilder/v2-5.jpg, id=1264, 537.50812pt x 307.1475pt>
 File: Bilder/v2-5.jpg Graphic file (type jpg)
  <use Bilder/v2-5.jpg>
 Package pdftex.def Info: Bilder/v2-5.jpg used on input line 198.
 (pdftex.def)             Requested size: 398.3386pt x 227.62303pt.
 
-[58 <C:/Users/ngundermann/git/BA/thesis/BA/Bilder/v2-3.jpg>] [59 <C:/Users/ngun
+[59 <C:/Users/ngundermann/git/BA/thesis/BA/Bilder/v2-3.jpg>] [60 <C:/Users/ngun
 dermann/git/BA/thesis/BA/Bilder/v2-4.jpg> <C:/Users/ngundermann/git/BA/thesis/B
 A/Bilder/v2-5.jpg>]
 
 Package Listings Warning: Text dropped after begin of listing on input line 225
 .
 
-[60] [61]
+[61] [62]
 
-LaTeX Warning: Reference `AppGrammatiken' on page 62 undefined on input line 32
+LaTeX Warning: Reference `AppGrammatiken' on page 63 undefined on input line 32
 1.
 
-[62]
-Overfull \hbox (1.06161pt too wide) in paragraph at lines 360--404
-\T1/ppl/m/n/12 po-nen-ten be-schrie-ben wer-den kön-nen.  Ba-sis-kom-po-nen-ten
- die spe-zi-el-le Me-
- []
-
-[63] <Bilder/v3-1.jpg, id=1351, 565.36218pt x 572.1375pt>
+[63] [64] <Bilder/v3-1.jpg, id=1354, 565.36218pt x 572.1375pt>
 File: Bilder/v3-1.jpg Graphic file (type jpg)
 
 <use Bilder/v3-1.jpg>
 Package pdftex.def Info: Bilder/v3-1.jpg used on input line 418.
 (pdftex.def)             Requested size: 398.3386pt x 403.12128pt.
- [64]
-<Bilder/v3-2.jpg, id=1358, 423.83344pt x 198.7425pt>
+ [65]
+<Bilder/v3-2.jpg, id=1361, 423.83344pt x 198.7425pt>
 File: Bilder/v3-2.jpg Graphic file (type jpg)
  <use Bilder/v3-2.jpg>
 Package pdftex.def Info: Bilder/v3-2.jpg used on input line 429.
 (pdftex.def)             Requested size: 398.3386pt x 186.7937pt.
 
-[65 <C:/Users/ngundermann/git/BA/thesis/BA/Bilder/v3-1.jpg>]
-<Bilder/v3-3.jpg, id=1364, 513.41812pt x 203.25937pt>
+[66 <C:/Users/ngundermann/git/BA/thesis/BA/Bilder/v3-1.jpg>]
+<Bilder/v3-3.jpg, id=1367, 513.41812pt x 203.25937pt>
 File: Bilder/v3-3.jpg Graphic file (type jpg)
  <use Bilder/v3-3.jpg>
 Package pdftex.def Info: Bilder/v3-3.jpg used on input line 438.
 (pdftex.def)             Requested size: 398.3386pt x 157.70116pt.
 
-<Bilder/v3-4.jpg, id=1368, 649.67719pt x 318.43968pt>
+<Bilder/v3-4.jpg, id=1371, 649.67719pt x 318.43968pt>
 File: Bilder/v3-4.jpg Graphic file (type jpg)
  <use Bilder/v3-4.jpg>
 Package pdftex.def Info: Bilder/v3-4.jpg used on input line 445.
 (pdftex.def)             Requested size: 398.3386pt x 195.24887pt.
 
-[66 <C:/Users/ngundermann/git/BA/thesis/BA/Bilder/v3-2.jpg> <C:/Users/ngunderma
+[67 <C:/Users/ngundermann/git/BA/thesis/BA/Bilder/v3-2.jpg> <C:/Users/ngunderma
 nn/git/BA/thesis/BA/Bilder/v3-3.jpg>]
-<Bilder/v3-5.jpg, id=1376, 491.58656pt x 341.77687pt>
+<Bilder/v3-5.jpg, id=1378, 491.58656pt x 341.77687pt>
 File: Bilder/v3-5.jpg Graphic file (type jpg)
  <use Bilder/v3-5.jpg>
 Package pdftex.def Info: Bilder/v3-5.jpg used on input line 452.
 (pdftex.def)             Requested size: 398.3386pt x 276.95769pt.
 
-Overfull \hbox (0.68512pt too wide) in paragraph at lines 446--452
-[]\T1/ppl/m/n/12 Die  Ba-sis-kom-po-nen-te Tab-View be-nö-tigt ei-ne Men-ge von
- \T1/ppl/m/it/12 Tab-De-fi-ni-ti-on\T1/ppl/m/n/12 s. Die-
- []
-
-<Bilder/v3-6.jpg, id=1377, 489.32813pt x 330.48468pt>
+<Bilder/v3-6.jpg, id=1379, 489.32813pt x 330.48468pt>
 File: Bilder/v3-6.jpg Graphic file (type jpg)
  <use Bilder/v3-6.jpg>
 Package pdftex.def Info: Bilder/v3-6.jpg used on input line 453.
 (pdftex.def)             Requested size: 398.3386pt x 269.03755pt.
 
-[67 <C:/Users/ngundermann/git/BA/thesis/BA/Bilder/v3-4.jpg> <C:/Users/ngunderma
+[68 <C:/Users/ngundermann/git/BA/thesis/BA/Bilder/v3-4.jpg> <C:/Users/ngunderma
 nn/git/BA/thesis/BA/Bilder/v3-5.jpg>]
 Overfull \hbox (4.29315pt too wide) in paragraph at lines 454--466
 \T1/ppl/m/n/12 Dasselbe Prin-zip wird bei der sich an-schlie-ÿen-den An-ga-be d
 er Layout-Datei-
  []
 
-[68 <C:/Users/ngundermann/git/BA/thesis/BA/Bilder/v3-6.jpg>]
+[69 <C:/Users/ngundermann/git/BA/thesis/BA/Bilder/v3-6.jpg>]
 
-LaTeX Warning: Hyper reference `AA5' on page 69 undefined on input line 480.
+LaTeX Warning: Hyper reference `AA5' on page 70 undefined on input line 480.
 
+[70]
 
-Overfull \hbox (1.42499pt too wide) in paragraph at lines 479--486
-[]\T1/ppl/m/n/12 Die De-fi-ni-tio-nen der ein-zel-nen  Ba-sis-kom-po-nen-ten ha
-t sich syn-tak-tisch stark
- []
-
-[69]
-
-LaTeX Warning: Reference `AppGrammatiken' on page 70 undefined on input line 56
+LaTeX Warning: Reference `AppGrammatiken' on page 71 undefined on input line 56
 7.
 
-) [70] (C:\Users\ngundermann\git\BA\thesis\BA\EntwicklungGen.tex
+) [71] (C:\Users\ngundermann\git\BA\thesis\BA\EntwicklungGen.tex
 Kapitel 9.
-<Bilder/explorerbaum.jpg, id=1440, 459.21562pt x 202.50656pt>
+<Bilder/explorerbaum.jpg, id=1435, 459.21562pt x 202.50656pt>
 File: Bilder/explorerbaum.jpg Graphic file (type jpg)
 
 <use Bilder/explorerbaum.jpg>
@@ -1615,24 +1587,21 @@ Package pdftex.def Info: Bilder/explorerbaum.jpg used on input line 13.
 Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
 less on input line 16.
 
-[71
+[72
 
 
 
- <C:/Users/ngundermann/git/BA/thesis/BA/Bilder/explorerbaum.jpg>]
-
-LaTeX Warning: Hyper reference `R1' on page 72 undefined on input line 32.
-
-[72] [73]
+ <C:/Users/ngundermann/git/BA/thesis/BA/Bilder/explorerbaum.jpg>] [73]
+[74]
 Overfull \hbox (15.21297pt too wide) in paragraph at lines 95--101
 []\T1/ppl/m/n/12 Zu Be-ginn ei-ner Ge-ne-rie-rung muss zwi-schen den Ty-pen der
  GUI-Beschreibung
  []
 
 
-Overfull \hbox (23.3256pt too wide) in paragraph at lines 124--140
+Overfull \hbox (14.14574pt too wide) in paragraph at lines 124--140
 []\T1/ppl/m/n/12 In der Me-tho-de \T1/ppl/m/it/12 com-pi-le-Com-plex \T1/ppl/m/
-n/12 wird fest-ge-legt, dass sich die  [][]GUI[]-Komponenten
+n/12 wird fest-ge-legt, dass sich die  \T1/ppl/m/it/12 GUI-Komponenten
  []
 
 
@@ -1641,19 +1610,7 @@ Overfull \hbox (4.20226pt too wide) in paragraph at lines 124--140
 en-det wird,
  []
 
-
-Overfull \hbox (20.24529pt too wide) in paragraph at lines 124--140
-\T1/ppl/m/n/12 sen die-se An-ga-ben nach-ge-pflegt wer-den. Die De-fi-ni-ti-on 
-der  [][]GUI[]-Komponenten
- []
-
-[74]
-Overfull \hbox (7.08884pt too wide) in paragraph at lines 149--157
-[]\T1/ppl/m/n/12 In der Me-tho-de \T1/ppl/m/it/12 com-pi-le-Com-po-nent \T1/ppl
-/m/n/12 wird ge-prüft um wel-che  [][]GUI[]-Komponente
- []
-
-[75] <Bilder/Trees.jpg, id=1555, 356.0803pt x 261.97874pt>
+[75] [76] <Bilder/Trees.jpg, id=1543, 356.0803pt x 261.97874pt>
 File: Bilder/Trees.jpg Graphic file (type jpg)
 
 <use Bilder/Trees.jpg>
@@ -1665,41 +1622,47 @@ Overfull \hbox (2.61351pt too wide) in paragraph at lines 206--214
 Klassen trans-
  []
 
-[76]
+[77]
 Overfull \hbox (6.65782pt too wide) in paragraph at lines 240--254
 []\T1/ppl/m/n/12 Ebenso wie bei der Ge-ne-rie-rung der er-sten bei-den [][]GUIs
 [], wird hier als Layout-
  []
 
-[77 <C:/Users/ngundermann/git/BA/thesis/BA/Bilder/Trees.jpg>] [78] [79]
-Overfull \hbox (27.33295pt too wide) in paragraph at lines 335--346
-\T1/ppl/m/n/12 nier-ten  [][]GUI[]-Komponenten durch-lau-fen und de-ren Standar
-d-Interaktionsformen
+[78 <C:/Users/ngundermann/git/BA/thesis/BA/Bilder/Trees.jpg>]
+Overfull \hbox (0.5534pt too wide) in paragraph at lines 266--271
+\T1/ppl/m/n/12 wur-de ist die Interchangeable-Komponente. Da die-se  \T1/ppl/m/
+it/12 GUI-Komponenten \T1/ppl/m/n/12 kei-
  []
 
-[80] [81] [82]) [83] (C:\Users\ngundermann\git\BA\thesis\BA\Fazit.tex
+[79] [80]
+Overfull \hbox (18.15308pt too wide) in paragraph at lines 335--346
+\T1/ppl/m/n/12 nier-ten  \T1/ppl/m/it/12 GUI-Komponenten \T1/ppl/m/n/12 durch-l
+au-fen und de-ren Standard-Interaktionsformen
+ []
+
+[81] [82] [83]) [84] (C:\Users\ngundermann\git\BA\thesis\BA\Fazit.tex
 Kapitel 10.
 
-LaTeX Warning: Reference `AppGeneriert' on page 84 undefined on input line 12.
+LaTeX Warning: Reference `AppGeneriert' on page 85 undefined on input line 12.
 
 )
 
 Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
 less on input line 42.
 
-[84
+[85
 
 
 
-] [85] (C:\Users\ngundermann\git\BA\thesis\BA\AnhangA.tex
-<Bilder/standalone.jpg, id=1773, 570.63188pt x 464.4853pt>
+] [86] (C:\Users\ngundermann\git\BA\thesis\BA\AnhangA.tex
+<Bilder/standalone.jpg, id=1756, 570.63188pt x 464.4853pt>
 File: Bilder/standalone.jpg Graphic file (type jpg)
 
 <use Bilder/standalone.jpg>
 Package pdftex.def Info: Bilder/standalone.jpg used on input line 6.
 (pdftex.def)             Requested size: 398.3386pt x 324.2374pt.
 
-<Bilder/web.jpg, id=1775, 1264.725pt x 472.76625pt>
+<Bilder/web.jpg, id=1758, 1264.725pt x 472.76625pt>
 File: Bilder/web.jpg Graphic file (type jpg)
  <use Bilder/web.jpg>
 Package pdftex.def Info: Bilder/web.jpg used on input line 8.
@@ -1717,7 +1680,7 @@ less on input line 48.
  <C:/Users/ngundermann/git/BA/thesis/BA/Bilder/standalone.jpg>] [11 <C:/Users/n
 gundermann/git/BA/thesis/BA/Bilder/web.jpg>]
 (C:\Users\ngundermann\git\BA\thesis\BA\AnhangB.tex
-<Bilder/explorer.jpg, id=1787, 631.60968pt x 629.35126pt>
+<Bilder/explorer.jpg, id=1770, 631.60968pt x 629.35126pt>
 File: Bilder/explorer.jpg Graphic file (type jpg)
 
 <use Bilder/explorer.jpg>
@@ -2077,7 +2040,7 @@ Your command will be ignored, type <return> to proceed
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 61.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 61.
 Package rerunfilecheck Info: File `ba.out' has not changed.
-(rerunfilecheck)             Checksum: 30436B5C2BF5A0E83CD7CB2F64E44605;3923.
+(rerunfilecheck)             Checksum: DC821EB46DF9C9244146725A1C9782F0;3927.
 
 
 LaTeX Warning: There were undefined references.
@@ -2088,11 +2051,11 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 61.
  ) 
 Here is how much of TeX's memory you used:
- 14485 strings out of 493921
- 214444 string characters out of 3150471
- 437266 words of memory out of 3000000
- 16662 multiletter control sequences out of 15000+200000
- 89353 words of font info for 81 fonts, out of 3000000 for 9000
+ 14521 strings out of 493921
+ 214792 string characters out of 3150471
+ 437702 words of memory out of 3000000
+ 16670 multiletter control sequences out of 15000+200000
+ 90949 words of font info for 83 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  50i,18n,51p,1707b,1992s stack positions out of 5000i,500n,10000p,200000b,50000s
 pdfTeX warning (dest): name{page.xviii} has been referenced but does not exis
@@ -2126,11 +2089,12 @@ ram Files/MiKTeX/fonts/type1/public/lm/lmr8.pfb><D:/Program Files/MiKTeX/fonts/
 type1/public/lm/lmri12.pfb><D:/Program Files/MiKTeX/fonts/type1/public/lm/lmsy1
 0.pfb><D:/Program Files/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><D:/Program File
 s/MiKTeX/fonts/type1/urw/palatino/uplb8a.pfb><D:/Program Files/MiKTeX/fonts/typ
-e1/urw/palatino/uplr8a.pfb><D:/Program Files/MiKTeX/fonts/type1/urw/palatino/up
-lr8a.pfb><D:/Program Files/MiKTeX/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on ba.pdf (107 pages, 3142941 bytes).
+e1/urw/palatino/uplbi8a.pfb><D:/Program Files/MiKTeX/fonts/type1/urw/palatino/u
+plr8a.pfb><D:/Program Files/MiKTeX/fonts/type1/urw/palatino/uplr8a.pfb><D:/Prog
+ram Files/MiKTeX/fonts/type1/urw/palatino/uplri8a.pfb>
+Output written on ba.pdf (108 pages, 3148973 bytes).
 PDF statistics:
- 2078 PDF objects out of 2487 (max. 8388607)
- 665 named destinations out of 1000 (max. 500000)
+ 2070 PDF objects out of 2073 (max. 8388607)
+ 692 named destinations out of 1000 (max. 500000)
  595 words of extra memory for PDF output out of 10000 (max. 10000000)
 

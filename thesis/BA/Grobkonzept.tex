@@ -32,17 +32,19 @@ Generieren von Klassen für das Multichannel-Framework}) wird die
 durchgeführten Iterationen beschrieben. Dabei werden folgende Aspekte
 beleuchtet.
 \begin{itemize}
-  \item \textbf{Vision} (siehe Kapitel \ref{Grobkonzept})\\
+  \item [] \textbf{Vision} (siehe Kapitel \ref{Grobkonzept})\\
   Dadurch werden die Anforderungen an die DSL-Umgebung
   beschrieben. Die in Kapitel \ref{GUI-DSL} vorgestellten Anforderungen sind das
   Resultat der in dieser Arbeit durchgeführten Iterationen.
-  \item \textbf{Entwicklung}\\
+  \item []\textbf{Entwicklung}\\
   Die Entwicklung beschreibt die Phasen \emph{Entwerfen} und
   \emph{Implementieren}. 
   Sie teilt sich in zwei weitere Bereiche auf.
   \begin{itemize}
-  	\item \textbf{Entwicklung der DSL} (siehe Kapitel \ref{Entwicklung einer DSL zur Beschreibung der GUI in profil c/s})
-  	\item \textbf{Entwicklung eines Generators} (siehe Kapitel \ref{Entwicklung des Generators für das Generieren von Klassen für das Multichannel-Framework})
+  	\item [$\bullet$]Entwicklung der DSL (siehe Kapitel \ref{Entwicklung einer
+  	DSL zur Beschreibung der GUI in profil c/s})
+  	\item [$\bullet$]Entwicklung eines Generators (siehe Kapitel \ref{Entwicklung
+  	des Generators für das Generieren von Klassen für das Multichannel-Framework})
   \end{itemize}
 \end{itemize}
 
@@ -213,12 +215,17 @@ GUI-DSL zu beachten.\\
 Neben den \Ks \emph{Button} und \emph{Label} müssen folgende weitere
 \Ks definiert werden können.
 \begin{itemize}
-  \item Textfield
-  \item Textarea
-  \item Tree
-  \item Table
-  \item TabPane
-  \item Interchangeable\\
+  \item [] \textbf{Textfield}\\
+  Ein Feld in dem ein einzeiliger Text editiert werden kann.
+  \item [] \textbf{Textarea}\\
+  Ein Feld in dem ein mehrzeiliger Text editiert werden kann.
+  \item [] \textbf{Tree}\\
+  Eine Baumstruktur in der mehrere Element eingebunden werden können.
+  \item [] \textbf{Table}\\
+  Eine Tabellenstruktur in der mehrere Elemente eingebunden werden können.
+  \item [] \textbf{TabView}\\
+  Eine Ansicht in der aus mehreren Taben eine Tab betrachtet werden kann. 
+  \item [] \textbf{Interchangeable}\\
   Ein Bereich, in dem während der Laufzeit unterschiedliche \glspl{GUI}
   eingebunden werden können.
 \end{itemize}

@@ -16,11 +16,11 @@ Ein weiterer Aspekt in dem GUI-Skript ist die Verwendung von anderen
 GUI-Skripten (siehe semantisches Modell \emph{Use}).\\ 
 Zusammenfassend sind für die Beschreibung der GUI folgende Metadaten nötig.
 \begin{itemize}
-  \item [] Anzahl der Bereiche
-  \item [] Zuweisung der \gks zu den Bereichen
-  \item [] Angabe des Layout-Typs
-  \item [] Angabe der Verwendeten GUI-Beschreibungen
-  \item [] Definition von \gks
+  \item  Anzahl der Bereiche
+  \item  Zuweisung der \gks zu den Bereichen
+  \item  Angabe des Layout-Typs
+  \item  Angabe der Verwendeten GUI-Beschreibungen
+  \item  Definition von \gks
 \end{itemize}
 Die Definitionen der \gks nehmen einen eigenen Komplex innerhalb der
 GUI-Beschreibung ein. 
@@ -39,26 +39,26 @@ Der einzige, in dieser Iteration umgesetzte, Interaktionstyp ist ein Klick auf
 die Komponente. An dieser Interaktion können ebenso Aktionen definiert werden, die Auswirkungen auf andere Komponenten haben.
 Zusammenfassend ergeben sich folgende Metadaten der \Ks.
 \begin{itemize}
-  \item[] Typ
-  \item[] Bezeichnung
-  \item[] Text
-  \item[] Interaktion (siehe semantisches Modell \emph{Interaction})
+  \item Typ
+  \item Bezeichnung
+  \item Text
+  \item Interaktion (siehe semantisches Modell \emph{Interaction})
 \end{itemize}
 Die Interaktion benötigt folgende Attributen, die beschrieben werden müssen.
 \begin{itemize}
-  \item[] Bezeichnung
-  \item[] Interaktionstyp
-  \item[] Aktion
+  \item Bezeichnung
+  \item Interaktionstyp
+  \item Aktion
 \end{itemize}
 Aktionen nehmen wiederum einen eigenen Komplex innerhalb der
 Komponentendefinition ein. Dabei werden folgende Informationen benötigt.
 \begin{itemize}
-  \item[] Aktionstyp\\
+  \item Aktionstyp\\
   Zur Unterscheidung zwischen Interaktionen mit anderen \gks oder
   fachlichen Modellen
-  \item[] Element\\
+  \item Element\\
   Ein Verweis auf das Element, mit dem interagiert werden soll.
-  \item[] Attribute (siehe semantisches Modell \emph{Property})\\
+  \item Attribute (siehe semantisches Modell \emph{Property})\\
   Die zu verändernden Attribute des Elements.
 \end{itemize}
 Die \knks werden in einer eigenen Komponentendefinition beschrieben. Grund dafür
@@ -367,7 +367,7 @@ folgender Tabelle aufgelistet.
 \begin{tabular}[c]{|l|l|}
 			\hline
 			\hline
-				\textbf{\K} & \textbf{Spezifische Metadaten}\\
+				\textbf{Basiskomponente} & \textbf{Spezifische Metadaten}\\
 				\hline\hline
 				Label & 
   		  				Aufschrift
@@ -393,7 +393,7 @@ folgender Tabelle aufgelistet.
   		  Input-Modell
   		  \\
 				\hline
-				TabPane &  
+				TabView &  
   		  GUI-Beschreibungen für die einzelnen Tabe
   		  \\
 				\hline
@@ -403,7 +403,7 @@ folgender Tabelle aufgelistet.
  \label{tab_comp}
 \end{table}
 \noindent
-Mit Ausnahme der Metadaten des TabPanes sind alle Angaben zu anderen
+Mit Ausnahme der Metadaten des TabViews sind alle Angaben zu anderen
 Basiskomponenten optional.
 
 \subsection*{Semantisches Modell} 
