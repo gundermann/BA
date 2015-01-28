@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.10.14)  28 JAN 2015 09:56
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.10.14)  28 JAN 2015 10:19
 entering extended mode
 **ba.tex
 (C:\Users\ngundermann\git\BA\thesis\BA\ba.tex
@@ -1646,7 +1646,13 @@ Overfull \hbox (20.24529pt too wide) in paragraph at lines 124--140
 der  [][]GUI[]-Komponenten
  []
 
-[74] [75] <Bilder/Trees.jpg, id=1543, 356.0803pt x 261.97874pt>
+[74]
+Overfull \hbox (7.08884pt too wide) in paragraph at lines 149--157
+[]\T1/ppl/m/n/12 In der Me-tho-de \T1/ppl/m/it/12 com-pi-le-Com-po-nent \T1/ppl
+/m/n/12 wird ge-prüft um wel-che  [][]GUI[]-Komponente
+ []
+
+[75] <Bilder/Trees.jpg, id=1544, 356.0803pt x 261.97874pt>
 File: Bilder/Trees.jpg Graphic file (type jpg)
 
 <use Bilder/Trees.jpg>
@@ -1665,26 +1671,12 @@ Overfull \hbox (6.65782pt too wide) in paragraph at lines 240--254
  []
 
 [77 <C:/Users/ngundermann/git/BA/thesis/BA/Bilder/Trees.jpg>] [78] [79]
-
-LaTeX Warning: Reference `LST_genIAF' on page 80 undefined on input line 344.
-
-
-Overfull \hbox (28.30502pt too wide) in paragraph at lines 335--346
-\T1/ppl/m/n/12 Bei der Be-stim-mung der In-ter-ak-ti-ons-for-men wer-den die in
- der GUI-Beschreibung
+Overfull \hbox (27.33295pt too wide) in paragraph at lines 335--346
+\T1/ppl/m/n/12 nier-ten  [][]GUI[]-Komponenten durch-lau-fen und de-ren Standar
+d-Interaktionsformen
  []
 
-
-Overfull \hbox (47.67274pt too wide) in paragraph at lines 335--346
-\T1/ppl/m/n/12 de-fi-nier-ten  [][]GUI[]-Komponenten durch-lau-fen und de-ren S
-tandard-Interaktionsformen
- []
-
-[80] [81] [82]
-
-LaTeX Warning: Reference `AppXtext' on page 83 undefined on input line 463.
-
-) [83] (C:\Users\ngundermann\git\BA\thesis\BA\Fazit.tex
+[80] [81] [82]) [83] (C:\Users\ngundermann\git\BA\thesis\BA\Fazit.tex
 Kapitel 10.
 
 LaTeX Warning: Reference `AppGeneriert' on page 84 undefined on input line 12.
@@ -1699,14 +1691,14 @@ less on input line 33.
 
 
 ] [85] (C:\Users\ngundermann\git\BA\thesis\BA\AnhangA.tex
-<Bilder/standalone.jpg, id=1758, 570.63188pt x 464.4853pt>
+<Bilder/standalone.jpg, id=1763, 570.63188pt x 464.4853pt>
 File: Bilder/standalone.jpg Graphic file (type jpg)
 
 <use Bilder/standalone.jpg>
 Package pdftex.def Info: Bilder/standalone.jpg used on input line 5.
 (pdftex.def)             Requested size: 398.3386pt x 324.2374pt.
 
-<Bilder/web.jpg, id=1760, 1264.725pt x 472.76625pt>
+<Bilder/web.jpg, id=1765, 1264.725pt x 472.76625pt>
 File: Bilder/web.jpg Graphic file (type jpg)
  <use Bilder/web.jpg>
 Package pdftex.def Info: Bilder/web.jpg used on input line 7.
@@ -1734,7 +1726,7 @@ ed, duplicate ignored
 l.41 \include{AnhangA}
                        [2 <C:/Users/ngundermann/git/BA/thesis/BA/Bilder/web.jpg
 >] (C:\Users\ngundermann\git\BA\thesis\BA\AnhangB.tex
-<Bilder/explorer.jpg, id=1769, 631.60968pt x 629.35126pt>
+<Bilder/explorer.jpg, id=1774, 631.60968pt x 629.35126pt>
 File: Bilder/explorer.jpg Graphic file (type jpg)
 
 <use Bilder/explorer.jpg>
@@ -2137,10 +2129,10 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 54.
  ) 
 Here is how much of TeX's memory you used:
- 14469 strings out of 493921
- 214275 string characters out of 3150471
- 437273 words of memory out of 3000000
- 16660 multiletter control sequences out of 15000+200000
+ 14467 strings out of 493921
+ 214253 string characters out of 3150471
+ 437257 words of memory out of 3000000
+ 16658 multiletter control sequences out of 15000+200000
  72473 words of font info for 77 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  50i,18n,51p,1707b,1992s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -2177,9 +2169,9 @@ type1/public/lm/lmri12.pfb><D:/Program Files/MiKTeX/fonts/type1/public/lm/lmsy1
 s/MiKTeX/fonts/type1/urw/palatino/uplb8a.pfb><D:/Program Files/MiKTeX/fonts/typ
 e1/urw/palatino/uplr8a.pfb><D:/Program Files/MiKTeX/fonts/type1/urw/palatino/up
 lr8a.pfb><D:/Program Files/MiKTeX/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on ba.pdf (107 pages, 3139750 bytes).
+Output written on ba.pdf (107 pages, 3140615 bytes).
 PDF statistics:
- 2057 PDF objects out of 2073 (max. 8388607)
+ 2062 PDF objects out of 2073 (max. 8388607)
  652 named destinations out of 1000 (max. 500000)
  595 words of extra memory for PDF output out of 10000 (max. 10000000)
 

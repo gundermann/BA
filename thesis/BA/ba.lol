@@ -27,9 +27,9 @@
 \contentsline {lstlisting}{\numberline {9.10}Generierung der Einbindung anderer GUI-Skripte}{78}{lstlisting.9.10}
 \contentsline {lstlisting}{\numberline {9.11}Generierung einer Interchangeable-Komponente}{78}{lstlisting.9.11}
 \contentsline {lstlisting}{\numberline {9.12}Generierung der FP-Klasse}{79}{lstlisting.9.12}
-\contentsline {lstlisting}{\numberline {9.13}Generierung des Klassen-Kopfs der IP-Klasse}{79}{lstlisting.9.13}
-\contentsline {lstlisting}{\numberline {9.14}\"Ubersetzung der Interaktionsformen}{80}{lstlisting.9.14}
-\contentsline {lstlisting}{\numberline {9.15}\"Ubersetzung der Standard-Interaktionsform von Trees}{81}{lstlisting.9.15}
+\contentsline {lstlisting}{\numberline {9.13}Generierung der IP-Klasse}{79}{lstlisting.9.13}
+\contentsline {lstlisting}{\numberline {9.14}Generierung der Interaktionsformen}{80}{lstlisting.9.14}
+\contentsline {lstlisting}{\numberline {9.15}Generierung der Standard-Interaktionsformen von Trees}{81}{lstlisting.9.15}
 \contentsline {lstlisting}{\numberline {9.16}Generierung einer Interaktionsform}{81}{lstlisting.9.16}
 \contentsline {lstlisting}{\numberline {9.17}Generierung der Kommandoinitialisierung}{82}{lstlisting.9.17}
 \contentsline {lstlisting}{\numberline {9.18}Generierung der Methoden zur Bestimmung der auszuf\"uhrenden Aktionen bei einer Interaktion}{82}{lstlisting.9.18}

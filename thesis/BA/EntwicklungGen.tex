@@ -146,9 +146,9 @@ def getInit(UIDescription description) '''
 	}
 '''
 \end{lstlisting}
-In der Methode \emph{compileComponent} wird geprüft um welche UI-Komponente es
+In der Methode \emph{compileComponent} wird geprüft um welche \gk es
 sich handelt. Diese wird anschließend compiliert, wobei der entsprechende
-Quell-Code zur frameworkspezifischen Definition der Komponente generiert wird.
+Quellcode zur frameworkspezifischen Definition der Komponente generiert wird.
 Im Fall des Labels werden der entsprechende Import und die globale Variable
 hinzugefügt. Weiterhin muss die Referenz für die IP-Klasse definiert werden, da
 Labels Standardinteraktionen besitzen. Wenn vorhanden, müssen letztlich die
@@ -208,7 +208,7 @@ zur Beschreibung des Inhalts- und des Verweisebaums in GUI-Klassen
 transformieren, die innerhalb der MCF ausgeführt werden können.\\
 Die generierten Dateien (\emph{GuiInhaltsbaum.java} und
 \emph{GuiVerweisebaum.java}) befinden sich auf dem beiliegenden Datenträger
-(siehe Anlage \ref{cd}) im Projekt \emph{Explorer}.
+(siehe \hyperref[cd]{Anlage}) im Projekt \emph{Explorer}.
 Abbildung \ref{Abb_Trees} zeigt die beiden GUIs, welche bei der Ausführung
 der generierten Dateien im Kontext von profil c/s erzeugt werden.
 \myBigFigure{Trees.jpg}{Generierte GUI des Inhalts- und Verweisebaums}{Trees}
@@ -276,18 +276,18 @@ def compileInterchangeable(InterchangeableDefinition definition)'''
 	«definition.id».setIfName("«definition.id»");
 '''
 \end{lstlisting}
-Die generierten Dateien sind auf dem beiliegenden Datenträger (siehe Anlage
-\ref{cd}) zu finden.
+Die generierten Dateien sind auf dem beiliegenden Datenträger (siehe
+\hyperref[cd]{Anlage}) zu finden.
 Es handelt sich um die Dateien \emph{GuiInhaltsbaum.java}, \emph{GuiVerweisebaum.java} und
 \emph{GuiExplorer.java}. Abbildung \ref{Abb_explorerGen} (in Anhang
-\hyperref[explorergui]{B}) zeigt die \gui, welches durch die Klasse
+\hyperref[explorergui]{B}) zeigt die \gui, welche durch die Klasse
 \emph{GuiExplorer.java} erzeugt wird.
 
 
 \subsection*{FP-Klassen}
 Da für die FP-Klassen lediglich der Klassen-Rumpf und der Konstruktor generiert
-wird, ist diese Aufgabe entsprechend einfach. Es werden wiederum eine Oberklasse
-und entsprechende Importe benötigt, wie Listing \ref{LST_FPGen} zu entnehmen
+wird, ist diese Aufgabe entsprechend einfach. Dafür werden lediglich eine
+Oberklasse und entsprechende Importe benötigt, wie Listing \ref{LST_FPGen} zu entnehmen
 ist.
 \begin{lstlisting}[{caption= Generierung der FP-Klasse
 },{label=LST_FPGen}] 
@@ -304,9 +304,9 @@ def genFpSource() '''
 \subsection*{IP-Klassen}
 Um ein Objekt der IP-Klasse zu instantiieren wird ein Objekt der dazugehörigen
 FP-Klasse benötigt. Die Generierung der IP-Klasse beginnt wiederum mit der
-Generierung des Klassen-Kopfes mit entsprechend benötigten Imports (siehe
+Generierung des Klassenkopfs und entsprechend benötigten Imports (siehe
 Listing \ref{LST_IpKopf}).
-\begin{lstlisting}[{caption= Generierung des Klassen-Kopfs der
+\begin{lstlisting}[{caption= Generierung der
 IP-Klasse},{label=LST_IpKopf}] 
 def genIpSource(UIDescription description)'''
 	«addImport("import DE.data_experts.jwam.tools.IpObject;")»
@@ -339,10 +339,10 @@ Interaktionsformen mit den Kommandos bestimmt (\emph{genIAF} - siehe Listing
 (\emph{genCommands} - siehe Listing \ref{LST_genCommands}) und die Rümpfe für
 diese Methoden generiert (\emph{genCommandMethods} - siehe Listing
 \ref{LST_GenCommandMethods}).\\
-Bei der Bestimmung der Interaktionsformen werden die in der GUI-Beschreibung
+Bei der Bestimmung der Interaktionsformen werden die im GUI-Skript
 definierten \gks durchlaufen und deren Standard-Interaktionsformen und
-spezielle Interaktionsformen übersetzt (siehe Listing \ref{LST_genIAF}).
-\begin{lstlisting}[{caption= Übersetzung der
+spezielle Interaktionsformen übersetzt (siehe Listing \ref{LST_GenIAF}).
+\begin{lstlisting}[{caption= Generierung der
 Interaktionsformen},{label=LST_GenIAF}] 
 def genIAF(UIDescriptiondescription)''' 
 	protected void initIAFs( IAFContext iafContext ) {
@@ -363,15 +363,15 @@ def compileIAF(Definition definition)'''
 	'''
 
 \end{lstlisting}
-Für die Standard-Interaktionsformen unterschieden werden um welche
-UI-Komponente es sich handelt.\\
+Für die Standard-Interaktionsformen muss unterschieden werden um welche
+\gk es sich handelt.\\
 Zu jeder Interaktionsform gibt es ein entsprechendes Kommando, welches zur
 Generierung des Quell-Codes relevant ist. Die Zuordnung von Kommando zu
 Interaktionsform wird vom Generator vorgenommen (Beispiel Tree - siehe Listing
 \ref{LST_compileTree}). Die dafür verwendeten Methoden (z.B.
 \emph{genIAFActivator} oder \emph{genIAFTree}) können häufig wiederverwendet
 werden.
-\begin{lstlisting}[{caption= Übersetzung der Standard-Interaktionsform von
+\begin{lstlisting}[{caption= Generierung der Standard-Interaktionsformen von
 Trees},{label=LST_compileTree}] 
 def compileTreeStandardIAF(TreeDefinition definition)'''
 		«definition.id.genIAFActivator»
@@ -460,7 +460,8 @@ def genCommandMethods(UIDescription description)'''
 	'''
 \end{lstlisting}
 \parskip 20pt
-Die Generator-Klasse ist im Anhang \ref{AppXtext} zu finden.
+Die Generator-Klasse ist auf dem beiliegenden Datenträger zu finden (siehe
+\hyperref[cd]{Anlage}).
 In den Methoden zur Generierung von \gks für die GUI-Klassen sind die
 Code-Abschnitte, die das Layout bestimmen, entsprechend gekennzeichnet.
 
