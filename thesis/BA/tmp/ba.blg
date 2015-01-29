@@ -1,6 +1,7 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: ba.aux
 The style file: geralpha.bst
 A level-1 auxiliary file: titlepage.aux
+A level-1 auxiliary file: declarationofownwork.aux
 A level-1 auxiliary file: Einleitung.aux
 A level-1 auxiliary file: Analyse.aux
 A level-1 auxiliary file: DSL.aux
@@ -14,7 +15,6 @@ A level-1 auxiliary file: Fazit.aux
 A level-1 auxiliary file: AnhangA.aux
 A level-1 auxiliary file: AnhangB.aux
 A level-1 auxiliary file: cd.aux
-A level-1 auxiliary file: declarationofownwork.aux
 Database file #1: thesis.bib
 Warning--to sort, need author, editor, or key in ghosh
 Warning--to sort, need author, editor, or key in mdsdvoelter

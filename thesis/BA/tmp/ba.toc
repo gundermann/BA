@@ -49,9 +49,9 @@
 \contentsline {section}{\numberline {9.2}Umsetzung des frameworkspezifischen Generators}{74}{section.9.2}
 \contentsline {chapter}{\numberline {10}Zusammenfassung und Ausblick}{85}{chapter.10}
 \contentsline {chapter}{\numberline {A}Zuwendungsblatt f\"ur Web- und Standalone-Client}{X}{appendix.A}
-\contentsline {chapter}{\numberline {B}Generierte Explorer-GUI}{XII}{appendix.B}
-\contentsline {chapter}{\numberline {C}Inhalt des beiliegenden Datentr\"agers}{XIII}{appendix.C}
-\contentsline {chapter}{Glossar}{XIV}{section*.52}
-\contentsline {chapter}{Literaturverzeichnis}{XVII}{section*.55}
+\contentsline {chapter}{\numberline {B}Generierte Explorer-GUI}{XIII}{appendix.B}
+\contentsline {chapter}{\numberline {C}Inhalt des beiliegenden Datentr\"agers}{XIV}{appendix.C}
+\contentsline {chapter}{Glossar}{XV}{section*.52}
+\contentsline {chapter}{Literaturverzeichnis}{XVIII}{section*.55}
 \select@language {English}
 \select@language {german}

@@ -28,6 +28,12 @@
 {\em Eine DSL f{\"u}r Harel-Statecharts mit PetitParser}.
 \newblock Arbeitspapiere der Nordakademie. Nordakad., 2010.
 
+\bibitem[{DAT}]{gui}
+{\sc {DATACOM Buchverlag GmbH}}: {\em GUI (graphical user interface)}.
+\newblock URL:
+  www.itwissen.info/definition/lexikon/graphical-user-interface-GUI-Grafische-Benutzeroberflaeche.html.
+\newblock Zuletzt eingesehen am 29.01.2015.
+
 \bibitem[{dat}14]{pcswikifoerd}
 {\sc {data experts GmbH}}: {\em Förderantrag}.
 \newblock Profil Wiki der deg, März 2014.
@@ -35,7 +41,10 @@
 
 \bibitem[deG07]{DegDKElerIAntragsmappe}
 {\sc GmbH~data~experts}: {\em Detailkonzept ELER/i-Antragsmappe}, Januar 2007.
-\newblock Letzte Änderung am 01.12.2014.
+
+\bibitem[Dir00]{dirnbauer2000usability}
+{\sc Dirnbauer, Kurt}: {\em Usability}.
+\newblock Libri Books on Demand, 2000.
 
 \selectlanguage{\English}
 \bibitem[DM14]{mdsd}

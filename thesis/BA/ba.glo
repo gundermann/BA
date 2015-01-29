@@ -1,6 +1,6 @@
 \glossaryentry{Graphical User Interface?\glossentry{GUI}|setentrycounter[]{page}\glsnumberformat}{VII}
-\glossaryentry{Useability?\glossentry{Useability}|setentrycounter[]{page}\glsnumberformat}{1}
-\glossaryentry{Useability?\glossentry{Useability}|setentrycounter[]{page}\glsnumberformat}{1}
+\glossaryentry{Usability?\glossentry{Usability}|setentrycounter[]{page}\glsnumberformat}{1}
+\glossaryentry{Usability?\glossentry{Usability}|setentrycounter[]{page}\glsnumberformat}{1}
 \glossaryentry{Graphical User Interface?\glossentry{GUI}|setentrycounter[]{page}\glsnumberformat}{1}
 \glossaryentry{Traditionelle GUI-Entwicklung?\glossentry{Traditionlle GUI-Entwicklung}|setentrycounter[]{page}\glsnumberformat}{1}
 \glossaryentry{Graphical User Interface?\glossentry{GUI}|setentrycounter[]{page}\glsnumberformat}{1}
@@ -15,7 +15,6 @@
 \glossaryentry{Graphical User Interface?\glossentry{GUI}|setentrycounter[]{page}\glsnumberformat}{2}
 \glossaryentry{Graphical User Interface?\glossentry{GUI}|setentrycounter[]{page}\glsnumberformat}{2}
 \glossaryentry{Graphical User Interface?\glossentry{GUI}|setentrycounter[]{page}\glsnumberformat}{2}
-\glossaryentry{JEE?\glossentry{JEE}|setentrycounter[]{page}\glsnumberformat}{2}
 \glossaryentry{InVeKoS?\glossentry{InVeKoS}|setentrycounter[]{page}\glsnumberformat}{2}
 \glossaryentry{Graphical User Interface?\glossentry{GUI}|setentrycounter[]{page}\glsnumberformat}{3}
 \glossaryentry{Graphical User Interface?\glossentry{GUI}|setentrycounter[]{page}\glsnumberformat}{3}
@@ -67,7 +66,7 @@
 \glossaryentry{Graphical User Interface?\glossentry{GUI}|setentrycounter[]{page}\glsnumberformat}{9}
 \glossaryentry{Turing-Maschine?\glossentry{Turing-Maschine}|setentrycounter[]{page}\glsnumberformat}{11}
 \glossaryentry{Domäne?\glossentry{Domäne}|setentrycounter[]{page}\glsnumberformat}{11}
-\glossaryentry{DSL Umgebung?\glossentry{DSL Umgebung}|setentrycounter[]{page}\glsnumberformat}{12}
+\glossaryentry{DSL-Umgebung?\glossentry{DSL-Umgebung}|setentrycounter[]{page}\glsnumberformat}{12}
 \glossaryentry{Zielumgebung?\glossentry{Zielumgebung}|setentrycounter[]{page}\glsnumberformat}{13}
 \glossaryentry{Graphical User Interface?\glossentry{GUI}|setentrycounter[]{page}\glsnumberformat}{14}
 \glossaryentry{Top-Down Parser?\glossentry{Top-Down Parser}|setentrycounter[]{page}\glsnumberformat}{27}
@@ -141,6 +140,6 @@
 \glossaryentry{Verweisebaum?\glossentry{Verweisebaum}|setentrycounter[]{page}\glsnumberformat}{74}
 \glossaryentry{Graphical User Interface?\glossentry{GUI}|setentrycounter[]{page}\glsnumberformat}{79}
 \glossaryentry{Graphical User Interface?\glossentry{GUI}|setentrycounter[]{page}\glsnumberformat}{80}
-\glossaryentry{Swing?\glossentry{Swing}|setentrycounter[]{page}\glsnumberformat}{XIV}
-\glossaryentry{Zuwendungsblatt?\glossentry{Zuwendungsblatt}|setentrycounter[]{page}\glsnumberformat}{XVI}
-\glossaryentry{Zuwendungs-Berechner?\glossentry{Zuwendungs-Berechner}|setentrycounter[]{page}\glsnumberformat}{XVI}
+\glossaryentry{Swing?\glossentry{Swing}|setentrycounter[]{page}\glsnumberformat}{XV}
+\glossaryentry{Zuwendungsblatt?\glossentry{Zuwendungsblatt}|setentrycounter[]{page}\glsnumberformat}{XVII}
+\glossaryentry{Zuwendungs-Berechner?\glossentry{Zuwendungs-Berechner}|setentrycounter[]{page}\glsnumberformat}{XVII}

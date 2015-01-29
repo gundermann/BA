@@ -5,18 +5,17 @@
 {
 	name=Graphical User Interface,
 	 description={ist die Bezeichnung für die Schnittstelle zwischen dem
-	 Benutzer und dem Programm. Die Kurzform GUI wird in dieser Arbeit aufgrund
-	 des allgemeinen Sprachgebrauch vom Genus her als feminim verwendet (die
-	 GUI).},
+	 Benutzer und dem Programm \simplevcite{gui}. Die Kurzform GUI wird in dieser
+	 Arbeit aufgrund des allgemeinen Sprachgebrauch als feminimes Nomen verwendet (die GUI)},
 	 short=GUI,
-	 plural=GUIs }
+	 plural=GUIs}
 
 
-\newglossaryentry{Useability}
+\newglossaryentry{Usability}
 {
-	name=Useability,
-	description={beschreibt die Nutzerfreundlichkeit einer GUI, sowie auch die
-	Nutzerfreundlichkeit einer Software} }
+	name=Usability,
+	description={beschreibt die Nutzerfreundlichkeit einer Software
+	\vcite{dirnbauer2000usability}{10}}}
 
 \newglossaryentry{InVeKoS}
 {
@@ -33,7 +32,7 @@
 {
 	name=Zuwendungsblatt,
 	description={ist die grafische Dokumentation der Ergebisse des\\
-	\gls{Zuwendungs-Berechner}s innerhalb von profil c/s} }
+	\gls{Zuwendungs-Berechner}s innerhalb von profil c/s \simplevcite{DegDKElerIAntragsmappe}}}
 
 
 \newglossaryentry{Zuwendungs-Berechner}
@@ -43,7 +42,7 @@
 	Werkzeug kann der Sachbearbeiter die Zuwendung, die dem Antragsteller bewilligt werden soll, 
 	nach einem standardisierten Verfahren berechnen (siehe Abschnitt "Algorithmen"). 
 	Das Ergebnis wird im \gls{Zuwendungsblatt} dokumentiert, das auch später mit
-	demselben Werkzeug angesehen werden kann}\cite{DegDKElerIAntragsmappe}} }
+	demselben Werkzeug angesehen werden kann}\cite{DegDKElerIAntragsmappe}}}
 	
 	
 \newglossaryentry{Förderantrag}
@@ -56,14 +55,14 @@
 \newglossaryentry{Swing}
 {
 	name=Swing,
-	description={ist ein GUI-Framework für Java Applikationen\cite{swing}}
+	description={ist ein GUI-Framework für Java Applikationen \simplevcite{swing}}
 }
 
 \newglossaryentry{wingS}
 {
 	name=wingS,
 	description={ist ein Framework für die komponentenorientierte
-	von Webapplikationen. \simplevcite{wings}} }
+	von Webapplikationen \simplevcite{wings}}}
 	
 
 \newglossaryentry{GridBagLayout}
@@ -71,8 +70,8 @@
 	name=GridBagLayout,
 	description={ist ein Layoutmanager innerhalb von \gls{Swing}, welcher die
 	Komponenten horizontal, vertical und entlang der Grundlinie anordnet.
-	Dabei müssen die Komponenten nicht die gleiche Größe haben.
-	\simplevcite{gridbag}} }
+	Dabei müssen die Komponenten nicht die gleiche Größe haben
+	\simplevcite{gridbag}}}
 	
 	
 	
@@ -80,85 +79,79 @@
 \newglossaryentry{Traditionlle GUI-Entwicklung}
 {
 	name=Traditionelle GUI-Entwicklung,
-	description={Bei der traditionellen
-	GUI-Entwicklung wird mit traditionellen
+	description={beschreibt die 
+	GUI-Entwicklung unter Verwendung von traditionellen
 	GUI-Toolkits gearbeitet. Bei diesen Toolkits wird Aufbau der GUI 
 	genau beschrieben.
 	Für die Interaktion mit den GUI-Widgets, werden Listener implementiert, die
 	auf andere Events reagieren, die von anderen Widgets erzeugt generiert wurden.
 	Events können zu unterschiedlichen Zeitpunkten generiert werden und es wird
-	nicht festgelegt in welcher Reihenfolge sie bei anderen Widgest ankommen.
+	nicht festgelegt in welcher Reihenfolge sie bei anderen Widgest ankommen
 	\simplevcite{10}}}
 	
 	
 	
 	
-		\newglossaryentry{Turing-Maschine}
+\newglossaryentry{Turing-Maschine}
 {
 	name=Turing-Maschine,
 	description={ist ein Automatenmodell welches vom Alan M. Turing 1936
 	vorgestellt wurde. Die Turing-Maschine abstrahiert die generelle
-	Arbeitsweise heutiger Rechner. \cite[S.145ff]{hedtstueck}}}
+	Arbeitsweise heutiger Rechner \cite[S.145ff]{hedtstueck}}}
 	
 			
-			\newglossaryentry{Domäne}
+\newglossaryentry{Domäne}
 {
 	name=Domäne,
 	description={oder Anwendungsdomäne beschreibt ein abgegrenztes Wissen- oder
-	Interessengebiet. \cite[S.170]{softarch}}}
+	Interessengebiet \cite[S.170]{softarch}}}
 	
 	
-			\newglossaryentry{DSL Umgebung}
+\newglossaryentry{DSL-Umgebung}
 {
-	name=DSL Umgebung,
-	description={}}
+	name=DSL-Umgebung,
+	description={beinhaltet den Parser, den Lexer und die
+	Verarbeitungslogik \vcite{ghosh}{211}}}
 
-			\newglossaryentry{Zielumgebung}
+\newglossaryentry{Zielumgebung}
 {
 	name=Zielumgebung,
-	description={}}
-	
-				\newglossaryentry{AST}
-{
-	name=Abstrakter Syntax Baum,
-	description={}}
+	description={einer DSL beschreibt, die Infrastruktur, in der
+	die Generierten Artefakte integriert werden können \vcite{voelter}{26}}}
 	
 	
-	\newglossaryentry{Multiselection-Komponente}
+\newglossaryentry{Multiselection-Komponente}
 {
 	name=Multiselection-Komponente,
 	description={Die Multiselection-Komponenten stellt in profil c/s ein Werkzeug
 	zur Auswahl mehrerer Objekte dar. Die GUI einer Multiselection-Komponenten
-	ist in Abbildung \ref{msk} dargestellt. Es wird zwischen einem
-	Kontainer, der die Objekten, die zur Auswahl zur Verfügung stehen (linke
+	ist in Abbildung \ref{Abb_msk} in Anhang \ref{zuwendungsblatt} dargestellt. Es wird zwischen
+	einem Kontainer, der die Objekten, die zur Auswahl zur Verfügung stehen (linke
 	Seite), enthält und einem Kontainer, der die Objekten, die bereits ausgewählt
 	sind, enthält (rechte Seite) unterschieden. Mit den in der Mitte befindlichen
 	Schaltflächen ist es möglich die Objekte von einem Kontainer in den anderen zu
-	navigieren. }}
+	navigieren. In der Abbildung bestehen keine Auswhlmöglichkeiten
+	 }}
 	
 	
-			\newglossaryentry{Top-Down Parser}
+	
+\newglossaryentry{Top-Down Parser}
 {
 	name=Top-Down Parser,
-	description={Top-Down Parser
+	description={
 erzeugen den Parse-Tree ausgehend von der Wurzel. Im Gegensatz dazu stehen
-Bottom-Up Parser, welche den Parse-Tree von den Blätter aus erzeugen.
+Bottom-Up Parser, welche den Parse-Tree von den Blätter aus erzeugen 
 \cite[S.225]{ghosh}}}
 
 
-		\newglossaryentry{JEE}
-{
-	name=JEE,
-	description={}}
-	
-			\newglossaryentry{Inhaltsbaum}
+\newglossaryentry{Inhaltsbaum}
 {
 	name=Inhaltsbaum,
-	description={Der Inhaltsbaum einer Antragsmappe enthält die Dokumente die in
-	dieser Antragsmappe vorliegen.}}
+	description={einer Antragsmappe enthält die Dokumente die in
+	dieser Antragsmappe vorliegen}}
 	
-			\newglossaryentry{Verweisebaum}
+\newglossaryentry{Verweisebaum}
 {
 	name=Verweisebaum,
-	description={Der Verweisebaum einer Antragsmappe enthält Verweise auf
-	Dokumente, die mit dieser Antragsmappe in Verbindung stehen.}}
+	description={einer Antragsmappe enthält Verweise auf
+	Dokumente, die mit dieser Antragsmappe in Verbindung stehen}}

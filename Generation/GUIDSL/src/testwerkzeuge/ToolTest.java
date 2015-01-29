@@ -6,8 +6,11 @@ import gui.GuiInhaltsbaum;
 import java.awt.BorderLayout;
 import java.awt.Dimension;
 
+import DE.data_experts.jwam.gui.swingpf.PfMultiSelectionArea;
 import DE.data_experts.jwammc.core.interfaces.ComponentFactory;
+import DE.data_experts.jwammc.core.pf.PfComboBoxAndMultiSelectionField;
 import DE.data_experts.jwammc.core.pf.PfFrame;
+import DE.data_experts.jwammc.core.pf.PfMultiSelectionField;
 import DE.data_experts.jwammc.core.pf.PfRootPane;
 import DE.data_experts.jwammc.swing.JComponentFactory;
 import DE.data_experts.profi.util.registratur.gui.GUIVerweiseExplorer;
@@ -33,4 +36,5 @@ public class ToolTest {
 		frame.pack();
 		frame.setVisible(true);
 	}
+	
 }
