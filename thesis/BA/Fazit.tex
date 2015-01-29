@@ -1,24 +1,103 @@
 \chapter{Zusammenfassung und Ausblick}\label{Zusammenfassung und Ausblick}
-Durch die Generierung der GUI-, IP- und FP-Klassen muss die Routinearbeit R1
-(siehe Kapitel \ref{Analyse}) nicht mehr durchgeführt werden. Die Generierung
-von Tabellen in Hinblick auf Vermeidung der Routinearbeit R2 (siehe Kapitel
-\ref{Analyse}) konnte aus Zeitgründen nicht mehr umgesetzt werden. Es ist
-jedoch auf Basis der gezeigten Generierungen davon auszugehen, dass den
-Entwicklern auch diese Arbeit vom Generator abgenommen werden kann. Dafür bedarf
-es jedoch die Umsetzung und Einbindung der Layout-Datei. \\
-Bezüglich der Sprache kann die Anforderung \emph{weniger LOC zur Beschreibung
-von UIs} (siehe Kapitel \ref{GUI-DSL}) erst an dieser Stelle als umgesetzt
-betrachtet werden. Zum Vergleich sind die generierten Klassen und die
-DSL-Skripte auf deren Basis jene erzeugt wurden im Anhang \ref{AppGeneriert} zu
-finden. Die DSL-Skripte umfassen dabei lediglich 13 Codezeilen. Die
-daraus generierten Klassen umfassen mehr als 200 LOC.\\
-Test und Ausführung
-
-Einbettung in den Entwicklungsprozess
-
-protected regions
-
-Generierung Eclipse Editor
-
-nur MCF-Code im Prototypen
+Mit der \g ist es möglich \guis zu beschreiben, die für \pcs verwendet werden
+können. Die Entwicklung der \g ist mit der 3. Iteration bei weitem nicht
+abgeschlossen. Es wurde jedoch gezeigt, dass es möglich ist, aus einem
+GUI-Skript die für \pcs relevanten \emph{GUI-}, \emph{IP-} und \emph{FP-Klassen}
+zu generieren. Dabei ist es gelungen, die allgemeinen Anforderung
+(\emph{\hyperref[Tab_PrioAnfGUI]{AA1}} bis
+\emph{\hyperref[Tab_PrioAnfGUI]{AA5}}) durch die Konzeption der \g umzusetzen.\\
+Durch die Verwendung unterschiedlicher Generatoren, ist es möglich verschiedene
+GUI-Frameworks einzusetzten, mit denen die Darstellung im Web- und
+Standalone-Bereich gelingt (siehe
+Anforderun \emph{\hyperref[Tab_PrioAnfGUI]{AA1}} und
+\emph{\hyperref[Tab_PrioAnfGUI]{AA2}}). Dass die \guis auf beiden Plattformen
+ähnlich aufgebaut sind, hängt bei der Verwendung der \g von der Verwendung
+ähnlicher Layout-Dateien ab. Insofern ist ein ähnlicher Aufbau nicht erzwungen
+worden, aber dennoch umsetzbar (siehe Anforderung
+\emph{\hyperref[Tab_PrioAnfGUI]{AA3}}). Auf die Möglichkeiten der Erweiterung
+verwendeter Frameworks, hat die \g keine Einfluss (siehe Anforderung
+\emph{\hyperref[Tab_PrioAnfGUI]{AA4}}). Diese Anforderung muss bei der
+Evaluation neuer GUI-Frameworks beachtet werden. Die Ausdruckskraft der \g
+(siehe Anforderung \emph{\hyperref[Tab_PrioAnfGUI]{AA5}}) kann nicht objektiv
+bewertet werden, weshalb unterschiedliche Meinungen darüber existieren werden,
+ob diese Anforderung mit der \g umgesetzt wurde.\\
+Die Anforderungen an die Sprache (siehe Anforderung \emph{\hyperref[AS1]{AS1}}
+bis \emph{\hyperref[AS6]{AS6}}) wurden bis auf Anforderung
+\emph{\hyperref[AS3]{AS3}} und \emph{\hyperref[AS5]{AS5}} vollständig umgesetzt.
+Die Beschreibung von Interaktionen erwies sich als schwierig, da die Aktionen, welche bei den
+Interaktionen ausgeführt werden sollen, nur schwer abstrahiert werden können.
+Von daher mussten bei dieser Anforderung Abstriche gemacht werden, sodass mit
+der \g nur die Interaktionsform beschrieben werden kann. Ob die
+Abstraktionsebene der Layoutbeschreibung (siehe Anforderung
+\emph{\hyperref[AS3]{AS3}}) ausreicht, kann erst entschieden werden, wenn die \g weiter eingesetzt wird und die Layout-Dateien vom Generator verwendet werden.Die Beschreibung von
+\gui durch die Zusammensetzung von \gks (siehe Anforderung
+\emph{\hyperref[AS1]{AS1}}), sowie auch die Wiederverwendung und Erweiterung von
+\gks (siehe Anforderung \emph{\hyperref[AS2]{AS2}}) wurde umgesetzt und in
+Kapitel \ref{Entwicklung einer DSL zur Beschreibung der GUI in profil c/s}
+demonstriert. Dass die \g um neue \gks erweitert werden kann (siehe
+Anforderung \emph{\hyperref[AS6]{AS6}}), wurde ebenfalls gezeigt. Der bei der
+Demonstration verwendetet Quellcode erwies sich als weitaus kürzer, als der Generierte Quellcode. In der \g wurden lediglich 13 Codezeilen benötigt. Der Generator erzeugte daraus ca. 200 Codezeilen. Ob
+Anforderung \emph{\hyperref[AS4]{AS4}} damit umgesetzt ist, ist wiederrum eine
+subjektive Entscheidung. Dabei muss jedoch erwähnt werden, dass der Quellcode,
+der für die Implementierung des Generators und der Grammatik für diese
+Anforderung nicht berücksichtigt wird.\\
+Die in Kapitel \ref{Analyse} beschriebenen Probleme des \MCF werden dadurch
+jedoch nicht völlig gelöst. Dass sich die \g an keinem spezifischen
+GUI-Framework orientiert (siehe Problem \emph{\hyperref[P2]{P2}}), führt dazu
+dass die Überführung der GUI-Skripte in andere GUI-Frameworks einfacher
+erscheint. Unter der Voraussetzung, dass die Implementierung eines
+entsprechenden Generators einfacher ist, als die Anpassung eines neuen
+GUI-Frameworks an Swing, ist diese Eigenschaft ein Vorteil gegenüber dem \MCF.
+In dieser Arbeit wurde ledigliche ein Prototyp implementiert, der das Generieren
+von Klassen für das \MCF realisiert. Das beweist jedoch nicht, ob die
+Entwicklung von Generatoren, die Quellcode für andere GUI-Frameworks generieren,
+mehr oder weniger Aufwand erfordert. Das Problem, dass die verwendeten
+GUI-Frameworks nicht aktuell sind (siehe Problem \emph{\hyperref[P1]{P1}}, wird durch die \g alleine nicht gelöst.
+Entscheidungen über die Integration neuer Frameworks müssen von der \deg
+getroffen werden.\\
+Allerdings ist es möglich durch die Verwendung der \g und eines spezifischen
+Generators für das \MCF den Entwicklern bestimmte Routineaufgaben abzunehmen.
+Beispielsweise kann sas Pflegen der korrekten Bezeichnungen in den \emph{IP-}
+und \emph{GUI-Klassen} (siehe Routinearbeit \emph{\hyperref[R1]{R1}}) vom
+Generator übernommen werden. Über das Erstellung von Klassen, die für die
+Darstellung von Tabellen benötigt werden (betrifft Routinearbeit
+\emph{\hyperref[R2]{R2}}), kann an dieser Stelle keine Auskunft gegeben werden,
+da im Prototypen diese Klassen nicht generiert werden. Die dritte genannte
+Routinearbeit (\emph{\hyperref[R3]{R3}}) wird den Entwicklern nicht abgenommen,
+da die Pflege der Attribute der \gks weiterhin über die Properties-Dateien
+erfolgen kann.\\
+Abgesehen davon sind für den Einsatz der \g weitere Aspekte in Betracht zu
+ziehen, die in dieser Arbeit nicht angesprochen wurden. Zum einen betrifft das
+die Frage, wie die \g in den Enticklungsprozess der \deg eingebettet werden
+kann. Mit \emph{Xtext} ist es zwar möglich einen Editor zu generieren, aber wie
+dieser in die \emph{Eclipse IDE} dauerhaft eingebunden werden kann, wurde nicht
+beschrieben.\\
+Wenn eine \gui beschrieben wurde wäre es von Vorteil, wenn
+sie im Anschluss daran getestet werden kann, bevor es zur Generierung
+kommt. Bei der Entwicklung eines solchen Test-Konzeptes, ist auch die
+Entwicklung eines grafischen Editors für die \g in Betracht zu ziehen. Damit
+wäre es nicht nötig, dass das zur Entwicklung der \g verwendete Framework einen
+Editor mit anpassbaren Validierungen bereitstellt.\\
+Für eine solchen Test wäre auch die Layout-Dateien relevant. Der Aufbau dieser
+Dateien muss noch festgelegt werden. Entweder die \deg verwendet dafür
+bestehende Sprachen wie \emph{CSS}, oder Definiert eine neue \emph{DSL}, mit der
+es ausschließlich möglich ist das Layouts zu beschreiben.\\
+Bei der Generierung der Klassen sind Überlegungen über die Art der
+Transformation (\emph{Transformer Generation} oder \emph{Templated Generation} - siehe Kapitel \ref{Domänenspezifische Sprachen}) anzustellen. In Kapitel \ref{Entwicklung des Generators für das Generieren von Klassen für das Multichannel-Framework} wurde festgelegt, dass für den Prototypen \emph{Transformer Generation} verwendet
+wird. Andererseits wurde auch darauf hingewiesen, dass bei der Generierung der
+\emph{IP-} und \emph{FP-Klassen} die \emph{Templated Generation} in Betracht
+gezogen werden sollte, da nur bestimmte Teile des Quellcodes verändert werden
+müssen.\\
+Zusammenfassend ist zu sagen, dass noch viele Fragen
+offen sind bevor entschieden werden kann, ob die \g in der \deg eingesetzt
+wird. Ein erster Schritt wäre es zu prüfen, ob der Generator in der Lage ist, alle anderen GUI-Komponenten, deren
+Generation nicht demonstriert wurde, genauso gut erzeugen, wie die, deren
+Generierung bereits umgesetzt wurde. Darüber hinaus wird die Weiterentwicklung
+des Generators für das \MCF und die Implementierung von Generatoren für andere
+GUI-Frameworks zeigen, ob die \g ausreichend abstrakt, oder nicht abstrakt
+genug für \pcs und die verwendeten GUI-Frameworks ist. Das Konzept welches im
+Zuge dieser Arbeit entstand (siehe Kapitel \ref{Lösungsidee}) ist jedoch
+vielversprechend, wenn es mit dem Konzept des \MCF verglichen wird. Das beweist
+die Umsetzung der Anforderungen. Allerdings ist an eine kurzfristigen Ablösung
+des \MCF durch die \g nicht zu denken.
 

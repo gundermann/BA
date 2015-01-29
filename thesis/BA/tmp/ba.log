@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.10.14)  29 JAN 2015 12:16
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.10.14)  29 JAN 2015 13:54
 entering extended mode
 **ba.tex
 (C:\Users\ngundermann\git\BA\thesis\BA\ba.tex
@@ -1052,13 +1052,13 @@ do-mä-nen-spe-zi-fi-schen Spra-che (DSL)\T1/ppl/m/n/12 ,
  []
 
 [8]
-Overfull \hbox (10.48381pt too wide) in paragraph at lines 212--214
+Overfull \hbox (10.48381pt too wide) in paragraph at lines 210--212
 [][]\T1/ppl/m/n/12 Vergebene Be-zeich-nun-gen für  \T1/ppl/m/it/12 GUI-Komponen
 ten \T1/ppl/m/n/12 müs-sen in un-ter-schied-
  []
 
 
-Overfull \hbox (24.6364pt too wide) in paragraph at lines 218--221
+Overfull \hbox (24.6364pt too wide) in paragraph at lines 216--219
 [][]\T1/ppl/m/n/12 Die Wer-te für Auf-schrif-ten, Grö-ÿen-ein-stel-lun-gen u.ä.
  für  \T1/ppl/m/it/12 GUI-Komponenten
  []
@@ -1660,33 +1660,39 @@ au-fen und de-ren Standard-Interaktionsformen
 [81] [82] [83]) [84] (C:\Users\ngundermann\git\BA\thesis\BA\Fazit.tex
 Kapitel 10.
 
-LaTeX Warning: Reference `AppGeneriert' on page 85 undefined on input line 12.
+LaTeX Warning: Reference `L\"osungsidee' on page 85 undefined on input line 99.
 
-)
+
+
+Overfull \hbox (6.93387pt too wide) in paragraph at lines 2--103
+\T1/ppl/m/n/12 schie-de-ne GUI-Frameworks ein-zu-setz-ten, mit de-nen die Dar-s
+tel-lung im Web-
+ []
+
 
 Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
-less on input line 42.
+less on input line 103.
 
 [85
 
 
 
-] [86] (C:\Users\ngundermann\git\BA\thesis\BA\AnhangA.tex
+] [86] [87]) [88] (C:\Users\ngundermann\git\BA\thesis\BA\AnhangA.tex
 Anhang A.
-<Bilder/standalone.jpg, id=1757, 570.63188pt x 464.4853pt>
+<Bilder/standalone.jpg, id=1792, 570.63188pt x 464.4853pt>
 File: Bilder/standalone.jpg Graphic file (type jpg)
 
 <use Bilder/standalone.jpg>
 Package pdftex.def Info: Bilder/standalone.jpg used on input line 5.
 (pdftex.def)             Requested size: 398.3386pt x 324.2374pt.
 
-<Bilder/web.jpg, id=1759, 1264.725pt x 472.76625pt>
+<Bilder/web.jpg, id=1794, 1264.725pt x 472.76625pt>
 File: Bilder/web.jpg Graphic file (type jpg)
  <use Bilder/web.jpg>
 Package pdftex.def Info: Bilder/web.jpg used on input line 7.
 (pdftex.def)             Requested size: 731.23584pt x 273.34616pt.
 
-<Bilder/multiselection.jpg, id=1761, 631.60968pt x 204.765pt>
+<Bilder/multiselection.jpg, id=1796, 631.60968pt x 204.765pt>
 File: Bilder/multiselection.jpg Graphic file (type jpg)
 
 <use Bilder/multiselection.jpg>
@@ -1706,7 +1712,7 @@ gundermann/git/BA/thesis/BA/Bilder/web.jpg>]) [12 <C:/Users/ngundermann/git/BA/
 thesis/BA/Bilder/multiselection.jpg>]
 (C:\Users\ngundermann\git\BA\thesis\BA\AnhangB.tex
 Anhang B.
-<Bilder/explorer.jpg, id=1776, 631.60968pt x 629.35126pt>
+<Bilder/explorer.jpg, id=1810, 631.60968pt x 629.35126pt>
 File: Bilder/explorer.jpg Graphic file (type jpg)
 
 <use Bilder/explorer.jpg>
@@ -2056,10 +2062,10 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 63.
  ) 
 Here is how much of TeX's memory you used:
- 14646 strings out of 493921
- 216240 string characters out of 3150471
- 441208 words of memory out of 3000000
- 16791 multiletter control sequences out of 15000+200000
+ 14647 strings out of 493921
+ 216249 string characters out of 3150471
+ 441145 words of memory out of 3000000
+ 16790 multiletter control sequences out of 15000+200000
  90949 words of font info for 83 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  50i,18n,51p,1707b,1992s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -2082,9 +2088,9 @@ s/MiKTeX/fonts/type1/urw/palatino/uplb8a.pfb><D:/Program Files/MiKTeX/fonts/typ
 e1/urw/palatino/uplbi8a.pfb><D:/Program Files/MiKTeX/fonts/type1/urw/palatino/u
 plr8a.pfb><D:/Program Files/MiKTeX/fonts/type1/urw/palatino/uplr8a.pfb><D:/Prog
 ram Files/MiKTeX/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on ba.pdf (109 pages, 3184690 bytes).
+Output written on ba.pdf (111 pages, 3196483 bytes).
 PDF statistics:
- 2086 PDF objects out of 2487 (max. 8388607)
- 691 named destinations out of 1000 (max. 500000)
+ 2120 PDF objects out of 2487 (max. 8388607)
+ 693 named destinations out of 1000 (max. 500000)
  600 words of extra memory for PDF output out of 10000 (max. 10000000)
 
