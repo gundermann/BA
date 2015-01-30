@@ -14,6 +14,9 @@
 \usepackage{bibgerm}
 \usepackage{palatino}
 \usepackage{chngpage}
+\usepackage{chngcntr}
+\counterwithout{figure}{chapter}
+\counterwithout{table}{chapter}
 \renewcommand{\floatpagefraction}{0.85}
 
 \usepackage{fancyhdr}
@@ -49,6 +52,7 @@
 %\lstset{language=java} 
 \lstset{basicstyle=\scriptsize}
 \lstset{numbers=left, numberstyle=\tiny, numbersep=2pt, breaklines=true} 
+\lstset{ numberbychapter=false}
 \graphicspath{{Bilder/}}
 \newcommand{\listoflolentryname}{\lstlistingname} 
 \usepackage{float}
