@@ -16,13 +16,5 @@ A level-1 auxiliary file: AnhangA.aux
 A level-1 auxiliary file: AnhangB.aux
 A level-1 auxiliary file: cd.aux
 Database file #1: thesis.bib
-Warning--to sort, need author, editor, or key in ghosh
-Warning--to sort, need author, editor, or key in mdsdvoelter
-Warning--to sort, need author, editor, or key in brauer2010dsl
-Warning--to sort, need author, editor, or key in softarch
-Warning--empty author and editor in brauer2010dsl
-Warning--empty author and editor in ghosh
-Warning--empty year in 1
-Warning--empty author and editor in mdsdvoelter
-Warning--empty author and editor in softarch
-(There were 9 warnings)
+Warning--can't use both author and editor fields in ghosh
+(There was 1 warning)

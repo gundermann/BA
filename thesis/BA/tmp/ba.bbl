@@ -1,21 +1,20 @@
 \newcommand{\etalchar}[1]{$^{#1}$}
 \begin{thebibliography}{RDGN10}
 
-\bibitem[114]{xtextdoc}
-{\em Xtext Documentation}.
-\newblock URL: http://www.eclipse.org/Xtext/ \\ cumentation/2.6.0/Xtext
-  Documentation.pdf, September 2014.
-\newblock Zuletzt eingesehen am 24.11.2014.
-
 \bibitem[Aho08]{alfred}
-{\sc Aho, Alfred~V}: {\em Compiler: Prinzipien, Techniken und Werkzeuge}.
-\newblock Pearson Studium, 2008.
+{\sc Aho, {Alfred V.}}: {\em Compiler: Prinzipien, Techniken und Werkzeuge}.
+\newblock Pearson Studium Informatik. Pearson Education Deutschland, 2008.
 
 \bibitem[BCK08]{journals/insk/BrauerCK08}
 {\sc Brauer, Johannes}, {\sc Christoph Crasemann} \btxandlong{}\ {\sc Hartmut
   Krasemann}: {\em Auf dem Weg zu idealen Programmierwerkzeugen -
   Bestandsaufnahme und Ausblick.}
 \newblock Informatik Spektrum, 31(6):580--590, 2008.
+
+\bibitem[BCK10]{brauer2010dsl}
+{\sc Brauer, Johannes}, {\sc Christoph Crasemann} \btxandlong{}\ {\sc Hartmut
+  Krasemann}: {\em Eine DSL f{\"u}r Harel-Statecharts mit PetitParser}.
+\newblock Arbeitspapiere der Nordakademie. Nordakademie, 2010.
 
 \bibitem[BPL13]{11}
 {\sc Bacikov{\'a}, Michaela}, {\sc Jaroslav Porub{\"a}n} \btxandlong{}\ {\sc
@@ -24,23 +23,21 @@
 \newblock \Btxinlong{}\ {\em OASIcs-OpenAccess Series in Informatics},
   \btxvolumelong{}~29. Schloss Dagstuhl-Leibniz-Zentrum fuer Informatik, 2013.
 
-\bibitem[bra10]{brauer2010dsl}
-{\em Eine DSL f{\"u}r Harel-Statecharts mit PetitParser}.
-\newblock Arbeitspapiere der Nordakademie. Nordakad., 2010.
-
 \bibitem[{DAT}]{gui}
 {\sc {DATACOM Buchverlag GmbH}}: {\em GUI (graphical user interface)}.
 \newblock URL:
   www.itwissen.info/definition/lexikon/graphical-user-interface-GUI-Grafische-Benutzeroberflaeche.html.
 \newblock Zuletzt eingesehen am 29.01.2015.
 
+\bibitem[{dat}07]{DegDKElerIAntragsmappe}
+{\sc {data experts GmbH}}: {\em Detailkonzept ELER/i-Antragsmappe}, Januar
+  2007.
+\newblock Zuletzt eingesehen am 20.12.2014.
+
 \bibitem[{dat}14]{pcswikifoerd}
 {\sc {data experts GmbH}}: {\em Förderantrag}.
-\newblock Profil Wiki der deg, März 2014.
-\newblock Zuletzt eingesehen am 02.12.2014.
-
-\bibitem[deG07]{DegDKElerIAntragsmappe}
-{\sc GmbH~data~experts}: {\em Detailkonzept ELER/i-Antragsmappe}, Januar 2007.
+\newblock Profil Wiki der data experts GmbH, März 2014.
+\newblock Zuletzt eingesehen am 20.12.2014.
 
 \bibitem[Dir00]{dirnbauer2000usability}
 {\sc Dirnbauer, Kurt}: {\em Usability}.
@@ -69,10 +66,10 @@
 \newblock URL:
   http://ec.europa.eu/agriculture/direct-support/iacs/index\_de.htm, November
   2014.
-\newblock Zuletzt eingesehen am 02.12.2014.
+\newblock Zuletzt eingesehen am 20.12.2014.
 
-\bibitem[gho11]{ghosh}
-{\em DSLs in Action}.
+\bibitem[Gho11]{ghosh}
+{\sc Ghosh, Debasish}: {\em DSLs in Action}.
 \newblock Manning Publications Co., 2011.
 
 \bibitem[Gun13]{gundermann3}
@@ -101,59 +98,44 @@
 {\sc Hofer, Stefan~Michael}: {\em Refactoring-Muster der
   WAM-Modellarchitektur}.
 \newblock \btxmastthesis{}, FH Ober{\"o}sterreich, 2006.
-\newblock Online verfügbar
-  URL:http://swt-www.informatik.uni-hamburg.de/uploads/media/DA\_StefanHofer.pdf
-  . Zuletzt eingesehen am 09.01.2015.
 
 \bibitem[KB11]{10}
 {\sc Krishnaswami, {Neelakantan R.}} \btxandlong{}\ {\sc Nick Benton}: {\em A
   Semantic Model for Graphical User Interfaces}.
 \newblock Microsoft Research, September 2011.
-\newblock Verfügar unter URL:.
 
-\bibitem[LW]{1}
+\bibitem[LW07]{1}
 {\sc Lu, Xudong} \btxandlong{}\ {\sc Jiancheng Wan}: {\em Model Driven
   Development of Complex User Interface}.
-\newblock \Btxtechreplong{}, Shandong University.
-\newblock Verfügar unter URL: http://ceur-ws.org/Vol-297/paper7.pdf.
-
-\bibitem[mds06]{mdsdvoelter}
-{\em Model-Driven Software Development}.
-\newblock John Wiley & Sons Ltd, Februar 2006.
+\newblock \Btxinlong{}\ {\em MoDELS'07 Workshop on Model Driven Development of
+  Advanced User Interfaces}. Shandong University, 2007.
 
 \bibitem[MHP99]{20}
 {\sc Myers, Brad}, {\sc {Scott E.} Hudson} \btxandlong{}\ {\sc Randy Pausch}:
   {\em Past, Present and Future of User Interface Software Tools}.
 \newblock \Btxtechreplong{}, Carnegie Mellon University, September 1999.
-\newblock Verfügar unter URL:
-  http://www.cs.cmu.edu/~amulet/papers/futureofhci.pdf.
-
-\bibitem[ML09]{carpediem}
-{\sc {Markus Voelter}} \btxandlong{}\ {\sc {Lars Corneliussen}}: {\em Carpe
-  Diem}.
-\newblock DotNetPro, 5 2009.
 
 \bibitem[Oraa]{gridbag}
 {\sc Oracle}: {\em Class GridBagLayout}.
 \newblock URL:
   https://docs.oracle.com/javase/7/docs/api/java/awt/\\GridBagLayout.html.
-\newblock Zuletzt eingesehen am 02.12.2014.
+\newblock Zuletzt eingesehen am 20.12.2014.
 
 \bibitem[Orab]{swing}
 {\sc Oracle}: {\em Swing}.
 \newblock URL:
   https://docs.oracle.com/javase/jp/8/\\technotes/guides/swing/index.html.
-\newblock Zuletzt eingesehen am 02.12.2014.
+\newblock Zuletzt eingesehen am 20.12.2014.
 
 \bibitem[Pec14]{pechforum}
 {\sc Pech, Vaclav}: {\em Can MPS be integrated in Eclipse as Eclipse Plugin
   similar to Xtext?}
-\newblock URL:http://forum.jetbrains.com/thread/Meta-Programming-System-1033,
+\newblock URL: http://forum.jetbrains.com/thread/Meta-Programming-System-1033,
   Oktober 2014.
 \newblock Zuletzt eingesehen am 12.01.2015.
 
 \bibitem[PSV13]{pech}
-{\sc Pech, Vaclav}, {\sc Alex Shatalin} \btxandlong{}\ {\sc Markus Voelter}:
+{\sc Pech, Vaclav}, {\sc Alex Shatalin} \btxandlong{}\ {\sc Markus Völter}:
   {\em JetBrains MPS as a tool for extending Java}.
 \newblock \Btxinlong{}\ {\em Proceedings of the 2013 International Conference
   on Principles and Practices of Programming on the Java Platform: Virtual
@@ -165,68 +147,64 @@
   Languages}.
 \newblock \Btxinlong{}\ {\em {4th Workshop on Dynamic Languages and
   Applications (DYLA 2010)}}, 2010.
-\newblock Online verfügbar unter URL:
-  http://bergel.eu/download/Dyla2010/dyla10\_submission\_4.pdf Zuletzt
-  eingesehen am 6.1.2015.
 
 \bibitem[Roa09]{Roam2009}
 {\sc Roam, Dan}: {\em The Back of the Napkin (Expanded Edition) - Solving
   Problems and Selling Ideas with Pictures}.
 \newblock Penguin, New York, Expanded \btxeditionlong{}, 2009.
 
+\bibitem[Sau03]{sauerDip}
+{\sc Sauer, Joachim}: {\em Gestaltung von Anwendungssoftware nach dem
+  WAM-Ansatz auf mobilen Ger{\"a}ten}.
+\newblock \btxmastthesis{}, Fachbereich Informatik, Universit{\"a}t Hamburg,
+  2003.
+
 \bibitem[Sau10]{SauerDiss}
 {\sc Sauer, Joachim}: {\em Architekturzentrierte agile Anwendungsentwicklung in
   global verteilten Projekten}.
 \newblock \btxphdthesis{}, Universität Hamburg, 2010.
-\newblock Online verfügbar
-  URL:http://ediss.sub.uni-hamburg.de/volltexte/2011/4959/pdf/Dissertation\_Sauer.pdf
-  Zuletzt eingesehen am 08.01.2015.
 
 \bibitem[Sch05]{schmelzer}
 {\sc Schmelzer, Robert~Franz}: {\em Realisierung teilautomatisierter Prozesse
   durch die Kombination von Ablaufsteuerung und unterst{\"u}tzter Kooperation}.
 \newblock \btxmastthesis{}, FH Ober{\"o}sterreich, 2005.
-\newblock Online verfügbar URL:http://www.schmelzer.cc/Downloads/Files/
-  Diplomarbeit\_Schmelzer.pdf . Zuletzt eingesehen am 09.01.2015.
 
 \bibitem[Sch07]{wings}
 {\sc Schmid, Benjamin}: {\em Get your wingS back!}
 \newblock URL: http://jaxenter.de/artikel/Get-your-wingS-back, Dezember 2007.
-\newblock Zuletzt eingesehen am 02.12.2014.
-
-\bibitem[SdS03]{sauerDip}
-{\sc Sauer, Joachim} \btxandlong{}\ {\sc Ausgew{\"a}hlte~Themen der
-  Softwaretechnik}: {\em Gestaltung von Anwendungssoftware nach dem WAM-Ansatz
-  auf mobilen Ger{\"a}ten}.
-\newblock \btxmastthesis{}, Fachbereich Informatik, Universit{\"a}t Hamburg,
-  2003.
-\newblock Online verfügbar
-  URL:http://swt-www.informatik.uni-hamburg.de/uploads/media/Diplomarbeit\_Joachim\_Sauer.pdf
-  . Zuletzt eingesehen am 09.01.2015.
+\newblock Zuletzt eingesehen am 20.12.2014.
 
 \bibitem[SKNH05]{3}
 {\sc Sukaviriya, Noi}, {\sc Santhosh Kumaran}, {\sc Prabir Nandi}
   \btxandlong{}\ {\sc Terry Heath}: {\em Integrate Model-driven UI with
   Business Transformations: Shifting Focus of Model-driven UI}.
-\newblock \Btxtechreplong{}, IBM T.J. Watson Research Center, Oktober 2005.
-\newblock Verfügar unter URL:
-  http://www.research.ibm.com/people/p/prabir/MDDAUI.pdf.
-
-\bibitem[sof08]{softarch}
-{\em Software-Architektur}.
-\newblock Springer Science & Business Media (Berlin Heidelberg), 2008.
+\newblock IBM T.J. Watson Research Center, Oktober 2005.
 
 \bibitem[Ste07]{jwammc}
 {\sc Stechow, Dirk}: {\em JWAMMC - Das Multichannel-Framework der data-experts
   gmbh}.
-\newblock Vortrag, Dezember 2007.
+\newblock Vortrag in der data experts GmbH, Dezember 2007.
+
+\bibitem[SV06]{mdsdvoelter}
+{\sc Stahl, Thomas} \btxandlong{}\ {\sc Markus Völter}: {\em Model-Driven
+  Software Development}.
+\newblock John Wiley \& Sons Ltd, Februar 2006.
+
+\bibitem[{The}14]{xtextdoc}
+{\sc {The Eclipse Foundation}}: {\em Xtext Documentation}, September 2014.
 
 \bibitem[{Use}12]{usability}
 {\sc {Userlutions GmbH}}: {\em 3 Gründe, warum gute Usability wichtig ist}.
 \newblock URL:
   http://rapidusertests.com/blog/2012/04/3-gute-grunde-fuer-usability-tests/,
   April 2012.
-\newblock Zuletzt eingesehen am 01.12.2014.
+\newblock Zuletzt eingesehen am 20.12.2014.
+
+\bibitem[VAC{\etalchar{+}}08]{softarch}
+{\sc Vogel, Oliver}, {\sc Ingo Arnold}, {\sc Arif Chughtai}, {\sc Edmund
+  Ihler}, {\sc Timo Kehrer}, {\sc Uwe Mehlig} \btxandlong{}\ {\sc Uwe Zdun}:
+  {\em Software-Architektur}.
+\newblock Springer Science & Business Media (Berlin Heidelberg), 2008.
 
 \bibitem[VBK{\etalchar{+}}13]{voelter}
 {\sc Völter, Markus}, {\sc Sebastian Benz}, {\sc Lennart Kats}, {\sc Mats
@@ -234,8 +212,12 @@
   Engineering}.
 \newblock CreateSpace Independent Publishing Platform, 2013.
 
-\bibitem[Vol11]{volter2011programming}
-{\sc Volter, Markus}: {\em From programming to modeling-and back again}.
+\bibitem[VC09]{carpediem}
+{\sc Völter, Markus} \btxandlong{}\ {\sc Lars Corneliussen}: {\em Carpe Diem}.
+\newblock DotNetPro, 5 2009.
+
+\bibitem[Völ11]{volter2011programming}
+{\sc Völter, Markus}: {\em From programming to modeling-and back again}.
 \newblock Software, IEEE, 28(6):20--25, 2011.
 
 \end{thebibliography}

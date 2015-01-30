@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.10.14)  30 JAN 2015 10:26
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.10.14)  30 JAN 2015 12:15
 entering extended mode
 **ba.tex
 (C:\Users\ngundermann\git\BA\thesis\BA\ba.tex
@@ -1029,9 +1029,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 115--145
  []
 
 [6]
-Overfull \hbox (11.9652pt too wide) in paragraph at lines 146--172
+Overfull \hbox (11.56909pt too wide) in paragraph at lines 146--172
 []\T1/ppl/m/it/12 Automaten \T1/ppl/m/n/12 kön-nen selbst-stän-dig Rou-ti-ne-ar
--bei-ten er-le-di-gen. (vgl. [[]SdS03[], S.30])
+-bei-ten er-le-di-gen. (vgl. [[]Sau03[], S.30])
  []
 
 
@@ -1110,9 +1110,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 165--172
  []
 
 [15 <C:/Users/ngundermann/git/BA/thesis/BA/Bilder/mdsd.jpg>]
-Overfull \hbox (8.98575pt too wide) in paragraph at lines 201--208
+Overfull \hbox (11.46968pt too wide) in paragraph at lines 201--208
 \T1/ppl/m/n/12 ge-för-dert, was eben-so zu qua-li-ta-tiv hö-her-wer-ti-gen Quel
-l-co-de führt. [[]gho11[]]21 
+l-co-de führt. [[]Gho11[]]21 
  []
 
 
@@ -1788,18 +1788,10 @@ Overfull \hbox (10.49765pt too wide) in paragraph at lines 46--48
  []
 
 [16]) [17] (C:\Users\ngundermann\git\BA\thesis\BA\ba.bbl
-Underfull \hbox (badness 2088) in paragraph at lines 32--36
+Underfull \hbox (badness 2088) in paragraph at lines 27--31
 \T1/ppl/m/n/12 user-interface-GUI-Grafische-Benutzeroberflaeche.html.  Zu-
  []
 
-
-Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
-less on input line 45.
-
-[18
-
-
-]
 
 ! Package babel Error: You haven't defined the language English yet.
 
@@ -1807,12 +1799,20 @@ See the babel package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.49 \selectlanguage{\English}
+l.46 \selectlanguage{\English}
                               
 Your command will be ignored, type <return> to proceed
 
+
+Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
+less on input line 47.
+
+[18
+
+
+]
 ! Misplaced alignment tab character &.
-l.64 \newblock John Wiley &
+l.61 \newblock John Wiley &
                             Sons, New York, 2007.
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -1822,213 +1822,76 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 67--73
+Underfull \hbox (badness 10000) in paragraph at lines 64--70
 [][]\T1/ppl/m/sc/12 Generaldirektion Land-wirt-schaft und länd-li-che
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 67--73
+Underfull \hbox (badness 10000) in paragraph at lines 64--70
 \T1/ppl/m/it/12 (In-Ve-KoS)\T1/ppl/m/n/12 .  URL: http://ec.europa.eu/agricultu
 re/direct-
  []
 
 
-Underfull \hbox (badness 5681) in paragraph at lines 79--82
+Underfull \hbox (badness 5681) in paragraph at lines 76--79
 [][]\T1/ppl/m/sc/12 Gundermann, Niels\T1/ppl/m/n/12 : \T1/ppl/m/it/12 Pro-to-ty
 -pi-sche Im-ple-men-tie-rung ei-nes
  []
 
 
-Underfull \hbox (badness 5681) in paragraph at lines 90--94
+Underfull \hbox (badness 5681) in paragraph at lines 87--91
 [][]\T1/ppl/m/sc/12 Gundermann, Niels\T1/ppl/m/n/12 : \T1/ppl/m/it/12 Pro-to-ty
 -pi-sche Im-ple-men-tie-rung ei-nes
  []
 
 
-Underfull \hbox (badness 6445) in paragraph at lines 101--107
+Underfull \hbox (badness 6445) in paragraph at lines 98--101
 [][]\T1/ppl/m/sc/12 Hofer, Ste-fan Mi-cha-el\T1/ppl/m/n/12 : \T1/ppl/m/it/12 Re
 factoring-Muster der WAM-
  []
 
-
-Underfull \hbox (badness 2556) in paragraph at lines 101--107
-\T1/ppl/m/it/12 Modellarchitektur\T1/ppl/m/n/12 .  Di-plom-ar-beit, FH Ober-öst
-er-reich, 2006.
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 101--107
-\T1/ppl/m/n/12 On-li-ne ver-füg-bar URL:http://swt-www.informatik.uni-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 101--107
-\T1/ppl/m/n/12 hamburg.de/uploads/media/DA_StefanHofer.pdf . Zu-letzt
- []
-
 [19]
-! Misplaced alignment tab character &.
-l.122 \newblock John Wiley &
-                             Sons Ltd, Februar 2006.
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 137--141
+Underfull \hbox (badness 10000) in paragraph at lines 119--123
 [][]\T1/ppl/m/sc/12 Oracle\T1/ppl/m/n/12 : \T1/ppl/m/it/12 Class Grid-BagLay-ou
 t\T1/ppl/m/n/12 .  URL: htt-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 149--154
+Underfull \hbox (badness 10000) in paragraph at lines 131--136
 [][]\T1/ppl/m/sc/12 Pech, Vaclav\T1/ppl/m/n/12 : \T1/ppl/m/it/12 Can MPS be in-
-te-gra-ted in
+te-gra-ted in Eclip-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 149--154
-\T1/ppl/m/it/12 Eclip-se as Eclip-se Plu-gin si-mi-lar to Xtext?
+Underfull \hbox (badness 10000) in paragraph at lines 131--136
+\T1/ppl/m/it/12 se as Eclip-se Plu-gin si-mi-lar to Xtext?  \T1/ppl/m/n/12 URL:
+
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 149--154
-\T1/ppl/m/n/12 URL:http://forum.jetbrains.com/thread/Meta-Programming-
+Underfull \hbox (badness 10000) in paragraph at lines 131--136
+\T1/ppl/m/n/12 http://forum.jetbrains.com/thread/Meta-Programming-
  []
 
 [20]
-Underfull \hbox (badness 1173) in paragraph at lines 163--171
-\T1/ppl/m/sc/12 Os-car Nier-strasz\T1/ppl/m/n/12 : \T1/ppl/m/it/12 Prac-ti-cal 
-Dy-na-mic Gram-mars for Dy-na-
- []
-
-
-Overfull \hbox (13.13264pt too wide) in paragraph at lines 163--171
-\T1/ppl/m/n/12 http://bergel.eu/download/Dyla2010/dyla10_submission_4.pdf
- []
-
-
-Underfull \hbox (badness 2126) in paragraph at lines 178--184
-[][]\T1/ppl/m/sc/12 Sauer, Joa-chim\T1/ppl/m/n/12 : \T1/ppl/m/it/12 Ar-chi-tek-
-tur-zen-trier-te agi-le An-wen-dungs-ent-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 178--184
-\T1/ppl/m/n/12 hamburg.de/volltexte/2011/4959/pdf/Dissertation_Sauer.pdf
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 186--191
+Underfull \hbox (badness 2173) in paragraph at lines 168--171
 [][]\T1/ppl/m/sc/12 Schmelzer, Ro-bert Franz\T1/ppl/m/n/12 : \T1/ppl/m/it/12 Re
-a-li-sie-rung teil-au-to-
+a-li-sie-rung teil-au-to-ma-ti-sier-ter
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 186--191
-\T1/ppl/m/it/12 ma-ti-sier-ter Pro-zes-se durch die Kom-bi-na-ti-on von Ab-lauf
--
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 186--191
-\T1/ppl/m/it/12 steue-rung und un-ter-stütz-ter Ko-ope-ra-ti-on\T1/ppl/m/n/12 .
-  Di-plom-ar-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 186--191
-\T1/ppl/m/n/12 beit, FH Ober-öster-reich, 2005.  On-li-ne ver-füg-bar
- []
-
-
-Underfull \hbox (badness 1694) in paragraph at lines 186--191
-\T1/ppl/m/n/12 URL:http://www.schmelzer.cc/Downloads/Files/ Di-plom-ar-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 193--196
+Underfull \hbox (badness 10000) in paragraph at lines 173--176
 [][]\T1/ppl/m/sc/12 Schmid, Ben-ja-min\T1/ppl/m/n/12 : \T1/ppl/m/it/12 Get your
  wingS back!  \T1/ppl/m/n/12 URL:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 193--196
+Underfull \hbox (badness 10000) in paragraph at lines 173--176
 \T1/ppl/m/n/12 http://jaxenter.de/artikel/Get-your-wingS-back, De-zem-ber
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 198--206
-[][]\T1/ppl/m/sc/12 Sauer, Joa-chim \T1/ppl/m/n/12 und \T1/ppl/m/sc/12 Aus-ge-w
-ähl-te The-men der
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 198--206
-\T1/ppl/m/sc/12 Soft-wa-re-tech-nik\T1/ppl/m/n/12 : \T1/ppl/m/it/12 Ge-stal-tun
-g von An-wen-dungs-soft-wa-re
- []
-
-
-Underfull \hbox (badness 5050) in paragraph at lines 198--206
-\T1/ppl/m/it/12 nach dem WAM-Ansatz auf mo-bi-len Ge-rä-ten\T1/ppl/m/n/12 .  Di
--plom-ar-
- []
-
-
-Underfull \hbox (badness 5231) in paragraph at lines 198--206
-\T1/ppl/m/n/12 beit, Fach-be-reich In-for-ma-tik, Uni-ver-si-tät Ham-burg, 2003
-.
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 198--206
-\T1/ppl/m/n/12 On-li-ne ver-füg-bar URL:http://swt-www.informatik.uni-
- []
-
-
-Overfull \hbox (3.36446pt too wide) in paragraph at lines 198--206
-\T1/ppl/m/n/12 hamburg.de/uploads/media/Diplomarbeit_Joachim_Sauer.pdf
- []
-
-[21]
-Underfull \hbox (badness 10000) in paragraph at lines 208--214
-[][]\T1/ppl/m/sc/12 Sukaviriya, Noi\T1/ppl/m/n/12 , \T1/ppl/m/sc/12 San-thosh K
-u-ma-ran\T1/ppl/m/n/12 , \T1/ppl/m/sc/12 Pra-b-ir
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 208--214
-\T1/ppl/m/sc/12 Nan-di \T1/ppl/m/n/12 und \T1/ppl/m/sc/12 Ter-ry Heath\T1/ppl/m
-/n/12 : \T1/ppl/m/it/12 In-te-gra-te Model-driven UI
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 208--214
-\T1/ppl/m/it/12 with Busi-ness Trans-for-ma-ti-ons: Shif-ting Fo-cus of Model-
- []
-
-
-Underfull \hbox (badness 6445) in paragraph at lines 208--214
-\T1/ppl/m/it/12 driven UI\T1/ppl/m/n/12 .  Tech-ni-scher Be-richt, IBM T.J. Wat
--son Re-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 208--214
-\T1/ppl/m/n/12 se-arch Cen-ter, Ok-to-ber 2005.  Ver-fü-gar un-ter URL:
- []
-
-
-Overfull \hbox (10.85233pt too wide) in paragraph at lines 208--214
-\T1/ppl/m/n/12 http://www.research.ibm.com/people/p/prabir/MDDAUI.pdf. 
- []
-
 ! Misplaced alignment tab character &.
-l.217 \newblock Springer Science &
+l.207 \newblock Springer Science &
                                    Business Media (Berlin Heidelberg), 2008.
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -2037,7 +1900,7 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-)
+[21])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 63.
  [22]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 63.
@@ -2085,7 +1948,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 63.
 Here is how much of TeX's memory you used:
  14648 strings out of 493921
  216251 string characters out of 3150471
- 441058 words of memory out of 3000000
+ 441074 words of memory out of 3000000
  16791 multiletter control sequences out of 15000+200000
  90949 words of font info for 83 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
@@ -2109,7 +1972,7 @@ s/MiKTeX/fonts/type1/urw/palatino/uplb8a.pfb><D:/Program Files/MiKTeX/fonts/typ
 e1/urw/palatino/uplbi8a.pfb><D:/Program Files/MiKTeX/fonts/type1/urw/palatino/u
 plr8a.pfb><D:/Program Files/MiKTeX/fonts/type1/urw/palatino/uplr8a.pfb><D:/Prog
 ram Files/MiKTeX/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on ba.pdf (111 pages, 3190292 bytes).
+Output written on ba.pdf (111 pages, 3190692 bytes).
 PDF statistics:
  2086 PDF objects out of 2487 (max. 8388607)
  693 named destinations out of 1000 (max. 500000)
