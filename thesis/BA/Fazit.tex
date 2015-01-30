@@ -12,12 +12,12 @@ Standalone-Bereich gelingt (siehe
 Anforderung \emph{\hyperref[Tab_PrioAnfGUI]{AA1}} und
 \emph{\hyperref[Tab_PrioAnfGUI]{AA2}}).\\
  Dass die \guis auf beiden Plattformen
-ähnlich aufgebaut sind, hängt bei der Verwendung der \g von der Verwendung
+ähnlich aufgebaut sind, hängt von der Verwendung
 ähnlicher Layout-Dateien ab. Insofern ist ein ähnlicher Aufbau nicht erzwungen
 worden, aber dennoch umsetzbar (siehe Anforderung
 \emph{\hyperref[Tab_PrioAnfGUI]{AA3}}).\\
  Auf die Möglichkeiten der Erweiterung
-verwendeter Frameworks, hat die \g keine Einfluss (siehe Anforderung
+verwendeter Frameworks, hat die \g keinen Einfluss (siehe Anforderung
 \emph{\hyperref[Tab_PrioAnfGUI]{AA4}}). Diese Anforderung muss bei der
 Evaluation neuer GUI-Frameworks beachtet werden.\\
  Die Ausdruckskraft der \g
@@ -37,7 +37,7 @@ Abstraktionsebene der Layoutbeschreibung (siehe Anforderung
 \emph{\hyperref[AS3]{AS3}}) ausreicht, kann erst entschieden werden, wenn die
 \g weiter eingesetzt wird und die Layout-Dateien vom Generator verwendet
 werden.\\
-Die Beschreibung von \gui durch die Zusammensetzung von \gks (siehe Anforderung
+Die Beschreibung von \guis durch die Zusammensetzung von \gks (siehe Anforderung
 \emph{\hyperref[AS1]{AS1}}), sowie auch die Wiederverwendung und Erweiterung
 von \gks (siehe Anforderung \emph{\hyperref[AS2]{AS2}}) wurde umgesetzt und in
 Kapitel \ref{Entwicklung einer DSL zur Beschreibung der GUI in profil c/s}
@@ -45,18 +45,18 @@ demonstriert.\\
  Dass die \g um neue \gks erweitert werden kann (siehe
 Anforderung \emph{\hyperref[AS6]{AS6}}), wurde ebenfalls gezeigt.\\
  Der bei der
-Demonstration verwendetet Quellcode erwies sich als weitaus kürzer, als der Generierte Quellcode. In der \g wurden lediglich 13 Codezeilen benötigt. Der Generator erzeugte daraus ca. 200 Codezeilen. Ob Anforderung \emph{\hyperref[AS4]{AS4}} damit umgesetzt ist, ist wiederrum eine
-subjektive Entscheidung. Dabei muss jedoch erwähnt werden, dass der Quellcode,
-der für die Implementierung des Generators und der Grammatik für diese
+Demonstration verwendetet Quellcode erwies sich als weitaus kürzer, als der
+generierte Quellcode. In der \g wurden lediglich 13 Codezeilen benötigt. Der Generator erzeugte daraus ca. 200 Codezeilen. Ob Anforderung \emph{\hyperref[AS4]{AS4}} damit umgesetzt ist, ist wiederrum eine subjektive Entscheidung. Dabei muss jedoch erwähnt werden, dass der Quellcode,
+der für die Implementierung des Generators und der Grammatik bei dieser
 Anforderung nicht berücksichtigt wird.\\
-Die in Kapitel \ref{Analyse} beschriebenen Probleme des \MCF werden dadurch
-jedoch nicht vollständig gelöst. Dass sich die \g an keinem spezifischen
-GUI-Framework orientiert (siehe Problem \emph{\hyperref[P2]{P2}}), führt dazu
+Die in Kapitel \ref{Analyse} beschriebenen Probleme des \MCF werden durch die \g
+nicht vollständig gelöst. Die wegfallende Orientierung an ein spezifisches
+GUI-Framework (siehe Problem \emph{\hyperref[P2]{P2}}), führt dazu
 dass die Überführung der GUI-Skripte in andere GUI-Frameworks einfacher
 erscheint. Das setzt jedoch voraus, dass die Implementierung eines
 entsprechenden Generators einfacher ist, als die Anpassung eines neuen
-GUI-Frameworks an Swing, ist diese Eigenschaft ein Vorteil gegenüber dem \MCF.
-Der in dieser Arbeit entwickelte Prototyp, realisiert das Generieren von Klassen
+GUI-Frameworks an Swing, ist diese Eigenschaft ein Vorteil gegenüber dem \MCF. 
+Der in dieser Arbeit entwickelte Prototyp realisiert das Generieren von Klassen
 für das  \MCF. Es wird jedoch nicht geprüft, ob die Entwicklung von
 Generatoren, die Quellcode für andere GUI-Frameworks generieren, mehr oder
 weniger Aufwand erfordert. \\
@@ -92,7 +92,7 @@ kommt. Bei der Entwicklung eines solchen Test-Konzeptes, ist auch die
 Entwicklung eines grafischen Editors für die \g in Betracht zu ziehen. Damit
 wäre es nicht nötig, dass das zur Entwicklung der \g verwendete Framework einen
 Editor mit anpassbaren Validierungen bereitstellt.\\
-Für eine solchen Test wäre auch die Layout-Dateien relevant. Der Aufbau dieser
+Für einen solchen Test wäre auch die Layout-Dateien relevant. Der Aufbau dieser
 Dateien muss noch festgelegt werden. Entweder die \deg verwendet dafür
 bestehende Sprachen wie \emph{CSS}, oder Definiert eine neue \emph{DSL}, mit der
 es ausschließlich möglich ist das Layouts zu beschreiben.\\
@@ -106,15 +106,16 @@ wurde auch darauf hingewiesen, dass bei der Generierung der \emph{IP-} und
 \emph{FP-Klassen} die \emph{\hyperref[TempG]{Templated Generation}} in Betracht
 gezogen werden sollte, da nur bestimmte Teile des Quellcodes verändert werden müssen.\\
 Zusammenfassend ist zu sagen, dass noch viele Fragen
-offen sind bevor entschieden werden kann, ob die \g in der \deg eingesetzt
-werden kann. Ein erster Schritt wäre es zu prüfen, ob der Generator in der Lage
-ist, alle anderen GUI-Komponenten, deren Generation nicht demonstriert wurde, genauso gut erzeugen, wie die, deren
-Generierung bereits umgesetzt wurde. Darüber hinaus wird die Weiterentwicklung
-des Generators für das \MCF und die Implementierung von Generatoren für andere
+geklärt werden müssen, bevor entschieden werden kann, ob die \g in der \deg
+eingesetzt werden kann. Ein erster Schritt wäre es zu prüfen, ob der Generator in der Lage
+ist, alle anderen GUI-Komponenten, deren Generierung nicht demonstriert wurde,
+genauso gut erzeugen, wie die, welche bereits im Prototypen verwendet wurden.
+Darüber hinaus wird die Weiterentwicklung des Generators für das \MCF und die Implementierung von Generatoren für andere
 GUI-Frameworks zeigen, ob die \g ausreichend abstrakt, oder nicht abstrakt
 genug für \pcs und die verwendeten GUI-Frameworks ist. Das Konzept welches im
 Zuge dieser Arbeit entstand (siehe Kapitel \ref{Entwicklung einer Lösungsidee}) ist jedoch
 vielversprechend, wenn es mit dem Konzept des \MCF verglichen wird. Das beweist
-vor allem die Umsetzung der allgemeinen Anforderungen. Allerdings ist an eine
-kurzfristigen Ablösung des \MCF durch die \g nicht zu denken.
+vor allem die Umsetzung der allgemeinen Anforderungen. Allerdings ist aufgrund
+des Entwicklungsstandes an eine kurzfristigen Ablösung des \MCF durch die
+\g nicht zu denken.
 
