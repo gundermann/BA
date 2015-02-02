@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.10.14)  2 FEB 2015 11:52
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.10.14)  2 FEB 2015 14:14
 entering extended mode
 **ba.tex
 (C:\Users\ngundermann\git\BA\thesis\BA\ba.tex
@@ -1834,41 +1834,47 @@ t\T1/ppl/m/n/12 .  URL: htt-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 131--136
+Overfull \hbox (140.62117pt too wide) in paragraph at lines 125--128
+[][]\T1/ppl/m/sc/12 Oracle\T1/ppl/m/n/12 : \T1/ppl/m/it/12 Swing\T1/ppl/m/n/12 
+.  URL: http://docs.oracle.com/javase/8/docs/technotes/guides/swing/.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 130--135
 [][]\T1/ppl/m/sc/12 Pech, Vaclav\T1/ppl/m/n/12 : \T1/ppl/m/it/12 Can MPS be in-
 te-gra-ted in Eclip-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 131--136
+Underfull \hbox (badness 10000) in paragraph at lines 130--135
 \T1/ppl/m/it/12 se as Eclip-se Plu-gin si-mi-lar to Xtext?  \T1/ppl/m/n/12 URL:
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 131--136
+Underfull \hbox (badness 10000) in paragraph at lines 130--135
 \T1/ppl/m/n/12 http://forum.jetbrains.com/thread/Meta-Programming-
  []
 
 [20]
-Underfull \hbox (badness 2173) in paragraph at lines 168--171
+Underfull \hbox (badness 2173) in paragraph at lines 167--170
 [][]\T1/ppl/m/sc/12 Schmelzer, Ro-bert Franz\T1/ppl/m/n/12 : \T1/ppl/m/it/12 Re
 a-li-sie-rung teil-au-to-ma-ti-sier-ter
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 173--176
+Underfull \hbox (badness 10000) in paragraph at lines 172--175
 [][]\T1/ppl/m/sc/12 Schmid, Ben-ja-min\T1/ppl/m/n/12 : \T1/ppl/m/it/12 Get your
  wingS back!  \T1/ppl/m/n/12 URL:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 173--176
+Underfull \hbox (badness 10000) in paragraph at lines 172--175
 \T1/ppl/m/n/12 http://jaxenter.de/artikel/Get-your-wingS-back, De-zem-ber
  []
 
 ! Misplaced alignment tab character &.
-l.207 \newblock Springer Science &
+l.206 \newblock Springer Science &
                                    Business Media (Berlin Heidelberg), 2008.
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -1949,7 +1955,7 @@ s/MiKTeX/fonts/type1/urw/palatino/uplb8a.pfb><D:/Program Files/MiKTeX/fonts/typ
 e1/urw/palatino/uplbi8a.pfb><D:/Program Files/MiKTeX/fonts/type1/urw/palatino/u
 plr8a.pfb><D:/Program Files/MiKTeX/fonts/type1/urw/palatino/uplr8a.pfb><D:/Prog
 ram Files/MiKTeX/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on ba.pdf (111 pages, 3189785 bytes).
+Output written on ba.pdf (111 pages, 3189789 bytes).
 PDF statistics:
  2086 PDF objects out of 2487 (max. 8388607)
  693 named destinations out of 1000 (max. 500000)
