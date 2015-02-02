@@ -10,7 +10,7 @@
   einschließich der Null) \vcite{hedtstueck}{6}. \dcite{Eine endliche Folge
   ($x_1, \ldots, x_k$) mit $x_i \in V (i = 1, \ldots, k)$ heißt Wort über $V$ der Länge
   $k$}{hedtstueck}{6}.\\
-  Programmiersprachen werden dazu verwendet, um mit einem Computer
+  Programmiersprachen werden dazu verwendet, um einem Computer
   Instruktionen zukommen zu lassen (vgl. \cite[S.27]{fowler},
   \cite[S.27]{voelter}).
   In diesem Kontext werden die Bestandteile einer Sprache wie folgt
@@ -53,8 +53,8 @@
   unwichtig sind, auch in der Sprache außer Acht gelassen werden können.
   Semantik und Syntax sollten demnach der jeweiligen Abstraktionsebene
   angepasst sein. Eine DSL ist
-  demnach in ihren Ausdrucksmöglichkeiten eingeschränkt. Je stärker diese
-  Einschränkung ist, desto besser ist die Unterstützung der Domäne sowie die
+  demzufolge in ihren Ausdrucksmöglichkeiten eingeschränkt. Je stärker diese
+  Einschränkung ist, desto besser sind die Unterstützung der Domäne sowie die
   Ausdruckskraft der DSL \vcite{fowler}{27f}.\\ 
   Darüber hinaus sollte ein
   Programm, welches in einer DSL geschrieben wurde, alle Qualitätsanforderungen erfüllen, die auch bei einer Umsetzung des
@@ -69,10 +69,10 @@
   Grammatiken und insbesondere Grammatik-Regeln werden zur Beschreibung von
   Sprachen verwendet \vcite{hedtstueck}{23f}. Für die Definition einer Grammatik
   verweise ich auf den Praxisbericht \cite{gundermann5}. Grammatiken können in
-  einer Hierachie dargestellt werden (\emph{Chomsky-Hierarchie})
+  einer Hierarchie dargestellt werden (\emph{Chomsky-Hierarchie})
   \vcite{hedtstueck}{32f}. Bei Programmiersprachen handelt es sich
   um \emph{kontextfreie Sprachen}. Diese sind entscheidbar
-  und somit von einem Compiler verarbeitet werden 
+  und können somit von einem Compiler verarbeitet werden 
  \vcite{hedtstueck}{16f}.
   
 \subsection*{Lexikalische Analyse}
@@ -111,7 +111,7 @@
   	Bei der Transformer Generation wird das semantische Modell als Input
   	verwendet. Aus diesem Input wird Quellcode für die Zielumgebung generiert.
   	\vcite{fowler}{533f} Ein solches Verfahren wird oft verwendet,
-  	wenn ein Großteil des Output generiert wird und die Inhalte des semantischen
+  	wenn ein Großteil des Outputs generiert wird und die Inhalte des semantischen
   	Modells einfach in den Quellcode der Zielumgebung überführt werden
   	können.\vcite{fowler}{535}\label{TransG}
   	\item[] \textbf{Templated Generation} \\
@@ -127,7 +127,7 @@
 \section{Anwendungsbeispiele}
 Die Anwendungsbereiche für DSLs sind breit gefächert. Die bekanntesten DSLs
 sind Sprachen wie \emph{SQL} (zur Abfrage und Manipulation von Daten in einer
-realationalen Datenbank), \emph{HTML} (als Markup-Sprache für das Web) oder
+relationalen Datenbank), \emph{HTML} (als Markup-Sprache für das Web) oder
 \emph{CSS} (als Layoutbeschreibung) \vcite{ghosh}{12}. Alle Sprachen sind in
 ihren Ausdrucksmöglichkeiten eingeschränkt und von der
 Abstraktion her direkt auf eine Domäne (jeweils dahinter in Klammern genannt)
@@ -142,7 +142,7 @@ In der Einleitung wurde schon der Model-Driven Ansatz in Verbindung mit
 \acrshort{GUI}-Entwicklung erwähnt. Dieser Ansatz versucht den technischen Lösungen der
 IT-Industrie einen gewissen Grad an Agilität zu verleihen \simplevcite{3}. Das
 ist damit verbunden, dass die Produktion von Softwareprodukten schneller und besser
-vonstatten geht und mit weniger Kosten verbunden ist \vcite{mdsd}{71}.\\
+vonstatten geht und mit weniger Kosten realisierbar ist \vcite{mdsd}{71}.\\
 Erreicht wird dies, indem die Modelle formaler, strenger, vollständiger und
 konsistenter beschrieben werden \vcite{voelter}{31}. Die Grundidee ist, dass die
 Modelle Quellcode oder Funktionalitäten beschreiben und diese in der Evolution
@@ -182,15 +182,15 @@ Eigenschaft des Domänen-Fokus als ein Schlüsselelement der Definition einer DSL
 \section{Vor- und Nachteile von DSL gegenüber GPL}
 \subsection*{Vorteile}
 \subsubsection*{Ausdruckskraft}
- Laut Ghosh sollten DSLs so umgesetzt werden, dass sie präsize sind. Diese
- Präzision bedingt, dass eine DSL einfach zu verstehen ist. Sie sollte
- demnach den von  Dan Roam beschriebenen Prozess des visuellen Denkens
- (sehen - betrachten - verstehen - zeigen) \simplevcite{Roam2009} so schnell wie
- möglich abzuarbeiten.\\
+ Laut Ghosh sollten DSLs so umgesetzt werden, dass sie präzise sind. Diese
+ Präzision bedingt, dass eine DSL einfach zu verstehen ist. Bei der Verwendung
+ einer DSL sollte demnach der von  Dan Roam beschriebenen Prozess des visuellen
+ Denkens (sehen - betrachten - verstehen - zeigen) \simplevcite{Roam2009} so schnell wie
+ möglich abzuarbeiten sein.\\
  Weiterhin ist es wichtig bei der Entwicklung einer DSL darauf zu achten, dass
  sich die Abstraktion der Sprache an der Semantik der Domäne orientiert
- \vcite{ghosh}{20}. Sind diese Empfehlungen umgesetzt ist wächst das Verständnis für das, was
- entwickelt werden soll, da die semantische Lücke zwischen Programm und Problem
+ \vcite{ghosh}{20}. Sind diese Empfehlungen umgesetzt, ist wächst das
+ Verständnis für das, was entwickelt werden soll, da die semantische Lücke zwischen Programm und Problem
  kleiner wird (vgl. \cite[S.20]{ghosh}, \cite{journals/insk/BrauerCK08}).
  Außerdem bleibt die Komplexität durch eine höhere Abstraktionsebene
  beherrschbar \simplevcite{journals/insk/BrauerCK08}.
@@ -213,14 +213,14 @@ Eigenschaft des Domänen-Fokus als ein Schlüsselelement der Definition einer DSL
   ähnliches erreichen könnte \vcite{voelter}{40}.\\
   Die stärkere Ausdruckskraft führt zu einer
   bessere Lesbarkeit von DSL-Code im
-  Verlgeich zu GPL-Code, wodurch DSL-Code einfacher
+  Verglöeich zu GPL-Code, wodurch DSL-Code einfacher
   zu verstehen ist. Dadurch ist es
   auch einfacher Fehler in diesem Code zu
   finden, sowie Anpassungen an dem System
   vorzunehmen. Bei einer GPL werden diese Vorteile durch Dokumentationen,
   ausdrucksvolle Variablenbezeichnungen und festgelegten Konventionen
   angestrebt 
-  \vcite{fowler}{33}. Allerdings ist der Entwickler zur Einhaltung diese
+  \vcite{fowler}{33}. Allerdings ist der Entwickler zur Einhaltung dieser
   Vorschriften nicht gezwungen. Bei der Verwendung
   einer DSL hingegen kann dem Entwickler dieser Freiheitsgrad entzogen
   werden. Damit ist er gezwungen lesbaren Quellcode zu schreiben, da die Sprache
@@ -279,7 +279,7 @@ Eigenschaft des Domänen-Fokus als ein Schlüsselelement der Definition einer DSL
   hat und dadurch leichter zu verstehen und zu erlernen
   ist \vcite{ghosh}{21}.\\
   Innerhalb eines Entwicklerteams haben die
-  Mitarbeiter oft einen unterschiedlicher Erfahrungsstand bzgl. einer speziellen
+  Mitarbeiter oft einen unterschiedlichen Erfahrungsstand bzgl. einer speziellen
   Programmiersprache, die zur Entwicklung genutzt werden soll. Erfahrene Teammitglieder könnten sich
   mit der Implementierung der DSL befassen und die Grundlage für die anderen 
   Teammitglieder schaffen. Diese wiederum nutzen die DSL, um die fachlichen
@@ -294,9 +294,9 @@ Eigenschaft des Domänen-Fokus als ein Schlüsselelement der Definition einer DSL
   Bevor die Vorteile einer DSL genutzt werden können, muss die DSL entwickelt
   werden \vcite{voelter}{43}. Das Designen einer Sprache ist eine komplexe
   Aufgabe, die nur schwer skalierbar ist \vcite{ghosh}{21}. Die Vorteile, die
-  eine DSL bietet, können nur geboten werden, wenn die DSL ausreichend gut
+  eine DSL bietet, können nur genutzt werden, wenn die DSL ausreichend gut
   konzipiert ist. Dazu muss einerseits der richtige Abstraktionsgrad
-  gefunden werden und andererseits die Sprache so einfach wie möglich gehalten
+  gefunden und andererseits die Sprache so einfach wie möglich gehalten
   werden.
   Für beide Aufgaben werden Entwickler benötigt, die viel Erfahrung mit
   Sprach-Design haben \vcite{voelter}{44}.
@@ -315,10 +315,10 @@ Eigenschaft des Domänen-Fokus als ein Schlüsselelement der Definition einer DSL
   eine technische DSL. Daher ergeben sich die Möglichkeiten zur
   Wiederverwendung erst zu einem späteren Zeitpunkt und
   können nur schwer von der im Vorfeld durchgeführten
-  Analysen wahrgenommen werden \vcite{voelter}{43}.\\
-  Weiterhin ist in der Phase, in der die DSL entwickelt wird, keine große
+  Analyse wahrgenommen werden \vcite{voelter}{43}.\\
+  Weiterhin sind in der Phase, in der die DSL entwickelt wird, keine große
   positive Änderungen bzgl. der Kosten zu erwarten. Die Kosten reduzieren sich
-  i.d.R erst, wenn die DSL eingesetzt wird \vcite{ghosh}{21}.\\
+  i.d.R. erst, wenn die DSL eingesetzt wird \vcite{ghosh}{21}.\\
   Bevor eine DSL entwickelt werden kann, sollte ein entsprechendes Know-How
   aufgebaut werden. Der Aufbau dieses Wissens verursacht weitere Kosten 
   \vcite{fowler}{37}.
@@ -331,7 +331,7 @@ Eigenschaft des Domänen-Fokus als ein Schlüsselelement der Definition einer DSL
   Flexibilität geht dabei verloren. Weiterhin besteht dabei die Gefahr, dass
   bestimmte Artefakte aufgrund geänderter Anforderungen unbrauchbar
   werden.
-  Darüber hinaus ist es gefährlich Artefakte zu verändern, die häufig
+  Darüber hinaus ist es gefährlich Artefakte zu verändern die häufig
   wiederverwendet werden, weil dadurch unerwünschte Nebeneffekte
   auftreten können.
   Somit wäre das Unternehmen wiederum zu Investitionen gezwungen, um die
@@ -344,9 +344,9 @@ Eigenschaft des Domänen-Fokus als ein Schlüsselelement der Definition einer DSL
   Normalerweise werden für eine Applikation mehrere DSLs benötigt. Diese
   unterschiedlichen DSLs haben i.d.R unterschiedliche syntaktische Strukturen.
   Das führt dazu, dass Mitarbeiter unterschiedliche Sprachen beherrschen müssen.
-  Das wiederum führt dazu, dass die Entwickler öfter umdenken, als wenn sie fortwährend mit
-  einer Sprache arbeiten würden. Das macht den Entwicklungsprozess weitaus
-  komplizierter \vcite{fowler}{37}.
+  Das wiederum erfordert, dass die Entwickler öfter umdenken müssen, als wenn
+  sie fortwährend mit einer Sprache arbeiten würden. Dieses macht den
+  Entwicklungsprozess weitaus komplizierter \vcite{fowler}{37}.
 
 \subsubsection*{Ghetto-Sprache}
   Wenn ein
@@ -356,7 +356,7 @@ Eigenschaft des Domänen-Fokus als ein Schlüsselelement der Definition einer DSL
   vermehrt DSLs eingesetzt werden, zu integrieren. Denn diese
   Technologien werden kaum mit den eigenen DSLs kompatibel sein. Außerdem ist es
   kaum möglich von neuen Mitarbeitern in diesem Bereichen zu profitieren, da
-  sie sich höchstwahrscheinlich nicht einmal diese DSLs und ihren Zweck kennen
+  sie höchstwahrscheinlich nicht einmal diese DSLs und ihren Zweck kennen
   werden 
   \cite{fowler}{38}.\\
   Dieser Punkt ist auch in Verbindung mit dem \emph{Investitionsgefängnis} zu
@@ -381,12 +381,12 @@ Eigenschaft des Domänen-Fokus als ein Schlüsselelement der Definition einer DSL
   beschrieben werden kann \vcite{fowler}{39}.
   
 \subsubsection*{Kulturelle Herausforderungen}
-  Die genannten Nachteile den Einsatzes von DSLs führen zu Äußerungen wie
+  Die genannten Nachteile des Einsatzes von DSLs führen zu Äußerungen wie
   \emph{Die Entwicklung von Sprachen ist kompliziert}, \emph{Domänen-Experten
-  sind keine Programmieren} oder \emph{Ich möchte nicht schon wieder eine
+  sind keine Programmierer} oder \emph{Ich möchte nicht schon wieder eine
   neue Sprache lernen} (\emph{Yet-Another-Language-To-Learn
   Syndrom} \vcite{ghosh}{22}).\\
-  Solche kulturellen Probleme i.d.R. dann, wenn etwas neues eingeführt
+  Solche kulturellen Probleme entstehen i.d.R. dann, wenn etwas Neues eingeführt
   werden soll \cite{voelter}{45}. Die Mitarbeiten müssen demnach
   entsprechend geschult und motiviert werden.
   
@@ -396,17 +396,17 @@ Eigenschaft des Domänen-Fokus als ein Schlüsselelement der Definition einer DSL
   durch entsprechende Tools vereinfacht wird, besteht
   die Gefahr, dass neue DSLs zu frühzeitig entwickelt werden. Damit ist gemeint,
   dass die Überlegungen über die Notwendigkeit einer neuen DSL nicht ausreichend
-  durchgeführt werden. Durch die einfache Entwicklung scheint es weniger
-  aufwendig eine neue DSL zu entwickeln, als nach bestehenden Ansätzen
-  für das gleiche Problem zu suchen 
+  durchgeführt werden, bevor mit der Entwicklung begonnen wird. Durch die
+  einfache Entwicklung scheint es weniger aufwendig eine neue DSL zu schaffen,
+  als nach bestehenden Ansätzen für das gleiche Problem zu suchen 
   \vcite{voelter}{44f}. Der Gedanke daran, dass sich die Investition in
   die Entwicklung einer DSL zu einem späteren Zeitpunkt amortisieren wird,
   unterstützt dies \vcite{fowler}{38}. Dadurch
   entstehen immer mehr DSLs, die auf gleichen Problemen basieren, aber
-  untereinander inkompatibel sind. Außerdem führt der Fakt, dass die
+  untereinander nicht kompatibel sind. Außerdem führt der Fakt, dass die
   Entwicklung einer DSL zum Verstehen der Domäne sehr hilfreich ist, dazu, dass
   eine DSL nur aus diesem Grund entwickelt wird 
-  \vcite{fowler}{38}. Das wiederum führt dazu, dass mehrere halb-fertige
+  \vcite{fowler}{38}. Das wiederum hat zur Folge, dass mehrere halb-fertige
   DSLs existieren. Markus Völter et al. nennen dieses Phänomen die \emph{DSL
   Hell}.
   \vcite{voelter}{44f}
@@ -421,7 +421,7 @@ Gewinn höher ausfallen \vcite{ghosh}{21}.
 Bei einer internen DSL handelt es sich um eine DSL, die in eine GPL integriert
 ist. Sie übernehmen dabei das Typ-System der GPL \vcite{voelter}{50}. In
 Bezug auf die Ziele aus Kapitel \ref{mdsd} können einige dieser mit
-Application Programming Interfaces (API) erreichen werden.
+Application Programming Interfaces (API) erreicht werden.
 In vielen Fällen ist eine DSL nicht mehr als ein API.
 Martin Fowler sieht den größten Unterschied zwischen API und DSL darin, dass
 eine DSL neben einem abstrahierten Vokabular auch eine spezifische Grammatik
@@ -462,7 +462,7 @@ Sätze darstellen. Somit wird der Output einer Methode zum Input der folgenden
 Methode. Die Lesbarkeit der DSL wird dadurch weitaus besser, da es einer
 Sequenz von Aktionen gleicht, die in der Domäne ausgeführt werden
 \vcite{ghosh}{94} und ohne eine Vielzahl von Variablen aufgerufen
-werden müssen \vcite{fowler}{68}. Eine solche Verkettung von Methoden wird
+werden können \vcite{fowler}{68}. Eine solche Verkettung von Methoden wird
 als \emph{Fluent Interface} bezeichnet. Das Fluent Interface steht laut Voelter et
 al. zwischen dem API und einer internen DSL \vcite{voelter}{50}. Ein einfaches
 Beispiel für ein Fluent Interface beschreiben Martin Fowler et al. Dabei wird
@@ -536,7 +536,7 @@ Parser manuell entwickelt wird, sind die folgenden.
   \vcite{ghosh}{218}
   \item Weniger Code zum Implementieren des Parsers benötigt
   \vcite{ghosh}{218}
-  \item Möglichkeit des Generieren eines Parser in unterschiedlichen Sprachen
+  \item Möglichkeit des Generierens eines Parser in unterschiedlichen Sprachen
   (vgl. \cite[S.218]{ghosh}, \cite[S.270]{fowler})
   \item Validierung der Grammatik durch Fehlererkennung und -behandlung
   \vcite{fowler}{272}
@@ -611,8 +611,8 @@ Vorteil entzogen \vcite{fowler}{249}.
 \subsubsection*{Parser-Kombinator}
 Bei der Kombination von Parsern wird die Grammatik mittels einer Struktur von
 Parser Objekten implementiert \vcite{fowler}{256}. Wenn ein Teil des
-Input-Streams von einem Parser erfolgreich oder fehlerhaft verarbeitet wurde, kann der Rest den
-Input-Streams an einen anderen Parser übergeben werden. Somit ist es möglich
+Input-Streams von einem Parser erfolgreich oder fehlerhaft verarbeitet wurde,
+kann der Rest des Input-Streams an einen anderen Parser übergeben werden. Somit ist es möglich
 Parser beliebig zu verketten \vcite{ghosh}{242}. Die Elemente, die
 verkettet werden können werden \emph{Parser-Kombinatoren} genannt. Abbildung
 \ref{Abb_parsercombinator} stellt schematisch diese Funktionsweise dar. 

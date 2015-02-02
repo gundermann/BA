@@ -237,10 +237,10 @@ Komponenten},{label=LST_Komplexe2}]
 type: WINDOW 
 use: Multiselection<'valuepackage.Values'> as: 'Multi'
 \end{lstlisting}
-Für die Zuweisung mehrerer Komponenten zu den Areas kamen zwei Lösungen in
-Betracht. Bei der einen finden die Definitionen der Komponenten zusammen mit der
-Zuweisung zu dem Area statt. Dies könnte bspw. wie in Listing \ref{LST_Moeglichkeit1_2}
-dargestellt werden.
+Für die Zuweisung mehrerer Komponenten zu den Bereichen (\emph{Area}) kamen
+zwei Lösungen in Betracht. Bei der einen finden die Definitionen der Komponenten zusammen mit der
+Zuweisung zu dem Bereich statt. Dies könnte bspw. wie in Listing
+\ref{LST_Moeglichkeit1_2} dargestellt werden.
 \begin{lstlisting}[{caption=2. Iteration: Button und Label
 (1)},{label=LST_Moeglichkeit1_2}] 
 Area count: 1 type: WINDOW 
@@ -256,12 +256,13 @@ END DEF
 Eine andere Möglichkeit wäre es, die aktuelle Form der Zuweisung zu verfeinern
 und somit die Komponenten bei der Zuweisung mit Komma getrennt von einander
 aufzählen. Die erste Möglichkeit würde sich sehr gut eignen, wenn nur die in der
-Datei definierten Komponenten dem Area zugewiesen werden müssten. Da die mit
-\emph{use} eingebundenen Komponenten auch Areas zugeordnet werden, würde für
-dieses Verfahren ein zusätzliches syntaktisches Konzept innerhalb der Area-Zuweisung
-benötigt werden. Um dies zu umgehen wurde die Entscheidung getroffen, das alte
-Verfahren zu verfeinern. Listing \ref{LST_Moeglichkeit2_2} ist ein Beispiel für die
-Area-Zuweisung von drei Komponenten zu entnehmen.
+Datei definierten Komponenten dem Bereich zugewiesen werden müssten. Da die mit
+\emph{use} eingebundenen Komponenten auch Bereichen zugeordnet werden, würde für
+dieses Verfahren ein zusätzliches syntaktisches Konzept innerhalb der
+Zuweisung benötigt werden. Um dies zu umgehen wurde die Entscheidung
+getroffen, das alte Verfahren zu verfeinern. Listing \ref{LST_Moeglichkeit2_2}
+zeigt ein Beispiel für die Zuweisung von drei Komponenten zu einem
+Bereich.
 \begin{lstlisting}[{caption=2. Iteration: Area-Zuweisung
 (2)},{label=LST_Moeglichkeit2_2}]
 Area count: 1
@@ -394,7 +395,7 @@ folgender Tabelle aufgelistet.
   		  \\
 				\hline
 				TabView &  
-  		  GUI-Beschreibungen für die einzelnen Tabe
+  		  GUI-Beschreibungen für die einzelnen Tabs
   		  \\
 				\hline
 				\hline
@@ -526,8 +527,8 @@ werden (siehe Listing \ref{LST_Tab3}).\\
 In den folgenden Beispielen wird davon
 ausgegangen, dass die vorher genannten Beispiele für die \Ks Tree, Table und
 Textarea in demselben GUI-Skript definiert wurden. Durch das syntaktische
-Konstrukt in Listing \ref{LST_Tab3} wird eine Tab-Ansicht mit drei Taben beschrieben. Das
-erste Tab enthält den Tree, das zweite die Table und das dritte die Textarea.
+Konstrukt in Listing \ref{LST_Tab3} wird eine Tab-Ansicht mit drei Tabs
+beschrieben. Das erste Tab enthält den Tree, das zweite die Table und das dritte die Textarea.
 \begin{lstlisting}[{caption = 3.
 Iteration:
 TabView},{label = LST_Tab3}] 
