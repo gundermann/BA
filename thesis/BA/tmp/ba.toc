@@ -6,7 +6,7 @@
 \contentsline {chapter}{\numberline {1}Motivation}{1}{chapter.1}
 \contentsline {chapter}{\numberline {2}Problembeschreibung und Zielsetzung}{3}{chapter.2}
 \contentsline {section}{\numberline {2.1}Allgemeine Anforderungen an Benutzeroberfl\"achen von profil c/s}{3}{section.2.1}
-\contentsline {section}{\numberline {2.2}Umsetzung der Benutzerschnittstellen f\"ur mehrere Plattformen in der \emph {deg} (Ist-Zustand)}{4}{section.2.2}
+\contentsline {section}{\numberline {2.2}Umsetzung der Benutzerschnittstellen f\"ur mehrere Plattformen in der \emph {data experts GmbH} (Ist-Zustand)}{4}{section.2.2}
 \contentsline {subsection}{\numberline {2.2.1}Multichannel-Framework}{4}{subsection.2.2.1}
 \contentsline {subsection}{\numberline {2.2.2}JWAM}{6}{subsection.2.2.2}
 \contentsline {section}{\numberline {2.3}Probleme des Multichannel-Frameworks}{8}{section.2.3}

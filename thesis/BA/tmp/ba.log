@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.10.14)  30 JAN 2015 13:27
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.10.14)  2 FEB 2015 10:25
 entering extended mode
 **ba.tex
 (C:\Users\ngundermann\git\BA\thesis\BA\ba.tex
@@ -971,6 +971,12 @@ LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <17.28> not available
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <10.95> not available
 (Font)              Font shape `T1/ppl/b/n' tried instead on input line 39.
 
+Overfull \hbox (9.66173pt too wide) in paragraph at lines 5--55
+\T1/ppl/m/n/12 ent von \T1/ppl/m/it/12 pro-fil c/s \T1/ppl/m/n/12 dar-ge-stellt
+ wer-den muss. Die-ser soll so-wohl in Web-Browsern
+ []
+
+
 Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
 less on input line 55.
 
@@ -986,16 +992,17 @@ Overfull \hbox (11.6785pt too wide) in paragraph at lines 58--58
 []\T1/ppl/b/n/17.28 Umsetzung der Be-nut-zer-schnitt-stel-len für meh-
  []
 
+
+Overfull \hbox (3.84865pt too wide) in paragraph at lines 58--58
+\T1/ppl/b/n/17.28 re-re Platt-for-men in der \T1/ppl/b/it/17.28 da-ta ex-perts 
+GmbH \T1/ppl/b/n/17.28 (Ist-
+ []
+
 <Bilder/mcgrob.png, id=558, 452.4403pt x 231.11343pt>
 File: Bilder/mcgrob.png Graphic file (type png)
  <use Bilder/mcgrob.png>
-Package pdftex.def Info: Bilder/mcgrob.png used on input line 95.
+Package pdftex.def Info: Bilder/mcgrob.png used on input line 96.
 (pdftex.def)             Requested size: 398.3386pt x 203.47566pt.
-
-Overfull \hbox (4.47737pt too wide) in paragraph at lines 60--95
-\T1/ppl/m/n/12 deg ent-wickelt. Die-ses Ver-fah-ren er-wies sich mit kom-ple-xe
-r wer-den-den [][]\T1/ppl/m/it/12 GUIs[]
- []
 
 
 Package Fancyhdr Warning: \headheight is too small (14.49998pt): 
@@ -1004,7 +1011,7 @@ Package Fancyhdr Warning: \headheight is too small (14.49998pt):
  This may cause the page layout to be inconsistent, however.
 
 [4]
-Overfull \hbox (34.5218pt too wide) in paragraph at lines 96--113
+Overfull \hbox (34.5218pt too wide) in paragraph at lines 97--114
 \T1/ppl/m/n/12 zeugt wer-den, die auf un-ter-schied-li-chen Fra-me-works ba-sie
 -ren und das \T1/ppl/m/it/12 Component-
  []
@@ -1016,134 +1023,121 @@ File: Bilder/wamgui.jpg Graphic file (type jpg)
 Package pdftex.def Info: Bilder/wamgui.jpg used on input line 145.
 (pdftex.def)             Requested size: 398.3386pt x 86.48146pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 115--145
+Underfull \hbox (badness 10000) in paragraph at lines 116--145
 
  []
 
 [6]
-Overfull \hbox (11.56909pt too wide) in paragraph at lines 146--172
+Overfull \hbox (11.56479pt too wide) in paragraph at lines 146--173
 []\T1/ppl/m/it/12 Automaten \T1/ppl/m/n/12 kön-nen selbst-stän-dig Rou-ti-ne-ar
--bei-ten er-le-di-gen. (vgl. [[]Sau03[], S.30])
+-bei-ten er-le-di-gen (vgl. [[]Sau03[], S.30]).
  []
 
 
-Overfull \hbox (9.67287pt too wide) in paragraph at lines 146--172
+Overfull \hbox (9.67287pt too wide) in paragraph at lines 146--173
 \T1/ppl/m/n/12 un-ter-schie-den. Er-stens die per-sön-li-chen Ar-beitsplät-ze d
 er Be-nut-zer und zwei-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 146--172
+Underfull \hbox (badness 10000) in paragraph at lines 146--173
 
  []
 
-[7 <C:/Users/ngundermann/git/BA/thesis/BA/Bilder/wamgui.jpg>]
-Overfull \hbox (30.68501pt too wide) in paragraph at lines 174--199
-\T1/ppl/m/n/12 wis-se Aus-drucks-kraft hat. Da in die-ser Ar-beit ver-sucht wir
-d die [][]\T1/ppl/m/it/12 GUI[]\T1/ppl/m/n/12 -Entwicklung
- []
-
-
-Overfull \hbox (8.20378pt too wide) in paragraph at lines 210--212
+[7 <C:/Users/ngundermann/git/BA/thesis/BA/Bilder/wamgui.jpg>] [8]
+Overfull \hbox (8.20378pt too wide) in paragraph at lines 212--214
 [][]\T1/ppl/m/n/12 Vergebene Be-zeich-nun-gen für \T1/ppl/m/it/12 GUI-Komponent
 en \T1/ppl/m/n/12 müs-sen in un-ter-schied-
  []
 
-[8]
-Overfull \hbox (22.35637pt too wide) in paragraph at lines 216--219
-[][]\T1/ppl/m/n/12 Die Wer-te für Auf-schrif-ten, Grö-ÿen-ein-stel-lun-gen u.ä.
+
+Overfull \hbox (25.68794pt too wide) in paragraph at lines 218--221
+[][]\T1/ppl/m/n/12 Die Wer-te für Auf-schrif-ten, Grö-ÿen-ein-stel-lun-gen u.Ä.
  für \T1/ppl/m/it/12 GUI-Komponenten
- []
-
-
-Overfull \hbox (0.24217pt too wide) in paragraph at lines 222--235
-[]\T1/ppl/m/n/12 Das lang-fri-sti-ge Ziel der \T1/ppl/m/it/12 deg \T1/ppl/m/n/1
-2 bzgl. der [][]\T1/ppl/m/it/12 GUIs[] \T1/ppl/m/n/12 ist es, ei-ne Lö-sung zu 
-ent-wickeln,
  []
 
 ) [9] (C:\Users\ngundermann\git\BA\thesis\BA\DSL.tex
 Kapitel 3.
 
 Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
-less on input line 30.
+less on input line 29.
 
 [10
 
 
 
 ]
-Overfull \hbox (0.50131pt too wide) in paragraph at lines 50--67
+Overfull \hbox (0.50131pt too wide) in paragraph at lines 49--67
 \T1/ppl/m/n/12 Darüber hin-aus soll-te ein Pro-gramm, wel-ches in ei-ner DSL ge
 -schrie-ben wur-
  []
 
 [11] [12] [13]
-Overfull \hbox (10.34839pt too wide) in paragraph at lines 141--141
+Overfull \hbox (10.34839pt too wide) in paragraph at lines 140--140
 []\T1/ppl/b/n/17.28 Model-Driven Soft-wa-re De-ve-lop-ment (MDSD) 
  []
 
-LaTeX Font Info:    Try loading font information for OMS+ppl on input line 156.
+LaTeX Font Info:    Try loading font information for OMS+ppl on input line 154.
 
 ("D:\Program Files\MiKTeX\tex\latex\psnfss\omsppl.fd"
 File: omsppl.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ppl/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 156.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 154.
  [14]
 <Bilder/mdsd.jpg, id=738, 663.22781pt x 380.92313pt>
 File: Bilder/mdsd.jpg Graphic file (type jpg)
  <use Bilder/mdsd.jpg>
-Package pdftex.def Info: Bilder/mdsd.jpg used on input line 172.
+Package pdftex.def Info: Bilder/mdsd.jpg used on input line 170.
 (pdftex.def)             Requested size: 398.3386pt x 228.7823pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 165--172
+Underfull \hbox (badness 10000) in paragraph at lines 163--170
 
  []
 
 [15 <C:/Users/ngundermann/git/BA/thesis/BA/Bilder/mdsd.jpg>]
-Overfull \hbox (11.46968pt too wide) in paragraph at lines 201--208
-\T1/ppl/m/n/12 ge-för-dert, was eben-so zu qua-li-ta-tiv hö-her-wer-ti-gen Quel
-l-co-de führt. [[]Gho11[]]21 
- []
-
-
-Overfull \hbox (0.64555pt too wide) in paragraph at lines 211--230
+Overfull \hbox (0.64555pt too wide) in paragraph at lines 209--228
 []\T1/ppl/m/n/12 Durch die Aus-drucks-kraft und die Ab-strak-ti-on der Spra-che
  muss i.d.R. auch
  []
 
 [16] [17]
-Overfull \hbox (6.10445pt too wide) in paragraph at lines 279--294
+Overfull \hbox (6.10445pt too wide) in paragraph at lines 276--291
 \T1/ppl/m/n/12 Innerhalb ei-nes Ent-wick-ler-teams ha-ben die Mit-ar-bei-ter of
 t einen un-ter-schied-
  []
 
 [18] [19] [20] [21]
-Overfull \hbox (6.04503pt too wide) in paragraph at lines 398--422
+Overfull \hbox (6.04503pt too wide) in paragraph at lines 394--418
 \T1/ppl/m/n/12 ge-baut hat und die Ent-wick-lung durch ent-spre-chen-de Tools v
 er-ein-facht wird,
  []
 
 
-Overfull \hbox (1.6699pt too wide) in paragraph at lines 398--422
+Overfull \hbox (1.6699pt too wide) in paragraph at lines 394--418
 \T1/ppl/m/n/12 Pro-ble-men ba-sie-ren, aber un-ter-ein-an-der in-kom-pa-ti-bel 
 sind. Au-ÿer-dem führt
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 398--422
+Overfull \hbox (2.03139pt too wide) in paragraph at lines 394--418
+\T1/ppl/m/n/12 (vgl. [[]FP11[], S.38]). Das wie-der-um führt da-zu, dass meh-re
+-re halb-fertige DSLs
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 394--418
 
  []
 
 [22]
-Overfull \hbox (12.10844pt too wide) in paragraph at lines 441--459
+Overfull \hbox (12.10844pt too wide) in paragraph at lines 437--455
 []\T1/ppl/m/n/12 Allgemein be-trach-tet funk-tio-niert die-se Tech-nik wie folg
 t. Ein Code-Fragment,
  []
 
 
-Overfull \hbox (0.94485pt too wide) in paragraph at lines 441--459
+Overfull \hbox (0.94485pt too wide) in paragraph at lines 437--455
 \T1/ppl/m/n/12 Anders als Lisp bie-ten die an-de-ren Bei-spie-le die Mög-lich-k
 eit über den Parse-
  []
@@ -1152,10 +1146,10 @@ eit über den Parse-
 File: Bilder/parsing.jpg Graphic file (type jpg)
 
 <use Bilder/parsing.jpg>
-Package pdftex.def Info: Bilder/parsing.jpg used on input line 523.
+Package pdftex.def Info: Bilder/parsing.jpg used on input line 519.
 (pdftex.def)             Requested size: 398.3386pt x 139.87941pt.
  [25]
-Overfull \hbox (10.23274pt too wide) in paragraph at lines 526--538
+Overfull \hbox (10.23274pt too wide) in paragraph at lines 522--534
 \T1/ppl/m/n/12 gung be-stimm-ter Grammatik-Regeln aus-ge-führt wer-den sol-len 
 (Validierungs-
  []
@@ -1165,18 +1159,18 @@ Overfull \hbox (10.23274pt too wide) in paragraph at lines 526--538
 File: Bilder/parsercombinator.jpg Graphic file (type jpg)
 
 <use Bilder/parsercombinator.jpg>
-Package pdftex.def Info: Bilder/parsercombinator.jpg used on input line 626.
+Package pdftex.def Info: Bilder/parsercombinator.jpg used on input line 620.
 (pdftex.def)             Requested size: 398.3386pt x 240.84836pt.
 
-Overfull \hbox (14.63745pt too wide) in paragraph at lines 618--626
-\T1/ppl/m/n/12 S.242]) Die Ele-men-te, die ver-ket-tet wer-den kön-nen wer-den 
-\T1/ppl/m/it/12 Parser-Kombinatoren
+Overfull \hbox (17.64175pt too wide) in paragraph at lines 612--620
+\T1/ppl/m/n/12 S.242]). Die Ele-men-te, die ver-ket-tet wer-den kön-nen wer-den
+ \T1/ppl/m/it/12 Parser-Kombinatoren
  []
 
 [27]
-Overfull \hbox (1.96568pt too wide) in paragraph at lines 627--638
-\T1/ppl/m/n/12 auch als Mit-tel-weg zwi-schen RD-Parsern und Par-ser Ge-ne-ra-t
-o-ren. [[]FP11[]]261 
+Overfull \hbox (42.76146pt too wide) in paragraph at lines 621--632
+\T1/ppl/m/n/12 Parser ein groÿer Nach-teil war. Da-her be-zeich-nen Fow-ler et 
+al. Parser-Kombinatoren
  []
 
 [28 <C:/Users/ngundermann/git/BA/thesis/BA/Bilder/parsercombinator.jpg>])
@@ -1320,9 +1314,16 @@ File: Bilder/konzept_1.jpg Graphic file (type jpg)
 Package pdftex.def Info: Bilder/konzept_1.jpg used on input line 62.
 (pdftex.def)             Requested size: 398.3386pt x 271.72272pt.
  [42]
-Overfull \hbox (5.38742pt too wide) in paragraph at lines 76--82
-\T1/ppl/m/n/12 nen. Ein Bei-spiel für ei-ne kom-ple-xe Kom-po-nen-ten ist die  
-[][]\T1/ppl/m/it/12 Multiselection-
+Overfull \hbox (3.10739pt too wide) in paragraph at lines 76--82
+\T1/ppl/m/n/12 nen. Ein Bei-spiel für ei-ne kom-ple-xe Kom-po-nen-ten ist die [
+][]\T1/ppl/m/it/12 Multiselection-
+ []
+
+
+Overfull \hbox (3.84538pt too wide) in paragraph at lines 83--88
+\T1/ppl/m/n/12 be-stim-men. In an-de-ren [][]GUI[]-Frameworks sind dies bspw. \
+T1/ppl/m/it/12 Pa-nel \T1/ppl/m/n/12 ([][]\T1/ppl/m/it/12 Swing[]\T1/ppl/m/n/12
+ ),
  []
 
 [43 <C:/Users/ngundermann/git/BA/thesis/BA/Bilder/konzept_1.jpg>]
@@ -1923,7 +1924,7 @@ Your command will be ignored, type <return> to proceed
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 63.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 63.
 Package rerunfilecheck Info: File `ba.out' has not changed.
-(rerunfilecheck)             Checksum: 3D5E2DA5E1CA67A75D1C9FF6E0F47934;3897.
+(rerunfilecheck)             Checksum: B65DD6C25FDE76126384E9FF452CEAA3;3911.
 
 
 LaTeX Warning: There were undefined references.
@@ -1936,7 +1937,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 63.
 Here is how much of TeX's memory you used:
  14663 strings out of 493921
  215968 string characters out of 3150471
- 441218 words of memory out of 3000000
+ 441230 words of memory out of 3000000
  16802 multiletter control sequences out of 15000+200000
  90949 words of font info for 83 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
@@ -1960,7 +1961,7 @@ s/MiKTeX/fonts/type1/urw/palatino/uplb8a.pfb><D:/Program Files/MiKTeX/fonts/typ
 e1/urw/palatino/uplbi8a.pfb><D:/Program Files/MiKTeX/fonts/type1/urw/palatino/u
 plr8a.pfb><D:/Program Files/MiKTeX/fonts/type1/urw/palatino/uplr8a.pfb><D:/Prog
 ram Files/MiKTeX/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on ba.pdf (111 pages, 3185043 bytes).
+Output written on ba.pdf (111 pages, 3189630 bytes).
 PDF statistics:
  2086 PDF objects out of 2487 (max. 8388607)
  693 named destinations out of 1000 (max. 500000)
