@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.10.14)  2 FEB 2015 14:14
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.10.14)  2 FEB 2015 14:27
 entering extended mode
 **ba.tex
 (C:\Users\ngundermann\git\BA\thesis\BA\ba.tex
@@ -1571,20 +1571,20 @@ er Layout-Datei-
 LaTeX Warning: Hyper reference `AA5' on page 70 undefined on input line 482.
 
 [70]
-Overfull \hbox (7.80865pt too wide) in paragraph at lines 538--552
+Overfull \hbox (7.80865pt too wide) in paragraph at lines 539--553
 \T1/ppl/m/n/12 Die Syn-tax zur Ver-än-de-rung ei-ner \T1/ppl/m/it/12 Ba-sis-kom
 -po-nen-te \T1/ppl/m/n/12 ei-nes ein-ge-bun-de-nen GUI-
  []
 
 
-Overfull \hbox (4.17366pt too wide) in paragraph at lines 538--552
+Overfull \hbox (4.17366pt too wide) in paragraph at lines 539--553
 \T1/ppl/m/n/12 muss le-dig-lich an-ge-ge-ben wer-den, wel-che \T1/ppl/m/it/12 G
 UI-Komponenten \T1/ppl/m/n/12 in wel-cher GUI-
  []
 
 
-LaTeX Warning: Reference `AppGrammatiken' on page 71 undefined on input line 56
-9.
+LaTeX Warning: Reference `AppGrammatiken' on page 71 undefined on input line 57
+0.
 
 ) [71] (C:\Users\ngundermann\git\BA\thesis\BA\EntwicklungGen.tex
 Kapitel 9.
@@ -1955,7 +1955,7 @@ s/MiKTeX/fonts/type1/urw/palatino/uplb8a.pfb><D:/Program Files/MiKTeX/fonts/typ
 e1/urw/palatino/uplbi8a.pfb><D:/Program Files/MiKTeX/fonts/type1/urw/palatino/u
 plr8a.pfb><D:/Program Files/MiKTeX/fonts/type1/urw/palatino/uplr8a.pfb><D:/Prog
 ram Files/MiKTeX/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on ba.pdf (111 pages, 3189789 bytes).
+Output written on ba.pdf (111 pages, 3189783 bytes).
 PDF statistics:
  2086 PDF objects out of 2487 (max. 8388607)
  693 named destinations out of 1000 (max. 500000)
