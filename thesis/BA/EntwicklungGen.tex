@@ -36,7 +36,7 @@ Interaktion gesehen soll, kann vom Generator nicht erzeugt werden. Dies muss vom
 werden.\\ 
 In den FP-Klassen ist die Funktionalität des Werkzeugt beschrieben. Eine
 komplette Generierung der FP-Klassen kann mit der DSL nicht angestrebt werden,
-weil dafür entsprechende Informationen fehlen. Dennoch kann der Klassen-Rumpf
+weil dafür entsprechende Informationen fehlen. Dennoch kann der Klassenrumpf
 und der Konstruktor erzeugt werden.\\
 Für die Generierung der Klassen wird in dieser
 Arbeit Transformer Generation (siehe Kapitel \ref{Domänenspezifische Sprachen})
@@ -179,7 +179,7 @@ def genProperty(String id, String method, String value, Boolean isString) '''
 Die Eigenschaften aus den Properties-Dateien müssten an dieser Stelle zusätzlich
 berücksichtigt werden.
 Dies wurde aus Zeitgründen nicht umgesetzt.\\
-Der Quell-Code für den Baum wird ähnlich generiert. Wenn der Input-Typ des
+Der Quellcode für den Baum wird ähnlich generiert. Wenn der Input-Typ des
 Baumes nicht gesetzt ist, muss ein Standard-Wert dafür eingesetzt werden.
 Des Weiteren muss für den Baum ein \emph{CellRenderer} definiert
 werden (siehe Listing \ref{LST_Tree}).
@@ -285,7 +285,7 @@ Es handelt sich um die Dateien \emph{GuiInhaltsbaum.java}, \emph{GuiVerweisebaum
 
 
 \subsection*{FP-Klassen}
-Da für die FP-Klassen lediglich der Klassen-Rumpf und der Konstruktor generiert
+Da für die FP-Klassen lediglich der Klassenrumpf und der Konstruktor generiert
 wird, ist diese Aufgabe entsprechend einfach. Dafür werden lediglich eine
 Oberklasse und entsprechende Importe benötigt, wie Listing \ref{LST_FPGen} zu entnehmen
 ist.
@@ -366,7 +366,7 @@ def compileIAF(Definition definition)'''
 Für die Standard-Interaktionsformen muss unterschieden werden um welche
 \gk es sich handelt.\\
 Zu jeder Interaktionsform gibt es ein entsprechendes Kommando, welches zur
-Generierung des Quell-Codes relevant ist. Die Zuordnung von Kommando zu
+Generierung des Quellcodes relevant ist. Die Zuordnung von Kommando zu
 Interaktionsform wird vom Generator vorgenommen (Beispiel Tree - siehe Listing
 \ref{LST_compileTree}). Die dafür verwendeten Methoden (z.B.
 \emph{genIAFActivator} oder \emph{genIAFTree}) können häufig wiederverwendet
@@ -418,7 +418,7 @@ Die Einzelheiten dieser Methode sind unter anderem abhängig von den
 Konventionen die bzgl.
 Namensgebung in der deg getroffen wurden. Der Aufruf der Methode
 \emph{addCommand} ist für weitere Generierungen von Belang.\\
-Nach Abschluss der Generierung des Quell-Codes zur Bestimmung der
+Nach Abschluss der Generierung des Quellcodes zur Bestimmung der
 Interaktionsformen und Kommandos, müssen den Kommandos entsprechende Methoden
 zugeordnet werden. Die Referenz auf die Kommandos bietet die Liste
 \emph{commands}, die durch den Aufruf der Methode \emph{addCommand}
@@ -445,7 +445,7 @@ def genCommands(UIDescription description)'''
 Die genauen Bezeichnungen ergeben sich wiederum aus den Konventionen für die
 Bezeichnungen innerhalb des MCF der deg.\\
 Um Compilierungsfehler zu vermeiden, müssen die Methoden, die vom generierten
- Quell-Code verwendet werden, ebenfalls generiert werden. Dafür ist die Methode
+ Quellcode verwendet werden, ebenfalls generiert werden. Dafür ist die Methode
  \emph{genCommandMethods} zuständig. In dieser Methode wird die Liste
  \emph{commands} nochmals benutzt, um die Methoden-Rümpfe zu erzeugen (siehe
  Listing \ref{LST_GenCommandMethods}).

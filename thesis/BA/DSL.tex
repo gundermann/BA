@@ -23,16 +23,16 @@
     \item[] \textbf{Abstrakte Syntax}\\
     Die abstrakte Syntax ist eine Datenstruktur, welche die Kerninformationen eines
 	Programms beschreibt.
-	Sie enthält keinerlei Informationen über Details bezüglich der Notation. Zur
+	Sie enthält keinerlei Informationen über Details bzgl. der Notation. Zur
 	Darstellung dieser Datenstruktur werden abstrakte Syntaxbäume
 	genutzt \vcite{voelter}{179}.
     \item[] \textbf{Statische Semantik}\\
-    Die statische Semantik beschreibt die Menge an Regeln bzgl. des Typ-Systems, 
+    Die statische Semantik beschreibt die Menge an Regeln bzgl. des Typsystems, 
     die ein Programm befolgen muss \vcite{voelter}{26}.
     \item[] \textbf{Ausführungssemantik}\\
     Die Ausführungssemantik ist abhängig vom Compiler. 
-    Sie beschreibt wie ein Programm zu seiner Ausführung funktioniert 
-    \vcite{voelter}{26}.
+    Sie beschreibt, wie ein Programm zum Zeitpunkt seiner Ausführung
+    funktioniert \vcite{voelter}{26}.
   \end{itemize}
  
   
@@ -46,7 +46,7 @@
   \vcite{voelter}{27f}.
   
 \subsection*{Domain Specific Language (DSL)}
-  Eine DSL (zu dt. Domänenspezifische Sprache) ist eine Programmiersprache,
+  Eine DSL (zu dt. domänenspezifische Sprache) ist eine Programmiersprache,
   welche für eine bestimmte \gloss{Domäne} optimiert ist \vcite{voelter}{28}.
   Das Entwickeln einer DSL ermöglicht es, die Abstraktion der  Sprache der Domäne anzupassen 
   \vcite{ghosh}{10}. Das bedeutet, dass Aspekte, welche für die Domäne
@@ -63,34 +63,34 @@
   Kapitel \ref{interneDSL} und \ref{externeDSL}) findet eine Unterscheidung zwischen
   technischen DSLs und fachlichen DSL statt. Markus Völter et al. unterscheiden
   diese beiden Kategorien im Allgemeinen dahingehend, dass technische DSLs von
-  Programmierern genutzt werden und fachliche DSL von Personen, die keine Programmierer sind (bspw. Kunden) \vcite{voelter}{26}.
+  Programmierern genutzt werden und fachliche DSL von Domänenexperten (z. B. Kunden) \vcite{voelter}{26}.
   
 \subsection*{Grammatik}
-  Grammatiken und insbesondere Grammatik-Regeln werden zur Beschreibung von
+  Grammatiken und insbesondere Grammatikregeln werden zur Beschreibung von
   Sprachen verwendet \vcite{hedtstueck}{23f}. Für die Definition einer Grammatik
-  verweise ich auf den Praxisbericht \cite{gundermann5}. Grammatiken können in
-  einer Hierarchie dargestellt werden (\emph{Chomsky-Hierarchie})
+  wird aus den Praxisbericht \cite{gundermann5} verwiesen. Grammatiken
+  können in einer Hierarchie dargestellt werden (\emph{Chomsky-Hierarchie})
   \vcite{hedtstueck}{32f}. Bei Programmiersprachen handelt es sich
   um \emph{kontextfreie Sprachen}. Diese sind entscheidbar
-  und können somit von einem Compiler verarbeitet werden 
- \vcite{hedtstueck}{16f}.
+  und können somit von einem Compiler verarbeitet werden \vcite{hedtstueck}{16f}.
   
 \subsection*{Lexikalische Analyse}
-  Bevor ein DSL-Skript (Text, der in der Syntax einer DSL geschrieben wurde)
-  verarbeitet werden kann, muss das Skript vom sog. \emph{Lexer} oder
+  Bevor ein DSL-Skript (Text, der in der Syntax einer \emph{DSL} geschrieben
+  wurde) verarbeitet werden kann, muss das Skript vom sogenannten \emph{Lexer} oder
   \emph{Scanner} gelesen werden \vcite{fowler}{221}. Dabei wird ein Text aus
   diesem Skript als Input-Stream betrachtet. Der Lexer wandelt diesen
-  Input-Stream in einzelne Tokens um \vcite{ghosh}{220}. Allgemein ist
-  der Lexer die Instanz innerhalb der \gloss{DSL-Umgebung}, die für das
+  Input-Stream in einzelne Tokens um \vcite{ghosh}{220}. Im Allgemeinen ist
+  der \emph{Lexer} die Instanz innerhalb der \gloss{DSL-Umgebung}, die für das
   Auslesen des DSL-Skriptes verantwortlich ist.
 
 \subsection*{Parser}
-  Ein Parser ist ebenfalls ein Teil der DSL Umgebung 
-  \vcite{ghosh}{211}. Er ist dafür verantwortlich aus dem Ergebnis der
+  Ein Parser ist ebenfalls ein Teil der \gloss{DSL-Umgebung} 
+  \vcite{ghosh}{211}. Er ist dafür verantwortlich, aus dem Ergebnis der
   lexikalischen Analyse ein Output zu generieren, mit dem weitere
   Aktionen durchgeführt werden können \vcite{ghosh}{212}. Der Output wird in
-  Form eines Syntax-Baums (AST) generiert \vcite{fowler}{47}. Ein solcher Baum
-  ist laut Martin Fowler et al. eine weitaus nutzbarere Darstellung dessen, was mit dem DSL-Skript dargestellt werden soll. 
+  Form eines Syntaxbaums (AST) generiert \vcite{fowler}{47}. Ein solcher Baum
+  ist laut Martin Fowler et al. eine weitaus nutzbarere Darstellung dessen, was
+  mit dem DSL-Skript beschrieben werden soll.
   Daraus lässt sich auch das semantische Modell generieren \vcite{fowler}{48}.
   
 \subsection*{Semantisches Modell}
@@ -102,27 +102,28 @@
   Syntax der DSL unabhängig ist (vgl. \cite[S.214]{ghosh}, \cite[S.48]{fowler}).
   
 \subsection*{Generator}
-  In Anlehnung an Martin Fowler ist ein Generator der Teil der
-  DSL Umgebung, welcher für das Erzeugen von Quellcode für die
-  \gloss{Zielumgebung} zuständig ist. \vcite{fowler}{121} Bei der
-  Generierung von Code wird zwischen zwei Verfahren unterschieden.
-  \begin{itemize}
-  	\item[] \textbf{Transformer Generation}\\
-  	Bei der Transformer Generation wird das semantische Modell als Input
-  	verwendet. Aus diesem Input wird Quellcode für die Zielumgebung generiert.
-  	\vcite{fowler}{533f} Ein solches Verfahren wird oft verwendet,
+  Laut Martin Fowler et al. ist ein Generator der Teil der
+  \gloss{DSL-Umgebung}, welcher für das Erzeugen eines Quellcodes für die
+  \gloss{Zielumgebung} zuständig ist \vcite{fowler}{121}. Bei der
+  Generierung von Quellcodes wird zwischen zwei Verfahren unterschieden.
+  \begin{enumerate}
+  	\item \textbf{Transformer Generation}\\
+  	Bei der \emph{Transformer Generation} wird das semantische Modell als Input
+  	verwendet. Aus diesem Input wird der Quellcode für die Zielumgebung
+  	generiert 
+  	\vcite{fowler}{533f}. Ein solches Verfahren wird oft verwendet,
   	wenn ein Großteil des Outputs generiert wird und die Inhalte des semantischen
   	Modells einfach in den Quellcode der Zielumgebung überführt werden
-  	können.\vcite{fowler}{535}\label{TransG}
-  	\item[] \textbf{Templated Generation} \\
-  	Bei der Templated Generation wird eine Vorlage benötigt. In dieser Vorlage
-  	befinden sich Platzhalter. Diese dienen dazu, dass vom Generator
-  	erzeugter Quellcode an diesen Stellen eingesetzt werden kann.
-  	\vcite{fowler}{539f} Dieses Codegenerierungsverfahren wird oft verwendet, wenn sich im zu
-  	generierenden Quellcode für die Zielumgebung viele statische Inhalte befinden
-  	und der Anteil dynamischer Inhalte sehr einfach gehalten ist.
-  	\vcite{fowler}{541}\label{TempG}
-  \end{itemize}
+  	können \vcite{fowler}{535}\label{TransG}.
+  	\item \textbf{Templated Generation} \\
+  	Bei der \emph{Templated Generation} wird eine Vorlage benötigt. In dieser
+  	Vorlage befinden sich Platzhalter. Diese dienen dazu, dass der vom Generator
+  	erzeugte Quellcode an diesen Stellen eingesetzt werden kann 
+  	\vcite{fowler}{539f}. Dieses Codegenerierungsverfahren wird oft verwendet,
+  	wenn sich im zu generierenden Quellcode für die Zielumgebung viele statische Inhalte befinden
+  	und der Anteil dynamischer Inhalte sehr einfach gehalten ist 
+  	\vcite{fowler}{541}\label{TempG}.
+  \end{enumerate}
 
 \section{Anwendungsbeispiele}
 Die Anwendungsbereiche für DSLs sind breit gefächert. Die bekanntesten DSLs
@@ -140,14 +141,14 @@ Sprachen für das Zusammenbauen von Softwaresystemen (\emph{Ant}, \emph{Make})
 \section{Model-Driven Software Development (MDSD)}\label{mdsd}
 In der Einleitung wurde schon der Model-Driven Ansatz in Verbindung mit
 \acrshort{GUI}-Entwicklung erwähnt. Dieser Ansatz versucht den technischen Lösungen der
-IT-Industrie einen gewissen Grad an Agilität zu verleihen \simplevcite{3}. Das
-ist damit verbunden, dass die Produktion von Softwareprodukten schneller und besser
-vonstatten geht und mit weniger Kosten realisierbar ist \vcite{mdsd}{71}.\\
+IT-Industrie einen gewissen Grad an Agilität zu verleihen \simplevcite{3}. Dies
+hängt damit zusammen, dass die Entwicklung von Softwareprodukten schneller und
+besser vonstatten geht und mit weniger Kosten realisierbar ist \vcite{mdsd}{71}.\\
 Erreicht wird dies, indem die Modelle formaler, strenger, vollständiger und
 konsistenter beschrieben werden \vcite{voelter}{31}. Die Grundidee ist, dass die
-Modelle Quellcode oder Funktionalitäten beschreiben und diese in der Evolution
-der Software immer wiederverwendet werden können \vcite{mdsd}{72}. Somit wird redundanter
-oder schematischer Quellcode vermieden und es ist möglich diese Modelle auch in
+Modelle Quellcodes oder Funktionalitäten beschreiben und diese in der Evolution
+der Software immer wiederverwendet werden können \vcite{mdsd}{72}. Somit wird
+ein redundanter oder schematischer Quellcode vermieden und es ist möglich diese Modelle auch in
 anderen Anwendungen zu verwenden \vcite{mdsd}{72}.\\
 Daraus lassen sich folgende Ziele des MDSD ableiten:
 \begin{itemize}
@@ -170,17 +171,21 @@ Abbildung \ref{mdsd} ist die Idee des MDSD schematisch dargestellt.
 \vcite{mdsdvoelter}{15}}{mdsd}
 
 \section{Abgrenzung zu GPL}
-Wie zu Beginn dieses Kapitels bereits erwähnt, sind GPLs Sprachen mit denen
-alles berechnet werden kann, was auch mit einer Turing-Maschine berechenbar ist.
+Wie vorhergehend bereits erwähnt, sind GPLs Sprachen mit denen
+alles berechnet werden kann, was auch mit einer \gloss{Turing-Maschine}
+berechenbar ist.
 Folglich kann mit einer GPL jedes berechenbare Problem
 gelöst werden. Eine DSL hat diese Eigenschaft nicht. Da sie auf eine bestimmte
 Domäne zugeschnitten ist, können auch nur Probleme innerhalb dieser Domäne mit
 ihr gelöst werden \vcite{voelter}{28}. Martin Fowler et al. bezeichnen diese
-Eigenschaft des Domänen-Fokus als ein Schlüsselelement der Definition einer DSL 
+Eigenschaft des Domänenfokus als ein Schlüsselelement der Definition einer DSL 
 \vcite{fowler}{27f}.
 
-\section{Vor- und Nachteile von DSL gegenüber GPL}
-\subsection*{Vorteile}
+\section{Vor- und Nachteile einer DSL gegenüber einer GPL}
+\subsection*{Vorteile:}
+
+%EINRÜCKEN
+
 \subsubsection*{Ausdruckskraft}
  Laut Ghosh sollten DSLs so umgesetzt werden, dass sie präzise sind. Diese
  Präzision bedingt, dass eine DSL einfach zu verstehen ist. Bei der Verwendung
@@ -189,59 +194,57 @@ Eigenschaft des Domänen-Fokus als ein Schlüsselelement der Definition einer DSL
  möglich abzuarbeiten sein.\\
  Weiterhin ist es wichtig bei der Entwicklung einer DSL darauf zu achten, dass
  sich die Abstraktion der Sprache an der Semantik der Domäne orientiert
- \vcite{ghosh}{20}. Sind diese Empfehlungen umgesetzt, ist wächst das
+ \vcite{ghosh}{20}. Sind diese Empfehlungen umgesetzt, wächst das
  Verständnis für das, was entwickelt werden soll, da die semantische Lücke zwischen Programm und Problem
  kleiner wird (vgl. \cite[S.20]{ghosh}, \cite{journals/insk/BrauerCK08}).
- Außerdem bleibt die Komplexität durch eine höhere Abstraktionsebene
+ Zudem bleibt die Komplexität durch eine höhere Abstraktionsebene
  beherrschbar \simplevcite{journals/insk/BrauerCK08}.
  
 \subsubsection*{Höhere Qualität}
-  Bei der Entwicklung einer DSL werden Sprachkonstrukte und Freiheitsgrade
-  der Sprache festgelegt. Richtig konzipiert, schränken sie den Entwickler beim
-  Umgang mit dieser DSL so ein, dass die Möglichkeit doppelten Code zu
-  schreiben oder doppelte Arbeit durchzuführen kaum noch besteht. Zusätzlich
-  wird die Anzahl von Fehlern verringert \vcite{voelter}{40f}. Auch durch
-  die starke Abstraktion einer DSL wird die Wiederverwendung gefördert,
-  was ebenso zu qualitativ höherwertigen Quellcode führt \vcite{ghosh}{21}.
+  Bei der Entwicklung einer DSL werden die Sprachkonstrukte und
+  Freiheitsgrade der Sprache festgelegt. Richtig konzipiert, schränken sie den Entwickler im
+  Umgang mit dieser DSL so ein, dass die Möglichkeit redundanten Quellcode zu
+  schreiben oder mehrfache Arbeit durchzuführen, kaum noch besteht. Zusätzlich
+  wird die Anzahl von Syntaxfehlern verringert \vcite{voelter}{40f}. Ferner
+  wird durch die starke Abstraktion einer DSL die Wiederverwendung gefördert,
+  was ebenfalls zu einem qualitativ höherwertigem Quellcode führt
+  \vcite{ghosh}{21}.
   
 \subsubsection*{Verbesserte Produktivität bei der Entwicklung der
   Software}
-  Durch die Ausdruckskraft und die Abstraktion der Sprache muss i.d.R. auch
-  weniger DSL-Code für die Implementierung eines Programms geschrieben werden, als wenn dieses
-  Programm mit einer GPL implementiert wird. Wobei man
-  mit einem entsprechenden Framework für GPLs
-  ähnliches erreichen könnte \vcite{voelter}{40}.\\
-  Die stärkere Ausdruckskraft führt zu einer
-  bessere Lesbarkeit von DSL-Code im
-  Verglöeich zu GPL-Code, wodurch DSL-Code einfacher
-  zu verstehen ist. Dadurch ist es
-  auch einfacher Fehler in diesem Code zu
-  finden, sowie Anpassungen an dem System
-  vorzunehmen. Bei einer GPL werden diese Vorteile durch Dokumentationen,
-  ausdrucksvolle Variablenbezeichnungen und festgelegten Konventionen
-  angestrebt 
-  \vcite{fowler}{33}. Allerdings ist der Entwickler zur Einhaltung dieser
+  Durch die Ausdruckskraft und die Abstraktion einer \emph{DSL} muss i. d. R. 
+  weniger Quellcode für die Implementierung eines Programms geschrieben werden,
+  als bei der Verwendung einer GPL benötigt wird.
+  Mit einem entsprechenden Framework für GPLs könnte ähnliches erreicht werden
+  \vcite{voelter}{40}.\\
+  Ebenso führt die stärkere Ausdruckskraft zu einer
+  besseren Lesbarkeit von DSL-Code im
+  Vergleich zu GPL-Code, wodurch jener einfacher
+  zu verstehen ist. Dies erleichtern das Finden von Fehlern in diesem Quellcode
+  sowie Veränderungen an dem System vorzunehmen. Bei einer GPL werden diese
+  Vorteile durch Dokumentationen, ausdrucksvolle Variablenbezeichnungen und festgelegten Konventionen
+  angestrebt \vcite{fowler}{33}. Allerdings ist der Entwickler zur Einhaltung dieser
   Vorschriften nicht gezwungen. Bei der Verwendung
   einer DSL hingegen kann dem Entwickler dieser Freiheitsgrad entzogen
-  werden. Damit ist er gezwungen lesbaren Quellcode zu schreiben, da die Sprache
-  es nicht anders zulässt.
+  werden. Damit ist er gezwungen, lesbaren Quellcode zu schreiben, da die
+  Sprache es nicht anders zulässt.
   
   
 \subsubsection*{Bessere Kommunikation mit
-  Domänen-Experten und Kunden}
-  Aufgrund domänenspezifischer- und präziser Ausdrücke,
+  Domänenexperten und Kunden}
+  Aufgrund domänenspezifischer und präziser Ausdrücke,
   die in der Sprache verwendet
-  werden, sind die Domänen-Experten bzw.
+  werden, sind die Domänenexperten bzw.
   die Kunden vertrauter mit der Implementierung,
-  als wenn für die Umsetzung eine GPL
-  verwendet werden würde \vcite{voelter}{42}. Die hohe Ausdruckskraft
+  als würde für die Umsetzung eine GPL
+  verwendet werden \vcite{voelter}{42}. Die hohe Ausdruckskraft
   fördert das Verständnis dieser DSL. Damit ist es einfacher die Kunden in die
-  Entwicklung mit einzubeziehen. Dabei sollten jedoch zusätzliche Hilfsmittel
+  Entwicklung mit einzubeziehen. Dabei sollten jedoch zusätzliche Hilfsmittel,
   wie Visualisierungen oder Simulationen verwendet
   werden (vgl. \cite[S.34]{fowler}, \cite[S.42]{voelter}). Somit kann die oft
   vernachlässigte Kommunikation zwischen Kunden und
-  Auftragnehmern verbessert werden. Martin Fowler et al. beschreiben sogar den
-  Einsatz einer DSL als reine Kommunikationplattform als vorteilhaft 
+  Auftragnehmern verbessert werden. Martin Fowler et al. bezeichnen die
+  Verwendung einer DSL als reine Kommunikationplattform als vorteilhaft 
   \vcite{fowler}{34f}. Grund dafür ist, dass bereits bei der Entwicklung einer
   DSL das Verständnis des Auftragnehmers über die Domäne gesteigert wird 
   \vcite{voelter}{41}.
@@ -250,29 +253,28 @@ Eigenschaft des Domänen-Fokus als ein Schlüsselelement der Definition einer DSL
   Durch die Nutzung einer DSL kann bspw. ein Teil der Logik von der Kompilierung
   in den Ausführungskontext überführt werden. Die Definition der Logik findet dabei
   in der DSL statt, welche erst bei der Ausführung evaluiert wird. Ein solches
-  Verfahren wird oft unter der Verwendung von XML verwendet 
+  Verfahren wird oft unter der Verwendung von \emph{XML} genutzt
   \vcite{fowler}{35}. Dadurch ist es möglich die Logik auf unterschiedlichen
   Plattformen auszuführen \vcite{voelter}{43}. Dieser Vorteil ist besonders für
-  den praktischen Teil dieser Arbeit interessant. (Allerdings weniger in Bezug auf Logik, sondern in
-  Bezug auf Benutzerschnittstellen.)
+  den praktischen Teil dieser Arbeit interessant, allerdings weniger in Bezug
+  auf Logik, denn in Bezug auf Benutzerschnittstellen.
   
 \subsubsection*{Einfachere Validierung und Verifizierung}
   Da DSLs bestimmte Details der Implementierung ausblenden, sind sie auf
   semantischer Ebene reichhaltiger als GPLs. Das führt dazu, dass Analysen
   einfacher umzusetzen sind und Fehlermeldungen verständlicher gestaltet werden können, indem die
   Terminologie der Domäne verwendet wird. Dadurch und durch die vereinfachte
-  Kommunikation mit den Domänen-Experten werden Reviews und Validierungen des
+  Kommunikation mit den Domänenexperten, werden Reviews und Validierungen des
   DSL-Codes weitaus effizienter \vcite{voelter}{41}.
-  
   
 \subsubsection*{Unabhängigkeit von Technologien}
   Die Modelle, welche zur Beschreibung von Systemen verwendet werden, können so
   gestaltet werden, dass sie von Implementierungstechniken unabhängig sind. Dies
   wird durch ein hohes Abstraktionsniveau erreicht, welches an die Domäne
   angepasst ist. Dadurch kann die Beschreibung der Modelle von den genutzten
-  Technologien weitgehend entkoppelt werden \vcite{voelter}{41}.
+  Technologien weitestgehend entkoppelt werden \vcite{voelter}{41}.
   
-\subsubsection*{Skalierbarkeit des Entwicklungsprozesses}
+\subsubsection*{Skalierung des Entwicklungsprozesses}
   Die Integration von neuen Mitarbeitern in ein Entwicklerteam fordert immer
   eine gewisse Einarbeitungszeit. Dieser Zeitraum kann durch die
   Nutzung einer DSL verkürzt werden, wenn die DSL einen hohen Abstraktionsgrad
@@ -318,7 +320,7 @@ Eigenschaft des Domänen-Fokus als ein Schlüsselelement der Definition einer DSL
   Analyse wahrgenommen werden \vcite{voelter}{43}.\\
   Weiterhin sind in der Phase, in der die DSL entwickelt wird, keine große
   positive Änderungen bzgl. der Kosten zu erwarten. Die Kosten reduzieren sich
-  i.d.R. erst, wenn die DSL eingesetzt wird \vcite{ghosh}{21}.\\
+  i. d. R. erst, wenn die DSL eingesetzt wird \vcite{ghosh}{21}.\\
   Bevor eine DSL entwickelt werden kann, sollte ein entsprechendes Know-How
   aufgebaut werden. Der Aufbau dieses Wissens verursacht weitere Kosten 
   \vcite{fowler}{37}.
@@ -382,12 +384,12 @@ Eigenschaft des Domänen-Fokus als ein Schlüsselelement der Definition einer DSL
   
 \subsubsection*{Kulturelle Herausforderungen}
   Die genannten Nachteile des Einsatzes von DSLs führen zu Äußerungen wie
-  \emph{Die Entwicklung von Sprachen ist kompliziert}, \emph{Domänen-Experten
+  \emph{Die Entwicklung von Sprachen ist kompliziert}, \emph{Domänenexperten
   sind keine Programmierer} oder \emph{Ich möchte nicht schon wieder eine
   neue Sprache lernen} (\emph{Yet-Another-Language-To-Learn
   Syndrom} \vcite{ghosh}{22}).\\
-  Solche kulturellen Probleme entstehen i.d.R. dann, wenn etwas Neues eingeführt
-  werden soll \cite{voelter}{45}. Die Mitarbeiten müssen demnach
+  Solche kulturellen Probleme entstehen i. d. R. dann, wenn etwas Neues
+  eingeführt werden soll \cite{voelter}{45}. Die Mitarbeiten müssen demnach
   entsprechend geschult und motiviert werden.
   
 \subsubsection*{Unvollständige DSLs}
@@ -419,7 +421,7 @@ Gewinn höher ausfallen \vcite{ghosh}{21}.
 
 \section{Interne DSLs}\label{interneDSL}
 Bei einer internen DSL handelt es sich um eine DSL, die in eine GPL integriert
-ist. Sie übernehmen dabei das Typ-System der GPL \vcite{voelter}{50}. In
+ist. Sie übernehmen dabei das Typsystem der GPL \vcite{voelter}{50}. In
 Bezug auf die Ziele aus Kapitel \ref{mdsd} können einige dieser mit
 Application Programming Interfaces (API) erreicht werden.
 In vielen Fällen ist eine DSL nicht mehr als ein API.
@@ -495,8 +497,8 @@ Definition von Annotationen variiert bei unterschiedlichen Sprachen
 zu frei bestimmten Zeitpunkten statt. Zum Zeitpunkt der Übersetzung, zum
 Zeitpunkt des Ladens des Programms oder zum Zeitpunkt der Ausführung des
 Programms \vcite{fowler}{447}. Verarbeitungen während der Laufzeit beeinflussen
-i.d.R. das Verhalten von Objekten. Beim Laden des Programms werden meist Validierungs-Annotationen verwendet. Solche
-Annotationen werden bspw. verwendet, um Mapping für Datenbanken
+i. d. R. das Verhalten von Objekten. Beim Laden des Programms werden meist
+Validierungs-Annotationen verwendet. Solche Annotationen werden bspw. verwendet, um Mapping für Datenbanken
 auszulesen. Somit wird die Definition von Elementen von der Verarbeitung
 getrennt, was zu einem übersichtlichen und lesbaren Code beiträgt 
 \vcite{fowler}{449}. 
@@ -505,7 +507,7 @@ getrennt, was zu einem übersichtlichen und lesbaren Code beiträgt
 \section{Externe DSLs}\label{externeDSL}
 Eine externe DSL ist eine separate Sprache, welche die Infrastruktur vorhandener
 Sprachen nicht nutzt \vcite{ghosh}{18}. Das bedeutet, dass eine externe DSL
-eine eigene Syntax sowie ein eigenes Typ-Sytem besitzt. In der Regel wird mit
+eine eigene Syntax sowie ein eigenes Typsystem besitzt. In der Regel wird mit
 einer externen DSL ein Skript geschrieben, welches von einem Programm gelesen wird. Dieser Vorgang wird auch als
 \emph{Parsen} bezeichnet \vcite{fowler}{28}. Für den Parser die
 lexikalische Analyse werden oft vorhandene Infrastrukturen genutzt
@@ -523,7 +525,7 @@ Bei der Generierung von Parsern muss der Parser nicht manuell implementiert
 werden. Diese Aufgabe wird an den Generator delegiert. Damit dies möglich ist,
 müssen zwei Artefakte definiert werden. Erstens muss eine Grammatik in der
 erweiterten Backus-Naur Form (EBNF) beschrieben werden. Zweitens werden
-bestimmte Aktionen benötigt, die bei der Bestätigung bestimmter Grammatik-Regeln ausgeführt werden sollen
+bestimmte Aktionen benötigt, die bei der Bestätigung bestimmter Grammatikregeln ausgeführt werden sollen
 (Validierungs-Regeln) \vcite{ghosh}{218}. Wird der Parser Generator
 ausgetauscht führt dies auch häufig dazu, dass die notwendigen Artefakte (Grammatik und Aktionen) neu
 definiert werden müssen \vcite{fowler}{269}. Weiterhin arbeiten die
@@ -549,7 +551,7 @@ Funktionen implementieren dabei die Parsing-Regeln für die nonterminalen Symbole
 der Grammatik \vcite{fowler}{245}. Die Funktionen geben dabei einen
 Boolean-Wert zurück, der Auskunft darüber gibt, ob die Symbole aus dem
 DSL-Skript mit den Symbolen übereinstimmen, die laut Grammatik erwartet werden
-\vcite{fowler}{246}. Tabelle \ref{tab_RD_Implementierung} enthält die Implementierungsmöglichkeiten von einfachen Grammatik-Regeln.
+\vcite{fowler}{246}. Tabelle \ref{tab_RD_Implementierung} enthält die Implementierungsmöglichkeiten von einfachen Grammatikregeln.
 \begin{table}[!htb]
 \centering
 \small
@@ -597,8 +599,8 @@ if(A())
 				\hline
 				\hline
 			\end{tabular}
-		\caption[Implementierung einfacher Grammatik-Regeln mit einem
-		RD-Parser]{Implementierung einfacher Grammatik-Regeln mit einem RD-Parser
+		\caption[Implementierung einfacher Grammatikregeln mit einem
+		RD-Parser]{Implementierung einfacher Grammatikregeln mit einem RD-Parser
 		\vcite{fowler}{248}}
 \label{tab_RD_Implementierung}
 	\end{table}\\

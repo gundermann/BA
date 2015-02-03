@@ -6,7 +6,7 @@
 \contentsline {lstlisting}{\numberline {6}2. Iteration: Button und Label (1)}{61}{lstlisting.6}
 \contentsline {lstlisting}{\numberline {7}2. Iteration: Area-Zuweisung (2)}{62}{lstlisting.7}
 \contentsline {lstlisting}{\numberline {8}2. Iteration: Ver\"andern von Komponenten eingebundener GUI-Beschreibungen}{62}{lstlisting.8}
-\contentsline {lstlisting}{\numberline {9}2. Iteration - Ver\"andern von Komponenten eingebundener GUI-Beschreibungen mit Namens\"uberschneidung}{63}{lstlisting.9}
+\contentsline {lstlisting}{\numberline {9}2. Iteration: Ver\"andern von Komponenten eingebundener GUI-Beschreibungen mit Namens\"uberschneidung}{63}{lstlisting.9}
 \contentsline {lstlisting}{\numberline {10}3. Iteration: Properties- und Layout-Dateien}{69}{lstlisting.10}
 \contentsline {lstlisting}{\numberline {11}3. Iteration: Eingebundene \emph {GUI-Komponenten} }{70}{lstlisting.11}
 \contentsline {lstlisting}{\numberline {12}3. Iteration: Button und Label}{70}{lstlisting.12}

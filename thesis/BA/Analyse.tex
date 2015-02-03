@@ -12,24 +12,24 @@ besteht die Möglichkeit, dass verwendete Frameworks veralten, woraus sich der
 Bedarf an einer Überführungsmöglichkeit der \emph{\glspl{GUI}}, die mit älteren
 Frameworks dargestellt werden, in \emph{\glspl{GUI}}, die mit aktuellen Frameworks
 dargestellt werden, ergibt.\\
-Da die Nutzer an bestimmte Aufbau \emph{\glspl{GUI}} gewöhnt
+Da die Nutzer an  einen bestimmte Aufbau \emph{\glspl{GUI}} gewöhnt
 sind, ist es von Vorteil, wenn die \emph{\acrshort{GUI}} des Clients auf
 unterschiedlichen Plattformen den gleichen Aufbau hat. 
-Von daher ist die Ähnlichkeit der \emph{\glspl{GUI}} auf
+Von daher ist die optische Ähnlichkeit der \emph{\glspl{GUI}} auf
 unterschiedlichen Plattformen eine weitere Anforderung.\\
 Um eine effiziente
-Arbeitsweise zu ermöglichen, ist es wichtig, dass die
+Arbeitsweise zu bewirken, ist es wichtig, dass die
 verwendeten Frameworks um wiederverwendbare Komponenten
-erweitert werden können. So ist es möglich redundante
+erweitert werden können. So ist es möglich, redundante
 Implementierungen zu verallgemeinern und letztendlich zu
 reduzieren.\\
 Abschließend ist die Ausdruckskraft der Syntax, für die Entwicklung der
-\emph{\glspl{GUI}}, als Kriterium zu nennen. Eien ausdrucksstarke Syntax fördert
-die Lesbarkeit des Quellcodes und damit letztendlich das Verständnis dessen, sowie die Effizienz mit der die \emph{\glspl{GUI}} entwickelt werden
-\vcite{voelter}{70}.\\
+\emph{\glspl{GUI}}, als Kriterium zu nennen. Eine ausdrucksstarke Syntax fördert
+die Lesbarkeit des Quellcodes und damit letztlich dessen Verständnis
+sowie die Effizienz mit der die \emph{\glspl{GUI}} entwickelt werden \vcite{voelter}{70}.\\
 Diese Anforderungen an die \emph{\glspl{GUI}} haben in der \deg
-eine unterschiedlich hohe Priorität (1 = höchste Priorität, 3 = niedrigste
-Priorität), die in folgender Tabelle beschrieben wird.
+ unterschiedliche Prioritäten (1 = höchste Priorität, 3 = niedrigste
+Priorität), die in folgender Tabelle beschrieben werden.
 \begin{table}[H]
 \centering
 \small
@@ -44,7 +44,7 @@ Priorität), die in folgender Tabelle beschrieben wird.
 				\hline
 				AA3  & Ähnlicher Aufbau auf unterschiedlichen Plattformen & 2 \\
 				\hline
-				AA4 & Erweiterbarkeit der verwendeten Frameworks & 1\\
+				AA4 & Erweiterungmöglichkeiten der verwendeten Frameworks & 1\\
 				\hline
 				AA5 & Ausdrucksstarke Syntax & 3\\
 				\hline
@@ -58,21 +58,22 @@ Priorität), die in folgender Tabelle beschrieben wird.
 Benutzerschnittstellen für mehrere Plattformen in der \deg (Ist-Zustand)}
 \subsection{Multichannel-Framework}
 Die Clients werden in der Programmiersprache \emph{Java} entwickelt. Für die
-Realisierung des \emph{Standalone-Clients} wird in der \deg das
-\gloss{Swing}-Framework verwendet. Für den \emph{Web-Client} wird auf
-\gloss{wingS} zurückgegriffen. Um eine Vorstellung des Ist-Zustandes zu vermitteln, sind in Abbildung
+Realisierung des \emph{Standalone-Clients} wird in der \deg das Framework
+\gloss{Swing} verwendet. Für den \emph{Web-Client} wird auf
+\gloss{wingS} zurückgegriffen. Um eine Vorstellung des Ist-Zustands zu vermitteln, sind in Abbildung
  \ref{Abb_Standalone-Client} und in Abbildung \ref{Abb_Web-Client} (siehe Anhang
 \ref{zuwendungsblatt}) die \emph{\glspl{GUI}} eines
-\glossLink{Zuwendungsblatt}{Zuwendungsblattes} und eines
+\glossLink{Zuwendungsblatt}{Zuwendungsblatts} und eines
 \glossLink{Förderantrag}{Förderantrags} für den \emph{Web-Client} und den
 \emph{Standalone-Client} abgebildet.\\
 In diesen \emph{\glspl{GUI}} ist nur ein bestimmter Teil für die fachlichen
 Informationen relevant.
-Dies sind lediglich die Tabelle und die darunter stehenden Schaltflächen, sowie
+Dies sind lediglich die Tabelle, die darunter stehenden Schaltflächen sowie
 das Bemerkungsfeld (im \emph{Web-Client} auf der rechten Seite und im
 \emph{Standalone-Client} in der Mitte). Dieser Bereich der \emph{\acrshort{GUI}}
 ist in beiden Clients gleich aufgebaut. Andere Teile der \gui
-haben derzeit einen unterschiedlichen Aufbau, was den unterschiedlichen Frameworks für die Umsetzung von \emph{Web-} und \emph{Standalone-Client} geschuldet ist.\\
+haben derzeit keine einheitlichen Aufbau, was den
+unterschiedlichen Frameworks für die Umsetzung von \emph{Web-} und \emph{Standalone-Client} geschuldet ist.\\
 Dass der Aufbau der \emph{\acrshort{GUI}} in beiden Clients ähnlich ist, liegt an der
 Umsetzung der \emph{\acrshort{GUI}}, die im Folgenden erläutert wird.\\
 Aufgrund von Anforderung \emph{\hyperref[Tab_PrioAnfGUI]{AA1}} wurden in der
@@ -80,7 +81,7 @@ Vergangenheit zwei \emph{\glspl{GUI}} mit unterschiedlichen Frameworks von der
 \deg entwickelt.
 Dieses Verfahren erwies sich mit komplexer werdenden \emph{\glspl{GUI}} als sehr
 ineffizient. Daher hat die \deg
-eine Lösung erarbeitet mit der es möglich ist, eine einmal beschriebene
+eine Lösung erarbeitet, mit der es möglich ist, eine einmal beschriebene
 \emph{\acrshort{GUI}} auf mehrere Plattformen zu portieren. Durch diese Abstraktion
 wird der Aufwand der Entwicklung neuer \emph{\glspl{GUI}} stark reduziert. 
 Zugleich fördert die einmalige Beschreibung auch einen ähnlichen Aufbau der
@@ -102,35 +103,35 @@ Frameworks basieren und das \emph{Component-Interface} implementieren.
 \gloss{wingS}. \emph{ULC} wird in der \deg nicht mehr eingesetzt.) Das
 \emph{Component-Interface} wird für die Interaktion mit den Komponenten der
 unterschiedlichen Frameworks benötigt. Mit dem \MCF ist die \deg in der Lage
-ihre \emph{\glspl{GUI}} für das \emph{\gloss{Swing}}-Framework und für das
-\emph{\gloss{wingS}}-Framework mit nur einer \emph{\acrshort{GUI}}-Beschreibung zu erzeugen.\\
+ihre \emph{\glspl{GUI}} für \emph{\gloss{Swing}} und für
+\emph{\gloss{wingS}} mit nur einer \emph{\acrshort{GUI}}-Beschreibung zu erzeugen.\\
 Die Anbindung anderer Frameworks ist bei Betrachtung der Architektur des \MCF
 unproblematisch. Dadruch scheint die \deg mit diesem Ansatz auch auf den
 Einsatz neuer Frameworks (siehe Anforderung
 \emph{\hyperref[Tab_PrioAnfGUI]{AA2}}) vorbereitet zu sein.\\
-Wie bereits erwähnt werden die Clients mit \emph{Java} entwickelt.
+Wie bereits erwähnt, werden die Clients mit \emph{Java} entwickelt.
 Für die Architektur der Clients wird der \emph{WAM-Ansatz} verwendet, welcher im
-folgenden Kapitel kurz erläutert wird.
+Folgenden Kapitel kurz erläutert wird.
 \subsection{JWAM}
 \dcite{JWAM ist eine Realisierung des WAM-Ansatzes in der Programmiersprache
 Java}{sauerDip}{30}\\\\
-Die Bezeichnung \emph{WAM} steht für \emph{Werkzeug und Material-Ansatz}. Es
+Die Bezeichnung \emph{WAM} steht für \emph{Werkzeug \& Material-Ansatz}. Es
 handelt sich dabei um einen Ansatz zur Softwarearchitektur, welcher den
 anwendungsorientierten Ansatz der Softwareentwicklung fördert. Der Benutzer der
 Software steht im Mittelpunkt, wodurch die Gestaltung der Funktionalitäten, Benutzerschnittstellen
 und die Schnittstelle des Entwicklungs- und Implementierungsprozesses
 beeinflusst werden \vcite{schmelzer}{13}. Weiterhin werden Entwurfsmetaphern
 verwendet, die den Entwicklern und Anwendern das Entwickeln und Verstehen der Software
-vereinfachen sollen \vcite{sauerDip}{30}. Diese Entwurfsmetapher
+vereinfachen sollen \vcite{sauerDip}{30}. Diese Entwurfsmetaphern
 beschreiben \dcite{[\ldots] Elemente und Konzepte der Anwendung durch bildhafte
 Vorstellungen von realen Gegenständen [\ldots]}{sauerDip}{30}.
 Die grundlegenden Metaphern werden im Folgenden kurz erläutert. Ein
-\emph{Material} kann nicht direkt vom Nutzer bearbeitet werden. Sie besitzen jedoch eine
-Schnittstelle, die fachliche Operationen erlaubt. Diese Operationen können
+\emph{Material} kann nicht direkt vom Nutzer bearbeitet werden. Es besitzt
+jedoch eine Schnittstelle, die fachliche Operationen erlaubt. Diese Operationen können
 bspw. von einem \emph{Werkzeug} aufgerufen werden, um den Zustand des Materials
 zu verändern. Dabei verfügen \emph{Werkzeuge} über eine Präsentation und geben
 somit eine Handhabung vor. \\
-Es wird zwischen zwei Arten von \emph{Werkzeugen} - \emph{monolithische-} und \emph{komplexe
+Es wird zwischen zwei Arten von \emph{Werkzeugen} - \emph{monolithische} und \emph{komplexe
 Werkzeuge} (vgl. \cite[S.5]{hofer}). Da in der \deg hauptsächlich \emph{komplexe
 Werkzeuge} Anwendung finden, werden die \emph{monolithische
 Werkzeuge} in dieser Arbeit nicht weiter erläutert. \emph{Komplexe
@@ -140,9 +141,9 @@ Funktionskomponente (\emph{FunctionPart - FP}) vollständig von der
 \emph{\acrshort{GUI}} abstrahieren und sich somit auf die Fachlogik beschränken.
 Zwischen diesen Komponenten steht eine Interaktionskomponente
 (\emph{InteractionPart - IP}), die für die Abstraktion Sorge trägt. Eine
-\emph{Werkzeug-Klasse} umschließt diese drei Komponenten (siehe Abbildung
-\ref{Abb_WAM_GUI}) (vgl. \cite[S.5f]{hofer}). \myBigFigure{wamgui.jpg}{Komplexes Werkzeug mit
-Benutzt-Beziehung}{WAM_GUI}
+\emph{Werkzeugklasse} umschließt diese drei Komponenten, wie Abbildung
+\ref{Abb_WAM_GUI} zu entnehmen ist (vgl. \cite[S.5f]{hofer}).
+\myBigFigure{wamgui.jpg}{Komplexes Werkzeug mit Benutzt-Beziehung}{WAM_GUI}
 \noindent
 \emph{Automaten} können selbstständig Routinearbeiten
 erledigen (vgl. \cite[S.30]{sauerDip}). Sie können ebenfalls \emph{Materialien}
@@ -151,8 +152,8 @@ Gegenstände, die mit diesen
 Metaphern assoziiert werden, können in \emph{Arbeitsumgebungen} abgelegt werden.
 Dabei werden zwei \emph{Arbeitsumgebungen} unterschieden. Erstens die
 persönlichen Arbeitsplätze der Benutzer und zweitens Räume der
-\emph{Arbeitsumgebung}, die für alle zugänglich sind und über die somit die
-Zusammenarbeit stattfindet (vgl. \cite[S.31]{sauerDip},
+\emph{Arbeitsumgebung}, die für alle zugänglich sind und dort somit die
+Zusammenarbeit stattfindet kann (vgl. \cite[S.31]{sauerDip},
 \cite[S.15]{schmelzer}).\\
 Darüber hinaus gibt es \emph{fachliche Services}, die
 als Dienstleister Funktionalität zur Verfügung stellen. Diese können
@@ -161,9 +162,9 @@ als Dienstleister Funktionalität zur Verfügung stellen. Diese können
 \cite[S.30f]{sauerDip}).\\
 Durch fachliche Services ist mit dem \emph{WAM-Ansatz}
 auch \emph{Multi-Channeling} möglich (vgl. \cite[S.42]{sauerDip}). Das
-\emph{Multi-Channeling} des \emph{WAM-Ansatzes} setzt dabei auf einer anderen Ebene als das \MCF an. Das
-\emph{Multi-Channeling} des \emph{WAM-Ansatzes} basiert darauf, dass
-\dcite{[\ldots] Funktionalität unabhängig von der konkreten Handhabung,
+\emph{Multi-Channeling} des \emph{WAM-Ansatzes} setzt dabei auf einer anderen
+Ebene als das \MCF an. Das \emph{Multi-Channeling} des \emph{WAM-Ansatzes}
+basiert darauf, dass \dcite{[\ldots] Funktionalität unabhängig von der konkreten Handhabung,
 Präsentation und Technik bereitgestellt wird.}{sauerDip}{42} Das \MCF hingegen
 basiert darauf, dass eine Präsentation unabhängig von der Technik bereitgestellt
 werden kann. Es setzt demnach auf einer höheren Ebene an, als das
@@ -175,24 +176,23 @@ werden kann. Es setzt demnach auf einer höheren Ebene an, als das
 Bezogen auf die Anforderungen werden \emph{\hyperref[Tab_PrioAnfGUI]{AA3}} und
 \emph{\hyperref[Tab_PrioAnfGUI]{AA5}} nicht durch das \MCF umgesetzt. (Zu
 \emph{\hyperref[Tab_PrioAnfGUI]{AA5}} ist dabei zu erwähnen, dass jede
-Sprache eine gewisse Ausdruckskraft hat. Da in dieser Arbeit versucht wird die \emph{\acrshort{GUI}}-Entwicklung mittels einer
-ausdrucksstarken \emph{domänenspezifischen Sprache (DSL)}, die sich auf die
+Sprache eine gewisse Ausdruckskraft hat. Da in dieser Arbeit versucht wird, die
+\emph{\acrshort{GUI}}-Entwicklung mittels einer ausdrucksstarken \emph{domänenspezifischen Sprache (DSL)}, die sich auf die
 \gloss{Domäne} von \pcs bezieht, umzusetzen, ist die Ausdruckskraft
 herkömmlicher Programmiersprachen oder Frameworks als unzureichend anzusehen).\\
 Ein weiteres Problem bezieht sich
 auf die integrierten Framworks (\gloss{Swing} und \gloss{wingS}). Beide Frameworks sind veraltet
 und werden nicht mehr gewartet. (Analysen dazu wurden in \cite{gundermann3} und
-\cite{gundermann4} durchgeführt.) Um auch in der Zukunft den Anforderungen der
+\cite{gundermann4} durchgeführt.) Um auch in Zukunft den Anforderungen der
 Kunden nachkommen zu können, müssten beide Frameworks von den Entwicklern der
 \deg selbst weiterentwickelt werden.
 Eine andere Möglichkeit wäre es, andere und modernere Frameworks 
 einzusetzen, um den nötigen Support der Framework-Entwickler
 nutzen zu können.\\
 Das \MCF ist in der Theorie so konzipiert, dass es leicht sein
-sollte neue Frameworks zu integrieren (siehe Abbildung \ref{Abb_MC-Framework}).
-In der Praxis wurde die Einfachheit einer solchen Integration jedoch
-widerlegt. Ein Problem, welches bei der Integration neuer Frameworks aufkommt,
-ist, dass sich das \MCF sehr stark an \gloss{Swing} orientiert und die
+sollte, neue Frameworks zu integrieren (siehe Abbildung \ref{Abb_MC-Framework}).
+In der Praxis wurde diese unkompilzierte Integration jedoch widerlegt. Ein
+Problem, welches bei der Integration neuer Frameworks aufkommt, ist, dass sich das \MCF sehr stark an \gloss{Swing} orientiert und die
 \emph{\glspl{GUI}} vor allem vom \gloss{GridBagLayout} stark beeinflusst werden.
 Ein solcher Layoutmanager steht nicht in allen \emph{\acrshort{GUI}}-Frameworks zur Verfügung. Da die
 Beschreibung der \emph{\acrshort{GUI}} über ein solches Layout vollzogen wird, ist der Umgang mit dem \gloss{GridBagLayout}
@@ -205,8 +205,9 @@ Zusammenfassend sind folgende Probleme des \MCF zu nennen:
   Starke Orientierung an \gloss{Swing}\label{P2}
 \end{itemize}
 \noindent
-Dazu kommen lästige Routinearbeiten, die in der \deg bei der Entwicklung von
-\emph{\glspl{GUI}} getätigt werden müssen. 
+Dazu müssen in der \deg bei der Entwicklung von
+\emph{\glspl{GUI}} lästige Routinearbeiten durchgeführt werden, die im
+Folgenden genannt werden:
 \begin{itemize}
   \item[\textbf{R1}]
   Vergebene Bezeichnungen für \gks müssen in unterschiedlichen
@@ -215,25 +216,26 @@ Dazu kommen lästige Routinearbeiten, die in der \deg bei der Entwicklung von
   Beim Erstellen von Tabellen müssen viele Methoden
   überschrieben werden.\label{R2}
   \item[\textbf{R3}]
-  Die Werte für Aufschriften, Größeneinstellungen u.Ä. für
+  Die Werte für Aufschriften, Größeneinstellungen u. Ä. für
   \gks werden bei der \deg in Properties-Dateien festgehalten. Das Erstellen und
-  Pflegen wird als Fehleranfällig betrachtet.\label{R3}
+  Pflegen wird als fehleranfällig betrachtet.\label{R3}
 \end{itemize}
 
 \section{Zielsetzung}\label{Ziel}
 Das langfristige Ziel der \deg bzgl. der \emph{\glspl{GUI}} ist es, eine Lösung zu
 entwickeln, welche das \MCF ablösen kann. Anzustreben ist eine Lösung, die neben
 der Umsetzung der oben genannten
-Anforderungen auch die genannten Routinearbeiten reduziert.\\
-In dieser Arbeit wird ein Ansatz untersucht, bei dem es möglich ist, die
-oben genannten Anforderungen besser umzusetzen. Kern des Ansatzes ist eine
-\emph{DSL}, mit deren Hilfe die \emph{\glspl{GUI}} beschrieben
+Anforderungen, auch die genannten Routinearbeiten reduziert.\\
+In dieser Arbeit wird ein Ansatz untersucht, bei dem es möglich ist,
+\hyperref[Tab_PrioAnfGUI]{AA1} - \hyperref[Tab_PrioAnfGUI]{AA5} besser
+umzusetzen.
+Kern des Ansatzes ist eine \emph{DSL}, mit deren Hilfe die \emph{\glspl{GUI}} beschrieben
 werden sollen (im Folgenden als \g bezeichnet).
 Eine \DSL könnte so konzipiert werden, dass sie ausreichend abstrakt und
 erweiterbar ist und bzgl.
 der Ausdruckskraft das \MCF übertrifft.\\
-Die genaue Lösungsidee mittels \emph{GUI-DSL}, welche in dieser Arbeit verfolgt
-wird, ist in Kapitel \ref{Entwicklung einer Lösungsidee} beschrieben.
+Die genaue Lösungsidee durch die \emph{GUI-DSL}, welche in dieser Arbeit
+verfolgt wird, ist in Kapitel \ref{Entwicklung einer Lösungsidee} beschrieben.
 
 
 
