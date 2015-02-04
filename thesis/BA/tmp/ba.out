@@ -19,7 +19,7 @@
 \BOOKMARK [2][-]{subsection.3.6.1}{Implementierungstechniken}{section.3.6}% 19
 \BOOKMARK [1][-]{section.3.7}{Externe DSLs}{chapter.3}% 20
 \BOOKMARK [2][-]{subsection.3.7.1}{Implementierungstechniken}{section.3.7}% 21
-\BOOKMARK [1][-]{section.3.8}{Nicht-textuelle DSL}{chapter.3}% 22
+\BOOKMARK [1][-]{section.3.8}{Nicht-textuelle DSLs}{chapter.3}% 22
 \BOOKMARK [0][-]{chapter.4}{GUI-DSL}{}% 23
 \BOOKMARK [1][-]{section.4.1}{Motivation des Ansatzes}{chapter.4}% 24
 \BOOKMARK [1][-]{section.4.2}{Anforderungen an die GUI-DSL}{chapter.4}% 25
@@ -49,5 +49,5 @@
 \BOOKMARK [0][-]{appendix.A}{Zuwendungsblatt f\374r Web- und Standalone-Client}{}% 49
 \BOOKMARK [0][-]{appendix.B}{Generierte Explorer-GUI}{}% 50
 \BOOKMARK [0][-]{appendix.C}{Inhalt des beiliegenden Datentr\344gers}{}% 51
-\BOOKMARK [0][-]{section*.52}{Glossar}{}% 52
-\BOOKMARK [0][-]{section*.55}{Literaturverzeichnis}{}% 53
+\BOOKMARK [0][-]{section*.46}{Glossar}{}% 52
+\BOOKMARK [0][-]{section*.49}{Literaturverzeichnis}{}% 53

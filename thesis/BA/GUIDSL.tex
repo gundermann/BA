@@ -1,37 +1,42 @@
 \chapter{GUI-DSL}\label{GUI-DSL}
 \section{Motivation des Ansatzes}
-Eine \acrshort{GUI} ermöglicht die Interaktion mit einem Programm mit Hilfe
-unterschiedlicher \acrshort{GUI}-Komponenten (vgl. \cite[S.4]{Galitz2007}). Mithilfe dieser Komponenten werden
-Informationen dargestellt, oder Eingaben vom Nutzer getätigt. Um die
-Zusammensetzung der \acrshort{GUI} über eine DSL zu beschreiben gibt
-unterschiedliche Ansätze, wovon zwei im Folgenden vorgestellt werden.
+Eine \acrshort{GUI} ermöglicht die Interaktion mit einem Programm durch
+unterschiedliche \acrshort{GUI}-Komponenten (vgl. \cite[S.4]{Galitz2007}). Mit
+Hilfe dieser Komponenten werden Informationen dargestellt oder Eingaben vom
+Nutzer getätigt. Um die Zusammensetzung der \acrshort{GUI} über eine DSL zu
+beschreiben, gibt unterschiedliche Ansätze, wovon zwei im Folgenden vorgestellt
+werden:
 \begin{enumerate}
   \item 
-Der erste Ansatz zeichnet sich dadurch aus, dass die \acrshort{GUI} auf der
-Grundlage von fachlichen Modellen generiert wird. \simplevcite{3} Das bedeutet, dass in der Beschreibung der GUI-DSL keine
-\acrshort{GUI}-Komponenten verwendet werden, wie es bei traditionellen \acrshort{GUI}-Frameworks (JavaFX, Swing) der Fall ist.
+Dieser Ansatz zeichnet sich dadurch aus, dass die \acrshort{GUI} auf der
+Grundlage von fachlichen Modellen generiert wird. \simplevcite{3} Das bedeutet,
+dass in der Beschreibung der \emph{GUI-DSL} keine \acrshort{GUI}-Komponenten
+verwendet werden, wie es bei traditionellen \acrshort{GUI}-Frameworks
+(JavaFX, Swing) der Fall ist.
 \item 
 Der zweite Ansatz beschreibt ein Modell der \acrshort{GUI}, welches
 in andere GUI-Modelle überführt werden kann. Somit wird die Trennung zwischen
 der \acrshort{GUI} und den fachlichen Aspekten in der Software erhalten und das
 Domänenproblem auf die \acrshort{GUI} reduziert.
 \end{enumerate}
-Die Komplexität des zweiten Ansatzes ist weitaus geringer, da
-lediglich die Aspekte, welche die \acrshort{GUI} betreffen, auf MDSD umgestellt
-werden müssen. Außerdem soll den Entwicklern weiterhin die Möglichkeit gegeben
-werden, die \glspl{GUI} selbst zu entwerfen, was bei dem ersten Ansatz streng
-genommen nicht möglich ist, da die \acrshort{GUI} vollständig generiert wird.
-Beim zweiten Ansatz hingegen werden weiterhin \acrshort{GUI}-Komponenten verwendet, was dem Entwicklern die Anpassung der
-\glspl{GUI} ermöglicht.\\
-Von daher wird der zweite Ansatz weiter verfolgt und eine \g konzipiert, welche
-die nachfolgenden Anforderung erfüllen soll.
+Die Umsetzung des letztgenannten Ansatzes ist weitaus einfacher, da
+lediglich die Aspekte, welche die \acrshort{GUI} betreffen, auf \emph{MDSD}
+umgestellt werden müssen. Zudem soll den Entwicklern weiterhin die Möglichkeit
+gegeben werden die \glspl{GUI} selbst zu entwerfen, was durch die im ersten
+Ansatz genannte Beschreibungsform nicht möglich ist,
+da die \guis vollständig generiert werden.
+Wogegen unter der Verwendung des zweiten Ansatzes weiterhin
+\acrshort{GUI}-Komponenten verwendet werden, was den Entwicklern die Anpassung
+der \glspl{GUI} ermöglicht. Von daher wird dieser Ansatz weiter verfolgt und eine \g konzipiert, welche
+die nachfolgenden Anforderungen erfüllen soll.
+
 
 
 \section{Anforderungen an die GUI-DSL}
-Die allgemeinen Anforderung an die \acrshort{GUI} und an die Sprache zur
-Beschreibung dieser wurden in Kapitel \ref{AllgAnforderungen} erläutert. Die
-folgenden Festlegungen beziehen sich auf die Ausdrucksmöglichkeit der \g,
-wodurch eine \acrshort{GUI} beschrieben werden soll.
+Die allgemeinen Anforderungen an die \acrshort{GUI} und an die Sprache zur
+Beschreibung dieser, wurden in Kapitel \ref{AllgAnforderungen} erläutert. Die
+folgenden Festlegungen beziehen sich auf die Ausdrucksmöglichkeit der
+\emph{GUI-DSL}, wodurch eine \acrshort{GUI} beschrieben werden soll.
 \begin{itemize}
   \item [\textbf{AS1}] Beschreibung von \glspl{GUI} über die
   Zusammensetzung von \acrshort{GUI}-Komponenten\label{AS1}
@@ -39,40 +44,39 @@ wodurch eine \acrshort{GUI} beschrieben werden soll.
   Veränderung beschriebener
   \glspl{GUI}\label{AS2}
   \item [\textbf{AS3}] Verwendung einer abstrakten Layoutbeschreibung\label{AS3}
-  \item [\textbf{AS4}] Weniger Quellcode zur Beschreibung von
+  \item [\textbf{AS4}] Gebrauch von weniger Quellcode zur Beschreibung von
   \glspl{GUI}\label{AS4}
-  \item [\textbf{AS5}] Beschreibung von Interaktionen an
+  \item [\textbf{AS5}] Beschreibung von Interaktionen mit den
   \acrshort{GUI}-Komponenten\label{AS5}
   \item [\textbf{AS6}] Erweiterung um neue \acrshort{GUI}-Komponenten\label{AS6}
 \end{itemize}
 
 \noindent
 Wie im vorherigen Abschnitt bereits erwähnt, sollen die Entwickler in der Lage
-sein eine \acrshort{GUI} relativ frei zu gestalten. Daraus folgt, dass
+sein, eine \acrshort{GUI} relativ frei zu gestalten. Daraus folgt, dass
 die einzelnen \acrshort{GUI}-Komponenten unterschiedlich kombinierbar sein
-müssen (siehe Anforderung \hyperref[AS1]{AS1}). Außerdem sollten die beschriebenen
+müssen (siehe Anforderung \hyperref[AS1]{AS1}). Zudem sollten die beschriebenen
 \glspl{GUI} auch in anderen GUI-DSL-Skripten (GUI-Skripten) wiederverwendet
 werden können (siehe Anforderung \hyperref[AS2]{AS2})), da viele \glspl{GUI} in
-profil c/s ähnlich aufgebaut sind.\\
+\pcs ähnlich aufgebaut sind.\\
 In Bezug auf das Layout muss erwähnt werden, dass in der traditionellen
 \acrshort{GUI}-Entwicklung die Strukturierung der \acrshort{GUI}-Komponenten mit Hilfe von
-Layout-Containern vorgenommen wird.
+Layoutcontainern vorgenommen wird.
 In der Vergangenheit hat sich gezeigt, dass die Strukturierung über ein
-spezifisches Layout zu einer Orientierung an ein bestimmtes Framework führt (Beispiel: MCF orientiert sich an Swing). Das ist
-nicht vorteilhaft, da bestimmte Layouts auf anderen Plattformen (Bspw. Web oder
-Mobil) nicht dargestellt werden können, da entsprechende Layout-Manager nicht
-vorhanden sind. Von daher ist das Layout in der \g so zu beschreiben, dass es
-auf allen Plattformen gleichermaßen gut dargestellt werden kann
+spezifisches Layout zu einer Orientierung an einem bestimmten Framework führt
+(Beispiel: MCF orientiert sich an Swing). Dies ist unvorteilhaft, da bestimmte
+Layouts auf anderen Plattformen (Bspw. Web oder Mobil) nicht dargestellt werden
+können, weil entsprechende Layoutmanager nicht vorhanden sind. Somit ist
+das Layout in der \g so zu beschreiben, dass es auf allen Plattformen gleichermaßen gut dargestellt werden kann
 (siehe Anforderung \hyperref[AS3]{AS3}).\\
-Für eine Steigerung der Effizienz der deg ist bei der Einführung neuer
+Für eine Steigerung der Effizienz in der \deg ist bei der Einführung neuer
 Technologien außerdem darauf zu achten, dass weniger Quellcode geschrieben
-werden muss, als zuvor. Die Qualität darf darunter jedoch nicht leiden
+werden muss als zuvor. Die Qualität darf darunter jedoch nicht leiden
 (siehe Anforderung \hyperref[AS4]{AS4}).\\
 Da eine \acrshort{GUI} ohne Interaktionsmöglichkeiten
-ihren Zweck nicht erfüllen kann, ist die Beschreibung dieser neben der Angabe
-von Informationen über die Darstellen ebenso von Belang (siehe
-Anforderung \hyperref[AS5]{AS5}).\\
-Außerdem darf die Erweiterung um neue \acrshort{GUI}-Komponenten nicht
-vernachlässigt werden (siehe Anforderung \hyperref[AS6]{AS6}), da anderen Falls
-die Gefahr besteht, dass die GUI-DSL unbrauchbar wird.
+ihren Zweck nicht erfüllen kann, ist die Beschreibung der Interkationen
+unabdingbar (siehe Anforderung \hyperref[AS5]{AS5}).\\
+Darüber hinaus darf die Erweiterung um neue \acrshort{GUI}-Komponenten nicht
+vernachlässigt werden (siehe Anforderung \hyperref[AS6]{AS6}), da anderenfalls
+die Gefahr besteht, dass die \emph{GUI-DSL} unbrauchbar wird.
 
