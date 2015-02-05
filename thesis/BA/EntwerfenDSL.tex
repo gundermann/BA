@@ -3,90 +3,93 @@
 \subsection*{Analyse der Metadaten}
 Die Beschreibung einer \acrshort{GUI} wird in der \g als eigener Komplex
 betrachtet (siehe semantisches Modell \emph{UIDescription}). Innerhalb dieses
-Komplexes werden die entsprechenden Komponenten definiert. Die Bereiche die innerhalb einer
-Beschreibung festgelegt werden sollen, müssen \gks zugeordnet werden
+Komplexes werden die entsprechenden Komponenten definiert. Die Bereiche, die
+innerhalb einer Beschreibung festgelegt werden sollen, müssen \gks zugeordnet werden
 können (siehe semantisches Modell \emph{AreaAssignment}). Diese Bereiche
 sollten vor der Entwicklung bereits festgelegt werden. Um abzusichern, dass die
 Anzahl der festgelegten Bereiche genau eingehalten wird, muss diese Anzahl in
 der GUI-Beschreibung angegeben werden (siehe semantisches Modell \emph{AreaCount}).\\
-Für die Beschreibung der Layout-Komponenten werden zwei Typen unterschieden
-(siehe semantisches Model \emph{TypeDefinition}), um zwischen obersten
-Layout-Komponenten und anderen zu differenzieren.\\
-Ein weiterer Aspekt in dem GUI-Skript ist die Verwendung von anderen
-GUI-Skripten (siehe semantisches Modell \emph{Use}).\\ 
-Zusammenfassend sind für die Beschreibung der GUI folgende Metadaten nötig.
+Für die Beschreibung der Layout-Komponenten wird zwischen zwei Typen
+unterschieden (siehe semantisches Model \emph{TypeDefinition}), um zwischen obersten
+Layout-Komponenten und Anderen zu differenzieren.\\
+Ein weiterer Aspekt in einem \emph{GUI-Skript}, ist die Verwendung anderer
+\emph{GUI-Skripte} (siehe semantisches Modell \emph{Use}).\\ 
+Zusammenfassend sind für die Beschreibung der \gui folgende Metadaten nötig:
 \begin{itemize}
-  \item  Anzahl der Bereiche
-  \item  Zuweisung der \gks zu den Bereichen
-  \item  Angabe des Layout-Typs
-  \item  Angabe der Verwendeten GUI-Beschreibungen
-  \item  Definition von \gks
+  \item  \textbf{Anzahl der Bereiche}
+  \item  \textbf{Zuweisung der \gks zu den Bereichen}
+  \item  \textbf{Angabe des Layouttyps}
+  \item  \textbf{Angabe der verwendeten GUI-Beschreibungen}
+  \item  \textbf{Definition von \gks}
 \end{itemize}
 Die Definitionen der \gks nehmen einen eigenen Komplex innerhalb der
 GUI-Beschreibung ein. 
-Bezogen auf die \Ks der \acrshort{GUI} ist die
-Beschreibung eines Textes wichtig. Im Falle eines Buttons oder eines Labels
-(andere \Ks sind in dieser Iteration nicht umgesetzt) beschreibt
-dieser die Aufschrift der Komponente.
+Bezogen auf die \Ks der \acrshort{GUI}, ist die
+Beschreibung eines Textes wichtig. Im Falle eines \emph{Buttons} oder eines
+\emph{Labels} beschreibt der Text die Aufschrift der Komponente.
 Weiterhin ist es für die Zuweisung zu einem Bereich wichtig, dass
 diese Komponenten innerhalb der Datei referenziert werden können. Daher muss
 für jede \gk eine Bezeichnung definiert werden, die innerhalb der
 Datei eindeutig ist.\\
-An den \Ks können darüber
-hinaus Interaktionen beschrieben werden. Hierzu sind Informationen über den
-Interaktionstyp nötig.
-Der einzige, in dieser Iteration umgesetzte, Interaktionstyp ist ein Klick auf
-die Komponente. An dieser Interaktion können ebenso Aktionen definiert werden, die Auswirkungen auf andere Komponenten haben.
-Zusammenfassend ergeben sich folgende Metadaten der \Ks.
+An den \Ks können darüber hinaus Interaktionen beschrieben werden, wofür
+Informationen über den Interaktionstyp von Nöten sind.
+Der einzige Interaktionstyp, der in dieser Iteration umgesetzt wurde, ist ein
+manuelles Betätigen der Komponente durch den Nutzer. Zudem können an dieser
+Interaktion Aktionen definiert werden, wodurch andere Komponenten verändert
+werden können.
+Zusammenfassend ergeben sich folgende Metadaten der \Ks:
 \begin{itemize}
-  \item Typ
-  \item Bezeichnung
-  \item Text
-  \item Interaktion (siehe semantisches Modell \emph{Interaction})
+  \item \textbf{Typ}
+  \item \textbf{Bezeichnung}
+  \item \textbf{Text}
+  \item \textbf{Interaktion (siehe semantisches Modell \emph{Interaction})}
 \end{itemize}
-Die Interaktion benötigt folgende Attributen, die beschrieben werden müssen.
+\noindent \\
+Die Interaktion benötigt folgende Attribute, die beschrieben werden müssen:
 \begin{itemize}
-  \item Bezeichnung
-  \item Interaktionstyp
-  \item Aktion
+  \item \textbf{Bezeichnung}
+  \item \textbf{Interaktionstyp}
+  \item \textbf{Aktion}
 \end{itemize}
+\noindent \\
 Aktionen nehmen wiederum einen eigenen Komplex innerhalb der
-Komponentendefinition ein. Dabei werden folgende Informationen benötigt.
+Komponentendefinition ein. Dabei werden folgende Informationen benötigt:
 \begin{itemize}
-  \item Aktionstyp\\
-  Zur Unterscheidung zwischen Interaktionen mit anderen \gks oder
-  fachlichen Modellen
-  \item Element\\
-  Ein Verweis auf das Element, mit dem interagiert werden soll.
-  \item Attribute (siehe semantisches Modell \emph{Property})\\
-  Die zu verändernden Attribute des Elements.
+  \item \textbf{Aktionstyp}\\
+  Dient der Unterscheidung von Interaktionen mit anderen \gks und
+  fachlichen Modellen.
+  \item \textbf{Element}\\
+  Ist ein Verweis auf das Objekt, mit dem interagiert werden soll.
+  \item \textbf{Attribute} (siehe semantisches Modell \emph{Property})\\
+  Sind zu verändernde Eigenschaften des Elements.
 \end{itemize}
-Die \knks werden in einer eigenen Komponentendefinition beschrieben. Grund dafür
-ist, dass neben den vordefinierten Funktionalitäten der \knks auch weitere
-optionale Wertzuweisungen möglich sein sollen. Dazu wird nach der Implementierung
-der Komponente für jedes Framework ein neues Schlüsselwort für eine
+\noindent \\
+Die \knks werden in einer eigenen Komponentendefinition beschrieben, da neben
+den vordefinierten Funktionalitäten der \knks auch weitere optionale
+Wertzuweisungen möglich sein sollen. Dazu wird nach der Implementierung einer
+Komponente, ein neues Schlüsselwort für eine
 Komponentendefinition in die Grammatik eingebaut. Jede komplexe Komponente
-benötigt darüber hinaus eine Bezeichnung um referenziert zu werden. In dieser
-Iteration ist eine \gloss{Multiselection-Komponente} umgesetzt. Diese Komponente
-ist generisch implementiert. Der generische Typ muss innerhalb der
-Komponenten in der GUI-Beschreibung definiert werden. Ebenso müssen die
-Werte, die in dieser Komponente selektiert werden können, angegeben werden.
-Zusätzlich sollen optional auch die Werte angegeben werden, die bereits
-selektiert wurden.
+benötigt darüber hinaus eine Bezeichnung, um referenziert zu werden. In dieser
+Iteration ist die \gloss{Multiselection-Komponente} umgesetzt, welche generisch
+implementiert ist. Der generische Typ wird innerhalb der Komponente in der
+GUI-Beschreibung definiert. Ebenso muss der Entwickler die Werte angeben, welche
+in dieser Komponente selektiert werden können.
+Zusätzlich soll die Möglichkeit bestehen, Werte zu beschreiben, die bereits
+ausgewählt wurden.
 
 
 \subsection*{Semantisches Modell}
-Das Artefakt, welches beim diesem Modell im Mittelpunkt steht ist die
+Das Artefakt, welches bei diesem Modell im Mittelpunkt steht, ist die
 \emph{UIDescription} (siehe Abbildung \ref{Abb_Teil1-1}). Die Methoden werden
 zum Erhalt der Übersichtlichkeit nur in den Interfaces abgebildet. In den Klassen sind
-lediglich die globalen Variablen dargestellt. Die aggregierten Artefakte auf
-die schon im vorherigen Abschnitt verwiesen wurde, sind aus dem Diagramm gut zu
-entnehmen.
+lediglich die globalen Variablen dargestellt. Die aggregierten Artefakte, auf
+die schon im vorherigen Abschnitt hingewiesen wurde, sind dem Diagramm gut
+zu entnehmen.
 \myBigFigure{v1-1.jpg}{1. Iteration: UIDescription}{Teil1-1}
 \myBigFigure{v1-1-1.jpg}{1. Iteration UsedUIDescription}{Teil1-1}
 \noindent
-Die Klasse \emph{DefinitionImpl} aggregiert weitere Artefakte des Modells. Diese sind um
-die Übersicht zu wahren Abbildung \ref{Abb_Teil2-1} zu entnehmen.\\
+Die Klasse \emph{DefinitionImpl} aggregiert weitere Artefakte des Modells. Diese
+sind, um die Übersicht zu wahren, Abbildung \ref{Abb_Teil2-1} zu entnehmen.\\
 \myBigFigure{v1-2.jpg}{Teil 3:
 GUI-Beschreibungsmodell Version 1}{Teil2-1} 
 \myBigFigure{v1-2-1.jpg}{Teil 4:
@@ -94,16 +97,16 @@ GUI-Beschreibungsmodell Version 1}{Teil2-1}
 \noindent
 Dort sind die drei umgesetzten Ausprägungen einer \emph{Definition} zu erkennen.
 Dabei handelt es sich um \emph{Label}, \emph{Button} und \emph{MultiSelection}.
-Weiterhin ist zu erkennen, dass nur der Button eine \emph{Interaction}
-enthalten kann. Das Interface \emph{Property} wird benötigt um bestimmte Werte an
-\gks zu setzen, ohne wissen zu müssen um welchen Komponententyp es
-sich handelt.
+Weiterhin ist zu erkennen, dass nur der \emph{Button} eine
+Interaktion (\emph{Interaction}) enthalten kann. Das Interface \emph{Property}
+wird benötigt, um bestimmte Eigenschaften der \gks festzulegen, ohne wissen zu
+müssen, um welchen Komponententyp es sich handelt.
 Dazu wurden die allgemein gültigen Einstellungsmöglichkeiten von \Ks in
 \emph{CommonProperty} zusammengefasst.
 
 \subsection*{Konkrete Syntax}
-Folgender Auszug aus einem GUI-Skript enthält sämtliche Features, die im
-Prototypen der ersten Iteration umgesetzt wurden. 
+Folgender Auszug aus einem \emph{GUI-Skript} enthält sämtliche Features, die im
+Prototypen der ersten Iteration umgesetzt wurden.
 \begin{lstlisting}[{caption
 =1.
 Iteration:
@@ -124,46 +127,44 @@ Area:2<-"AnotherDescription"
 Area:3<-"Interactbt"
 Area:4<-"Multiselect"
 \end{lstlisting}
-Die Bezeichnung \emph{Area} wurde bewusst so gewählt, da dieser Begriff
+Die Bezeichnung \emph{Area} wurde bewusst gewählt, da dieser Begriff
 abstrakter ist als die in verschiedenen \acrshort{GUI}-Frameworks verwendeteten
-Begriffe wie, Panel oder Pane. In der Syntax dieser DSL gilt es sich vor allem
-bzgl. des Aufbaus der GUI an keinem \acrshort{GUI}-Framework zu orientieren. Die
-einzelnen Komponentendefinitionen werden durch das Schlüsselwort \emph{DEF} eingeleitet
-und durch das Schlüsselwort \emph{END DEF} abgeschlossen. Der Definitionskopf
-wird durch das Zeichen \emph{:} beendet. Dort sind die Pflichtfelder der
-Komponentendefinition zu finden (\emph{Titel} und \emph{Typ}).
-Bei der Multiselection-Komponente fällt auf, dass ein Referenz-Wert verwendet
-wird, der in dieser Beschreibung nicht deklariert wurde (\emph{valuespackage.Values}).
+Begriffe, wie \emph{Panel} oder \emph{Pane}. Die Syntax dieser DSL soll sich
+bzgl. des Aufbaus der GUI an keinem \acrshort{GUI}-Framework orientieren. Die
+einzelnen Komponentendefinitionen werden durch das Schlüsselwort \emph{DEF}
+eingeleitet und durch das Schlüsselwort \emph{END DEF} abgeschlossen. Der
+Definitionskopf wird durch das Zeichen \emph{\glqq :\grqq} beendet. Dort sind
+die Pflichtfelder \emph{Titel} und \emph{Typ} der Komponentendefinition zu
+finden.
+Bei der \emph{Multiselection-Komponente} fällt auf, dass ein Referenzwert
+verwendet wird, der in dieser Beschreibung nicht deklariert wurde (\emph{valuespackage.Values}).
 Dabei handelt es sich um einen qualifizierten Namen einer Klasse.\\
-Die dazugehörige Grammatik befindet sich im Anhang
-\ref{AppGrammatiken}.
-
-
-
-
+Die dazugehörige Grammatik befindet sich im Anhang \hyperref[cd]{Anlage}.
 
 \section{2. Iteration}
 
 \subsection*{Analyse der Metadaten}
 In den Metadaten der GUI-Beschreibung muss in dieser Iteration eine
-Proper\-ties-Datei angegeben werden, in der bestimmte Werte für die Attribute
-der \gks enthält.\\
-Da die Möglichkeit bestehen soll die, in den eingebundenen GUI-Skripte
-definierten, Komponenten in dieser Iteration zu verändert, wird eine weitere
+\emph{Proper\-ties-Datei angegeben} werden, in der bestimmte Werte für die
+Attribute der \gks enthalten sind.\\
+Da die Möglichkeit bestehen soll, die in den eingebundenen \emph{GUI-Skripten}
+definierten Komponenten zu verändern, wird eine weitere
 Ergänzung für die GUI-Beschreibung benötigt. Diese Veränderungen sollen
 sich sowohl semantisch als auch syntaktisch von der Komponentendefinition
-abgrenzen (siehe semantisches Modell \emph{Refinement}). Um die eindeutige
-Referenzierung zu ermöglichen muss bei der Bezeichnung der eingebundenen GUI-Skripte sowie
-bei der veränderten Komponente der qualifizierte Name angegeben werden.\\
+abgrenzen (siehe semantisches Modell \emph{Refinement}). Um das eindeutige
+Referenzieren zu ermöglichen, muss bei der Bezeichnung der eingebundenen
+\emph{GUI-Skripte} sowie bei der veränderten Komponente der qualifizierte Name
+angegeben werden.\\
 Bei den Interaktionen der \Ks fällt die Aktion komplett weg. Somit muss nur noch
-der Interaktionstyp angegeben werden.\\
+der Interaktionstyp zu benennen.\\
 In den Definitionen der \Ks muss aufgrund des Properties-Konzeptes die
 Möglichkeit bestehen, einen Property-Schlüssel anzugeben. Alle anderen Metadaten
 für die \Ks bleiben bestehen.\\
-Bezogen auf die \knks ist es lediglich notwendig
-den Input-Typ anzugeben. Die Festlegung über selektierbare und
-selektierte Elemente in der Multiselection-Komponente wird nicht benötigt. Das
-ermöglicht, die \knks mittels \emph{use} (siehe semantisches Modell
+Bezogen auf die \knks ist es lediglich notwendig,
+den Typ des Inputs anzugeben. Die Festlegung über Elemente, die in der
+\emph{Multiselection-Komponente} selektiert
+werden können oder bereits ausgewählt sind, wird nicht benötigt.
+Das ermöglicht die \knks mittels \emph{use} (siehe semantisches Modell
 \emph{UsedDefinitions}) in die GUI-Beschreibung einzubinden (siehe konkrete
 Syntax).
 
@@ -171,9 +172,8 @@ Syntax).
 \subsection*{Semantisches Modell}
 In dieser Iteration wurden an den Artefakten \emph{AreaCount},
 \emph{TypeDefinition} und \emph{AreaAssignment} keine Änderungen vorgenommen.
-Artefakte wie \emph{Property} und \emph{Refinement} sind hinzugekommen. Die
-weiteren Artefakte, die von \emph{UIDescriptionImpl} aggregiert werden
-(siehe Abbildung \ref{Abb_Teil2-1}), wurden verändert.
+Die Artefakte \emph{Property} und \emph{Refinement} sind hinzugekommen. Weitere
+Artefakte, die von \emph{UIDescriptionImpl} aggregiert werden (siehe Abbildung \ref{Abb_Teil2-1}), wurden verändert.
 \myBigFigure{v2-1.jpg}{Teil 1: GUI-Beschreibungsmodell Version 2}{Teil1-2}
 \noindent
 Das Artefakt \emph{Property} bildet die Property-Datei ab. Sie ist nicht zu
@@ -181,31 +181,30 @@ verwechseln mit dem Artefakt \emph{Properties}, welches die Eigenschaften von
 Komponenten abbildet. Abbildung \ref{Abb_Teil2-2} zeigt beide Artefakte auf.
 \myBigFigure{v2-2}{Teil 2: GUI-Beschreibungsmodell Version 2}{Teil2-2}
 \noindent
-Die \emph{UsedDescription} enthält in dieser Version einen
+Die \emph{UsedDescription} enthält in dieser Iteration einen
 \emph{DefinitionType}.
 Dieser bestimmt, ob es sich bei der importierten Komponente um ein
-eingebundenes GUI-Skript handelt, oder um eine komplexe Komponente, für die ein
-Input-Typ (\emph{inputType}) festgelegt werden kann.
+eingebundenes \emph{GUI-Skript handelt} oder um eine komplexe Komponente, für
+die der Input (\emph{inputType}) festgelegt werden kann.
 \myBigFigure{v2-3}{Teil 3: GUI-Beschreibungsmodell Version 2}{Teil3-2}
 \noindent
-Weiterhin wird eine Unterscheidung zwischen \emph{Definition} und
-\emph{Refinement} vorgenommen.
-Die \emph{Definition} bildet neu definierte Komponenten für das GUI ab. Ein
+Weiterhin wird zwischen \emph{Definition} und
+\emph{Refinement} unterschieden.
+Die \emph{Definition} bildet neu definierte Komponenten für die \gui ab. Ein
 \emph{Refinement} hingegen beschreibt die veränderten Komponenten importierter
-GUI-Skripte (siehe Abbildung \ref{Abb_Teil4-2} und Abbildung
+\emph{GUI-Skripte} (siehe Abbildung \ref{Abb_Teil4-2} und Abbildung
 \ref{Abb_Teil5-2}).
 \myBigFigure{v2-4}{Teil 4: GUI-Beschreibungsmodell Version 2}{Teil4-2}
 \myBigFigure{v2-5}{Teil 5: GUI-Beschreibungsmodell Version 2}{Teil5-2}
 
 
-
 \subsection*{Konkrete Syntax}
-Eine Veränderungen der Syntax in der zweiten Iteration ist ein neues
-Schlüsselwort zur Festlegung der Properties-Dateien. Um eine
-Properties-Datei einzubinden muss, wie in Listing \ref{LST_Properties2}, eine entsprechende
-Datei angegeben werden und in den Komponentendefinitionen entsprechende
-Schlüssel deklariert werden. Das Label mit der Bezeichnung \emph{OneLabel}
-enthält keinen Property-Key.
+Zur Umsetzung des Properties-Konzepts ist in der zweiten Iteration ein neues
+Schlüsselwort hinzugekommen. Um eine
+\emph{Properties-Datei} einzubinden, muss, wie in Listing \ref{LST_Properties2},
+eine entsprechende Datei angegeben und in den Komponentendefinitionen entsprechende
+Schlüssel deklariert werden. Das \emph{Label} mit der Bezeichnung
+\emph{OneLabel} enthält keinen Property-Schlüssel (\emph{PropertyKey}).
 In diesem Fall wird der Titel als solcher verwendet.
 \begin{lstlisting}[{caption = 2. Iteration: Properties},{label =
 LST_Properties2}] 
@@ -216,31 +215,31 @@ DEF Label as "AnotherLabel":
 	propertyKey='AnotherLabel2'
 END DEF
 \end{lstlisting}
-Aufgrund der Reduzierung der Menge der Metadaten für eine Interaktion stand die
-Frage offen, ob die Interaktionstypen einfach hintereinander mit Komma, oder untereinander mit dem
-entsprechenden Schlüsselwort aufgezählt werden sollen. Aufgrund der
-Anforderung \hyperref[AS4]{AS4}, wird die erste Variante bevorzugt (siehe
-Listing \ref{LST_Interaktion2}).
+Aufgrund der Reduktion der Metadaten für eine Interaktion, musste
+festgelegt werden, ob die Interaktionstypen 
+hintereinander durch Kommasetzung oder untereinander durch entsprechende
+Schlüsselwörter deklariert werden sollen. Unter Beachtung der Anforderung
+\hyperref[AS4]{AS4} wird die erste Variante bevorzugt (siehe Listing \ref{LST_Interaktion2}).
 \begin{lstlisting}[{caption=2.
 Iteration: Interaktion},{label=LST_Interaktion2}] DEF Button as
 "InteractButton":
 	interactiontype=Click,ChangeText
 END DEF
 \end{lstlisting}
-Die komplexen Komponenten werden wie in Listing \ref{LST_Komplexe2} mit
-der Komponente Multiselection gezeigt ist, über das Schlüsselwort \emph{use}
-eingebunden werden.
-Der Input-Typ kann dabei optional innerhalb der Zeichen \emph{<} und \emph{>}
-angegeben werden.
+Die \knks werden, wie in Listing \ref{LST_Komplexe2} mit
+der Komponente \emph{Multiselection} gezeigt, über das Schlüsselwort
+\emph{use} eingebunden.
+Der Typ des Inputs kann dabei optional innerhalb der Zeichen \emph{\glqq <\grqq}
+und \emph{\glqq >\grqq} angegeben werden.
 \begin{lstlisting}[{caption=2. Iteration: Definition komplexer
 Komponenten},{label=LST_Komplexe2}] 
 type: WINDOW 
 use: Multiselection<'valuepackage.Values'> as: 'Multi'
 \end{lstlisting}
 Für die Zuweisung mehrerer Komponenten zu den Bereichen (\emph{Area}) kamen
-zwei Lösungen in Betracht. Bei der einen finden die Definitionen der Komponenten zusammen mit der
-Zuweisung zu dem Bereich statt. Dies könnte bspw. wie in Listing
-\ref{LST_Moeglichkeit1_2} dargestellt werden.
+zwei Lösungen in Betracht. Bei der ersten Lösung finden die Definitionen der
+Komponenten zusammen mit der Zuweisung zu einem Bereich statt. Dies könnte bspw.
+wie in Listing \ref{LST_Moeglichkeit1_2} dargestellt werden.
 \begin{lstlisting}[{caption=2. Iteration: Button und Label
 (1)},{label=LST_Moeglichkeit1_2}] 
 Area count: 1 type: WINDOW 
@@ -254,15 +253,14 @@ END DEF
 }
 \end{lstlisting}
 Eine andere Möglichkeit wäre es, die aktuelle Form der Zuweisung zu verfeinern
-und somit die Komponenten bei der Zuweisung mit Komma getrennt von einander
-aufzählen. Die erste Möglichkeit würde sich sehr gut eignen, wenn nur die in der
-Datei definierten Komponenten dem Bereich zugewiesen werden müssten. Da die mit
-\emph{use} eingebundenen Komponenten auch Bereichen zugeordnet werden, würde für
-dieses Verfahren ein zusätzliches syntaktisches Konzept innerhalb der
-Zuweisung benötigt werden. Um dies zu umgehen wurde die Entscheidung
-getroffen, das alte Verfahren zu verfeinern. Listing \ref{LST_Moeglichkeit2_2}
-zeigt ein Beispiel für die Zuweisung von drei Komponenten zu einem
-Bereich.
+und somit die Komponenten bei der Zuweisung durch Kommas von einander getrennt
+aufzuzählen. Wenn nur die in der Datei definierten Komponenten einem Bereich
+zugewiesen werden müssten, würde sich die erstgenannte Lösungsmöglichkeit
+anbieten. Jedoch können die mit \emph{use} eingebundenen Komponenten auch
+Bereichen zugeordnet werden, weshalb für dieses Verfahren ein zusätzliches
+syntaktisches Konzept innerhalb der Zuweisung benötigt werden würde. Um dies zu
+umgehen, wurde die Entscheidung getroffen, das alte Verfahren zu verfeinern.
+Listing \ref{LST_Moeglichkeit2_2} zeigt ein Beispiel für die Zuweisung von drei Komponenten zu einem Bereich.
 \begin{lstlisting}[{caption=2. Iteration: Area-Zuweisung
 (2)},{label=LST_Moeglichkeit2_2}]
 Area count: 1
@@ -275,12 +273,14 @@ END DEF
 Area:1<-"OneLabel","InteractButton","AnotherLabel"
 
 \end{lstlisting}
-Das Überschreiben der Werte von Komponenten, die in einem eingebundenen
-GUI-Skript definiert wurden, können über das Schlüsselwort \emph{REFINE}
-getätigt werden. Der erste Teil von Listing \ref{LST_Override2} zeigt die Originaldatei,
-deren Beschreibung eingebunden wird. Diese trägt den Namen \emph{LabelAndButton}
-und befindet sich im Package \emph{guidescription}. Der zweite Teil zeigt, wie
-die Aufschrift einer Komponente \emph{Button} überschrieben wird.
+Die Eigenschaften von Komponenten, welche in einem eingebundenen
+\emph{GUI-Skript} definiert wurden, können durch die Verwendung des
+Schlüsselworts \emph{REFINE} überschrieben werden. Der erste Teil von Listing
+\ref{LST_Override2} zeigt die Originaldatei, welche eingebunden
+wird. Diese trägt den Namen \emph{LabelAndButton} und befindet sich im Package
+\emph{guidescription}. Der zweite Teil von Listing
+\ref{LST_Override2} zeigt, wie die Aufschrift der
+Komponente \emph{ButtonToOverride} überschrieben wird.
 \begin{lstlisting}[{caption=2. Iteration: Verändern von Komponenten
 eingebundener GUI-Beschreibungen},{label=LST_Override2}] 
 PART 1 Area count: 2
@@ -299,15 +299,14 @@ PART 2
 Area count: 1
 type: WINDOW 
 use: "guidescription.LabelAndButton" as: 'Embedded'
-REFINE Button with name: 'Button':
+REFINE Button with name: 'ButtonToOverride':
 	text='NewText'
 END REFINE
 Area:1<-'Embedded'
 \end{lstlisting}
-Sollten mehrere GUI-Skripte eingebunden sein, in denen
-Komponenten mit demselben Namen definiert sind, muss die Bezeichnung der eingebundenen Ressource
-zur eindeutigen Identifikation in der Referenz stehen (siehe Listing
-\ref{LST_Override2_2}).
+Sollten die Bezeichnungen von eingebundenen Komponenten nicht eindeutig
+sein, muss der Name des dazugehörigen \emph{GUI-Skriptes} in der Referenz
+mit angegeben werden (siehe Listing \ref{LST_Override2_2}).
 \begin{lstlisting}[{caption=2. Iteration: Verändern von Komponenten
 eingebundener GUI-Beschreibungen mit
 Namensüberschneidung},{label=LST_Override2_2}] 
@@ -319,26 +318,27 @@ END REFINE
 \end{lstlisting}
 \noindent
 Die dazugehörige Grammatik, welche in der zweiten Iteration entwickelt wurde,
-ist im Anhang \ref{AppGrammatiken} zu finden.
+ist im Anhang \hyperref[cd]{Anlage} zu finden.
 
 
 
 \section{3. Iteration}
 \subsection*{Analyse der Metadaten}
-Um eine Referenzierung von \gks und dem entsprechenden Layout aus der
-Layout-Datei zu ermöglichen, ist es wie bei den Properties-Dateien notwendig,
-die Layout-Datei innerhalb des GUI-Skripts anzugeben. Weiterhin wird in den
-einzelnen Komponentendefinitionen ein Schlüssel benötigt, über den die
-Komponente eindeutig referenziert werden kann. Dafür kann die Bezeichnung der
-\gk verwendet werden. Um in der Layout-Datei nicht alle einzelnen
-\gks unterscheiden zu müssen, wird innerhalb der GUI-Beschreibung
-ein optionales Feld benötigt, mittels dessen unterschiedlichen \gks
-derselbe Layout-Schlüssel zugeordnet werden kann. \\
+Um das Referenzieren von \gks und dem entsprechenden Layout aus der
+Layoutdatei zu ermöglichen, ist es wie bei den Properties-Dateien notwendig,
+die Layoutdatei innerhalb des \emph{GUI-Skripts} anzugeben. Weiterhin wird in
+den einzelnen Komponentendefinitionen ein Schlüssel benötigt, über den die
+Komponente eindeutig referenziert werden kann. Dafür ist es möglich die
+Bezeichnung der \gk zu verwenden. Um in der Layoutdatei nicht jede
+\gks einzeln aufführen zu müssen, wird innerhalb der GUI-Beschreibung
+ein optionales Feld benötigt, wodurch unterschiedlichen \gks
+derselbe Layout-Schlüssel zugeordnet werden kann.\\
 Da die Anzahl der Bereiche nicht mehr angegeben werden muss, fällt dies aus den
 Metadaten heraus. Die Zuweisung der \gks zu den Bereichen entfällt ebenfalls.
 Die Strukturierung wird über eine Aufzählung der \gks vorgenommen.\\
 Zusammenfassend werden folgende Metadaten für die
-Beschreibung einer GUI mit der GUI-DSL benötigt.
+Beschreibung einer \gui mit der \emph{GUI-DSL} benötigt:
+\textbf{
 \begin{itemize}
   \item  Typ
   \item  Properties-Dateien
@@ -347,20 +347,21 @@ Beschreibung einer GUI mit der GUI-DSL benötigt.
   \item  Veränderte eingebundene Komponentendefinitionen
   \item  Komponentendefinitionen 
   \item  Struktur
-\end{itemize}
-\noindent
-Alle Komponentendefinitionen und die Veränderten eingebundenen
-Komponentendefinitionen benötigen durch die genannten Änderung folgende
-Metadaten.
+\end{itemize}}
+\noindent\\
+Alle Komponentendefinitionen und die veränderten eingebundenen
+Komponentendefinitionen benötigen durch die genannten Änderungen folgende
+Metadaten:
+\textbf{
 \begin{itemize}
   \item  Bezeichnung
   \item  Property-Schlüssel (optional)
   \item  Layout-Schlüssel (optional)
   \item  Interaktionen (optional)
-\end{itemize}
-\noindent
-Über die konkreten Kompnentendefinitionen müssen mehrere \Ks beschrieben
-werden können. \Ks die spezielle Metadaten benötigen sind mit diesen in
+\end{itemize}}
+\noindent\\
+Über die konkreten Komponentendefinitionen müssen mehrere \Ks beschrieben
+werden können. \Ks die spezielle Metadaten benötigen, sind mit eben diesen in
 folgender Tabelle aufgelistet.
 \begin{table}[H]
 \centering
@@ -379,11 +380,11 @@ folgender Tabelle aufgelistet.
   		  \\
 				\hline
 				Textfield &  
-  		  Text, Editierbarkeit
+  		  Text, Veränderungsmöglichkeit des Textes
   		  \\
 				\hline
 				Textarea  &  
-  		  Text, Editierbarkeit
+  		  Text, Veränderungsmöglichkeit des Textes
   		   \\
 				\hline
 				Tree &  
@@ -395,7 +396,7 @@ folgender Tabelle aufgelistet.
   		  \\
 				\hline
 				TabView &  
-  		  GUI-Beschreibungen für die einzelnen Tabe
+  		  GUI-Beschreibungen der einzelnen Tabe
   		  \\
 				\hline
 				\hline
@@ -404,39 +405,39 @@ folgender Tabelle aufgelistet.
  \label{tab_comp}
 \end{table}
 \noindent
-
-Mit Ausnahme der Metadaten des TabViews sind alle Angaben zu anderen
+Mit Ausnahme der Metadaten des \emph{TabViews} sind alle Angaben zu anderen
 Basiskomponenten optional.
 
 \subsection*{Semantisches Modell} 
 Das semantische Modell hat sich durch die vielen Änderungen in dieser Iteration
-ebenso stark verändert. Bei der Betrachtung der \emph{UIDescription} (siehe
-Abbildung \ref{Abb_I3_1}) fällt auf, dass \emph{Area} und \emph{AreaCount} nicht mehr
-vorhanden sind. Hinzugekommen sind \emph{Structure} (worin die Anordnung der
-\gks (\emph{Element}) in einer Liste abgelegt wird) und Layout
-(worin die zu verwendeten Layout-Dateien in einer Liste abgelegt werden).\\
-Eine weitere Änderungen ist bei \emph{Property} zu finden. Dort ist ebenfalls
-eine Liste vorhanden und kein allein stehender Wert.
+stark verändert. Bei der Betrachtung der \emph{UIDescription} (siehe Abbildung
+\ref{Abb_I3_1}) fällt auf, dass \emph{Area} und \emph{AreaCount} nicht mehr
+vorhanden sind. Hinzugekommen sind die Artefakte \emph{Structure}, in dem die
+Anordnung der \gks (\emph{Element}) in einer Liste beschrieben wird und
+\emph{Layout}, in dem die verwendeten Layoutdateien in einer Liste abgelegt
+werden.\\
+Eine weitere Änderung ist bei \emph{Property} zu finden. Dort ist jetzt
+ebenfalls eine Liste vorhanden und kein alleinstehender Wert mehr.
 \myBigFigure{v3-1.jpg}{3. Iteration: UIDescription}{I3_1}
 \noindent
 An \emph{TypeDefinition} und \emph{UsedDescription} wurden keine signifikanten
 Änderungen vorgenommen. Die meisten Änderungen wurden bei den Artefakten
-\emph{Refinement} und \emph{Definition} vorgenommen. Der Aufbau der dieser
+\emph{Refinement} und \emph{Definition} vorgenommen. Der Aufbau dieser
 Artefakte ist ähnlich. Das Interface (\emph{Refinement} und \emph{Definition})
 wird von einer Klasse implementiert (\emph{RefinementImpl} und
-\emph{DefinitionImpl}), die mehrere Objekte bestimmter Klassen,
-die das Interface \emph{ComponentRefinement} oder \emph{ComponentDefinition}
-implementieren, enthält. In Abbildung \ref{Abb_I3_2} ist diese Struktur für die
-\emph{Definition} abgebildet.
+\emph{DefinitionImpl}), die mehrere Objekte enthält. Die Klassen dieser Objekte
+implementieren das Interface \emph{ComponentRefinement} oder
+\emph{ComponentDefinition}. Abbildung \ref{Abb_I3_2} ist diese Struktur für die
+\emph{Definition} zu entnehmen.
 \myBigFigure{v3-2}{3. Iteration: Definition}{I3_2}
 \noindent
 Die benannten Klassen bilden die unterschiedlichen \Ks ab, die
 definiert oder verändert werden können. Jede dieser Klassen aggregiert ein
 Objekt des Typen \emph{CommonProperties} ein. Dieses Interface bildet die
-allgemeinen Properties ab. Bei den \Ks Label, Button, Textfield und Textarea ist
-diese Aggregation transitiv, da die speziellen Properties dieser \Ks als eigenes
-Artefakt implementiert sind. Abbildung \ref{Abb_I3_3} zeigt dies für einen
-Button auf.
+allgemeinen Properties ab. Bei den \Ks \emph{Label}, \emph{Button},
+\emph{Textfield} und \emph{Textarea} ist diese Aggregation transitiv, da die
+speziellen Properties dieser \Ks als eigenes Artefakt implementiert sind. Abbildung \ref{Abb_I3_3} zeigt dies für einen
+\emph{Button} auf.
 \myBigFigure{v3-3.jpg}{3. Iteration: Button}{I3_3}
 \noindent
 Eine direkte Aggregation der \emph{CommonProperties} findet bei den \Ks TabView,
@@ -567,4 +568,4 @@ Structure:'Button','Label','Textfield','tabview';
 \end{lstlisting}
 \noindent
 Die damit für diese Arbeit endgültige Grammatik ist, wie die Grammatiken der
-anderen Iterationen, im Anhang \ref{AppGrammatiken} zu finden.
+anderen Iterationen, im Anhang \hyperref[cd]{Anlage} zu finden.

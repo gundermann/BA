@@ -2,40 +2,38 @@
 \section{Allgemeine Beschreibung der Lösungsidee}\label{AllgBeschreibLösung}
 Eine Lösungsidee für die in Kapitel \ref{Probleme}
 beschriebenen Probleme wurde im Kapitel \ref{Ziel} bereits angedeutet. Kern dieser Idee
-ist, die im vorherigen Kapitel angesprochene GUI-DSL zur Beschreibung von
+ist, die im vorherigen Kapitel angesprochene \g zur Beschreibung von
 \glspl{GUI} zu nutzen.
-Diese \glspl{GUI} sollen so beschrieben werden, dass sie in der Domäne von profil c/s für unterschiedliche
-\acrshort{GUI}-Frameworks genutzt werden können. Diese Beschreibung soll weiterhin nur
+Diese \glspl{GUI} sollen so beschrieben werden, dass sie in der Domäne von \pcs
+für unterschiedliche \acrshort{GUI}-Frameworks genutzt werden können. Diese Beschreibung soll weiterhin nur
 einmal stattfinden. Der Quellcode, welcher die \acrshort{GUI} im entsprechenden
 Framework darstellt, wird frameworkspezifisch aus der \acrshort{GUI}-Beschreibung generiert.
-Langfristig betrachtet könnte das MCF damit abgelöst werden.\\
-Die Anforderungen für die GUI-DSL wurden bereits beschrieben. Diese sollen so
-weit wie möglich im Prototypen, welcher im Zuge dieser Arbeit entwickelt wird,
+Langfristig betrachtet könnte das \MCF damit abgelöst werden.\\
+Die Anforderungen für die \g wurden bereits beschrieben. Diese
+sollen so weit wie möglich im Prototypen, welcher im Zuge dieser Arbeit entwickelt wird,
 umgesetzt werden. Der Prototyp soll
-Quellcode erzeugen, der eine GUI mit den syntaktischen Strukturen des MCF
+Quellcode erzeugen, der eine GUI mit den syntaktischen Strukturen des \MCF
 beschreibt. Somit kann geprüft werden, ob sich der generierte Quellcode in
-profil c/s einbinden lässt.
+\pcs einbinden lässt.
 \section{Konzept}
 Die \g  wird für die abstrakte
 Beschreibung der \acrshort{GUI} verwendet. Somit ist gewährleistet, dass die \acrshort{GUI} weiterhin
 nur einmal beschrieben werden muss. 
 Wie in Abschnitt \ref{AllgBeschreibLösung} beschrieben, wird der Quellcode zur
-Darstellung der \acrshort{GUI} frameworkspezifisch, mit Hilfe eines speziellen
-Generators, erzeugt. Daraus folgt, dass die Integration neuer Frameworks (siehe
-Anforderung \hyperref[AA2]{AA2}) an die Implementierung eines spezifischen
+Darstellung der \acrshort{GUI} mit Hilfe eines speziellen
+Generators erzeugt. Daraus folgt, dass die Integration eines neuen Frameworks
+(siehe Anforderung \hyperref[AA2]{AA2}) an die Implementierung eines spezifischen
 Generators gekoppelt ist.
-Abbildung \ref{Abb_neuerAnsatz} zeigt das grundlegende Konzept für diesen Ansatz auf. Dabei wurden exemplarisch drei
+In Abbildung \ref{Abb_neuerAnsatz} wird das grundlegende Konzept des
+Ansatzes schematisch dargestellt. Dabei wurden exemplarisch drei
 unterschiedliche Generatoren für bestimmte Frameworks verwendet.
 \myBigFigure{neuerAnsatz.png}{Grundlegendes Konzept}{neuerAnsatz}
 \noindent
-Der Prototyp wird aus einem GUI-Skript Quellcode erzeugen, welcher in das
-MCF eingebunden werden kann. Somit lässt sich prüfen, ob die GUI-DSL für
-existierende \glspl{GUI} von profil c/s genügt. In Anlehnung an Abbildung
-\ref{Abb_mdsd} in Kapitel \ref{mdsd} wird eine \acrshort{GUI} mit sinnvollen
-Interaktionen nicht allein über die \g nicht umsetzbar sein, da
-die dafür notwendigen Informationen nicht in der \g beschrieben werden. Folglich
-ist zumindest zur Erzeugung dieser Informationsquellen individueller Quellcode
-von Nöten.
-Abbildung \ref{Abb_genMCFCode} zeigt diese grundlegende Idee schematisch auf.
+Der Prototyp wird aus einem GUI-Skript den Quellcode erzeugen, welcher in das
+\MCF eingebunden werden kann. Somit lässt sich prüfen, ob die \g für
+existierende \glspl{GUI} von \pcs genügt. In Anlehnung an Abbildung
+\ref{Abb_mdsd} in Kapitel \ref{mdsd} wird zur Erzeugung des Quellcodes für das
+\MCF auch individueller Quellcode von Nöten sein.
+In Abbildung \ref{Abb_genMCFCode} wird diese grundlegende Idee schematisch
+aufgezeigt.
 \myBigFigure{genMCFCode.jpg}{Grundlegende Idee für den Prototypen}{genMCFCode}
-

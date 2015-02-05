@@ -181,7 +181,7 @@ ihr gelöst werden \vcite{voelter}{28}. Martin Fowler et al. bezeichnen diese
 Eigenschaft des Domänenfokus als ein Schlüsselelement der Definition einer \emph{DSL} 
 \vcite{fowler}{27f}.
 
-\section{Vor- und Nachteile einer DSL gegenüber einer GPL}
+\section{Vor- und Nachteile von DSLs gegenüber GPLs}
 \subsection*{Vorteile:}
 
 %EINRÜCKEN
@@ -260,7 +260,7 @@ Eigenschaft des Domänenfokus als ein Schlüsselelement der Definition einer \emph
   den praktischen Teil dieser Arbeit interessant, allerdings weniger in Bezug
   auf Logik, denn in Bezug auf Benutzerschnittstellen.
   \item []
-\textbf{Einfachere Validierung und Verifizierung}
+\textbf{Einfachere Validierung und Verifizierung}\\
   Da \emph{DSLs} bestimmte Details der Implementierung ausblenden, sind sie auf
   semantischer Ebene reichhaltiger als GPLs. Das führt dazu, dass Analysen
   einfacher umzusetzen sind und Fehlermeldungen verständlicher gestaltet werden können, indem die
@@ -268,23 +268,14 @@ Eigenschaft des Domänenfokus als ein Schlüsselelement der Definition einer \emph
   Kommunikation mit den Domänenexperten, werden Reviews und Validierungen des
   DSL-Codes weitaus effizienter \vcite{voelter}{41}.
   \item []
-  \item []
-\end{itemize}
-
- 
-  
-  
-  
-  
-  
-\subsubsection*{Unabhängigkeit von Technologien}
+\textbf{Unabhängigkeit von Technologien}\\
   Die Modelle, welche zur Beschreibung von Systemen verwendet werden, können so
   gestaltet werden, dass sie von Implementierungstechniken unabhängig sind. Dies
   wird durch ein hohes Abstraktionsniveau erreicht, welches an die Domäne
   angepasst ist. Dadurch kann die Beschreibung der Modelle von den genutzten
   Technologien weitestgehend entkoppelt werden \vcite{voelter}{41}.
-  
-\subsubsection*{Skalierung des Entwicklungsprozesses}
+  \item []
+\textbf{Skalierung des Entwicklungsprozesses}\\
   Die Integration von neuen Mitarbeitern in ein Entwicklerteam fordert immer
   eine gewisse Einarbeitungszeit. Dieser Zeitraum kann durch die
   Nutzung einer \emph{DSL} verkürzt werden, wenn die \emph{DSL} einen hohen Abstraktionsgrad
@@ -300,9 +291,21 @@ Eigenschaft des Domänenfokus als ein Schlüsselelement der Definition einer \emph
   Entwickler mit allem auskennen musss. Markus Völter et al. hingegen sehen die
   Teilung der Programmieraufgaben als Gefahr bzw. Nachteil 
   \vcite{voelter}{44}.
+\end{itemize}
+
+ 
+  
+  
+  
+  
+  
+  
 
 \subsection*{Nachteile:}
-\subsubsection*{Großes Know-How gefordert}
+
+\begin{itemize}
+  \item []
+\textbf{Großes Know-How gefordert}\\
   Bevor die eine \emph{DSL} genutzt werden kann, muss sie entwickelt
   werden \vcite{voelter}{43}. Das Designen einer Sprache ist eine komplexe
   Aufgabe, die nur schwer skalierbar ist \vcite{ghosh}{21}. Die Vorteile, die
@@ -312,9 +315,9 @@ Eigenschaft des Domänenfokus als ein Schlüsselelement der Definition einer \emph
   werden.
   Für beide Aufgaben werden Entwickler benötigt, die viel Erfahrung mit
   Sprachdesign haben \vcite{voelter}{44}.
-  
-\subsubsection*{Kosten für die Entwicklung der
-  DSL}
+\item []
+\textbf{Kosten für die Entwicklung der
+  DSL}\\
   Bei wirtschaftlichen Entscheidungen wird der monetäre Input mit dem
   monetären Output verglichen.
   Investitionen führen dazu, dass der Input größer wird. Da eine \emph{DSL} vor dem
@@ -334,8 +337,8 @@ Eigenschaft des Domänenfokus als ein Schlüsselelement der Definition einer \emph
   Bevor eine \emph{DSL} entwickelt werden kann, sollte ein entsprechendes Know-How
   aufgebaut werden. Der Aufbau dieses Wissens verursacht weitere Kosten 
   \vcite{fowler}{37}.
-  
-\subsubsection*{Investitionsgefängnis}
+\item []
+\textbf{Investitionsgefängnis}\\
   Der Begriff stammt von Markus Völter et al. Er beruht auf der Annahme, dass
   sich ein Unternehmen dessen bewusst ist, dass höhere Investitionen in
   wiederverwendbare Artefakte zu einer besseren Produktivität führen. 
@@ -349,8 +352,8 @@ Eigenschaft des Domänenfokus als ein Schlüsselelement der Definition einer \emph
   Somit wäre das Unternehmen wiederum zu Investitionen gezwungen, um die
   Anforderungen umzusetzen. Von daher der verwendete Begriff
   \emph{Investitionsgefängnis} \vcite{voelter}{45}.
-
-\subsubsection*{Kakophonie}
+\item []
+\textbf{Kakophonie}\\
   Eine \emph{DSL} abstrahiert von einem Domänenmodell \vcite{ghosh}{22}. Je besser
   diese Abstraktion ist, desto euphonischer und ausdrucksstärker ist die
   Sprache.\\
@@ -361,8 +364,8 @@ Eigenschaft des Domänenfokus als ein Schlüsselelement der Definition einer \emph
   Das wiederum erfordert, dass die Entwickler öfter umdenken müssen, als würden
   sie fortwährend mit einer Sprache arbeiten. Dies macht den
   Entwicklungsprozess weitaus komplizierter \vcite{fowler}{37}.
-
-\subsubsection*{Ghetto-Sprache}
+\item []
+\textbf{Ghetto-Sprache}\\
   Wenn ein Unternehmen nur mit eigenen \emph{DSLs} arbeitet, gleichen diese Sprachen einer
   Ghetto-Sprache, die von keinem anderen Unternehmen verstanden wird. Dadurch
   ist es schwer, neue Technologien von anderen Unternehmen in den Bereichen, in
@@ -377,8 +380,8 @@ Eigenschaft des Domänenfokus als ein Schlüsselelement der Definition einer \emph
   bekannte Technologien einzuführen, um von diesen zu profitieren. Eine andere
   Möglichkeit ist, weiter in die Entwicklung
   eigener \emph{DSLs} zu investieren, um seine Systeme aufrecht zu erhalten.
-  
-\subsubsection*{Borniertheit durch Abstraktion}
+\item []
+\textbf{Borniertheit durch Abstraktion}\\
   Abstraktion ist von großer Wichtigkeit für eine \emph{DSL}. Wenn ein Entwickler mit
   der Arbeit an einer \emph{DSL} begonnen hat, hat dieser die Abstraktion
   in einem bestimmen Maß bereits festgelegt. Ein Problem tritt auf,
@@ -391,8 +394,8 @@ Eigenschaft des Domänenfokus als ein Schlüsselelement der Definition einer \emph
   anzupassen. Der richtige Weg hingegen ist, die Sprache und
   deren Abstraktionsebene so anzupassen, dass das Problem
   beschrieben werden kann \vcite{fowler}{39}.
-  
-\subsubsection*{Kulturelle Herausforderungen}
+\item []
+\textbf{Kulturelle Herausforderungen}\\
   Die genannten Nachteile des Einsatzes von DSLs, führen zu Äußerungen wie der,
   dass die Entwicklung von Sprachen kompliziert ist, Domänenexperten keine
   Programmieren sind oder auch, dass nicht schon wieder eine neue Sprache
@@ -401,8 +404,8 @@ Eigenschaft des Domänenfokus als ein Schlüsselelement der Definition einer \emph
   Solche kulturellen Probleme entstehen i. d. R. dann, wenn etwas Neues
   eingeführt werden soll \vcite{voelter}{45}. Die Mitarbeiter müssen demnach
   entsprechend geschult und motiviert werden.
-  
-\subsubsection*{Unvollständige DSLs}
+\item []
+\textbf{Unvollständige DSLs}\\
   Wenn ein Unternehmen viel Erfahrung bei der
   Entwicklung von \emph{DSLs} aufgebaut hat und die Entwicklung
   durch die Einführung entsprechender Tools vereinfacht wurde, besteht
@@ -422,6 +425,7 @@ Eigenschaft des Domänenfokus als ein Schlüsselelement der Definition einer \emph
   Das wiederum hat zur Folge, dass mehrere unvollständige \emph{DSLs}
   existieren. Markus Völter et al. nennen dieses Phänomen die \emph{\glqq DSL
   Hell\grqq} \vcite{voelter}{44f}.
+\end{itemize}
  \\\\
 Zusammenfassend ist zu sagen, dass der Aufwand für die Vorbereitung des
 Einsatzes einer \emph{DSL} sehr hoch ist. Wurde eine \emph{DSL} jedoch eingeführt, wird sich
@@ -450,17 +454,17 @@ bezeichnen diese Eigenschaft als \emph{\glqq correct-by-construction\grqq}
 Allgemein betrachtet funktioniert diese Technik wie folgt: \\
 Ein Codefragment,
 welches erst gelesen und zu einem späteren Zeitpunkt ausgewertet werden soll,
-wird in einem Parse Tree hinterlegt. Dieser Parse Tree wird noch vor der
+wird in einem \emph{Parse Tree} hinterlegt. Dieser \emph{Parse Tree} wird noch vor der
 Ausführung modifiziert. Um diese Implementierungstechnik nutzen zu können, muss
 eine Umgebung vorliegen, in der es möglich ist, ein Codefragment in einen Parse
 Tree umzuformen und diesen zu bearbeiten. Diese Möglichkeit existiert nur in wenigen Sprachen.
 Martin Fowler et al. nennen hierzu nur die Beispiele C\#, ParseTree (Ruby) und
 Lisp \vcite{fowler}{45f}.\\
 Anders als Lisp bieten die anderen Beispiele die
-Möglichkeit über den Parse Tree zu iterieren. Bei Lisp-Codes handelt es sich
-bereits um einen Parse Tree von verschachtelten Listen. Bei der Iteration über
-den Parse Tree ist aufgrund der Performance darauf zu achten, dass möglichst nur die
-notwendigen Teile des Parse Trees einbezogen werden \vcite{fowler}{46}.\\
+Möglichkeit über den \emph{Parse Tree} zu iterieren. Bei Lisp-Codes handelt es sich
+bereits um einen \emph{Parse Tree} von verschachtelten Listen. Bei der Iteration über
+den \emph{Parse Tree} ist aufgrund der Performance darauf zu achten, dass möglichst nur die
+notwendigen Teile des \emph{Parse Trees} einbezogen werden \vcite{fowler}{46}.\\
 Konstrukte, die in der Wirtsprache geschrieben
 wurden und nicht verändert werden sollen, spielen
 bei der \emph{Parse Tree Manipulation} für die Erzeugung der semantischen
@@ -476,11 +480,11 @@ Methode. Demzufolge wird die Lesbarkeit der \emph{DSL} wesentlich
 verbessert, da es einer Sequenz von Aktionen gleicht, die in der Domäne
 ausgeführt werden \vcite{ghosh}{94} und ohne eine Vielzahl von Variablen aufgerufen
 werden müssen \vcite{fowler}{68}. Eine solche Verkettung von Methoden wird
-als \emph{Fluent Interface} bezeichnet. Das Fluent Interface steht laut Voelter et
+als \emph{Fluent Interface} bezeichnet. Das \emph{Fluent Interface} steht laut Voelter et
 al. zwischen dem API und einer internen \emph{DSL} \vcite{voelter}{50}. Ein einfaches
-Beispiel für ein Fluent Interface wird von Martin Fowler et al.
+Beispiel für ein \emph{Fluent Interface} wird von Martin Fowler et al.
 beschrieben. 
-\begin{lstlisting}[caption = Beispiel: Fluent Interface]
+\begin{lstlisting}[caption = Beispiel: \emph{Annotationen}]
 computer()
 	.processor()
 		.cores(2)
@@ -497,19 +501,19 @@ computer()
 \vcite{fowler}{68}
 
 \subsubsection*{Annotationen}
-Annotationen sind Teile der Informationen über ein Programmelement, wie 
+\emph{Annotationen} sind Teile der Informationen über ein Programmelement, wie 
 Methoden oder Variablen. Diese Informationen können während der
 Laufzeit oder der Übersetzungszeit - wenn die Umgebung die
 Möglichkeit dazu bietet - manipuliert werden \vcite{fowler}{445}.\\
 Bevor eine Annotation verarbeitet werden kann, muss sie definiert werden. Die
-Definitionen von Annotationen variieren bei Verwendung unterschiedlicher
-Sprachen \vcite{fowler}{446}. Die Verarbeitung von Annotationen kann
+Definitionen von \emph{Annotationen} variieren bei Verwendung unterschiedlicher
+Sprachen \vcite{fowler}{446}. Die Verarbeitung von \emph{Annotationen} kann
 zu drei bestimmten Zeitpunkten, nämlich zum Zeitpunkt der Übersetzung, des
 Ladens oder der Ausführung des Programms, stattfinden \vcite{fowler}{447}.
 Die Interpretation und Ausführung von Annotiationen während der Laufzeit
 beeinflussen i. d. R. das Verhalten von Objekten.
 Beim Laden des Programms werden meist Validierungsannotationen verwendet. Solche
-Annotationen finden bspw. beim Auslesen des Mappings für Datenbanken Anwendung.
+\emph{Annotationen} finden bspw. beim Auslesen des Mappings für Datenbanken Anwendung.
 Somit wird die Definition der Elemente von der Verarbeitung getrennt, was zu
 einem übersichtlichen und lesbaren Quellcode beiträgt \vcite{fowler}{449}. 
 
@@ -533,13 +537,13 @@ der Verwendung von Parsern ist der Abbildung \ref{Abb_Parsing} zu entnehmen.
 Bei der Generierung von Parsern muss dieser nicht manuell implementiert
 werden. Diese Aufgabe wird an den Generator delegiert. Damit dies möglich ist,
 müssen zwei Artefakte definiert werden. Zuerst muss eine Grammatik in der
-erweiterten Backus-Naur Form (EBNF) beschrieben werden. Anschließend werden
-bestimmte Aktionen benötigt, die bei der Bestätigung bestimmter Grammatikregeln ausgeführt werden sollen
-(Validierungsregeln) \vcite{ghosh}{218}. Wird der Parsergenerator
+erweiterten \emph{Backus-Naur Form (EBNF)} beschrieben werden. Anschließend
+werden bestimmte Aktionen benötigt, die bei der Bestätigung bestimmter Grammatikregeln ausgeführt werden sollen
+(Validierungsregeln) \vcite{ghosh}{218}. Wird der \emph{Parsergenerator}
 ausgetauscht, führt dies auch häufig dazu, dass die notwendigen Artefakte
 (Grammatik und Aktionen) neu definiert werden müssen \vcite{fowler}{269}. Weiterhin arbeiten die
-meisten Parsergeneratoren mit Code-Generierung, wodurch der Erstellungsprozess
-komplexer wird \vcite{fowler}{272}. Vorteile dieser Technik im Vergleich zur
+meisten \emph{Parsergeneratoren} mit Code-Generierung, wodurch der
+Erstellungsprozess komplexer wird \vcite{fowler}{272}. Vorteile dieser Technik im Vergleich zur
 manuellen Implementierung des Parsers, sind die Folgenden:
 \begin{itemize}
   \item Möglichkeit des Programmierens auf einem höheren Abstraktionsniveau
@@ -619,27 +623,28 @@ sich um eine einfache Grammatik handelt - ein großer Vorteil dieser Technik
 Laut Martin Fowler et. al. wird dadurch einer \emph{DSL} ein gravierender
 Vorteil entzogen \vcite{fowler}{249}.
 
-\subsubsection*{Parser-Kombinator}
+\subsubsection*{Parserkombinator}
 Bei der Kombination von Parsern wird die Grammatik mittels einer Struktur von
 Parser-Objekten implementiert \vcite{fowler}{256}. Wenn ein Teil des
 Input-Streams von einem Parser erfolgreich oder auch fehlerhaft verarbeitet
 wurde, kann der Rest des Input-Streams an einen anderen Parser übergeben werden.
 Somit ist es möglich, Parser-Objekte beliebig zu verketten \vcite{ghosh}{242}.
-Die Elemente, die verkettet werden können, werden \emph{Parser-Kombinatoren}
+Die Elemente, die verkettet werden können, werden \emph{Parserkombinatoren}
 genannt. Abbildung \ref{Abb_parsercombinator} stellt schematisch diese Funktionsweise dar. 
-\myBigFigureCited{parsercombinator.jpg}{Funktionsweise von Parser-Kombinatoren}{
+\myBigFigureCited{parsercombinator.jpg}{Funktionsweise von Parserkombinatoren}{
 (in Anlehnung an \cite[S.243]{ghosh}) }{parsercombinator} 
 \noindent
 Bezogen darauf, dass ein Parser aus Funktionen besteht, sind diese
-Parser-Kombinatoren Funktionen erster Ordnung, die unterschiedlich kombiniert
+Parserkombinatoren Funktionen erster Ordnung, die unterschiedlich kombiniert
 werden können  (vgl. \cite[S.243]{ghosh}, \cite[S.256]{fowler}). Durch
 diese Kombination wird eine Struktur gebildet, welche das semantische
 Modell repräsentiert \vcite{fowler}{256}. Ein großer Vorteil dieser
 Technik ist, dass einfache Parser zu komplexeren Parsern zusammengefügt werden können.
 Weiterhin wird durch die Kombination mehrerer grammatikbestimmender Komponenten
-auch die Lesbarkeit der Grammatik gefördert, was bei einem RD-Parser ein großer
-Nachteil ist. Daher bezeichnen Martin Fowler et al. Parser-Kombinatoren auch als
-Mittelweg zwischen RD-Parsern und Parser-Generatoren \vcite{fowler}{261}.
+auch die Lesbarkeit der Grammatik gefördert, was bei einem \emph{RD-Parser} ein großer
+Nachteil ist. Daher bezeichnen Martin Fowler et al. Parserkombinatoren auch als
+Mittelweg zwischen \emph{RD-Parsern} und Parser-Generatoren
+\vcite{fowler}{261}.
 
 \section{Nicht-textuelle DSLs}
 Die Kapitel \ref{interneDSL} und \ref{externeDSL} bezogen sich auf textuelle
