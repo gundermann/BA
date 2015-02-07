@@ -4,17 +4,17 @@
 \section{Allgemeine Anforderungen an Benutzeroberflächen von profil
 c/s}\label{AllgAnforderungen} Die erste Anforderung bezieht sich auf die
 Plattformen, auf welche der Client von \pcs dargestellt werden muss. Dieser
-soll sowohl in Web-Browsern (\emph{Web-Client}) als auch standalone auf einem PC
-(\emph{Standalone-Client}) ausgeführt werden können.\\
+soll sowohl in Web-Brow\-sern (\emph{Web-Client}) als auch standalone auf einem
+PC (\emph{Standalone-Client}) ausgeführt werden können.\\
 Um die Darstellung auf unterschiedlichen Plattformen umzusetzen, werden
 unterschiedliche Frameworks zur Darstellung der \emph{\acrshort{GUI}} verwendet. Dabei
 besteht die Möglichkeit, dass verwendete Frameworks veralten, woraus sich der
 Bedarf an einer Überführungsmöglichkeit der \emph{\glspl{GUI}}, die mit älteren
 Frameworks dargestellt werden, in \emph{\glspl{GUI}}, die mit aktuellen Frameworks
 dargestellt werden, ergibt.\\
-Da die Nutzer an  einen bestimmte Aufbau \emph{\glspl{GUI}} gewöhnt
-sind, ist es von Vorteil, wenn die \emph{\acrshort{GUI}} des Clients auf
-unterschiedlichen Plattformen den gleichen Aufbau hat. 
+Da die Nutzer an  bestimmte \emph{\glspl{GUI}} gewöhnt
+sind, ist es von Vorteil, wenn die \guis des Clients auf
+unterschiedlichen Plattformen den gleichen Aufbau haben. 
 Von daher ist die optische Ähnlichkeit der \emph{\glspl{GUI}} auf
 unterschiedlichen Plattformen eine weitere Anforderung.\\
 Um eine effiziente
@@ -72,7 +72,7 @@ Dies sind lediglich die Tabelle, die darunter stehenden Schaltflächen sowie
 das Bemerkungsfeld (im \emph{Web-Client} auf der rechten Seite und im
 \emph{Standalone-Client} in der Mitte). Dieser Bereich der \emph{\acrshort{GUI}}
 ist in beiden Clients gleich aufgebaut. Andere Teile der \gui
-haben derzeit keine einheitlichen Aufbau, was den
+haben derzeit keinen einheitlichen Aufbau, was den
 unterschiedlichen Frameworks für die Umsetzung von \emph{Web-} und \emph{Standalone-Client} geschuldet ist.\\
 Dass der Aufbau der \emph{\acrshort{GUI}} in beiden Clients ähnlich ist, liegt an der
 Umsetzung der \emph{\acrshort{GUI}}, die im Folgenden erläutert wird.\\
@@ -89,7 +89,7 @@ Zugleich fördert die einmalige Beschreibung auch einen ähnlichen Aufbau der
 Anforderung \emph{\hyperref[Tab_PrioAnfGUI]{AA3}} nachkommt.
 Die Lösung der \deg ist das \emph{Multichannel-Framework (MCF)}.\\
 Die Architektur des
-\emph{Multichannel-Frameworks} ist Abbildung \ref{Abb_MC-Framework} zu
+\MCF ist Abbildung \ref{Abb_MC-Framework} zu
 entnehmen.
 Innerhalb des \MCF werden die \emph{\glspl{GUI}} mittels so genannter
 \emph{Präsentationsformen} beschrieben. 
@@ -98,13 +98,14 @@ Multichannel-Frameworks}{\simplevcite{jwammc}}{MC-Framework}
 \noindent
 Aus \emph{Präsentationsformen} können mithilfe der
 \emph{Component-Factories} \emph{\glspl{GUI}} erzeugt werden, die auf unterschiedlichen
-Frameworks basieren und das \emph{Component-Interface} implementieren.
+Frameworks basieren. Die \gks müssen dafür das \emph{Component-Interface}
+implementieren.
 (Bei den verwendeten Frameworks handelt es sich um \gloss{Swing}, \emph{ULC} und
 \gloss{wingS}. \emph{ULC} wird in der \deg nicht mehr eingesetzt.) Das
 \emph{Component-Interface} wird für die Interaktion mit den Komponenten der
 unterschiedlichen Frameworks benötigt. Mit dem \MCF ist die \deg in der Lage
-ihre \emph{\glspl{GUI}} für \emph{\gloss{Swing}} und für
-\emph{\gloss{wingS}} mit nur einer \emph{\acrshort{GUI}}-Beschreibung zu erzeugen.\\
+ihre \emph{\glspl{GUI}} für \gloss{Swing} und für
+\gloss{wingS} mit nur einer \emph{GUI-Beschreibung} zu erzeugen.\\
 Die Anbindung anderer Frameworks ist bei Betrachtung der Architektur des \MCF
 unproblematisch. Dadruch scheint die \deg mit diesem Ansatz auch auf den
 Einsatz neuer Frameworks (siehe Anforderung
@@ -125,16 +126,17 @@ verwendet, die den Entwicklern und Anwendern das Entwickeln und Verstehen der So
 vereinfachen sollen \vcite{sauerDip}{30}. Diese Entwurfsmetaphern
 beschreiben \dcite{[\ldots] Elemente und Konzepte der Anwendung durch bildhafte
 Vorstellungen von realen Gegenständen [\ldots]}{sauerDip}{30}.
-Die grundlegenden Metaphern werden im Folgenden kurz erläutert. Ein
-\emph{Material} kann nicht direkt vom Nutzer bearbeitet werden. Es besitzt
+Die grundlegenden Metaphern werden im Folgenden kurz erläutert.\\
+Ein \emph{Material} kann nicht direkt vom Nutzer bearbeitet werden. Es besitzt
 jedoch eine Schnittstelle, die fachliche Operationen erlaubt. Diese Operationen können
-bspw. von einem \emph{Werkzeug} aufgerufen werden, um den Zustand des Materials
-zu verändern. Dabei verfügen \emph{Werkzeuge} über eine Präsentation und geben
-somit eine Handhabung vor. \\
-Es wird zwischen zwei Arten von \emph{Werkzeugen} - \emph{monolithische} und \emph{komplexe
-Werkzeuge} (vgl. \cite[S.5]{hofer}). Da in der \deg hauptsächlich \emph{komplexe
+bspw. von einem \emph{Werkzeug} aufgerufen werden, um den Zustand des
+\emph{Materials} zu verändern. Dabei verfügen \emph{Werkzeuge} über eine
+Präsentation und geben somit eine Handhabung vor\vcite{sauerDip}{30}. \\
+Es gibt zwei Arten von \emph{Werkzeugen} - \emph{monolithische} und
+\emph{komplexe Werkzeuge} (vgl. \cite[S.5]{hofer}). Da in der \deg hauptsächlich \emph{komplexe
 Werkzeuge} Anwendung finden, werden die \emph{monolithische
-Werkzeuge} in dieser Arbeit nicht weiter erläutert. \emph{Komplexe
+Werkzeuge} in dieser Arbeit nicht weiter erläutert.\\
+\emph{Komplexe
 Werkzeuge} gliedern
 sich in Oberfläche, Interaktion und Fachlogik auf. Dabei muss sich die
 Funktionskomponente (\emph{FunctionPart - FP}) vollständig von der
@@ -160,25 +162,25 @@ als Dienstleister Funktionalität zur Verfügung stellen. Diese können
 \emph{Materialien} verwalten, verfügen jedoch über keine eigene Präsentation
 (vgl.
 \cite[S.30f]{sauerDip}).\\
-Durch fachliche Services ist mit dem \emph{WAM-Ansatz}
+Durch \emph{fachliche Services} ist mit dem \emph{WAM-Ansatz}
 auch \emph{Multi-Channeling} möglich (vgl. \cite[S.42]{sauerDip}). Das
 \emph{Multi-Channeling} des \emph{WAM-Ansatzes} setzt dabei auf einer anderen
 Ebene als das \MCF an. Das \emph{Multi-Channeling} des \emph{WAM-Ansatzes}
 basiert darauf, dass \dcite{[\ldots] Funktionalität unabhängig von der konkreten Handhabung,
 Präsentation und Technik bereitgestellt wird.}{sauerDip}{42} Das \MCF hingegen
-basiert darauf, dass eine Präsentation unabhängig von der Technik bereitgestellt
-werden kann. Es setzt demnach auf einer höheren Ebene an, als das
+basiert lediglich darauf, dass eine Präsentation unabhängig von der Technik
+bereitgestellt werden kann. Es setzt demnach auf einer höheren Ebene an, als das
 \emph{Multi-Channeling} des \emph{WAM-Ansatzes}. Die Mechanismen, die das
 \emph{Multi-Channeling} des \emph{WAM-Ansatzes} bietet, werden jedoch auch im
-\MCF verwendet.\\
+\MCF verwendet.
 
 \section{Probleme des Multichannel-Frameworks}\label{Probleme}
 Bezogen auf die Anforderungen werden \emph{\hyperref[Tab_PrioAnfGUI]{AA3}} und
 \emph{\hyperref[Tab_PrioAnfGUI]{AA5}} nicht durch das \MCF umgesetzt. (Zu
 \emph{\hyperref[Tab_PrioAnfGUI]{AA5}} ist dabei zu erwähnen, dass jede
 Sprache eine gewisse Ausdruckskraft hat. Da in dieser Arbeit versucht wird, die
-\emph{\acrshort{GUI}}-Entwicklung mittels einer ausdrucksstarken \emph{domänenspezifischen Sprache (DSL)}, die sich auf die
-\gloss{Domäne} von \pcs bezieht, umzusetzen, ist die Ausdruckskraft
+\emph{GUI-Entwicklung} mittels einer ausdrucksstarken \emph{domänenspezifischen
+Sprache (DSL)}, die sich auf die \gloss{Domäne} von \pcs bezieht, umzusetzen, ist die Ausdruckskraft
 herkömmlicher Programmiersprachen oder Frameworks als unzureichend anzusehen).\\
 Ein weiteres Problem bezieht sich
 auf die integrierten Framworks (\gloss{Swing} und \gloss{wingS}). Beide Frameworks sind veraltet
@@ -187,16 +189,19 @@ und werden nicht mehr gewartet. (Analysen dazu wurden in \cite{gundermann3} und
 Kunden nachkommen zu können, müssten beide Frameworks von den Entwicklern der
 \deg selbst weiterentwickelt werden.
 Eine andere Möglichkeit wäre es, andere und modernere Frameworks 
-einzusetzen, um den nötigen Support der Framework-Entwickler
+einzusetzen, um den nötigen Support der Entwickler des Frameworks
 nutzen zu können.\\
 Das \MCF ist in der Theorie so konzipiert, dass es leicht sein
 sollte, neue Frameworks zu integrieren (siehe Abbildung \ref{Abb_MC-Framework}).
 In der Praxis wurde diese unkompilzierte Integration jedoch widerlegt. Ein
 Problem, welches bei der Integration neuer Frameworks aufkommt, ist, dass sich das \MCF sehr stark an \gloss{Swing} orientiert und die
 \emph{\glspl{GUI}} vor allem vom \gloss{GridBagLayout} stark beeinflusst werden.
-Ein solcher Layoutmanager steht nicht in allen \emph{\acrshort{GUI}}-Frameworks zur Verfügung. Da die
-Beschreibung der \emph{\acrshort{GUI}} über ein solches Layout vollzogen wird, ist der Umgang mit dem \gloss{GridBagLayout}
-innerhalb des Frameworks eine Voraussetzung für die Integration in das \MCF.
+Ein solcher Layoutmanager steht nicht in allen \emph{GUI-Frameworks} zur
+Verfügung. Da die Beschreibung der \guis über ein solches Layout vollzogen wird,
+ist der Umgang mit dem \gloss{GridBagLayout} innerhalb des Frameworks eine
+Voraussetzung für die Integration in das \MCF.
+\newpage
+\noindent
 Zusammenfassend sind folgende Probleme des \MCF zu nennen:
 \begin{itemize}
   \item[\textbf{P1}]
@@ -204,7 +209,7 @@ Zusammenfassend sind folgende Probleme des \MCF zu nennen:
   \item[\textbf{P2}]
   Starke Orientierung an \gloss{Swing}\label{P2}
 \end{itemize}
-\noindent
+\noindent\\
 Dazu müssen in der \deg bei der Entwicklung von
 \emph{\glspl{GUI}} lästige Routinearbeiten durchgeführt werden, die im
 Folgenden genannt werden:
@@ -217,8 +222,8 @@ Folgenden genannt werden:
   überschrieben werden.\label{R2}
   \item[\textbf{R3}]
   Die Werte für Aufschriften, Größeneinstellungen u. Ä. für
-  \gks werden bei der \deg in Properties-Dateien festgehalten. Das Erstellen und
-  Pflegen wird als fehleranfällig betrachtet.\label{R3}
+  \gks werden bei der \deg in \emph{Properties-Dateien} festgehalten. Das
+  Erstellen und Pflegen wird als fehleranfällig betrachtet.\label{R3}
 \end{itemize}
 
 \section{Zielsetzung}\label{Ziel}
@@ -227,13 +232,13 @@ entwickeln, welche das \MCF ablösen kann. Anzustreben ist eine Lösung, die neben
 der Umsetzung der oben genannten
 Anforderungen, auch die genannten Routinearbeiten reduziert.\\
 In dieser Arbeit wird ein Ansatz untersucht, bei dem es möglich ist,
-\hyperref[Tab_PrioAnfGUI]{AA1} - \hyperref[Tab_PrioAnfGUI]{AA5} besser
-umzusetzen.
+\emph{\hyperref[Tab_PrioAnfGUI]{AA1}} - \emph{\hyperref[Tab_PrioAnfGUI]{AA5}}
+besser umzusetzen.
 Kern des Ansatzes ist eine \emph{DSL}, mit deren Hilfe die \emph{\glspl{GUI}} beschrieben
 werden sollen (im Folgenden als \g bezeichnet).
-Eine \DSL könnte so konzipiert werden, dass sie ausreichend abstrakt und
-erweiterbar ist und bzgl.
-der Ausdruckskraft das \MCF übertrifft.\\
+Diese \DSL könnte so konzipiert werden, dass sie ausreichend abstrakt und
+erweiterbar ist und  das \MCF bzgl.
+der Ausdruckskraft übertrifft.\\
 Die genaue Lösungsidee durch die \emph{GUI-DSL}, welche in dieser Arbeit
 verfolgt wird, ist in Kapitel \ref{Entwicklung einer Lösungsidee} beschrieben.
 

@@ -17,131 +17,134 @@
   abgegrenzt:
   \begin{itemize}
     \item[] \textbf{Konkrete Syntax}\\
-   	Die konkrete Syntax beschreibt die Notation der Sprache. Demnach bestimmt
-   	sie, welche Sprachkonstrukte der Nutzer einsetzen kann, um ein Programm in
+   	Die \emph{konkrete Syntax} beschreibt die Notation der Sprache. Demnach
+   	bestimmt sie, welche Sprachkonstrukte der Nutzer einsetzen kann, um ein Programm in
     dieser Sprache zu schreiben	\vcite{alfred}{87}.
     \item[] \textbf{Abstrakte Syntax}\\
-    Die abstrakte Syntax ist eine Datenstruktur, welche die Kerninformationen eines
-	Programms beschreibt.
+    Die \emph{abstrakte Syntax} ist eine Datenstruktur, welche die
+    Kerninformationen eines Programms beschreibt.
 	Sie enthält keinerlei Informationen über Details bzgl. der Notation. Zur
 	Darstellung dieser Datenstruktur werden abstrakte Syntaxbäume
 	genutzt \vcite{voelter}{179}.
     \item[] \textbf{Statische Semantik}\\
-    Die statische Semantik beschreibt die Menge an Regeln bzgl. des Typsystems, 
-    die ein Programm befolgen muss \vcite{voelter}{26}.
+    Die \emph{statische Semantik} beschreibt die Menge an Regeln bzgl. des
+    Typsystems, die ein Programm befolgen muss \vcite{voelter}{26}.
     \item[] \textbf{Ausführungssemantik}\\
-    Die Ausführungssemantik ist abhängig vom Compiler. 
+    Die \emph{Ausführungssemantik} ist abhängig vom Compiler. 
     Sie beschreibt, wie ein Programm zum Zeitpunkt seiner Ausführung
     funktioniert \vcite{voelter}{26}.
   \end{itemize}
  
   
 \subsection*{General Purpose Language (GPL)}
-  Bei GPLs handelt es sich um Programmiersprachen, die Turing-vollständig sind.
-  Das bedeutet, dass mit einer GPL alles berechnet werden kann, was auch mit
-  einer \gloss{Turing-Maschine} berechenbar ist. Völter et al. behaupten, dass
-  alle GPLs aufgrund dessen untereinander austauschbar sind. Dennoch 
+  Bei \emph{GPLs} handelt es sich um Programmiersprachen, die
+  \emph{Turing-vollständig} sind.
+  Das bedeutet, dass mit einer \emph{GPL} alles berechnet werden kann, was auch
+  mit einer \gloss{Turing-Maschine} berechenbar ist. Völter et al. behaupten, dass
+  alle \emph{GPLs} aufgrund dessen untereinander austauschbar sind. Dennoch 
   sind Abstufungen bzgl. der Ausführung dieser Programmiersprachen zu machen.
-  Unterschiedliche GPLs sind für spezielle Aufgaben optimiert 
+  Unterschiedliche \emph{GPLs} sind für spezielle Aufgaben optimiert 
   \vcite{voelter}{27f}.
   
 \subsection*{Domain Specific Language (DSL)}
-  Eine \emph{DSL} (zu dt. domänenspezifische Sprache) ist eine Programmiersprache,
-  welche für eine bestimmte \gloss{Domäne} optimiert ist \vcite{voelter}{28}.
-  Das Entwickeln einer \emph{DSL} ermöglicht es, die Abstraktion der  Sprache der Domäne anzupassen 
-  \vcite{ghosh}{10}. Das bedeutet, dass Aspekte, welche für die Domäne
+  Eine \emph{DSL} (zu dt. \emph{domänenspezifische Sprache}) ist eine
+  Programmiersprache, welche für eine bestimmte \gloss{Domäne} optimiert ist \vcite{voelter}{28}.
+  Das Entwickeln einer \emph{DSL} ermöglicht es, die Abstraktion der  Sprache der \gloss{Domäne} anzupassen 
+  \vcite{ghosh}{10}. Das bedeutet, dass Aspekte, welche für die \gloss{Domäne}
   unwichtig sind, auch in der Sprache außer Acht gelassen werden können.
-  Semantik und Syntax sollten demnach der jeweiligen Abstraktionsebene
+  \emph{Semantik} und \emph{Syntax} sollten demnach der jeweiligen Abstraktionsebene
   angepasst sein. Eine \emph{DSL} ist
   demzufolge in ihren Ausdrucksmöglichkeiten eingeschränkt. Je stärker diese
-  Einschränkung ist, desto besser sind die Unterstützung der Domäne sowie die
+  Einschränkung ist, desto besser sind die Unterstützung der \gloss{Domäne} sowie die
   Ausdruckskraft der \emph{DSL} \vcite{fowler}{27f}.\\ 
   Darüber hinaus sollte ein
   Programm, welches in einer \emph{DSL} geschrieben wurde, alle Qualitätsanforderungen erfüllen, die auch bei einer Umsetzung des
-  Programms mit GPLs realisiert werden \vcite{ghosh}{10f}.\\
-  Es gibt verschiedene Arten von DSLs. Neben internen und externen \emph{DSLs} (siehe
-  Kapitel \ref{interneDSL} und \ref{externeDSL}) findet eine Unterscheidung zwischen
-  technischen \emph{DSLs} und fachlichen \emph{DSL} statt. Markus Völter et al. unterscheiden
-  diese beiden Kategorien im Allgemeinen dahingehend, dass technische \emph{DSLs} von
-  Programmierern genutzt werden und fachliche \emph{DSL} von Domänenexperten (z. B. Kunden) \vcite{voelter}{26}.
+  Programms mit \emph{GPLs} realisiert werden \vcite{ghosh}{10f}.\\
+  Es gibt verschiedene Arten von \emph{DSLs}. Neben \emph{internen} und
+  \emph{externen DSLs} (siehe Kapitel \ref{interneDSL} und \ref{externeDSL}) findet eine Unterscheidung zwischen
+  \emph{technischen DSLs} und \emph{fachlichen DSL} statt. Markus Völter et al.
+  unterscheiden diese beiden Kategorien im Allgemeinen dahingehend, dass \emph{technische
+  DSLs} von Programmierern genutzt werden und \emph{fachliche DSL} von
+  Domänenexperten (z. B. Kunden) \vcite{voelter}{26}.
   
 \subsection*{Grammatik}
   Grammatiken und insbesondere Grammatikregeln werden zur Beschreibung von
   Sprachen verwendet \vcite{hedtstueck}{23f}. Für die Definition einer Grammatik
-  wird aus den Praxisbericht \cite{gundermann5} verwiesen. Grammatiken
+  wird auf den Praxisbericht \cite{gundermann5} verwiesen. Grammatiken
   können in einer Hierarchie dargestellt werden (\emph{Chomsky-Hierarchie})
   \vcite{hedtstueck}{32f}. Bei Programmiersprachen handelt es sich
   um \emph{kontextfreie Sprachen}. Diese sind entscheidbar
   und können somit von einem Compiler verarbeitet werden \vcite{hedtstueck}{16f}.
   
 \subsection*{Lexikalische Analyse}
-  Bevor ein DSL-Skript (Text, der in der Syntax einer \emph{DSL} geschrieben
-  wurde) verarbeitet werden kann, muss das Skript vom sogenannten \emph{Lexer} oder
+  Bevor ein \emph{DSL-Skript} (Text, der in der \emph{Syntax} einer \emph{DSL}
+  geschrieben wurde) verarbeitet werden kann, muss das Skript vom sogenannten \emph{Lexer} oder
   \emph{Scanner} gelesen werden \vcite{fowler}{221}. Dabei wird ein Text aus
   diesem Skript als Input-Stream betrachtet. Der Lexer wandelt diesen
   Input-Stream in einzelne Tokens um \vcite{ghosh}{220}. Im Allgemeinen ist
   der \emph{Lexer} die Instanz innerhalb der \gloss{DSL-Umgebung}, die für das
-  Auslesen des DSL-Skriptes verantwortlich ist.
+  Auslesen des \emph{DSL-Skriptes} verantwortlich ist.
 
 \subsection*{Parser}
-  Ein Parser ist ebenfalls ein Teil der \gloss{DSL-Umgebung} 
+  Ein \emph{Parser} ist ebenfalls ein Teil der \gloss{DSL-Umgebung} 
   \vcite{ghosh}{211}. Er ist dafür verantwortlich, aus dem Ergebnis der
-  lexikalischen Analyse ein Output zu generieren, mit dem weitere
+  \emph{lexikalischen Analyse} ein Output zu generieren, mit dem weitere
   Aktionen durchgeführt werden können \vcite{ghosh}{212}. Der Output wird in
-  Form eines Syntaxbaums (AST) generiert \vcite{fowler}{47}. Ein solcher Baum
-  ist laut Martin Fowler et al. eine weitaus nutzbarere Darstellung dessen, was
-  mit dem DSL-Skript beschrieben werden soll.
-  Daraus lässt sich auch das semantische Modell generieren \vcite{fowler}{48}.
+  Form eines \emph{Syntaxbaums (AST)} generiert \vcite{fowler}{47}. Ein solcher
+  Baum ist laut Martin Fowler et al. eine weitaus nutzbarere Darstellung dessen, was
+  mit dem \emph{DSL-Skript} beschrieben werden soll.
+  Daraus lässt sich auch das \emph{semantische Modell} generieren
+  \vcite{fowler}{48}.
   
 \subsection*{Semantisches Modell}
-  Das semantische Modell ist ebenfalls eine Repräsentation dessen, was mit der
-  \emph{DSL} beschrieben wurde. Es wird laut Martin Fowler et al. auch als die
+  Das \emph{semantische Modell} ist ebenfalls eine Repräsentation dessen, was
+  mit der \emph{DSL} beschrieben wurde. Es wird laut Martin Fowler et al. auch als die
   Bibliothek betrachtet, welche von der \emph{DSL} nach außen hin sichtbar ist 
   \vcite{fowler}{159}. In Anlehnung an Ghosh sowie Martin Fowler et al. wird das
-  semantische Modell als Datenstruktur betrachtet, deren Aufbau von der
-  Syntax der \emph{DSL} unabhängig ist (vgl. \cite[S.214]{ghosh}, \cite[S.48]{fowler}).
+  \emph{semantische Modell} als Datenstruktur betrachtet, deren Aufbau von der
+  \emph{Syntax} der \emph{DSL} unabhängig ist (vgl. \cite[S.214]{ghosh}, \cite[S.48]{fowler}).
   
 \subsection*{Generator}
-  Laut Martin Fowler et al. ist ein Generator der Teil der
+  Laut Martin Fowler et al. ist ein \emph{Generator} der Teil der
   \gloss{DSL-Umgebung}, welcher für das Erzeugen eines Quellcodes für die
   \gloss{Zielumgebung} zuständig ist \vcite{fowler}{121}. Bei der
   Generierung von Quellcodes wird zwischen zwei Verfahren unterschieden.
   \begin{enumerate}
   	\item \textbf{Transformer Generation}\\
-  	Bei der \emph{Transformer Generation} wird das semantische Modell als Input
-  	verwendet. Aus diesem Input wird der Quellcode für die Zielumgebung
-  	generiert 
+  	Bei der \emph{Transformer Generation} wird das \emph{semantische Modell} als
+  	Input verwendet. Aus diesem Input wird der Quellcode für die
+  	\gloss{Zielumgebung} generiert 
   	\vcite{fowler}{533f}. Ein solches Verfahren wird oft verwendet,
-  	wenn ein Großteil des Outputs generiert wird und die Inhalte des semantischen
-  	Modells einfach in den Quellcode der Zielumgebung überführt werden
-  	können \vcite{fowler}{535}\label{TransG}.
+  	wenn ein Großteil des Outputs generiert wird und die Inhalte des
+  	\emph{semantischen Modells} einfach in den Quellcode der \gloss{Zielumgebung}
+  	überführt werden können \vcite{fowler}{535}\label{TransG}.
   	\item \textbf{Templated Generation} \\
   	Bei der \emph{Templated Generation} wird eine Vorlage benötigt. In dieser
   	Vorlage befinden sich Platzhalter. Diese dienen dazu, dass der vom Generator
   	erzeugte Quellcode an diesen Stellen eingesetzt werden kann 
   	\vcite{fowler}{539f}. Dieses Codegenerierungsverfahren wird oft verwendet,
-  	wenn sich im zu generierenden Quellcode für die Zielumgebung viele statische Inhalte befinden
-  	und der Anteil dynamischer Inhalte sehr einfach gehalten ist 
+  	wenn sich im zu generierenden Quellcode für die \gloss{Zielumgebung} viele
+  	statische Inhalte befinden und der Anteil dynamischer Inhalte sehr einfach gehalten ist 
   	\vcite{fowler}{541}\label{TempG}.
   \end{enumerate}
 
 \section{Anwendungsbeispiele}
-Die Anwendungsbereiche für \emph{DSLs} sind breit gefächert. Die bekanntesten DSLs
-sind Sprachen wie \emph{SQL} (zur Abfrage und Manipulation von Daten in einer
+Die Anwendungsbereiche für \emph{DSLs} sind breit gefächert. Die bekanntesten
+\emph{DSLs} sind Sprachen wie \emph{SQL} (zur Abfrage und Manipulation von Daten in einer
 relationalen Datenbank), \emph{HTML} (als Markup-Sprache für das Web) oder
 \emph{CSS} (als Layoutbeschreibung) \vcite{ghosh}{12}. Alle Sprachen sind in
 ihren Ausdrucksmöglichkeiten eingeschränkt und von der
-Abstraktion her direkt auf eine Domäne (jeweils dahinter in Klammern genannt)
+Abstraktion her direkt auf eine \gloss{Domäne} (jeweils dahinter in Klammern genannt)
 zugeschnitten \vcite{ghosh}{12f}.\\
 Weitere Beispiele für \emph{DSLs} befinden sich im Bereich der
-Sprachen für Parser-Generatoren (\emph{YACC}, \emph{ANTLR}) oder im Bereich der
-Sprachen für das Zusammenbauen von Softwaresystemen (\emph{Ant}, \emph{Make}) 
-\vcite{ghosh}{12}.
+Sprachen für \emph{Parser-Generatoren} (z. B. \emph{YACC}, \emph{ANTLR}) oder im
+Bereich der Sprachen für das Zusammenbauen von Softwaresystemen (z.
+B. \emph{Ant}, \emph{Make}) \vcite{ghosh}{12}.
 
 \section{Model-Driven Software Development (MDSD)}\label{mdsd}
-In der Einleitung wurde schon der Model-Driven Ansatz in Verbindung mit
-\acrshort{GUI}-Entwicklung erwähnt. Dieser Ansatz versucht den technischen Lösungen der
-IT-Industrie einen gewissen Grad an Agilität zu verleihen \simplevcite{3}. Dies
+In der Einleitung wurde schon der \emph{Model-Driven Ansatz} in Verbindung mit
+\emph{GUI-Entwicklung} erwähnt. Dieser Ansatz versucht den technischen Lösungen
+der IT-Industrie einen gewissen Grad an Agilität zu verleihen \simplevcite{3}. Dies
 hängt damit zusammen, dass die Entwicklung von Softwareprodukten schneller und
 besser vonstatten geht und mit weniger Kosten realisierbar ist \vcite{mdsd}{71}.\\
 Erreicht wird dies, indem die Modelle formaler, strenger, vollständiger und
@@ -150,14 +153,15 @@ Modelle Quellcodes oder Funktionalitäten beschreiben und diese in der Evolution
 der Software immer wiederverwendet werden können \vcite{mdsd}{72}. Somit wird
 ein redundanter oder schematischer Quellcode vermieden und es ist möglich diese Modelle auch in
 anderen Anwendungen zu verwenden \vcite{mdsd}{72}.\\
-Daraus lassen sich folgende Ziele des MDSD ableiten:
+Daraus lassen sich folgende Ziele des \emph{MDSD} ableiten:
 \begin{itemize}
   \item Schnelleres Entwickeln durch Automatisierungen
   \item Bessere Softwarequalität durch automatisierte Transformationen und formalen Modell-Definitionen
   \item Verhinderung von Wiederholungen und besseres Management von
-  veränderbaren Technologien durch die Trennung der Funktionsbereiche (Separation of Concers)
+  veränderbaren Technologien durch die Trennung der Funktionsbereiche
+  (\emph{Separation of Concers})
   \item Architekturen,
-  Modellierungssprachen (bspw. eine DSL) und Generatoren/Transformatoren
+  Modellierungssprachen (bspw. eine \emph{DSL}) und Generatoren/Transformatoren
   können besser wiederverwendet werden
   \item Verringerte Komplexität durch höhere Abstraktion
 \end{itemize}
@@ -166,17 +170,17 @@ Die Modelle sind somit nicht länger nur zur Dokumentation geeignet, sondern sind
 ein Teil der Software \vcite{mdsdvoelter}{14f}. Dabei sind sie auf
 ein bestimmtes Domänenproblem angepasst. Die Beschreibung dieser Modelle kann
 bspw. über eine \emph{DSL} erfolgen \vcite{mdsdvoelter}{15}. In
-Abbildung \ref{mdsd} ist die Idee des MDSD schematisch dargestellt.
-\myBigFigureCited{mdsd.jpg}{Die grundlegenden Ideen hinter dem MDSD}{
+Abbildung \ref{mdsd} ist die Idee des \emph{MDSD} schematisch dargestellt.
+\myBigFigureCited{mdsd.jpg}{Die grundlegende Idee hinter dem \emph{MDSD}}{
 \vcite{mdsdvoelter}{15}}{mdsd}
 
 \section{Abgrenzung zu GPL}
-Wie vorhergehend bereits erwähnt, sind GPLs Sprachen mit denen
+Wie vorhergehend bereits erwähnt, sind \emph{GPLs} Sprachen mit denen
 alles berechnet werden kann, was auch mit einer \gloss{Turing-Maschine}
 berechenbar ist.
-Folglich kann mit einer GPL jedes berechenbare Problem
+Folglich kann mit einer \emph{GPL} jedes berechenbare Problem
 gelöst werden. Eine \emph{DSL} hat diese Eigenschaft nicht. Da sie auf eine bestimmte
-Domäne zugeschnitten ist, können auch nur Probleme innerhalb dieser Domäne mit
+\gloss{Domäne} zugeschnitten ist, können auch nur Probleme innerhalb dieser \gloss{Domäne} mit
 ihr gelöst werden \vcite{voelter}{28}. Martin Fowler et al. bezeichnen diese
 Eigenschaft des Domänenfokus als ein Schlüsselelement der Definition einer \emph{DSL} 
 \vcite{fowler}{27f}.
@@ -184,7 +188,6 @@ Eigenschaft des Domänenfokus als ein Schlüsselelement der Definition einer \emph
 \section{Vor- und Nachteile von DSLs gegenüber GPLs}
 \subsection*{Vorteile:}
 
-%EINRÜCKEN
 \begin{itemize}
   \item []
 \textbf{Ausdruckskraft}\\
@@ -194,7 +197,7 @@ Eigenschaft des Domänenfokus als ein Schlüsselelement der Definition einer \emph
  Denkens (sehen - betrachten - verstehen - zeigen) \simplevcite{Roam2009} so schnell wie
  möglich abzuarbeiten sein.\\
  Weiterhin ist es wichtig bei der Entwicklung einer \emph{DSL} darauf zu achten, dass
- sich die Abstraktion der Sprache an der Semantik der Domäne orientiert
+ sich die Abstraktion der Sprache an der \emph{Semantik} der \gloss{Domäne} orientiert
  \vcite{ghosh}{20}. Sind diese Empfehlungen umgesetzt, wächst das
  Verständnis für das, was entwickelt werden soll, da die semantische Lücke zwischen Programm und Problem
  kleiner wird (vgl. \cite[S.20]{ghosh}, \cite{journals/insk/BrauerCK08}).
@@ -215,15 +218,15 @@ Eigenschaft des Domänenfokus als ein Schlüsselelement der Definition einer \emph
   Software}\\
   Durch die Ausdruckskraft und die Abstraktion einer \emph{DSL} muss i. d. R. 
   weniger Quellcode für die Implementierung eines Programms geschrieben werden,
-  als bei der Verwendung einer GPL benötigt wird.
-  Mit einem entsprechenden Framework für GPLs könnte ähnliches erreicht werden
-  \vcite{voelter}{40}.\\
+  als bei der Verwendung einer \emph{GPL} benötigt wird.
+  Mit einem entsprechenden Framework für \emph{GPLs} könnte ähnliches erreicht
+  werden \vcite{voelter}{40}.\\
   Ebenso führt die stärkere Ausdruckskraft zu einer
-  besseren Lesbarkeit von DSL-Code im
-  Vergleich zu GPL-Code, wodurch jener einfacher
+  besseren Lesbarkeit von \emph{DSL-Code} im
+  Vergleich zu \emph{GPL-Code}, wodurch jener einfacher
   zu verstehen ist. Dies erleichtern das Finden von Fehlern in diesem Quellcode
-  sowie Veränderungen an dem System vorzunehmen. Bei einer GPL werden diese
-  Vorteile durch Dokumentationen, ausdrucksvolle Variablenbezeichnungen und festgelegten Konventionen
+  sowie Veränderungen an dem System vorzunehmen. Bei einer \emph{GPL} werden
+  diese Vorteile durch Dokumentationen, ausdrucksvolle Variablenbezeichnungen und festgelegten Konventionen
   angestrebt \vcite{fowler}{33}. Allerdings ist der Entwickler zur Einhaltung dieser
   Vorschriften nicht gezwungen. Bei der Verwendung
   einer \emph{DSL} hingegen kann dem Entwickler dieser Freiheitsgrad entzogen
@@ -236,7 +239,7 @@ Eigenschaft des Domänenfokus als ein Schlüsselelement der Definition einer \emph
   die in der Sprache verwendet
   werden, sind die Domänenexperten bzw.
   die Kunden vertrauter mit der Implementierung,
-  als würde für die Umsetzung eine GPL
+  als würde für die Umsetzung eine \emph{GPL}
   verwendet werden \vcite{voelter}{42}. Die hohe Ausdruckskraft
   fördert das Verständnis dieser \emph{DSL}. Damit ist es einfacher die Kunden in die
   Entwicklung mit einzubeziehen. Dabei sollten jedoch zusätzliche Hilfsmittel,
@@ -246,7 +249,7 @@ Eigenschaft des Domänenfokus als ein Schlüsselelement der Definition einer \emph
   Auftragnehmern verbessert werden. Martin Fowler et al. bezeichnen die
   Verwendung einer \emph{DSL} als reine Kommunikationplattform als vorteilhaft 
   \vcite{fowler}{34f}. Grund dafür ist, dass bereits bei der Entwicklung einer
-  \emph{DSL} das Verständnis des Auftragnehmers über die Domäne gesteigert wird 
+  \emph{DSL} das Verständnis des Auftragnehmers über die \gloss{Domäne} gesteigert wird 
   \vcite{voelter}{41}.
   
   \item []
@@ -262,16 +265,16 @@ Eigenschaft des Domänenfokus als ein Schlüsselelement der Definition einer \emph
   \item []
 \textbf{Einfachere Validierung und Verifizierung}\\
   Da \emph{DSLs} bestimmte Details der Implementierung ausblenden, sind sie auf
-  semantischer Ebene reichhaltiger als GPLs. Das führt dazu, dass Analysen
-  einfacher umzusetzen sind und Fehlermeldungen verständlicher gestaltet werden können, indem die
-  Terminologie der Domäne verwendet wird. Dadurch und durch die vereinfachte
+  semantischer Ebene reichhaltiger als \emph{GPLs}. Das führt dazu, dass
+  Analysen einfacher umzusetzen sind und Fehlermeldungen verständlicher gestaltet werden können, indem die
+  Terminologie der \gloss{Domäne} verwendet wird. Dadurch und durch die vereinfachte
   Kommunikation mit den Domänenexperten, werden Reviews und Validierungen des
-  DSL-Codes weitaus effizienter \vcite{voelter}{41}.
+  \emph{DSL-Codes} weitaus effizienter \vcite{voelter}{41}.
   \item []
 \textbf{Unabhängigkeit von Technologien}\\
   Die Modelle, welche zur Beschreibung von Systemen verwendet werden, können so
   gestaltet werden, dass sie von Implementierungstechniken unabhängig sind. Dies
-  wird durch ein hohes Abstraktionsniveau erreicht, welches an die Domäne
+  wird durch ein hohes Abstraktionsniveau erreicht, welches an die \gloss{Domäne}
   angepasst ist. Dadurch kann die Beschreibung der Modelle von den genutzten
   Technologien weitestgehend entkoppelt werden \vcite{voelter}{41}.
   \item []
@@ -286,20 +289,11 @@ Eigenschaft des Domänenfokus als ein Schlüsselelement der Definition einer \emph
   Programmiersprache, die zur Entwicklung genutzt werden soll. Erfahrene Teammitglieder könnten sich
   mit der Implementierung der \emph{DSL} befassen und die Grundlage für die anderen 
   Teammitglieder schaffen. Diese wiederum nutzen die \emph{DSL}, um die fachlichen
-  Anforderungen der Kunden zu implementieren \vcite{ghosh}{21}. Das führt im
-  ersten Moment zu einer effizienteren Arbeitsweise, da sich nicht jeder
+  Anforderungen der Kunden zu implementieren \vcite{ghosh}{21}. Das zu einer effizienteren Arbeitsweise, da sich nicht jeder
   Entwickler mit allem auskennen musss. Markus Völter et al. hingegen sehen die
   Teilung der Programmieraufgaben als Gefahr bzw. Nachteil 
   \vcite{voelter}{44}.
 \end{itemize}
-
- 
-  
-  
-  
-  
-  
-  
 
 \subsection*{Nachteile:}
 
@@ -324,10 +318,10 @@ Eigenschaft des Domänenfokus als ein Schlüsselelement der Definition einer \emph
   Einsatz zuerst entwickelt werden muss, ist es notwendig Investitionen für die
   Entwickler der \emph{DSL} zu tätigen. Ob sich eine Investition lohnt, muss vorher
   durch entsprechende Analysen überprüft werden. Dabei muss festgestellt werden,
-  ob die Entwicklung der \emph{DSL} gerechtfertigt ist. Im Bereich der technischen \emph{DSLs} 
-  fällt die Rechtfertigung einfach, da diese \emph{DSLs} oft wiederverwendet werden
-  können. Fachliche \emph{DSLs} hingegen haben oft eine weitaus kompaktere Domäne, als
-  eine technische \emph{DSL}. Daher ergeben sich die Möglichkeiten zur
+  ob die Entwicklung der \emph{DSL} gerechtfertigt ist. Im Bereich der
+  \emph{technischen DSLs} fällt die Rechtfertigung einfach, da diese \emph{DSLs} oft wiederverwendet werden
+  können. \emph{Fachliche DSLs} hingegen haben oft eine weitaus kompaktere
+  \gloss{Domäne}, als eine \emph{technische DSL}. Daher ergeben sich die Möglichkeiten zur
   Wiederverwendung erst zu einem späteren Zeitpunkt und
   können nur schwer von der im Vorfeld durchgeführten
   Analyse wahrgenommen werden \vcite{voelter}{43}.\\
@@ -367,8 +361,8 @@ Eigenschaft des Domänenfokus als ein Schlüsselelement der Definition einer \emph
 \item []
 \textbf{Ghetto-Sprache}\\
   Wenn ein Unternehmen nur mit eigenen \emph{DSLs} arbeitet, gleichen diese Sprachen einer
-  Ghetto-Sprache, die von keinem anderen Unternehmen verstanden wird. Dadurch
-  ist es schwer, neue Technologien von anderen Unternehmen in den Bereichen, in
+  \emph{Ghetto-Sprache}, die von keinem anderen Unternehmen verstanden wird.
+  Dadurch ist es schwer, neue Technologien von anderen Unternehmen in den Bereichen, in
   denen vermehrt \emph{DSLs} eingesetzt werden, zu integrieren. Denn diese
   Technologien werden nicht mit den eigenen \emph{DSLs} kompatibel sein. Außerdem ist
   es schwer in diesem Bereich von neuen Mitarbeitern zu
@@ -396,11 +390,11 @@ Eigenschaft des Domänenfokus als ein Schlüsselelement der Definition einer \emph
   beschrieben werden kann \vcite{fowler}{39}.
 \item []
 \textbf{Kulturelle Herausforderungen}\\
-  Die genannten Nachteile des Einsatzes von DSLs, führen zu Äußerungen wie der,
-  dass die Entwicklung von Sprachen kompliziert ist, Domänenexperten keine
+  Die genannten Nachteile des Einsatzes von \emph{DSLs}, führen zu Äußerungen
+  wie der, dass die Entwicklung von Sprachen kompliziert ist, Domänenexperten keine
   Programmieren sind oder auch, dass nicht schon wieder eine neue Sprache
-  gelernt werden will (\emph{Yet-Another-Language-To-Learn Syndrom}
-  \vcite{ghosh}{22}).\\
+  gelernt werden will, was auch als \emph{Yet-Another-Language-To-Learn
+  Syndrom} bezeichnet wird \vcite{ghosh}{22}.\\
   Solche kulturellen Probleme entstehen i. d. R. dann, wenn etwas Neues
   eingeführt werden soll \vcite{voelter}{45}. Die Mitarbeiter müssen demnach
   entsprechend geschult und motiviert werden.
@@ -419,7 +413,7 @@ Eigenschaft des Domänenfokus als ein Schlüsselelement der Definition einer \emph
   Vorgehensweise \vcite{fowler}{38}.
   Somit entstehen immer mehr \emph{DSLs}, die auf gleichen Problemen basieren,
   aber untereinander nicht kompatibel sind. Außerdem fördert die
-  Entwicklung einer \emph{DSL} das Verstehen der Domäne, weshalb die Möglichkeit
+  Entwicklung einer \emph{DSL} das Verstehen der \gloss{Domäne}, weshalb die Möglichkeit
   besteht, dass dies der einzige Grund für eben diese Entwicklung ist
   \vcite{fowler}{38}.
   Das wiederum hat zur Folge, dass mehrere unvollständige \emph{DSLs}
@@ -434,16 +428,16 @@ ausfallen \vcite{ghosh}{21}.
 
 
 \section{Interne DSLs}\label{interneDSL}
-Bei einer internen \emph{DSL} handelt es sich um eine DSL, die in eine GPL integriert
-ist. Sie übernimmt dabei das Typsystem der GPL \vcite{voelter}{50}. In
-Bezug auf die Ziele aus Kapitel \ref{mdsd} können einige dieser Absichten mit
-Application Programming Interfaces (API) erreicht werden.
-In vielen Fällen ist eine \emph{DSL} nicht mehr als ein API.
-Martin Fowler et al. sehen den größten Unterschied zwischen API und \emph{DSL}
+Bei einer \emph{internen DSL} handelt es sich um eine \emph{DSL}, die in eine
+\emph{GPL} integriert ist. Sie übernimmt dabei das Typsystem der \emph{GPL}
+\vcite{voelter}{50}. In Bezug auf die Ziele aus Kapitel \ref{mdsd} können einige dieser Absichten mit
+\emph{Application Programming Interfaces (API)} erreicht werden.
+In vielen Fällen ist eine \emph{DSL} nicht mehr als ein \emph{API}.
+Martin Fowler et al. sehen den größten Unterschied zwischen \emph{API} und \emph{DSL}
 darin, dass eine \emph{DSL} neben einem abstrahierten Vokabular auch eine spezifische Grammatik
-nutzt \vcite{fowler}{29}. Ein API
-hingegen besitzt die gleichen syntaktischen Strukturen wie die GPL, in der das
-API bereitgestellt wurde. Somit werden überflüssige Notationsformen in das API
+nutzt \vcite{fowler}{29}. Ein \emph{API}
+hingegen besitzt die gleichen syntaktischen Strukturen wie die \emph{GPL}, in
+der das \emph{API} bereitgestellt wurde. Somit werden überflüssige Notationsformen in das \emph{API}
 übernommen, was bei einer \emph{DSL} nicht der Fall ist \vcite{voelter}{30}. Weiterhin
 können \emph{DSLs} so konstruiert werden, dass durch Restriktionen und Limitierungen
 nur korrekte Programme geschrieben werden können. Markus Völter et al.
@@ -456,35 +450,36 @@ Ein Codefragment,
 welches erst gelesen und zu einem späteren Zeitpunkt ausgewertet werden soll,
 wird in einem \emph{Parse Tree} hinterlegt. Dieser \emph{Parse Tree} wird noch vor der
 Ausführung modifiziert. Um diese Implementierungstechnik nutzen zu können, muss
-eine Umgebung vorliegen, in der es möglich ist, ein Codefragment in einen Parse
-Tree umzuformen und diesen zu bearbeiten. Diese Möglichkeit existiert nur in wenigen Sprachen.
-Martin Fowler et al. nennen hierzu nur die Beispiele C\#, ParseTree (Ruby) und
-Lisp \vcite{fowler}{45f}.\\
+eine Umgebung vorliegen, in der es möglich ist, ein Codefragment in einen
+\emph{Parse Tree} umzuformen und diesen zu bearbeiten. Diese Möglichkeit
+existiert nur in wenigen Sprachen.
+Martin Fowler et al. nennen hierzu nur die Beispiele \emph{C\#},
+\emph{ParseTree} (Ruby) und \emph{Lisp} \vcite{fowler}{45f}.\\
 Anders als Lisp bieten die anderen Beispiele die
-Möglichkeit über den \emph{Parse Tree} zu iterieren. Bei Lisp-Codes handelt es sich
-bereits um einen \emph{Parse Tree} von verschachtelten Listen. Bei der Iteration über
+Möglichkeit über den \emph{Parse Tree} zu iterieren. Bei einem \emph{Lisp-Code}
+handelt es sich bereits um einen \emph{Parse Tree} von verschachtelten Listen. Bei der Iteration über
 den \emph{Parse Tree} ist aufgrund der Performance darauf zu achten, dass möglichst nur die
 notwendigen Teile des \emph{Parse Trees} einbezogen werden \vcite{fowler}{46}.\\
 Konstrukte, die in der Wirtsprache geschrieben
 wurden und nicht verändert werden sollen, spielen
-bei der \emph{Parse Tree Manipulation} für die Erzeugung der semantischen
-Modelle keine Rolle \vcite{fowler}{46}.
+bei der \emph{Parse Tree Manipulation} für die Erzeugung der \emph{semantischen
+Modelle} keine Rolle \vcite{fowler}{46}.
 
 \subsubsection*{Fluent Interfaces}
 In einem klassischen \emph{API} hat jede Methode eine eigene
-Aufgabe und ist nicht von anderen Methoden in diesem API abhängig 
-\vcite{fowler}{28}. In einer internen \emph{DSL} hingegen ist es möglich,
+Aufgabe und ist nicht von anderen Methoden in diesem \emph{API} abhängig 
+\vcite{fowler}{28}. In einer \emph{internen DSL} hingegen ist es möglich,
 Methoden bereitzustellen, die verkettet werden können und somit komplette
 Sätze darstellen. Dadurch wird der Output einer Methode zum Input der folgenden
 Methode. Demzufolge wird die Lesbarkeit der \emph{DSL} wesentlich
-verbessert, da es einer Sequenz von Aktionen gleicht, die in der Domäne
+verbessert, da es einer Sequenz von Aktionen gleicht, die in der \gloss{Domäne}
 ausgeführt werden \vcite{ghosh}{94} und ohne eine Vielzahl von Variablen aufgerufen
 werden müssen \vcite{fowler}{68}. Eine solche Verkettung von Methoden wird
-als \emph{Fluent Interface} bezeichnet. Das \emph{Fluent Interface} steht laut Voelter et
-al. zwischen dem API und einer internen \emph{DSL} \vcite{voelter}{50}. Ein einfaches
-Beispiel für ein \emph{Fluent Interface} wird von Martin Fowler et al.
+als \emph{Fluent Interface} bezeichnet. Das \emph{Fluent Interface} steht laut
+Markus  Völter et al. zwischen dem \emph{API} und einer \emph{internen DSL}
+\vcite{voelter}{50}. Ein einfaches Beispiel für ein \emph{Fluent Interface} wird von Martin Fowler et al.
 beschrieben. 
-\begin{lstlisting}[caption = Beispiel: \emph{Annotationen}]
+\begin{lstlisting}[caption = Beispiel: \emph{Fluent Interface}]
 computer()
 	.processor()
 		.cores(2)
@@ -505,8 +500,8 @@ computer()
 Methoden oder Variablen. Diese Informationen können während der
 Laufzeit oder der Übersetzungszeit - wenn die Umgebung die
 Möglichkeit dazu bietet - manipuliert werden \vcite{fowler}{445}.\\
-Bevor eine Annotation verarbeitet werden kann, muss sie definiert werden. Die
-Definitionen von \emph{Annotationen} variieren bei Verwendung unterschiedlicher
+Bevor eine \emph{Annotation} verarbeitet werden kann, muss sie definiert werden.
+Die Definitionen von \emph{Annotationen} variieren bei Verwendung unterschiedlicher
 Sprachen \vcite{fowler}{446}. Die Verarbeitung von \emph{Annotationen} kann
 zu drei bestimmten Zeitpunkten, nämlich zum Zeitpunkt der Übersetzung, des
 Ladens oder der Ausführung des Programms, stattfinden \vcite{fowler}{447}.
@@ -520,35 +515,36 @@ einem übersichtlichen und lesbaren Quellcode beiträgt \vcite{fowler}{449}.
 
 \section{Externe DSLs}\label{externeDSL}
 Eine externe \emph{DSL} ist eine separate Sprache, welche die Infrastruktur vorhandener
-Sprachen nicht nutzt \vcite{ghosh}{18}. Das bedeutet, dass eine externe DSL
-eine eigene Syntax sowie ein eigenes Typsystem besitzt. In der Regel wird mit
-einer externen \emph{DSL} ein Skript geschrieben, welches von einem Programm gelesen wird. Dieser Vorgang wird auch als
-\emph{Parsen} bezeichnet \vcite{fowler}{28}. Für den Parser und die
-lexikalische Analyse werden oft vorhandene Infrastrukturen genutzt \vcite{ghosh}{19}.
+Sprachen nicht nutzt \vcite{ghosh}{18}. Das bedeutet, dass eine \emph{externe
+DSL} eine eigene \emph{Syntax} sowie ein eigenes Typsystem besitzt. In der Regel wird
+mit einer \emph{externen DSL} ein Skript geschrieben, welches von einem Programm
+gelesen wird. Dieser Vorgang wird auch als \emph{Parsen} bezeichnet \vcite{fowler}{28}. Für den \emph{Parser} und die
+\emph{lexikalische Analyse} werden oft vorhandene Infrastrukturen genutzt \vcite{ghosh}{19}.
 
 \subsection{Implementierungstechniken}
-Bei den Implementierungstechniken von externen \emph{DSLs} geht es um die Art
-und Weise, wie der DSL-Code vom Parser in ein semantisches Modell oder einen
-\emph{AST} überführt wird \vcite{fowler}{89}. Die allgemeine Vorgehensweise bei
-der Verwendung von Parsern ist der Abbildung \ref{Abb_Parsing} zu entnehmen.
+Bei den Implementierungstechniken von \emph{externen DSLs} geht es um die Art
+und Weise, wie der \emph{DSL-Code} vom \emph{Parser} in ein \emph{semantisches
+Modell} oder einen \emph{AST} überführt wird \vcite{fowler}{89}. Die allgemeine
+Vorgehensweise bei der Verwendung von \emph{Parsern} ist der Abbildung \ref{Abb_Parsing} zu
+entnehmen.
 \myBigFigure{parsing.jpg}{Parsen allgemein}{Parsing}
 
 \subsubsection*{Parsergenerator}
-Bei der Generierung von Parsern muss dieser nicht manuell implementiert
-werden. Diese Aufgabe wird an den Generator delegiert. Damit dies möglich ist,
-müssen zwei Artefakte definiert werden. Zuerst muss eine Grammatik in der
+Bei der Generierung von \emph{Parsern} muss dieser nicht manuell implementiert
+werden. Diese Aufgabe wird an den \emph{Generator} delegiert. Damit dies möglich
+ist, müssen zwei Artefakte definiert werden. Zuerst muss eine Grammatik in der
 erweiterten \emph{Backus-Naur Form (EBNF)} beschrieben werden. Anschließend
 werden bestimmte Aktionen benötigt, die bei der Bestätigung bestimmter Grammatikregeln ausgeführt werden sollen
-(Validierungsregeln) \vcite{ghosh}{218}. Wird der \emph{Parsergenerator}
+(Validierungsre\-geln) \vcite{ghosh}{218}. Wird der \emph{Parsergenerator}
 ausgetauscht, führt dies auch häufig dazu, dass die notwendigen Artefakte
 (Grammatik und Aktionen) neu definiert werden müssen \vcite{fowler}{269}. Weiterhin arbeiten die
 meisten \emph{Parsergeneratoren} mit Code-Generierung, wodurch der
 Erstellungsprozess komplexer wird \vcite{fowler}{272}. Vorteile dieser Technik im Vergleich zur
-manuellen Implementierung des Parsers, sind die Folgenden:
+manuellen Implementierung des \emph{Parsers}, sind die Folgenden:
 \begin{itemize}
   \item Möglichkeit des Programmierens auf einem höheren Abstraktionsniveau
   \vcite{ghosh}{218}
-  \item Gebrauch von weniger Quellcode zur Implementierung des Parsers
+  \item Gebrauch von weniger Quellcode zur Implementierung des \emph{Parsers}
   \vcite{ghosh}{218}
   \item Möglichkeit des Generierens eines Parsers in unterschiedlichen Sprachen
   (vgl. \cite[S.218]{ghosh}, \cite[S.270]{fowler})
@@ -557,12 +553,12 @@ manuellen Implementierung des Parsers, sind die Folgenden:
 \end{itemize}
 
 \subsubsection*{Recursive Decent Parser (RD-Parser)}
-Dieser Parser basiert auf Funktionen, die rekursiv aufgerufen werden. Es handelt
+Dieser \emph{Parser} basiert auf Funktionen, die rekursiv aufgerufen werden. Es handelt
 sich dabei um einen \gloss{Top-Down Parser} \vcite{ghosh}{226}. Die
-Funktionen implementieren dabei die Regeln des Parsens für die nonterminalen
-Symbole der Grammatik \vcite{fowler}{245}. Die Funktionen geben dabei einen
+Funktionen implementieren dabei die Regeln des \emph{Parsens} für die
+nonterminalen Symbole der Grammatik \vcite{fowler}{245}. Die Funktionen geben dabei einen
 Boolean-Wert zurück, der Auskunft darüber gibt, ob die Symbole aus dem
-DSL-Skript mit den laut Grammatik zu erwartenden Symbolen übereinstimmen
+\emph{DSL-Skript} mit den laut Grammatik zu erwartenden Symbolen übereinstimmen
 \vcite{fowler}{246}. Tabelle \ref{tab_RD_Implementierung} enthält die Implementierungsmöglichkeiten von einfachen Grammatikregeln.
 \begin{table}[!htb]
 \centering
@@ -574,8 +570,8 @@ DSL-Skript mit den laut Grammatik zu erwartenden Symbolen übereinstimmen
 				\hline\hline
 				A | B & 
 \begin{lstlisting}
-if(A())
-	then true
+ if(A())
+ 	then true
 	else if(B())
 		then true
 		else false
@@ -583,7 +579,7 @@ if(A())
 				\hline
 				A B & 
 \begin{lstlisting}
-if(A())
+ if(A())
 	then if(B())
 		then true
 		else false
@@ -592,19 +588,19 @@ if(A())
 				\hline
 				A? & 
 \begin{lstlisting}
-A();
-true
+ A();
+ true
 \end{lstlisting}\\
 				\hline
 				A* & 	
 \begin{lstlisting}
-while(A());
-true
+ while(A());
+ true
 \end{lstlisting}\\
 				\hline
 		A+ & 
 \begin{lstlisting}
-if(A())
+ if(A())
 	then while(A());
 	else false
 \end{lstlisting}\\
@@ -612,57 +608,63 @@ if(A())
 				\hline
 			\end{tabular}
 		\caption[Implementierung einfacher Grammatikregeln mit einem
-		RD-Parser]{Implementierung einfacher Grammatikregeln mit einem RD-Parser
+		RD-Parser]{Implementierung einfacher Grammatikregeln mit einem
+		\emph{RD-Parser}
 		\vcite{fowler}{248}}
 \label{tab_RD_Implementierung}
 	\end{table}\\
-Da dieser Parser direkt implementiert werden kann, ist es ebenso möglich diesen
-Parser zu debuggen. Dies ist neben der einfachen Implementierung - solange es
+Da dieser \emph{Parser} direkt implementiert werden kann, ist es ebenso möglich diesen
+\emph{Parser} zu debuggen. Dies ist neben der einfachen Implementierung - solange es
 sich um eine einfache Grammatik handelt - ein großer Vorteil dieser Technik
 \vcite{fowler}{249}. Ein Nachteil ist, dass keine Grammatik definiert wird.
 Laut Martin Fowler et. al. wird dadurch einer \emph{DSL} ein gravierender
 Vorteil entzogen \vcite{fowler}{249}.
 
 \subsubsection*{Parserkombinator}
-Bei der Kombination von Parsern wird die Grammatik mittels einer Struktur von
-Parser-Objekten implementiert \vcite{fowler}{256}. Wenn ein Teil des
-Input-Streams von einem Parser erfolgreich oder auch fehlerhaft verarbeitet
-wurde, kann der Rest des Input-Streams an einen anderen Parser übergeben werden.
-Somit ist es möglich, Parser-Objekte beliebig zu verketten \vcite{ghosh}{242}.
+Bei der Kombination von \emph{Parsern} wird die Grammatik mittels einer Struktur
+von \emph{Parser-Objekten} implementiert \vcite{fowler}{256}. Wenn ein Teil des
+Input-Streams von einem \emph{Parser} erfolgreich oder auch fehlerhaft verarbeitet
+wurde, kann der Rest des Input-Streams an einen anderen \emph{Parser} übergeben werden.
+Somit ist es möglich, \emph{Parser-Objekte} beliebig zu verketten
+\vcite{ghosh}{242}.
 Die Elemente, die verkettet werden können, werden \emph{Parserkombinatoren}
 genannt. Abbildung \ref{Abb_parsercombinator} stellt schematisch diese Funktionsweise dar. 
-\myBigFigureCited{parsercombinator.jpg}{Funktionsweise von Parserkombinatoren}{
-(in Anlehnung an \cite[S.243]{ghosh}) }{parsercombinator} 
+\myBigFigureCited{parsercombinator.jpg}{Funktionsweise von
+\emph{Parserkombinatoren}}{ (in Anlehnung an \cite[S.243]{ghosh})
+}{parsercombinator}
 \noindent
-Bezogen darauf, dass ein Parser aus Funktionen besteht, sind diese
-Parserkombinatoren Funktionen erster Ordnung, die unterschiedlich kombiniert
-werden können  (vgl. \cite[S.243]{ghosh}, \cite[S.256]{fowler}). Durch
-diese Kombination wird eine Struktur gebildet, welche das semantische
-Modell repräsentiert \vcite{fowler}{256}. Ein großer Vorteil dieser
-Technik ist, dass einfache Parser zu komplexeren Parsern zusammengefügt werden können.
+Bezogen darauf, dass ein \emph{Parser} aus Funktionen besteht, sind diese
+\emph{Parserkombinatoren} Funktionen erster Ordnung, die unterschiedlich
+kombiniert werden können  (vgl. \cite[S.243]{ghosh}, \cite[S.256]{fowler}). Durch
+diese Kombination wird eine Struktur gebildet, welche das \emph{semantische
+Modell} repräsentiert \vcite{fowler}{256}. Ein großer Vorteil dieser
+Technik ist, dass einfache \emph{Parser} zu komplexeren \emph{Parsern}
+zusammengefügt werden können.\\
 Weiterhin wird durch die Kombination mehrerer grammatikbestimmender Komponenten
 auch die Lesbarkeit der Grammatik gefördert, was bei einem \emph{RD-Parser} ein großer
-Nachteil ist. Daher bezeichnen Martin Fowler et al. Parserkombinatoren auch als
-Mittelweg zwischen \emph{RD-Parsern} und Parser-Generatoren
+Nachteil ist. Daher bezeichnen Martin Fowler et al. \emph{Parserkombinatoren}
+auch als Mittelweg zwischen \emph{RD-Parsern} und \emph{Parsergeneratoren}
 \vcite{fowler}{261}.
 
 \section{Nicht-textuelle DSLs}
-Die Kapitel \ref{interneDSL} und \ref{externeDSL} bezogen sich auf textuelle
-DSLs. Auch wenn eine \emph{DSL} eine bestimmte Domäne repräsentiert, bedeutet dies
-nicht, dass diese Repräsentation immer textuell erfolgen muss 
-\vcite{ghosh}{19}. Es gibt einige Gründe, mit einer nicht-textuellen \emph{DSL} zu
-arbeiten:
+Die Kapitel \ref{interneDSL} und \ref{externeDSL} bezogen sich auf
+\emph{textuelle DSLs}. Auch wenn eine \emph{DSL} eine bestimmte \gloss{Domäne}
+repräsentiert, bedeutet dies nicht, dass diese Repräsentation immer
+\emph{textuell} erfolgen muss
+\vcite{ghosh}{19}. Es gibt einige Gründe, mit einer \emph{nicht-textuellen DSL}
+zu arbeiten:
+\newline
 \begin{itemize}
   \item Viele Domänenprobleme können von den Domänennutzern besser durch
   Tabellen oder grafische Darstellungen erklärt werden
-  \item Domänenlogik ist in textueller Form oft zu komplex und enthält zu viele
-  syntaktische Strukturen
+  \item Domänenlogik ist in \emph{textueller} Form oft zu komplex und enthält zu
+  viele syntaktische Strukturen
   \item Visuelle Modelle sind von Domänenexperten einfacher zu durchdringen und
   zu verändern
 \end{itemize}
 \vcite{ghosh}{19}\\
 Für diesen Ansatz muss der Domänennutzer die Repräsentation des Wissens über
-eine Domäne innerhalb eines auf Projektionen basierenden Editors visualisieren.
-Mit diesem Editor kann der Domänennutzer die Sicht auf die Domäne verändern,
+eine \gloss{Domäne} innerhalb eines auf Projektionen basierenden Editors visualisieren.
+Mit diesem Editor kann der Domänennutzer die Sicht auf die \gloss{Domäne} verändern,
 ohne Quellcode schreiben zu müssen. Im Hintergrund generiert dieser Editor
-den Quellcode, welcher die Sicht auf die Domäne modelliert \vcite{ghosh}{19f}.
+den Quellcode, welcher die Sicht auf die \gloss{Domäne} modelliert \vcite{ghosh}{19f}.

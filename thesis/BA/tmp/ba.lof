@@ -5,40 +5,40 @@
 \contentsline {figure}{\numberline {1}{\ignorespaces Architektur des Multichannel-Frameworks}}{5}{figure.2.1}
 \contentsline {figure}{\numberline {2}{\ignorespaces Komplexes Werkzeug mit Benutzt-Beziehung}}{7}{figure.2.2}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3}{\ignorespaces Die grundlegenden Ideen hinter dem MDSD}}{15}{figure.3.3}
-\contentsline {figure}{\numberline {4}{\ignorespaces Parsen allgemein}}{26}{figure.3.4}
-\contentsline {figure}{\numberline {5}{\ignorespaces Funktionsweise von Parserkombinatoren}}{28}{figure.3.5}
+\contentsline {figure}{\numberline {3}{\ignorespaces Die grundlegende Idee hinter dem \emph {MDSD}}}{15}{figure.3.3}
+\contentsline {figure}{\numberline {4}{\ignorespaces Parsen allgemein}}{25}{figure.3.4}
+\contentsline {figure}{\numberline {5}{\ignorespaces Funktionsweise von \emph {Parserkombinatoren}}}{28}{figure.3.5}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {6}{\ignorespaces Grundlegendes Konzept}}{34}{figure.5.6}
 \contentsline {figure}{\numberline {7}{\ignorespaces Grundlegende Idee f\"ur den Prototypen}}{34}{figure.5.7}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {8}{\ignorespaces Inkrementelles Modell}}{41}{figure.7.8}
-\contentsline {figure}{\numberline {9}{\ignorespaces Konzeption der DSL-Umgebung (1. Iteration)}}{43}{figure.7.9}
-\contentsline {figure}{\numberline {10}{\ignorespaces Beispiel: Suchfeld f\"ur Name}}{45}{figure.7.10}
-\contentsline {figure}{\numberline {11}{\ignorespaces Beispiel: Suchmaske}}{45}{figure.7.11}
-\contentsline {figure}{\numberline {12}{\ignorespaces Konzeption der DSL-Umgebung (2. Iteration)}}{47}{figure.7.12}
-\contentsline {figure}{\numberline {13}{\ignorespaces Konzeption der DSL-Umgebung (3. Iteration)}}{48}{figure.7.13}
+\contentsline {figure}{\numberline {8}{\ignorespaces Inkrementelles Modell}}{40}{figure.7.8}
+\contentsline {figure}{\numberline {9}{\ignorespaces 1. Iteration: Konzeption der \emph {\gls {DSL-Umgebung}}}}{42}{figure.7.9}
+\contentsline {figure}{\numberline {10}{\ignorespaces Beispiel: Suchfeld f\"ur Name}}{44}{figure.7.10}
+\contentsline {figure}{\numberline {11}{\ignorespaces Beispiel: Suchmaske}}{44}{figure.7.11}
+\contentsline {figure}{\numberline {12}{\ignorespaces 2. Iteration: Konzeption der DSL-Umgebung}}{46}{figure.7.12}
+\contentsline {figure}{\numberline {13}{\ignorespaces 3. Iteration: Konzeption der DSL-Umgebung}}{47}{figure.7.13}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {14}{\ignorespaces 1. Iteration: UIDescription}}{54}{figure.8.14}
-\contentsline {figure}{\numberline {15}{\ignorespaces 1. Iteration UsedUIDescription}}{54}{figure.8.15}
-\contentsline {figure}{\numberline {16}{\ignorespaces Teil 3: GUI-Beschreibungsmodell Version 1}}{55}{figure.8.16}
-\contentsline {figure}{\numberline {17}{\ignorespaces Teil 4: GUI-Beschreibungsmodell Version 1}}{55}{figure.8.17}
-\contentsline {figure}{\numberline {18}{\ignorespaces Teil 1: GUI-Beschreibungsmodell Version 2}}{58}{figure.8.18}
-\contentsline {figure}{\numberline {19}{\ignorespaces Teil 2: GUI-Beschreibungsmodell Version 2}}{58}{figure.8.19}
-\contentsline {figure}{\numberline {20}{\ignorespaces Teil 3: GUI-Beschreibungsmodell Version 2}}{59}{figure.8.20}
-\contentsline {figure}{\numberline {21}{\ignorespaces Teil 4: GUI-Beschreibungsmodell Version 2}}{60}{figure.8.21}
-\contentsline {figure}{\numberline {22}{\ignorespaces Teil 5: GUI-Beschreibungsmodell Version 2}}{60}{figure.8.22}
-\contentsline {figure}{\numberline {23}{\ignorespaces 3. Iteration: UIDescription}}{66}{figure.8.23}
-\contentsline {figure}{\numberline {24}{\ignorespaces 3. Iteration: Definition}}{67}{figure.8.24}
-\contentsline {figure}{\numberline {25}{\ignorespaces 3. Iteration: Button}}{67}{figure.8.25}
-\contentsline {figure}{\numberline {26}{\ignorespaces 3. Iteration: TabView}}{68}{figure.8.26}
-\contentsline {figure}{\numberline {27}{\ignorespaces 3. Iteration: TabView}}{68}{figure.8.27}
-\contentsline {figure}{\numberline {28}{\ignorespaces 3. Iteration: TabView}}{69}{figure.8.28}
+\contentsline {figure}{\numberline {14}{\ignorespaces 1. Iteration: UIDescription}}{52}{figure.8.14}
+\contentsline {figure}{\numberline {15}{\ignorespaces 1. Iteration UsedUIDescription}}{52}{figure.8.15}
+\contentsline {figure}{\numberline {16}{\ignorespaces 1. Iteration: ComponentDefinition}}{53}{figure.8.16}
+\contentsline {figure}{\numberline {17}{\ignorespaces 1. Iteration: Interaction}}{53}{figure.8.17}
+\contentsline {figure}{\numberline {18}{\ignorespaces 2. Iteration: UIDescription}}{56}{figure.8.18}
+\contentsline {figure}{\numberline {19}{\ignorespaces 2. Iteration: Property und Properties}}{56}{figure.8.19}
+\contentsline {figure}{\numberline {20}{\ignorespaces 2. Iteration: UsedDescription}}{57}{figure.8.20}
+\contentsline {figure}{\numberline {21}{\ignorespaces 2. Iteration: Definition}}{58}{figure.8.21}
+\contentsline {figure}{\numberline {22}{\ignorespaces 2. Iteration: Refinement}}{58}{figure.8.22}
+\contentsline {figure}{\numberline {23}{\ignorespaces 3. Iteration: UIDescription}}{64}{figure.8.23}
+\contentsline {figure}{\numberline {24}{\ignorespaces 3. Iteration: Definition}}{65}{figure.8.24}
+\contentsline {figure}{\numberline {25}{\ignorespaces 3. Iteration: Button}}{65}{figure.8.25}
+\contentsline {figure}{\numberline {26}{\ignorespaces 3. Iteration: TabView}}{66}{figure.8.26}
+\contentsline {figure}{\numberline {27}{\ignorespaces 3. Iteration: TabView}}{66}{figure.8.27}
+\contentsline {figure}{\numberline {28}{\ignorespaces 3. Iteration: TabView}}{67}{figure.8.28}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {29}{\ignorespaces Aufbau eines Explorers}}{72}{figure.9.29}
-\contentsline {figure}{\numberline {30}{\ignorespaces Generierte GUI des Inhalts- und Verweisebaums}}{78}{figure.9.30}
+\contentsline {figure}{\numberline {29}{\ignorespaces Aufbau eines Explorers}}{70}{figure.9.29}
+\contentsline {figure}{\numberline {30}{\ignorespaces Generierte GUI des Inhalts- und Verweisebaums}}{76}{figure.9.30}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {31}{\ignorespaces Standalone-Client: Zuwendungsblatt}}{X}{figure.A.31}

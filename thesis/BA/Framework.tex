@@ -1,25 +1,27 @@
 \chapter{Evaluation des Frameworks zur Entwicklung der DSL}\label{Evaluation des Frameworks zur Entwicklung der DSL}
 \section{Vorstellung ausgewählter Frameworks}
-Zur Umsetzung der \g und der Generatoren wird ein Framework benötigt,
+Zur Umsetzung der \g und der \emph{Generatoren} wird ein Framework benötigt,
 welches die dafür notwendigen Funktionalitäten bereitstellt. Hierzu werden die
 Frameworks \emph{PetitParser}, \emph{Xtext} und \emph{MPS} kurz vorgestellt und im
 Anschluss verglichen.
 \subsection{PetitParser}
-Dieses Framework arbeitet mit Parserkombinatoren. Somit ist es mit
-PatitParser einfach Grammatiken zusammenzustellen, zu transformieren oder zu
-erweitern sowie Teile dieser dynamisch wiederzuverwenden. Alles
+Dieses Framework arbeitet mit \emph{Parserkombinatoren}. Somit ist es mit
+\emph{PetitParser} einfach Grammatiken zusammenzustellen, zu transformieren oder
+zu erweitern sowie Teile dieser dynamisch wiederzuverwenden. Alles
 geschieht auf der Basis von \emph{Pharo Smalltalk}, womit das Framework
 ursprünglich implementiert wurde \simplevcite{Renggli}. Es existieren auch Versionen des
-Frameworks für Java\footnote{https://github.com/petitparser/java-petitparser},
-Dart\footnote{https://github.com/petitparser/dart-petitparser} und
-PHP\footnote{https://github.com/mindplay-dk/petitparserphp}.\\
-Einfache Parser bestehen aus Sequenzen von Funktionen, welche die Produktionsregeln
-(Produktionen) der Grammatik abbilden. Komplexe Parser werden durch die
-Kombination anderer Parser implementiert \simplevcite{Renggli}.\\
+Frameworks für
+\emph{Java}\footnote{https://github.com/petitparser/java-petitparser},
+\emph{Dart}\footnote{https://github.com/petitparser/dart-petitparser} und
+\emph{PHP}\footnote{https://github.com/mindplay-dk/petitparserphp}.\\
+Einfache \emph{Parser} bestehen aus Sequenzen von Funktionen, welche die
+Produktionsregeln (Produktionen) der Grammatik abbilden. Komplexe \emph{Parser}
+werden durch die Kombination anderer \emph{Parser} implemen\-tiert
+\simplevcite{Renggli}.\\
 Die Implementierung dieser Kombination kann in einer einzelnen Methode
-vorgenommen werden, wodurch der Parser einem Skript ähnelt.
-Alternativ können die zu kombinierenden Parser auch in Methoden von Unterklassen
-des \emph{PetitParsers} implementiert werden \vcite{brauer2010dsl}{6}.
+vorgenommen werden, wodurch der \emph{Parser} einem Skript ähnelt.
+Alternativ können die zu kombinierenden \emph{Parser} auch in Methoden von
+Unterklassen des \emph{PetitParsers} implementiert werden \vcite{brauer2010dsl}{6}.
 Das fördert die Lesbarkeit, Übersichtlichkeit
 und erleichtert schließlich die Wartung des Quellcodes.\\
 Der Toolsupport ist für dieses Framework gewährleistet. Mithilfe dessen können
@@ -31,41 +33,43 @@ durch die Darstellung und Behebung direkter, überflüssiger Zyklen verbessert
 
 \subsection{Xtext}
 Bei \emph{Xtext} handelt es sich um eine Open-Source-Lösung für einen
-\emph{ANTLR}-basierten Parser- und Editorgenerator mit dem externe, textuelle
-DSLs entwickelt werden können. Die Grammatiken für den Parsergenerator werden in
-der \emph{EBNF} definiert. Durch die Integration in \emph{Eclipse} kann der
-dazugehörige Editor für sämtliche Artefakte der Infrastruktur von
+\emph{ANTLR}-basierten \emph{Parser- und Editorgenerator} mit dem \emph{externe,
+textuelle DSLs} entwi\-ckelt werden können. Die Grammatiken für den
+\emph{Parsergenerator} werden in der \emph{EBNF} definiert. Durch die
+Integration in \emph{Eclipse} kann der dazugehörige Editor für sämtliche Artefakte der Infrastruktur von
 \emph{Xtext} verwendet werden.
-Aus der Grammatik wird der Parser sowie ein Modell generiert, mit dessen Hilfe
-weitere Artefakte der \gloss{DSL-Umgebung} implementiert werden können. Die
+Aus der Grammatik wird der \emph{Parser} sowie ein Modell generiert, mit dessen
+Hilfe weitere Artefakte der \gloss{DSL-Umgebung} implementiert werden können. Die
 Klassen für Validierungsregeln und den Generator werden ebenfalls vom Tool
 erzeugt. Diese müssen im Anschluss daran vom Nutzer entsprechend erweitert werden \simplevcite{xtextdoc}. Zum Editieren
-der entsprechenden Dateien wird eine eigene Syntax verwendet, die stark an die Java-Syntax erinnert.\\
-Wenn der Parser generiert wurde, ist es möglich einen in Eclipse
-integrierten Editor zu erzeugen \vcite{carpediem}{1}. Dieser Editor ist in
-der Lage die Validierungsregeln auf die DSL-Skripte anzuwenden. Darüber
+der entsprechenden Dateien wird eine eigene \emph{Syntax} verwendet, die stark
+an die \emph{Java-Syntax} erinnert.\\
+Wenn der \emph{Parser} generiert wurde, ist es möglich einen in die
+\emph{Eclipse IDE} integrierten Editor zu erzeugen \vcite{carpediem}{1}. Dieser
+Editor ist in der Lage die Validierungsregeln auf die \emph{DSL-Skripte} anzuwenden. Darüber
 hinaus wird auch Autovervollständigung des Quellcodes vom Editor angeboten.
 
 \subsection{Meta Programming System}
 Das \emph{Meta Programming System (MPS)} ist ebenfalls eine Open-Source-Lösung,
-bei der die Entwicklung externer DSLs im Vordergrund steht.
-Bei der Entwicklung der Sprache mit MPS ist weder eine Grammatik noch ein Parser
-involviert. Die Sprache kann mit diesem Tool nicht nur in Textform definiert
-werden, sondern auch mittels Symbolen, Tabellen oder Grafiken \vcite{voelter}{16}.\\
+bei der die Entwicklung \emph{externer DSLs} im Vordergrund steht.
+Bei der Entwicklung der Sprache mit \emph{MPS} ist weder eine Grammatik noch ein
+\emph{Parser} involviert. Die Sprache kann mit diesem Tool nicht nur in Textform
+definiert werden, sondern auch mittels Symbolen, Tabellen oder Grafiken \vcite{voelter}{16}.\\
 Zur Unterstützung der Entwicklung wird von der Firma \emph{JetBrains} ein Editor
 zur Verfügung gestellt\footnote{https://www.jetbrains.com/mps/}.\\
-Der Generator kann die Konstrukte der neuen Sprache in bestimmte
+Der \emph{Generator} kann die Konstrukte der neuen Sprache in bestimmte
 Basissprachen überführen. Diese Basissprachen sind \emph{C}, \emph{Java} oder
 \emph{XML}. Auch die Transformation in einfache Texte ist gewährleistet
 \simplevcite{volter2011programming}.\\
-Zudem wird für die Arbeit mit der DSL ein weiterer Editor zur Verfügung
+Zudem wird für die Arbeit mit der \emph{DSL} ein weiterer Editor zur Verfügung
 gestellt. Dieser bietet mehrere Funktionalitäten wie Autovervollständigung,
 Refactoring-Möglichkeiten oder einen Debugger \simplevcite{pech}.\\
-Die Integration in Eclipse war laut Pech et al. für Ende 2013 geplant
-\simplevcite{pech}. Im Oktober 2014 wies Vaclav Pech jedoch im
-\emph{Jet-Brains-Forum} darauf hin, dass die Integration von MPS in Eclipse
-aufgrund von wichtigeren Features zurückgestellt wurde \simplevcite{pechforum}. Ein Plugin für Eclipse
-ist demnach in absehbarer Zeit nicht zu erwarten.
+Die Integration in die \emph{Eclipse IDE} war laut Pech et al. für Ende 2013
+geplant \simplevcite{pech}. Im Oktober 2014 wies Vaclav Pech jedoch im
+\emph{Jet-Brains-Forum} darauf hin, dass die Integration von MPS in die
+\emph{Eclipse IDE} aufgrund von wichtigeren Features zurückgestellt wurde
+\simplevcite{pechforum}. Ein Plugin für die \emph{Eclipse IDE} ist demnach in
+absehbarer Zeit nicht zu erwarten.
 
 \section{Vergleich und Bewertung der vorgestellten
 Frameworks}\label{vergleichFramework}
@@ -74,13 +78,13 @@ evaluiert.
 Dabei sind nachfolgende Kriterien von Belang.
 \begin{itemize}
   \item[] \textbf{Machbarkeit der Integration in Eclipse}\\
-  Dieser Punkt ist wichtig, da die \deg hauptsächlich mit \emph{Eclipse}
+  Dieser Punkt ist wichtig, da die \deg hauptsächlich mit der \emph{Eclipse IDE}
   arbeitet und so wenig wie möglich von anderen Tools Gebrauch machen möchte. Grund dafür ist,
   dass die gewohnte Arbeitsweise der Entwickler bzgl. des Tools nicht
   beeinträchtigt werden soll.
   
   \item[] \textbf{Erweiterung der Grammatik}\\
-  Die Grammatik muss erweiterbar sein, weil die \acrshort{GUI} in \pcs
+  Die Grammatik muss erweiterbar sein, weil die \gui in \pcs
   kein abgeschlossenes Konzept ist. Es ist davon auszugehen, dass in Zukunft
   neue Komponenten benötigt werden.
   
@@ -92,12 +96,12 @@ Dabei sind nachfolgende Kriterien von Belang.
   \item[] \textbf{Erweiterung der Validierungen}\\
   Um ausdrucksvolle Fehlermeldungen verwenden zu können, ist es notwendig
   Validierungen durchzuführen, die entsprechende Fehler aufdecken können.
-  Die Standardvalidierungen prüfen i. d. R. nur die Syntax der Sprache und
-  keine fachlichen Zusammenhänge.
+  Die Standardvalidierungen prüfen i. d. R. nur die \emph{Syntax} der Sprache
+  und keine fachlichen Zusammenhänge.
   
   \item[] \textbf{Vorhandenes Know-How}\\
-  Um eine DSL effizient zu entwickeln, ist neben dem Sprachdesign auch der
-  Umgang mit dem Framework wichtig. Von daher werden die Erfahrungen der \deg
+  Um eine \emph{DSL} effizient zu entwickeln, ist neben dem Sprachdesign auch
+  der Umgang mit dem Framework wichtig. Von daher werden die Erfahrungen der \deg
   mit den vorgestellten Frameworks ebenfalls mit einbezogen.
 \end{itemize}
 \noindent
@@ -112,14 +116,14 @@ Bewertungsstufen (Gut (+), Ausreichend (O) und Ungenügend (-)) verwendet.
 			\hline
 				\textbf{Kriterium} & \textbf{PetitParser} & \textbf{Xtext} & \textbf{MPS}\\
 				\hline\hline
-				Machbarkeit der Intergration in Eclipse & \cellcolor{gruen}\textbf{+} &
-				\cellcolor{gruen}\textbf{+} & \cellcolor{rot}\textbf{-}\\
+				Machbarkeit der Intergration in die Eclipse IDE &
+				\cellcolor{gruen}\textbf{+} & \cellcolor{gruen}\textbf{+} & \cellcolor{rot}\textbf{-}\\
 				\hline
 				Erweiterung der Grammatik & \cellcolor{gruen}\textbf{+} &
 				\cellcolor{gruen}\textbf{+} & \cellcolor{gruen}\textbf{+}\\
 				\hline
-				Bereitstellung eines Editors für DSL-Skripte & \cellcolor{gruen}\textbf{+} &
-				\cellcolor{gruen}\textbf{+} & \cellcolor{gelb}\textbf{O}\\
+				Bereitstellung eines Editors für DSL-Skripte &
+				\cellcolor{gruen}\textbf{+} & \cellcolor{gruen}\textbf{+} & \cellcolor{gelb}\textbf{O}\\
 				\hline
 				Erweiterung der Validierungen  & \cellcolor{gelb}\textbf{O} &
 				\cellcolor{gruen}\textbf{+} & \cellcolor{gruen}\textbf{+}\\
@@ -135,15 +139,16 @@ Bewertungsstufen (Gut (+), Ausreichend (O) und Ungenügend (-)) verwendet.
 \noindent
 Die Machbarkeit der Integration von \emph{MPS} in \emph{Eclipse} ist derzeit
 noch nicht gewährleistet. Da für \emph{Xtext} ein entsprechendes Plugin und für
-\emph{PetitParser} eine Java-Version existiert, ist auch die
-Integration dieser beiden Frameworks in \emph{Eclipse} möglich.\\
+\emph{PetitParser} eine \emph{Java-Version} existiert, ist auch die
+Integration dieser beiden Frameworks in die \emph{Eclipse IDE} möglich.\\
 Bei der Möglichkeit zur Erweiterung der Grammatik müssen beim keinem Framework
 Abstriche gemacht werden.\\
-Die Bereitstellung eines \emph{Editors} für DSL-Skripte ist bei der Verwendung
-von \emph{MPS} schlechter ausgefallen, als bei den anderen Frameworks. Grund
-dafür ist, dass der Editor nicht in \emph{Eclipse} verwendet werden kann.\\
-Die Validierungen bzgl. der DSL-Skripte können bei \emph{PetitParser} durch
-die Parserkombinationen umgesetzt werden. Ausdrucksvolle Fehlermeldungen können
+Die Bereitstellung eines \emph{Editors} für \emph{DSL-Skripte} ist bei der
+Verwendung von \emph{MPS} schlechter ausgefallen, als bei den anderen Frameworks. Grund
+dafür ist, dass der Editor nicht in der \emph{Eclipse IDE} verwendet werden
+kann.\\
+Die Validierungen bzgl. der \emph{DSL-Skripte} können bei \emph{PetitParser}
+durch die Parserkombinationen umgesetzt werden. Ausdrucksvolle Fehlermeldungen können
 jedoch nicht bereitgestellt werden. Die anderen Frameworks bieten dafür weitaus
 bessere Möglichkeiten.\\
 Der letzte und entscheidende Punkt ist das vorhandene Know-How. Die \deg hat

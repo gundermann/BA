@@ -4,42 +4,43 @@
 \newglossaryentry{GUI}
 {
 	name=Graphical User Interface,
-	 description={ist die Bezeichnung für die Schnittstelle zwischen dem
+	 description={- ist die Bezeichnung für die Schnittstelle zwischen dem
 	 Benutzer und dem Programm \simplevcite{gui}. Die Kurzform \gui wird in
 	 dieser Arbeit aufgrund des allgemeinen Sprachgebrauchs als feminines Nomen
-	 verwendet (die GUI)}, short=GUI,
+	 verwendet (die \emph{GUI})}, short=GUI,
 	 plural=GUIs}
 
 
 \newglossaryentry{Usability}
 {
 	name=Usability,
-	description={beschreibt die Nutzerfreundlichkeit einer Software
+	description={- beschreibt die Nutzerfreundlichkeit einer Software
 	\vcite{dirnbauer2000usability}{10}}}
 
 \newglossaryentry{InVeKoS}
 {
 	name=InVeKoS,
-	description={ist die Abkürzung für Integriertes Verwaltungs- und
-	Kontrollsystem. Mit einem solchen Systemen wird im allgemeinen sichergestellt,
+	description={- bezeichnet das \emph{Integriertes Verwaltungs- und
+	Kontrollsystem}. Mit einem solchen Systemen wird im Allgemeinen sichergestellt,
 	dass die durch den Europäischen Garantiefonds für die Landwirtschaft finanzierten Maßnahmen
-	ordnungsgemäß umgesetzt wurden. Im speziellen bedeutet dies die Absicherung,
-	von Zahlungen, die korrekte Behandlung von Unregelmäßigkeiten und das wieder
-	Einziehen von zu unrecht gezahlter Beiträge \simplevcite{europa}} }
+	ordnungsgemäß umgesetzt wurden. Im Speziellen bedeutet dies die Absicherung
+	von Zahlungen, die korrekte Behandlung von Unregelmäßigkeiten und die
+	Rückforderung von zu unrecht gezahlten Beiträgen \simplevcite{europa}} }
 
 
 \newglossaryentry{Zuwendungsblatt}
 {
 	name=Zuwendungsblatt,
-	description={ist die grafische Dokumentation der Ergebnisse des\\
-	\gls{Zuwendungs-Berechner}s innerhalb von profil c/s \simplevcite{DegDKElerIAntragsmappe}}}
+	description={- ist die grafische Dokumentation der Ergebnisse des\\
+	\glossLink{Zuwendungs-Berechner}{Zuwendungsberechners} innerhalb von \pcs
+	\simplevcite{DegDKElerIAntragsmappe}}}
 
 
 \newglossaryentry{Zuwendungs-Berechner}
 {
-	name=Zuwendungs-Berechner,
-	description={ist ein Werkzeug innerhalb von \pcs. \simpledcite{Mit diesem
-	Werkzeug kann der Sachbearbeiter die Zuwendung, die dem Antragsteller bewilligt werden soll, 
+	name=Zuwendungsberechner,
+	description={- ist ein \emph{Werkzeug} innerhalb von \emph{profil c/s}.
+	\simpledcite{Mit diesem Werkzeug kann der Sachbearbeiter die Zuwendung, die dem Antragsteller bewilligt werden soll, 
 	nach einem standardisierten Verfahren berechnen [\ldots] . 
 	Das Ergebnis wird im \gls{Zuwendungsblatt} dokumentiert, das auch später mit
 	demselben Werkzeug angesehen werden kann}{DegDKElerIAntragsmappe}}}
@@ -48,27 +49,27 @@
 \newglossaryentry{Förderantrag}
 {
 	name=Förderantrag,
-	description={\simpledcite{[\ldots] ist ein Antrag, den der
+	description={- \simpledcite{[\ldots] ist ein Antrag, den der
 	Begünstigte einreicht, wenn er sich eine Maßnahme fördern lassen möchte}{pcswikifoerd}}
 }
 
 \newglossaryentry{Swing}
 {
 	name=Swing,
-	description={ist ein GUI-Framework für Java Applikationen \simplevcite{swing}}
-}
+	description={- ist ein \emph{GUI-Framework} für \emph{Java-Applikationen}
+	\simplevcite{swing}} }
 
 \newglossaryentry{wingS}
 {
 	name=wingS,
-	description={ist ein Framework für die komponentenorientierte Entwicklung
+	description={- ist ein Framework für die komponentenorientierte Entwicklung
 	von Webapplikationen \simplevcite{wings}}}
 	
 
 \newglossaryentry{GridBagLayout}
 {
 	name=GridBagLayout,
-	description={ist ein Layoutmanager innerhalb von \gls{Swing}, welcher die
+	description={- ist ein Layoutmanager innerhalb von \gls{Swing}, welcher die
 	Komponenten horizontal, vertikal und entlang der Grundlinie anordnet.
 	Dabei müssen die Komponenten nicht die gleiche Größe haben
 	\simplevcite{gridbag}}}
@@ -79,14 +80,15 @@
 \newglossaryentry{Traditionlle GUI-Entwicklung}
 {
 	name=Traditionelle GUI-Entwicklung,
-	description={beschreibt die 
-	GUI-Entwicklung unter Verwendung von traditionellen
-	GUI-Toolkits gearbeitet. Bei diesen Toolkits wird Aufbau der GUI 
+	description={- beschreibt die 
+	\emph{GUI-Entwicklung} unter Verwendung von \emph{traditionellen
+	GUI-Toolkits}. Bei diesen Toolkits wird der Aufbau der \gui 
 	genau beschrieben.
-	Für die Interaktion mit den GUI-Widgets, werden Listener implementiert, die
-	auf andere Events reagieren, die von anderen Widgets erzeugt generiert wurden.
-	Events können zu unterschiedlichen Zeitpunkten generiert werden und es wird
-	nicht festgelegt in welcher Reihenfolge sie bei anderen Widgets ankommen
+	Für die Interaktion mit den \emph{GUI-Komponenten}, werden Listener
+	implementiert, die auf andere Events reagieren, die wiederum von anderen Komponenten erzeugt
+	wurden.
+	Events können zu unterschiedlichen Zeitpunkten generiert werden, wobei die
+	Reihenfolge, wie sie bei anderen Komponenten ankommen, nicht festgelegt ist
 	\simplevcite{10}}}
 	
 	
@@ -95,7 +97,7 @@
 \newglossaryentry{Turing-Maschine}
 {
 	name=Turing-Maschine,
-	description={ist ein Automatenmodell welches vom Alan M. Turing 1936
+	description={- ist ein Automatenmodell, welches vom Alan M. Turing im Jahr 1936
 	vorgestellt wurde. Die Turing-Maschine abstrahiert die generelle
 	Arbeitsweise heutiger Rechner \vcite{hedtstueck}{145ff}}}
 	
@@ -103,34 +105,33 @@
 \newglossaryentry{Domäne}
 {
 	name=Domäne,
-	description={oder Anwendungsdomäne beschreibt ein abgegrenztes Wissen- oder
+	description={oder Anwendungsdomäne - beschreibt ein abgegrenztes Wissens- oder
 	Interessengebiet \vcite{softarch}{170}}}
 	
 	
 \newglossaryentry{DSL-Umgebung}
 {
 	name=DSL-Umgebung,
-	description={beinhaltet den Parser, den Lexer und die
+	description={- beinhaltet den Parser, den Lexer und die
 	Verarbeitungslogik \vcite{ghosh}{211}}}
 
 \newglossaryentry{Zielumgebung}
 {
 	name=Zielumgebung,
-	description={einer DSL beschreibt, die Infrastruktur, in der
-	die Generierten Artefakte integriert werden können \vcite{voelter}{26}}}
+	description={einer \emph{DSL} - beschreibt die Infrastruktur, in der
+	die generierten Artefakte integriert werden können \vcite{voelter}{26}}}
 	
 	
 \newglossaryentry{Multiselection-Komponente}
 {
 	name=Multiselection-Komponente,
-	description={stellt in \pcs ein Werkzeug
-	zur Auswahl mehrerer Objekte dar. Die \gui einer Multiselection-Komponenten
-	ist in Abbildung \ref{Abb_msk} in Anhang \ref{zuwendungsblatt} dargestellt. Es wird zwischen
-	einem Container, der die Objekten, die zur Auswahl zur Verfügung stehen (linke
-	Seite), enthält und einem Container, der die Objekten, die bereits ausgewählt
-	sind, enthält (rechte Seite) unterschieden. Mit den in der Mitte befindlichen
-	Schaltflächen ist es möglich die Objekte von einem Container in den anderen zu
-	navigieren. In der Abbildung bestehen keine Auswahlmöglichkeiten
+	description={- stellt in \pcs ein Werkzeug
+	zur Auswahl mehrerer Objekte dar. Es
+	wird zwischen zwei Containern unterschieden. Der Container auf der linken
+	Seite enthält der die Objekt, die zur Auswahl stehen und der 
+	Container auf der rechten Seite enthält die Objekte, die bereits
+	ausgewählt sind. Mit den in der Mitte befindlichen Schaltflächen ist es
+	möglich, die Objekte von einem Container in den anderen zu navigieren
 	 }}
 	
 	
@@ -138,20 +139,20 @@
 \newglossaryentry{Top-Down Parser}
 {
 	name=Top-Down Parser,
-	description={
-erzeugen den Parse-Tree ausgehend von der Wurzel. Im Gegensatz dazu stehen
-Bottom-Up Parser, welche den Parse-Tree von den Blätter aus erzeugen 
+	description={- erzeugen den \emph{Parse Tree}, ausgehend von der Wurzel. Im
+	Gegensatz dazu stehen \emph{Bottom-Up Parser}, welche den \emph{Parse Tree} von den Blätter aus
+erzeugen
 \vcite{ghosh}{225}}}
 
 
 \newglossaryentry{Inhaltsbaum}
 {
 	name=Inhaltsbaum,
-	description={einer Antragsmappe enthält die Dokumente die in
+	description={- enthält die Dokumente die in
 	dieser Antragsmappe vorliegen}}
 	
 \newglossaryentry{Verweisebaum}
 {
 	name=Verweisebaum,
-	description={einer Antragsmappe enthält Verweise auf
-	Dokumente, die mit dieser Antragsmappe in Verbindung stehen}}
+	description={- enthält Verweise auf
+	Dokumente, die mit der Antragsmappe in Verbindung stehen}}

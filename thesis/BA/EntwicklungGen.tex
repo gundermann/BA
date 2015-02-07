@@ -1,59 +1,68 @@
 \chapter{Entwicklung des Generators zur Generierung von Klassen für
 das Multichannel-Framework}\label{Entwicklung des Generators für das Generieren von Klassen für
 das Multichannel-Framework}
-Alle Umsetzungen die in diesem Kapitel beschrieben werden, fanden in der 3.
-Iteration statt. Von daher wird  nicht mehr zwischen
-Iterationen unterschieden.\\
-Ziel ist es mit dem Generator und einem entsprechenden GUI-Skript eine
-Exploreransicht zu erstellen, wie sie in profil c/s geläufig ist. Abbildung
-\ref{Abb_ee} zeigt den Aufbau einer solchen GUI. Darin enthalten sind zwei Bäume
-(auf der linken Seite) und ein Interchangeable (auf der rechten Seite), worin der Inhalt
-der ausgewählten Elemente des Inhaltsbaums angezeigt werden soll. Das Anzeigen
-des Inhalts wird jedoch nicht umgesetzt.
+Alle Umsetzungen die in diesem Kapitel beschrieben werden, fanden in der dritten
+Iteration statt.\\
+Ziel ist es, mit dem Generator und einem entsprechenden \emph{GUI-Skript} eine
+Exploreransicht zu erstellen, die für \pcs charakteristisch ist. Abbildung
+\ref{Abb_ee} zeigt den Aufbau einer solchen \emph{\acrshort{GUI}}. Darin
+enthalten sind auf der linken Seite zwei \emph{Trees} und auf der
+rechten Seite ein Komponente vom Typ \emph{Interchangeable}, in der das
+selektierte Elemente des \glossLink{Inhaltsbaum}{Inhaltsbaums} visualisiert werden soll.
+Das Anzeigen des Inhalts wird im Prototypen nicht umgesetzt.
 \myBigFigure{explorerbaum.jpg}{Aufbau eines Explorers}{ee}
-\noindent
-Die notwendigen GUI-Skripte werden bei der Umsetzung vorgestellt.
+
 \section{Beschreibung der GUI-, FP- und IP-Klassen}
-Durch die Beschreibung der GUIs mit der entwickelten \g, ist es möglich die
-GUI-, FP- und die IP-Klassen (siehe Kapitel \ref{Analyse}) zu generieren. Die
-GUI-Klasse soll dabei vollständig generiert werden. Dafür werden
-Informationen über das Layout aus der Layout-Datei benötigt. Die Umsetzung
-und Einbindung der Layout-Datei wird nicht in dieser Arbeit behandelt. Aus
-diesem Grund wird im Generator ein Layout festgelegt. Die IP- und FP-Klassen
-sollen nur teilweise generiert werden. Somit unterteilt sich das folgende
-Kapitel in drei Abschnitte (GUI-Klassen, FP-Klassen und IP-Klassen).\\
-In den GUI-Klassen der deg werden die \gks durch
+Durch die Beschreibung der \guis mit der entwickelten \g, ist es möglich die
+\emph{GUI-}, \emph{FP-} und die \emph{IP-Klassen}, deren Notwenigkeit in
+Kapitel \ref{Analyse} beschrieben wurde, zu generieren.
+Die \emph{GUI-Klasse} soll dabei vollständig generiert werden. Dafür werden
+Informationen über das Layout aus der \emph{Layout-Datei} benötigt. Die
+Umsetzung und Einbindung der \emph{Layout-Datei} wird in dieser Arbeit nicht
+behandelt,weshalb im Generator ein Layout festgelegt wird. Die \emph{IP-} und \emph{FP-Klassen}
+sollen nur teilweise generiert werden, womit das folgende
+Kapitel in drei Abschnitte unterteilt wird (\emph{GUI-Klassen},
+\emph{FP-Klassen} und \emph{IP-Klassen}).
+
+\subsection*{GUI-Klasse}
+In den \emph{GUI-Klassen} der \deg werden die \gks durch
 \emph{Präsentationsformen} beschrieben (siehe Kapitel \ref{Analyse}). Alle
-\gks sind in diesen Klassen global verfügbar. Die globalen Variablen
-stehen bei der deg am Ende der Klasse. Die bestehende Struktur der Klassen
-soll nicht verändert werden.
-Da die Interaktion von der Präsentation getrennt ist, müssen zur
-Referenzierung von Interaktionen zu \gks entsprechende Schlüssel
-vergeben werden (siehe Routinearbeit \hyperref[R1]{R1}).\\
-Die IP-Klassen ordnen den \gks mit Hilfe dieses Schlüssels
-entsprechende Interaktionen und darauf folgende Kommandos zu. Was genau bei der
-Interaktion gesehen soll, kann vom Generator nicht erzeugt werden. Dies muss vom Entwickler nachgepflegt
-werden.\\ 
-In den FP-Klassen ist die Funktionalität des Werkzeugt beschrieben. Eine
-komplette Generierung der FP-Klassen kann mit der DSL nicht angestrebt werden,
-weil dafür entsprechende Informationen fehlen. Dennoch kann der Klassenrumpf
+\gks sind in diesen Klassen als globale Varialben verfügbar. Diese stehen bei
+der \deg am Ende der Klasse. Die bestehende Struktur der Klassen soll nicht verändert werden.
+Da die Interaktion von der Präsentation getrennt ist, müssen für das
+Referenzieren von Interaktionen zu \gks entsprechende Schlüssel
+vergeben werden (siehe Routinearbeit \emph{\hyperref[R1]{R1}}).
+
+\subsection*{IP-Klasse}
+Die \emph{IP-Klassen} ordnen den \gks mit Hilfe dieses Schlüssels
+entsprechende Interaktionen und darauf folgende Kommandos zu. Die
+Funktionalitäten der Interaktion können vom Generator nicht
+erzeugt werden. Dies muss vom Entwickler nachgepflegt werden.
+
+\subsection*{FP-Klasse}
+In den \emph{FP-Klassen} ist die Funktionsweise des \emph{Werkzeugs}
+beschrieben.
+Eine komplette Generierung der \emph{FP-Klassen} kann mit der \emph{DSL} nicht
+angestrebt werden, weil dafür entsprechende Informationen fehlen. Dennoch kann der Klassenrumpf
 und der Konstruktor erzeugt werden.\\
-Für die Generierung der Klassen wird in dieser
-Arbeit Transformer Generation (siehe Kapitel \ref{Domänenspezifische Sprachen})
-verwendet. Für die Generierung der IP- und FP-Klassen ist auch die
-Templated Generation (siehe Kapitel \ref{Domänenspezifische Sprachen}) in Erwägung zu ziehen. Um bei der
-Art der Generation einheitlich zu sein, wird auf diese Möglichkeit nicht weiter eingegangen.
+\noindent
+Für die Generierung der \emph{IP-} und \emph{FP-Klassen}
+ist die \emph{Templated Generation} (siehe Kapitel \ref{Domänenspezifische
+Sprachen}) in Erwägung zu ziehen. Da die Generierung in dieser Arbeit
+möglichst einheitlich gehalten werden soll, ist die \emph{Transformer
+Generation} (siehe Kapitel \ref{Domänenspezifische Sprachen}) für alle Klassen
+zu verwenden.
 
 
 \section{Umsetzung des frameworkspezifischen Generators}
 \subsection*{GUI-Klassen}
-Bei Betrachtung der Präsentation aus Abbildung \ref{Abb_ee} können die
-Bäume auf der linken Seite als einzelne GUI-Beschreibungen betrachtet
-werden, die jeweils mit einem fachlichen Konzepten assoziiert werden können. Der
-obere Baum kann mit dem fachlichen Konzept des
-\glossLink{Inhaltsbaum}{Inhaltsbaumes} in Verbindung gebracht werden und der
-untere mit dem des \glossLink{Verweisebaum}{Verweisebaums}. Da sich die
-fachlichen Konzepte erkennen lassen, sollten separate GUI-Skripte
+Bei der Präsentation aus Abbildung \ref{Abb_ee} können die
+\emph{Trees} auf der linken Seite als einzelne \emph{GUI-Beschreibungen}
+betrachtet werden, die jeweils mit einem fachlichen Konzept assoziiert werden
+können. Der obere \emph{Tree} kann mit dem fachlichen Konzept des
+\glossLink{Inhaltsbaum}{Inhaltsbaums} in Verbindung gebracht und der
+untere mit dem des \glossLink{Verweisebaum}{Verweisebaums} assoziiert werden. Da
+sich die fachlichen Konzepte erkennen lassen, sollten separate \emph{GUI-Skripte}
 erstellt werden (siehe Listing \ref{LST_Inhaltsbaum} und \ref{LST_Verweisebaum}).
 \begin{lstlisting}[{caption = GUI-Skript für den Inhaltsbaum},{label =
 LST_Inhaltsbaum}]
@@ -70,15 +79,17 @@ Label as: 'kopfzeile'->text='Verweisebaum';
 Tree[testwerkzeuge.modelle.VerweiseModell] as: 'verweisebaum';
 Structure:'kopfzeile','verweisebaum';
 \end{lstlisting}
-Bei der Generierung betrachtet Xtext eine GUI-Beschreibung im Ganzen. Für
-jede GUI-Beschreibung soll eine eigene GUI-Klasse angelegt werden. Die Klassen
-enthalten in diesen beiden Fällen zwei globale Variablen. Darüber hinaus
+Bei der Generierung betrachtet \emph{Xtext} eine \emph{GUI-Beschreibung} im
+Ganzen.
+Für jede \emph{GUI-Beschreibung} soll eine eigene \emph{GUI-Klasse} angelegt
+werden.
+Die Klassen enthalten in diesen beiden Fällen zwei globale Variablen. Darüber hinaus
 enthalten sie Importe, die am Anfang der beiden Klassen stehen. Um das
-GUI-Skript für jede zu generierende Datei nur einmal analysieren zu müssen, ist
-es notwendig Importe, Methoden und globale Variablen zwischen zu speichern. Die
-Methoden in Listing \ref{LST_Importe} realisieren das Speichern der Importe und
-globalen Variablen beim generieren der Methoden. So ist es möglich die
-bestehende Struktur der Klassen der deg beizubehalten.
+\emph{GUI-Skript} für jede zu generierende Datei nur einmal analysieren zu
+müssen, ist es notwendig, Importe, Methoden und globale Variablen zwischen zu
+speichern. Der Quellcode in Listing \ref{LST_Importe} realisieren das
+Speichern der Importe und globalen Variablen beim Generieren der Methoden. So ist es möglich die
+bestehende Struktur der Klassen der \deg beizubehalten.
 \begin{lstlisting}[{caption = Speichern der Importe und der globalen
 Variablen},{label = LST_Importe}]
 def addImport(String newImport) {
@@ -92,11 +103,11 @@ def addGlobalVar(String globalVar) {
 			globalVars.add(globalVar)
 	}
 \end{lstlisting}
-Zu Beginn einer Generierung muss zwischen den Typen der GUI-Beschreibung
-unterschieden werden. Je nachdem ob die Beschreibung als \emph{Window} oder
+Zu Beginn einer Generierung muss der Typ der \emph{GUI-Beschreibung}
+evaluiert werden. Je nachdem, ob die Beschreibung als \emph{Window} oder
 \emph{Innercomplex} definiert ist, werden entsprechende Importe benötigt. In
-den Fällen der oben genannten Bäume wird ein \emph{Innercomplex} definiert (siehe Listing
-\ref{LST_HeadComplex}).
+den Fällen der oben genannten \emph{Trees} wird ein \emph{Innercomplex}
+definiert (siehe Listing \ref{LST_HeadComplex}).
 \begin{lstlisting}[{caption = Generierung eines
 Innercomplex},{label = LST_HeadComplex}]
 def compileComplex(UIDescription description) '''
@@ -122,21 +133,21 @@ def genRest(UIDescription description)'''
 '''
 \end{lstlisting}
 In der Methode \emph{compileComplex} wird festgelegt, dass sich die
-\gks auf einem Border-Layout anordnen. Wenn die Layout-Datei verwendet wird, muss der Generator
-aus dem Inhalt dieser Datei auf einen entsprechenden Layout-Container
+\gks auf einem \emph{BorderLayout} anordnen. Wenn die \emph{Layout-Datei}
+verwendet wird, muss der Generator aus dem Inhalt dieser Datei auf einen entsprechenden Layoutcontainer
 schließen. Zum Abschluss der Methode \emph{genRest} werden zwei weitere Methoden
 aufgerufen.
-Die erste Methode (\emph{descrition.init}) generiert die im Konstruktor
+Die Erste (\emph{descrition.init}) generiert die im Konstruktor
 aufgerufene Methode \emph{init}.
-Die andere Methode \emph{genGlobalVars} ist für die Generierung der globalen
+Die Andere (\emph{genGlobalVars}) ist für die Generierung der globalen
 Variablen zuständig.\\
-In der Methode \emph{init} werden alle \gks und das Layout definiert.
+Innerhalb der Methode \emph{init} werden alle \gks und das Layout definiert.
 Da für das Layout in dieser Arbeit keine Beschreibung existiert,
 müssen diese Angaben nachgepflegt werden. Die Definition
 der \gks mit ihren Properties können jedoch
 erzeugt werden. Listing \ref{LST_Init} zeigt die Methode \emph{init} ohne
 Berücksichtigung des Layouts.
-\begin{lstlisting}[{caption = Generierung der Methode \emph{init} der
+\begin{lstlisting}[{caption = Generierung der init-Methode der
 GUI-Klassen},{label = LST_Init}]
 def getInit(UIDescription description) '''
 	public void init(){
@@ -146,13 +157,13 @@ def getInit(UIDescription description) '''
 	}
 '''
 \end{lstlisting}
-In der Methode \emph{compileComponent} wird geprüft um welche \gk es
-sich handelt. Diese wird anschließend compiliert, wobei der entsprechende
+In der Methode \emph{compileComponent} wird geprüft, um welche \gk es
+sich handelt. Diese wird anschließend kompiliert, wobei der entsprechende
 Quellcode zur frameworkspezifischen Definition der Komponente generiert wird.
-Im Fall des Labels werden der entsprechende Import und die globale Variable
-hinzugefügt. Weiterhin muss die Referenz für die IP-Klasse definiert werden, da
-Labels Standardinteraktionen besitzen. Wenn vorhanden, müssen letztlich die
-Properties am Label gesetzt werden (siehe Listing \ref{LST_LabelGen}).
+Im Fall des \emph{Labels} werden der entsprechende Import und die globale
+Variable hinzugefügt. Weiterhin muss die Referenz für die \emph{IP-Klasse}
+definiert werden, da \emph{Labels} Standardinteraktionen besitzen. Wenn
+vorhanden, müssen letztlich die Properties am \emph{Label} gesetzt werden (siehe Listing \ref{LST_LabelGen}).
 \begin{lstlisting}[{caption = Generierung eines Labels},{label =
 LST_LabelGen}]
 def compileLabel(LabelDefinition definition) '''
@@ -176,14 +187,14 @@ def genProperty(String id, String method, String value, Boolean isString) '''
 	'''
 '''
 \end{lstlisting}
-Die Eigenschaften aus den Properties-Dateien müssten an dieser Stelle zusätzlich
-berücksichtigt werden.
-Dies wurde aus Zeitgründen nicht umgesetzt.\\
-Der Quellcode für den Baum wird ähnlich generiert. Wenn der Input-Typ des
-Baumes nicht gesetzt ist, muss ein Standard-Wert dafür eingesetzt werden.
+Die Eigenschaften aus den \emph{Properties-Dateien} müssten an dieser Stelle
+zusätzlich berücksichtigt werden. Dies wurde aus Zeitgründen nicht umgesetzt.\\
+Der Quellcode für den \emph{Tree} wird ähnlich generiert. Wenn das
+Input-Modell des \emph{Trees} nicht definiert ist, muss ein Standardwert dafür
+eingesetzt werden.
 Des Weiteren muss für den Baum ein \emph{CellRenderer} definiert
 werden (siehe Listing \ref{LST_Tree}).
-\begin{lstlisting}[{caption = Generierung eines Trees},{label =
+\begin{lstlisting}[{caption = Generierung eines \emph{Trees}},{label =
 LST_Tree}]
 def compileTree(TreeDefinition definition)'''
 	«addImport("import DE.data_experts.jwammc.core.pf.PfTree;")»
@@ -203,19 +214,21 @@ def compileTree(TreeDefinition definition)'''
 		«definition.id».setCellRenderer( new TreeCellRenderer() );
 '''
 \end{lstlisting}
-Durch die genannten Methoden kann der Generator die beiden GUI-Skripte
-zur Beschreibung des Inhalts- und des Verweisebaums in GUI-Klassen
-transformieren, die innerhalb der MCF ausgeführt werden können.\\
+Durch die genannten Methoden kann der \emph{Generator} die beiden
+\emph{GUI-Skripte}, die zur Beschreibung des \glossLink{Inhaltsbaum}{Inhalts-} und des
+\glossLink{Verweisebaum}{Verweisebaums} verwendet werden, in \emph{GUI-Klassen}
+transformieren, die innerhalb der \MCF ausgeführt werden können.\\
 Die generierten Dateien (\emph{GuiInhaltsbaum.java} und
 \emph{GuiVerweisebaum.java}) befinden sich auf dem beiliegenden Datenträger
-(siehe \hyperref[cd]{Anlage}) im Projekt \emph{Explorer}.
-Abbildung \ref{Abb_Trees} zeigt die beiden GUIs, welche bei der Ausführung
-der generierten Dateien im Kontext von profil c/s erzeugt werden.
+(siehe \emph{\hyperref[cd]{Anlage}}) im Projekt \emph{Explorer}.\\
+Abbildung \ref{Abb_Trees} zeigt die beiden \guis, welche bei der Ausführung
+der generierten Dateien im Kontext von \pcs erzeugt werden.
 \myBigFigure{Trees.jpg}{Generierte GUI des Inhalts- und Verweisebaums}{Trees}
 \noindent
-Um die Explorer-GUI zu generieren, müssen diese beiden Bäume zusammen mit einem
-austauschbaren Bereich in einem GUI-Skript definiert werden (siehe Listing
-\ref{LST_Skript_Explorer}).
+Um die \emph{Explorer-GUI} zu generieren, müssen
+\glossLink{Inhaltsbaum}{Inhalts-} und \glossLink{Verweisebaum}{Verweisebaum}
+zusammen mit einem austauschbaren Bereich in einem \emph{GUI-Skript} definiert
+werden (siehe Listing \ref{LST_Skript_Explorer}).
 \begin{lstlisting}[{caption=GUI-Skript für das
 Exlporer-GUI},{label=LST_Skript_Explorer}] 
 type: WINDOW;
@@ -228,8 +241,7 @@ Da es sich um ein \emph{Window} handelt, wird in diesem Fall die Methode
 \emph{compileWindow} aufgerufen. Der einzige Unterschied zur Methode
 \emph{compileComplex} ist in diesem Fall die Oberklasse (siehe Listing
 \ref{LST_complieWindow}).
-\begin{lstlisting}[{caption=Generierung eines Windows
-},{label=LST_complieWindow}]
+\begin{lstlisting}[{caption=Generierung eines Windows},{label=LST_complieWindow}]
 def compileWindow(UIDescription description) '''
 	«addImport("import DE.data_experts.jwammc.core.pf.PfRootPane;")»
 	public class «guiFilename» extends PfRootPane{
@@ -237,21 +249,21 @@ def compileWindow(UIDescription description) '''
 	}
 ''' 
 \end{lstlisting}
-Ebenso wie bei der Generierung der ersten beiden \glspl{GUI}, wird hier als
-Layout-Container ein Border-Layout verwendet. Um die Anordnung der Bäume wie
-gewünscht zu erhalten, wird ein weiterer Layout-Container benötigt. Da sich
-diese Information auf das Layout bezieht, muss sie normalerweise von der
-Layout-Datei geliefert werden.\\
-Die GUI-Klassen der eingebundenen Gui-Skripte für die Bäume werden in der
-zu generierenden GUI-Klasse für den Explorer deklariert. Dabei muss der Typ der
-\emph{UsedDescription} im Vorfeld überprüft werden. Handelt es sich um
-den Typ \emph{UIDescriptionImport}, ist lediglich die Deklarierung der
-\gk und die Einbindung in einen Layout-Container nötig (siehe Listing
-\ref{LST_Used}). Anderenfalls müssen die spezifischen Eigenschaften komplexer
+Ebenso wie bei der Generierung der ersten beiden \guis, wird hier als
+Layoutcontainer ein \emph{BorderLayout} verwendet. Um die Anordnung der
+\emph{Trees} wie gewünscht zu erhalten, wird ein weiterer Layoutcontainer
+benötigt. Da sich diese Information auf das Layout bezieht, muss sie
+von der \emph{Layout-Datei} geliefert werden.\\
+Die \emph{GUI-Klassen} der eingebundenen \emph{GUI-Skripte} zur Beschreibung der
+\emph{Trees}, werden in der zu generierenden \emph{GUI-Klasse} für den Explorer
+deklariert. Dabei muss der Typ der \emph{UsedDescription} im Vorfeld überprüft
+werden. Handelt es sich um den Typ \emph{UIDescriptionImport}, ist lediglich
+die Deklaration der \gk und die Einbindung in einen Layoutcontainer nötig
+(siehe Listing \ref{LST_Used}). Anderenfalls müssen die spezifischen Eigenschaften komplexer
 Komponenten untersucht werden. Darauf wird in dieser Arbeit jedoch nicht weiter
 eingegangen. 
 \begin{lstlisting}[{caption= Generierung der Einbindung
-anderer GUI-Skripte },{label=LST_Used}] 
+anderer \emph{GUI-Skripte} },{label=LST_Used}] 
 def compile(UsedDescription description) '''
 	«IF description.descriptionType instanceof UIDescriptionImport»
 		«var castedDescriptionType = description.descriptionType asUIDescriptionImport» 
@@ -263,9 +275,9 @@ def compile(UsedDescription description) '''
 	«ENDIF»
 '''
 \end{lstlisting}
-Die letzte Komponente, die damit noch nicht in der GUI-Klasse deklariert wurde
-ist die Interchangeable-Komponente. Da diese \gks keine
-speziellen Properties besitzt, ist die Methode zur Generierung des Quellcodes
+Die letzte Komponente, die damit noch nicht in der \emph{GUI-Klasse} deklariert
+wurde ist die Interchangeable-Komponente. Da diese \gks keine
+speziellen Properties besitzen, ist die Methode zur Generierung des Quellcodes
 recht einfach gehalten (siehe Listing \ref{LST_Interchangeable}).
 \begin{lstlisting}[{caption= Generierung einer Interchangeable-Komponente
 },{label=LST_Interchangeable}] 
@@ -276,20 +288,19 @@ def compileInterchangeable(InterchangeableDefinition definition)'''
 	«definition.id».setIfName("«definition.id»");
 '''
 \end{lstlisting}
-Die generierten Dateien sind auf dem beiliegenden Datenträger (siehe
-\hyperref[cd]{Anlage}) zu finden.
-Es handelt sich um die Dateien \emph{GuiInhaltsbaum.java}, \emph{GuiVerweisebaum.java} und
-\emph{GuiExplorer.java}. Abbildung \ref{Abb_explorerGen} (in Anhang
-\ref{explorergui}) zeigt die \gui, welche durch die Klasse
+Die generierten Dateien \emph{GuiInhaltsbaum.java}, \emph{GuiVerweisebaum.java} und
+\emph{GuiExplorer.java} sind auf dem beiliegenden Datenträger (siehe
+\emph{\hyperref[cd]{Anlage}}) zu finden.
+Abbildung \ref{Abb_explorerGen} (in Anhang
+\ref{explorergui}) ist die \gui zu entnehmen, welche durch die Klasse
 \emph{GuiExplorer.java} erzeugt wird.
 
 
 \subsection*{FP-Klassen}
-Da für die FP-Klassen lediglich der Klassenrumpf und der Konstruktor generiert
-wird, ist diese Aufgabe entsprechend einfach. Dafür werden lediglich eine
-Oberklasse und entsprechende Importe benötigt, wie Listing \ref{LST_FPGen} zu entnehmen
-ist.
-\begin{lstlisting}[{caption= Generierung der FP-Klasse
+Da für die \emph{FP-Klassen} lediglich der Klassenrumpf und der Konstruktor
+generiert werden, ist diese Aufgabe entsprechend einfach. Dafür werden eine
+Oberklasse und entsprechende Importe benötigt, wie Listing \ref{LST_FPGen} zu entnehmen ist.
+\begin{lstlisting}[{caption= Generierung der \emph{FP-Klasse}
 },{label=LST_FPGen}] 
 def genFpSource() '''
 	«addImport("import DE.data_experts.jwam.tools.FpObject;")»
@@ -302,12 +313,12 @@ def genFpSource() '''
 '''	
 \end{lstlisting}
 \subsection*{IP-Klassen}
-Um ein Objekt der IP-Klasse zu instantiieren wird ein Objekt der dazugehörigen
-FP-Klasse benötigt. Die Generierung der IP-Klasse beginnt wiederum mit der
-Generierung des Klassenkopfs und entsprechend benötigten Imports (siehe
-Listing \ref{LST_IpKopf}).
+Um ein Objekt der \emph{IP-Klasse} zu instanziieren, wird ein Objekt der
+dazugehörigen \emph{FP-Klasse} benötigt. Die Generierung der \emph{IP-Klasse}
+beginnt wiederum mit der Generierung des Klassenkopfs und entsprechend
+benötigten Importen (siehe Listing \ref{LST_IpKopf}).
 \begin{lstlisting}[{caption= Generierung der
-IP-Klasse},{label=LST_IpKopf}] 
+\emph{IP-Klasse}},{label=LST_IpKopf}] 
 def genIpSource(UIDescription description)'''
 	«addImport("import DE.data_experts.jwam.tools.IpObject;")»
 	«addImport("import de.jwamx.technology.iafpf.guimanagement.IAFContext;")»
@@ -332,15 +343,15 @@ def genIpSource(UIDescription description)'''
 	}
 '''
 \end{lstlisting}
-Wie bei den GUI-Klassen müssen hier ebenfalls die globalen Variablen am Ende der
-Klasse stehen. Zwischen dem Konstruktor und den globalen variablen werden die
-Interaktionsformen mit den Kommandos bestimmt (\emph{genIAF} - siehe Listing
+Wie bei den \emph{GUI-Klassen}, müssen hier ebenfalls die globalen Variablen am
+Ende der Klasse stehen. Zwischen dem Konstruktor und den globalen Variablen
+werden die Interaktionsformen mit den Kommandos bestimmt (\emph{genIAF} - siehe Listing
 \ref{LST_GenIAF}), den Kommandos bestimmte Methoden zugeordnet
 (\emph{genCommands} - siehe Listing \ref{LST_genCommands}) und die Rümpfe für
 diese Methoden generiert (\emph{genCommandMethods} - siehe Listing
 \ref{LST_GenCommandMethods}).\\
-Bei der Bestimmung der Interaktionsformen werden die im GUI-Skript
-definierten \gks durchlaufen und deren Standard-Interaktionsformen und
+Bei der Bestimmung der Interaktionsformen werden die im \emph{GUI-Skript}
+definierten \gks durchlaufen und deren Standardinteraktionsformen und
 spezielle Interaktionsformen übersetzt (siehe Listing \ref{LST_GenIAF}).
 \begin{lstlisting}[{caption= Generierung der
 Interaktionsformen},{label=LST_GenIAF}] 
@@ -363,15 +374,14 @@ def compileIAF(Definition definition)'''
 	'''
 
 \end{lstlisting}
-Für die Standard-Interaktionsformen muss unterschieden werden um welche
+Für die Standardinteraktionsformen muss evaluiert werden, um welche
 \gk es sich handelt.\\
-Zu jeder Interaktionsform gibt es ein entsprechendes Kommando, welches zur
+Zu jeder Interaktionsform gibt es ein entsprechendes Kommando, für die
 Generierung des Quellcodes relevant ist. Die Zuordnung von Kommando zu
-Interaktionsform wird vom Generator vorgenommen (Beispiel Tree - siehe Listing
-\ref{LST_compileTree}). Die dafür verwendeten Methoden (z.B.
-\emph{genIAFActivator} oder \emph{genIAFTree}) können häufig wiederverwendet
-werden.
-\begin{lstlisting}[{caption= Generierung der Standard-Interaktionsformen von
+Interaktionsform wird vom \emph{Generator} vorgenommen (Beispiel \emph{Tree} -
+siehe Listing \ref{LST_compileTree}). Die dafür verwendeten Methoden (z.B.
+\emph{genIAFActivator} oder \emph{genIAFTree}) sind wiederverwendbat.
+\begin{lstlisting}[{caption= Generierung der Standardinteraktionsformen von
 Trees},{label=LST_compileTree}] 
 def compileTreeStandardIAF(TreeDefinition definition)'''
 		«definition.id.genIAFActivator»
@@ -387,10 +397,9 @@ def genIAFActivator(String id) '''
 	'''
 \end{lstlisting}
 Die Methode \emph{genIAFSource} hat ebenfalls einen sehr hohen
-Wiederverwendungsgrad.
-Sie wird von allen Methoden, die für die Zuordnung von Interaktionsform zu Kommando
-zuständig sind verwendet. In dieser Methode wird der Quellcode letztendlich
-generiert (siehe Listing \ref{LST_genIAFSource}).
+Wiederverwendungsgrad. Sie wird von allen Methoden, die für die Zuordnung von
+Interaktionsform zu Kommando zuständig sind, verwendet. In dieser Methode wird
+der Quellcode letztendlich generiert (siehe Listing \ref{LST_genIAFSource}).
 \begin{lstlisting}[{caption= Generierung einer
 Interaktionsform},{label=LST_genIAFSource}] 
 def genIAFSource(String iafSource, String commandSource, String id) '''
@@ -415,15 +424,16 @@ def addCommand(String id, String commandName) {
 }
 \end{lstlisting}
 Die Einzelheiten dieser Methode sind unter anderem abhängig von den
-Konventionen die bzgl.
-Namensgebung in der deg getroffen wurden. Der Aufruf der Methode
+Konventionen, die bzgl. der
+Namensgebung in der \deg getroffen wurden. Der Aufruf der Methode
 \emph{addCommand} ist für weitere Generierungen von Belang.\\
 Nach Abschluss der Generierung des Quellcodes zur Bestimmung der
 Interaktionsformen und Kommandos, müssen den Kommandos entsprechende Methoden
-zugeordnet werden. Die Referenz auf die Kommandos bietet die Liste
+zugeordnet werden. Über die Liste
 \emph{commands}, die durch den Aufruf der Methode \emph{addCommand}
-(siehe Listing \ref{LST_genIAFSource}) gefüllt wird. Die Methode
-\emph{genCommands} ist für die beschriebene Zuordnung zuständig (siehe Listing
+(siehe Listing \ref{LST_genIAFSource}) gefüllt wird, könnne die Kommandos
+referenziert werden.
+Die Methode \emph{genCommands} ist für die beschriebene Zuordnung zuständig (siehe Listing
 \ref{LST_genCommands}).
 \begin{lstlisting}[{caption= Generierung der
 Kommandoinitialisierung},{label=LST_genCommands}] 
@@ -443,25 +453,26 @@ def genCommands(UIDescription description)'''
 '''
 \end{lstlisting}
 Die genauen Bezeichnungen ergeben sich wiederum aus den Konventionen für die
-Bezeichnungen innerhalb des MCF der deg.\\
-Um Compilierungsfehler zu vermeiden, müssen die Methoden, die vom generierten
- Quellcode verwendet werden, ebenfalls generiert werden. Dafür ist die Methode
- \emph{genCommandMethods} zuständig. In dieser Methode wird die Liste
- \emph{commands} nochmals benutzt, um die Methoden-Rümpfe zu erzeugen (siehe
- Listing \ref{LST_GenCommandMethods}).
- Die Implementierung der generierten Methoden muss der Entwickler übernehmen.
- \begin{lstlisting}[{caption= Generierung der
-Methoden zur Bestimmung der auszuführenden Aktionen
-bei einer Interaktion},{label=LST_GenCommandMethods}] 
+Bezeichnungen innerhalb des \MCF der \deg.\\
+Um eventuelle Fehler bei der Ausführung des Programms zu vermeiden, müssen die
+Methoden, die vom generierten Quellcode verwendet werden, ebenfalls erzeugt
+werden.
+Dafür ist die Methode \emph{genCommandMethods} zuständig, in der
+die Liste \emph{commands} noch einmal benutzt wird, um die Methodenrümpfe zu
+erzeugen (siehe Listing \ref{LST_GenCommandMethods}).
+Die Implementierung der generierten Methoden muss der Entwickler übernehmen.
+\begin{lstlisting}[{caption= Generierung der
+ Aktionen bei einer Interaktion},{label=LST_GenCommandMethods}] 
 def genCommandMethods(UIDescription description)'''
 	«FOR commandId : commands.keySet»
 		public void «commandId»(){}
 	«ENDFOR»
 	'''
 \end{lstlisting}
-\parskip 20pt
-Die Generator-Klasse ist auf dem beiliegenden Datenträger zu finden (siehe
-\hyperref[cd]{Anlage}).
-In den Methoden zur Generierung von \gks für die GUI-Klassen sind die
-Code-Abschnitte, die das Layout bestimmen, entsprechend gekennzeichnet.
+\noindent\\\\
+Der beiliegende Datenträger enthält die Generatorklasse (siehe
+\emph{\hyperref[cd]{Anlage}}).
+In den Methoden zur Generierung von \gks für die \emph{GUI-Klassen}, sind die
+layoutbestimmenden Codeabschnitte durch entsprechende
+Kommentare gekennzeichnet.
 

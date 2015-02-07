@@ -21,7 +21,7 @@
 \contentsline {subsection}{\numberline {3.6.1}Implementierungstechniken}{23}{subsection.3.6.1}
 \contentsline {section}{\numberline {3.7}Externe DSLs}{25}{section.3.7}
 \contentsline {subsection}{\numberline {3.7.1}Implementierungstechniken}{25}{subsection.3.7.1}
-\contentsline {section}{\numberline {3.8}Nicht-textuelle DSLs}{29}{section.3.8}
+\contentsline {section}{\numberline {3.8}Nicht-textuelle DSLs}{28}{section.3.8}
 \contentsline {chapter}{\numberline {4}GUI-DSL}{30}{chapter.4}
 \contentsline {section}{\numberline {4.1}Motivation des Ansatzes}{30}{section.4.1}
 \contentsline {section}{\numberline {4.2}Anforderungen an die GUI-DSL}{31}{section.4.2}
@@ -36,22 +36,22 @@
 \contentsline {section}{\numberline {6.2}Vergleich und Bewertung der vorgestellten Frameworks}{37}{section.6.2}
 \contentsline {chapter}{\numberline {7}Grobkonzept f\"ur die Entwicklung des Prototyps}{40}{chapter.7}
 \contentsline {section}{\numberline {7.1}Vorgehensmodell}{40}{section.7.1}
-\contentsline {section}{\numberline {7.2}Konzeption der DSL-Umgebung (Vision)}{42}{section.7.2}
-\contentsline {subsection}{\numberline {7.2.1}1. Iteration}{42}{subsection.7.2.1}
-\contentsline {subsection}{\numberline {7.2.2}2. Iteration}{46}{subsection.7.2.2}
-\contentsline {subsection}{\numberline {7.2.3}3. Iteration}{48}{subsection.7.2.3}
-\contentsline {chapter}{\numberline {8}Entwicklung einer DSL zur Beschreibung der GUI in profil c/s}{51}{chapter.8}
-\contentsline {section}{\numberline {8.1}1. Iteration}{51}{section.8.1}
-\contentsline {section}{\numberline {8.2}2. Iteration}{57}{section.8.2}
-\contentsline {section}{\numberline {8.3}3. Iteration}{63}{section.8.3}
-\contentsline {chapter}{\numberline {9}Entwicklung des Generators zur Generierung von Klassen f\"ur das Multichannel-Framework}{72}{chapter.9}
-\contentsline {section}{\numberline {9.1}Beschreibung der GUI-, FP- und IP-Klassen}{73}{section.9.1}
-\contentsline {section}{\numberline {9.2}Umsetzung des frameworkspezifischen Generators}{74}{section.9.2}
-\contentsline {chapter}{\numberline {10}Zusammenfassung und Ausblick}{85}{chapter.10}
+\contentsline {section}{\numberline {7.2}Konzeption der DSL-Umgebung (Vision)}{41}{section.7.2}
+\contentsline {subsection}{\numberline {7.2.1}1. Iteration}{41}{subsection.7.2.1}
+\contentsline {subsection}{\numberline {7.2.2}2. Iteration}{45}{subsection.7.2.2}
+\contentsline {subsection}{\numberline {7.2.3}3. Iteration}{47}{subsection.7.2.3}
+\contentsline {chapter}{\numberline {8}Entwicklung einer DSL zur Beschreibung der GUI in profil c/s}{49}{chapter.8}
+\contentsline {section}{\numberline {8.1}1. Iteration}{49}{section.8.1}
+\contentsline {section}{\numberline {8.2}2. Iteration}{55}{section.8.2}
+\contentsline {section}{\numberline {8.3}3. Iteration}{61}{section.8.3}
+\contentsline {chapter}{\numberline {9}Entwicklung des Generators zur Generierung von Klassen f\"ur das Multichannel-Framework}{70}{chapter.9}
+\contentsline {section}{\numberline {9.1}Beschreibung der GUI-, FP- und IP-Klassen}{71}{section.9.1}
+\contentsline {section}{\numberline {9.2}Umsetzung des frameworkspezifischen Generators}{72}{section.9.2}
+\contentsline {chapter}{\numberline {10}Zusammenfassung und Ausblick}{83}{chapter.10}
 \contentsline {chapter}{\numberline {A}Zuwendungsblatt f\"ur Web- und Standalone-Client}{X}{appendix.A}
 \contentsline {chapter}{\numberline {B}Generierte Explorer-GUI}{XIII}{appendix.B}
 \contentsline {chapter}{\numberline {C}Inhalt des beiliegenden Datentr\"agers}{XIV}{appendix.C}
-\contentsline {chapter}{Glossar}{XV}{section*.36}
-\contentsline {chapter}{Literaturverzeichnis}{XVIII}{section*.39}
+\contentsline {chapter}{Glossar}{XV}{section*.39}
+\contentsline {chapter}{Literaturverzeichnis}{XVIII}{section*.42}
 \select@language {English}
 \select@language {german}

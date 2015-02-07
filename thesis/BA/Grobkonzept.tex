@@ -1,7 +1,7 @@
 \chapter{Grobkonzept für die Entwicklung des Prototyps}\label{Aufteilung der
 Anforderungen auf Sprache und Generator}
 \section{Vorgehensmodell}
-Das Vorgehensmodell für die Entwicklung des DSL-Prototyps ist ein
+Das Vorgehensmodell für die Entwicklung des \emph{DSL-Prototyps} ist ein
 inkrementelles Modell. Das bedeutet, dass mehrere Iterationen durchlaufen
 werden, in denen unterschiedliche Versionen des Prototyps entwickelt werden
 \vcite{SauerDiss}{5}.
@@ -20,9 +20,9 @@ Das führt wiederum zu einem neuen Entwurf, woran sich eine weitere
 Implementierung anschließt. Dieser Zyklus wird somit mehrmals durchlaufen
 (Iteration) \vcite{SauerDiss}{5}. \\ 
 Grund für dieses Vorgehen ist, dass in der \deg bzgl.
-DSL-Entwicklung wenig Know-How existiert. Aus den Iterationen soll so viel
-Erfahrung und Wissen wie möglich geschöpft werden. Zudem werden somit auch
-Irrwege aufgezeigt, die bei der Entwicklung anderer DSLs umgangen werden
+\emph{DSL-Entwicklung} wenig Know-How existiert. Aus den Iterationen soll so
+viel Erfahrung und Wissen wie möglich geschöpft werden. Zudem werden somit auch
+Irrwege aufgezeigt, die bei der Entwicklung anderer \emph{DSLs} umgangen werden
 können.
 Weiterhin können Anforderungen flexibel angepasst und Missverständnisse
 vermieden werden, da der Entwicklungsprozess transparent ist.
@@ -42,7 +42,7 @@ beleuchtet:
   \emph{Implementieren}. 
   Sie teilt sich in zwei weitere Bereiche auf:
   \begin{itemize}
-  	\item Entwicklung der DSL (siehe Kapitel \ref{Entwicklung einer
+  	\item Entwicklung der \emph{DSL} (siehe Kapitel \ref{Entwicklung einer
   	DSL zur Beschreibung der GUI in profil c/s})
   	\item Entwicklung eines Generators (siehe Kapitel \ref{Entwicklung
   	des Generators für das Generieren von Klassen für das Multichannel-Framework})
@@ -54,107 +54,110 @@ beleuchtet:
 \subsection{1. Iteration}
 Die \gloss{DSL-Umgebung} soll sich in zwei Bereiche unterteilen. 
 \begin{itemize}
-  \item DSL zur Beschreibung der \acrshort{GUI}
-  \item Generator zur Generierung von Quellcodes
+  \item \emph{DSL} zur Beschreibung der \gui
+  \item \emph{Generator} zur Generierung von Quellcodes
 \end{itemize}
 In Abbildung \ref{Abb_Konzept_1} sind die Artefakte mit den
 Funktionen (blauer Kasten), die von ihnen umgesetzt werden sollen, dargestellt.
-\myBigFigure{konzept_1.jpg}{Konzeption der DSL-Umgebung (1.
-Iteration)}{Konzept_1}
+\myBigFigure{konzept_1.jpg}{1. Iteration: Konzeption der \gloss{DSL-Umgebung}}{Konzept_1}
 \noindent
 Die elementare Aufgabe der \g ist es, die
 \gks, die auf der Benutzeroberfläche verwendet werden sollen, zu
-definieren (siehe Anforderung \hyperref[AS1]{AS1}). Ausgehend von den für \pcs
-verwendeten \emph{GUI-Komponenten}, können diese in drei Kategorien unterteilt
-werden:
+definieren (siehe Anforderung \emph{\hyperref[AS1]{AS1}}). Ausgehend von den für
+\pcs verwendeten \emph{GUI-Kompo\-nenten}, können diese in drei Kategorien
+unterteilt werden:
 \begin{itemize}
   \item \textbf{Basiskomponenten}\\
   Dabei handelt
-es sich um \acrshort{GUI}-Komponenten, deren Funktionen in unterschiedlichen \acrshort{GUI}-Frameworks 
-ähnlich sind und in unterschiedlichen Anwendungen eingesetzt werden
-können. Das bedeutet, dass sie nicht als domänenspezifisch angesehen werden
-können. Beispiele hierfür sind \acrshort{GUI}-Komponenten wie der \emph{Button} oder das
-\emph{Label}.
+es sich um \emph{GUI-Komponenten}, deren Funktionen in unterschiedlichen
+\emph{GUI-Frameworks} ähnlich sind und in unterschiedlichen Anwendungen
+eingesetzt werden können. Das bedeutet, dass sie nicht als domänenspezifisch angesehen werden
+können. Beispiele hierfür sind \emph{GUI-Komponenten} wie der \emph{Button} oder
+das \emph{Label}.
   \item\textbf{Komplexe Komponenten}\\
   Diese beschreiben domänenspezifische \gks, welche speziell für \pcs
 entwickelt wurden. Interaktionen und Funktionalitäten wurden bereits festgelegt und können nicht verändert werden.
-Ein Beispiel für eine komplexe Komponente ist die \gloss{Multiselection-Komponente}. 
+Ein Beispiel für eine komplexe Komponente ist die
+\gloss{Multiselection-Komponente}, welche in Abbildung \ref{Abb_msk} in Anhang
+\ref{zuwendungsblatt} dargestellt ist.
 
-  \item\textbf{Layout-Komponenten}\\
+  \item\textbf{Layoutkomponenten}\\
   Dabei handelt es sich
-um Komponenten, welche die Struktur der \acrshort{GUI} bestimmen. In anderen
-\acrshort{GUI}-Frameworks sind dies bspw.
-\emph{Panel} (\gloss{Swing}), \emph{Div} (HTML) oder \emph{Pane} (JavaFX).
+um Komponenten, welche die Struktur der \gui bestimmen. In anderen
+\emph{GUI-Frameworks} sind dies bspw.
+\emph{Panel} (\gloss{Swing}), \emph{Div} (\emph{HTML}) oder \emph{Pane}
+(\emph{JavaFX}).
 \end{itemize}
 \noindent
 Bei den Beschreibungen der \Ks muss auch die Möglichkeit bestehen Interaktionen
-festzulegen (siehe Anforderung \hyperref[AS5]{AS5}). Zu diesen
+festzulegen (siehe Anforderung \emph{\hyperref[AS5]{AS5}}). Zu diesen
 festgelegten Interaktionen gehören eine entsprechende Form und
 bestimmte Aktionen, die ausgeführt werden müssen. Die anderen \gks haben
-entweder feste (\kks) oder gar keine (Layout-Komponenten)
-Interaktionsmöglichkeiten.\\
+entweder feste (\emph{komplexe Komponenten}) oder gar keine
+(\emph{Layoutkomponenten}) Interaktionsmöglichkeiten.\\
 Bei der Entwicklung der \knks ist darauf zu achten, dass sie für jedes
-verwendete \acrshort{GUI}-Framework implementiert werden müssen. Damit wird verhindert,
-dass die Entwickler, die mit der \g arbeiten,
+verwendete \emph{GUI-Framework} implementiert werden müssen. Damit wird
+verhindert, dass die Entwickler, die mit der \g arbeiten,
 eigene \kks entwerfen, deren Wiederverwendungsgrad niedriger ist. Solche
 Komponenten sollten nur nach ausreichender Evaluation an einer zentralen Stelle
 implementiert und bereitgestellt werden. Die Notwendigkeit, dass die Quellcodes
 für diese \knks sowohl zur Entwicklungszeit als auch zur Laufzeit vorhanden sein müssen, ist ein Nachteil dieses Konzepts.\\
-Bei den Layoutkomponenten ist besonders
+Bei den \emph{Layoutkomponenten} ist besonders
 auf die Ausdruckskraft der für die Beschreibung dieser Komponenten verwendeten Bezeichnungen zu
-achten. Grund dafür ist, dass die \acrshort{GUI} auf unterschiedlichen
+achten. Grund dafür ist, dass die \gui auf unterschiedlichen
 Plattformen abgebildet werden soll, die spezielle Layoutmanager unterstützen.
 Ein Programmfenster auf dem Desktop lässt sich Beispielsweise als oberste
 Layoutkomponente festlegen. In der \deg ist in einem Web-Browser der
-Begriff \emph{Programmfenster} als oberste Layoutkomponenten nicht
+Begriff \emph{Programmfenster} als oberste \emph{Layoutkomponenten} nicht
 geläufig.
 Dieses \emph{Programmfester} auf dem Desktop wird in der \deg mit dem Browsertab
 assoziiert.\\
 Darüber hinaus sollen die Skripte für die Beschreibung der \guis so
-konzipiert werden, dass es möglich ist, andere GUI-Beschreibungen dort
-einzubinden (siehe Anforderung \hyperref[AS1]{AS1}). Somit werden eingebundene
-GUIs wiederum zu \gui-Komponenten.
+konzipiert werden, dass es möglich ist, andere \emph{GUI-Beschreibungen} dort
+einzubinden (siehe Anforderung \emph{\hyperref[AS1]{AS1}}). Somit werden
+eingebundene \guis wiederum zu \emph{GUI-Komponenten}.
 Ziel dessen ist es, dass die Entwickler aus mehreren einfachen \guis eine
 komplexe \gui erstellen können (Modularisierung). Die Gefahr die dabei besteht,
-ist, dass mit der Zeit viele einfache GUI-Beschreibungen mit ähnlicher
-Struktur entwickelt werden. Weiterhin verfolgt die \deg bei den GUIs von \pcs
+ist, dass mit der Zeit viele einfache \emph{GUI-Beschreibungen} mit ähnlicher
+Struktur entwickelt werden. Weiterhin verfolgt die \deg bei den \guis von \pcs
 ein bestimmtes Schema (\emph{Cooperate Design}), welches durch die
 Modularisierung untersützt wird. Hierbei ist es wichtigzu betonen, dass
-die DSL keine Sprache sein soll, mit der jede GUI beschrieben werden kann,
-sondern lediglich \guis für \pcs. Der Vorteil, der 
+die \emph{DSL} keine Sprache sein soll, mit der jede \gui beschrieben werden
+kann, sondern lediglich \guis für \emph{profil c/s}. Der Vorteil, der 
 sich aus dieser starken Modularisierung ergibt, ist, dass viele
-GUI-Beschreibungen wiederverwendet werden können. So ist es möglich, komplexe
-GUI-Beschreibungen zu entwickeln, die in Fachabteilungen mit fachlichen
-Konzepten assoziiert werden können.\\\\
-Suchmasken können beispielsweise nach diesem Konzept gestaltet, beliebig
+\emph{GUI-Beschreibungen} wiederverwendet werden können. So ist es möglich,
+komplexe \emph{GUI-Beschreibungen} zu entwickeln, die in Fachabteilungen mit
+fachlichen Konzepten assoziiert werden können.\\\\
+\noindent
+Suchmasken können bspw. nach diesem Konzept gestaltet, beliebig
 wiederverwendet und kombiniert werden. Hierzu werden unterschiedliche
 Suchfelder definiert, die aus einem \emph{Label} und einem \emph{Textfeld}
 bestehen (Beispiel siehe Abbildung \ref{Abb_suchfeld}).
 \myBigFigure{suchfeld.jpg}{Beispiel: Suchfeld für Name}{suchfeld}
 \noindent
-In einer Suchmaske können mehrere dieser Suchfelder beliebig kombiniert werden.
+In einer Suchmaske können mehrere dieser Suchfelder beliebig kombiniert werden
 (Beispiel siehe Abbildung \ref{Abb_suchmaske}).
 \myBigFigure{suchmaske.jpg}{Beispiel: Suchmaske}{suchmaske}
 \noindent
 Durch diese Möglichkeit der Kombination können auch komplexere fachliche
-Konzepte auf die \acrshort{GUI} bezogen werden, wie z.B.
+Konzepte auf die \gui bezogen werden, wie z.B.
 \emph{Personensuche}.\\\\
 Um die miteinander kombinierten \gks zu
 strukturieren, ist es notwendig, dass die \g Informationen über
 die Anordnung der \gks enthält. Diese Informationen müssen
 ausreichend abstrakt sein, damit sich diese Struktur auf unterschiedliche
-\acrshort{GUI}-Frameworks beziehen lässt. Dazu wird die Struktur innerhalb einer
-\acrshort{GUI} als Anordnung von Bereichen betrachtet. In der \g
+\emph{GUI-Frameworks} beziehen lässt. Dazu wird die Struktur innerhalb einer
+\gui als Anordnung von Bereichen betrachtet. In der \g
 werden diesen Bereichen die \gks zugeordnet. Genauere Informationen über die
 Anordnung dieser Bereiche dürfen nicht enthalten sein, da dies zu einer
 Orientierung an ein bestimmtes Layout führen würde (siehe Anforderung
-\hyperref[AS3]{AS3}).
+\emph{\hyperref[AS3]{AS3}}).
 Zudem ist weiterhin wichtig, dass den Bereichen jeweils nur eine Komponente
 zugeordnet werden kann, wodurchder Zwang zur vorher beschriebenen
 Kombination von eingebundenen \emph{GUI-Skripten} und definierten \gks verstärkt
 wird.\\
-Der Generator übernimmt beim Erzeugen des frameworkspezifischen Quellcodes die
-konkrete Anordnung der beschriebenen Bereiche. Grund dafür ist, dass die
+Der \emph{Generator} übernimmt beim Erzeugen des frameworkspezifischen
+Quellcodes die konkrete Anordnung der beschriebenen Bereiche. Grund dafür ist, dass die
 Anordnung der Komponenten frameworkspezifisch ist und teilweise unterschiedliche
 Layoutmanager in unterschiedlichen Frameworks unterstützt werden. Da für jedes
 eingesetzte Framework ein eigener Generator implementiert werden muss (siehe
@@ -165,27 +168,26 @@ Aufgabe weitgehend unabhängig von der Beschreibung der verwendeten
 
 \subsection{2. Iteration}
 Das grundsätzliche Konzept muss in dieser Iteration um ein Artefakt erweitert
-werden (siehe Abbildung \ref{Abb_konzept_2}).
-\myBigFigure{konzept_2.jpg}{Konzeption der DSL-Umgebung (2.
-Iteration)}{konzept_2}
-\noindent
+werden (siehe Abbildung \ref{Abb_konzept_2}).\\
 Eine Änderung, die in dieser Grafik nicht dargestellt wird, ist, dass die
 Aktionen, die bei Interaktionen mit \gks ausgeführt werden,
 nicht in der \emph{GUI-DSL} definiert werden sollen. Dies liegt an der starken
 Variation der Aktionen, wodurch diese kaum abstrahiert werden können.\\
+\myBigFigure{konzept_2.jpg}{2. Iteration: Konzeption der DSL-Umgebung}{konzept_2}
+\noindent
 Eine weitere Änderung ist, dass die \gks, die in einem
 \emph{GUI-Skript} direkt definiert werden, in einer anderen Beschreibungen
 verändert werden können. Die Voraussetzung dafür ist, dass dieses
 \emph{GUI-Skript} in die andere Beschreibung eingebunden ist. Dadurch können die
 wiederverwendeten Komponenten angepasst werden, was die Flexibilität steigert
-(siehe Anforderung \hyperref[AS2]{AS2}).\\
+(siehe Anforderung \emph{\hyperref[AS2]{AS2}}).\\
 Darüber hinaus soll die Möglichkeit bestehen, bestimmte Werte, welche die
 Attribute von \gks annehmen können, in \emph{Properties-Dateien}
 auszulagern, wodurch die \emph{GUI-DSL} weitestgehend entlastet wird. Allerdings
-muss für die Zuweisung von \gks zu Wert-Beschreibungen in der
+muss für die Zuweisung von \gks zu Wertbeschreibungen in der
 \emph{Properties-Datei} und dem \emph{GUI-Skript} ein eindeutiger Schlüssel definiert werden.\\
-Der Generator muss die festgelegten \emph{Properties-Dateien} in die Generierung
-mit einbeziehen und ihnen die entsprechenden Werte entnehmen. Dabei gilt, dass
+Der \emph{Generator} muss die festgelegten \emph{Properties-Dateien} in die
+Generierung mit einbeziehen und ihnen die entsprechenden Werte entnehmen. Dabei gilt, dass
 nicht mehr nach einem bestimmten Attribut einer Komponente in der
 \emph{Properties-Datei} gesucht wird, wenn diesem
 Attribut innerhalb des \emph{GUI-Skripts} ein bestimmter Wert zugewiesen
@@ -198,11 +200,11 @@ Artefakt hinzu, durch welches das Layout beschrieben werden soll.
 Das führt dazu, dass die Beschreibung des Layouts nicht mehr im Generator
 stattfindet, sondern nur noch frameworkspezifisch generiert werden muss. In Abbildung
 \ref{Abb_konzept_3} ist das neue Konzept schematisch dargestellt.
-\myBigFigure{konzept_3.jpg}{Konzeption der DSL-Umgebung (3.
-Iteration)}{konzept_3}
+\myBigFigure{konzept_3.jpg}{3. Iteration: Konzeption der DSL-Umgebung}{konzept_3}
 \noindent
 Da die Layoutbeschreibung in eine separate Datei ausgeglagert wird, müssen die
-\gks aus dem \emph{GUI-Skript} mit den Festlegungen in der Layout-Datei referenziert werden können.\\
+\gks aus dem \emph{GUI-Skript} mit den Festlegungen in der \emph{Layout-Datei}
+referenziert werden können.\\
 Bezogen auf die im \emph{GUI-Skript} definierten Bereiche ist aufgefallen,
 dass die Angabe der Anzahl der Bereiche nicht notwendig ist, da dieser Wert
 doppelt definiert weden würde. Zum einen würde dies direkt in der Angabe der
@@ -210,12 +212,12 @@ Anzahl festgelegt werden und andererseits indirekt durch die Zuweisung der \gks
 zu den Bereichen. Auf Basis dieser doppelten Angabe sollten
 ursprünglich Validierungen ausgeführt werden.
 Dies widerspricht jedoch der Anforderung, dass so wenig
-Codezeilen wie möglich geschrieben werden sollen, um eine \acrshort{GUI} zu
-beschreiben (siehe Anforderung \hyperref[AS4]{AS4}).\\
+Codezeilen wie möglich geschrieben werden sollen, um eine \gui zu
+beschreiben (siehe Anforderung \emph{\hyperref[AS4]{AS4}}).\\
 Weiterhin ist aufgefallen, dass in einem \emph{GUI-Skript} nur eine
-\emph{Properties-Datei} angegeben werden kann, wohingegen in den GUI-Klassen der
-\deg jedoch mehrere dieser Dateien festgelegt werden können. Dies ist
-auch in der \emph{GUI-DSL} zu beachten.\\
+\emph{Properties-Datei} angegeben werden kann, wohingegen in den
+\emph{GUI-Klassen} der \deg jedoch mehrere dieser Dateien festgelegt werden
+können. Dies ist auch in der \emph{GUI-DSL} zu beachten.\\
 Neben den Komponenten \emph{Button} und \emph{Label} müssen folgende weitere
 \Ks definiert werden können:
 \begin{itemize}
@@ -231,7 +233,7 @@ Neben den Komponenten \emph{Button} und \emph{Label} müssen folgende weitere
   Eine Ansicht, in der aus mehreren Taben ein Tab visualisiert werden
   kann.
   \item \textbf{Interchangeable}\\
-  Ein Bereich, in dem während der Laufzeit unterschiedliche \glspl{GUI}
+  Ein Bereich, in dem während der Laufzeit unterschiedliche \guis
   eingebunden werden können.
 \end{itemize}
 Weiterhin müssen die Bezeichnungen der
@@ -240,8 +242,8 @@ Interaktionstypen an die Bezeichnungen der \emph{Interaktionsformen (IF)} der
 für entsprechende \gks verwendet werden, die für die Umsetzung des Prototyps
 notwendig sind.
 \begin{itemize}
-  \item \textbf{Label: \emph{IfTextDisplay}}
-  \item \textbf{Tree: \emph{IfTree}, \emph{IfActivator}}
+  \item \textbf{Label:} \emph{IfTextDisplay}
+  \item \textbf{Tree:} \emph{IfTree}, \emph{IfActivator}
 \end{itemize}
 Diese Standardinteraktionstypen müssen nicht in den jeweiligen Komponenten
 definiert werden.
