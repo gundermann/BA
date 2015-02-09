@@ -192,7 +192,7 @@ Input-Modell des \emph{Trees} nicht definiert ist, muss ein Standardwert dafür
 eingesetzt werden.
 Des Weiteren muss für den Baum ein \emph{CellRenderer} definiert
 werden (siehe Listing \ref{LST_Tree}).
-\begin{lstlisting}[{caption = Generierung eines \emph{Trees}},{label =
+\begin{lstlisting}[{caption = Generierung eines Trees},{label =
 LST_Tree}]
 def compileTree(TreeDefinition definition)'''
 	«addImport("import DE.data_experts.jwammc.core.pf.PfTree;")»
@@ -263,7 +263,7 @@ die Deklaration der \gk und die Einbindung in einen Layoutcontainer nötig
 Komponenten untersucht werden. Darauf wird in dieser Arbeit jedoch nicht weiter
 eingegangen. 
 \begin{lstlisting}[{caption= Generierung der Einbindung
-anderer \emph{GUI-Skripte} },{label=LST_Used}] 
+anderer GUI-Skripte },{label=LST_Used}] 
 def compile(UsedDescription description) '''
 	«IF description.descriptionType instanceof UIDescriptionImport»
 		«var castedDescriptionType = 
@@ -302,7 +302,7 @@ Abbildung \ref{Abb_explorerGen} (in Anhang
 Da für die \emph{FP-Klassen} lediglich der Klassenrumpf und der Konstruktor
 generiert werden, ist diese Aufgabe entsprechend einfach. Dafür werden eine
 Oberklasse und entsprechende Importe benötigt, wie Listing \ref{LST_FPGen} zu entnehmen ist.
-\begin{lstlisting}[{caption= Generierung der \emph{FP-Klasse}
+\begin{lstlisting}[{caption= Generierung der FP-Klasse
 },{label=LST_FPGen}] 
 def genFpSource() '''
 	«addImport("import DE.data_experts.jwam.tools.FpObject;")»

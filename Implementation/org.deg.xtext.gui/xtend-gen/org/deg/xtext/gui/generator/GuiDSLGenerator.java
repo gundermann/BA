@@ -36,7 +36,9 @@ import org.eclipse.xtext.xbase.lib.IterableExtensions;
 import org.eclipse.xtext.xbase.lib.IteratorExtensions;
 
 /**
- * Generates code from your model files on save.
+ * Generates code for the multichannel-framework of the data experts GmbH.
+ * 
+ * @author Niels Gundermann
  */
 @SuppressWarnings("all")
 public class GuiDSLGenerator implements IGenerator {
@@ -116,20 +118,20 @@ public class GuiDSLGenerator implements IGenerator {
     _builder.append(this.descriptionname, "\t");
     _builder.append(" fp) {");
     _builder.newLineIfNotEmpty();
-    _builder.append("    \t\t\t");
+    _builder.append("\t\t");
     _builder.append("super( iafContext, fp );");
     _builder.newLine();
-    _builder.append("    \t\t\t");
+    _builder.append("\t\t");
     String _addGlobalVar = this.addGlobalVar((("Fp" + this.descriptionname) + " fp;"));
-    _builder.append(_addGlobalVar, "    \t\t\t");
+    _builder.append(_addGlobalVar, "\t\t");
     _builder.newLineIfNotEmpty();
-    _builder.append("   \t\t\t\t");
+    _builder.append("\t\t");
     _builder.append("this.fp = fp;");
     _builder.newLine();
-    _builder.append("   \t\t\t\t");
+    _builder.append("\t\t");
     _builder.append("try {");
     _builder.newLine();
-    _builder.append("      \t\t\t\t");
+    _builder.append("\t\t\t");
     _builder.append("initCommands();");
     _builder.newLine();
     _builder.append("\t\t    ");
@@ -138,33 +140,33 @@ public class GuiDSLGenerator implements IGenerator {
     _builder.append("\t    ");
     _builder.append("}");
     _builder.newLine();
-    _builder.append("    \t\t\t");
+    _builder.append("\t    ");
     _builder.append("catch ( Exception ex ) {");
     _builder.newLine();
-    _builder.append("      \t\t\t\t");
+    _builder.append("\t    \t");
     _builder.append("ExceptionManager.getManager().addAndShow( ex );");
     _builder.newLine();
-    _builder.append("    \t\t\t");
+    _builder.append("\t    ");
+    _builder.append("}");
+    _builder.newLine();
+    _builder.append("\t");
     _builder.append("}");
     _builder.newLine();
     _builder.append("   \t\t\t");
-    _builder.append("}");
-    _builder.newLine();
-    _builder.append("   \t\t\t\t");
     CharSequence _genIAF = this.genIAF(description);
-    _builder.append(_genIAF, "   \t\t\t\t");
+    _builder.append(_genIAF, "   \t\t\t");
     _builder.newLineIfNotEmpty();
-    _builder.append("   \t\t\t\t");
+    _builder.append("   \t\t\t");
     CharSequence _genCommands = this.genCommands(description);
-    _builder.append(_genCommands, "   \t\t\t\t");
+    _builder.append(_genCommands, "   \t\t\t");
     _builder.newLineIfNotEmpty();
-    _builder.append("   \t\t\t\t");
+    _builder.append("   \t\t\t");
     CharSequence _genCommandMethods = this.genCommandMethods(description);
-    _builder.append(_genCommandMethods, "   \t\t\t\t");
+    _builder.append(_genCommandMethods, "   \t\t\t");
     _builder.newLineIfNotEmpty();
-    _builder.append("   \t\t\t\t");
+    _builder.append("   \t\t\t");
     CharSequence _genGlobalVars = this.genGlobalVars();
-    _builder.append(_genGlobalVars, "   \t\t\t\t");
+    _builder.append(_genGlobalVars, "   \t\t\t");
     _builder.newLineIfNotEmpty();
     _builder.append("}");
     _builder.newLine();
@@ -187,8 +189,6 @@ public class GuiDSLGenerator implements IGenerator {
         _builder.newLine();
       }
     }
-    _builder.append("\t");
-    _builder.newLine();
     return _builder;
   }
   
@@ -212,20 +212,24 @@ public class GuiDSLGenerator implements IGenerator {
         _builder.append(commandName, "\t");
         _builder.append("( getAusfuehrer() ) {");
         _builder.newLineIfNotEmpty();
-        _builder.append("      ");
+        _builder.append("\t");
+        _builder.append("\t");
         _builder.append("@Override");
         _builder.newLine();
-        _builder.append("      ");
+        _builder.append("\t");
+        _builder.append("\t");
         _builder.append("public void ausfuehren() {");
         _builder.newLine();
-        _builder.append("        ");
-        _builder.append(id, "        ");
+        _builder.append("\t");
+        _builder.append("\t\t");
+        _builder.append(id, "\t\t\t");
         _builder.append("();");
         _builder.newLineIfNotEmpty();
-        _builder.append("      ");
+        _builder.append("\t");
+        _builder.append("\t");
         _builder.append("}");
         _builder.newLine();
-        _builder.append("    ");
+        _builder.append("\t");
         _builder.append("};");
         _builder.newLine();
       }
@@ -276,9 +280,9 @@ public class GuiDSLGenerator implements IGenerator {
         }
       }
     }
-    _builder.append("\t\t");
+    _builder.append("\t");
     CharSequence _compileSpecificInteractionTypes = this.compileSpecificInteractionTypes(definition);
-    _builder.append(_compileSpecificInteractionTypes, "\t\t");
+    _builder.append(_compileSpecificInteractionTypes, "\t");
     _builder.newLineIfNotEmpty();
     return _builder;
   }
@@ -432,12 +436,12 @@ public class GuiDSLGenerator implements IGenerator {
     _builder.append(this.specificFilename, "\t ");
     _builder.append("( RequestHandler parent ) {");
     _builder.newLineIfNotEmpty();
-    _builder.append("   \t\t \t\t");
+    _builder.append("\t \t");
     _builder.append("super( parent, \"");
-    _builder.append(this.descriptionname, "   \t\t \t\t");
+    _builder.append(this.descriptionname, "\t \t");
     _builder.append("\" );");
     _builder.newLineIfNotEmpty();
-    _builder.append("  \t\t\t");
+    _builder.append("\t ");
     _builder.append("}");
     _builder.newLine();
     _builder.append("}");
@@ -513,7 +517,6 @@ public class GuiDSLGenerator implements IGenerator {
     _builder.append(_replace, "");
     _builder.append(";");
     _builder.newLineIfNotEmpty();
-    _builder.newLine();
     return _builder;
   }
   
@@ -589,35 +592,30 @@ public class GuiDSLGenerator implements IGenerator {
       boolean _isEmpty = _usedDescriptions_1.isEmpty();
       boolean _not = (!_isEmpty);
       if (_not) {
-        _builder.append("\t\t\t\t");
         String _addImport = this.addImport("import DE.data_experts.jwammc.core.pf.PfPanel;");
-        _builder.append(_addImport, "\t\t\t\t");
+        _builder.append(_addImport, "");
         _builder.newLineIfNotEmpty();
-        _builder.append("\t\t\t\t");
         _builder.append("PfPanel panel = new PfPanel(new BorderLayout());");
         _builder.newLine();
-        _builder.append("\t\t\t\t");
         _builder.append("panel.add(");
         EList<UsedDescription> _usedDescriptions_2 = description.getUsedDescriptions();
         UsedDescription _get = _usedDescriptions_2.get(0);
         String _id = _get.getId();
-        _builder.append(_id, "\t\t\t\t");
+        _builder.append(_id, "");
         _builder.append(", BorderLayout.NORTH);");
         _builder.newLineIfNotEmpty();
-        _builder.append("\t\t\t\t");
         _builder.append("panel.add(");
         EList<UsedDescription> _usedDescriptions_3 = description.getUsedDescriptions();
         UsedDescription _get_1 = _usedDescriptions_3.get(1);
         String _id_1 = _get_1.getId();
-        _builder.append(_id_1, "\t\t\t\t");
+        _builder.append(_id_1, "");
         _builder.append(", BorderLayout.SOUTH);");
         _builder.newLineIfNotEmpty();
-        _builder.append("\t\t\t\t");
         _builder.append("this.add(panel, BorderLayout.WEST);");
         _builder.newLine();
       }
     }
-    _builder.append("\t\t");
+    _builder.append("\t\t\t");
     _builder.append("}");
     _builder.newLine();
     return _builder;
@@ -843,9 +841,10 @@ public class GuiDSLGenerator implements IGenerator {
     _builder.newLineIfNotEmpty();
     _builder.append("\t");
     _builder.newLine();
+    _builder.append("\t");
     _builder.append("this.add(");
     String _id_4 = definition.getId();
-    _builder.append(_id_4, "");
+    _builder.append(_id_4, "\t");
     _builder.append(", BorderLayout.CENTER);");
     _builder.newLineIfNotEmpty();
     return _builder;
@@ -971,10 +970,11 @@ public class GuiDSLGenerator implements IGenerator {
       }
     }
     _builder.newLine();
-    _builder.append(this.mainContainer, "");
+    _builder.append("\t\t");
+    _builder.append(this.mainContainer, "\t\t");
     _builder.append(".add(");
     String _id_5 = definition.getId();
-    _builder.append(_id_5, "");
+    _builder.append(_id_5, "\t\t");
     _builder.append(", BorderLayout.NORTH);");
     _builder.newLineIfNotEmpty();
     return _builder;

@@ -4,8 +4,9 @@
 package org.deg.xtext.gui.generator
 
 import java.util.ArrayList
+import java.util.HashMap
 import java.util.List
-import org.deg.xtext.gui.guiDSL.ButtonDefinition
+import java.util.Map
 import org.deg.xtext.gui.guiDSL.Definition
 import org.deg.xtext.gui.guiDSL.InterchangeableDefinition
 import org.deg.xtext.gui.guiDSL.LabelDefinition
@@ -14,16 +15,15 @@ import org.deg.xtext.gui.guiDSL.TreeDefinition
 import org.deg.xtext.gui.guiDSL.UIDescription
 import org.deg.xtext.gui.guiDSL.UIDescriptionImport
 import org.deg.xtext.gui.guiDSL.UsedDescription
+import org.eclipse.emf.common.util.URI
 import org.eclipse.emf.ecore.resource.Resource
 import org.eclipse.xtext.generator.IFileSystemAccess
 import org.eclipse.xtext.generator.IGenerator
-import org.eclipse.emf.common.util.URI
-import java.util.Map
-import java.util.HashMap
 
 /**
- * Generates code from your model files on save.
+ * Generates code for the multichannel-framework of the data experts GmbH.
  * 
+ * @author Niels Gundermann
  */
 class GuiDSLGenerator implements IGenerator {
 
@@ -65,21 +65,21 @@ class GuiDSLGenerator implements IGenerator {
 		
 		public class «specificFilename» extends IpObject{
 			public «specificFilename»( IAFContext iafContext, final Fp«descriptionname» fp) {
-    			super( iafContext, fp );
-    			«addGlobalVar("Fp" + descriptionname + ' fp;')»
-   				this.fp = fp;
-   				try {
-      				initCommands();
+				super( iafContext, fp );
+				«addGlobalVar("Fp" + descriptionname + ' fp;')»
+				this.fp = fp;
+				try {
+					initCommands();
 				    initIAFs( iafContext );
 			    }
-    			catch ( Exception ex ) {
-      				ExceptionManager.getManager().addAndShow( ex );
-    			}
-   			}
-   				«description.genIAF»
-   				«description.genCommands»
-   				«description.genCommandMethods»
-   				«genGlobalVars»
+			    catch ( Exception ex ) {
+			    	ExceptionManager.getManager().addAndShow( ex );
+			    }
+			}
+   			«description.genIAF»
+   			«description.genCommands»
+   			«description.genCommandMethods»
+   			«genGlobalVars»
 		}
 		
 	'''
@@ -90,7 +90,6 @@ class GuiDSLGenerator implements IGenerator {
 			
 		}
 		«ENDFOR»
-	
 	'''
 	
 	def genCommands(UIDescription description)'''
@@ -99,11 +98,11 @@ class GuiDSLGenerator implements IGenerator {
 	 		«var commandName = commands.get(id)»
 	 		«addImport("import DE.data_experts.jwam.util.CmdAusfuehrer" + commandName + ";")»
 	 		«id»Command = new CmdAusfuehrer«commandName»( getAusfuehrer() ) {
-      @Override
-      public void ausfuehren() {
-        «id»();
-      }
-    };
+	 			@Override
+	 			public void ausfuehren() {
+	 				«id»();
+	 			}
+	 		};
 	 	«ENDFOR»
 	 }
 	'''
@@ -122,7 +121,6 @@ class GuiDSLGenerator implements IGenerator {
 	«ELSEIF definition.concreteDefition.name == 'Tree'»
 		«(definition.concreteDefition as TreeDefinition).compileTreeStandardIAF»
 	«ENDIF»
-	«««		Spezielle Interaktionsformen
 		«definition.compileSpecificInteractionTypes»
 	'''
 	
@@ -197,8 +195,8 @@ class GuiDSLGenerator implements IGenerator {
 		public class «specificFilename» extends FpObject{
 			
 			 public «specificFilename»( RequestHandler parent ) {
-   		 		super( parent, "«descriptionname»" );
-  			}
+			 	super( parent, "«descriptionname»" );
+			 }
 		}
 	'''	
 	def String getGetPackageName(URI uri){
@@ -245,7 +243,6 @@ class GuiDSLGenerator implements IGenerator {
 
 	def genPackage() '''
 		package «packageName.replace("\\/", "\\.")»;
-		
 	'''
 
 	def String genImports() {
@@ -280,7 +277,7 @@ class GuiDSLGenerator implements IGenerator {
 						«FOR usedDescription : description.usedDescriptions»
 							«usedDescription.compile»
 						«ENDFOR»
-«««						Layout Start
+	«««		BEGING Layout
 						«IF !description.usedDescriptions.empty»
 							«addImport("import DE.data_experts.jwammc.core.pf.PfPanel;")»
 							PfPanel panel = new PfPanel(new BorderLayout());
@@ -288,7 +285,7 @@ class GuiDSLGenerator implements IGenerator {
 							panel.add(«description.usedDescriptions.get(1).id», BorderLayout.SOUTH);
 							this.add(panel, BorderLayout.WEST);
 						«ENDIF»
-«««						Layout Ende
+	«««		END Layout
 				}
 	'''
 
@@ -376,9 +373,9 @@ class GuiDSLGenerator implements IGenerator {
 	«definition.id» = new PfCardPanel();
 		«definition.id».setIfName("«definition.id»");
 		
-«««		Layout Start
+	«««		BEGING Layout
 	this.add(«definition.id», BorderLayout.CENTER);
-«««		Layout Ende
+	«««		END Layout
 	'''
 
 	def compileTree(TreeDefinition definition) '''
@@ -397,13 +394,14 @@ class GuiDSLGenerator implements IGenerator {
 			«definition.id».setCellRenderer( new TreeCellRenderer() );
 		
 		
-		«««		Layout kommt in eine separate Datei
+		«««		BEGING Layout  
 		«addImport("import DE.data_experts.jwammc.core.pf.PfScrollPane;")»
 		«addImport("import java.awt.Dimension;")»
 		«addGlobalVar("PfScrollPane scrollPane;")»
 		scrollPane = new PfScrollPane(«definition.id»);
 		scrollPane.setMinimumSize( new Dimension( 200, 200 ) );
 		this.add( scrollPane, BorderLayout.CENTER );
+		«««		END Layout
 	'''
 	
 	def getType(String inputType) {
@@ -420,8 +418,9 @@ class GuiDSLGenerator implements IGenerator {
 			«genProperty(definition.id, 'setText', definition.properties.text, true)»
 		«ENDIF»
 		
-«««		Label wird in der Layoutdatei genommen werden
+		«««		BEGING Layout
 		«mainContainer».add(«definition.id», BorderLayout.NORTH);
+		«««		END Layout
 	'''
 
 	def genProperty(String id, String method, String value, Boolean isString) '''

@@ -1,5 +1,11 @@
 grammar org.deg.xtext.gui.GuiDSL with org.eclipse.xtext.common.Terminals
 
+/**
+ * Grammar for the gui-description files.
+ * 
+ * @author Niels Gundermann
+ */
+ 
 generate guiDSL "http://www.deg.org/xtext/gui/GuiDSL"
 
 UIDescription:

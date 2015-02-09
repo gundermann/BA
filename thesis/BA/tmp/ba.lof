@@ -6,7 +6,7 @@
 \contentsline {figure}{\numberline {2}{\ignorespaces Komplexes Werkzeug mit Benutzt-Beziehung}}{7}{figure.2.2}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {3}{\ignorespaces Die grundlegende Idee hinter dem \emph {MDSD}}}{15}{figure.3.3}
-\contentsline {figure}{\numberline {4}{\ignorespaces Parsen allgemein}}{25}{figure.3.4}
+\contentsline {figure}{\numberline {4}{\ignorespaces Parsen allgemein}}{26}{figure.3.4}
 \contentsline {figure}{\numberline {5}{\ignorespaces Funktionsweise von \emph {Parserkombinatoren}}}{28}{figure.3.5}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
@@ -43,7 +43,7 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {31}{\ignorespaces Standalone-Client: Zuwendungsblatt}}{X}{figure.A.31}
 \contentsline {figure}{\numberline {32}{\ignorespaces Web-Client: Zuwendungsblatt}}{XI}{figure.A.32}
-\contentsline {figure}{\numberline {33}{\ignorespaces Multiselection-Komponenten}}{XII}{figure.A.33}
+\contentsline {figure}{\numberline {33}{\ignorespaces Multiselection-Komponente}}{XII}{figure.A.33}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {34}{\ignorespaces Generierte Explorer-GUI}}{XIII}{figure.B.34}
 \addvspace {10\p@ }
