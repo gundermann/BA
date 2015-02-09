@@ -97,7 +97,6 @@ def addImport(String newImport) {
 			imports.add(newImport)
 		}
 	}
-	
 def addGlobalVar(String globalVar) {
 		if(!globalVars.contains(globalVar))
 			globalVars.add(globalVar)
@@ -116,7 +115,6 @@ def compileComplex(UIDescription description) '''
 	«description.genRest»
 	}	
 '''
-	
 def genRest(UIDescription description)'''
 	«addImport("import java.awt.BorderLayout;")»
 	public «guiFilename»(){
@@ -172,10 +170,10 @@ def compileLabel(LabelDefinition definition) '''
 	«definition.id» = new PfLabel();
 	«definition.id».setIfName("«definition.id»");
 	«IF definition.properties != null»
-		«genProperty(definition.id, 'setText',definition.properties.text, true)»
+		«genProperty(definition.id, 'setText', 
+		definition.properties.text, true)»
 	«ENDIF»
 '''
-
 def genProperty(String id, String method, String value, Boolean isString) '''
 	«IF value != null»
 		«IF isString»
@@ -206,10 +204,12 @@ def compileTree(TreeDefinition definition)'''
 	«definition.id».setIfName("«definition.id»");
 	«IF definition.inputType == null»
 		«addImport("import DE.data_experts.util.ObjectNode;")»
-		«definition.id».setTreeModel( new DefaultTreeModel( new ObjectNode() ) );
+		«definition.id».setTreeModel( 
+			new DefaultTreeModel( new ObjectNode() ) );
 	«ELSE»
-		«definition.id».setTreeModel( new DefaultTreeModel( 
-		new «definition.inputType.substring(1,definition.inputType.length-1)»() ) );
+		«definition.id».setTreeModel( 
+			new DefaultTreeModel( 
+				new «definition.inputType.getType»() ) );
 	«ENDIF»
 		«definition.id».setCellRenderer( new TreeCellRenderer() );
 '''
@@ -266,9 +266,11 @@ eingegangen.
 anderer \emph{GUI-Skripte} },{label=LST_Used}] 
 def compile(UsedDescription description) '''
 	«IF description.descriptionType instanceof UIDescriptionImport»
-		«var castedDescriptionType = description.descriptionType asUIDescriptionImport» 
-		«var usedQualifiedClassName = castedDescriptionType.descriptionName.genGuiFileName»
-		«addGlobalVar(usedQualifiedClassName + ' ' + description.id + ';')»
+		«var castedDescriptionType = 
+			description.descriptionType as UIDescriptionImport» 
+		«var usedQualifiedClassName = 
+			castedDescriptionType.descriptionName.genGuiFileName»
+		«addGlobalVar(usedQualifiedClassName + ' ' + description.id+';')»
 		«description.id» = new « usedQualifiedClassName»();
 	«ELSE»
 		«genComplexComponent(description)»
@@ -304,7 +306,8 @@ Oberklasse und entsprechende Importe benötigt, wie Listing \ref{LST_FPGen} zu en
 },{label=LST_FPGen}] 
 def genFpSource() '''
 	«addImport("import DE.data_experts.jwam.tools.FpObject;")»
-	«addImport("import de.jwam.handling.toolconstruction.request.RequestHandler;")»
+	«addImport("import 
+		de.jwam.handling.toolconstruction.request.RequestHandler;")»
 	public class «specificFilename» extends FpObject{
 		 public «specificFilename»( RequestHandler parent ) {
    	 		super( parent, "«descriptionname»" );
@@ -324,7 +327,8 @@ def genIpSource(UIDescription description)'''
 	«addImport("import de.jwamx.technology.iafpf.guimanagement.IAFContext;")»
 	«addImport("import DE.data_experts.util.degexception.ExceptionManager;")»
 	public class «specificFilename» extends IpObject{
-		public «specificFilename»( IAFContext iafContext, final Fp«descriptionname» fp) {
+		public «specificFilename»( IAFContext iafContext,
+			final Fp«descriptionname» fp) {
     		super( iafContext, fp );
     		«addGlobalVar("Fp" + descriptionname + ' fp;')»
    			this.fp = fp;
@@ -362,12 +366,13 @@ def genIAF(UIDescriptiondescription)'''
 	 	«ENDFOR»
 	 }
 '''
-	
 def compileIAF(Definition definition)'''
 	«IF definition.concreteDefition.name == 'Label'»
-		«(definition.concreteDefition as LabelDefinition).compileLabelStandardIAF»
+		«(definition.concreteDefition 
+			as LabelDefinition).compileLabelStandardIAF»
 	«ELSEIF definition.concreteDefition.name == 'Tree'»
-		«(definition.concreteDefition as TreeDefinition).compileTreeStandardIAF»
+		«(definition.concreteDefition 
+			as TreeDefinition).compileTreeStandardIAF»
 	«ENDIF»
 	«««		Spezielle Interaktionsformen
 		«definition.compileSpecificInteractionTypes»
@@ -387,13 +392,13 @@ def compileTreeStandardIAF(TreeDefinition definition)'''
 		«definition.id.genIAFActivator»
 		«definition.id.genIAFTree»
 	'''
-	
 def genIAFTree(String id) '''
-		«genIAFSource("DE.data_experts.jwam.gui.interaction.IfTree","de.jwamx.technology.iafpf.command.cmdSelect",id)»
+		«genIAFSource("DE.data_experts.jwam.gui.interaction.IfTree",
+			"de.jwamx.technology.iafpf.command.cmdSelect",id)»
 	'''
-	
 def genIAFActivator(String id) '''
-		«genIAFSource("de.jwamx.technology.iafpf.interaction.ifActivator", "de.jwamx.technology.iafpf.command.cmdActivate", id)»
+		«genIAFSource("de.jwamx.technology.iafpf.interaction.ifActivator", 
+			"de.jwamx.technology.iafpf.command.cmdActivate", id)»
 	'''
 \end{lstlisting}
 Die Methode \emph{genIAFSource} hat ebenfalls einen sehr hohen
@@ -407,16 +412,17 @@ def genIAFSource(String iafSource, String commandSource, String id) '''
 	«var iafNameWithPrefix = iafSource.split("\\.").last»
 	«var iafName = iafNameWithPrefix.substring(2)»
 	«addGlobalVar(iafNameWithPrefix + " "+id+iafName+';')»
-	«id+iafName» = («iafNameWithPrefix») iafContext.interactionForm( «iafNameWithPrefix».class, "«id»" );
+	«id+iafName» = («iafNameWithPrefix») iafContext.interactionForm( 
+		«iafNameWithPrefix».class, "«id»" );
 	«IF !commandSource.equals("")»
 		«addImport("import "+ commandSource +  ";")»
 		«var commandNameWithPrefix = commandSource.getClassOfSource»
 		«var commandName = commandNameWithPrefix.substring(3)» 
-		«id + iafName».attach«commandName»Command( «id + commandName»Command );
+		«id + iafName».attach«commandName»Command( 
+			«id + commandName»Command );
 		«addCommand(id, commandName)»
 	«ENDIF»
 '''
-	
 def addCommand(String id, String commandName) {
 	addGlobalVar("cmd"+commandName + ' ' + id + commandName + "Command;")
 	commands.put(id+commandName, commandName);
@@ -469,7 +475,7 @@ def genCommandMethods(UIDescription description)'''
 	«ENDFOR»
 	'''
 \end{lstlisting}
-\noindent\\\\
+\noindent
 Der beiliegende Datenträger enthält die Generatorklasse (siehe
 \emph{\hyperref[cd]{Anlage}}).
 In den Methoden zur Generierung von \gks für die \emph{GUI-Klassen}, sind die

@@ -116,9 +116,10 @@ DEF Label as "HEAD" :
 END DEF
 DEF Button as "Interactbt": 
 	text="Interagiere"
-	interaction="btinteraction" type=CLICK with actions:type=UiAction element="HEAD":Text="Du hast interagiert"
+	interaction="btinteraction" type=CLICK with actions:
+		type=UiAction element="HEAD":Text="Du hast interagiert"
 END DEF
-DEF MultiSelection as "Multiselect" :
+DEF MultiSelection as "Multiselect":
 	inputType="valuepackage.Values" 
 	selectableValues="valuepackage.Values.asList()"
 END DEF
@@ -454,8 +455,8 @@ einzubinden sind.
 Die \Ks \emph{Tree} und \emph{Table} benötigen lediglich eine Referenz zum
 Input-Modell (siehe Abbildung \ref{Abb_I3_5} und
 \ref{Abb_I3_6}).
-\myBigFigure{v3-5.jpg}{3. Iteration: TabView}{I3_5}
-\myBigFigure{v3-6.jpg}{3. Iteration: TabView}{I3_6}
+\myBigFigure{v3-5.jpg}{3. Iteration: Tree}{I3_5}
+\myBigFigure{v3-6.jpg}{3. Iteration: Table}{I3_6}
 
 
 \subsection*{Konkrete Syntax}

@@ -392,8 +392,7 @@ class GuiDSLGenerator implements IGenerator {
 			«addImport("import DE.data_experts.util.ObjectNode;")»
 			«definition.id».setTreeModel( new DefaultTreeModel( new ObjectNode() ) );
 		«ELSE»
-			«definition.id».setTreeModel( new DefaultTreeModel( new «definition.inputType.substring(1,
-			definition.inputType.length - 1)»() ) );
+			«definition.id».setTreeModel( new DefaultTreeModel( new «definition.inputType.getType»() ) );
 		«ENDIF»
 			«definition.id».setCellRenderer( new TreeCellRenderer() );
 		
@@ -406,6 +405,11 @@ class GuiDSLGenerator implements IGenerator {
 		scrollPane.setMinimumSize( new Dimension( 200, 200 ) );
 		this.add( scrollPane, BorderLayout.CENTER );
 	'''
+	
+	def getType(String inputType) {
+		inputType.substring(1,
+			inputType.length - 1)
+	}
 
 	def compileLabel(LabelDefinition definition) '''
 		«addImport("import DE.data_experts.jwammc.core.pf.PfLabel;")»

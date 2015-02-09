@@ -895,11 +895,8 @@ public class GuiDSLGenerator implements IGenerator {
         _builder.append(_id_5, "");
         _builder.append(".setTreeModel( new DefaultTreeModel( new ");
         String _inputType_1 = definition.getInputType();
-        String _inputType_2 = definition.getInputType();
-        int _length = _inputType_2.length();
-        int _minus = (_length - 1);
-        String _substring = _inputType_1.substring(1, _minus);
-        _builder.append(_substring, "");
+        String _type = this.getType(_inputType_1);
+        _builder.append(_type, "");
         _builder.append("() ) );");
         _builder.newLineIfNotEmpty();
       }
@@ -931,6 +928,12 @@ public class GuiDSLGenerator implements IGenerator {
     _builder.append("this.add( scrollPane, BorderLayout.CENTER );");
     _builder.newLine();
     return _builder;
+  }
+  
+  public String getType(final String inputType) {
+    int _length = inputType.length();
+    int _minus = (_length - 1);
+    return inputType.substring(1, _minus);
   }
   
   public CharSequence compileLabel(final LabelDefinition definition) {

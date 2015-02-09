@@ -560,6 +560,7 @@ nonterminalen Symbole der Grammatik \vcite{fowler}{245}. Die Funktionen geben da
 Boolean-Wert zurück, der Auskunft darüber gibt, ob die Symbole aus dem
 \emph{DSL-Skript} mit den laut Grammatik zu erwartenden Symbolen übereinstimmen
 \vcite{fowler}{246}. Tabelle \ref{tab_RD_Implementierung} enthält die Implementierungsmöglichkeiten von einfachen Grammatikregeln.
+\lstset{numbers=none}
 \begin{table}[!htb]
 \centering
 \small
@@ -570,8 +571,8 @@ Boolean-Wert zurück, der Auskunft darüber gibt, ob die Symbole aus dem
 				\hline\hline
 				A | B & 
 \begin{lstlisting}
- if(A())
- 	then true
+if(A())
+	then true
 	else if(B())
 		then true
 		else false
@@ -579,7 +580,7 @@ Boolean-Wert zurück, der Auskunft darüber gibt, ob die Symbole aus dem
 				\hline
 				A B & 
 \begin{lstlisting}
- if(A())
+if(A())
 	then if(B())
 		then true
 		else false
@@ -588,19 +589,19 @@ Boolean-Wert zurück, der Auskunft darüber gibt, ob die Symbole aus dem
 				\hline
 				A? & 
 \begin{lstlisting}
- A();
- true
+A();
+true
 \end{lstlisting}\\
 				\hline
 				A* & 	
 \begin{lstlisting}
- while(A());
- true
+while(A());
+true
 \end{lstlisting}\\
 				\hline
 		A+ & 
 \begin{lstlisting}
- if(A())
+if(A())
 	then while(A());
 	else false
 \end{lstlisting}\\
@@ -613,6 +614,8 @@ Boolean-Wert zurück, der Auskunft darüber gibt, ob die Symbole aus dem
 		\vcite{fowler}{248}}
 \label{tab_RD_Implementierung}
 	\end{table}\\
+\lstset{numbers=left}	
+\noindent	
 Da dieser \emph{Parser} direkt implementiert werden kann, ist es ebenso möglich diesen
 \emph{Parser} zu debuggen. Dies ist neben der einfachen Implementierung - solange es
 sich um eine einfache Grammatik handelt - ein großer Vorteil dieser Technik

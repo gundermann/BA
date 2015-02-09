@@ -50,8 +50,8 @@
 \contentsline {chapter}{\numberline {10}Zusammenfassung und Ausblick}{83}{chapter.10}
 \contentsline {chapter}{\numberline {A}Zuwendungsblatt f\"ur Web- und Standalone-Client}{X}{appendix.A}
 \contentsline {chapter}{\numberline {B}Generierte Explorer-GUI}{XIII}{appendix.B}
-\contentsline {chapter}{\numberline {C}Inhalt des beiliegenden Datentr\"agers}{XIV}{appendix.C}
-\contentsline {chapter}{Glossar}{XV}{section*.39}
-\contentsline {chapter}{Literaturverzeichnis}{XVIII}{section*.42}
+\contentsline {chapter}{Inhalt des beiliegenden Datentr\"agers}{XIV}{appendix*.39}
+\contentsline {chapter}{Glossar}{XV}{section*.40}
+\contentsline {chapter}{Literaturverzeichnis}{XVIII}{section*.43}
 \select@language {English}
 \select@language {german}
