@@ -167,6 +167,5 @@ terminal TABNAME:
 terminal INPUT_DESCRIPTION:
 	'<' (!('<' | '>'))* '>';
 
-//'\\' . /* 'b'|'t'|'n'|'f'|'r'|'u'|'"'|"'"|'\\' */ | 
 terminal BOOLEAN:
 	'TRUE' | 'FALSE';

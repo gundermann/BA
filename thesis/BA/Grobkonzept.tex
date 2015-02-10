@@ -25,8 +25,8 @@ viel Erfahrung und Wissen wie möglich geschöpft werden. Zudem werden somit auch
 Irrwege aufgezeigt, die bei der Entwicklung anderer \emph{DSLs} umgangen werden
 können.
 Weiterhin können Anforderungen flexibel angepasst und Missverständnisse
-vermieden werden, da der Entwicklungsprozess transparent ist.
-\vcite{SauerDiss}{67}\\
+vermieden werden, da der Entwicklungsprozess transparent ist
+\vcite{SauerDiss}{67}.\\
 Im weiteren Verlauf (Kapitel \ref{Grobkonzept}, \ref{Entwicklung einer DSL zur
 Beschreibung der GUI in profil c/s} und \ref{Entwicklung des Generators für das
 Generieren von Klassen für das Multichannel-Framework}) werden die
@@ -49,7 +49,7 @@ beleuchtet:
   \end{itemize}
 \end{itemize}
 
-
+\newpage
 \section{Konzeption der DSL-Umgebung (Vision)}\label{Grobkonzept}
 \subsection{1. Iteration}
 Die \gloss{DSL-Umgebung} soll sich in zwei Bereiche unterteilen. 
@@ -59,7 +59,7 @@ Die \gloss{DSL-Umgebung} soll sich in zwei Bereiche unterteilen.
 \end{itemize}
 In Abbildung \ref{Abb_Konzept_1} sind die Artefakte mit den
 Funktionen (blauer Kasten), die von ihnen umgesetzt werden sollen, dargestellt.
-\myBigFigure{konzept_1.jpg}{1. Iteration: Konzeption der \gloss{DSL-Umgebung}}{Konzept_1}
+\myBigFigure{konzept_1.jpg}{1. Iteration: Konzeption der DSL-Umgebung}{Konzept_1}
 \noindent
 Die elementare Aufgabe der \g ist es, die
 \gks, die auf der Benutzeroberfläche verwendet werden sollen, zu
@@ -153,9 +153,19 @@ Anordnung dieser Bereiche dürfen nicht enthalten sein, da dies zu einer
 Orientierung an ein bestimmtes Layout führen würde (siehe Anforderung
 \emph{\hyperref[AS3]{AS3}}).
 Zudem ist weiterhin wichtig, dass den Bereichen jeweils nur eine Komponente
-zugeordnet werden kann, wodurchder Zwang zur vorher beschriebenen
+zugeordnet werden kann, wodurch der Zwang zur vorher beschriebenen
 Kombination von eingebundenen \emph{GUI-Skripten} und definierten \gks verstärkt
-wird.\\
+wird.\\\\
+Die Suchfelder aus dem vorherigen Beispiel (siehe Abbildung \ref{suchfeld})
+bestehen aus zwei Bereichen (siehe Abbildung
+\ref{suchfeldBereich}). Einem Bereich wurde das \emph{Label} zugewiesen und dem
+anderen der \emph{Button}.
+\myBigFigure{}{}{suchfeldBereich}
+\noindent
+Die \gui der Suchmaske (siehe Abbildung \ref{suchmaske}) bestehe aus sechs
+Bereichen, denen die verwendeten Komponenten (Suchfelder und \emph{Button}) zugeordnet wurden (siehe Abbildung \ref{suchmaskeBereich}).
+\myBigFigure{}{}{suchmaskeBereich}
+\noindent\\
 Der \emph{Generator} übernimmt beim Erzeugen des frameworkspezifischen
 Quellcodes die konkrete Anordnung der beschriebenen Bereiche. Grund dafür ist, dass die
 Anordnung der Komponenten frameworkspezifisch ist und teilweise unterschiedliche
@@ -163,7 +173,14 @@ Layoutmanager in unterschiedlichen Frameworks unterstützt werden. Da für jedes
 eingesetzte Framework ein eigener Generator implementiert werden muss (siehe
 Kapitel \ref{Entwicklung einer Lösungsidee}), ist es theoretisch möglich diese
 Aufgabe weitgehend unabhängig von der Beschreibung der verwendeten
-\gui-Komponen\-ten zu erfüllen.
+\emph{GUI-Komponen\-ten} zu erfüllen.\\\\
+Der Generator bestimmt bspw. wie die einzelnen Bereiche, die in dem Suchfeld und
+der Suchmaske verwendet wurden, anzuordnen sind. Abbildung
+\ref{suchfeldAnodnung} und \ref{suchmaskeAnordnung} sind Beispiele für die
+Anordnung der Bereiche zu entnehmen. Dabei ist zu betonen, dass der Generator
+keinen Einfluss auf den Inhalt der Bereiche hat.
+\myBigFigure{}{}{suchfeldAnondnung}
+\myBigFigure{}{}{suchmaskeAnordnung}
 
 
 \subsection{2. Iteration}
@@ -172,7 +189,7 @@ werden (siehe Abbildung \ref{Abb_konzept_2}).\\
 Eine Änderung, die in dieser Grafik nicht dargestellt wird, ist, dass die
 Aktionen, die bei Interaktionen mit \gks ausgeführt werden,
 nicht in der \emph{GUI-DSL} definiert werden sollen. Dies liegt an der starken
-Variation der Aktionen, wodurch diese kaum abstrahiert werden können.\\
+Variation der Aktionen, wodurch diese kaum abstrahiert werden können.
 \myBigFigure{konzept_2.jpg}{2. Iteration: Konzeption der DSL-Umgebung}{konzept_2}
 \noindent
 Eine weitere Änderung ist, dass die \gks, die in einem

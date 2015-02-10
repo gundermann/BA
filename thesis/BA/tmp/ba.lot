@@ -2,7 +2,7 @@
 \select@language {german}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {1}{\ignorespaces Priorit\"aten der Anforderungen an die \emph {\acrshort {GUI}}}}{4}{table.2.1}
+\contentsline {table}{\numberline {1}{\ignorespaces Priorit\"aten der Anforderungen an die GUI}}{4}{table.2.1}
 \addvspace {10\p@ }
 \contentsline {table}{\numberline {2}{\ignorespaces Einfache Grammatikregeln mit einem RD-Parser}}{27}{table.3.2}
 \addvspace {10\p@ }
@@ -11,7 +11,7 @@
 \contentsline {table}{\numberline {3}{\ignorespaces Bewertung der Frameworks f\"ur die Entwicklung von DSLs}}{38}{table.6.3}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {4}{\ignorespaces Basiskomponenten mit spezifischen Metadaten}}{63}{table.8.4}
+\contentsline {table}{\numberline {4}{\ignorespaces Basiskomponenten mit spezifischen Metadaten}}{65}{table.8.4}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

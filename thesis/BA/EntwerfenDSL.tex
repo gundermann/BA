@@ -11,9 +11,9 @@ sollten vor der Entwicklung bereits festgelegt werden. Um abzusichern, dass die
 Anzahl der festgelegten Bereiche genau eingehalten wird, muss diese Anzahl in
 der \emph{GUI-Beschreibung} angegeben werden (siehe \emph{Semantisches Modell}:
 \emph{AreaCount}).\\
-Für die Beschreibung der Layout-Komponenten wird zwischen zwei Typen
-unterschieden (siehe semantisches Model \emph{TypeDefinition}), um zwischen obersten
-\emph{Layoutkomponenten} und Anderen zu differenzieren.\\
+Für die Beschreibung der Layoutkomponenten wird zwischen zwei Typen
+(Layouttypen) unterschieden (siehe semantisches Model \emph{TypeDefinition}), um
+zwischen obersten \emph{Layoutkomponenten} und Anderen zu differenzieren.\\
 Ein weiterer Aspekt in einem \emph{GUI-Skript}, ist die Verwendung anderer
 \emph{GUI-Skripte} (siehe \emph{Semantisches Modell}: \emph{Use}).\\ 
 Zusammenfassend sind für die Beschreibung der \gui folgende Metadaten nötig:
@@ -88,7 +88,7 @@ lediglich die globalen Variablen dargestellt. Die aggregierten Artefakte, auf
 die schon im vorherigen Abschnitt hingewiesen wurde, sind dem Diagramm gut
 zu entnehmen.
 \myBigFigure{v1-1.jpg}{1. Iteration: UIDescription}{Teil1-1}
-\myBigFigure{v1-1-1.jpg}{1. Iteration UsedUIDescription}{Teil1-1}
+\myBigFigure{v1-1-1.jpg}{1. Iteration: UsedUIDescription}{Teil1-1}
 \noindent
 Die Klasse \emph{DefinitionImpl} aggregiert weitere Artefakte des Modells. Diese
 sind, um die Übersicht zu wahren, Abbildung \ref{Abb_Teil2-1} zu entnehmen.\\
@@ -110,8 +110,10 @@ Prototypen der ersten Iteration umgesetzt wurden.
 \begin{lstlisting}[{caption
 =1.
 Iteration:
-Syntax},{label = LST_Syntax1}] Area count: 4
-type: WINDOW use: "AnotherDescription"
+Syntax},{label = LST_Syntax1}] 
+Area count: 4
+type: WINDOW 
+use: "AnotherDescription"
 DEF Label as "HEAD" :
 END DEF
 DEF Button as "Interactbt": 
@@ -128,15 +130,34 @@ Area:2<-"AnotherDescription"
 Area:3<-"Interactbt"
 Area:4<-"Multiselect"
 \end{lstlisting}
-Die Bezeichnung \emph{Area} wurde bewusst gewählt, da dieser Begriff
+Mit diesem \emph{GUI-Skript} soll eine \gui wie in Abbildung \ref{guiKS1}
+dargestellt werden.
+\myBigFigure{}{}{guiKS1}
+\noindent
+Die Beschreibung der \gui beginnt mit der Deklaration der Anzahl der verwendeten
+Bereiche. Die Bezeichnung \emph{Area} wurde bewusst gewählt, da dieser Begriff
 abstrakter ist als die in verschiedenen \emph{GUI-Frameworks} verwendeteten
-Begriffe, wie \emph{Panel} oder \emph{Pane}. Die \emph{Syntax} dieser \emph{DSL} soll
-sich bzgl. des Aufbaus der \gui an keinem \emph{GUI-Framework} orientieren. Die
-einzelnen Komponentendefinitionen werden durch das Schlüsselwort \emph{DEF}
-eingeleitet und durch das Schlüsselwort \emph{END DEF} abgeschlossen. Der
-Definitionskopf wird durch das Zeichen \emph{\glqq :\grqq} beendet. Dort sind
-die Pflichtfelder \emph{Titel} und \emph{Typ} der Komponentendefinition zu
-finden.
+Begriffe, wie \emph{Panel} oder \emph{Pane}. Die \emph{Syntax} dieser
+\emph{DSL} soll sich bzgl. des Aufbaus der \gui an keinem \emph{GUI-Framework}
+orientieren.\\
+Nach dieser Deklaration muss der Layouttyp angegeben werden. In diesem Fall
+wurde der Typ \emph{WINDOW} verwendet, welcher die oberste Layoutkomponente
+darstellt. Andere Layoutkomponenten werden durch den Typ \emph{INNERCOMPLEX}
+abgebildet. Der Begriff wurde gewählt, weil eine \gui, die als
+\emph{INNERCOMPLEX} beschrieben wurden, in eine andere \gui eingebunden werden
+soll und somit einen Komplex innerhalb dieser einnimmt.\\
+An die Definition des Layouttyps schließt sich die Angabe der eingebundenen
+\emph{GUI-Skripte} an. In der oben stehenden Beschreibung wurde ein
+\emph{GUI-Skript} eingebunden, welches die Bezeichnung \emph{AnotherDescription}
+trägt.\\
+Anschließend werden die einzelnen Komponentendefinitionen durch das
+ Schlüsselwort \emph{DEF} eingeleitet und durch das Schlüsselwort \emph{END DEF}
+abgeschlossen. Der Definitionskopf wird durch das Zeichen \emph{\glqq :\grqq}
+beendet. Dort sind die Pflichtfelder \emph{Titel} (\glqq Interactbt\grqq) und
+\emph{Typ} (\emph{Button}) der Komponentendefinition zu finden. Weiterhin
+wurde eine Interaktion für den \emph{Button} definiert, deren Aktion ausgelöst
+wird, wenn er betätigt wird (\emph{CLICK}). In diesem Fall wird die Aufschrift
+des \emph{Buttons} in \glqq Du hast interagiert\grqq geändert.\\
 Bei der \emph{Multiselection-Komponente} fällt auf, dass ein Referenzwert
 verwendet wird, der in dieser Beschreibung nicht deklariert wurde (\emph{valuespackage.Values}).
 Dabei handelt es sich um einen qualifizierten Namen einer Klasse.\\
@@ -284,7 +305,7 @@ wird. Diese trägt den Namen \emph{LabelAndButton} und befindet sich im Package
 \ref{LST_Override2} zeigt, wie die Aufschrift der
 Komponente \emph{ButtonToOverride} überschrieben wird.
 \begin{lstlisting}[{caption=2. Iteration: Verändern von Komponenten},{label=LST_Override2}] 
-PART 1 Area count: 2
+Area count: 2
 type: INNERCOMPLEX
 DEF Label as "Label" :
 	text="Text" 
@@ -295,7 +316,6 @@ END DEF
 Area:1<-'Label'	
 Area:2<-"Button"
 
-PART 2
 Area count: 1
 type: WINDOW 
 use: "guidescription.LabelAndButton" as: 'Embedded'
@@ -308,7 +328,7 @@ Sollten die Bezeichnungen von eingebundenen Komponenten nicht eindeutig
 sein, muss der Name des dazugehörigen \emph{GUI-Skriptes} in der Referenz
 mit angegeben werden (siehe Listing \ref{LST_Override2_2}).
 \begin{lstlisting}[{caption=2. Iteration: Verändern von Komponenten mit
-Namensüberschneidung},{label=LST_Override2_2}] 
+gleichen Namen},{label=LST_Override2_2}] 
 use: "guidescription.LabelAndButton" as: 'Embedded1' 
 use: "guidescription.LabelAndTwoButton" as: 'Embedded2' 
 REFINE Button with name: 'Embedded2.OverriddenButton':
@@ -483,7 +503,7 @@ Iteration:
 Eingebundene GUI-Komponenten},{label = LST_Use3}] 
 use: Multiselection<Input> as: "multi";
 \end{lstlisting}
-Da die Anforderungen \emph{\hyperref[AA5]{AA5}} und \emph{\hyperref[AS4]{AS4}}
+Da die Anforderungen \emph{\hyperref[Tab_PrioAnfGUI]{AA5}} und \emph{\hyperref[AS4]{AS4}}
 mehr Beachtung finden sollten, haben sich die Definitionen der einzelnen \Ks
 syntaktisch stark verändert. Somit werden die bekannten \Ks wie folgt definiert
 (siehe Listing \ref{LST_Bt+Lb3}):
