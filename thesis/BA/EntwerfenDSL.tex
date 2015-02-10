@@ -114,7 +114,8 @@ Syntax},{label = LST_Syntax1}]
 Area count: 4
 type: WINDOW 
 use: "AnotherDescription"
-DEF Label as "HEAD" :
+DEF Label as "HEAD":
+	text="Überschrift"
 END DEF
 DEF Button as "Interactbt": 
 	text="Interagiere"
@@ -130,9 +131,11 @@ Area:2<-"AnotherDescription"
 Area:3<-"Interactbt"
 Area:4<-"Multiselect"
 \end{lstlisting}
-Mit diesem \emph{GUI-Skript} soll eine \gui wie in Abbildung \ref{guiKS1}
-dargestellt werden.
-\myBigFigure{}{}{guiKS1}
+Mit diesem \emph{GUI-Skript} soll eine \gui wie in Abbildung \ref{Abb_guiKS1}
+dargestellt werden. Dabei ist zu erwähnen, dass das eingebundene
+\emph{GUI-Skript} ein \emph{Label} mit der Aufschrift \glqq Eingebunden\grqq
+enthält.
+\myBigFigure{guiSK1.jpg}{Beispiel-GUI}{guiKS1}
 \noindent
 Die Beschreibung der \gui beginnt mit der Deklaration der Anzahl der verwendeten
 Bereiche. Die Bezeichnung \emph{Area} wurde bewusst gewählt, da dieser Begriff
@@ -154,8 +157,8 @@ Anschließend werden die einzelnen Komponentendefinitionen durch das
  Schlüsselwort \emph{DEF} eingeleitet und durch das Schlüsselwort \emph{END DEF}
 abgeschlossen. Der Definitionskopf wird durch das Zeichen \emph{\glqq :\grqq}
 beendet. Dort sind die Pflichtfelder \emph{Titel} (\glqq Interactbt\grqq) und
-\emph{Typ} (\emph{Button}) der Komponentendefinition zu finden. Weiterhin
-wurde eine Interaktion für den \emph{Button} definiert, deren Aktion ausgelöst
+\emph{Typ} (\emph{Label} und \emph{Button}) der Komponentendefinition zu finden.
+Weiterhin wurde eine Interaktion für den \emph{Button} definiert, deren Aktion ausgelöst
 wird, wenn er betätigt wird (\emph{CLICK}). In diesem Fall wird die Aufschrift
 des \emph{Buttons} in \glqq Du hast interagiert\grqq geändert.\\
 Bei der \emph{Multiselection-Komponente} fällt auf, dass ein Referenzwert
