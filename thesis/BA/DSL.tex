@@ -68,9 +68,9 @@
   Domänenexperten (z. B. Kunden) \vcite{voelter}{26}.
   
 \subsection*{Grammatik}
-  Grammatiken und insbesondere Grammatikregeln werden zur Beschreibung von
-  Sprachen verwendet \vcite{hedtstueck}{23f}. Für die Definition einer Grammatik
-  wird auf den Praxisbericht \cite{gundermann5} verwiesen. Grammatiken
+  \emph{Grammatiken} und insbesondere Grammatikregeln werden zur Beschreibung
+  von Sprachen verwendet \vcite{hedtstueck}{23f}. Für die Definition einer \emph{Grammatik}
+  wird auf den Praxisbericht \cite{gundermann5} verwiesen. \emph{Grammatiken}
   können in einer Hierarchie dargestellt werden (\emph{Chomsky-Hierarchie})
   \vcite{hedtstueck}{32f}. Bei Programmiersprachen handelt es sich
   um \emph{kontextfreie Sprachen}. Diese sind entscheidbar
@@ -434,7 +434,7 @@ Bei einer \emph{internen DSL} handelt es sich um eine \emph{DSL}, die in eine
 \emph{Application Programming Interfaces (API)} erreicht werden.
 In vielen Fällen ist eine \emph{DSL} nicht mehr als ein \emph{API}.
 Martin Fowler et al. sehen den größten Unterschied zwischen \emph{API} und \emph{DSL}
-darin, dass eine \emph{DSL} neben einem abstrahierten Vokabular auch eine spezifische Grammatik
+darin, dass eine \emph{DSL} neben einem abstrahierten Vokabular auch eine spezifische \emph{Grammatik}
 nutzt \vcite{fowler}{29}. Ein \emph{API}
 hingegen besitzt die gleichen syntaktischen Strukturen wie die \emph{GPL}, in
 der das \emph{API} bereitgestellt wurde. Somit werden überflüssige Notationsformen in das \emph{API}
@@ -532,12 +532,12 @@ entnehmen.
 \subsubsection*{Parsergenerator}
 Bei der Generierung von \emph{Parsern} muss dieser nicht manuell implementiert
 werden. Diese Aufgabe wird an den \emph{Generator} delegiert. Damit dies möglich
-ist, müssen zwei Artefakte definiert werden. Zuerst muss eine Grammatik in der
+ist, müssen zwei Artefakte definiert werden. Zuerst muss eine \emph{Grammatik} in der
 erweiterten \emph{Backus-Naur Form (EBNF)} beschrieben werden. Anschließend
 werden bestimmte Aktionen benötigt, die bei der Bestätigung bestimmter Grammatikregeln ausgeführt werden sollen
 (Validierungsre\-geln) \vcite{ghosh}{218}. Wird der \emph{Parsergenerator}
 ausgetauscht, führt dies auch häufig dazu, dass die notwendigen Artefakte
-(Grammatik und Aktionen) neu definiert werden müssen \vcite{fowler}{269}. Weiterhin arbeiten die
+(\emph{Grammatik} und Aktionen) neu definiert werden müssen \vcite{fowler}{269}. Weiterhin arbeiten die
 meisten \emph{Parsergeneratoren} mit Code-Generierung, wodurch der
 Erstellungsprozess komplexer wird \vcite{fowler}{272}. Vorteile dieser Technik im Vergleich zur
 manuellen Implementierung des \emph{Parsers}, sind die Folgenden:
@@ -548,7 +548,7 @@ manuellen Implementierung des \emph{Parsers}, sind die Folgenden:
   \vcite{ghosh}{218}
   \item Möglichkeit des Generierens eines Parsers in unterschiedlichen Sprachen
   (vgl. \cite[S.218]{ghosh}, \cite[S.270]{fowler})
-  \item Validierung der Grammatik durch Fehlererkennung und -behandlung
+  \item Validierung der \emph{Grammatik} durch Fehlererkennung und -behandlung
   \vcite{fowler}{272}
 \end{itemize}
 
@@ -556,9 +556,9 @@ manuellen Implementierung des \emph{Parsers}, sind die Folgenden:
 Dieser \emph{Parser} basiert auf Funktionen, die rekursiv aufgerufen werden. Es handelt
 sich dabei um einen \gloss{Top-Down Parser} \vcite{ghosh}{226}. Die
 Funktionen implementieren dabei die Regeln des \emph{Parsens} für die
-nonterminalen Symbole der Grammatik \vcite{fowler}{245}. Die Funktionen geben dabei einen
+nonterminalen Symbole der \emph{Grammatik} \vcite{fowler}{245}. Die Funktionen geben dabei einen
 Boolean-Wert zurück, der Auskunft darüber gibt, ob die Symbole aus dem
-\emph{DSL-Skript} mit den laut Grammatik zu erwartenden Symbolen übereinstimmen
+\emph{DSL-Skript} mit den laut \emph{Grammatik} zu erwartenden Symbolen übereinstimmen
 \vcite{fowler}{246}. Tabelle \ref{tab_RD_Implementierung} enthält die Implementierungsmöglichkeiten von einfachen Grammatikregeln.
 \lstset{numbers=none}
 \begin{table}[!htb]
@@ -618,13 +618,13 @@ if(A())
 \noindent	
 Da dieser \emph{Parser} direkt implementiert werden kann, ist es ebenso möglich diesen
 \emph{Parser} zu debuggen. Dies ist neben der einfachen Implementierung - solange es
-sich um eine einfache Grammatik handelt - ein großer Vorteil dieser Technik
-\vcite{fowler}{249}. Ein Nachteil ist, dass keine Grammatik definiert wird.
+sich um eine einfache \emph{Grammatik} handelt - ein großer Vorteil dieser Technik
+\vcite{fowler}{249}. Ein Nachteil ist, dass keine \emph{Grammatik} definiert wird.
 Laut Martin Fowler et. al. wird dadurch einer \emph{DSL} ein gravierender
 Vorteil entzogen \vcite{fowler}{249}.
 
 \subsubsection*{Parserkombinator}
-Bei der Kombination von \emph{Parsern} wird die Grammatik mittels einer Struktur
+Bei der Kombination von \emph{Parsern} wird die \emph{Grammatik} mittels einer Struktur
 von \emph{Parser-Objekten} implementiert \vcite{fowler}{256}. Wenn ein Teil des
 Input-Streams von einem \emph{Parser} erfolgreich oder auch fehlerhaft verarbeitet
 wurde, kann der Rest des Input-Streams an einen anderen \emph{Parser} übergeben werden.
@@ -644,7 +644,7 @@ Modell} repräsentiert \vcite{fowler}{256}. Ein großer Vorteil dieser
 Technik ist, dass einfache \emph{Parser} zu komplexeren \emph{Parsern}
 zusammengefügt werden können.\\
 Weiterhin wird durch die Kombination mehrerer grammatikbestimmender Komponenten
-auch die Lesbarkeit der Grammatik gefördert, was bei einem \emph{RD-Parser} ein großer
+auch die Lesbarkeit der \emph{Grammatik} gefördert, was bei einem \emph{RD-Parser} ein großer
 Nachteil ist. Daher bezeichnen Martin Fowler et al. \emph{Parserkombinatoren}
 auch als Mittelweg zwischen \emph{RD-Parsern} und \emph{Parsergeneratoren}
 \vcite{fowler}{261}.

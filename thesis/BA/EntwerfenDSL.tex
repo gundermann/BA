@@ -1,4 +1,5 @@
-\chapter{Entwicklung einer DSL zur Beschreibung der GUI in profil c/s}\label{Entwicklung einer DSL zur Beschreibung der GUI in profil c/s}
+\chapter{Entwicklung einer DSL zur Beschreibung der GUIs von profil
+c/s}\label{Entwicklung einer DSL zur Beschreibung der GUI in profil c/s}
 \section{1. Iteration}
 \subsection*{Analyse der Metadaten}
 Die Beschreibung einer \gui wird in der \g als eigener Komplex
@@ -70,7 +71,7 @@ Die \knks werden in einer eigenen Komponentendefinition beschrieben, da neben
 den vordefinierten Funktionalitäten der \knks auch weitere optionale
 Wertzuweisungen möglich sein sollen. Dazu wird nach der Implementierung einer
 Komponente, ein neues Schlüsselwort für eine
-Komponentendefinition in die Grammatik eingebaut. Jede komplexe Komponente
+Komponentendefinition in die \emph{Grammatik} eingebaut. Jede komplexe Komponente
 benötigt darüber hinaus eine Bezeichnung, um referenziert zu werden. In dieser
 Iteration ist die \gloss{Multiselection-Komponente} umgesetzt, welche generisch
 implementiert ist. Der generische Typ wird innerhalb der Komponente in der
@@ -144,10 +145,10 @@ Begriffe, wie \emph{Panel} oder \emph{Pane}. Die \emph{Syntax} dieser
 \emph{DSL} soll sich bzgl. des Aufbaus der \gui an keinem \emph{GUI-Framework}
 orientieren.\\
 Nach dieser Deklaration muss der Layouttyp angegeben werden. In diesem Fall
-wurde der Typ \emph{WINDOW} verwendet, welcher die oberste Layoutkomponente
-darstellt. Andere Layoutkomponenten werden durch den Typ \emph{INNERCOMPLEX}
+wurde der Typ \emph{Window} verwendet, welcher die oberste Layoutkomponente
+darstellt. Andere Layoutkomponenten werden durch den Typ \emph{Innercomplex}
 abgebildet. Der Begriff wurde gewählt, weil eine \gui, die als
-\emph{INNERCOMPLEX} beschrieben wurden, in eine andere \gui eingebunden werden
+\emph{Innercomplex} beschrieben wurden, in eine andere \gui eingebunden werden
 soll und somit einen Komplex innerhalb dieser einnimmt.\\
 An die Definition des Layouttyps schließt sich die Angabe der eingebundenen
 \emph{GUI-Skripte} an. In der oben stehenden Beschreibung wurde ein
@@ -159,12 +160,12 @@ abgeschlossen. Der Definitionskopf wird durch das Zeichen \emph{\glqq :\grqq}
 beendet. Dort sind die Pflichtfelder \emph{Titel} (\glqq Interactbt\grqq) und
 \emph{Typ} (\emph{Label} und \emph{Button}) der Komponentendefinition zu finden.
 Weiterhin wurde eine Interaktion für den \emph{Button} definiert, deren Aktion ausgelöst
-wird, wenn er betätigt wird (\emph{CLICK}). In diesem Fall wird die Aufschrift
+wird, wenn er betätigt wird (\emph{Click}). In diesem Fall wird die Aufschrift
 des \emph{Buttons} in \glqq Du hast interagiert\grqq geändert.\\
 Bei der \emph{Multiselection-Komponente} fällt auf, dass ein Referenzwert
 verwendet wird, der in dieser Beschreibung nicht deklariert wurde (\emph{valuespackage.Values}).
 Dabei handelt es sich um einen qualifizierten Namen einer Klasse.\\
-Die dazugehörige Grammatik befindet sich auf dem beiliegenden Datenträger
+Die dazugehörige \emph{Grammatik} befindet sich auf dem beiliegenden Datenträger
 (siehe \emph{\hyperref[cd]{Anlage}}).
 
 \section{2. Iteration}
@@ -339,7 +340,7 @@ REFINE Button with name: 'Embedded2.OverriddenButton':
 END REFINE
 \end{lstlisting}
 \noindent
-Die dazugehörige Grammatik, welche in der zweiten Iteration entwickelt wurde,
+Die dazugehörige \emph{Grammatik}, welche in der zweiten Iteration entwickelt wurde,
 befindet sich auf dem beiliegenden Datenträger (siehe
 \emph{\hyperref[cd]{Anlage}}).
 
@@ -594,6 +595,6 @@ Struktur},{label = LST_Structure3}]
 Structure:'Button','Label','Textfield','tabview';
 \end{lstlisting}
 \noindent
-Die für diese Arbeit endgültige Grammatik ist, wie die Grammatiken der
-anderen Iterationen, ebenfalls auf dem beiliegenden
+Die für diese Arbeit endgültige \emph{Grammatik} ist, wie die \emph{Grammatiken}
+der anderen Iterationen, ebenfalls auf dem beiliegenden
 Datenträger (siehe \emph{\hyperref[cd]{Anlage}}) zu finden.

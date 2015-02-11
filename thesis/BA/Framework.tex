@@ -6,8 +6,8 @@ Frameworks \emph{PetitParser}, \emph{Xtext} und \emph{MPS} kurz vorgestellt und 
 Anschluss verglichen.
 \subsection{PetitParser}
 Dieses Framework arbeitet mit \emph{Parserkombinatoren}. Somit ist es mit
-\emph{PetitParser} einfach Grammatiken zusammenzustellen, zu transformieren oder
-zu erweitern sowie Teile dieser dynamisch wiederzuverwenden. Alles
+\emph{PetitParser} einfach \emph{Grammatiken} zusammenzustellen, zu
+transformieren oder zu erweitern sowie Teile dieser dynamisch wiederzuverwenden. Alles
 geschieht auf der Basis von \emph{Pharo Smalltalk}, womit das Framework
 ursprünglich implementiert wurde \simplevcite{Renggli}. Es existieren auch Versionen des
 Frameworks für
@@ -15,7 +15,7 @@ Frameworks für
 \emph{Dart}\footnote{https://github.com/petitparser/dart-petitparser} und
 \emph{PHP}\footnote{https://github.com/mindplay-dk/petitparserphp}.\\
 Einfache \emph{Parser} bestehen aus Sequenzen von Funktionen, welche die
-Produktionsregeln der Grammatik abbilden. Komplexe \emph{Parser}
+Produktionsregeln der \emph{Grammatik} abbilden. Komplexe \emph{Parser}
 werden durch die Kombination anderer \emph{Parser} implemen\-tiert
 \simplevcite{Renggli}.\\
 Die Implementierung dieser Kombination kann in einer einzelnen Methode
@@ -27,32 +27,34 @@ und erleichtert schließlich die Wartung des Quellcodes.\\
 Der Toolsupport ist für dieses Framework gewährleistet. Mithilfe dessen können
 Produktionsregeln editiert und grafisch abgebildet werden. Weiterhin ist es
 möglich Zufallsbeispiele für ausgewählte Produktionsregeln zu generieren,
-um somit Fehler in der Grammatik aufzudecken. Darüber hinaus wird die Effizienz einer Grammatik
+um somit Fehler in der \emph{Grammatik} aufzudecken. Darüber hinaus wird die Effizienz einer \emph{Grammatik}
 durch die Darstellung und Behebung direkter, überflüssiger Zyklen verbessert
 \simplevcite{Renggli}.
 
 \subsection{Xtext}
 Bei \emph{Xtext} handelt es sich um eine Open-Source-Lösung für einen
 \emph{ANTLR}-basierten \emph{Parser- und Editorgenerator} mit dem \emph{externe,
-textuelle DSLs} entwi\-ckelt werden können. Die Grammatiken für den
+textuelle DSLs} entwi\-ckelt werden können. Die \emph{Grammatiken} für den
 \emph{Parsergenerator} werden in der \emph{EBNF} definiert. Durch die
 Integration in \emph{Eclipse} kann der dazugehörige Editor für sämtliche Artefakte der Infrastruktur von
-\emph{Xtext} verwendet werden.
-Aus der Grammatik wird der \emph{Parser} sowie ein Modell generiert, mit dessen
-Hilfe weitere Artefakte der \gloss{DSL-Umgebung} implementiert werden können. Die
-Klassen für Validierungsregeln und den Generator werden ebenfalls vom Tool
-erzeugt. Diese müssen im Anschluss daran vom Nutzer entsprechend erweitert werden \simplevcite{xtextdoc}. Zum Editieren
-der entsprechenden Dateien wird eine eigene \emph{Syntax} verwendet, die stark
-an die \emph{Java-Syntax} erinnert.\\
+\emph{Xtext} verwendet werden.\\
+Wie der Abbildung \ref{Abb_xtext} entnommen werden kann, wird aus der \emph{Grammatik}
+der \emph{Parser}, der \emph{Lexer} und ein Modell generiert, mit dessen Hilfe
+weitere Artefakte der \gloss{DSL-Umgebung} implementiert werden können. Die
+Klassen für Validierungsregeln und den \emph{Generator} werden ebenfalls vom
+Tool erzeugt. Diese müssen im Anschluss daran vom Nutzer entsprechend erweitert
+werden \simplevcite{xtextdoc}. Zum Editieren der entsprechenden Dateien wird
+eine eigene \emph{Syntax} verwendet, die stark an die \emph{Java-Syntax} erinnert.
 Wenn der \emph{Parser} generiert wurde, ist es möglich einen in die
 \emph{Eclipse IDE} integrierten Editor zu erzeugen \vcite{carpediem}{1}. Dieser
 Editor ist in der Lage die Validierungsregeln auf die \emph{DSL-Skripte} anzuwenden. Darüber
 hinaus wird auch Autovervollständigung des Quellcodes vom Editor angeboten.
+\myBigFigure{xtext.jpg}{Funktionsweise von Xtext}{xtext}
 
 \subsection{Meta Programming System}
 Das \emph{Meta Programming System (MPS)} ist ebenfalls eine Open-Source-Lösung,
 bei der die Entwicklung \emph{externer DSLs} im Vordergrund steht.
-Bei der Entwicklung der Sprache mit \emph{MPS} ist weder eine Grammatik noch ein
+Bei der Entwicklung der Sprache mit \emph{MPS} ist weder eine \emph{Grammatik} noch ein
 \emph{Parser} involviert. Die Sprache kann mit diesem Tool nicht nur in Textform
 definiert werden, sondern auch mittels Symbolen, Tabellen oder Grafiken \vcite{voelter}{16}.\\
 Zur Unterstützung der Entwicklung wird von der Firma \emph{JetBrains} ein Editor
@@ -84,7 +86,7 @@ Dabei sind nachfolgende Kriterien von Belang.
   beeinträchtigt werden soll.
   
   \item[] \textbf{Erweiterung der Grammatik}\\
-  Die Grammatik muss erweiterbar sein, weil die \gui in \pcs
+  Die \emph{Grammatik} muss erweiterbar sein, weil die \gui in \pcs
   kein abgeschlossenes Konzept ist. Es ist davon auszugehen, dass in Zukunft
   neue Komponenten benötigt werden.
   
@@ -141,7 +143,7 @@ Die Machbarkeit der Integration von \emph{MPS} in \emph{Eclipse} ist derzeit
 noch nicht gewährleistet. Da für \emph{Xtext} ein entsprechendes Plugin und für
 \emph{PetitParser} eine \emph{Java-Version} existiert, ist auch die
 Integration dieser beiden Frameworks in die \emph{Eclipse IDE} möglich.\\
-Bei der Möglichkeit zur Erweiterung der Grammatik müssen beim keinem Framework
+Bei der Möglichkeit zur Erweiterung der \emph{Grammatik} müssen beim keinem Framework
 Abstriche gemacht werden.\\
 Die Bereitstellung eines \emph{Editors} für \emph{DSL-Skripte} ist bei der
 Verwendung von \emph{MPS} schlechter ausgefallen, als bei den anderen Frameworks. Grund

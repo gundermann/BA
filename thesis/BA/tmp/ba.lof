@@ -13,44 +13,47 @@
 \contentsline {figure}{\numberline {6}{\ignorespaces Grundlegendes Konzept}}{34}{figure.5.6}
 \contentsline {figure}{\numberline {7}{\ignorespaces Grundlegende Idee f\"ur den Prototyp}}{34}{figure.5.7}
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {8}{\ignorespaces Funktionsweise von Xtext}}{37}{figure.6.8}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {8}{\ignorespaces Inkrementelles Modell}}{40}{figure.7.8}
-\contentsline {figure}{\numberline {9}{\ignorespaces 1. Iteration: Konzeption der DSL-Umgebung}}{42}{figure.7.9}
-\contentsline {figure}{\numberline {10}{\ignorespaces Beispiel: Suchfeld f\"ur Name}}{44}{figure.7.10}
-\contentsline {figure}{\numberline {11}{\ignorespaces Beispiel: Suchmaske}}{45}{figure.7.11}
-\contentsline {figure}{\numberline {12}{\ignorespaces Beispiel: Bereiche in einem Suchfeld}}{45}{figure.7.12}
-\contentsline {figure}{\numberline {13}{\ignorespaces Beispiel: Bereiche einer Suchmaske}}{46}{figure.7.13}
-\contentsline {figure}{\numberline {14}{\ignorespaces Beispiel: Anordnung der Bereiche eines Suchfelds}}{46}{figure.7.14}
-\contentsline {figure}{\numberline {15}{\ignorespaces Beispiel: Anordnung der Bereiche einer Suchmaske}}{47}{figure.7.15}
-\contentsline {figure}{\numberline {16}{\ignorespaces 2. Iteration: Konzeption der DSL-Umgebung}}{47}{figure.7.16}
-\contentsline {figure}{\numberline {17}{\ignorespaces 3. Iteration: Konzeption der DSL-Umgebung}}{48}{figure.7.17}
+\contentsline {figure}{\numberline {9}{\ignorespaces Inkrementelles Modell}}{40}{figure.7.9}
+\contentsline {figure}{\numberline {10}{\ignorespaces 1. Iteration: Konzeption der DSL-Umgebung}}{42}{figure.7.10}
+\contentsline {figure}{\numberline {11}{\ignorespaces Beispiel: Suchfeld f\"ur Name}}{44}{figure.7.11}
+\contentsline {figure}{\numberline {12}{\ignorespaces Beispiel: Suchmaske}}{45}{figure.7.12}
+\contentsline {figure}{\numberline {13}{\ignorespaces Beispiel: Bereiche in einem Suchfeld}}{45}{figure.7.13}
+\contentsline {figure}{\numberline {14}{\ignorespaces Beispiel: Bereiche einer Suchmaske}}{46}{figure.7.14}
+\contentsline {figure}{\numberline {15}{\ignorespaces Beispiel: Anordnung der Bereiche eines Suchfelds}}{46}{figure.7.15}
+\contentsline {figure}{\numberline {16}{\ignorespaces Beispiel: Anordnung der Bereiche einer Suchmaske}}{47}{figure.7.16}
+\contentsline {figure}{\numberline {17}{\ignorespaces 2. Iteration: Konzeption der DSL-Umgebung}}{47}{figure.7.17}
+\contentsline {figure}{\numberline {18}{\ignorespaces 3. Iteration: Konzeption der DSL-Umgebung}}{48}{figure.7.18}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {18}{\ignorespaces 1. Iteration: UIDescription}}{54}{figure.8.18}
-\contentsline {figure}{\numberline {19}{\ignorespaces 1. Iteration: UsedUIDescription}}{54}{figure.8.19}
-\contentsline {figure}{\numberline {20}{\ignorespaces 1. Iteration: ComponentDefinition}}{55}{figure.8.20}
-\contentsline {figure}{\numberline {21}{\ignorespaces 1. Iteration: Interaction}}{55}{figure.8.21}
-\contentsline {figure}{\numberline {22}{\ignorespaces Beispiel-GUI}}{56}{figure.8.22}
-\contentsline {figure}{\numberline {23}{\ignorespaces 2. Iteration: UIDescription}}{59}{figure.8.23}
-\contentsline {figure}{\numberline {24}{\ignorespaces 2. Iteration: Property und Properties}}{59}{figure.8.24}
-\contentsline {figure}{\numberline {25}{\ignorespaces 2. Iteration: UsedDescription}}{60}{figure.8.25}
-\contentsline {figure}{\numberline {26}{\ignorespaces 2. Iteration: Definition}}{61}{figure.8.26}
-\contentsline {figure}{\numberline {27}{\ignorespaces 2. Iteration: Refinement}}{61}{figure.8.27}
-\contentsline {figure}{\numberline {28}{\ignorespaces 3. Iteration: UIDescription}}{67}{figure.8.28}
-\contentsline {figure}{\numberline {29}{\ignorespaces 3. Iteration: Definition}}{68}{figure.8.29}
-\contentsline {figure}{\numberline {30}{\ignorespaces 3. Iteration: Button}}{68}{figure.8.30}
-\contentsline {figure}{\numberline {31}{\ignorespaces 3. Iteration: TabView}}{69}{figure.8.31}
-\contentsline {figure}{\numberline {32}{\ignorespaces 3. Iteration: Tree}}{69}{figure.8.32}
-\contentsline {figure}{\numberline {33}{\ignorespaces 3. Iteration: Table}}{70}{figure.8.33}
+\contentsline {figure}{\numberline {19}{\ignorespaces 1. Iteration: UIDescription}}{54}{figure.8.19}
+\contentsline {figure}{\numberline {20}{\ignorespaces 1. Iteration: UsedUIDescription}}{54}{figure.8.20}
+\contentsline {figure}{\numberline {21}{\ignorespaces 1. Iteration: ComponentDefinition}}{55}{figure.8.21}
+\contentsline {figure}{\numberline {22}{\ignorespaces 1. Iteration: Interaction}}{55}{figure.8.22}
+\contentsline {figure}{\numberline {23}{\ignorespaces Beispiel-GUI}}{56}{figure.8.23}
+\contentsline {figure}{\numberline {24}{\ignorespaces 2. Iteration: UIDescription}}{59}{figure.8.24}
+\contentsline {figure}{\numberline {25}{\ignorespaces 2. Iteration: Property und Properties}}{59}{figure.8.25}
+\contentsline {figure}{\numberline {26}{\ignorespaces 2. Iteration: UsedDescription}}{60}{figure.8.26}
+\contentsline {figure}{\numberline {27}{\ignorespaces 2. Iteration: Definition}}{61}{figure.8.27}
+\contentsline {figure}{\numberline {28}{\ignorespaces 2. Iteration: Refinement}}{61}{figure.8.28}
+\contentsline {figure}{\numberline {29}{\ignorespaces 3. Iteration: UIDescription}}{67}{figure.8.29}
+\contentsline {figure}{\numberline {30}{\ignorespaces 3. Iteration: Definition}}{68}{figure.8.30}
+\contentsline {figure}{\numberline {31}{\ignorespaces 3. Iteration: Button}}{68}{figure.8.31}
+\contentsline {figure}{\numberline {32}{\ignorespaces 3. Iteration: TabView}}{69}{figure.8.32}
+\contentsline {figure}{\numberline {33}{\ignorespaces 3. Iteration: Tree}}{69}{figure.8.33}
+\contentsline {figure}{\numberline {34}{\ignorespaces 3. Iteration: Table}}{70}{figure.8.34}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {34}{\ignorespaces Aufbau eines Explorers}}{73}{figure.9.34}
-\contentsline {figure}{\numberline {35}{\ignorespaces Generierte GUI des Inhalts- und Verweisebaums}}{79}{figure.9.35}
+\contentsline {figure}{\numberline {35}{\ignorespaces Generierung der Klassen f\"ur das Multichannel-Framework}}{73}{figure.9.35}
+\contentsline {figure}{\numberline {36}{\ignorespaces Aufbau eines Explorers}}{75}{figure.9.36}
+\contentsline {figure}{\numberline {37}{\ignorespaces Generierte GUI des Inhalts- und Verweisebaums}}{80}{figure.9.37}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {36}{\ignorespaces Standalone-Client: Zuwendungsblatt}}{X}{figure.A.36}
-\contentsline {figure}{\numberline {37}{\ignorespaces Web-Client: Zuwendungsblatt}}{XI}{figure.A.37}
-\contentsline {figure}{\numberline {38}{\ignorespaces Multiselection-Komponente}}{XII}{figure.A.38}
+\contentsline {figure}{\numberline {38}{\ignorespaces Standalone-Client: Zuwendungsblatt}}{X}{figure.A.38}
+\contentsline {figure}{\numberline {39}{\ignorespaces Web-Client: Zuwendungsblatt}}{XI}{figure.A.39}
+\contentsline {figure}{\numberline {40}{\ignorespaces Multiselection-Komponente}}{XII}{figure.A.40}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {39}{\ignorespaces Generierte Explorer-GUI}}{XIII}{figure.B.39}
+\contentsline {figure}{\numberline {41}{\ignorespaces Antragsexplorer}}{XIII}{figure.B.41}
+\contentsline {figure}{\numberline {42}{\ignorespaces Generierter Antragsexplorer}}{XIV}{figure.B.42}
 \addvspace {10\p@ }
 \select@language {English}
 \select@language {german}

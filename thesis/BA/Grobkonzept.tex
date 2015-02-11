@@ -39,8 +39,13 @@ beleuchtet:
   Resultat der in dieser Arbeit durchgeführten Iterationen.
   \item \textbf{Entwicklung}\\
   Die Entwicklung beschreibt die Phasen \emph{Entwerfen} und
-  \emph{Implementieren}. 
-  Sie teilt sich in zwei weitere Bereiche auf:
+  \emph{Implementieren}. Bei der Verwendung von \emph{Xtext} ist für die
+  Umsetzung des Prototyps eine \emph{Grammatik} und ein \emph{Generator} von
+  Nöten. Für diese beiden Artefakte stellt \emph{Xtext} entsprechende Vorlagen
+  bereit, die erweitert werden müssen. Andere Elemente der \gloss{DSL-Umgebung},
+  wie der \emph{Parser} oder der \emph{Lexer}, werden von \emph{Xtext} anhand
+  der \emph{Grammatik} vollständig generiert, wie in Abbildung \ref{Abb_xtext}
+  zu entnehmen ist. Somit teilt sich die Entwicklung in zwei weitere Bereiche auf:
   \begin{itemize}
   	\item Entwicklung der \emph{DSL} (siehe Kapitel \ref{Entwicklung einer
   	DSL zur Beschreibung der GUI in profil c/s})

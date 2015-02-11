@@ -3,7 +3,7 @@
 \BOOKMARK [0][-]{section*.6}{Listings}{}% 3
 \BOOKMARK [0][-]{chapter.1}{Motivation}{}% 4
 \BOOKMARK [0][-]{chapter.2}{Problembeschreibung und Zielsetzung}{}% 5
-\BOOKMARK [1][-]{section.2.1}{Allgemeine Anforderungen an Benutzeroberfl\344chen von profil c/s}{chapter.2}% 6
+\BOOKMARK [1][-]{section.2.1}{Allgemeine Anforderungen an GUIs von profil c/s}{chapter.2}% 6
 \BOOKMARK [1][-]{section.2.2}{Umsetzung der Benutzerschnittstellen f\374r mehrere Plattformen in der data experts GmbH \(Ist-Zustand\)}{chapter.2}% 7
 \BOOKMARK [2][-]{subsection.2.2.1}{Multichannel-Framework}{section.2.2}% 8
 \BOOKMARK [2][-]{subsection.2.2.2}{JWAM}{section.2.2}% 9
@@ -38,7 +38,7 @@
 \BOOKMARK [2][-]{subsection.7.2.1}{1. Iteration}{section.7.2}% 38
 \BOOKMARK [2][-]{subsection.7.2.2}{2. Iteration}{section.7.2}% 39
 \BOOKMARK [2][-]{subsection.7.2.3}{3. Iteration}{section.7.2}% 40
-\BOOKMARK [0][-]{chapter.8}{Entwicklung einer DSL zur Beschreibung der GUI in profil c/s}{}% 41
+\BOOKMARK [0][-]{chapter.8}{Entwicklung einer DSL zur Beschreibung der GUIs von profil c/s}{}% 41
 \BOOKMARK [1][-]{section.8.1}{1. Iteration}{chapter.8}% 42
 \BOOKMARK [1][-]{section.8.2}{2. Iteration}{chapter.8}% 43
 \BOOKMARK [1][-]{section.8.3}{3. Iteration}{chapter.8}% 44
@@ -47,7 +47,7 @@
 \BOOKMARK [1][-]{section.9.2}{Umsetzung des frameworkspezifischen Generators}{chapter.9}% 47
 \BOOKMARK [0][-]{chapter.10}{Zusammenfassung und Ausblick}{}% 48
 \BOOKMARK [0][-]{appendix.A}{Zuwendungsblatt f\374r den Web- und Standalone-Client}{}% 49
-\BOOKMARK [0][-]{appendix.B}{Generierte Explorer-GUI}{}% 50
+\BOOKMARK [0][-]{appendix.B}{Explorer-GUI}{}% 50
 \BOOKMARK [0][-]{appendix*.39}{Inhalt des beiliegenden Datentr\344gers}{}% 51
 \BOOKMARK [0][-]{section*.40}{Glossar}{}% 52
 \BOOKMARK [0][-]{section*.43}{Literaturverzeichnis}{}% 53

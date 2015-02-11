@@ -3,14 +3,14 @@ das Multichannel-Framework}\label{Entwicklung des Generators für das Generieren 
 das Multichannel-Framework}
 Alle Umsetzungen die in diesem Kapitel beschrieben werden, fanden in der dritten
 Iteration statt.\\
-Ziel ist es, mit dem \emph{Generator} und einem entsprechenden \emph{GUI-Skript} eine
-Exploreransicht zu erstellen, die für \pcs charakteristisch ist. Abbildung
-\ref{Abb_ee} zeigt den Aufbau einer solchen \emph{\acrshort{GUI}}. Darin
-enthalten sind auf der linken Seite zwei \emph{Trees} und auf der
-rechten Seite ein Komponente vom Typ \emph{Interchangeable}, in der das
-selektierte Elemente des \glossLink{Inhaltsbaum}{Inhaltsbaums} visualisiert werden soll.
-Das Anzeigen des Inhalts wird im Prototypen nicht umgesetzt.
-\myBigFigure{explorerbaum.jpg}{Aufbau eines Explorers}{ee}
+Ziel ist es, mit dem \emph{Generator} und einem \emph{GUI-Skript}
+\emph{Java-Klassen} zu erzeugen, die in das \MCF integriert werden können. In
+Abbildung \ref{Abb_generator} ist dieses Konzept schematisch dargestellt. Für
+die Umsetzung wurden die Methoden, welche im Folgenden beschreiben werden, in
+der von \emph{Xtext} bereitgestellten \emph{Generatorklasse} implementiert (siehe \hyperref[cd]{Anlage}).
+\myBigFigure{generator.jpg}{Generierung der Klassen für das
+Multichannel-Framework}{generator}
+
 
 \section{Beschreibung der GUI-, FP- und IP-Klassen}
 Durch die Beschreibung der \guis mit der entwickelten \g, ist es möglich die
@@ -20,9 +20,7 @@ Die \emph{GUI-Klasse} soll dabei vollständig generiert werden. Dafür werden
 Informationen über das Layout aus der \emph{Layout-Datei} benötigt. Die
 Umsetzung und Einbindung der \emph{Layout-Datei} wird in dieser Arbeit nicht
 behandelt, weshalb im \emph{Generator} ein Layout festgelegt wird. Die
-\emph{IP-} und \emph{FP-Klassen} sollen nur teilweise generiert werden, womit das folgende
-Kapitel in drei Abschnitte unterteilt wird (\emph{GUI-Klassen},
-\emph{FP-Klassen} und \emph{IP-Klassen}).
+\emph{IP-} und \emph{FP-Klassen} sollen nur teilweise generiert werden.
 
 \subsection*{GUI-Klasse}
 In den \emph{GUI-Klassen} der \deg werden die \gks durch
@@ -53,8 +51,33 @@ möglichst einheitlich gehalten werden soll, ist die \emph{Transformer
 Generation} (siehe Kapitel \ref{Domänenspezifische Sprachen}) für alle Klassen
 zu verwenden.
 
-
 \section{Umsetzung des frameworkspezifischen Generators}
+
+In Folgenden wird die Implementierung des Generators an einem konkreten Beispiel
+beschrieben. Die \gui in Abbildung \ref{Abb_antragsexpl} (siehe Anhang \ref{explorergui})
+zeigt den Aufbau des \emph{Antragsexplorers}, wie sind in \pcs häufig
+verwendet wird. Diese \gui wird innerhalb von \pcs zur Visualisierung und
+Bearbeitung einer \emph{Antragsmappe} für einen \glossLink{Förderantrag}{Förderantrag}
+verwendet.
+Die Toolbar im oberen Bereich des \emph{Antragsexplorer} und die Statuszeile im
+unteren Bereich finden in dieser Arbeit keine Beachtung. Die anderen Artefakte
+der \gui sind innerhalb einer spezifischen Struktur angeordnet, die in Abbildung
+\ref{Abb_ee} dargestellt wird.
+\myBigFigure{explorerbaum.jpg}{Aufbau eines Explorers}{ee}
+\noindent
+Zu beachten ist, dass das Artefakt auf der rechten Seite ein austauschbarer
+Bereich ist. Das bedeutet, dass die dort eingebundene \gui variieren kann. In
+der Abbildung \ref{Abb_antragsexpl} (siehe Anhang \ref{explorergui}) ist
+anstelle dessen eine \gui mit zwei Taben zu finden. Diese Ansicht
+visualisiert den Zustand der \emph{Antragsmappe} und kann je nach
+\glossLink{Förderantrag}{Förderantrag} unterschiedlich sein. Zudem
+werden im \emph{Web-Client} innerhalb dieses Bereichs auch die \guis
+der ausgewählten Dokumente der \emph{Antragsmappe} - die Auswahl dieser ist im
+\gloss{Inhaltsbaum} möglich - eingebunden. Diese Eigenschaft rechtfertigt die
+Verwendung eines austauschbaren Bereichs.\\
+Ausgehend von dieser abstrakten Darstellung des \emph{Antragsexplorers}, werden
+in den Folgenden Kapiteln die verwendeten \emph{GUI-Skripte} und die Verarbeitung derer durch den \emph{Generator} beschrieben.
+
 \subsection*{GUI-Klassen}
 Bei der Präsentation aus Abbildung \ref{Abb_ee} können die
 \emph{Trees} auf der linken Seite als einzelne \emph{GUI-Beschreibungen}
@@ -476,9 +499,10 @@ def genCommandMethods(UIDescription description)'''
 	'''
 \end{lstlisting}
 \noindent
-Der beiliegende Datenträger enthält die Generatorklasse (siehe
+Die Methoden, die zur Generierung von \gks für die \emph{GUI-Klassen} verwendet
+wurden, enthalten Codeabschnitte, welche das Layout für den Prototyp
+bestimmen. Solche Abschnitte sind in der \emph{Generatorklasse} durch
+Kommentare gekennzeichnet. Das gesamte \emph{Xtext}-Projekt befindet sich auf
+dem beiliegenden Datenträger (siehe
 \emph{\hyperref[cd]{Anlage}}).
-In den Methoden zur Generierung von \gks für die \emph{GUI-Klassen}, sind die
-layoutbestimmenden Codeabschnitte durch entsprechende
-Kommentare gekennzeichnet.
 
