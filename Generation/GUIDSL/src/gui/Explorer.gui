@@ -1,5 +1,0 @@
-type: WINDOW;
-use: "gui.Inhaltsbaum" as: 'inhaltsbaum';
-use: "gui.Verweisebaum" as: 'verweisebaum';
-Interchangeable as: "austauschbarerBereich";
-Structure:'inhaltsbaum', 'verweisebaum', 'austauschbarerBereich';
